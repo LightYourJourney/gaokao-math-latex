@@ -16165,3 +16165,13 @@
 - 正式构建 attempt `96ee7fd1-6838-4bf7-b873-af4cae6fd0c2`：四版 7/23/9/22 页，共 61 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：61 页逐页完成（0 fail、0 pending、0 豁免），五幅图共 19 处 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b35.md`。
 - 门禁：provenance / solution_sources / validate-receipts（528 卷）、三套生成器 --all --check（528 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 249 → 248（2008 年 6 → 5）。
+
+### 2026-11-15 phase6-b36：2008 江西理科新卷封账（22 题，Q19 源疑点无解）
+
+- 来源 `src-d06a5473…`（2 页 A3，印刷页 459–460，SHA-256 `8d079d71…99b239`），22 题；四层 MD + 四幅 TikZ（Q6 四候选图象、Q16 容器两图、Q20 三棱锥、Q21 双曲线切点弦）。
+- 关键结论：选择 B D B A A D C C A C C B；填空 13=22、14=[1,2]、15=1/3、16=D；17 $A=120^\circ$、$B=C=30^\circ$、$b=c=2$；18 两个分布列、方案二（$0.52>0.30$）、期望 $16.1>13.25$；20 二面角 $\arccos\frac{\sqrt6}6$；21 重心轨迹 $\left(x-\frac1{3m}\right)^2-y^2=\frac29$、$A,M,B$ 共线（$M$ 在切点弦 $mx-y_0y=1$ 上）；22 (1) 在 $(0,1)$ 增、$(1,+\infty)$ 减，(2) $1<f(x)<2$ 已给完整证明（上界用 $w(4-2s+w)(1-s^2)<8s^2(1-s+w)^2$ 的两段讨论，下界化归为 $(X^2-1)(A^2-1)(X+A)+8(A+X-XA)>0$ 并按 $(X-1)(A-1)$ 与 1 的大小分段）。
+- **源疑点（Q19）**：题面同时给 $b_1=1$、公比 $64$（故 $b_2=64$）与 $b_2S_2=64$，推出 $S_2=1$，与 $a_1=3$、各项为正整数矛盾；600 dpi 复核确认系源页所印，非转录错误。题面照录，解析记「按题面条件无解」。
+- 图稿迭代：Q16 首版把棱锥顶点画在底面上（形似倒置），重画为「底面贴底、顶点在水面 P 处」。
+- 正式构建 attempt `b1b80c3f…`：四版 6/20/8/17 页，共 51 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：51 页逐页完成（0 fail、0 pending、0 豁免）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b36.md`。
+- 门禁：provenance / solution_sources / validate-receipts（529 卷）、三套生成器 --all --check（529 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 248 → 247（2008 年剩 4 个：湖北理、湖南理、重庆理、北京文〔pending-intake〕）。

@@ -3148,6 +3148,14 @@
         "gk-2008-nceq-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b36",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-jiangxi-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3157,7 +3165,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "32ab82de-8161-4fb2-9bc7-91eca971d97d",
+  "last_transaction_id": "69b237f8-7c84-44a0-85f2-fb045d1deeb3",
   "papers": [
     {
       "blocked_from": null,
@@ -38316,9 +38324,78 @@
       "title": "2008 年·普通高等学校招生考试·新课标卷（琼、宁卷）·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_江西卷_理科/figures/f2008_jiangxi_science_q06_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_江西卷_理科/figures/f2008_jiangxi_science_q16_vessel.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_江西卷_理科/figures/f2008_jiangxi_science_q20_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_江西卷_理科/figures/f2008_jiangxi_science_q21_hyperbola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_jiangxi_science",
+        "id": "gk-2008-jiangxi-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 459、460；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 6 题四个候选图象、第 16 题容器两图、第 20 题三棱锥与截面、第 21 题双曲线切线与垂足由 TikZ 重绘。第 19 题题面条件自相矛盾（b1=1、公比 64 与 b2S2=64 不相容），解析内标源疑点。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "江西理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-jiangxi-science",
+      "production_state": "complete",
+      "project_dir": "2008_江西卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_江西理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_江西理_含解析.md",
+        "questions": "2008/2008_数学真题_江西理_试题.md",
+        "solution_body": "2008/2008_数学真题_江西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-d06a5473dd78f87beb39a150c7475f8ccf6e7f725249578d3b11c6d7409d7a36"
+      ],
+      "title": "2008 年·普通高等学校招生考试·江西卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8435,
+  "revision": 8442,
   "schema_version": 1,
   "sources": [
     {
@@ -47747,8 +47824,8 @@
       "exam_type": "regular",
       "git_blob_oid": "398a79a543ec507f14021b43fa4073d5fad3b948",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-jiangxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008江西理.pdf",
       "regions": [],
       "source_id": "src-d06a5473dd78f87beb39a150c7475f8ccf6e7f725249578d3b11c6d7409d7a36",
