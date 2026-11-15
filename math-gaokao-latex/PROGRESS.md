@@ -16283,3 +16283,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b19.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：28 → **27 卷**。
+
+### 2026-11-16 phase5-b20（重封账）：2007 陕西理科状态段清理
+
+- 队列 A 第五轮：删去 `2007/2007_数学真题_陕西理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b20 --write` → `build --formal`：四版 5/20/7/17 页（49 页），attempt `94a4d4e2`，四 log 全 0。
+- 49 页逐页审查：八类检查 0 fail、0 豁免；三幅图（Q8 四个反函数候选图象、Q15 空间向量、Q19 五边形底四棱锥）四版共 12 处 350dpi 回源。
+- 观感记录（不修）：Q15 解析写「同文卷第 16 题」，属跨卷引用；数学与答案（6）不受影响，改它需重建重审，收益不足。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b20.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：27 → **26 卷**。
