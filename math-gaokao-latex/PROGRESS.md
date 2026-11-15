@@ -16121,3 +16121,14 @@
 - 正式构建 attempt `628f705f-f78f-4468-9fe7-44eb689dece5`：四版 5/17/7/15 页，共 44 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：44 页逐页完成（0 fail、0 pending、0 豁免）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b31.md`。
 - 门禁：provenance / solution_sources / validate-receipts（524 卷）、三套生成器 --all --check（524 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 252 → 251。
+
+### 2026-11-15 phase6-b32：2008 四川延考区文科新卷封账（22 题，源页自带参考答案）
+
+- 来源 `src-afb8c527…`（7 页 A4 单栏：题面第 1–4 页、参考答案第 4–7 页，SHA-256 `fdfb4e9e…1e88c2`），22 题：选择 12、填空 4、解答 6（17–22）。
+- **本卷是库内首批「源页自带参考答案」的卷**：标题即「数学（文史类）及答案」，第 4–7 页为参考答案。答案按源页转录并逐题复算核对，provenance 记 **B 级**（源内证据、源身份未核，故不记 A）；解析正文写明过程。
+- 一幅 TikZ：Q19 折叠图（平行四边形 ABC₀D 沿 BD 折起 △BDC₀ 至 C），按 3D 坐标投影重绘，实线 AB/AD/BD/BC/DC、虚线 BC₀/DC₀；两轮调整投影尺度与 A/B/C₀ 标注位置后 350dpi 复核。
+- 关键结论：选择 B D C A C A A D B C B B；填空 13 $y=\ln(x+1)-1\ (x>-1)$、14 $\sqrt3$、15 $3$、16 $\frac{\sqrt2}2$；17（按 $a^2+c^2=2b^2$）$A=\frac{5\pi}8$、$C=\frac{\pi}8$，$\sin B$ 最大值 $\frac{\sqrt3}2$；18 $0.9$、$0.271$；19 面面垂直与 $AC=2$（二面角 120° ⇔ 折角 60°，等边 △CBC₀ + 余弦定理）；20 $a_n=\frac{n^2}{2^{n-1}}$、$S_n=5-\frac{2n+5}{2^n}$、$T_n=12-\frac{n^2+4n+6}{2^{n-1}}$；21 $C_1:\frac{x^2}{36}+\frac{y^2}{27}=1$、$C_2:y^2=12x$，$|PQ|=\frac{24}7$；22 极大 $\frac{59}{27}$、极小 $1$、$a-b$ 最大值 $7$。
+- 源疑点三处（解析内均已标）：① 第 17 题题面印 $a^2+b^2=2b^2$（等价 $a=b$）与「$A$ 为钝角」矛盾，源答案两次用 $b^2=\frac12(a^2+c^2)$，据此作答；② 第 19 题源答案「SK TJ」为乱码（应为「得」），按几何重推复核一致；③ 第 21（Ⅱ）题面为「$|MN|=8$ 求 $|PQ|$」，源答案却按「$|PQ|=\frac{36}7$ 求 $|MN|$」作答（得 $c=\frac32$、$|MN|=12$），两读法数值不可同时成立；本库按题面作答得 $c=1$、$|PQ|=\frac{24}7$。
+- 正式构建 attempt `4ab18a92-0a68-4bf7-9479-12638f921251`：四版 5/17/7/15 页，共 44 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。首轮解析版 Q20（Ⅲ）的连等式 overfull 15.13pt，改写为两段式后归零。
+- 视觉审查：44 页逐页完成（0 fail、0 pending、0 豁免），Q19 图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b32.md`。
+- 门禁：provenance / solution_sources / validate-receipts（525 卷）、三套生成器 --all --check（525 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 252 → 251（2008 年由 10 降至 8）。

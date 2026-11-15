@@ -3116,6 +3116,14 @@
         "gk-2008-sichuan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b32",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-sichuan-delayed-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3125,7 +3133,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0dd4627d-8b4e-4653-8bcc-770b1bb5e02c",
+  "last_transaction_id": "5fa1f1bd-37ad-4326-81d4-575cf9941ba3",
   "papers": [
     {
       "blocked_from": null,
@@ -38007,9 +38015,69 @@
       "title": "2008 年·普通高等学校招生考试·四川卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_四川延考区卷_文科/figures/f2008_sichuan_delayed_arts_q19_fold.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_sichuan_delayed_arts",
+        "id": "gk-2008-sichuan-delayed-arts",
+        "note": "固定源为 7 页 A4 单栏（题面第 1–4 页、参考答案第 4–7 页），标题自述「数学（文史类）及答案」；答案以源页参考答案为准并逐题复算。第 19 题折叠图形由 TikZ 重绘。两处源疑点：第 17 题题面印 a²+b²=2b² 与设问矛盾（源答案用 b²=½(a²+c²)）；第 21（Ⅱ）源答案按 |PQ|=36/7 反解，与题面 |MN|=8 不符。",
+        "pages_q": [
+          1,
+          4
+        ],
+        "pages_s": [
+          4,
+          7
+        ],
+        "paper": "四川延考区卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "四川延考区文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-sichuan-delayed-arts",
+      "production_state": "complete",
+      "project_dir": "2008_四川延考区卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_四川延考区文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_四川延考区文_含解析.md",
+        "questions": "2008/2008_数学真题_四川延考区文_试题.md",
+        "solution_body": "2008/2008_数学真题_四川延考区文_解析正文.md"
+      },
+      "source_ids": [
+        "src-afb8c527efcbf4f06deb050f6d4d636069bbd1d2d5c0bd2d2ca8d42b15d7649e"
+      ],
+      "title": "2008 年·普通高等学校招生全国统一考试（四川延期卷）·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8374,
+  "revision": 8386,
   "schema_version": 1,
   "sources": [
     {
@@ -47294,8 +47362,8 @@
       "exam_type": "regular",
       "git_blob_oid": "02982f051f5fbbf89800803f3b80dc66b85e4233",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-sichuan-delayed-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008延考区文.pdf",
       "regions": [],
       "source_id": "src-afb8c527efcbf4f06deb050f6d4d636069bbd1d2d5c0bd2d2ca8d42b15d7649e",
