@@ -16204,3 +16204,11 @@
 - 正式构建 attempt 见报告：四版 5/19/7/16 页，共 47 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：47 页逐页完成（0 fail、0 pending、0 豁免），四幅图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b39.md`。
 - 门禁：provenance / solution_sources / validate-receipts（532 卷）、三套生成器 --all --check（532 套）通过。未绑定来源 245 → 244；**2008 年 11 个未绑定来源至此全部有归属**（10 卷封账 + 北京文 pending-intake）。
+
+### 2026-11-16 phase6-b04（重封账）：2008 北京理科状态段清理
+
+- 队列 A 第一轮：删去 `2008/2008_数学真题_北京理_试题.md` 标题下的「状态：needs-review」整段（该段此前印在 PDF 第 1 页，`pdftotext | grep -c needs-review` 清理后为 0）。
+- 重生成 `_解析正文.md`、`_含解析.md`，再跑三套生成器 `--batch phase6-b04 --write`、`build --formal`：四版 5/20/7/15 页，四 log 全 0，attempt `f932fd1f`。
+- 47 页逐页审查（试题 5、解析 20、简答 7、印刷 15），八类检查 0 fail、0 豁免；`finalize-batch` FINALIZED、`closed`、`eligible_complete`。
+- 门禁：review_receipts check-all 378 批次、provenance/solution_sources/validate-receipts 532 卷、三套生成器 --all --check 532 套、report check 一致、manifest.csv 775 行。
+- 状态段台账进度：31 → **30 卷**（`status-paragraph-ledger.md` 需下一轮同步更新）。
