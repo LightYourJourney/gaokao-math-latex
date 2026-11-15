@@ -1,0 +1,26 @@
+% 2008 年江苏卷第 17 题：矩形厂区 ABCD，工厂在 A、B 与 CD 中点 P，污水处理厂在 O。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008江苏.pdf
+% SHA-256：b998b93963143559a1ce800a6d320de618883b0e22ee5130b7666a2374caeba0
+% 原页：2008江苏.pdf 第 1 页（A3 三栏）第 3 栏，书页码 457。
+% 绘制依据：按原页画矩形 ABCD（AB 在下、CD 在上），P 在 CD 中点，O 在矩形内部
+%   且在 AB 的垂直平分线上，连 OA、OB、OP。
+\begin{tikzpicture}[scale=0.62, semithick, every node/.style={inner sep=1.4pt}]
+  \draw (0,0) rectangle (20,10);
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (20,0);
+  \coordinate (C) at (20,10);
+  \coordinate (D) at (0,10);
+  \coordinate (P) at (10,10);
+  \coordinate (O) at (10,5.8);
+
+  \draw (O) -- (A);
+  \draw (O) -- (B);
+  \draw (O) -- (P);
+
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[above] at (P) {$P$};
+  \node[right=1pt] at (O) {$O$};
+\end{tikzpicture}

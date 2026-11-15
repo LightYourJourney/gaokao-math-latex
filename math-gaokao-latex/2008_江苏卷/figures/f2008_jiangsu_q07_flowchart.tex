@@ -1,0 +1,32 @@
+% 2008 年江苏卷第 7 题：加权平均的算法流程图。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008江苏.pdf
+% SHA-256：b998b93963143559a1ce800a6d320de618883b0e22ee5130b7666a2374caeba0
+% 原页：2008江苏.pdf 第 1 页（A3 三栏）第 1 栏，书页码 457。
+% 绘制依据：按原页流程：开始 → S←0 → i←1 → 输入 G_i,F_i → S←S+G_iF_i → 判断 i≥5 →
+%   N 时 i←i+1 回到输入 → Y 时输出 S → 结束。
+\begin{tikzpicture}[node distance=0.55cm, semithick, every node/.style={inner sep=3pt},
+  box/.style={draw, rounded corners=1pt, minimum width=2.2cm, minimum height=0.55cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.4cm, minimum height=0.55cm},
+  dec/.style={draw, diamond, aspect=2, inner sep=1pt}]
+
+  \node[box] (start) {开始};
+  \node[box, below=of start] (s0) {$S\leftarrow0$};
+  \node[box, below=of s0] (i1) {$i\leftarrow1$};
+  \node[io, below=of i1] (input) {输入 $G_i,F_i$};
+  \node[box, below=of input] (acc) {$S\leftarrow S+G_iF_i$};
+  \node[dec, below=0.5cm of acc, minimum width=1.6cm, minimum height=0.85cm] (test) {$i\geqslant5$};
+  \node[io, below=0.75cm of test] (out) {输出 $S$};
+  \node[box, below=of out] (end) {结束};
+  \node[box, right=1.6cm of acc] (inc) {$i\leftarrow i+1$};
+
+  \draw[->,>=stealth] (start) -- (s0);
+  \draw[->,>=stealth] (s0) -- (i1);
+  \draw[->,>=stealth] (i1) -- (input);
+  \draw[->,>=stealth] (input) -- (acc);
+  \draw[->,>=stealth] (acc) -- (test);
+  \draw[->,>=stealth] (test) -- node[left] {Y} (out);
+  \draw[->,>=stealth] (out) -- (end);
+  \draw[->,>=stealth] (test.east) -- node[above] {N} (inc.west);
+  \draw[->,>=stealth] (inc.north) |- (input.east);
+\end{tikzpicture}

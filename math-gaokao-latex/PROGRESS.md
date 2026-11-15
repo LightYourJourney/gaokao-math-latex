@@ -16092,3 +16092,13 @@
 - 正式构建 attempt `2a124ee8-9407-444e-a109-39d5eea4f402`：四版 6/20/8/17 页，共 51 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：51 页逐页 110dpi 完成（0 fail、0 pending、0 豁免），四幅图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b27.md`。
 - 门禁：provenance / solution_sources / validate-receipts（521 卷）、三套生成器 --all --check（521 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 256 → 255。
+
+### 2026-11-15 phase6-b28：2008 江苏卷新卷封账（23 题，含附加题）
+
+- 来源 `src-8ffe81f4…`（2 页 A3，印刷页 457–458，SHA-256 `b998b939…caeba0`）。**用户裁定收录附加题、按 23 题**：正卷填空 1–14、解答 15–20，附加题 21（四选二 A–D）、22、23；`structure` 为 `{"填空题":[1,14],"解答题":[15,20],"附加题":[21,23]}`，`track` 取 `none`（文理合卷）。
+- 六幅 TikZ：Q7 加权平均流程图、Q15 单位圆、Q16 四面体、Q17 矩形厂区、Q21A 圆与切线、Q22 正方体。流程图首版把 N 分支直接连回累加框，与源页「回到输入」不符，已改为回到「输入 $G_i,F_i$」并在 350dpi 复检。
+- 关键结论：填空 1–14 依次 $10$、$\frac1{12}$、$1$、$6$、$7$、$\frac\pi{16}$、$6.42$、$\ln2-1$、$\frac1c-\frac1b$、$\frac{(n-1)n}2+3$、$3$、$\frac{\sqrt2}2$、$2\sqrt2$、$4$；15 $\tan(\alpha+\beta)=-3$、$\alpha+2\beta=\frac{3\pi}4$；16 两问证明；17 两个函数式与最小总长 $10+10\sqrt3$ km；18 $b<1$ 且 $b\neq0$、圆方程与定点 $(0,1)$、$(-2,1)$；19 $\frac{a_1}d=-4$ 或 $1$、$n=4$ 与构造证明；20 $|p_1-p_2|\leqslant\log_32$ 与增区间长度之和 $\frac{b-a}2$；21 A 证明／B $x^2+y^2=1$／C $2$／D 证明；22 $\lambda\in(\frac13,1)$；23 三问证明。
+- 第 15 题横坐标经 450dpi 放大核准为 $\frac{\sqrt2}{10}$、$\frac{2\sqrt5}5$（此前 300dpi 下次序存疑）。
+- 正式构建 attempt `49d884f4-16e2-426b-9a84-24d5df86621d`：四版 5/22/7/17 页，共 51 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：51 页逐页完成（0 fail、0 pending、0 豁免），六幅图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b28.md`。
+- 门禁：provenance / solution_sources / validate-receipts（522 卷）、三套生成器 --all --check（522 套）通过；report render/check 与 review_receipts check-all 已后台启动但本轮未跑完（日志 `.work/phase6-b28/render.log`、`checkall.log`）。未绑定来源 255 → 254。
