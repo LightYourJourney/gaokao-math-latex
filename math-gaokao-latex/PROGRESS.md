@@ -16154,3 +16154,14 @@
 - 正式构建 attempt `3bf08890-45c3-4591-8ff1-84183016adc1`：四版 6/21/8/18 页，共 53 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：53 页逐页完成（0 fail、0 pending、0 豁免），四幅图共 13 处 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b34.md`。
 - 门禁：provenance / solution_sources / validate-receipts（527 卷）、三套生成器 --all --check（527 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 250 → 249（2008 年 7 → 6）。
+
+### 2026-11-15 phase6-b35：2008 新课标（琼、宁）理科新卷封账（24 题，含三道选做题）
+
+- 来源 `src-5cdde7d7…`（2 页 A3，印刷页 467–468，SHA-256 `e16be52b…ef66ec`），24 题：选择 12、填空 4、解答 5（17–21）、**选做 3（22 几何证明、23 坐标系与参数方程、24 不等式选讲）**；`structure` 的 `选做题` 为 $[22,24]$。
+- 五幅 TikZ：Q1 三角函数图象（两周期、刻度 1 与 2π）、Q5 程序框图（与文卷第 6 题同框，第二个判断框留空）、Q18 正方体与对角线 $BD'$、Q22 圆与切线、Q24 坐标纸（18×20 网格 + 坐标轴）。
+- 关键结论：选择 B B D C A B C D A D A C；填空 13 $3$、14 $\frac{32}{15}$、15 $\frac{4\pi}3$、16 开放（同文卷）；17 $a_n=5-2n$、$S_n$ 最大 $4$；18 $45^\circ$ 与 $30^\circ$（由 $\angle PDA=60^\circ$ 定出 $P$ 的参数 $t=2-\sqrt2$）；19 $DY_1=4$、$DY_2=12$，$x=75$ 时 $f_{\min}=3$；20 $\frac{x^2}4+\frac{y^2}3=1$、$l:y=\sqrt6x\pm2\sqrt3$；21 $f(x)=x+\frac1{x-1}$、对称中心 $(1,1)$、定面积 $2$；22 射影定理 + 相似；23 圆与直线相切（与文卷第 23 题同题）；24 分段折线、解集 $x<5$。
+- 构建事故与修正：Q24 的 `cases` 环境行分隔符被内容改写时吃掉，xelatex 报 `Undefined control sequence` 且解析版/印刷版未生成 PDF；改为「三段并排的分段表达式」后四版全部通过。教训：`cases` 只用于题面，解析里改写公式时不要连带行分隔符一起动。
+- 图稿微调：Q1 的 $2\pi$ 标注压在坐标轴箭头下方、Q18 的 $D$ 标注落在虚线交汇处，均已外移。
+- 正式构建 attempt `96ee7fd1-6838-4bf7-b873-af4cae6fd0c2`：四版 7/23/9/22 页，共 61 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：61 页逐页完成（0 fail、0 pending、0 豁免），五幅图共 19 处 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b35.md`。
+- 门禁：provenance / solution_sources / validate-receipts（528 卷）、三套生成器 --all --check（528 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 249 → 248（2008 年 6 → 5）。
