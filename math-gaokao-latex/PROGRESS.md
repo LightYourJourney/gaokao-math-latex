@@ -16132,3 +16132,14 @@
 - 正式构建 attempt `4ab18a92-0a68-4bf7-9479-12638f921251`：四版 5/17/7/15 页，共 44 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。首轮解析版 Q20（Ⅲ）的连等式 overfull 15.13pt，改写为两段式后归零。
 - 视觉审查：44 页逐页完成（0 fail、0 pending、0 豁免），Q19 图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b32.md`。
 - 门禁：provenance / solution_sources / validate-receipts（525 卷）、三套生成器 --all --check（525 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 252 → 251（2008 年由 10 降至 8）。
+
+### 2026-11-15 phase6-b33：2008 四川延考区理科新卷封账（22 题，源页附参考答案）
+
+- 来源 `src-9814d001…`（9 页 A4 单栏：题面第 1–3 页、参考答案第 3–9 页，SHA-256 `fd43150e…457f61`），22 题：选择 12、填空 4、解答 6。答案按源页转录并逐题复算，provenance 记 **B 级**（源内证据、源身份未核）。
+- 两幅 TikZ：Q12 正方体展开图（横排四格 + 上、下各一格，A 在棱中点、B/C/D 在格角，AB、CD 两条线段）、Q19 折叠图（沿用文卷投影；源页配图另印出解答才定义的辅助点 E，题面未定义，故本图不画）。
+- 关键结论：选择 B D C B C A A D B C B D；填空 13 $y=\ln(x+1)-1$、14 $3$、15 $\frac12$、16 $\frac{\sqrt2}2$；17 $A=\frac{5\pi}8$、$C=\frac{\pi}8$，面积最大值 $\sqrt3$；18 $0.9$，$\xi\sim B(3,0.1)$、$E\xi=0.3$；19 面面垂直与二面角 $60^\circ$（延长 $C_0B$ 到 $E$，$AEBD$ 正方形 ⇒ $AC^2=AE^2+CE^2>1$ ⇒ 只能 $AC=AB=\sqrt2$ ⇒ $\triangle CEB$ 等边）；20 $a_n=\frac{n^2}{2^{n-1}}$、$S_n=5-\frac{2n+5}{2^n}$、$T_n=12-\frac{n^2+4n+6}{2^{n-1}}$；21 $C_1:\frac{x^2}{36}+\frac{y^2}{27}=1$、$C_2:y^2=12x$、$|MN|=12$；22 极大 $1$、极小 $-\frac12$、$a-b$ 最大值 $5$。
+- 源疑点（解析内均标注）：① 第 1 页右侧浮着一张与题干无关的双曲线插图（题干无「如图」），未转录；② 第 19 题配图印出解答才定义的辅助点 $E$；③ 第 22 题源答案两处笔误——$x\in(-\infty,-2)\cup(1,+\infty)$ 时 $f'(x)<0$ 印作 $>0$、恒等式第二因式印作 $f(1)-1$（应为 $f(x)-1$）。
+- 版式修正：首轮解析版第 11 页出现「解析」孤行标题（Q12 的解析首段后紧跟行间公式，`\Needspace{5\baselineskip}` 把正文推走）。把该段拆成「坐标」与「代入求余弦」两段（公式落在第二段），孤行消失、解析版仍 18 页。
+- 正式构建 attempt `75671890-93b0-4abb-83c6-f722f2cf346d`：四版 5/18/7/15 页，共 45 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：45 页逐页完成（0 fail、0 pending、0 豁免），两幅图共 10 处 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b33.md`。
+- 门禁：provenance / solution_sources / validate-receipts（526 卷）、三套生成器 --all --check（526 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 251 → 250（2008 年 8 → 7）。

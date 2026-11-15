@@ -3124,6 +3124,14 @@
         "gk-2008-sichuan-delayed-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b33",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-sichuan-delayed-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3133,7 +3141,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5fa1f1bd-37ad-4326-81d4-575cf9941ba3",
+  "last_transaction_id": "014ba244-8403-46a7-8931-57784fbb3a32",
   "papers": [
     {
       "blocked_from": null,
@@ -38075,9 +38083,73 @@
       "title": "2008 年·普通高等学校招生全国统一考试（四川延期卷）·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_四川延考区卷_理科/figures/f2008_sichuan_delayed_science_q12_net.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_四川延考区卷_理科/figures/f2008_sichuan_delayed_science_q19_fold.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_sichuan_delayed_science",
+        "id": "gk-2008-sichuan-delayed-science",
+        "note": "固定源为 9 页 A4 单栏（题面第 1–3 页、参考答案第 3–9 页），标题「数学（理科）」并附参考答案；答案按源页转录并逐题复算，第 22 题源答案两处笔误已在解析指出。第 12 题展开图与第 19 题折叠图由 TikZ 重绘。源页第 1 页右侧另有一张与题干无关的双曲线浮图，未转录。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          3,
+          9
+        ],
+        "paper": "四川延考区卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "四川延考区理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-sichuan-delayed-science",
+      "production_state": "complete",
+      "project_dir": "2008_四川延考区卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_四川延考区理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_四川延考区理_含解析.md",
+        "questions": "2008/2008_数学真题_四川延考区理_试题.md",
+        "solution_body": "2008/2008_数学真题_四川延考区理_解析正文.md"
+      },
+      "source_ids": [
+        "src-9814d001d02b39a0d71bb10b194e4e5eb08c78f4d3dd963f4780dc3d8895a077"
+      ],
+      "title": "2008 年·普通高等学校招生全国统一考试（四川延考卷）·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8386,
+  "revision": 8394,
   "schema_version": 1,
   "sources": [
     {
@@ -47386,8 +47458,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e87f595e026a40ccc9ca07bc943713efba20126c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-sichuan-delayed-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008延考区理.pdf",
       "regions": [],
       "source_id": "src-9814d001d02b39a0d71bb10b194e4e5eb08c78f4d3dd963f4780dc3d8895a077",
