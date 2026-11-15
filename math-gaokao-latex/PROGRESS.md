@@ -16102,3 +16102,13 @@
 - 正式构建 attempt `49d884f4-16e2-426b-9a84-24d5df86621d`：四版 5/22/7/17 页，共 51 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：51 页逐页完成（0 fail、0 pending、0 豁免），六幅图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b28.md`。
 - 门禁：provenance / solution_sources / validate-receipts（522 卷）、三套生成器 --all --check（522 套）通过；report render/check 与 review_receipts check-all 已后台启动但本轮未跑完（日志 `.work/phase6-b28/render.log`、`checkall.log`）。未绑定来源 255 → 254。
+
+### 2026-11-15 phase6-b30：2008 四川文科新卷封账（22 题）
+
+- 来源 `src-7e0599d5…`（2 页 A3，印刷页 485–486，SHA-256 `1ba08ce1…cc9c3e`），22 题：选择 12、填空 4、解答 6。
+- 一幅 TikZ：Q19 两平面垂直的双直角梯形立图；首版投影取 $(x+0.5y,\,0.4y+z)$ 致 $E$ 与 $D$ 几乎重合、底面压成细条，改为 $(x+0.8y,\,0.5y+z)$ 后 $E$、$D$ 分离，虚实线与源页一致（350dpi 复核）。
+- 关键结论：选择 B C A D A A B D C B C B；填空 13=2、14=√2、15=140、16=(n²+n+2)/2；17 最大值 10、最小值 6；18 0.5、0.104；19 平行四边形／四点共面／面面垂直（建系得 $\overrightarrow{CE}\times\overrightarrow{CF}\cdot\overrightarrow{CD}=0$）；20 $a=-25/3$、$b=20$ 与单调区间；21 $a_3=16,a_4=40$、$a_n=(n+1)2^{n-1}$；22 $a=2,b=\sqrt2$ 与准线上动点。
+- 源疑点（解析内已标）：Q22(2) 印「$\overrightarrow{F_1M}\cdot\overrightarrow{F_2M}=0$」，但 $M$ 在右准线 $x=2\sqrt2$ 上时该点积 $6+m^2>0$ 恒成立，条件不可能满足；按要证结论反推应为 $\overrightarrow{F_1M}\cdot\overrightarrow{F_2N}=0$，解析按此口径作答，题面照原页转录。
+- 正式构建 attempt `416355de-e03e-4a2e-bf7f-7817f0188693`：四版 4/16/6/14 页，共 40 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：40 页逐页完成（0 fail、0 pending、0 豁免），Q19 图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b30.md`。
+- 门禁：provenance / solution_sources / validate-receipts（523 卷）、三套生成器 --all --check（523 套）通过；report render/check 与 review_receipts check-all 已后台启动，待确认。未绑定来源 253 → 252。

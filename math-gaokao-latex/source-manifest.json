@@ -3100,6 +3100,14 @@
         "gk-2008-jiangsu"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b30",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-sichuan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3109,7 +3117,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "34ce1db5-c1e5-4d95-bd1f-ab6e64bf9cdf",
+  "last_transaction_id": "a4563552-8f7c-439a-8959-eac0e55ff1cc",
   "papers": [
     {
       "blocked_from": null,
@@ -37873,9 +37881,66 @@
       "title": "2008 年·普通高等学校招生考试·江苏卷",
       "track": "none",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_四川卷_文科/figures/f2008_sichuan_arts_q19_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_sichuan_arts",
+        "id": "gk-2008-sichuan-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 485、486；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 19 题两平面垂直的双梯形立图由 TikZ 重绘；第 22 (2) 问题面条件印作 F1M·F2M=0，在准线上恒不为零，解析内已标源疑点并按 F1M·F2N=0 作答。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "四川文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-sichuan-arts",
+      "production_state": "complete",
+      "project_dir": "2008_四川卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_四川文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_四川文_含解析.md",
+        "questions": "2008/2008_数学真题_四川文_试题.md",
+        "solution_body": "2008/2008_数学真题_四川文_解析正文.md"
+      },
+      "source_ids": [
+        "src-7e0599d5a286ff5f2c0d41a97c10d166008220314351171011dd3661ed88b47a"
+      ],
+      "title": "2008 年·普通高等学校招生考试·四川卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8360,
+  "revision": 8369,
   "schema_version": 1,
   "sources": [
     {
@@ -46824,8 +46889,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5a27c76b3500ad7da9a5621770250b27dbc8c8a1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-sichuan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008四川文.pdf",
       "regions": [],
       "source_id": "src-7e0599d5a286ff5f2c0d41a97c10d166008220314351171011dd3661ed88b47a",
