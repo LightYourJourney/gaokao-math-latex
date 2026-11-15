@@ -16239,3 +16239,13 @@
 - 门禁：provenance / validate-receipts 532 卷 OK；三套生成器 --all --check 532 套一致；review_receipts check-all 378 批次；report check 一致；manifest.csv 775 行。
 - `solution_sources check-all`：4/532 未通过 → **3/532**（余 2004 全国3理、2018 江苏、2018 浙江）。
 - 教训（已写进交接文档）：这 4 套卷「重生成即改生成输入树 → 旧 review 回执失效」，必须先重建、再逐页审查、再 finalize，顺序颠倒会留下 build 与 review 不匹配的中间态。
+
+### 2026-11-16 phase4-b57（重封账）：2004 全国卷Ⅲ 理科消除 solution_sources 不一致
+
+- `extract-batch --batch phase4-b57 --write` 规范化 `_解析正文.md`（去掉冗余的「第 20 题三棱锥立体几何图」链接，图由 spec 的 `figure_files` 注入）→ 三套生成器 `--batch --write` → `build --formal`，attempt `cb035e09`，四版 3/25/5/17 页、四 log 全 0。
+- 50 页逐页审查（试题 3、解析 25、简答 5、印刷 17）：八类检查 0 fail、0 豁免；图页（试题 p3、解析 p3/p19、简答 p3、印刷 p2/p13）350dpi 回源，三棱锥标注与文卷同构（P 在上、A 左、B 下、C 右，AC 为虚线）。
+- 解析版 p9/p13 底部留白较大，成因为下一题整块 + 题图受 `\Needspace` 约束整体下移，属模板设计行为，非孤行标题。
+- 已知观感问题（不修，记录备查）：Q19（温室）解析正文末尾自带「答：…」一句，与答案框「答案：…」语义重复；修它需改解析正文 → 输入树变化 → 重建并重审 50 页，代价与收益不相称，保留现状。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase4-b57.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- `solution_sources`：3/532 → **2/532**（余 2018 江苏、2018 浙江）。
