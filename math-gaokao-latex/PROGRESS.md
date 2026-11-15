@@ -16229,3 +16229,13 @@
 - 门禁（本卷相关）：provenance 532 卷 OK、validate-receipts 532 卷 OK、三套生成器 --all --check 一致、review_receipts check-all 378 批次、report check 一致。
 - **发现的既有问题（本轮新增证据，需后续处理）**：`solution_sources check-all` 实测 **19/532 套未通过**（1958/1986/1987/1990/2005/2015/2026 等卷的 `_含解析.md` 与确定性生成结果不一致）。此前多轮只读该命令 `tail -1` 的 "ok …" 行，误记为「全绿」，此处更正：该门禁**不是**全绿的。
 - 台账同步：待清状态段 29 → **28 卷**。
+
+### 2026-11-16 phase4-b56（重封账）：2004 全国卷Ⅲ 文科消除 solution_sources 不一致
+
+- 起因：`solution_sources check-all` 报该卷 `_解析正文.md` 与确定性生成结果不一致（多一条重复的「第 21 题三棱锥立体几何图」链接；图实际由 spec 的 `figure_files` 注入，链接属冗余）。
+- 处置：`extract-batch --batch phase4-b56 --write` 规范化 → 三套生成器 `--batch --write` → `build --formal`，attempt `ec53c601`，四版 3/23/5/16 页、四 log 全 0。
+- 47 页逐页审查（试题 3、解析 23、简答 5、印刷 16）：八类检查逐页填写，0 fail、0 豁免；图页（试题 p3、解析 p3/p19、简答 p3、印刷 p2/p14）350dpi 回源，三棱锥 $P$ 在上、$A$ 在左、$B$ 在下、$C$ 在右，虚线为被遮挡的 $AC$。
+- `finalize-batch --output-report reports/phase4-b56.md` → FINALIZED、`closed`、`eligible_complete`。
+- 门禁：provenance / validate-receipts 532 卷 OK；三套生成器 --all --check 532 套一致；review_receipts check-all 378 批次；report check 一致；manifest.csv 775 行。
+- `solution_sources check-all`：4/532 未通过 → **3/532**（余 2004 全国3理、2018 江苏、2018 浙江）。
+- 教训（已写进交接文档）：这 4 套卷「重生成即改生成输入树 → 旧 review 回执失效」，必须先重建、再逐页审查、再 finalize，顺序颠倒会留下 build 与 review 不匹配的中间态。

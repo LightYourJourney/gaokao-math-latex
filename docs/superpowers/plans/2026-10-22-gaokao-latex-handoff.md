@@ -1,5 +1,14 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-16 接续：4 套 solution_sources 不一致卷逐一重封账（第 1 套：2004 全国3文）
+
+- 缺口由来：`extract-batch` 规范化时有 4 套卷的 `_解析正文.md` 也变化（冗余图链、缺 `**解析**` 锚点、尾部空行），改则「生成输入树」改变、旧 review 回执失效；不改则 `solution_sources` 报 4/532 不一致。唯一出路是 **重建 → 逐页重审 → 重封账**。
+- 本轮完成 `gk-2004-regular-national-3-arts`（`phase4-b56`）：attempt `ec53c601`，四版 3/23/5/16 = 47 页，0 警告；报告 `reports/phase4-b56.md`。
+- 余下 3 套：`gk-2004-regular-national-3-science`（`phase4-b57`）、`gk-2018-regular-jiangsu`（`2018_江苏卷`）、`gk-2018-regular-zhejiang`（`2018_浙江卷`）。
+- **操作顺序（务必照此）**：`extract-batch --write` → 三套生成器 `--write` → `build --formal` → `prepare-batch` → 渲染 montage 逐页审 → `fill_review` → `finalize-batch`。若先 `prepare-batch` 后重建，工作项会与 build 不匹配（`INVALID_OR_STALE`），必须重跑 `prepare-batch` 再填表。
+- 全库：manifest **532 卷 / 775 来源**，未绑定 **244**；状态段待清 **28 卷**；blocked 107 卷已有 `blocked-ledger.md`。
+- 仍差：244 个未绑定来源、28 卷状态段、最终 README / 缺失清单 / 构建报告；陕西文（1 条）、陕西理（2 条）以 `warning_exemptions` 封账。
+
 ## 2026-11-16 接续：2008 重庆理科封账（队列 B 第二十八卷，2008 年收尾）
 
 - 重庆理（`gk-2008-chongqing-science`，`phase6-b39`）：22 题，四版 5/19/7/16 = 47 页，0 警告。报告 `reports/phase6-b39.md`。
