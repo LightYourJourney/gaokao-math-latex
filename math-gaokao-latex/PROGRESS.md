@@ -16293,3 +16293,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b20.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：27 → **26 卷**。
+
+### 2026-11-16 phase5-b26（重封账）：2007 福建理科状态段清理
+
+- 队列 A 第六轮：删去 `2007/2007_数学真题_福建理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b26 --write` → `build --formal`：四版 5/22/7/17 页（51 页），attempt `5544c0a5`，四 log 全 0。
+- 51 页逐页审查：八类检查 0 fail、0 豁免；两幅图（Q18 正三棱柱与截面、Q20 抛物线与直线）四版共 7 处 350dpi 回源。
+- 解析内已有两处源疑点标注（Q8 选项无一成立、Q18 配图字母 E 与题面 D 不一致），按「题面照录 + 解析说明」口径保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b26.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：26 → **25 卷**。
