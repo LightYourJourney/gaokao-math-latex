@@ -16509,3 +16509,14 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b14.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 7 → **6 卷**。
+
+### 2026-11-16 phase5-b05（重封账）：2007 安徽理科状态段清理
+
+- 队列 A 第二十五轮：删去 `2007/2007_数学真题_安徽理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 流程：extract-batch → `.work/phase5-b05/gen_prov.py` + `provenance import-batch` → 三套生成器 → `build --formal`。
+- 首轮即四 log 全 0：四版 6/27/8/21 页（62 页），attempt `af09a302`。
+- 62 页逐页审查：八类检查 0 fail、0 豁免；四处图稿（Q9 双曲线与圆、Q14 抛物线等分点三角形、Q17 六面体、Q19 抛物线圆）四版共 18 处 300~350dpi 回源。
+- 解析内已有【源疑点】标注（Q16 题头拉丁 $a$ 与希腊 $\alpha$ 混用），按「题面照录 + 解析说明」保留；其余复核通过（Q1 反函数自身 D；Q5 $A\cap\complement B$ 元素 2 个；Q7 线性规划 $4/\sqrt5-1$；Q9 $e=1+\sqrt3$；Q12 最小 $n=7$；Q13 $\overrightarrow{OE}=\frac12a+\frac14b+\frac14c$；Q14 面积和极限 $1/3$；Q15 ③⑤；Q20 分布 $(7-i)/28$、$E\xi=2$、$P(\xi\geqslant2)=15/28$；Q21 递推与等比/等差拆分）。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b05.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 6 → **5 卷**。
