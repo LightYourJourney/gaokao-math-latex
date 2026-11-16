@@ -16432,3 +16432,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b25.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 13 → **12 卷**。
+
+### 2026-11-16 phase5-b23（重封账）：2007 重庆文科状态段清理
+
+- 队列 A 第十九轮：删去 `2007/2007_数学真题_重庆文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b23 --write` → `build --formal`：四版 5/25/7/18 页（55 页），attempt `8a0a7dd3`，四 log 全 0（无 Overfull/Underfull 需修）。
+- 55 页逐页审查：八类检查 0 fail、0 豁免；两幅图（Q19 三棱柱与二面角、Q21 抛物线与焦点弦）四版共 8 处 350dpi 回源。
+- 解析内源疑点（Q1 等比中项、Q2 集合、Q3 线面、Q8 圆与直线、Q9 向量、Q10 反函数、Q11 等比中项最值、Q12 椭圆、Q13 余弦定理、Q15 排列、Q16 双根式最值、Q17 概率、Q18 三角化简、Q19 建系、Q20 体积最值、Q21 抛物线、Q22 递推）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b23.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 12 → **11 卷**。
