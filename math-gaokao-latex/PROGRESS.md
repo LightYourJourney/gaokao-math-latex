@@ -16449,3 +16449,15 @@
 - 本轮只做**来源登记**，不做转录：`pending-intake/2007/hunan-arts/intake.md` 记下原件路径、SHA-256（`8e889ae3…f943e068`）、512,146 字节、2 页 A3 横向、页眉「2007 普通高等学校招生考试 (湖南卷文)」，并明确写「已接收、未转录，不计入 complete、不参与生成与构建」。
 - 未伪造任何内容：该目录没有题面、答案或图稿落盘；下一步按完整流水线转录→构建→逐页审查→封账。
 - `missing-sources.md` 同步：244 个未绑定来源中 **3 个已有归属记录**（2007 四川文候选草稿、2007 湖南文来源登记、2008 北京文源缺陷），**241 个尚无归属**；2007–2008 区间已无「无归属」来源。
+
+### 2026-11-16 phase5-b15（重封账）：2007 江西理科状态段清理（含一处 Underfull 与 provenance 重生成）
+
+- 队列 A 第二十轮：删去 `2007/2007_数学真题_江西理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- **provenance 转 stale 的处理**：改题面 md 后 `build --formal` 报「provenance 不是 current（stale）」；按台账「已知坑③」先跑 `.work/phase5-b15/gen_prov.py` + `provenance import-batch`，再构建即通过。
+- **首轮重建 1 处 Underfull（badness 6559）**：出现在第 20 题解析「建系同文科卷：$B_1(0,0,0)$，$A_1(1,0,0)$，…，$O\left(\frac12,0,3\right)$。」——整段由逗号分隔的短数学原子组成，只能靠拉伸填行。改为「底面三点」与「其余各点」两句两段（解析为自有文本，可调整措辞），四 log 归零。
+- 最终 `build --formal`：四版 6/24/8/19 页（57 页），attempt `161094e2`，四 log 全 0。
+- 57 页逐页审查：八类检查 0 fail、0 豁免；六处图稿（Q7 正方体、Q8 四只酒杯、Q15 三角形角平分线、Q18 余弦曲线、Q20 三棱柱、Q21 双曲线）四版共 20 处 350dpi 回源。
+- 解析内源疑点（Q2 复数为实数、Q4 二项式系数、Q5 三角函数不等式、Q6 集合与直线、Q7 正方体、Q8 酒杯、Q9 双曲线、Q10 骰子、Q12 单调性、Q13 反函数、Q14 递推、Q15 向量、Q16 圆、Q17 分段函数、Q18 余弦曲线、Q19 概率、Q20 建系、Q21 双曲线）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b15.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 11 → **10 卷**。
