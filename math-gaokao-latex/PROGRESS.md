@@ -16554,3 +16554,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b10.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 3 → **2 卷**。
+
+### 2026-11-16 phase5-b12（重封账）：2007 新课标文科状态段清理
+
+- 队列 A 第二十九轮：删去 `2007/2007_数学真题_新课标文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 流程：extract-batch → `gen_prov.py` + `provenance import-batch` → 三套生成器 → `build --formal`：四版 7/32/9/27 页（75 页），attempt `b4036a36`，首轮即四 log 全 0。
+- 75 页逐页审查：八类检查 0 fail、0 豁免；六处图稿（Q3 正弦曲线、Q5 程序框图、Q8 三视图、Q17 塔高测量、Q18 三棱锥、Q22 圆与切线）四版共 23 处 300~350dpi 回源。
+- 复核通过（Q1 $A\cup B=(-2,+\infty)$；Q2 全称命题的否定 C；Q3 图象 A；Q4 $(-1,2)$；Q5 $S=2550$；Q6 $ad=2$；Q7 $2|FP_2|=|FP_1|+|FP_3|$；Q8 $\frac{8000}3$；Q9 $\frac12$；Q10 切线三角形面积；Q16 $S_9=81$；Q17 $AB=\frac{s\sin\beta\tan\theta}{\sin(\alpha+\beta)}$；Q18 垂直关系与平行判定；Q19 单调区间与最值 $\ln\frac72+\frac1{16}$、$\ln2+\frac14$；Q20 $\frac34$、$\frac23$；Q21 $-\frac34<k<0$、不存在；Q22 四点共圆与 $90^\circ$；Q23 圆的方程与公共弦；Q24 分段解集与最小值 $-\frac92$）。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b12.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 2 → **1 卷**（仅剩 2007 新课标理）。
