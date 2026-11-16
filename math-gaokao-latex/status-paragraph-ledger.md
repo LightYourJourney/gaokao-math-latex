@@ -1,7 +1,7 @@
 # 状态段（needs-review）清理台账
 
-- 更新：2026-11-16；扫描 `*/*_试题.md`，仍含「状态：needs-review」首段的 **14 卷**：**13 卷为 complete（可清理重封账）**，1 卷为 blocked（随其终局结论一并处理）。
-- 已清理 **23 卷**：2008 天津文/理、上海文/理、安徽文/理（`phase6-b15`/`b16`/`b17`），2008 北京理（`phase6-b04`）、2007 上海理（`b01`）、浙江文（`b16`）、陕西文（`b19`）、陕西理（`b20`）、福建理（`b26`）、辽宁文（`b21`）、辽宁理（`b22`）、浙江理（`b17`）、山东文（`b08`）、江苏（`b13`）、广东文（`b09`）、天津文（`b03`）、天津理（`b02`）、重庆理（`b24`）、安徽文（`b06`）、湖南理（`b27`），均重封账。
+- 更新：2026-11-16；扫描 `*/*_试题.md`，仍含「状态：needs-review」首段的 **13 卷**：**12 卷为 complete（可清理重封账）**，1 卷为 blocked（随其终局结论一并处理）。
+- 已清理 **24 卷**：2008 天津文/理、上海文/理、安徽文/理（`phase6-b15`/`b16`/`b17`），2008 北京理（`phase6-b04`）、2007 上海理（`b01`）、浙江文（`b16`）、陕西文（`b19`）、陕西理（`b20`）、福建理（`b26`）、辽宁文（`b21`）、辽宁理（`b22`）、浙江理（`b17`）、山东文（`b08`）、江苏（`b13`）、广东文（`b09`）、天津文（`b03`）、天津理（`b02`）、重庆理（`b24`）、安徽文（`b06`）、湖南理（`b27`）、福建文（`b25`），均重封账。
 - 该段**印在 PDF 里**，必须「删段 → 重生成三件套 → 重建 → 逐页重审 → 重封账」；只改 Markdown 会让三套生成器 `--all --check` 立即不一致。
 
 ## 五步规程（每卷一轮）
@@ -9,16 +9,15 @@
 1. 删 `_试题.md` 标题下「状态：needs-review；…」整段（其余题面一字不动）；
 2. `solution_sources.py extract-batch --batch <batch> --write` 重生成 `_解析正文.md`、`_含解析.md`；
 3. `generate_projects.py` / `make_short_answers.py` / `make_editions.py` 加 `--batch <batch> --write`；
-4. `build_projects.py build --formal --batch <batch>`，确认四版 log 的 errors/overfull/underfull/missing characters 全为 0；出现 Overfull/Underfull 先改解析正文再重建；
+4. `build_projects.py build --formal --batch <batch>`，确认四版 log 的 errors/overfull/underfull/missing characters 全为 0；出现 Overfull/Underfull 先改解析正文/题面分段再重建；
 5. `review_receipts.py prepare-batch` → 逐页审查（图页 350dpi）→ `finalize-batch` → 全量门禁 → 限定路径提交。
 
-**顺序要点**：`prepare-batch` 必须放在重建之后；否则工作项与 build 不匹配，`finalize-batch` 会报 `INVALID_OR_STALE`。
+**已知坑**：① `prepare-batch` 必须在重建之后，否则 `finalize-batch` 报 `INVALID_OR_STALE`；② 长串拉丁字符/数字（如手机号占位「×××××××0000」）会造成 Underfull，`\allowbreak` 无效，应在自然句读处分段（不改字）。
 
-## 一、待清理队列（complete 卷，按四版总页数升序，共 13 卷）
+## 一、待清理队列（complete 卷，按四版总页数升序，共 12 卷）
 
 | 年份 | 卷 | paper_id | 项目目录 | 试题/解析/简答/印刷 | 合计 |
 | --- | --- | --- | --- | --- | --- |
-| 2007 | 福建文 | `gk-2007-fujian-arts` | `2007_福建卷_文科` | 6/22/8/19 | 55 |
 | 2007 | 重庆文 | `gk-2007-chongqing-arts` | `2007_重庆卷_文科` | 5/25/7/18 | 55 |
 | 2007 | 江西理 | `gk-2007-jiangxi-science` | `2007_江西卷_理科` | 6/24/8/19 | 57 |
 | 2007 | 湖北理 | `gk-2007-hubei-science` | `2007_湖北卷_理科` | 5/25/7/20 | 57 |
