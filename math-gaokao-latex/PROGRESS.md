@@ -16574,3 +16574,12 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b11.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 1 → **0 卷**；全库仅剩 `gk-2007-regular-sichuan-science`（blocked，ISSUE-1449/1450/1451）的 needs-review 段，须随其终局结论处理。
+
+### 2026-11-16 phase6-b23 / phase6-b24（重封账）：陕西文、陕西理清零历史 Underfull 豁免
+
+- 两卷此前以 `warning_exemptions` 封账（陕西文 1 条、陕西理 2 条，均为解析版 Underfull：Q19 题目长句与坐标/法向量句被拉伸）。本轮按内容可读性处理，**不改任何字符**：
+  - 陕西文/理 Q19 题目在「截面为 $A_1B_1C_1$，」后分段（题面规则允许分段）；
+  - 陕西理解析把「以 A 为原点…」句在「；」后拆句，并把「平面 $A_1AD$ 的法向量…；平面 $BCC_1B_1$ 的法向量…」由分号改为句号分句（解析为自有文本，可改措辞）。
+- 复建后四版 log 全 0：陕西文 5/16/7/15（43 页）、陕西理 5/19/7/15（46 页），页数与旧回执一致；两次 `finalize-batch` 均 `eligible_complete`、豁免清单清空。
+- 附带观察：`README.md` 的「回执日志警告汇总」由 Overfull 49 / Underfull 160 / 豁免 209 变为 46 / 147 / 193——说明历史批次里仍有带豁免的旧回执，全库「每卷 0 underfull」尚未达成，需逐卷复核（本轮只清了陕西两卷）。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
