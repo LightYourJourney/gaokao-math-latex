@@ -5,7 +5,7 @@ from fractions import Fraction
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 TRANSCRIPT = ROOT / "2004/2004_数学真题_春季安徽理_试题.md"
 ANSWERS = ROOT / "2004/2004_数学真题_春季安徽理_答案要点.md"
 SOLUTIONS = ROOT / "2004/2004_数学真题_春季安徽理_解析正文.md"

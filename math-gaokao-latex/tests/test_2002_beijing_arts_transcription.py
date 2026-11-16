@@ -8,7 +8,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 TRANSCRIPT = ROOT / "2002/2002_数学真题_北京文_试题.md"
 REVIEW = ROOT / "2002/2002_北京文科_来源校对.json"
 FIGURES = ROOT / "2002/2002_数学真题_北京文_图表清单.md"

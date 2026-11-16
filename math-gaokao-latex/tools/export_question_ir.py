@@ -178,7 +178,7 @@ def build_question_ir(repo_root: Path, paper_id: str) -> Dict[str, Any]:
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("paper_id", help="source-manifest.json 中的稳定 paper_id")
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[4], help="仓库根目录")
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2], help="仓库根目录")
     parser.add_argument("--output", type=Path, help="输出 JSON 路径；省略时写 stdout")
     args = parser.parse_args(argv)
     try:

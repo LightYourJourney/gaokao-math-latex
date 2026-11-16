@@ -5,7 +5,7 @@ from fractions import Fraction
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 PROJECT = ROOT / "math-gaokao-latex"
 ANSWERS = ROOT / "2004/2004_数学真题_春季北京文_答案要点.md"
 SOLUTIONS = ROOT / "2004/2004_数学真题_春季北京文_解析正文.md"

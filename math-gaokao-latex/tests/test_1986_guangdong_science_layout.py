@@ -11,7 +11,7 @@ import unittest
 
 
 PROJECT = Path(__file__).resolve().parents[1]
-REPOSITORY_ROOT = PROJECT.parent.parent.parent
+REPOSITORY_ROOT = PROJECT.parent
 PAPER_ID = "gk-1986-regular-guangdong-science"
 sys.path.insert(0, str(PROJECT / "tools"))
 
@@ -33,7 +33,7 @@ class GuangdongScience1986LayoutTests(unittest.TestCase):
 
         cls.temporary = tempfile.TemporaryDirectory(prefix="gk1986-science-layout-")
         root = Path(cls.temporary.name)
-        project_copy = root / "docs" / "exams" / "math-gaokao-latex"
+        project_copy = root / "math-gaokao-latex"
         project_copy.mkdir(parents=True)
         shutil.copytree(PROJECT / "common", project_copy / "common")
         shutil.copytree(

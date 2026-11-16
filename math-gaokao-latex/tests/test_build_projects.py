@@ -266,7 +266,7 @@ class RepositoryFixture:
     def copy_real(self, relative):
         target = self.root / relative
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(ROOT.parent.parent.parent / relative, target)
+        shutil.copy2(ROOT.parent / relative, target)
 
     def write(self, relative, text):
         target = self.root / relative
@@ -2396,7 +2396,7 @@ class ShellWrapperTests(unittest.TestCase):
         这是 Task 23 全部命令的调用形状；退出码此刻是 4（回执尚未产生），
         T23 之后会变成 3/0，所以只断言「路径解析成功且卷数正确」这一不变量。
         """
-        repository = ROOT.parent.parent.parent
+        repository = ROOT.parent
         result = subprocess.run(
             [
                 str(self.compile_sh), "validate-receipts",

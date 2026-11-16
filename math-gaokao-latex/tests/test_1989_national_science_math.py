@@ -151,7 +151,7 @@ class NationalScience1989MathTests(unittest.TestCase):
             paper, make_short_answers.INDEX_METADATA
         )
         result, problems = make_short_answers.generate_short_answers(
-            PROJECT.parent.parent.parent, sources
+            PROJECT.parent, sources
         )
         self.assertEqual(problems, ())
         target = (
@@ -174,7 +174,7 @@ class NationalScience1989MathTests(unittest.TestCase):
         )
         sources = generate_projects.paper_sources(paper)
         result = generate_projects.generate_project(
-            PROJECT.parent.parent.parent, sources
+            PROJECT.parent, sources
         )
         questions_tex = result.targets[
             f"math-gaokao-latex/{paper['project_dir']}/questions.tex"

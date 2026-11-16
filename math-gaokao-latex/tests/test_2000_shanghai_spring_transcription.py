@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 TRANSCRIPT = ROOT / "2000/2000_数学真题_春季上海_试题.md"
 
 

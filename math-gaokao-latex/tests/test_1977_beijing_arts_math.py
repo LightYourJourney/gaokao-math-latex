@@ -5,8 +5,8 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-REPO_ROOT = PROJECT_ROOT.parents[2]
-SOURCE_ROOT = REPO_ROOT / "docs" / "exams" / "1977"
+REPO_ROOT = PROJECT_ROOT.parent
+SOURCE_ROOT = REPO_ROOT / "1977"
 PAPER_ROOT = PROJECT_ROOT / "1977_北京卷_文科"
 
 

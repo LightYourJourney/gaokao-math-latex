@@ -92,7 +92,7 @@ class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
                      if p['paper_id'] == 'gk-1989-regular-guangdong-science')
         with tempfile.TemporaryDirectory(prefix='gk1989-layout-') as temporary:
             root = Path(temporary)
-            project_copy = root / 'docs' / 'exams' / 'math-gaokao-latex'
+            project_copy = root / 'math-gaokao-latex'
             project_copy.mkdir(parents=True)
             shutil.copytree(PROJECT / 'common', project_copy / 'common')
             shutil.copytree(
@@ -132,7 +132,7 @@ class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
                      if p['paper_id'] == 'gk-1989-regular-guangdong-science')
         with tempfile.TemporaryDirectory(prefix='gk1989-print-layout-') as temporary:
             root = Path(temporary)
-            project_copy = root / 'docs' / 'exams' / 'math-gaokao-latex'
+            project_copy = root / 'math-gaokao-latex'
             project_copy.mkdir(parents=True)
             shutil.copytree(PROJECT / 'common', project_copy / 'common')
             shutil.copytree(
@@ -224,7 +224,7 @@ class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
         sources = make_short_answers.paper_sources(
             paper, make_short_answers.INDEX_METADATA)
         result, problems = make_short_answers.generate_short_answers(
-            PROJECT.parents[2], sources)
+            PROJECT.parent, sources)
         self.assertEqual(problems, ())
         output = result.targets[
             f"math-gaokao-latex/{paper['project_dir']}/answers_short.tex"

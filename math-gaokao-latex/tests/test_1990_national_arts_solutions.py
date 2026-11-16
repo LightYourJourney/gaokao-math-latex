@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "math-gaokao-latex/tools"))
 from solution_sources import parse_answer_points, render_combined
 from make_short_answers import parse_quick_table

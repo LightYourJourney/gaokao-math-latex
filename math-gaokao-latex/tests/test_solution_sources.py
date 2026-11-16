@@ -226,7 +226,7 @@ class RepositoryFixture:
         for key, value in (("user.email", "task6@example.invalid"), ("user.name", "Task 6")):
             subprocess.run(["git", "-C", str(self.root), "config", key, value], check=True)
 
-        project = self.root / "docs" / "exams" / "math-gaokao-latex"
+        project = self.root / "math-gaokao-latex"
         (project / "schemas").mkdir(parents=True)
         (project / "tools").mkdir(parents=True)
         shutil.copy2(

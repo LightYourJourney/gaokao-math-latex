@@ -5,7 +5,7 @@ import sys
 import unittest
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 PROJECT = ROOT / "math-gaokao-latex"
 QUESTIONS = ROOT / "1990/1990_数学真题_上海_试题.md"
 ANSWERS = ROOT / "1990/1990_数学真题_上海_答案要点.md"

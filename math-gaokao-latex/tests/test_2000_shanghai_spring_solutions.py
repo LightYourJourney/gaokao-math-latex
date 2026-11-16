@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 ANSWERS = ROOT / "2000/2000_数学真题_春季上海_答案要点.md"
 SOLUTIONS = ROOT / "2000/2000_数学真题_春季上海_解析正文.md"
 SOURCE_ID = "src-2980f0ba5ee7c2ceec0fb5ea733769661ddc2a0012bd727f326ad93cd15a2bc0"

@@ -31,7 +31,7 @@ class ShanghaiScience2016PrintFooterTests(unittest.TestCase):
 
         cls.temporary = tempfile.TemporaryDirectory(prefix="gk2016-shanghai-science-footer-")
         root = Path(cls.temporary.name)
-        project_copy = root / "docs" / "exams" / "math-gaokao-latex"
+        project_copy = root / "math-gaokao-latex"
         project_copy.mkdir(parents=True)
         shutil.copytree(PROJECT / "common", project_copy / "common")
         shutil.copytree(

@@ -7,7 +7,7 @@ from fractions import Fraction
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parents[1]
-ROOT = PROJECT.parents[2]
+ROOT = PROJECT.parent
 sys.path.insert(0, str(PROJECT / "tools"))
 import solution_sources  # noqa: E402
 

@@ -4,7 +4,7 @@ import re
 import unittest
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 ANSWERS = ROOT / "2004/2004_数学真题_春季上海_答案要点.md"
 SOLUTIONS = ROOT / "2004/2004_数学真题_春季上海_解析正文.md"
 TRANSCRIPT = ROOT / "2004/2004_数学真题_春季上海_试题.md"

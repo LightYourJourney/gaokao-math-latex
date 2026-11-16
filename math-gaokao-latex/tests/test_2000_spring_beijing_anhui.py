@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 
-REPO = Path(__file__).resolve().parents[4]
+REPO = Path(__file__).resolve().parents[2]
 PAPER = REPO / "2000/2000_数学真题_春季北京安徽理_试题.md"
 ANSWERS = REPO / "2000/2000_数学真题_春季北京安徽理_答案要点.md"
 SOLUTIONS = REPO / "2000/2000_数学真题_春季北京安徽理_解析正文.md"

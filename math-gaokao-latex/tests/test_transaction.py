@@ -32,7 +32,7 @@ class TransactionTests(unittest.TestCase):
         self.repo = Path(self.temporary.name)
         self.outside = Path(self.external.name)
         subprocess.run(["git", "init", "-q", str(self.repo)], check=True)
-        self.project = self.repo / "docs" / "exams" / "math-gaokao-latex"
+        self.project = self.repo / "math-gaokao-latex"
         self.project.mkdir(parents=True)
         self.manifest_path = self.project / "source-manifest.json"
         atomic_write_json(self.manifest_path, self.manifest(0, None))
@@ -324,7 +324,7 @@ raise SystemExit(3)
     def test_prepare_rejects_casefolded_reserved_paths_before_journal(self):
         cases = (
             ".Git/config",
-            "DOCS/EXAMS/MATH-GAOKAO-LATEX/.WORK/TRANSACTIONS/payload.bin",
+            "MATH-GAOKAO-LATEX/.WORK/TRANSACTIONS/payload.bin",
         )
         for reserved in cases:
             for kind in ("target", "input"):
@@ -461,7 +461,7 @@ raise SystemExit(3)
             ".git/index.lock",
             ".Git/config",
             "math-gaokao-latex/.work/transactions/11111111-1111-4111-8111-111111111111/payload.bin",
-            "DOCS/EXAMS/MATH-GAOKAO-LATEX/.WORK/TRANSACTIONS/payload.bin",
+            "MATH-GAOKAO-LATEX/.WORK/TRANSACTIONS/payload.bin",
         )
         for reserved in cases:
             for kind in ("target", "input"):

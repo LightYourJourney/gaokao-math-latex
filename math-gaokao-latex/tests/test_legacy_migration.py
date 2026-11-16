@@ -13,7 +13,7 @@ from pathlib import Path
 from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
-REPO = ROOT.parents[2]
+REPO = ROOT.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from issues import load_issues
 from issues import main as issues_main
@@ -232,7 +232,7 @@ def fixture_repository(directory):
     """建一个只含迁移所需 tracked 文件的临时仓库；manifest 回到迁移前状态。"""
     repo = Path(directory) / "repo"
     subprocess.run(["git", "init", "-q", str(repo)], check=True)
-    project = repo / "docs" / "exams" / "math-gaokao-latex"
+    project = repo / "math-gaokao-latex"
     (project / "schemas").mkdir(parents=True)
     shutil.copy2(
         ROOT / "schemas" / "source-manifest.schema.json",
@@ -470,7 +470,7 @@ class MigrationTests(unittest.TestCase):
                 self.assertEqual(len(set(paths)), len(paths))
                 expected_frozen = list(frozen[entry.legacy_id])
                 if entry.legacy_id == "2019li":
-                    # 178b4c31：迁移后补回、已独立核验的六爻矢量图；冻结迁移
+                    # 0c1af42c：迁移后补回、已独立核验的六爻矢量图；冻结迁移
                     # 基线本身不应被改写，但 live figure tree 必须纳入它。
                     expected_frozen.append(
                         "2019_全国Ⅰ卷_理科/figures/f2019_t6_hexagram.tex"

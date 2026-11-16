@@ -8,7 +8,7 @@ from fractions import Fraction
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REPO = ROOT.parents[2]
+REPO = ROOT.parent
 sys.path.insert(0, str(ROOT.parent / "math-gaokao-2017-2026/tools"))
 import md2tex
 sys.path.insert(0, str(ROOT / "tools"))

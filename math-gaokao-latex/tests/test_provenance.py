@@ -274,7 +274,7 @@ class ProvenanceFixture:
     def copy_real(self, relative):
         target = self.root / relative
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(ROOT.parent.parent.parent / relative, target)
+        shutil.copy2(ROOT.parent / relative, target)
 
     def write(self, relative, text):
         target = self.root / relative
@@ -1801,7 +1801,7 @@ class LiveRepositoryTests(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.root = ROOT.parent.parent.parent
+        cls.root = ROOT.parent
         cls.manifest = load_manifest(ROOT / "source-manifest.json")
 
     def provenance_papers(self):

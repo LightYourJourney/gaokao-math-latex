@@ -9,7 +9,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 PROJECT = ROOT / "math-gaokao-latex"
 TRANSCRIPT = ROOT / "2003/2003_数学真题_春季北京文_试题.md"
 REVIEW = ROOT / "2003/2003_春季北京文科_来源校对.json"

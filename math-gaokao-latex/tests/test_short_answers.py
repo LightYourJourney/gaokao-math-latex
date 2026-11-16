@@ -218,7 +218,7 @@ class RepositoryFixture:
         ):
             target = self.root / relative
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(ROOT.parent.parent.parent / relative, target)
+            shutil.copy2(ROOT.parent / relative, target)
 
         papers = papers if papers is not None else [paper_entry()]
         self.manifest_path = self.root / MANIFEST_TARGET
@@ -633,7 +633,7 @@ class LiveRepositoryTests(unittest.TestCase):
             if paper["paper_id"] == "gk-2023-regular-new-gaokao-1"
         )
         sources = paper_sources(paper, make_short_answers.INDEX_METADATA)
-        result, problems = generate_short_answers(ROOT.parent.parent.parent, sources)
+        result, problems = generate_short_answers(ROOT.parent, sources)
         self.assertEqual(problems, ())
         short_answers = result.targets[
             f"{PROJECT_RELATIVE}/{paper['project_dir']}/answers_short.tex"
@@ -647,7 +647,7 @@ class LiveRepositoryTests(unittest.TestCase):
         self.assertNotRegex(item, r"导数|零点|分类讨论|分类讨论.*单调|递减|递增")
 
     def test_every_paper_agrees_between_answers_tex_and_the_answer_key(self):
-        repo = ROOT.parent.parent.parent
+        repo = ROOT.parent
         manifest = load_manifest(ROOT / "source-manifest.json")
         for paper in manifest["papers"]:
             problems = compare_generated_answers(
@@ -658,7 +658,7 @@ class LiveRepositoryTests(unittest.TestCase):
 
 
     def test_2022_b_science_pending_choice_generates_an_explicit_short_answer(self):
-        repo = ROOT.parent.parent.parent
+        repo = ROOT.parent
         manifest = load_manifest(ROOT / "source-manifest.json")
         paper = next(
             paper for paper in manifest["papers"]
@@ -674,7 +674,7 @@ class LiveRepositoryTests(unittest.TestCase):
         self.assertIn("答案 & A & A & C", short_answers)
 
     def test_all_2022_national_papers_have_a_valid_short_answer_source(self):
-        repo = ROOT.parent.parent.parent
+        repo = ROOT.parent
         manifest = load_manifest(ROOT / "source-manifest.json")
         paper_ids = (
             "gk-2022-regular-national-a-arts",

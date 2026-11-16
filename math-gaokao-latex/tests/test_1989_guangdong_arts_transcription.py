@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 
-REPO = Path(__file__).resolve().parents[4]
+REPO = Path(__file__).resolve().parents[2]
 PROJECT = REPO / "math-gaokao-latex"
 SOURCE_ID = "src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766"
 QUESTION_FILE = REPO / "1989/1989_数学真题_广东文_试题.md"

@@ -10,7 +10,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 PROJECT = ROOT / "math-gaokao-latex"
 PAPER_DIR = PROJECT / "2005_上海春季卷"
 sys.path.insert(0, str(PROJECT / "tools"))

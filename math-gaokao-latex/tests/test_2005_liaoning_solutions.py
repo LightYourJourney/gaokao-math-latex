@@ -5,7 +5,7 @@ import re
 import unittest
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 D = ROOT / "2005"
 TRANSCRIPT = D / "2005_数学真题_辽宁_试题.md"
 ANSWERS = D / "2005_数学真题_辽宁_答案要点.md"

@@ -2432,8 +2432,8 @@ def _registered_paper_record(
     if not isinstance(paper_id, str) or not re.match(r"^gk-[0-9]{4}-[a-z0-9-]+$", paper_id):
         raise ValueError(f"paper_id 不合式样：{paper_id!r}")
     prefix = entry.get("markdown_prefix")
-    if not isinstance(prefix, str) or not prefix.startswith(""):
-        raise ValueError(f"{paper_id}: markdown_prefix 必须是  下的路径前缀")
+    if not isinstance(prefix, str) or not re.match(r"\d{4}/", prefix):
+        raise ValueError(f"{paper_id}: markdown_prefix 必须是 <年份>/ 下的路径前缀")
     question_count = entry.get("question_count")
     if (
         isinstance(question_count, bool)

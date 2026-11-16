@@ -454,7 +454,7 @@ def artifact_fixture(value=b"%PDF-task-3\n"):
 def init_state_repository(directory, source):
     repo = Path(directory) / "project-repo"
     subprocess.run(["git", "init", "-q", str(repo)], check=True)
-    project = repo / "docs" / "exams" / "math-gaokao-latex"
+    project = repo / "math-gaokao-latex"
     (project / "schemas").mkdir(parents=True)
     schema_path = ROOT / "schemas" / "source-manifest.schema.json"
     (project / "schemas" / schema_path.name).write_bytes(schema_path.read_bytes())
@@ -1312,7 +1312,7 @@ class MaterializationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             repo = Path(tmp) / "repo"
             subprocess.run(["git", "init", "-q", str(repo)], check=True)
-            project = repo / "docs" / "exams" / "math-gaokao-latex"
+            project = repo / "math-gaokao-latex"
             (project / "schemas").mkdir(parents=True)
             schema_path = ROOT / "schemas" / "source-manifest.schema.json"
             (project / "schemas" / schema_path.name).write_bytes(schema_path.read_bytes())
@@ -1583,7 +1583,7 @@ class RegisterPapersTests(unittest.TestCase):
     def _repo(self, tmp):
         repo = Path(tmp) / "repo"
         subprocess.run(["git", "init", "-q", str(repo)], check=True)
-        project = repo / "docs" / "exams" / "math-gaokao-latex"
+        project = repo / "math-gaokao-latex"
         (project / "schemas").mkdir(parents=True)
         schema_path = ROOT / "schemas" / "source-manifest.schema.json"
         (project / "schemas" / schema_path.name).write_bytes(schema_path.read_bytes())

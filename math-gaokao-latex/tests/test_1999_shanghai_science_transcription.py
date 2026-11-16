@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 PROJECT = ROOT / "math-gaokao-latex"
 PAPER = PROJECT / "1999_上海卷_理科"
 QUESTIONS = PAPER / "题面转录草稿.md"

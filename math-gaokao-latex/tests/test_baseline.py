@@ -60,9 +60,9 @@ def _normalize_post_baseline_repairs(relative, text):
     comparison uses this normalized representation.
     """
     # These exceptions are tied to reviewed commits, not to an open-ended
-    # content allowlist: 1aa2f46b (2017 regions), 94db44de (2019 arts q5),
-    # 9172712f (2019 science q6 wording), 178b4c31 (2019 science q6 vector
-    # figure), and 6ce2e0ac (2020 source/solution corrections), plus the two
+    # content allowlist: 40ce8aee (2017 regions), decf0126 (2019 arts q5),
+    # a8ee4440 (2019 science q6 wording), 0c1af42c (2019 science q6 vector
+    # figure), and 7cc1654a (2020 source/solution corrections), plus the two
     # visually reviewed 2020 arts QED glyph substitutions below, and the
     # 2026-10-10 answer-box repair round (phase3-b07 converter fix:
     # asterisk-bearing answer lines move from \textbf back to \gkanswer).  The actual
@@ -638,7 +638,7 @@ class PreMigrationIndexTests(unittest.TestCase):
             paper for paper in current["papers"] if paper["id"] in legacy_ids
         ]
         projected = legacy_index_projection(current)
-        # 2019 理科第 6 题的六爻图是 178b4c31 在迁移后补入的已核实矢量修订；
+        # 2019 理科第 6 题的六爻图是 0c1af42c 在迁移后补入的已核实矢量修订；
         # 这里专门比较迁移前字段，因此从该历史投影中剔除这一项，其他 figure
         # 路径、顺序与字段仍必须逐字一致。
         for paper in projected["papers"]:
@@ -1345,11 +1345,11 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         relative = (
             "math-gaokao-latex/2023_新高考Ⅰ卷/answers_short.tex"
         )
-        repo = ROOT.parent.parent.parent
+        repo = ROOT.parent
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
         record = ledger[key]
         before = subprocess.check_output([
-            "git", "-C", str(repo), "show", "a8bdf08^:" + relative,
+            "git", "-C", str(repo), "show", "8f34576^:" + relative,
         ]).decode("utf-8")
         after = (repo / relative).read_text(encoding="utf-8")
 
@@ -1402,11 +1402,11 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         }
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
         ledger_relative = ADJUDICATED_DRIFTS_PATH.relative_to(
-            ROOT.parent.parent.parent
+            ROOT.parent
         ).as_posix()
         previous_document = json.loads(subprocess.check_output([
-            "git", "-C", str(ROOT.parent.parent.parent), "show",
-            "ccb15cf:" + ledger_relative,
+            "git", "-C", str(ROOT.parent), "show",
+            "dcb1767:" + ledger_relative,
         ]).decode("utf-8"))
         previous = {
             (record["paper_id"], record["artifact"]): record
@@ -1428,10 +1428,10 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             relative = "math-gaokao-latex/{}/{}".format(
                 projects[paper_id], artifact
             )
-            current = ROOT.parent.parent.parent / relative
+            current = ROOT.parent / relative
             head = subprocess.check_output([
-                "git", "-C", str(ROOT.parent.parent.parent), "show",
-                "ccb15cf:" + relative,
+                "git", "-C", str(ROOT.parent), "show",
+                "dcb1767:" + relative,
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
             self.assertEqual(record["class"], "layout-regeneration")
@@ -1475,11 +1475,11 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         }
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
         ledger_relative = ADJUDICATED_DRIFTS_PATH.relative_to(
-            ROOT.parent.parent.parent
+            ROOT.parent
         ).as_posix()
         previous_document = json.loads(subprocess.check_output([
-            "git", "-C", str(ROOT.parent.parent.parent), "show",
-            "36ca6b2:" + ledger_relative,
+            "git", "-C", str(ROOT.parent), "show",
+            "50fba96:" + ledger_relative,
         ]).decode("utf-8"))
         previous = {
             (record["paper_id"], record["artifact"]): record
@@ -1531,7 +1531,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             r"$8$ & $64$ & $243$ & $125$ & $y>z>x$ & D  \\",
         )
         expected_q8_follow_up = {
-            "commit": "15bcab11a16f935941da3fe61a88fab18c1c3493",
+            "commit": "77be076b460ad444c999ec056005eacd4e52bd74",
             "kind": "mathematical-correction",
             "summary": "修正对数比较阈值，并以 k=8 验证 D 项。",
             "test": "tests/test_2025_national_1_q08_solution.py",
@@ -1541,10 +1541,10 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             relative = "math-gaokao-latex/{}/{}".format(
                 projects[paper_id], artifact
             )
-            current = ROOT.parent.parent.parent / relative
+            current = ROOT.parent / relative
             head = subprocess.check_output([
-                "git", "-C", str(ROOT.parent.parent.parent), "show",
-                "36ca6b2:" + relative,
+                "git", "-C", str(ROOT.parent), "show",
+                "50fba96:" + relative,
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
             self.assertEqual(record["class"], "layout-regeneration")
@@ -1623,11 +1623,11 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         }
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
         ledger_relative = ADJUDICATED_DRIFTS_PATH.relative_to(
-            ROOT.parent.parent.parent
+            ROOT.parent
         ).as_posix()
         previous_document = json.loads(subprocess.check_output([
-            "git", "-C", str(ROOT.parent.parent.parent), "show",
-            "1c7b418:" + ledger_relative,
+            "git", "-C", str(ROOT.parent), "show",
+            "82d401b:" + ledger_relative,
         ]).decode("utf-8"))
         previous = {
             (record["paper_id"], record["artifact"]): record
@@ -1649,17 +1649,17 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             relative = "math-gaokao-latex/{}/{}".format(
                 projects[paper_id], artifact
             )
-            current = ROOT.parent.parent.parent / relative
+            current = ROOT.parent / relative
             head = subprocess.check_output([
-                "git", "-C", str(ROOT.parent.parent.parent), "show",
-                "1c7b418:" + relative,
+                "git", "-C", str(ROOT.parent), "show",
+                "82d401b:" + relative,
             ]).decode("utf-8")
             if paper_id == "gk-2023-regular-new-gaokao-1":
                 # The later Q13 transcription correction regenerated this file.
                 # The task-28 ledger records the earlier reviewed snapshot.
                 now = subprocess.check_output([
-                    "git", "-C", str(ROOT.parent.parent.parent), "show",
-                    "cb4116d7:" + relative,
+                    "git", "-C", str(ROOT.parent), "show",
+                    "6a9e427a:" + relative,
                 ]).decode("utf-8")
             else:
                 now = current.read_text(encoding="utf-8")
@@ -1702,11 +1702,11 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         }
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
         ledger_relative = ADJUDICATED_DRIFTS_PATH.relative_to(
-            ROOT.parent.parent.parent
+            ROOT.parent
         ).as_posix()
         previous_document = json.loads(subprocess.check_output([
-            "git", "-C", str(ROOT.parent.parent.parent), "show",
-            "075ed1c:" + ledger_relative,
+            "git", "-C", str(ROOT.parent), "show",
+            "e4d891c:" + ledger_relative,
         ]).decode("utf-8"))
         previous = {
             (record["paper_id"], record["artifact"]): record
@@ -1728,10 +1728,10 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             relative = "math-gaokao-latex/{}/{}".format(
                 projects[paper_id], artifact
             )
-            current = ROOT.parent.parent.parent / relative
+            current = ROOT.parent / relative
             head = subprocess.check_output([
-                "git", "-C", str(ROOT.parent.parent.parent), "show",
-                "075ed1c:" + relative,
+                "git", "-C", str(ROOT.parent), "show",
+                "e4d891c:" + relative,
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
             head_for_layout_diff = _normalize_post_baseline_repairs(relative, head)
@@ -1792,10 +1792,10 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             relative = "math-gaokao-latex/{}/{}".format(
                 projects[paper_id], artifact
             )
-            current = ROOT.parent.parent.parent / relative
+            current = ROOT.parent / relative
             head = subprocess.check_output([
-                "git", "-C", str(ROOT.parent.parent.parent), "show",
-                "eccf7f0:" + relative,
+                "git", "-C", str(ROOT.parent), "show",
+                "fe844c8:" + relative,
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
             head_for_layout_diff = _normalize_post_baseline_repairs(relative, head)
@@ -1858,10 +1858,10 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             relative = "math-gaokao-latex/{}/{}".format(
                 projects[paper_id], artifact
             )
-            current = ROOT.parent.parent.parent / relative
+            current = ROOT.parent / relative
             head = subprocess.check_output([
-                "git", "-C", str(ROOT.parent.parent.parent), "show",
-                "e8f2ff5:" + relative,
+                "git", "-C", str(ROOT.parent), "show",
+                "312789f:" + relative,
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
             head_for_layout_diff = _normalize_post_baseline_repairs(relative, head)
@@ -1875,18 +1875,21 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             snapshot = record.get("layout_review_snapshot")
             if snapshot is not None:
                 snapshot_bytes = subprocess.check_output([
-                    "git", "-C", str(ROOT.parent.parent.parent), "show",
+                    "git", "-C", str(ROOT.parent), "show",
                     snapshot["commit"] + ":" + relative,
                 ])
                 self.assertEqual(
                     hashlib.sha256(snapshot_bytes).hexdigest(), snapshot["sha256"]
                 )
                 follow_up = subprocess.check_output([
-                    "git", "-C", str(ROOT.parent.parent.parent), "show",
+                    "git", "-C", str(ROOT.parent), "show",
                     record["follow_up_commit"] + ":" + relative,
                 ])
                 self.assertEqual(
-                    hashlib.sha256(follow_up).hexdigest(), record["current_sha256"]
+                    hashlib.sha256(
+                        follow_up.decode("utf-8").encode("utf-8")
+                    ).hexdigest(),
+                    record["current_sha256"],
                 )
                 self.assertEqual(follow_up.decode("utf-8"), now)
                 layout_text = snapshot_bytes.decode("utf-8")

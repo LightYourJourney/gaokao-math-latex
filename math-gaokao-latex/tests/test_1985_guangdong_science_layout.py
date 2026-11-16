@@ -11,7 +11,7 @@ import unittest
 
 
 PROJECT = Path(__file__).resolve().parents[1]
-REPOSITORY_ROOT = PROJECT.parent.parent.parent
+REPOSITORY_ROOT = PROJECT.parent
 PAPER_ID = "gk-1985-regular-guangdong-science"
 PAPER_DIR = PROJECT / "1985_广东卷_理工农医类"
 QUESTION_SOURCE = REPOSITORY_ROOT / "1985/1985_数学真题_广东理工农医类_试题.md"
@@ -80,7 +80,7 @@ class GuangdongScience1985PaginationTests(unittest.TestCase):
 
         cls.temporary = tempfile.TemporaryDirectory(prefix="gk1985-science-layout-")
         root = Path(cls.temporary.name)
-        project_copy = root / "docs" / "exams" / "math-gaokao-latex"
+        project_copy = root / "math-gaokao-latex"
         project_copy.mkdir(parents=True)
         shutil.copytree(PROJECT / "common", project_copy / "common")
         shutil.copytree(

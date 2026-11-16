@@ -17,7 +17,7 @@ PAPER_ID = "gk-2017-regular-national-1-science"
 
 class QuestionIRExportTests(unittest.TestCase):
     def test_registered_paper_exports_stable_question_data_without_claiming_official_answers(self):
-        document = build_question_ir(ROOT.parent.parent.parent, PAPER_ID)
+        document = build_question_ir(ROOT.parent, PAPER_ID)
 
         self.assertEqual(document["paper_id"], PAPER_ID)
         self.assertEqual(document["source"]["sha256"], "0f283c36559ea6d249f57acf32e37507ae546c1521ed5b38b13cbe116f4a203e")
@@ -26,7 +26,7 @@ class QuestionIRExportTests(unittest.TestCase):
             [row["question_id"] for row in document["questions"]],
             [f"{PAPER_ID}-q{number:02d}" for number in range(1, 24)],
         )
-        self.assertEqual(document, build_question_ir(ROOT.parent.parent.parent, PAPER_ID))
+        self.assertEqual(document, build_question_ir(ROOT.parent, PAPER_ID))
         first = document["questions"][0]
         self.assertEqual(first["question_id"], "gk-2017-regular-national-1-science-q01")
         self.assertEqual(first["question_number"], 1)
@@ -41,7 +41,7 @@ class QuestionIRExportTests(unittest.TestCase):
         self.assertEqual(document["questions"][1]["figures"], ["images/2017理-t2-太极图.png"])
 
     def test_export_rejects_question_text_that_no_longer_matches_provenance(self):
-        repo = ROOT.parent.parent.parent
+        repo = ROOT.parent
         with tempfile.TemporaryDirectory() as temp_dir:
             copy_root = Path(temp_dir)
             project = copy_root / "math-gaokao-latex"
@@ -59,7 +59,7 @@ class QuestionIRExportTests(unittest.TestCase):
 
     def test_export_rejects_unknown_paper_id(self):
         with self.assertRaisesRegex(QuestionIRExportError, "未找到唯一试卷记录"):
-            build_question_ir(ROOT.parent.parent.parent, "not-a-paper")
+            build_question_ir(ROOT.parent, "not-a-paper")
 
 
 if __name__ == "__main__":

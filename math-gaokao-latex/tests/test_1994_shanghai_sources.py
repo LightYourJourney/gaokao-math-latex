@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REPO = ROOT.parents[2]
+REPO = ROOT.parent
 PAPER_ID = "gk-1994-shanghai"
 PROJECT_DIR = ROOT / "1994_上海卷"
 QUESTION_SOURCE = REPO / "1994/1994_数学真题_上海_试题.md"

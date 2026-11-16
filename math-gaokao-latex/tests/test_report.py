@@ -8,7 +8,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 TOOLS = ROOT / "math-gaokao-latex/tools"
 sys.path.insert(0, str(TOOLS))
 spec = importlib.util.spec_from_file_location("report", TOOLS / "report.py")

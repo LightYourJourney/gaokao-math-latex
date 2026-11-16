@@ -281,7 +281,7 @@ class RepositoryFixture:
     @staticmethod
     def repository_source(relative):
         """仓库里那份真源码的位置（夹具只是复制一份到相同的仓库相对路径）。"""
-        return ROOT.parent.parent.parent / relative
+        return ROOT.parent / relative
 
     def cleanup(self):
         self.temporary.cleanup()
@@ -842,7 +842,7 @@ class ConversionInterfaceTests(unittest.TestCase):
             if item["paper_id"] == "gk-2016-regular-sichuan-science"
         )
         result = generate_projects.generate_project(
-            ROOT.parents[2], paper_sources(paper)
+            ROOT.parent, paper_sources(paper)
         )
         answers = result.targets[
             "math-gaokao-latex/2016_四川卷_理科/answers.tex"
@@ -1024,7 +1024,7 @@ class ConversionInterfaceTests(unittest.TestCase):
             item for item in manifest["papers"]
             if item["paper_id"] == "gk-1961-regular-national"
         )
-        result = generate_project(ROOT.parent.parent.parent, paper_sources(paper))
+        result = generate_project(ROOT.parent, paper_sources(paper))
         answers = result.targets[
             PROJECT_RELATIVE + "/1961_全国卷/answers.tex"
         ].decode("utf-8")
@@ -1621,7 +1621,7 @@ class LiveQuestionRenderingRegressionTests(unittest.TestCase):
             if item["paper_id"] == "gk-1987-regular-national-science"
         )
         result = generate_project(
-            ROOT.parent.parent.parent, paper_sources(paper)
+            ROOT.parent, paper_sources(paper)
         )
         questions = result.targets[
             PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
@@ -1641,7 +1641,7 @@ class LiveQuestionRenderingRegressionTests(unittest.TestCase):
             if item["paper_id"] == "gk-1985-regular-guangdong-science"
         )
         result = generate_project(
-            ROOT.parent.parent.parent, paper_sources(paper)
+            ROOT.parent, paper_sources(paper)
         )
         questions = result.targets[
             PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
@@ -1666,7 +1666,7 @@ class LiveQuestionRenderingRegressionTests(unittest.TestCase):
             if item["paper_id"] == "gk-1986-regular-shanghai-arts"
         )
         result = generate_project(
-            ROOT.parent.parent.parent, paper_sources(paper)
+            ROOT.parent, paper_sources(paper)
         )
         questions = result.targets[
             PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
@@ -1686,7 +1686,7 @@ class LiveQuestionRenderingRegressionTests(unittest.TestCase):
             if item["paper_id"] == "gk-1986-regular-shanghai-science"
         )
         result = generate_project(
-            ROOT.parent.parent.parent, paper_sources(paper)
+            ROOT.parent, paper_sources(paper)
         )
         answers = result.targets[
             PROJECT_RELATIVE + "/" + paper["project_dir"] + "/answers.tex"
@@ -1702,7 +1702,7 @@ class LiveQuestionRenderingRegressionTests(unittest.TestCase):
             item for item in manifest["papers"]
             if item["paper_id"] == "gk-1986-regular-guangdong-arts"
         )
-        result = generate_project(ROOT.parent.parent.parent, paper_sources(paper))
+        result = generate_project(ROOT.parent, paper_sources(paper))
         questions = result.targets[
             PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
         ].decode("utf-8")
@@ -1791,7 +1791,7 @@ class LiveQuestionRenderingRegressionTests(unittest.TestCase):
             item for item in manifest["papers"]
             if item["paper_id"] == "gk-1986-regular-guangdong-arts"
         )
-        result = generate_project(ROOT.parent.parent.parent, paper_sources(paper))
+        result = generate_project(ROOT.parent, paper_sources(paper))
         questions = result.targets[
             PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
         ].decode("utf-8")
@@ -1844,7 +1844,7 @@ class LiveQuestionRenderingRegressionTests(unittest.TestCase):
             item for item in manifest["papers"]
             if item["paper_id"] == "gk-1986-regular-guangdong-arts"
         )
-        result = generate_project(ROOT.parent.parent.parent, paper_sources(paper))
+        result = generate_project(ROOT.parent, paper_sources(paper))
         questions = result.targets[
             PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
         ].decode("utf-8")

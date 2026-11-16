@@ -8,7 +8,7 @@ from math import comb
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 PAPER = ROOT / "math-gaokao-latex/1999_上海卷_理科"
 SOLUTIONS = PAPER / "解析草稿.md"
 ANSWERS = PAPER / "答案要点草稿.md"

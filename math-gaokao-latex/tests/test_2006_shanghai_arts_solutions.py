@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 ANSWER_KEY = ROOT / "2006/2006_数学真题_上海文_答案要点.md"
 SOLUTIONS = ROOT / "2006/2006_数学真题_上海文_解析正文.md"
 COMBINED = ROOT / "2006/2006_数学真题_上海文_含解析.md"

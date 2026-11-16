@@ -125,7 +125,7 @@ class RepositoryFixture:
         ]:
             target = self.root / relative
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(ROOT.parent.parent.parent / relative, target)
+            shutil.copy2(ROOT.parent / relative, target)
 
         papers = papers if papers is not None else [paper_entry()]
         self.manifest_path = self.root / MANIFEST_TARGET
@@ -333,7 +333,7 @@ class LiveShellsAreByteIdenticalTests(unittest.TestCase):
     """
 
     def test_every_repository_shell_is_reproducible_from_the_templates(self):
-        repo = ROOT.parent.parent.parent
+        repo = ROOT.parent
         manifest = load_manifest(ROOT / "source-manifest.json")
         templates = load_templates(repo)
         for paper in manifest["papers"]:

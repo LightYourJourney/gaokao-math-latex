@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[2]
 PROJECT = ROOT / "math-gaokao-latex"
 PAPER_DIR = PROJECT / "2017_上海春季卷"
 FIGURE_DIR = PAPER_DIR / "figures"

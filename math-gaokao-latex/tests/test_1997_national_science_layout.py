@@ -8,7 +8,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_ROOT = ROOT.parent.parent.parent
+REPOSITORY_ROOT = ROOT.parent
 PAPER_ID = "gk-1997-regular-national-science"
 sys.path.insert(0, str(ROOT / "tools"))
 
