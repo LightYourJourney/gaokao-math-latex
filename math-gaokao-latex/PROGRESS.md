@@ -16389,3 +16389,13 @@
 - 发现：`status-paragraph-ledger.md` 原按页数排序，把 `gk-2007-regular-sichuan-science`（`blocked`，ISSUE-1449/1450/1451：两个选项同为 $1$、独立推导得 $2\sqrt{21}/3$ 而印面四选项不合、$5/25$ 未约分）排在首位。该卷不可能「删段后重封账」——它的阻断点是题面缺陷，须外部证据裁定。
 - 处置：台账拆成两段——**一、待清理队列（16 卷 complete，按页数升序）**；**二、随 blocked 卷终局处理（1 卷）**，后者列 paper_id、目录与 issue 编号，指向 `blocked-ledger.md`。
 - 队列首行因此改为 2007 重庆理（5/23/7/19 = 54 页）。
+
+### 2026-11-16 phase5-b24（重封账）：2007 重庆理科状态段清理
+
+- 队列 A 第十五轮：删去 `2007/2007_数学真题_重庆理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b24 --write` → `build --formal`：四版 4/22/6/19 页（51 页），attempt `1be13885`，四 log 全 0（无 Overfull 需修）。
+- 51 页逐页审查：八类检查 0 fail、0 豁免；三幅图（Q10 三角形向量、Q13 抛物线、Q19 三棱柱、Q22 椭圆）四版共 9 处 350dpi 回源。
+- 解析内源疑点（Q8 洛必达与参数、Q10 向量数量积、Q14 等比中项、Q16 焦点弦、Q19 建系、Q21 递推放缩、Q22 椭圆焦半径）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b24.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：complete 队列 16 → **15 卷**（另有 1 卷 blocked 随终局处理）。

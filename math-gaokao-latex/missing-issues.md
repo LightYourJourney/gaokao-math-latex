@@ -24543,7 +24543,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1460
 
 ```json
