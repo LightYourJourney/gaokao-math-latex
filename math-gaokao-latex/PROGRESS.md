@@ -16331,3 +16331,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b17.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：23 → **22 卷**。
+
+### 2026-11-16 phase5-b08（重封账）：2007 山东文科状态段清理
+
+- 队列 A 第十轮：删去 `2007/2007_数学真题_山东文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b08 --write` → `build --formal`：四版 5/24/7/18 页（54 页），attempt `d4a868e4`，四 log 全 0。
+- 54 页逐页审查：八类检查 0 fail、0 豁免；四幅图（Q3 四种几何体三视图、Q8 频率分布直方图、Q10 程序框图、Q20 直四棱柱）四版共 16 处 350dpi 回源。
+- 解析内源疑点（Q1 分母有理化口径、Q2 区间整数、Q5 向量夹角余弦符号、Q7 原命题与否命题、Q8 组距口径、Q9 抛物线、Q13 数列下标、Q15 恒成立、Q16 对称圆心、Q17 三角形解、Q18 等比中项、Q19 线性规划、Q21 零点分类、Q22 定点求法）均按「题面照录 + 解析说明」保留，逐条在解析内标注。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b08.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：22 → **21 卷**。
