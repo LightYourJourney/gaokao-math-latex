@@ -16461,3 +16461,14 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b15.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 11 → **10 卷**。
+
+### 2026-11-16 phase5-b28（重封账）：2007 湖北理科状态段清理
+
+- 队列 A 第二十一轮：删去 `2007/2007_数学真题_湖北理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 流程按台账执行：extract-batch → `.work/phase5-b28/gen_prov.py` + `provenance import-batch`（避免 stale）→ 三套生成器 → `build --formal`。
+- 首轮即四 log 全 0（无 Overfull/Underfull 需修）：四版 5/25/7/20 页（57 页），attempt `907bcd54`。
+- 57 页逐页审查：八类检查 0 fail、0 豁免；四处图稿（Q15 含药量衰减曲线、Q17 频率分布直方图、Q18 三棱锥、Q19 抛物线与直线）四版共 11 处 350dpi 回源。
+- 解析内源疑点（Q6 数列与充要条件、Q7 双曲线焦半径、Q9 骰子、Q10 圆与直线、Q11 反函数、Q12 复数、Q13 线性规划、Q14 概率、Q15 分段模型、Q16 三角、Q17 直方图、Q18 建系、Q19 抛物线、Q20 极值、Q21 数列不等式）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b28.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 10 → **9 卷**。
