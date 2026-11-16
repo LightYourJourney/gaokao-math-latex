@@ -16496,3 +16496,16 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b18.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 8 → **7 卷**。
+
+### 2026-11-16 phase5-b14（重封账）：2007 江西文科状态段清理（含一处图稿缺陷与一处解析论断订正）
+
+- 队列 A 第二十四轮：删去 `2007/2007_数学真题_江西文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 流程：extract-batch → `.work/phase5-b14/gen_prov.py` + `provenance import-batch` → 三套生成器 → `build --formal`。
+- **图稿缺陷（真缺陷）**：第 11 题「四只酒杯」图的圆柱杯杯口椭圆被画成 `\draw (-1,3) ellipse (1 and 0.18)`，圆心偏在左端，渲染出杯右上方一个悬空椭圆。改为 `(0,3)` 后杯口正确盖在杯体上；300dpi 复核通过。
+- **解析论断订正**：第 11 题原括号注写「圆台杯（$h_3$）所需高度介于 $h_1$ 与 $h_2$ 之间」，实为最矮（按图中底/口半径比 $0.45$ 算半杯高度约 $0.39H$）。改为「半杯时高度最低，约 $0.39H$」；答案仍为 A（$h_2>h_1>h_4$），选项判定不变。
+- `build --formal`：四版 6/27/8/20 页（61 页），attempt `4a0de0fa`，四 log 全 0，页数与图稿修正前一致。
+- 61 页逐页审查：八类检查 0 fail、0 豁免；四处图稿（Q11 四只酒杯、Q16 正方体与截面、Q18 余弦曲线、Q20 截三棱柱）四版共 18 处 300~350dpi 回源。
+- 其余题目复核通过（Q5 赋值法 $-2$；Q6 有放回 $3/64$；Q9 球面距离 $2\pi/3$；Q10 充要条件；Q12 $x_1^2+x_2^2=7/4<2$；Q13 $\overrightarrow{AB}\cdot\overrightarrow{AC}=1$；Q14 $a_2+a_4+a_9=3a_5=7$；Q15 $(1,4)$；Q16 A、B、C；Q17 $c=1/2$、$(\sqrt2/4,5/8)$；Q18 $\theta=\pi/6$、$\omega=2$、$x_0=2\pi/3$ 或 $3\pi/4$；Q19 $0.8$、$0.492$；Q20 $OC\parallel$ 平面、$\arctan\frac13$、$V=3/2$；Q21 $n=8$、$T_{2n}$ 公式）。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b14.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 7 → **6 卷**。
