@@ -16564,3 +16564,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b12.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 2 → **1 卷**（仅剩 2007 新课标理）。
+
+### 2026-11-16 phase5-b11（重封账）：2007 新课标理科状态段清理（并消除 4 条历史 Underfull 豁免）
+
+- 队列 A 第三十轮：删去 `2007/2007_数学真题_新课标理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- **历史豁免一并归零**：该卷此前以 4 条 `warning_exemptions` 封账（试题版/解析版×2/简答版各一条 Underfull，原因为 Q20 第 (2) 问句行内区间 `(-0.03,0.03)` 不可断导致该行拉伸）。本轮在区间逗号处加 `\allowbreak`（不改任何字符），四版 log 全部归零，豁免清单清空；曾试「从句中分段」，会使印刷版多出一页仅含答案尾巴的孤页，已回退。
+- 流程：extract-batch → `gen_prov.py` + `provenance import-batch` → 三套生成器 → `build --formal`：四版 7/35/9/28 页（79 页），attempt `677b7dac`，四 log 全 0。
+- 79 页逐页审查：八类检查 0 fail、**0 豁免**；七处图稿（Q3 正弦曲线、Q5 程序框图、Q8 三视图、Q17 塔高、Q18 三棱锥、Q20 正方形与不规则图形、Q22 圆与切线）四版共 26 处 300~350dpi 回源。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b11.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 1 → **0 卷**；全库仅剩 `gk-2007-regular-sichuan-science`（blocked，ISSUE-1449/1450/1451）的 needs-review 段，须随其终局结论处理。
