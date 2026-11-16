@@ -1,7 +1,7 @@
 {
   "batch_id": "phase4-b35",
-  "build_attempt_id": "facd9599-8c61-4cd6-b7a2-8167ac30bfac",
-  "dependency_tree_sha256": "e1f71807d8063e23cc1b2a96e217572da3069f851598ef56cff4d25901182bb7",
+  "build_attempt_id": "2524aea8-0026-4d7f-8fbd-fd18ab2edc0f",
+  "dependency_tree_sha256": "6dcb3feb1b4a1b38e24d5032381f4566722bfdc8cf38b675654c22f81906d046",
   "editions": [
     {
       "candidate_override": null,
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「1995 年·上海卷·文史类·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「1995 年·上海卷·文史类·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 3 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「1995 年·上海卷·文史类·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「1995 年·上海卷·文史类·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -199,42 +199,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「1995 年·上海卷·文史类·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页为试题版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -242,7 +242,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "56a0b21eda8a396831dbc656cbc47272588834d5f05d47693344ced5b1aa7eeb",
+      "pdf_sha256": "cf23a4f9a773a34611890e010e1f125f4207c5472d8f239d25fd0424283be432",
       "result": "pass"
     },
     {
@@ -257,43 +257,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 1,
@@ -303,43 +303,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 2,
@@ -349,43 +349,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 3 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 3 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 3,
@@ -395,43 +395,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 4 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 4,
@@ -441,43 +441,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 5,
@@ -487,43 +487,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 6,
@@ -533,43 +533,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 7,
@@ -579,43 +579,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 8,
@@ -625,43 +625,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 9,
@@ -671,43 +671,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 10,
@@ -717,43 +717,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 11 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 11 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 11,
@@ -763,43 +763,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 12 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 12 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 12,
@@ -809,43 +809,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 13,
@@ -855,43 +855,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 14 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 14 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 14,
@@ -901,43 +901,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 15 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 15 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 15,
@@ -947,43 +947,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 16 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 16,
@@ -993,43 +993,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 17 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 17 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 17,
@@ -1039,43 +1039,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 18 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 18,
@@ -1085,43 +1085,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 19 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 19 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 19,
@@ -1131,50 +1131,50 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 20 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：页眉「1995 年·上海卷·文史类·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页为解析版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 20 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 20,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "edf3cc8c9ea4c1559a069d4ec4f7992ddc82d0a57899829010fdd338d638ed03",
+      "pdf_sha256": "a67985dac428fd34fdc24b039074571fc7a74d0709844fb1a6772702c23607a1",
       "result": "pass"
     },
     {
@@ -1189,42 +1189,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「1995 年·上海卷·文史类·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1235,42 +1235,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「1995 年·上海卷·文史类·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1281,42 +1281,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 3 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「1995 年·上海卷·文史类·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1327,42 +1327,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「1995 年·上海卷·文史类·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1373,42 +1373,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「1995 年·上海卷·文史类·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1419,42 +1419,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：页眉「1995 年·上海卷·文史类·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1465,42 +1465,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：页眉「1995 年·上海卷·文史类·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页为简答版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1508,7 +1508,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "9acc5fb6d55c72c36cf18a679405a3215e9001dcdff95907cbf8aef9f63102da",
+      "pdf_sha256": "9058eaddf03abf5376000fa567a8908c149ae0f7238707e0f3c67164b3ea6491",
       "result": "pass"
     },
     {
@@ -1523,43 +1523,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 1,
@@ -1569,43 +1569,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 2,
@@ -1615,43 +1615,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 3 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 3,
@@ -1661,43 +1661,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 4 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 4 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 4,
@@ -1707,43 +1707,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 5,
@@ -1753,43 +1753,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 6,
@@ -1799,43 +1799,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 7,
@@ -1845,43 +1845,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 8,
@@ -1891,43 +1891,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 9,
@@ -1937,43 +1937,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 10,
@@ -1983,43 +1983,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 11 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 11,
@@ -2029,43 +2029,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 12 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 12,
@@ -2075,43 +2075,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 13,
@@ -2121,58 +2121,58 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 14 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：页眉「1995 年·上海卷·文史类·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页为印刷版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 14 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 14,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "b1827ee8e8c4dea6166f333aadbb1361b8e48968eff4e0bc2c87c0acbc867355",
+      "pdf_sha256": "2437f1dd814942bf2975f9bac61054dc4863b2f2d937478941c3f1e8078fc0a3",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "da3e69f0c9650bfe586ca8720536de4210266c1e9ca68e50de09e203bbd030e7",
+  "generation_input_tree_sha256": "7ab74d188d9a5ec202ea62ebe575c082aebb473b606643682d40f4a24b6e32ba",
   "input_projection": "556b145b87521adcd74ebfb70756cad388ac6daad0a7784ef48de4f71a203a83",
   "paper_id": "gk-1995-regular-shanghai-arts",
   "project_dir": "1995_上海卷_文史类",
-  "reviewed_at": "2026-11-09T15:02:53+08:00",
+  "reviewed_at": "2026-11-16T23:21:20+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -2233,17 +2233,5 @@
       }
     ]
   },
-  "warning_exemptions": [
-    {
-      "box": "hbox",
-      "edition": "印刷版",
-      "kind": "Underfull",
-      "lines": "74--75",
-      "pdf_page": 3,
-      "reason": "行内公式断行导致的 Underfull/Overfull，行距字距正常，版心无空洞。",
-      "source_file": "1995_上海卷_文史类/questions.tex",
-      "visual_result": "pass",
-      "width_pt": null
-    }
-  ]
+  "warning_exemptions": []
 }

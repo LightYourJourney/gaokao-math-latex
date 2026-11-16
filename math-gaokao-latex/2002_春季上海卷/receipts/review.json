@@ -1,7 +1,7 @@
 {
   "batch_id": "phase2-b87",
-  "build_attempt_id": "c910fa21-b340-45a3-b409-b531a82cdbe0",
-  "dependency_tree_sha256": "180d67d06b00bde9f94d17547c25fa21a4bfff7827a24b656cedb526d4d5ca2e",
+  "build_attempt_id": "c61c2d08-b1fe-448a-b566-b616e15965ec",
+  "dependency_tree_sha256": "27d2f014e97d52de6403845dccd3983798b3de0c1c9413cc22575078c6488462",
   "editions": [
     {
       "candidate_override": null,
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「2002 年·春季上海卷·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「2002 年·春季上海卷·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「2002 年·春季上海卷·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「2002 年·春季上海卷·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -199,42 +199,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「2002 年·春季上海卷·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页为试题版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -242,7 +242,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "a62334fdfdb38318ab4f77e88da95ffb14ca0bd4b7209819458ee30e49530721",
+      "pdf_sha256": "a05e52e4ca2d27af6be36957259d0aef9ecdc5c7053a25b83946f0c86635e5e6",
       "result": "pass"
     },
     {
@@ -257,43 +257,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 1,
@@ -303,43 +303,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 2,
@@ -349,43 +349,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 3 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 3,
@@ -395,43 +395,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 4 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 4,
@@ -441,43 +441,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 5,
@@ -487,43 +487,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 6,
@@ -533,43 +533,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 7,
@@ -579,43 +579,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 8,
@@ -625,43 +625,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 9,
@@ -671,43 +671,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 10,
@@ -717,43 +717,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 11 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 11 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 11,
@@ -763,43 +763,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 12 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 12,
@@ -809,43 +809,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 13,
@@ -855,43 +855,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 14 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 14,
@@ -901,43 +901,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 15 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 15 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 15,
@@ -947,43 +947,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 16 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 16 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 16,
@@ -993,43 +993,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 17 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 17 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 17,
@@ -1039,43 +1039,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 18 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 18 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 18,
@@ -1085,43 +1085,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 19 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 19,
@@ -1131,43 +1131,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 20 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 20 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 20 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 20,
@@ -1177,43 +1177,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 21 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 21 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 21 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 21 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 21 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 21 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 21 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 21 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 21,
@@ -1223,43 +1223,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 22 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 22 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 22 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 22 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 22 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 22 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 22 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 22 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 22,
@@ -1269,43 +1269,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 23 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 23 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 23 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 23 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 23 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 23 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 23 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 23 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 23,
@@ -1315,50 +1315,50 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 24 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 24 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 24 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 24 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 24 页：页眉「2002 年·春季上海卷·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 24 页为解析版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 24 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 24 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 24,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "6f396f66d48a96634461629409a5d5846216ab17b459a007ba53ca0000cad492",
+      "pdf_sha256": "ca634e50fac3a90542cdf28792feb7964d45fcadc7c10c34126a2b2c1b8d1313",
       "result": "pass"
     },
     {
@@ -1373,42 +1373,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「2002 年·春季上海卷·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1419,42 +1419,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「2002 年·春季上海卷·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1465,42 +1465,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「2002 年·春季上海卷·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1511,42 +1511,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「2002 年·春季上海卷·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1557,42 +1557,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「2002 年·春季上海卷·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1603,42 +1603,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：页眉「2002 年·春季上海卷·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1649,42 +1649,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：页眉「2002 年·春季上海卷·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页为简答版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1692,7 +1692,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "33e8683bbe2bd5e74295be289244d096b13297c7e5bb53952150e1e73ae9f2f8",
+      "pdf_sha256": "747c433fef3533aee1c7a57a5f41719980c9708d683680b43ee6494e8c5042e7",
       "result": "pass"
     },
     {
@@ -1707,43 +1707,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 1,
@@ -1753,43 +1753,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 2,
@@ -1799,43 +1799,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 3 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 3,
@@ -1845,43 +1845,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 4 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 4 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 4,
@@ -1891,43 +1891,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 5,
@@ -1937,43 +1937,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 6,
@@ -1983,43 +1983,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 7,
@@ -2029,43 +2029,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 8,
@@ -2075,43 +2075,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 9,
@@ -2121,43 +2121,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 10,
@@ -2167,43 +2167,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 11 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 11,
@@ -2213,43 +2213,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 12 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 12 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 12,
@@ -2259,43 +2259,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 13,
@@ -2305,43 +2305,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 14 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 14 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 14,
@@ -2351,43 +2351,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 15 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 15,
@@ -2397,43 +2397,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 16 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 16 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 16,
@@ -2443,43 +2443,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 17 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 17 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 17,
@@ -2489,43 +2489,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 18 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 18 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 18,
@@ -2535,58 +2535,58 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 19 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：页眉「2002 年·春季上海卷·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页为印刷版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 19 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 19 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 19,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "ce393295356a9c7d1f008a22623b17dc6311ffa86c5d248521284061b62e441d",
+      "pdf_sha256": "19b10fbd5a545d5d4f83dcf34e861baf4136e403f1ffd477108ccf0a5884f09d",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "fd9860fb28c2d4ea0437b806007c1e6f638ab56cd5715e53dec8b58c6bd07be5",
+  "generation_input_tree_sha256": "ed0a00f0048a2e220dd707029b2da18bbce96720ceb26d9ae12d0b16ed1221c5",
   "input_projection": "731385fd59b6ef56e4cdc431d66bf8d2108dcf1179c15098a6ed2bba38a99492",
   "paper_id": "gk-2002-spring-shanghai",
   "project_dir": "2002_春季上海卷",
-  "reviewed_at": "2026-11-09T14:03:14+08:00",
+  "reviewed_at": "2026-11-16T23:23:34+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -2647,17 +2647,5 @@
       }
     ]
   },
-  "warning_exemptions": [
-    {
-      "box": "hbox",
-      "edition": "印刷版",
-      "kind": "Underfull",
-      "lines": "232--233",
-      "pdf_page": 3,
-      "reason": "行内公式断行导致的 Underfull/Overfull，行距字距正常，版心无空洞。",
-      "source_file": "2002_春季上海卷/questions.tex",
-      "visual_result": "pass",
-      "width_pt": null
-    }
-  ]
+  "warning_exemptions": []
 }

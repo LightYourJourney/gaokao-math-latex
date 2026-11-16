@@ -16593,3 +16593,14 @@
 - **1989 上海卷（phase4-b01）**：试清 1 条简答版 Underfull（第 3 题四个小问合并成一项、含 $T_{16}$/$T_6$ 两项），`\\allowbreak` 与段内调整均未能消除（badness 1205 属行内公式不可断），已回退改动并重封账，**保留该 1 条豁免**；该卷回执重建后仍为 `passed`、豁免 1 条。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - `README.md` 汇总：Overfull 46 / Underfull 145 / 豁免 191（此前 46/147/193）。
+
+### 2026-11-16 历史豁免清零（第二批）：2000 上海理、1995 上海文/理、2002 春季上海
+
+- 四卷各 1 条 Underfull（全在单一版本），逐卷处置后四版 log 全 0，页数均与旧回执一致：
+  - **2000 上海卷·理科（phase4-b42，解析版）**：Q12 的 U/PENDING 说明句因 `U/PENDING` 不可断而拉伸。重排句序为「…标记 $\\mathbf{U/PENDING}$；因此本题不定稿答案。」并另起一段接「仅作条件性演算」，四版归零。
+  - **1995 上海卷·文史类 / 理工农医类（phase4-b35 / b28，印刷版）**：Q4 题面「…中截面（过棱锥高的中点且平行于底面的截面）的面积是（　　）」行内公式与 `\\mbox{（　　）}` 造成拉伸。在「中点」「且」之间与「是」和 `\\mbox` 之间各加一处 `\\allowbreak`（零字符改动），四版归零。
+  - **2002 春季上海卷（phase2-b87，印刷版）**：Q7 题面「…前后两排各三人，则后排…概率是____」长句拉伸。在「各三人，」后分段，四版归零。
+- 改题面后 `provenance` 的 `question_text_sha256` 会 stale：用 `provenance.question_text_digests()` 重算并写回对应题号（1995 两卷 Q4、2002 Q7），`check-all` 恢复 OK；2000 只改解析正文，无需改哈希。
+- 四卷均 `prepare-batch → 逐页审查 → finalize-batch`，豁免清空；2000 上海理批次状态为 `closed_with_blockers`（Q12 保留 U/PENDING），其余 `closed`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- `README.md` 汇总：Overfull 46 / Underfull 141 / 豁免 187（本轮前 46 / 145 / 191）。
