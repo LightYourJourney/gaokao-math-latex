@@ -16543,3 +16543,14 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b07.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 4 → **3 卷**。
+
+### 2026-11-16 phase5-b10（重封账）：2007 广东理科状态段清理
+
+- 队列 A 第二十八轮：删去 `2007/2007_数学真题_广东理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 流程：extract-batch → `gen_prov.py` + `provenance import-batch` → 三套生成器 → `build --formal`：四版 7/33/9/25 页（74 页），attempt `c47b0620`，首轮即四 log 全 0。
+- 74 页逐页审查：八类检查 0 fail、0 豁免；七处图稿（Q4 路程-时间图、Q6 直方图与程序框图、Q7 环形图、Q12 棱锥、Q15 圆、Q19 翻折图）四版共 27 处 300~350dpi 回源。
+- 复核通过（Q2 $b=2$；Q3 最小正周期 π 的偶函数；Q5 $k=8$；Q10 $\frac12$；Q11 准线 $x=-\frac54$；Q12 $\frac{n(n+1)}2$、$f(4)=12$、$f(n)=\frac{n(n-1)(n-2)}2$；Q13 圆心 $(0,2)$、$2\sqrt2$；Q14 $6$ 与 $[-1,1]$；Q15 $30^\circ$、$3$；Q16 高线方程与面积；Q17 $y=0.7x+0.35$、降低 $19.65$ 吨；Q18 圆 $(x+2)^2+(y-2)^2=8$、$Q(\frac45,\frac{12}5)$；Q19 $V(x)$、$V_{\max}=12\sqrt6$、$\frac17$；Q20 $a\leqslant-\frac{3+\sqrt7}2$ 或 $a\geqslant1$；Q21 $\alpha,\beta$ 与 $S_n=2(2^n-1)\ln\frac{3+\sqrt5}2$）。
+- 解析内【源疑点】（Q2 纯虚数、Q5 数列、Q7 环形调度、Q10 向量、Q12 棱锥计数、Q16 面积、Q18 圆与椭圆、Q19 翻折、Q21 迭代）按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b10.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 3 → **2 卷**。
