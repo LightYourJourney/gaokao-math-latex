@@ -16483,3 +16483,16 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b09.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 9 → **8 卷**。
+
+### 2026-11-16 phase5-b18（重封账）：2007 湖北文科状态段清理（含一处答案订正）
+
+- 队列 A 第二十三轮：删去 `2007/2007_数学真题_湖北文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- **逐页审查抓到一处真错误**：第 11 题（线性规划，约束 $x-y+3\geqslant0$、$x+y\geqslant0$、$-2\leqslant x\leqslant3$，求 $2x+y$ 最小值）原答案与解析写成 $-3$，并列出「顶点 $(-2,1)$、$(-2,2)$、$(3,-3)$」——该三点并不满足 $x+y\geqslant0$ 与 $x-y+3\geqslant0$ 的交集（$x=-2$ 时 $y\geqslant2$ 且 $y\leqslant1$，无可行点）。
+  - 正确可行域顶点为 $(-\tfrac32,\tfrac32)$、$(3,-3)$、$(3,6)$，$2x+y$ 依次为 $-\tfrac32$、$3$、$12$，最小值 $-\tfrac32$；与同源湖北理科同题（`gk-2007-hubei-science` 第 13 题，已封账且答案正确）一致。
+  - 订正 `_答案要点.md` 与 `_解析正文.md` 两处，同步生成 `_含解析.md`，再重建；页数不变（6/24/8/21），四 log 全 0。答案框、解析正文、简答版速查表三处均已是 $-\dfrac32$。
+- `build --formal`：四版 6/24/8/21 页（59 页），attempt `dada2e76`，四 log 全 0。
+- 59 页逐页审查：八类检查 0 fail、0 豁免；五处图稿（Q5 正方体、Q6 频率分布直方图、Q15 含药量衰减曲线、Q17 三棱锥、Q21 抛物线与直线）四版共 20 处 350dpi 回源。
+- 其余题目复核通过（Q15 分段模型 $y=10t$ 与 $(1/16)^{t-0.1}$、$t>0.6$；Q16 $f\in[2,3]$、$1<m<4$；Q17 $h=a/\sqrt2$、$\theta=\pi/4$；Q18 $x=12$、$P=11664$；Q19 $0<a<3-2\sqrt2$、$2a^2<1/16$；Q20 分组倒数求和；Q21 面积最小值 $2\sqrt2p^2$、$l:y=p/2$）。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b18.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 8 → **7 卷**。
