@@ -16472,3 +16472,14 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b28.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 10 → **9 卷**。
+
+### 2026-11-16 phase6-b09（重封账）：2008 山东文科状态段清理
+
+- 队列 A 第二十二轮：删去 `2008/2008_数学真题_山东文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 流程：extract-batch → `.work/phase6-b09/gen_prov.py` + `provenance import-batch` → 三套生成器 `--write` → `build --formal`。
+- 首轮即四 log 全 0：四版 6/25/8/19 页（58 页），attempt `30b4a5e7`（取代旧 `b5fc7282`）。
+- 58 页逐页审查：八类检查 0 fail、0 豁免；五处图稿（Q3 四个候选图象、Q6 三视图、Q12 对数曲线、Q14 程序框图、Q19 四棱锥）四版共 17 处 350dpi 回源。
+- 解析内源疑点（Q5 线性规划、Q7 圆的切线、Q9 三角函数、Q11 抽样、Q12 对数曲线、Q13 双曲线、Q14 程序框图、Q16 三视图、Q17 三角、Q18 概率、Q19 建系、Q20 数列、Q21 导数、Q22 椭圆）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b09.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 9 → **8 卷**。
