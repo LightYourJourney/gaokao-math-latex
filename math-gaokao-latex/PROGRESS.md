@@ -16351,3 +16351,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b13.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：21 → **20 卷**。
+
+### 2026-11-16 phase5-b09（重封账）：2007 广东文科状态段清理
+
+- 队列 A 第十二轮：删去 `2007/2007_数学真题_广东文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b09 --write` → `build --formal`：四版 7/26/9/23 页（65 页），attempt `01628413`，四 log 全 0。
+- 65 页逐页审查：八类检查 0 fail、0 豁免；六幅图（Q5 四段行程折线、Q7 直方图 + 程序框图、Q10 环形图、Q15 圆与切线、Q17 矩形）四版共 21 处 350dpi 回源。
+- 解析内源疑点（Q1 绝对值不等式、Q2 二项式系数、Q4 单位向量、Q6 空间命题、Q7 分组统计、Q11 抛物线开口方向、Q12 单调区间端点、Q13 数列下标、Q14 点到直线距离、Q15 三角形内角、Q16 向量垂直、Q17 三视图、Q18 回归方程、Q19 轨迹与最值、Q20 递推与求和、Q21 分类讨论）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b09.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：20 → **19 卷**。
