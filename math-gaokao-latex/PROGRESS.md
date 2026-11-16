@@ -16383,3 +16383,9 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b02.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：18 → **17 卷**。
+
+### 2026-11-16 台账修正：状态段清理队列剔除 blocked 卷
+
+- 发现：`status-paragraph-ledger.md` 原按页数排序，把 `gk-2007-regular-sichuan-science`（`blocked`，ISSUE-1449/1450/1451：两个选项同为 $1$、独立推导得 $2\sqrt{21}/3$ 而印面四选项不合、$5/25$ 未约分）排在首位。该卷不可能「删段后重封账」——它的阻断点是题面缺陷，须外部证据裁定。
+- 处置：台账拆成两段——**一、待清理队列（16 卷 complete，按页数升序）**；**二、随 blocked 卷终局处理（1 卷）**，后者列 paper_id、目录与 issue 编号，指向 `blocked-ledger.md`。
+- 队列首行因此改为 2007 重庆理（5/23/7/19 = 54 页）。
