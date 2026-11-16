@@ -16341,3 +16341,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b08.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：22 → **21 卷**。
+
+### 2026-11-16 phase5-b13（重封账）：2007 江苏卷状态段清理
+
+- 队列 A 第十一轮：删去 `2007/2007_数学真题_江苏_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b13 --write` → `build --formal`：四版 4/25/6/19 页（54 页），attempt `545326f7`，四 log 全 0。
+- 54 页逐页审查：八类检查 0 fail、0 豁免；两幅图（Q18 正方体与截面、Q19 抛物线与直线）四版共 8 处 350dpi 回源。
+- 卷内已有三处源疑点标注（Q14 三棱锥 $P$ 到面距离、Q19 准线与 $QA$ 相切、Q21 分段讨论），按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b13.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：21 → **20 卷**。
