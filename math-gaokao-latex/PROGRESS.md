@@ -16361,3 +16361,14 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b09.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：20 → **19 卷**。
+
+### 2026-11-16 phase5-b03（重封账）：2007 天津文科状态段清理（含一处 Overfull 修正）
+
+- 队列 A 第十三轮：删去 `2007/2007_数学真题_天津文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- **首轮重建出现 Overfull 5.77pt**：解析版第 22 题解析里 `\[f(x)=-x(x^2-2ax+a^2)=-x^3+2ax^2-a^2x,\qquad f'(x)=-3x^2+4ax-a^2=-(3x-a)(x-a).\]` 单行展示过宽。改为两条独立展示式（`f(x)` 与 `f'(x)` 各一行）后归零，内容与结论不变。
+- 最终 `build --formal`：四版 5/26/7/20 页（58 页），attempt `11d813be`，四 log 全 0。
+- 58 页逐页审查：八类检查 0 fail、0 豁免；两幅图（Q16 的 $4\times4$ 方格染色、Q19 四棱锥）四版共 8 处 350dpi 回源。
+- 解析内源疑点（Q1 集合区间、Q11 分组统计口径、Q13 球内接长方体、Q16 染色计数、Q19 建系与二面角、Q21 分类讨论、Q22 椭圆定义）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b03.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：19 → **18 卷**。
