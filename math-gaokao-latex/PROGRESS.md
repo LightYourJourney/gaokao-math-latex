@@ -16409,3 +16409,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b06.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 15 → **14 卷**。
+
+### 2026-11-16 phase5-b27（重封账）：2007 湖南理科状态段清理
+
+- 队列 A 第十七轮：删去 `2007/2007_数学真题_湖南理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b27 --write` → `build --formal`：四版 5/24/7/19 页（55 页），attempt `3992235f`，四 log 全 0。
+- 55 页逐页审查：八类检查 0 fail、0 豁免；三处图稿（Q15 杨辉三角表、Q18 翻折图 1/图 2、Q19 公路与半平面示意图）四版共 11 处 350dpi 回源。
+- 解析内源疑点（Q6 分段函数与对数交点、Q7 极限命题、Q9 双曲线离心率、Q10 集合与中位数、Q11 圆的方程、Q13 三次函数最值、Q14 集合与绝对值、Q15 杨辉三角、Q16 奇偶与周期、Q18 翻折建系、Q19 造价最优、Q20 轨迹与定点、Q21 数列与单调性）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b27.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 14 → **13 卷**。
