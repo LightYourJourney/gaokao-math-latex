@@ -1,0 +1,20 @@
+# 阶段工作树临时目录（渲染、源图比对、登记草稿），只保留正式源文件
+.work/
+tmp/
+
+# deekur/gaokaomath 源仓库的本地克隆（约 355MB，含大量二进制），只作转写原料，绝不入库
+gaokaomath-src/
+
+graphify-out/
+.codegraph/
+.DS_Store
+__pycache__/
+
+# 数学真题的 pdf/docx/html 由 _convert_math.sh 从 Markdown 生成
+**/*_数学真题_*.pdf
+**/*_数学真题_*.docx
+**/*_数学真题_*.html
+
+# 数学真题 Markdown 中的图形标记是逻辑引用；实际图形只保留 LaTeX
+# 工程内的 TikZ/PGFPlots `.tex` 矢量源，不重新加入栅格附件。
+[0-9][0-9][0-9][0-9]/images/*.png
