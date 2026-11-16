@@ -16372,3 +16372,14 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b03.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：19 → **18 卷**。
+
+### 2026-11-16 phase5-b02（重封账）：2007 天津理科状态段清理（含两处 Overfull 修正）
+
+- 队列 A 第十四轮：删去 `2007/2007_数学真题_天津理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- **首轮重建出现两处 Overfull**：`6.62pt`（第 17 题解析里 $f(x)$ 的连等降幂链）与 `9.59pt`（第 22 题解析里 $f'(x)$ 的三段分式链）。均改为「拆成两条独立展示式」，数学内容与结论不变；复建后四 log 全 0。
+- 最终 `build --formal`：四版 5/25/7/19 页（56 页），attempt `4bd9a730`，四 log 全 0。
+- 56 页逐页审查：八类检查 0 fail、0 豁免；三幅图（Q15 三角形、Q16 $4\times4$ 方格、Q19 四棱锥）四版共 10 处 350dpi 回源。
+- 解析内源疑点（Q10 三角函数分类、Q16 染色计数口径、Q19 建系、Q21 递推与放缩、Q22 轨迹与参数）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b02.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：18 → **17 卷**。
