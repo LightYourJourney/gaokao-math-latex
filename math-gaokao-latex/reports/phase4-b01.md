@@ -9,8 +9,8 @@
 
 - 标题：1989 年·上海卷
 - 项目目录：`1989_上海卷`
-- 构建：`succeeded`（attempt `9a2f815c-5312-49bf-8e2f-1bcc705bca78`）
-- 审查：`passed`（2026-11-09T14:39:46+08:00）
+- 构建：`succeeded`（attempt `e6b57c30-a9c7-445b-b1cd-9ad5cdf52dcc`）
+- 审查：`passed`（2026-11-16T22:36:26+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 4；解析版 19；简答版 5；印刷版 14
 - 警告豁免：1

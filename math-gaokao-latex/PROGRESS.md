@@ -16583,3 +16583,13 @@
 - 复建后四版 log 全 0：陕西文 5/16/7/15（43 页）、陕西理 5/19/7/15（46 页），页数与旧回执一致；两次 `finalize-batch` 均 `eligible_complete`、豁免清单清空。
 - 附带观察：`README.md` 的「回执日志警告汇总」由 Overfull 49 / Underfull 160 / 豁免 209 变为 46 / 147 / 193——说明历史批次里仍有带豁免的旧回执，全库「每卷 0 underfull」尚未达成，需逐卷复核（本轮只清了陕西两卷）。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+
+### 2026-11-16 历史豁免清零（第一批）：1952 全国卷、1962 全国卷
+
+- 背景：全库仍有多卷以 `warning_exemptions` 封账。本轮按「豁免 ≤2 条」清单先做两卷，均只改解析自有文本，不改题面字符。
+- **1952 全国卷（phase1-b09）**：印刷版 1 条 Underfull 来自 Q22 证明段中两处 `\mbox{...}` 包裹的数学式（不可断）。处置：保留 `\mbox`，在「而题设 $\\angle A$ 的外分角线即外角平分线，」后分段，四版 log 归零，页数不变（2/15/4/11）。
+- **1962 全国卷（phase1-b18）**：解析版答案框 1 条 Underfull 来自 Q6 两组坐标解用「或」连接、框内 justify 造成大空隙。处置：把两组解改写为等价的 `±` 形式「$(x,y)=\\left(3-a\\pm2\\sqrt{2-a},\\,3\\pm2\\sqrt{2-a}\\right)$（两组解取同号），其中 $2-a\\geqslant0$」，答案框一行排满，四版归零，页数不变（3/13/4/10）。因改了答案要点，用 `provenance.answer_digests` 重算 Q6 的 `answer_sha256` 并写回 `provenance.json`（`check-all` 通过）。
+- 两卷均重新 `prepare-batch → 逐页审查 → finalize-batch`，豁免清单清空，`eligible_complete`。
+- **1989 上海卷（phase4-b01）**：试清 1 条简答版 Underfull（第 3 题四个小问合并成一项、含 $T_{16}$/$T_6$ 两项），`\\allowbreak` 与段内调整均未能消除（badness 1205 属行内公式不可断），已回退改动并重封账，**保留该 1 条豁免**；该卷回执重建后仍为 `passed`、豁免 1 条。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- `README.md` 汇总：Overfull 46 / Underfull 145 / 豁免 191（此前 46/147/193）。
