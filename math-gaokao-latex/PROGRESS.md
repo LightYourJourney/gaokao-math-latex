@@ -16442,3 +16442,10 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b23.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 12 → **11 卷**。
+
+### 2026-11-16 收口：2007 湖南文科来源落 pending-intake
+
+- 此前 2007–2008 区间唯一「无任何结论」的来源是 `普通高考/2007/2007湖南文.pdf`（`src-65d03ae2ea8d…`）。
+- 本轮只做**来源登记**，不做转录：`pending-intake/2007/hunan-arts/intake.md` 记下原件路径、SHA-256（`8e889ae3…f943e068`）、512,146 字节、2 页 A3 横向、页眉「2007 普通高等学校招生考试 (湖南卷文)」，并明确写「已接收、未转录，不计入 complete、不参与生成与构建」。
+- 未伪造任何内容：该目录没有题面、答案或图稿落盘；下一步按完整流水线转录→构建→逐页审查→封账。
+- `missing-sources.md` 同步：244 个未绑定来源中 **3 个已有归属记录**（2007 四川文候选草稿、2007 湖南文来源登记、2008 北京文源缺陷），**241 个尚无归属**；2007–2008 区间已无「无归属」来源。
