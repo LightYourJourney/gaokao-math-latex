@@ -16419,3 +16419,16 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b27.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 14 → **13 卷**。
+
+### 2026-11-16 phase5-b25（重封账）：2007 福建文科状态段清理（含一处 Underfull 修正）
+
+- 队列 A 第十八轮：删去 `2007/2007_数学真题_福建文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- **首轮重建 5 处 Underfull**（badness 1430 / 1721 / 1596）：均出在第 12 题——题干里的「从“×××××××0000”到“×××××××9999”」是一长串不可断的 × 与数字，CJK 行内可拉伸量不足。
+  - 试过在 × 之间插 `\allowbreak`（无效，`\allowbreak` 只是弱断点，xeCJK 仍按整段两端对齐）。
+  - 最终处置：在「卡号的前七位数字固定，」后**分段**（保留原逗号，题面文字一字未改），使长串从行首开始；四版 log 随即全 0。
+- 最终 `build --formal`：四版 6/22/8/19 页（55 页），attempt `98dc5bb9`，四 log 全 0。
+- 55 页逐页审查：八类检查 0 fail、0 豁免；三处图稿（Q6 正方体与中点 $E,F,G,H$、Q19 三棱柱与二面角、Q22 抛物线与垂线）四版共 12 处 350dpi 回源。
+- 解析内源疑点（Q4 充要条件、Q9 空间命题、Q16 等价关系、Q19 二面角建系、Q20 存在性、Q21 数列分组求和、Q22 轨迹与最值）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b25.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 13 → **12 卷**。
