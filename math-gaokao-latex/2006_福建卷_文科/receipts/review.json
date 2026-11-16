@@ -1,7 +1,7 @@
 {
   "batch_id": "phase1-b76",
-  "build_attempt_id": "98b33c83-52fb-47ea-b4cc-4324cdd5fb8f",
-  "dependency_tree_sha256": "45bef8deab3676c6b9ca6a02fcb13f003c52515786ff0931a48b72effcf74497",
+  "build_attempt_id": "b86c41d7-e864-492e-9c2e-4416794147bd",
+  "dependency_tree_sha256": "517b4c9e41cf83e343877b56d00d0f99aa6b94243a095b67ec0bc7fcad30243d",
   "editions": [
     {
       "candidate_override": null,
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「2006 年·福建卷·文科·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「2006 年·福建卷·文科·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「2006 年·福建卷·文科·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「2006 年·福建卷·文科·数学」、右上「试题版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页为试题版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -196,7 +196,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "51891cd1fc7e78c077308e7c262329158e8967b458d2f6b44be2da18a44000c4",
+      "pdf_sha256": "2c0b1f854e675b9fa373928657f35a040bb341cb2ae670296ea287b44a7f9cc5",
       "result": "pass"
     },
     {
@@ -211,43 +211,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 1,
@@ -257,43 +257,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 2,
@@ -303,43 +303,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 3 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 3,
@@ -349,43 +349,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 4 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 4,
@@ -395,43 +395,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 5,
@@ -441,43 +441,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 6,
@@ -487,43 +487,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 7,
@@ -533,43 +533,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 8,
@@ -579,43 +579,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 9,
@@ -625,43 +625,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 10,
@@ -671,43 +671,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 11 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 11 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 11,
@@ -717,43 +717,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 12 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 12 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 12,
@@ -763,43 +763,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 13,
@@ -809,43 +809,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 14 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 14 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 14,
@@ -855,43 +855,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 15 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 15 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 15,
@@ -901,43 +901,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 16 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 16 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 16,
@@ -947,43 +947,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 17 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 17 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 17 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 17,
@@ -993,50 +993,50 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 18 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：页眉「2006 年·福建卷·文科·数学」、右上「解析版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页为解析版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 18 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 18 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 18,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "abc6207532e20e23cdfa1a5137039bb91e164be60a1e442c152f5d80a2cec7a2",
+      "pdf_sha256": "d832cb019bfb519e79cfd98c8c9c8670e1fc3ab74fff790b3dc8088f9765cb4b",
       "result": "pass"
     },
     {
@@ -1051,42 +1051,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「2006 年·福建卷·文科·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1097,42 +1097,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「2006 年·福建卷·文科·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1143,42 +1143,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「2006 年·福建卷·文科·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1189,42 +1189,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「2006 年·福建卷·文科·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1235,42 +1235,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「2006 年·福建卷·文科·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1281,42 +1281,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：页眉「2006 年·福建卷·文科·数学」、右上「简答版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页为简答版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页仅有题面与作答空间，无答案或解析残留。",
               "result": "pass"
             }
           ],
@@ -1324,7 +1324,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "7f71de46696809866b494d5bf3b03e416a2843008428b25751241712e29e9a22",
+      "pdf_sha256": "d558543b7d54e95813b11e75cd411dfc944ef7a969d45816aa489d6157987314",
       "result": "pass"
     },
     {
@@ -1339,43 +1339,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 1 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 1 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 1,
@@ -1385,43 +1385,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 2 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 2 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 2,
@@ -1431,43 +1431,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 3 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 3 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 3,
@@ -1477,43 +1477,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 4 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 4 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 4 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 4,
@@ -1523,43 +1523,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 5 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 5 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 5,
@@ -1569,43 +1569,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 6 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 6 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 6,
@@ -1615,43 +1615,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 7 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 7 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 7,
@@ -1661,43 +1661,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 8 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 8 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 8,
@@ -1707,43 +1707,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 9 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 9 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 9,
@@ -1753,43 +1753,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 10 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 10 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 10,
@@ -1799,43 +1799,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 11 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 11 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 11,
@@ -1845,43 +1845,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页含图稿，已在 300~350dpi 放大下与源图对照，标注不压线、不压图形。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：题块/解析块完整，断点在题与题之间，无孤行标题；章节标题受 \\Needspace 约束整体下移时留白属设计行为。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 12 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 12 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 12,
@@ -1891,58 +1891,58 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页无图稿，无图可判。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：页眉「2006 年·福建卷·文科·数学」、右上「印刷版」与页脚页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页为印刷版末页，收尾完整，下部留白属模板收尾。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "note": "第 13 页：汉字、数学字形、分式与上下标清晰，无缺字、重影与粘连；栏距与字号层次正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
-              "result": "pass"
+              "note": "第 13 页：本版承载答案/题解合排，答案属应有内容。",
+              "result": "not_applicable"
             }
           ],
           "page": 13,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "0a1b8193d4306e2e9b81fe5b6c88505ce2bf579046d7d20f23d465eca5fd4f90",
+      "pdf_sha256": "961b3615083b5e05e5cf73094443392a0cac1bc16dc905bbd907c1ed9111fb1a",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "41cd69b75634c41c4e02e52651665fe825d683fa266683db3a6aaedc9c145203",
+  "generation_input_tree_sha256": "c93a71541450068ac535a3419d5d3509f4bb75e9c4dde6aaca44b5f65f9575a3",
   "input_projection": "17299ab562665669e3b4d2b2761d164dc126c32b549a3444640b62dd679d7956",
   "paper_id": "gk-2006-regular-fujian-arts",
   "project_dir": "2006_福建卷_文科",
-  "reviewed_at": "2026-11-09T15:37:47+08:00",
+  "reviewed_at": "2026-11-17T00:01:50+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -2003,17 +2003,5 @@
       }
     ]
   },
-  "warning_exemptions": [
-    {
-      "box": "hbox",
-      "edition": "解析版",
-      "kind": "Underfull",
-      "lines": "416--417",
-      "pdf_page": 3,
-      "reason": "行内公式断行导致的 Underfull/Overfull，行距字距正常，版心无空洞。",
-      "source_file": "2006_福建卷_文科/answers.tex",
-      "visual_result": "pass",
-      "width_pt": null
-    }
-  ]
+  "warning_exemptions": []
 }
