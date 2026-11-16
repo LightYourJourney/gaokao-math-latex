@@ -16399,3 +16399,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b24.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：complete 队列 16 → **15 卷**（另有 1 卷 blocked 随终局处理）。
+
+### 2026-11-16 phase5-b06（重封账）：2007 安徽文科状态段清理
+
+- 队列 A 第十六轮：删去 `2007/2007_数学真题_安徽文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b06 --write` → `build --formal`：四版 5/25/7/18 页（55 页），attempt `17bd8c7c`，四 log 全 0。
+- 55 页逐页审查：八类检查 0 fail、0 豁免；两幅图（Q7 分段函数图象、Q17 四棱柱与三棱锥）四版共 8 处 350dpi 回源。
+- 解析内源疑点（Q1 集合交集、Q2 离心率、Q5 圆与直线、Q6 充要条件、Q8 对数比较、Q9 线性规划、Q10 折叠体、Q11 奇偶与周期、Q12 二项式系数、Q13 向量、Q14 概率、Q15 三角函数图象、Q16 绝对值不等式、Q17 建系、Q18 抛物线、Q19 概率、Q20 导数、Q21 数列与储蓄模型）均按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b06.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 15 → **14 卷**。
