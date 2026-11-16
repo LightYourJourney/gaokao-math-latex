@@ -16532,3 +16532,14 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b10.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 5 → **4 卷**。
+
+### 2026-11-16 phase5-b07（重封账）：2007 山东理科状态段清理
+
+- 队列 A 第二十七轮：删去 `2007/2007_数学真题_山东理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 流程：extract-batch → `gen_prov.py` + `provenance import-batch` → 三套生成器 → `build --formal`：四版 6/32/8/26 页（72 页），attempt `b67af3c1`，首轮即四 log 全 0。
+- 72 页逐页审查：八类检查 0 fail、0 豁免；五处图稿（Q3 四个几何体、Q8 频率分布直方图、Q10 程序框图、Q19 直四棱柱、Q20 方位图）四版共 24 处 300~350dpi 回源。
+- 解析内【源疑点】（Q2 整数集与不等式端点、Q7 全称命题、Q8 分组统计口径、Q9 充要条件、Q12 概率、Q13 抛物线、Q15 相切圆、Q18 条件概率、Q21 定点与顶点限制、Q22 极值点分类）均按「题面照录 + 解析说明」保留。
+- 复核通过（Q1 $\theta=\pi/2$；Q2 $M\cap N=\{-1\}$；Q3 ②③；Q4 $a=1,3$；Q5 $\pi,1$；Q6 $\sin x$；Q7 否定 C；Q8 $x=0.9$、$y=35$；Q9 充要条件；Q10 $S=2550,T=2500$；Q11 C；Q12 $\mathrm C_5^2(1/2)^5$；Q13 $\frac{\sqrt{21}}2p$；Q14 $4\sqrt2$；Q15 $(x-2)^2+(y-2)^2=2$；Q16 $8$；Q17 $a_n=\frac{n}{3^n}$ 与 $S_n$；Q18 $\frac{19}{36}$、$E\xi=1$、$\frac7{11}$；Q19 $\frac{\sqrt3}3$；Q20 $30\sqrt2$ 海里/时；Q21 $\frac{x^2}4+\frac{y^2}3=1$ 与定点 $(\frac27,0)$；Q22 单调性、极值点与不等式）。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b07.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 4 → **3 卷**。
