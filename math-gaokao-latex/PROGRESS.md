@@ -16520,3 +16520,15 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b05.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段：complete 队列 6 → **5 卷**。
+
+### 2026-11-16 phase6-b10（重封账）：2008 山东理科状态段清理（含一处表述订正）
+
+- 队列 A 第二十六轮：删去 `2008/2008_数学真题_山东理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- **表述订正**：第 19 题解析原写「第 $k$ 行…末项为 $a_{N_k}$，其中 $N_k=1+\frac{k(k-1)}2$」——$N_k$ 实为该行**首项**下标（第 3 行 $N_3=4$、第 13 行 $N_{13}=79$）。改为「首项为 $b_k$（其下标为 $N_k=…$），末项为 $b_kq^{k-1}$」；后续 $a_{81}=b_{13}q^2$ 的推导与答案不变。
+- 流程：extract-batch → `gen_prov.py` + `provenance import-batch` → 三套生成器 → `build --formal`：四版 6/25/8/23 页（62 页），attempt `10ed2d94`，四 log 全 0，页数不变。
+- 62 页逐页审查：八类检查 0 fail、0 豁免；五处图稿（Q3 四个候选图象、Q6 球与圆柱三视图、Q13 程序框图、Q20 四棱锥、Q22 抛物线与切线）四版共 21 处 300~350dpi 回源。
+- 解析内已有 1 处【源疑点】（Q10 题面「长轴长为 25」与 $e=5/13$ 及四个选项矛盾，按 26 作答并注明），按规程保留。
+- 其余复核通过（Q3 $\ln\cos x$ 图象 A；Q4 $a=3$；Q5 $-4/5$；Q6 $11\pi$；Q7 $1/68$；Q8 中位数 304；Q9 $-220$；Q11 $20\sqrt6$；Q12 $[2,9]$；Q13 $n=4$；Q14 $\sqrt3/3$；Q15 $B=\pi/6$；Q16 $(5,7)$；Q17 $\sqrt2$ 与 $[2\pi/3+4k\pi,8\pi/3+4k\pi]$；Q18 分布列、$E\xi=2$、$P(AB)=34/243$；Q19 $b_n$ 与第 $k$ 行和；Q20 $\sqrt{15}/5$；Q21 极值与不等式；Q22 $x^2=2y$ 或 $x^2=4y$、第 (3) 不存在）。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b10.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段：complete 队列 5 → **4 卷**。
