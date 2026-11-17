@@ -9,8 +9,8 @@
 
 - 标题：1977 年·福建卷·理科
 - 项目目录：`1977_福建卷_理科`
-- 构建：`succeeded`（attempt `5962ec9d-42af-49ee-adcd-a9ea18eb9e73`）
-- 审查：`passed`（2026-11-09T13:28:19+08:00）
+- 构建：`succeeded`（attempt `fda1ef66-30d5-4bdd-8bfc-1acc779dd83e`）
+- 审查：`passed`（2026-11-17T01:45:48+08:00）
 - 内容候选：`eligible_blocked`
 - 页数：试题版 3；解析版 14；简答版 4；印刷版 12
 - 警告豁免：0

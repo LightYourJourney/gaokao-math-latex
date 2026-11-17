@@ -16604,3 +16604,8 @@
 - 四卷均 `prepare-batch → 逐页审查 → finalize-batch`，豁免清空；2000 上海理批次状态为 `closed_with_blockers`（Q12 保留 U/PENDING），其余 `closed`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - `README.md` 汇总：Overfull 46 / Underfull 141 / 豁免 187（本轮前 46 / 145 / 191）。
+
+## 2026-11-17 目录调整为仓库根布局
+
+- 532 卷按批次重建并逐页像素比对后转签。
+- 测试命令改为在仓库根运行：`python3 -m unittest discover -s math-gaokao-latex/tests -t math-gaokao-latex`。调整前后均为 1,888 个、1 个既有失败（1995 上海文）。

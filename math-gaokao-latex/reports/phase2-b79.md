@@ -9,8 +9,8 @@
 
 - 标题：2001 年·全国旧课程卷·文科
 - 项目目录：`2001_全国旧课程卷_文科`
-- 构建：`succeeded`（attempt `f91d09c2-db4e-4ee6-8af3-a6d3b57f0c1e`）
-- 审查：`passed`（2026-11-09T14:00:26+08:00）
+- 构建：`succeeded`（attempt `cfe2bd62-cd1c-4d0b-acd0-e3cdb3bb9dd5`）
+- 审查：`passed`（2026-11-17T02:03:24+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 4；解析版 19；简答版 5；印刷版 16
 - 警告豁免：0

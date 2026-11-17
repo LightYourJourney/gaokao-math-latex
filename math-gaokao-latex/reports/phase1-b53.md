@@ -9,8 +9,8 @@
 
 - 标题：2009 年·春季上海卷
 - 项目目录：`2009_春季上海卷`
-- 构建：`succeeded`（attempt `5feaa19e-f63b-420a-b5ff-b07b50e5c7f3`）
-- 审查：`passed`（2026-11-09T15:09:33+08:00）
+- 构建：`succeeded`（attempt `5959b6d5-ed9e-4aaa-b7c2-d3ddaae58893`）
+- 审查：`passed`（2026-11-17T02:49:18+08:00）
 - 内容候选：`eligible_blocked`
 - 页数：试题版 5；解析版 17；简答版 7；印刷版 14
 - 警告豁免：0
