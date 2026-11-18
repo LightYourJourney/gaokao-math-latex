@@ -1,0 +1,21 @@
+% 2009 年天津卷文科第 12 题：直三棱柱的三视图。
+% 来源 PDF：普通高考/2009/2009天津文.pdf，SHA256 5d3e0110cc9145311eed3af1cf0f691ee327cbcba3a0d245e88d635fc136203f
+% 原页：第 1 页（A3 三栏）第 2 栏中部，印刷页 563。
+% 重绘依据：正视图为 3×a 矩形；侧视图为底边 2、高 a 的三角形；俯视图为 3×2 矩形，
+%   中间一条平行于长的实线把深度分成 1 与 1 两段；尺寸与标注按原图。
+\begin{tikzpicture}[scale=0.95, semithick, every node/.style={inner sep=1.2pt}]
+  % 正视图
+  \draw (0,1.5) rectangle (3,3.0);
+  \node[anchor=east] at (-0.1,2.25) {$a$};
+  \node[anchor=north] at (1.5,1.35) {正视图};
+  % 侧视图
+  \draw (4.2,1.5) -- (5.8,1.5) -- (5.0,3.0) -- cycle;
+  \node[anchor=north] at (5.0,1.05) {侧视图};
+  \node[anchor=north] at (5.0,1.32) {$2$};
+  % 俯视图
+  \draw (0,0) rectangle (3,1.0);
+  \draw (0,0.5) -- (3,0.5);
+  \node[anchor=north] at (1.5,-0.15) {俯视图};
+  \node[anchor=east] at (-0.1,0.25) {$1$};
+  \node[anchor=east] at (-0.1,0.75) {$1$};
+\end{tikzpicture}

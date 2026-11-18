@@ -1,0 +1,24 @@
+% 2009 年天津卷文科第 6 题：求 S=1²+2²+3²+4² 的程序框图。
+% 来源 PDF：普通高考/2009/2009天津文.pdf，SHA256 5d3e0110cc9145311eed3af1cf0f691ee327cbcba3a0d245e88d635fc136203f
+% 原页：第 1 页（A3 三栏）第 1 栏下部，印刷页 563。
+% 重绘依据：开始 → S=0,i=1 → S=S+i² → i=i+1 → 判断 i>4；否（左）回到 S=S+i²，
+%   是（下）→ 输出 S → 结束；箭头与原图方向一致。
+\begin{tikzpicture}[scale=0.9, semithick, >=Stealth,
+  node distance=5mm, every node/.style={inner sep=3pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=2.0cm, minimum height=0.65cm] {开始};
+  \node (init) [draw, minimum width=3.4cm, minimum height=0.65cm, below=of start] {$S=0,\ i=1$};
+  \node (add) [draw, minimum width=3.4cm, minimum height=0.65cm, below=of init] {$S=S+i^2$};
+  \node (inc) [draw, minimum width=3.4cm, minimum height=0.65cm, below=of add] {$i=i+1$};
+  \node (cond) [draw, diamond, aspect=2.0, minimum width=3.2cm, minimum height=1.0cm, below=of inc] {$i>4$};
+  \node (out) [draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=3.0cm, minimum height=0.65cm, below=of cond] {输出 $S$};
+  \node (end) [draw, rounded corners=4pt, minimum width=2.0cm, minimum height=0.65cm, below=of out] {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (add);
+  \draw[->] (add) -- (inc);
+  \draw[->] (inc) -- (cond);
+  \draw[->] (cond) -- (out);
+  \node[anchor=west] at ($(cond.south)!0.5!(out.north)+(14pt,-4pt)$) {是};
+  \draw[->] (cond.east) -- ++(1.1,0) |- node[pos=0.25, right] {否} (add.east);
+  \draw[->] (out) -- (end);
+\end{tikzpicture}

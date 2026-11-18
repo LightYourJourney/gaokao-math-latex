@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 天津卷文科：phase6-b49 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
+
+- 对象：`gk-2009-tianjin-arts`，22 题（选择 1–10、填空 11–16、解答 17–22）；固定来源 `src-919044cfbbbcd3b673f66f382aa397eaac8c780cc68fe39a9f460a410e9fc428`，上游 `普通高考/2009/2009天津文.pdf`，SHA-256 `5d3e0110cc9145311eed3af1cf0f691ee327cbcba3a0d245e88d635fc136203f`，2 页 A3 横向，印面页码 563、564。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；分数、根号、下标与四幅图另以 600 dpi 原页逐题复核。第 1 页含 Q1–Q18、第 2 页含 Q19–Q22；原页未标分值，不补。来源与接收细节见 `reports/2009-tianjin-arts-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1D 2B 3A 4C 5B 6C 7D 8A 9C 10A；11 $2$；12 $\\sqrt3$；13 $\\{2,4,6,8\\}$；14 $1$；15 $-2$；16 $(\\frac{25}{9},\\frac{49}{16}]$；17 $AB=2\\sqrt5$、$\\frac{\\sqrt2}{10}$；18 $2,3,2$、$\\frac{11}{21}$；19 正切 $\\frac13$；20 $a_n=4n-3$、$q=-2$、恒等式；21 极值与 $m\\in(\\frac12,\\frac{\\sqrt3}{3})$；22 $e=\\frac{\\sqrt3}{3}$、$k=\\pm\\frac{\\sqrt2}{3}$、$\\frac nm=\\pm\\frac{2\\sqrt2}{5}$。
+- 盲解复核改正主稿一处实质错误：Q16 主稿初稿把 $a>4$ 当作有界解集，给出 $[49/9,25/4)$；实际上 $a>4$ 时解集为两条无界射线（无穷多整数），必须排除，仅 $0<a<4$ 时区间有界，改正为 $(25/9,49/16]$，与盲解一致。Q22(3) 因题面未给图，$\\frac nm$ 取两支 $\\pm\\frac{2\\sqrt2}{5}$；Q22(1) 补充排除 $\\overrightarrow{F_1A}=-2\\overrightarrow{F_2B}$ 的情形。
+- 图形：Q6 程序框图、Q11 交叉线段、Q12 三视图、Q19 四棱锥，共 4 幅 TikZ 矢量图；逐幅与 600 dpi 原页比对，修正了「是」「O」「2」「E」四处标注碰撞。
+- 生成链：`register-papers`（revision 9937）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9938）→ `build --formal`（attempt `6cca76e1`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 5/29/7/21 页（共 62 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 62 页八类检查全 pass，0 豁免；批次 `closed`、卷 `complete`。全量门禁：`validate-receipts --all --require-final` **OK：542 卷**；`provenance check-all` **OK：542 卷**；`generate_projects --all --check` **542 套一致**。
+- 下一步：按年份继续 2009 天津理、安徽文/理等未成卷来源；`source-manifest.json` 仍有 235 个来源未绑定 `paper_id`。
+
 ### 2009 四川卷理科：phase6-b48 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
 
 - 对象：`gk-2009-sichuan-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-1afafe368128cb09c986eaf5f3362ab1920d96be61e97d545fe10acdf56e951b`，上游 `普通高考/2009/2009四川理.pdf`，SHA-256 `7f64be22c7f7c29a749b276635494972f962f91302ebc7506b55c9fae85a7406`，2 页 A3 横向，印面页码 557、558。
