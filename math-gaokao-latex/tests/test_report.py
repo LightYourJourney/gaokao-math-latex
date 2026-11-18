@@ -81,8 +81,8 @@ class ReportFactsTest(unittest.TestCase):
     def test_readme_preserves_question_ir_and_ocr_candidate_guidance(self):
         readme = report.render_outputs(self.facts)["math-gaokao-latex/README.md"]
         self.assertIn("### 题目级 IR 导出（增量能力）", readme)
-        self.assertIn("python3 tools/export_question_ir.py", readme)
-        self.assertIn("python3 tools/ocr_candidate_ir.py", readme)
+        self.assertIn("python3 math-gaokao-latex/tools/export_question_ir.py", readme)
+        self.assertIn("python3 math-gaokao-latex/tools/ocr_candidate_ir.py", readme)
         self.assertIn("recognized_unverified", readme)
 
     def test_check_outputs_reports_drifted_targets(self):
