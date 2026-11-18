@@ -15,11 +15,11 @@ PROJ = Path(__file__).resolve().parents[1]
 
 # 立项时属于 111 套 blocked、本轮补源/修源后已封账的 5 套（附封账提交）
 SEALED = {
-    "gk-1986-regular-guangdong-arts": "d6eb35234",
-    "gk-1987-regular-national-science": "3259c659d",
-    "gk-2003-spring-beijing-science": "3259c659d",
-    "gk-2020-regular-national-1-arts": "5b1318132",
-    "gk-2022-regular-national-b-arts": "19bd0cf3a",
+    "gk-1986-regular-guangdong-arts": "1b2233070",
+    "gk-1987-regular-national-science": "e65b0d18a",
+    "gk-2003-spring-beijing-science": "e65b0d18a",
+    "gk-2020-regular-national-1-arts": "12e987200",
+    "gk-2022-regular-national-b-arts": "c30406301",
 }
 SRC = Path(os.environ.get("GAOKAOMATH_SRC", str(Path(__file__).resolve().parents[2] / "gaokaomath-src")))
 
@@ -150,8 +150,8 @@ def main():
         "",
         "目标里的 111 套 blocked 是立项时（2026-11-09）的口径注记，**无法从当前仓库机械复算**；本轮已封账 5 套（`gk-1986-regular-guangdong-arts`、",
         "`gk-1987-regular-national-science`、`gk-2003-spring-beijing-science`、`gk-2020-regular-national-1-arts`、",
-        "`gk-2022-regular-national-b-arts`；封账提交分别为 d6eb35234 / 3259c659d / 5b1318132 / 19bd0cf3a），",
-        "另有 3 套原为 `compiled` 的已封账（`gk-2019-regular-national-1-{arts,science}`、`gk-2020-regular-national-1-science`，提交 5b1318132）。",
+        "`gk-2022-regular-national-b-arts`；封账提交分别为 1b2233070 / e65b0d18a / 12e987200 / c30406301），",
+        "另有 3 套原为 `compiled` 的已封账（`gk-2019-regular-national-1-{arts,science}`、`gk-2020-regular-national-1-science`，提交 12e987200）。",
         "因此 111 = 本表 106 套 + 已封账 5 套。",
         "",
         "## 计数",
