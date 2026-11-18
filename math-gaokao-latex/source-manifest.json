@@ -3236,6 +3236,14 @@
         "gk-2009-beijing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b47",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-sichuan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3245,7 +3253,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5e639c50-6e93-4464-b433-5661f5465dcc",
+  "last_transaction_id": "ad703996-1689-4f16-b40f-375b8be81398",
   "papers": [
     {
       "blocked_from": null,
@@ -39133,9 +39141,78 @@
       "title": "2009 年·普通高等学校招生考试·北京卷·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_四川卷_文科/figures/f2009_sichuan_arts_q06_hexagon.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_四川卷_文科/figures/f2009_sichuan_arts_q09_sphere.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_四川卷_文科/figures/f2009_sichuan_arts_q15_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_四川卷_文科/figures/f2009_sichuan_arts_q19_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_sichuan_arts",
+        "id": "gk-2009-sichuan-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 559、560；PDF 只有题面、无答案页，22 题答案由本库独立推导（非官方）。第 21 题椭圆方程分母印作 y²/b（非 b²），由 e=√2/2 与右准线 x=2 解得 b=1，故与标准形 x²/2+y²=1 数值一致。第 6 题正六棱锥、第 9 题球面、第 15 题正三棱柱、第 19 题正方形与四边形组合体由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "四川文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-sichuan-arts",
+      "production_state": "complete",
+      "project_dir": "2009_四川卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_四川文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_四川文_含解析.md",
+        "questions": "2009/2009_数学真题_四川文_试题.md",
+        "solution_body": "2009/2009_数学真题_四川文_解析正文.md"
+      },
+      "source_ids": [
+        "src-cb1b78af65a576cacf9151b24b1322dec0bb5838c75d0165b5fb29098d1107e9"
+      ],
+      "title": "2009 年·普通高等学校招生考试·四川卷·文科",
+      "track": "arts",
+      "year": 2009
     }
   ],
-  "revision": 9921,
+  "revision": 9931,
   "schema_version": 1,
   "sources": [
     {
@@ -49020,8 +49097,8 @@
       "exam_type": "regular",
       "git_blob_oid": "edfb4b3f41706aa2a6a277a341732dc1c0c25725",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-sichuan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009四川文.pdf",
       "regions": [],
       "source_id": "src-cb1b78af65a576cacf9151b24b1322dec0bb5838c75d0165b5fb29098d1107e9",

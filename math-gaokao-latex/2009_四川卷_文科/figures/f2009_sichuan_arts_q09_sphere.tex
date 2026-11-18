@@ -1,0 +1,21 @@
+% 2009 年四川卷文科第 9 题：球面上三点 A、B、C，∠ABC=90°，BA=BC。
+% 来源 PDF：普通高考/2009/2009四川文.pdf，SHA256 2bb14d3824466d9566238b20ec9270686c67d6e4f2af4186fd22b2a14e633ea7
+% 原页：第 1 页（A3 三栏）第 2 栏中部，印刷页 559。
+% 重绘依据：圆表示球，O 为球心；A、B、C 在球面上，AC 为截面圆直径；
+%   OB、OC、OA 虚线，BC、AB、AC 实线。
+\begin{tikzpicture}[scale=1.2, semithick, every node/.style={inner sep=1.2pt}]
+  \coordinate (O) at (0,0);
+  \draw (O) circle (2);
+  \fill (O) circle (1.2pt);
+  \node[anchor=south west] at ($(O)+(0.13,0.11)$) {$O$};
+  \coordinate (A) at (135:1.35);
+  \coordinate (B) at (215:1.35);
+  \coordinate (C) at (305:1.35);
+  \draw (A) -- (B) -- (C) -- (A);
+  \draw[dashed] (O) -- (A);
+  \draw[dashed] (O) -- (B);
+  \draw[dashed] (O) -- (C);
+  \node[anchor=south east] at (A) {$A$};
+  \node[anchor=north east] at (B) {$B$};
+  \node[anchor=north west] at (C) {$C$};
+\end{tikzpicture}

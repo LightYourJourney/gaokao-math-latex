@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 四川卷文科：phase6-b47 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
+
+- 对象：`gk-2009-sichuan-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-cb1b78af65a576cacf9151b24b1322dec0bb5838c75d0165b5fb29098d1107e9`，上游 `普通高考/2009/2009四川文.pdf`，SHA-256 `2bb14d3824466d9566238b20ec9270686c67d6e4f2af4186fd22b2a14e633ea7`，2 页 A3 横向，印面页码 559、560。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；公式、上下标、选项与四幅图另以 500/600 dpi 原页逐题复核。第 1 页含 Q1–Q18、第 2 页含 Q19–Q22；原页未标分值，不补。来源与接收细节见 `reports/2009-sichuan-arts-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1C 2C 3B 4D 5A 6D 7B 8C 9B 10D 11B 12A；13 $2$；14 $-20$；15 $\\frac{\\pi}{2}$；16 ①③④；17 $A+B=\\frac\\pi4$、$a=\\sqrt2,b=1,c=\\sqrt5$；18 $\\frac27$、$\\frac{44}{105}$；19 $\\arccos\\frac{3\\sqrt{11}}{11}$；20 $f=x^3-2x^2+x-2$、$m<1$、$x=\\frac{2\\pm\\sqrt{1-m}}{3}$；21 $\\frac{x^2}{2}+y^2=1$、$y=\\pm(x+1)$；22 $a_n=(-\\frac14)^n$、$b_n=\\frac{4+a_n}{1-a_n}$、不存在 $k$、$T_n<\\frac{23}{16}<\\frac32$。
+- 转录复核改正（500/600 dpi 原页为准）：Q8 双曲线为 $\\frac{x^2}{2}-\\frac{y^2}{b^2}=1$；Q18 省外游客占 $\\frac34$、第 (1) 问求「恰有 1 人持银卡」（人数 27/9 与 9/6）；Q21 离心率 $e=\\frac{\\sqrt2}{2}$、$k=\\pm1$。三处修正后重新盲解，结论一致。
+- 源排版缺陷（照录）：Q21 椭圆方程分母印作 $y^2/b$（非 $b^2$），由 $e=\\frac{\\sqrt2}{2}$、准线 $x=2$ 得 $b=1$，与标准形数值一致，不登记 blocker，仅在题注与解析说明。
+- 图形：Q6 正六棱锥、Q9 球面、Q15 正三棱柱、Q19 正方形与四边形组合体，共 4 幅 TikZ 矢量图；Q6/Q9/Q15/Q19 的顶点标注均按外法向避让，Q19 改用斜投影避免 A、D、E 在图上共线。
+- 生成链：`register-papers`（revision 9922）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9923）→ `build --formal`（attempt `d1d1146c`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 6/26/8/19 页（共 59 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 59 页八类检查全 pass，0 豁免；批次 `closed`、卷 `complete`。全量门禁：`validate-receipts --all --require-final` **OK：540 卷**；`provenance check-all` **OK：540 卷**；`generate_projects --all --check` **540 套一致**。
+- 教训：本题文字层把 Q18 的 $\\frac34$ 与「银卡」、Q21 的 $\\sqrt2$ 读错/漏读，说明四川卷文字层不可单独采信；所有分数、根号与分母须以 500 dpi 以上原页复核。
+- 下一步：按年份继续 2009 四川理等未成卷来源；`source-manifest.json` 仍有 237 个来源未绑定 `paper_id`。
+
 ### 2009 北京卷理科：phase6-b46 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
 
 - 对象：`gk-2009-beijing-science`，20 题（选择 1–8、填空 9–14、解答 15–20）；固定来源 `src-182e542a89a3725de869ea785c60685bf616ca59cc4092c17328a7767713dbdf`，上游 `普通高考/2009/2009北京理.pdf`，SHA-256 `f5ca2006abecc7e9529b7adcddcda172d995b4910e43445e33125234efcfc4c2`，2 页 A3 横向，印面页码 499、500。
