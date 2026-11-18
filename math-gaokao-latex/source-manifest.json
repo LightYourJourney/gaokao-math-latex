@@ -3228,6 +3228,14 @@
         "gk-2009-beijing-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase6-b46",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-beijing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3237,7 +3245,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "6e8578d3-fb56-4058-a2eb-52b090b5dd27",
+  "last_transaction_id": "5e639c50-6e93-4464-b433-5661f5465dcc",
   "papers": [
     {
       "blocked_from": null,
@@ -39068,9 +39076,66 @@
       "title": "2009 年·普通高等学校招生考试·北京卷·文科",
       "track": "arts",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_北京卷_理科/figures/f2009_beijing_science_q16_tetrahedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_beijing_science",
+        "id": "gk-2009-beijing-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 499、500；PDF 只有题面、无答案页，20 题答案由本库独立推导（非官方）。第 16 题三棱锥（D、E 与 DE∥BC）由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "北京理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-beijing-science",
+      "production_state": "complete",
+      "project_dir": "2009_北京卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_北京理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_北京理_含解析.md",
+        "questions": "2009/2009_数学真题_北京理_试题.md",
+        "solution_body": "2009/2009_数学真题_北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-182e542a89a3725de869ea785c60685bf616ca59cc4092c17328a7767713dbdf"
+      ],
+      "title": "2009 年·普通高等学校招生考试·北京卷·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 9916,
+  "revision": 9921,
   "schema_version": 1,
   "sources": [
     {
@@ -48931,8 +48996,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1f696bef075cc235fbdb8d2b805e1f1cbd0482b7",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009北京理.pdf",
       "regions": [],
       "source_id": "src-182e542a89a3725de869ea785c60685bf616ca59cc4092c17328a7767713dbdf",

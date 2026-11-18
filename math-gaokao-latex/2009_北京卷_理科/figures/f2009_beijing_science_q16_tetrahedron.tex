@@ -1,0 +1,28 @@
+% 2009 年北京卷理科第 16 题：三棱锥 P-ABC，PA⊥底面，D、E 在 PB、PC 上且 DE∥BC。
+% 来源 PDF：普通高考/2009/2009北京理.pdf，SHA256 f5ca2006abecc7e9529b7adcddcda172d995b4910e43445e33125234efcfc4c2
+% 原页：第 1 页（A3 三栏）第 3 栏中部，印刷页 499。
+% 重绘依据：P 在顶点，A 在左、B 在右、C 在下方居前；PA、PB、PC、AB、AC、BC 实线，
+%   D 在 PB 上、E 在 PC 上，DE 水平且平行 BC；标注按原图。
+\begin{tikzpicture}[scale=1.15, semithick, every node/.style={inner sep=1.5pt}]
+  \coordinate (P) at (0.7,2.9);
+  \coordinate (A) at (-1.4,1.4);
+  \coordinate (B) at (2.2,1.4);
+  \coordinate (C) at (0.4,0.2);
+  \coordinate (D) at ($(P)!0.55!(B)$);
+  \coordinate (E) at ($(P)!0.55!(C)$);
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (A) -- (B);
+  \draw (A) -- (C);
+  \draw (C) -- (B);
+  \draw (D) -- (E);
+  \fill (D) circle (1.2pt);
+  \fill (E) circle (1.2pt);
+  \node[anchor=south] at (P) {$P$};
+  \node[anchor=east] at (A) {$A$};
+  \node[anchor=west] at (B) {$B$};
+  \node[anchor=north] at (C) {$C$};
+  \node[anchor=west] at (D) {$D$};
+  \node[anchor=east] at (E) {$E$};
+\end{tikzpicture}

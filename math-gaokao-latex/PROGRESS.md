@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 北京卷理科：phase6-b46 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
+
+- 对象：`gk-2009-beijing-science`，20 题（选择 1–8、填空 9–14、解答 15–20）；固定来源 `src-182e542a89a3725de869ea785c60685bf616ca59cc4092c17328a7767713dbdf`，上游 `普通高考/2009/2009北京理.pdf`，SHA-256 `f5ca2006abecc7e9529b7adcddcda172d995b4910e43445e33125234efcfc4c2`，2 页 A3 横向，印面页码 499、500。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；公式、上下标、选项与图稿另以 300/400 dpi 原页逐题复核。第 1 页含 Q1–Q14、第 2 页含 Q15–Q20；原页未标分值，不补。来源与接收细节见 `reports/2009-beijing-science-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1B 2D 3C 4D 5A 6C 7B 8A；9 $\frac12$；10 $-6$；11 $-1$；12 $2$、$\frac{2\pi}{3}$；13 $[-3,1]$；14 $1$、$0$；15 $\sin C=\frac{3+4\sqrt3}{10}$、面积 $\frac{36+9\sqrt3}{50}$；16 $\arcsin\frac{\sqrt2}{4}$，存在 $E$ 且 $BD:DP=3:4$；17 $\frac4{27}$、$E\xi=\frac83$；18 $y=x$、按 $k$ 讨论、$k\in[-1,0)\cup(0,1]$；19 $x^2-\frac{y^2}{2}=1$、$\angle AOB=90^\circ$；20 $\{1,3,4\}$ 否、$\{1,2,3,6\}$ 是，$a_1=1$ 与和式恒等，$n=5$ 成等比。
+- 盲解复核：盲解代理未读主稿独立完成全卷，20 题结论一致；据此改正主稿 Q8（判别式 $8(t^2-t+1)>0$ 恒成立，直线 $l$ 上所有点都是 $\mathcal A$ 点，答案 A，原稿 D 错误）。Q19(2) 补充说明：切线与渐近线平行的退化 $P$ 由题设「交于不同的两点」排除。
+- 图形：Q16 三棱锥 P-ABC（PA⊥底面、D/E 在 PB/PC 上、DE∥BC），1 幅 TikZ 矢量图。
+- 生成链：`register-papers`（revision 9917）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9918）→ `build --formal`（attempt `1e457df0`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 4/20/6/16 页（共 46 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 46 页八类检查全 pass，0 豁免；批次 `closed`、卷 `complete`。全量门禁：`validate-receipts --all --require-final` **OK：539 卷**；`provenance check-all` **OK：539 卷**；`generate_projects --all --check` **539 套一致**。
+- 下一步：按年份继续 2009 四川文/理等未成卷来源；`source-manifest.json` 仍有 238 个来源未绑定 `paper_id`。
+
 ### 2009 北京卷文科：phase6-b45 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
 
 - 对象：`gk-2009-beijing-arts`，20 题（选择 1–8、填空 9–14、解答 15–20）；固定来源 `src-2fa5cfeaed5456a853963c3697298f25136b2929d317bf180c47ccef70bb1eba`，上游 `普通高考/2009/2009北京文.pdf`，SHA-256 `5b310eb0f16d1bd48553d20e7f16b10784e6c83787ef7dd8fa96e3065ef4c159`，2 页 A3 横向，印面页码 501、502。
