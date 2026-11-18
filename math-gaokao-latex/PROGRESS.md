@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2007 四川卷文科：phase6-b40 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
+
+- 对象：`gk-2007-regular-sichuan-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-9aca159335308217b48f6d305942d30328d9bb142e4b623c35058b7c489e3821`，上游 `普通高考/2007/2007四川文.pdf`，SHA-256 `1318df44733ec939e8789379d6fa2115a2c6a63e84b73c1f2bf3c080007ce68c`，551829 字节，2 页 A3 横向，印面页码 411、412，页眉「2007 普通高等学校招生考试（四川卷文）」。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；公式、上下标、选项与六幅图另以 300/400 dpi 原页逐题复核。第 1 页含 Q1–Q17、第 2 页含 Q18–Q22；原页未印分值，不补。来源与接收细节见 `reports/2007-sichuan-arts-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1A 2C 3B 4D 5A 6C 7B 8A 9B 10C 11B 12U；13 $8$；14 $\frac{\pi}{6}$；15 $x=\frac32$；16 ①④；17 $0.7599$、$\frac{51}{190}$、$\frac{3}{190}$、$\frac{27}{95}$；18 $-\frac{8\sqrt3}{47}$、$\frac{\pi}{3}$；19 补回条件后 $\arccos\frac{\sqrt{39}}{13}$、$\frac{\sqrt6}{6}$；20 $a=2,b=-12,c=0$、增区间 $(-\infty,-\sqrt2), (\sqrt2,\infty)$、最大值 $18$、最小值 $-8\sqrt2$；21 $P(1,\frac{\sqrt3}{2})$、$k\in(-2,-\frac{\sqrt3}{2})\cup(\frac{\sqrt3}{2},2)$；22 $x_{n+1}=\frac{x_n^2+4}{2x_n}$、$a_n=2^{n-1}\lg3$、$x_n=\frac{2(3^{2^{n-1}}+1)}{3^{2^{n-1}}-1}$、$T_n<3$。盲解代理未读主稿独立完成全卷，22 题结论一致。
+- 固定源缺陷（照录并登记）：Q12 四选项与 $\frac{2\sqrt{21}}{3}$ 无一相符（ISSUE-1470）；Q19 漏印「平面 $PCBM\perp$ 平面 $ABC$」（ISSUE-1471，缺条件时 (1) 不成立、(2)(3) 不唯一）；Q21 椭圆方程漏印等号（ISSUE-1472）；Q17 题干有排印疑误（ISSUE-1473）。解析对 Q19、Q21 按唯一相容读法求解并在题注中说明所补条件，题面字面未改。
+- 图形：Q2 四选项图、Q4 正方体、Q6 球面、Q12 三平行线、Q14 正三棱柱、Q19 空间梯形共 6 幅 TikZ 矢量图，逐幅与固定源原页比对；`expected_occurrences` 均为 2。
+- 生成链：`register-papers`（revision 9882）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance init-batch`/`import-batch`（revision 9883）→ `build --formal`（attempt `b062c7f6`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 7/28/9/22 页（共 66 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 66 页八类检查全 pass，0 豁免；`validate-receipts --paper --require-final --require-current-inputs` → **OK：1 卷**；`provenance check-batch`、`solution_sources check-batch`、`review_receipts check-batch` 均通过。批次 `closed_with_blockers`、卷 `blocked`（4 条 open blocker）。
+- 下一步：取得同版官方勘误或更清晰原页，确认 Q12 选项、Q19 缺条件、Q21 等号、Q17 题干；确认前维持 blocked。随后按年份继续 2007 湖南文、2008 北京文。
+
 ## 2005 年封年（2026-11-09）
 
 - 全年 32 套：**29 套 `complete`**、3 套 `blocked`（`gk-2005-regular-national-1-science` ISSUE-0834；`gk-2005-regular-shanghai-arts` ISSUE-1377/1379；`gk-2005-regular-shanghai-science` ISSUE-1380/1381）。三套阻断均源于固定原页本身：前者第 4 题选项 C 印成空区间，后两者「最小的是一个四棱柱」的端点约定与「中低价层」用字无同版答案或勘误可裁定，按 U 政策不替来源补条件。

@@ -24718,3 +24718,71 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1470
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 12 题（印面 411）四条距离为 1、2，按正三角形条件解得边长 2√21/3≈3.055；原页选项为 2√3≈3.464、4√6/3≈3.266、(3−√7)/4≈0.088、(2−√21)/3≈−0.861，无一相符。同卷理科第 11 题为同一组距离条件与同一组选项，已因同一缺陷登记 ISSUE-1449 附近条目。",
+  "fingerprint": "58105c4793fdb33d893c2c5951890a95147f78d072fb4f4040ac98b93623844e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2007-regular-sichuan-arts",
+  "question_id": "gk-2007-regular-sichuan-arts-q12",
+  "resume_action": "取得同版官方答案或勘误确认第 12 题正确选项的字面（应为 2√21/3）；在此之前保留原页四个选项与独立推导结论，不擅自改选项，也不把该题标作已解决。",
+  "source_id": "src-9aca159335308217b48f6d305942d30328d9bb142e4b623c35058b7c489e3821",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1471
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 19 题印作「PCBM 是直角梯形」，公开同题版本（多个真题站点所载 2007 四川文第 19 题及官方解答）均含「平面 PCBM⊥平面 ABC」。缺该条件时点 A 可绕 BC 旋转而仍满足全部字面条件：AC 与 BM 不再垂直，二面角与体积随位置改变（数值试算 b=0 时 V=√6/6，b=1/2 时 V≈0.547），故第（1）问不成立、第（2）（3）问不唯一。按补回条件的版本，二面角为 arccos(√39/13)、体积为 √6/6。",
+  "fingerprint": "bdc860922116f34d88db39d8b37d1697e2d70d5aa55cff9369e3924d8c4fce48",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2007-regular-sichuan-arts",
+  "question_id": "gk-2007-regular-sichuan-arts-q19",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认固定源是否漏印「平面 PCBM⊥平面 ABC」；确认后按官方字面重录该条件并重跑本题 provenance 与视觉复核。在此之前题面照固定源保留，解析按补回条件的唯一几何求解并在文中注明。",
+  "source_id": "src-9aca159335308217b48f6d305942d30328d9bb142e4b623c35058b7c489e3821",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1472
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 21 题（印面 412）椭圆方程 300 dpi 原图复核为 x²/4+y²−1，等号位置是一条短横，字面不是方程；同卷理科第 20 题同式完整印作 x²/4+y²=1。题设「椭圆」及左、右焦点只与 =1 相容，按 =1 求得 P(1,√3/2) 与 k 范围。",
+  "fingerprint": "3f9146c2f81386d8844610ba65cec2d87842ad1b12982bc3137c189079e690be",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2007-regular-sichuan-arts",
+  "question_id": "gk-2007-regular-sichuan-arts-q21",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 21 题椭圆方程右端确为 =1；确认后按官方字面重录并重跑本题 provenance 与视觉复核。在此之前题面照固定源保留，解析按唯一相容的 =1 求解并注明。",
+  "source_id": "src-9aca159335308217b48f6d305942d30328d9bb142e4b623c35058b7c489e3821",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1473
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 17 题（印面 411）题干印作「厂家对一般产品致冷商家的，商家符合规定拾取一定数量的产品做检验」，「致冷商家的」「拾取」语义不通，疑为排印或重排错误；同为 220/300 dpi 复核所得，非 OCR 误识。字面不影响两小问的概率计算，答案按 0.3 与 20 件中 3 件不合格求解。",
+  "fingerprint": "25a509bf95a46db3a2e854943f08a403ef34469118284151efd349ba13a8ab0b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2007-regular-sichuan-arts",
+  "question_id": "gk-2007-regular-sichuan-arts-q17",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 17 题题干的正确表述；确认后按官方字面重录并重跑该题 provenance。在此之前照录固定源，不改写语义。",
+  "source_id": "src-9aca159335308217b48f6d305942d30328d9bb142e4b623c35058b7c489e3821",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
