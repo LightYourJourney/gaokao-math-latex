@@ -7,10 +7,10 @@
 - 试卷总数：**532**；生产状态：blocked 107，complete 425
 - 批次总数：**378**；manifest 状态：closed 292，closed_with_blockers 86
 - 正式复核门禁：FINALIZED 378
-- 已编译版本：2112/2112；构建回执状态：compiled_pending_review 4，running 4，succeeded 524
+- 已编译版本：2128/2128；构建回执状态：succeeded 532
 - review 回执状态：passed 532
 - 问题总账：1469 条，未解决问题：313，阻塞完成 242。
-- 回执日志警告汇总（包含待复核回执）：Overfull 31，Underfull 136，豁免记录 177。
+- 回执日志警告汇总（包含待复核回执）：Overfull 35，Underfull 131，豁免记录 166。
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
 - 所有批次复核门禁通过。
 本目录保存 2017—2026 年转录与来源材料；统一 LaTeX 项目目录及完整批次清单位于相邻的 `math-gaokao-latex/`。

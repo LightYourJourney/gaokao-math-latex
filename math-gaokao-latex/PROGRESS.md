@@ -11111,7 +11111,7 @@
 
 ### phase2-b24：1977北京文理回执刷新与椭圆图标避让（2026-10-18）
 
-- 恢复：工作分支功能工作树、HEAD3704f642、tracked diff为空；上一目标回合实际修复并验收上海两卷，是进展。定位本次北京两卷同属phase2-b24，旧回执仅make_short_answers.py哈希变化，依赖树未变。保存旧8份PDF/build/review至忽略 `.work/receipt-refresh-20261018/{1977_北京卷_文科,1977_北京卷_理科}/before/`，旧工作项另保存old-phase2-b24-work。
+- 恢复：工作分支功能工作树、HEADa482e24a、tracked diff为空；上一目标回合实际修复并验收上海两卷，是进展。定位本次北京两卷同属phase2-b24，旧回执仅make_short_answers.py哈希变化，依赖树未变。保存旧8份PDF/build/review至忽略 `.work/receipt-refresh-20261018/{1977_北京卷_文科,1977_北京卷_理科}/before/`，旧工作项另保存old-phase2-b24-work。
 - 首轮刷新：三类生成检查各2/2通过，北京专项3/3通过；正式重建revision4343，文科attempt1d2fdc73-598f-4154-ba1d-760fbaf3c234、理科a94c70a7-0e77-47cb-bdac-95986e409173。四版文科1/7/2/6页、理科2/9/3/8页，共38页；全部errors/missing_characters/overfull/undefined_references/problems为空，新旧150dpi PNG38/38逐字节相同。此事实只支持证据复用，不是质量正确性证明。
 - 实际缺陷及修复：主会话抽查理科解析p9/印刷p7，并用300dpi局部确认y=x+5标签被切线和椭圆穿过；原测试只限制标签距切点，未保证整字避开曲线。新增回归先失败（锚点y=8/25不大于椭圆最高y=3）；只将node从pos=.08/above right改为pos=.85/above left，使文字整体位于椭圆上方、切线左侧。椭圆参数、切线端点、切点(-3.2,1.8)及数学结论全未改。新增后北京专项4/4通过，恢复旧锚点的纯内存变异被拒绝。
 - 二次仅理科重建：attempt9d91abbd-8393-4e82-bfe0-90cdd36ed4da，revision4345，四版仍2/9/3/8页，所有编译问题数组空。当前与旧页图仅解析p9、印刷p7变化，主会话实际目视两张当前整页确认文字/曲线分离、页面及答案框完整；其余36页（含文科16页）PNG相同，迁移历史八项结论。用官方prepare_batch既有work_dir API准备 `.work/beijing-label-fix-review/phase2-b24/review/`，不覆盖同attempt旧工作项；新旧哈希/审查方法持久化到reports/phase2-b24-raster-review-20261018.json。
@@ -11127,7 +11127,7 @@
 
 ### phase2-b58/b59：1986广东文理回执当前化检查点（2026-10-18）
 
-- 恢复：工作分支功能工作树、HEAD3f61d54c、tracked diff为空，上一回合已完成北京两卷验收，是实际进展。定位广东两卷分属独立批次phase2-b58（文史类）、phase2-b59（理工农医类），两者旧review均failed、production_state blocked；仅共享make_short_answers.py生成输入哈希变化，依赖树未变。
+- 恢复：工作分支功能工作树、HEAD675c1720、tracked diff为空，上一回合已完成北京两卷验收，是实际进展。定位广东两卷分属独立批次phase2-b58（文史类）、phase2-b59（理工农医类），两者旧review均failed、production_state blocked；仅共享make_short_answers.py生成输入哈希变化，依赖树未变。
 - 既有失败边界：文史类13项（源第1(25)缺A—E图形、源第2(2)缺字符号及试题p6编者说明“按题意和解答页解释为乘法”的答案泄漏），理工农医类4项（缺图）。本次不猜测原图、不替换来源□、不把blocked提升为complete。答案泄漏是可修复编辑问题，不是缺源的必然结果，已明确列入随后独立修复任务；当前先保留正式失败证据。
 - 已完成：保存旧8份PDF及回执至忽略 `.work/receipt-refresh-20261018/{1986_广东卷_文史类,1986_广东卷_理工农医类}/before/`，旧工作项分别备份old-phase2-b58-work/old-phase2-b59-work。两批三类生成检查各1/1通过，8版正式XeLaTeX+latexmk构建均succeeded，日志errors/missing_characters/overfull/undefined_references/problems为空。文史类attemptf5ecf4f2-d049-4fca-bc0c-b11fa1e9eefd，7/28/8/22页；理工农医类attempt15b083ec-f7ac-40de-9e81-4be25fb2fdc2，7/26/8/20页，共126页，revision4350。
 - 视觉增量：旧/新各126页以同一pdftoppm26.10.0、150dpi渲染，PNG逐页字节完全相同。持久reports/1986-guangdong-receipt-refresh-20261018.json包含各版PDF哈希、旧审查绑定、126页PNG哈希及全部17条原失败。主会话实际抽查当前文史类试题p6（缺字符号及泄漏说明仍存在）、理工农医类试题p5（缺图说明仍存在）；不声称重看全126页。官方prepare8工作项后只迁移同像素的原八项结论，保留所有fail及原审查时间/attempt，glyph note附当前SHA。
@@ -11144,7 +11144,7 @@
 
 ### phase2-b70/phase4-b04：失效清单最后两卷当前化检查点（2026-10-19）
 
-- 恢复：工作分支功能工作树，HEADbfc491ee、tracked diff为空；上一回合已实际刷新广东两卷并登记失败，是进展。1997全国理科、1989广东理科分别属于phase2-b70/phase4-b04，旧review passed、batch closed_with_blockers，仅make_short_answers.py生成输入哈希失效，依赖树未变。保留来源ISSUE-1072/1073及ISSUE-1078，不将旧的blocked误当待转录。
+- 恢复：工作分支功能工作树，HEADb24c026c、tracked diff为空；上一回合已实际刷新广东两卷并登记失败，是进展。1997全国理科、1989广东理科分别属于phase2-b70/phase4-b04，旧review passed、batch closed_with_blockers，仅make_short_answers.py生成输入哈希失效，依赖树未变。保留来源ISSUE-1072/1073及ISSUE-1078，不将旧的blocked误当待转录。
 - 已完成：将旧PDF/build/review保存到忽略 `.work/receipt-refresh-20261019/{1997_全国卷_理科,1989_广东卷_理科}/before/`，旧工作项另存old-phase2-b70-work/old-phase4-b04-work。两批三类生成检查各1/1通过，正式构建8版均succeeded，errors/missing_characters/overfull/undefined_references/problems为空。1997 attemptc7fa363f-9653-430b-b353-62571e4d3a23，5/27/6/20页；1989 attempta901a1f5-2a18-4a38-913a-411b0d4a31de，5/24/7/17页，共111页，revision4356。
 - 视觉证据：旧新各111页以pdftoppm26.10.0、150dpi渲染，PNG111/111逐页字节完全相同。两卷当前试题p1已实际抽查；其余逐页结论通过相同渲染证据迁移，不声称重新目视全111页。官方prepare8工作项后，校验旧review/PDF哈希和attempt、新PDF实际SHA、页数及候选页绑定，glyph note附当前PNG SHA和历史审查日期/attempt。reports/final-two-receipt-refresh-20261019.json持久记录各版PDF及111页PNG SHA。
 - 验证：1997全国理来源缺口专项3/3、1989广东理来源专项14/14通过；三类生成检查各两卷通过。无内容/公共代码变化，不重复跑全库长测；尚未登记新视觉回执，不提前声称两批closed_with_blockers已恢复。
@@ -11166,7 +11166,7 @@
 
 ### phase2-b58：广东文史类题面运算符提示移除（2026-10-19）
 
-- 恢复：工作分支功能工作树、HEADde6f0e29、tracked diff为空。上一回合完成特定12卷失效回执清单，是实际进展；本轮回到已确认的编辑说明泄漏，不再次刷新其他卷。
+- 恢复：工作分支功能工作树、HEADb895ad6f、tracked diff为空。上一回合完成特定12卷失效回执清单，是实际进展；本轮回到已确认的编辑说明泄漏，不再次刷新其他卷。
 - 测试先行：新增tests/test_1986_guangdong_arts_question_boundary.py两项测试，调用真实md2tex验证题面/卷首说明不指认缺字符号为乘法，不引用解答页，保留原方程□和10个小题；解析中的乘法解释与结果仍在。先复现1 fail/1 pass（卷首“乘号”亦暴露解释），修复后2/2通过，重新注入“按解答页解释为乘法”的纯内存变异被拒绝。
 - 最小修改：规范试题两条编者说明改为“运算连接符缺字、原字形待核”，没有替换原式中的□，没有删除/改写原题或答案。忽略仅这两条编者说明后，新旧规范题面与HEAD逐字一致；正式逐题摘要仅第2大题改变。解析正文及答案要点、历史数学结论保持不变；官方extract/generate投影含解析稿及questions/answers，不手改副本。
 - 正式来源记录：保存旧PDF/build/review、三角色草稿和旧工作项到忽略 `.work/question-note-fix-20261019/before/`。只更新question-review草稿第2题题面哈希并追加本轮编辑边界说明，原源页、扫描哈希、历史角色/独立数学证据不变，不伪称新盲核。import先dry-run成功再write，revision4359；保留来源issue和blocked。provenance check-batch为OK1卷。
@@ -12399,7 +12399,7 @@
 
 ### 1995 全国文科：接手续稿、证据审计与规范源修复（phase4-b34，2026-10-26）
 
-- 接手基线：HEAD6153e863，Claude Code已提交到1995全国理科phase4-b33；当前未提交成果为1995全国文科26题、四图、三角色provenance及四版构建。没有重复登记或从模型记忆重建。
+- 接手基线：HEAD72d8f6c1，Claude Code已提交到1995全国理科phase4-b33；当前未提交成果为1995全国文科26题、四图、三角色provenance及四版构建。没有重复登记或从模型记忆重建。
 - 固定源：单页A3三栏、印刷页52，SHA-256 `eafe29dd184aded8687308b5eb0765c8a51b2b4c1ab954b4bbf0a454791b57fb`，本轮现场复核字节；无答案、解析、分值和总分，保留未知。两份隔离求解记录已归档reports，答案为项目D级、非官方。
 - 修复：恢复Q24(2)体积比推导与Q25(2)最低补贴推导；按原图补AE/BE虚线；移除题面Q16读法提示与重复草稿介绍，规范paper_id。来源校对记录恢复被前轮覆盖丢失的逐题页/栏定位、题型范围与未知分值，保留现canonical绑定和图稿哈希。
 - 来源边界：Q16平方指数位于自变量括号后，按通常对数内平方记法读取，有原页及独立推导支撑，登记为判读备注；Q24未给数值半径，以底面半径表示距离，不补尺寸条件。
