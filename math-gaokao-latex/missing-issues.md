@@ -24786,3 +24786,37 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1474
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 14 题（印面 427）在「条件序号是____」之后紧接「T(a) 表示非负实数 a 的整数部分，例如 T(2.6)=2，按此方案，第 6 棵树种植点的坐标应为____；第 2008 棵树种植点的坐标应为____」，但题面没有给出任何植树递推方案（该段与 2008 北京理科第 14 题尾段相同），两个坐标空无法作答。条件部分可判定，答案序号为 ②（f(x)=x²−cos x 在 [−π/2,π/2] 上关于 |x| 递增）。",
+  "fingerprint": "dedd93271209745c8d5a2dec040a1de32318721cf1ee26384f9927a4b98e8398",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2008-beijing-arts",
+  "question_id": "gk-2008-beijing-arts-q14",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 14 题是否应删除混入的植树题文字；确认后按官方字面重录该题并重跑 provenance 与逐页复核。在此之前照录固定源，只回答可判定的条件序号。",
+  "source_id": "src-a24ac8b08aa9604b1cc0ea37ab616d01d66aedaea62913dfa7b4b124fcdb8df4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1475
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 20 题第 (1) 问（印面 428）印作「当 a2=−1 时，求 λ 及 a1 的值」，而题干已给 a1=1；公开同题版本（2008 北京卷文史类第 20 题及答案）为「求 λ 及 a3 的值」。按题面字面 λ=3、a1=1；按同题版本 λ=3、a3=−3。",
+  "fingerprint": "04d778a932f01967ec5dee051fd5826214d1e2f882d34817b24741a3ff5e597c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2008-beijing-arts",
+  "question_id": "gk-2008-beijing-arts-q20",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 20 题第 (1) 问是 a1 还是 a3；确认后按官方字面重录并重跑该题 provenance。在此之前照录固定源，答案同时给出 a1=1 与 a3=−3。",
+  "source_id": "src-a24ac8b08aa9604b1cc0ea37ab616d01d66aedaea62913dfa7b4b124fcdb8df4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

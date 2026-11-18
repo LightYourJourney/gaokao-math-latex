@@ -1,0 +1,74 @@
+% 2008 年北京卷文科第 8 题：正方体 ABCD-A_1B_1C_1D_1 中 P 在 BD_1 上，
+% 过 P 作垂直于平面 BB_1D_1D 的直线交表面于 M、N；下方为四个候选图象。
+% 来源 PDF：普通高考/2008/2008北京文.pdf，SHA256 9d725e3f7011f50eddddd9bebd62825365c218b08fa0c920ac23b57228f590f9
+% 原页：第 1 页（A3 三栏）第 1 栏下部，印刷页 427。
+% 重绘依据：正方体斜投影，BD_1 为虚线对角线，P 取在对角线中部；过 P 的弦 MN 沿
+%   垂直于平面 BB_1D_1D 的方向画出，M 在左前棱、N 在右面；四幅小图只画坐标轴与
+%   曲线形状（原图无刻度）：(A) 梯形、(B) 对称三角形、(C) 平滑平台、(D) 偏斜尖峰。
+\begin{tikzpicture}[scale=1.0, semithick, every node/.style={inner sep=1.2pt}]
+  % ---------------- 正方体 ----------------
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (2.2,0);
+  \coordinate (D)  at (0.6,0.5);
+  \coordinate (C)  at (2.8,0.5);
+  \coordinate (A1) at (0,2.2);
+  \coordinate (B1) at (2.2,2.2);
+  \coordinate (D1) at (0.6,2.7);
+  \coordinate (C1) at (2.8,2.7);
+  \draw[dashed] (D) -- (D1);
+  \draw[dashed] (C) -- (D);
+  \draw[dashed] (D) -- (A);
+  \draw (A) -- (B) -- (C) -- (C1) -- (D1) -- (A1) -- cycle;
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (B1) -- (C1);
+  \draw (A1) -- (B1);
+  \draw[dashed] (B) -- (D1);
+  % P 在对角线 BD1 上
+  \coordinate (P) at ($(B)!0.55!(D1)$);
+  \fill (P) circle (1.3pt);
+  \node[anchor=north west] at ([xshift=1pt,yshift=-1pt]P) {$P$};
+  % 过 P 的弦 MN（沿垂直于平面 BB1D1D 的方向）
+  \coordinate (M) at (0.15,0.95);
+  \coordinate (N) at (2.65,1.55);
+  \draw (M) -- (N);
+  \fill (M) circle (1.1pt);
+  \fill (N) circle (1.1pt);
+  \node[anchor=north east] at ([xshift=-1pt,yshift=-1pt]M) {$M$};
+  \node[anchor=south west] at ([xshift=1pt,yshift=1pt]N) {$N$};
+  % 顶点标注
+  \node[anchor=north east] at (A)  {$A$};
+  \node[anchor=north west] at (B)  {$B$};
+  \node[anchor=west]       at (C)  {$C$};
+  \node[anchor=east]       at (D)  {$D$};
+  \node[anchor=south east] at (A1) {$A_1$};
+  \node[anchor=south west] at (B1) {$B_1$};
+  \node[anchor=south west] at (C1) {$C_1$};
+  \node[anchor=south east] at (D1) {$D_1$};
+
+  % ---------------- 四个选项图（整体下移，避免与正方体底边标注相撞） ----------------
+  \begin{scope}[yshift=-0.95cm]
+  \foreach \dx/\opt in {0/A, 2.5/B, 5.0/C, 7.5/D} {
+    \draw[->] (\dx-0.15,-1.0) -- (\dx+1.35,-1.0);
+    \draw[->] (\dx,-1.45) -- (\dx,-0.35);
+    \node[anchor=north east] at (\dx-0.05,-1.05) {$O$};
+    \node[anchor=west] at (\dx+1.37,-1.0) {$x$};
+    \node[anchor=south west] at (\dx,-0.33) {$y$};
+    \node[anchor=north] at (\dx+0.6,-1.55) {(\opt)};
+  }
+  % (A) 梯形
+  \draw (0,-1.0) -- (0.35,-0.45) -- (0.85,-0.45) -- (1.2,-1.0);
+  % (B) 对称三角形
+  \draw (2.5,-1.0) -- (3.1,-0.35) -- (3.7,-1.0);
+  % (C) 平滑平台
+  \draw (5.0,-1.0)
+    .. controls (5.20,-1.0) and (5.05,-0.65) .. (5.30,-0.65)
+    -- (5.80,-0.65)
+    .. controls (6.05,-0.65) and (5.90,-1.0) .. (6.10,-1.0);
+  % (D) 偏斜尖峰
+  \draw (7.5,-1.0)
+    .. controls (7.95,-1.0) and (7.90,-0.30) .. (8.10,-0.30)
+    .. controls (8.28,-0.30) and (8.12,-1.0) .. (8.25,-1.0);
+  \end{scope}
+\end{tikzpicture}

@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2008 北京卷文科：phase6-b42 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
+
+- 对象：`gk-2008-beijing-arts`，20 题（选择 1–8、填空 9–14、解答 15–20）；固定来源 `src-a24ac8b08aa9604b1cc0ea37ab616d01d66aedaea62913dfa7b4b124fcdb8df4`，上游 `普通高考/2008/2008北京文.pdf`，SHA-256 `9d725e3f7011f50eddddd9bebd62825365c218b08fa0c920ac23b57228f590f9`，2 页 A3 横向，印面页码 427、428。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；公式、上下标、选项与三幅图另以 300/400 dpi 原页逐题复核。第 1 页含 Q1–Q14、第 2 页含 Q15–Q20；原页未印分值，不补。来源与接收细节见 `reports/2008-beijing-arts-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1D 2A 3A 4C 5B 6A 7C 8B；9 $\frac43$；10 $\{x\mid x<-2\}$；11 $-8$；12 $10$、$32$；13 $2$、$-2$；14 ②；15 $\omega=1$、值域 $[0,\frac32]$；16 $\arccos\frac{\sqrt3}{3}$；17 $a=0,c=2$，$b>0$ 增 $\mathbf R$，$b<0$ 增 $(-\infty,-\sqrt{-b}),(\sqrt{-b},\infty)$、减 $(-\sqrt{-b},\sqrt{-b})$；18 $\frac1{40}$、$\frac9{10}$；19 $|AB|=2\sqrt2$、面积 $2$，$y=x-1$；20 $\lambda=3$、$a_1=1$（同题版本 $a_3=-3$），不可能为等差，$\lambda\in\bigcup_{k\geqslant1}(4k^2-2k,4k^2+2k)$。盲解代理未读主稿独立完成全卷，20 题结论一致。
+- 固定源缺陷（照录并登记）：Q14 末尾混入无递推定义的植树题文字（ISSUE-1474，两个坐标空无法作答，条件序号答 ②）；Q20(1) 印作求 $a_1$（已给定），公开同题版本为求 $a_3$（ISSUE-1475）。
+- 图形：Q8 正方体与四选项图象、Q13 折线与坐标网格、Q16 三棱锥，共 3 幅 TikZ 矢量图；Q8 选项图整体下移避免与正方体标注相撞，Q13 的 A/B/C 标注已避让坐标轴。
+- 生成链：`register-papers`（revision 9897）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9898）→ `build --formal`（attempt `9a41ef50`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 4/22/6/16 页（共 48 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 48 页八类检查全 pass，0 豁免；批次 `closed_with_blockers`、卷 `blocked`。全量门禁：`validate-receipts --all --require-final` **OK：535 卷**；`provenance check-all` **OK：535 卷**；`generate_projects --all --check` **535 套一致**。
+- 下一步：取得 Q14、Q20(1) 的同版官方勘误；`source-manifest.json` 仍有 242 个来源未绑定 `paper_id`。
+
 ### 2007 湖南卷文科：phase6-b41 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
 
 - 对象：`gk-2007-hunan-arts`，21 题（选择 1–10、填空 11–16、解答 17–21）；固定来源 `src-65d03ae2ea8d49e31abcf96e49caaad28a51110d9771abac5da81b26d5f49cba`，上游 `普通高考/2007/2007湖南文.pdf`，SHA-256 `8e889ae321ffa864b24c505b40e7e96956b301487f5a106264b7fcd9f943e068`，512146 字节，2 页 A3 横向，印面页码 381、382，页眉「2007 普通高等学校招生考试（湖南卷文）」。

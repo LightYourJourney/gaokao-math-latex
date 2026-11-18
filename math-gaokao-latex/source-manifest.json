@@ -3196,6 +3196,14 @@
         "gk-2007-hunan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b42",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-beijing-arts"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -3205,7 +3213,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7393f8d6-2644-49a8-a851-b68141f2ccbc",
+  "last_transaction_id": "d5960837-a56f-4687-856d-480e82debea0",
   "papers": [
     {
       "blocked_from": null,
@@ -38771,9 +38779,77 @@
       "title": "2007 年·普通高等学校招生考试·湖南卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_北京卷_文科/figures/f2008_beijing_arts_q08_cube_options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_北京卷_文科/figures/f2008_beijing_arts_q13_polyline.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_北京卷_文科/figures/f2008_beijing_arts_q16_tetrahedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_beijing_arts",
+        "id": "gk-2008-beijing-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 427、428；PDF 只有题面、无答案页，20 题答案由本库独立推导（非官方）。固定源两处缺陷：第 14 题末尾混入无递推定义的植树题文字；第 20 题第 (1) 问印作求 a1（已给定），公开同题版本为求 a3。第 8 题正方体与四选项图、第 13 题折线图、第 16 题三棱锥由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文科"
+      },
+      "issue_ids": [
+        "ISSUE-1474",
+        "ISSUE-1475"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-beijing-arts",
+      "production_state": "blocked",
+      "project_dir": "2008_北京卷_文科",
+      "question_count": 20,
+      "resume_action": "取得同版官方勘误或更清晰原页，确认第 14 题是否应删除混入的植树题文字；确认后按官方字面重录该题并重跑 provenance 与逐页复核。在此之前照录固定源，只回答可判定的条件序号。",
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_北京文_含解析.md",
+        "questions": "2008/2008_数学真题_北京文_试题.md",
+        "solution_body": "2008/2008_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-a24ac8b08aa9604b1cc0ea37ab616d01d66aedaea62913dfa7b4b124fcdb8df4"
+      ],
+      "title": "2008 年·普通高等学校招生考试·北京卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 9896,
+  "revision": 9901,
   "schema_version": 1,
   "sources": [
     {
@@ -47674,8 +47750,8 @@
       "exam_type": "regular",
       "git_blob_oid": "dc77eae0ac56187b6f3ed422dc87237be64f0362",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008北京文.pdf",
       "regions": [],
       "source_id": "src-a24ac8b08aa9604b1cc0ea37ab616d01d66aedaea62913dfa7b4b124fcdb8df4",
