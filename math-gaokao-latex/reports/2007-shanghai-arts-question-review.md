@@ -1,8 +1,8 @@
 # 2007 上海文科候选卷：独立题面复核
 
-- 日期：2026-11-03；工作树 `仓库根`，分支 `feat/gaokao-phase0`。
+- 日期：2026-11-03；工作树 `仓库根`，工作分支。
 - 固定来源 PDF SHA-256：`1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212`。
-- 复核对象：转录阶段提交 `cf1608b8` 的题面，复核时 SHA-256 为 `de2d20276d5df99c3c170cd4ef74bf3cd9af7b8249338da5401b9b139808944b`。复核后只更新 frontmatter 状态；当前题面 SHA-256 为 `caf07d9df666be9e439471d623ac395214a9fdd5e37eea876970e1487ce9c17e`。
+- 复核对象：转录阶段提交 `f97ed362` 的题面，复核时 SHA-256 为 `de2d20276d5df99c3c170cd4ef74bf3cd9af7b8249338da5401b9b139808944b`。复核后只更新 frontmatter 状态；当前题面 SHA-256 为 `caf07d9df666be9e439471d623ac395214a9fdd5e37eea876970e1487ce9c17e`。
 - 独立复核者：`/root/review_2007_shanghai_arts_transcription`（gpt-6-luna/high），未参与转录，只查看固定 PDF 与规范题面；未读取答案或解析，未编辑文件。
 
 ## 逐题结果

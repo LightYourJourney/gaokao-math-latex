@@ -2,7 +2,6 @@
 
 **目标：** 将 2022 年全国甲、乙卷文理科共四套数学真题逐页转录、独立解答与盲核，生成四版本 LaTeX 并完成构建、视觉复核和来源登记。证据不足处留在问题总账并阻断完成。
 
-**依据：** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md`、仓库根 `CLAUDE.md`、当前 `source-manifest.json` revision 2784。
 
 ## 固定边界
 

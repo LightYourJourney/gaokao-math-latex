@@ -18,4 +18,4 @@
 
 六份报告同步了此前 phase1-b76 已提交但尚未反映的福建文科收口：397卷、249批；既有42个无效/过期门禁与1个视觉失败均保留，ownership 从历史 `validated` 同步为已提交状态。并在生成模板和项目 README 中登记工作规范入口。
 
-部署阶段的当时计划是接收2006福建理科固定来源；该卷随后已完成（当前 manifest 中 `gk-2006-regular-fujian-science` 为 `complete`，分支已有 finalize 提交 `875428ef`），不再作为待办。当前下一项应按现行 manifest、`PROGRESS.md` 和上游来源核查重新选择。本报告保留为部署阶段记录，不代表长期语料库完成。
+部署阶段的当时计划是接收2006福建理科固定来源；该卷随后已完成（当前 manifest 中 `gk-2006-regular-fujian-science` 为 `complete`，分支已有 finalize 提交 `c8469e76`），不再作为待办。当前下一项应按现行 manifest、`PROGRESS.md` 和上游来源核查重新选择。本报告保留为部署阶段记录，不代表长期语料库完成。

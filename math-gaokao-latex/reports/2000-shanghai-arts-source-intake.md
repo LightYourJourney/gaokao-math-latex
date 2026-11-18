@@ -1,6 +1,6 @@
 # 2000 上海文科候选卷：固定来源接收
 
-- 日期：2026-11-03；工作树 `仓库根`，分支 `feat/gaokao-phase0`。
+- 日期：2026-11-03；工作树 `仓库根`，工作分支。
 - 固定 source `src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5`，路径 `普通高考/2000/2000上海文.pdf`；清单 revision 6066 中状态为 `ready`，当前 `paper_id=null`、`paper_relation=null`、`track=null`。
 - 来源库 `https://github.com/deekur/gaokaomath` 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。现场 PDF SHA-256 `35e5d6f6bf052fcd9a2b91a1aa4215766fd4121425cfec7a62cfc4cdc7ab02a1`、Git blob `91ece8675e9cd47367f547bd9b0b6b4979b77d0e`、597723 bytes、2 页，与清单绑定一致；manifest 标记 `git_oid_verified=true`、`pdf_check=passed`。
 - 忽略目录 `.work/ocr-local/sources/2000-shanghai-arts.pdf` 保存固定副本；两页 180 DPI 渲染存于 `.work/ocr-local/rendered/2000-shanghai-arts-180dpi/`。分析 JSON 存于 `.work/ocr-local/logs/2000-shanghai-arts-analyze-pdf.json`。

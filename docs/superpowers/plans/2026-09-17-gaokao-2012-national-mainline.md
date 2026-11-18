@@ -8,7 +8,6 @@
 
 **Tech Stack:** Markdown、Python 3 工具链、XeLaTeX、TikZ/PGFPlots、Poppler、Git。
 
-**Spec:** 总体目标、仓库 AGENTS.md/CLAUDE.md、math-gaokao-latex/README.md 与当前 source-manifest.json。
 
 ## Global Constraints
 

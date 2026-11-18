@@ -2,7 +2,7 @@
 
 - 日期：2026-11-03；按 [`docs/OCR_WORKFLOW.md`](../docs/OCR_WORKFLOW.md) 执行。
 - 固定 source：`src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`；PDF SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73`。来源仓库固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`，路径 `普通高考/2002/2002北京理.pdf`。
-- 主工作树源副本：`.work/ocr-local/sources/2002-beijing-science.pdf`；Poppler 原页渲染及局部图保存在忽略目录 `.work/ocr-local/rendered/2002-beijing-science/`。副本 SHA 与来源记录一致；原件为 2 页 A3 横向，印刷页 100–101。
+Poppler 原页渲染及局部图保存在忽略目录 `.work/ocr-local/rendered/2002-beijing-science/`。副本 SHA 与来源记录一致；原件为 2 页 A3 横向，印刷页 100–101。
 - 转录范围：Q1–Q22，选择题 Q1–Q12、填空题 Q13–Q16、解答题 Q17–Q22。逐页查看固定 PDF 渲染图，以 PDF 原页裁决文字层和分段草稿；未调用 OCR，也未根据答案或常见题型补字、改题。
 
 ## 转录及校核

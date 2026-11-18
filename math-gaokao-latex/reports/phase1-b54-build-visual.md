@@ -4,9 +4,9 @@
 
 ## 实际构建与校样修复
 
-来源、20题三角色provenance与四版生成阶段已提交2e927490。第一轮正式attempt `b4ad5c68-b39d-44d8-aca2-5f818414c61c`，四版4/18/6/13页，共41页，日志无错误/缺字/未解析引用/Overfull/Underfull。日志通过没有代替视觉验收：主代理实际查看解析第13–18页，发现Q20第18页只余两个答案框；Q18的C标签被抛物线延长线穿过，A标签与y轴过近。又实际渲染第14页220dpi局部，确认两个标签问题。首轮build、pending视觉工作项、6页实际观察（其余页未声称检查）及放大图保存在`.work/phase1-b54/review-history/b4ad5c68-b39d-44d8-aca2-5f818414c61c/`。
+来源、20题三角色provenance与四版生成阶段已提交c218416c。第一轮正式attempt `b4ad5c68-b39d-44d8-aca2-5f818414c61c`，四版4/18/6/13页，共41页，日志无错误/缺字/未解析引用/Overfull/Underfull。日志通过没有代替视觉验收：主代理实际查看解析第13–18页，发现Q20第18页只余两个答案框；Q18的C标签被抛物线延长线穿过，A标签与y轴过近。又实际渲染第14页220dpi局部，确认两个标签问题。首轮build、pending视觉工作项、6页实际观察（其余页未声称检查）及放大图保存在`.work/phase1-b54/review-history/b4ad5c68-b39d-44d8-aca2-5f818414c61c/`。
 
-修复仅涉及：Q18正式项目图稿的A节点在above left基础上xshift=5pt、C节点改below left；全部坐标、曲线、三角形及中线连接不变。当前图稿SHA `56ae647fe6ed07e7255515710d1970977d63c51624359d72ff98e39855cd246c`；旧年度图稿未覆盖，其余卷不受影响。Q20保留完整必要/充分性，以前两列通项直接求行公差，并把奇因子到正整数索引的双向构造写成连续段落，减少显示公式造成的分页占用。数学步骤未删，未改变题面或最终答案，全部逐题provenance及其哈希与2e927490相同。
+修复仅涉及：Q18正式项目图稿的A节点在above left基础上xshift=5pt、C节点改below left；全部坐标、曲线、三角形及中线连接不变。当前图稿SHA `56ae647fe6ed07e7255515710d1970977d63c51624359d72ff98e39855cd246c`；旧年度图稿未覆盖，其余卷不受影响。Q20保留完整必要/充分性，以前两列通项直接求行公差，并把奇因子到正整数索引的双向构造写成连续段落，减少显示公式造成的分页占用。数学步骤未删，未改变题面或最终答案，全部逐题provenance及其哈希与c218416c相同。
 
 第二轮即最终attempt `27c3e3c9-d9e7-4778-877a-6a37b5dea0f6`，构建输入manifest revision5325、构建后revision5326。四版日志errors/missing_characters/undefined_references/Overfull/Underfull均0，警告豁免0；没有公共样式、字体、页边距或生成器改动。pdfinfo现场确认四版均595.28×841.89pt A4，实际PDF SHA与build/review回执一致。
 
@@ -29,7 +29,7 @@
 
 ## 独立复核、正式状态与验证
 
-只读提交前审阅者`/root/review_2004_science_closeout`检查当前diff及2e927490主要登记/答案拆分，独立核算75个输入/PDF/PNG SHA并核对attempt、依赖树、生成输入树、投影和工具链绑定；确认Q20双向证明完整、Q18仅标签锚点改变，未发现实质问题。其不冒充重新实看全部页面，也不代替正式finalize。
+只读提交前审阅者`/root/review_2004_science_closeout`检查当前diff及c218416c主要登记/答案拆分，独立核算75个输入/PDF/PNG SHA并核对attempt、依赖树、生成输入树、投影和工具链绑定；确认Q20双向证明完整、Q18仅标签锚点改变，未发现实质问题。其不冒充重新实看全部页面，也不代替正式finalize。
 
 `finalize-batch`实际返回FINALIZED，当前manifest revision5327，batch closed、paper complete，build.status=succeeded、review.status=passed，四版edition.result均pass。这里的complete表示本库固定来源题面、独立数学答案和四版构建/视觉门禁已闭合；固定PDF依然是排印副本，出版物、出版者、版次、来源链及官方身份未认证，official_answer=null。没有把本库推导认证为官方答案。
 

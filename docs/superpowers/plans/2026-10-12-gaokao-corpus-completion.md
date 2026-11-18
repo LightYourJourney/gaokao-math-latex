@@ -12,8 +12,8 @@
 
 ## Global Constraints
 
-- 只在 `仓库根` 的 `feat/gaokao-phase0` 工作；不改主检出、不 push。
-- 不编辑 `.remember/`、`.obsidian/`；共享样式、公共工具和 manifest 仅主会话写入。
+- 只在 `仓库根` 的工作分支上工作；
+共享样式、公共工具和 manifest 仅主会话写入。
 - 每批正式构建四版，逐页视觉检查；候选页与警告页高分辨率复核，警告豁免必须逐项匹配当前构建日志。
 - 只清理本批 `build/` 中非 PDF 编译中间物，保留 PDF；清理本批 `.work/` 与本次临时 PNG。
 - 通过仓库事务/CLI 更新 derived state 和报告；不手工改写 production state、batch status 或 receipt 字段来绕过门禁。

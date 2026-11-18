@@ -4,7 +4,6 @@
 
 **State at start（2026-10-23）:** 两卷在 manifest 中均为未绑定的 `ready` 来源；1992 年无任何已登记试卷；上游为 XeTeX 重排件。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md`、`CLAUDE.md`、交接文档。
 
 ## Fixed sources
 

@@ -2,8 +2,8 @@
 
 - 日期：2026-11-03。
 - 固定题面：`2005/2005_数学真题_上海理_题面转录草稿.md`，SHA-256 `6a83dae6a2b0979126bc47f2a43618c5801af8e0b09c066e48000b04d1c6e609`；固定来源 PDF SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`。
-- 复核对象：提交 `c20bee9c` 的答案要点及解析正文初稿；当时答案文件 SHA-256 `b8614bc2574afe564a6c8ff82a7d9f9abd638b208c7835afdc68a857ae593044`，解析文件 SHA-256 `e65328a14d3c1c470fd0e561d62932ae3a467be9bcee9a5e08f9a01665a3b24c`。
-- 复核者为三个只读分段任务：`solve_2005_sh_science_q1_q11`、`solve_2005_sh_science_q12_q18`、`solve_2005_sh_science_q19_q22`（gpt-6-luna/high）。各自先只读题面独立推导，再读取 `git show c20bee9c` 中的两个答案文件作比较；均未改文件、运行 OCR 或联网。
+- 复核对象：提交 `f07f9514` 的答案要点及解析正文初稿；当时答案文件 SHA-256 `b8614bc2574afe564a6c8ff82a7d9f9abd638b208c7835afdc68a857ae593044`，解析文件 SHA-256 `e65328a14d3c1c470fd0e561d62932ae3a467be9bcee9a5e08f9a01665a3b24c`。
+- 复核者为三个只读分段任务：`solve_2005_sh_science_q1_q11`、`solve_2005_sh_science_q12_q18`、`solve_2005_sh_science_q19_q22`（gpt-6-luna/high）。各自先只读题面独立推导，再读取 `git show f07f9514` 中的两个答案文件作比较；均未改文件、运行 OCR 或联网。
 
 ## 复核结果
 

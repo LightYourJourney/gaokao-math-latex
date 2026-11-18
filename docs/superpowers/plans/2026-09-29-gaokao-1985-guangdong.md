@@ -8,7 +8,7 @@
 
 **Tech Stack:** 仓库现有 Python 3 清单/生成/构建工具、XeLaTeX、latexmk、ctex、TikZ/PGFPlots、Git。
 
-**Spec:** 用户提供的“高考数学真题 LaTeX 题库”项目目标；仓库 `AGENTS.md`、`CLAUDE.md` 与题库现行 manifest/schema/生成器。
+**Spec:** 用户提供的“高考数学真题 LaTeX 题库”项目目标；
 
 ## Global Constraints
 
@@ -19,7 +19,7 @@
 - 试题、答案要点、解析正文是唯一人工维护内容；合并 Markdown、LaTeX 源、版本入口、清单投影和回执均按仓库工具生成。
 - 文史类与理工农医类不得因题目相似而互相补题；答案独立推导并交由不同角色盲核，未解决项必须保持 U/blocked。
 - 四个版本均正式编译并完成视觉复核；构建目录清理编译中间产物，只保留 PDF，源 `.tex` 保留。
-- 不修改主检出 中别的会话数据；所有批次草稿仅写忽略的 `.work/phase2-b09/`。
+所有批次草稿仅写忽略的 `.work/phase2-b09/`。
 
 ## 固定来源与映射
 
@@ -84,4 +84,4 @@ The official source restarts visible question numbers across named sections/volu
 - `phase2-b09` 仅绑定上表两个 source/paper；来源指纹与当前上游文件一致。
 - 两卷题面逐题有 PDF 页/纸面页映射；答案、解析由独立证据支持，模糊内容明确 U/问题化。
 - 两卷各四版均有当前构建和视觉回执；生成器、manifest CSV、provenance、批次与全局报告检查通过。
-- 不向 Git 加入原卷 PDF、PNG/JPEG、页面截图或编译中间件；主检出和其他批次工作不受影响。
+- 不向 Git 加入原卷 PDF、PNG/JPEG、页面截图或编译中间件；

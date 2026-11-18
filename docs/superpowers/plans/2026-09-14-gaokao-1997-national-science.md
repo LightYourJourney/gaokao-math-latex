@@ -8,7 +8,6 @@
 
 **Tech Stack:** Python 3 标准库工具链、XeLaTeX、ctex、TikZ/PGFPlots、Git。
 
-**Spec:** 用户关于继续高考数学转录、清除编译中间产物、仅保留 PDF 与 LaTeX 源文件的要求，以及仓库 `CLAUDE.md` 的来源、复核、图片和提交不变量。
 
 ## Global Constraints
 
@@ -18,7 +17,7 @@
 - 任何图形均为 `.tex` 矢量源；新工程和 `build/` 中不得出现 PNG/JPEG/SVG 或 `aux/log/fls/out/toc/synctex.gz/fdb_latexmk/bcf/run.xml/nav/snm/vrb/idx/ilg/ind/lof/lot/pyc/pyo/swp/swo/bak`。
 - `math-gaokao-latex/` 的共享状态只能通过现有工具更新；不手改生成的 `questions.tex`、`answers.tex`、`answers_short.tex`、版本包装文件、`index.json` 或 `manifest.csv`。
 - 构建目录最终只保留四个 PDF；构建、来源、复核门禁必须在提交前从干净的最新输入重跑。
-- 不修改主工作树，不 push；每个可独立验收的阶段尽早提交。
+- 不 push；每个可独立验收的阶段尽早提交。
 
 ## File Map
 

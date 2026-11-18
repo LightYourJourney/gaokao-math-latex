@@ -1,6 +1,6 @@
 # 2003 上海理科普通卷：固定来源接收
 
-- 日期：2026-11-04；canonical worktree `仓库根`，分支 `feat/gaokao-phase0`。
+- 日期：2026-11-04；canonical worktree `仓库根`，工作分支。
 - 候选来源 `src-1c1b7702523f8dab3f1fb274ae6d8c631a291090d33ddb6e3d9f3d8de897a1d0`，manifest revision 6132 中为 `ready`、`paper_id=null`、`paper_relation=null`、`track=null`。上游相对路径 `普通高考/2003/2003上海理.pdf`。
 - 固定上游 checkout `gaokaomath-src`，HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。现场文件 SHA-256 `88b72fea05d331215504bb89257e375d07c18ba21e830cf9e6288461e88ccf8d`、Git blob `d8679fb9dee874be062e92b436dbabbbcb41eb85`、大小 594899 bytes，与 manifest 一致；`pdfinfo` 页数为2，A3横向，页面尺寸1190.55 × 841.89 pt。
 

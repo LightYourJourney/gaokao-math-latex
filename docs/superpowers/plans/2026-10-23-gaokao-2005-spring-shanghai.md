@@ -4,7 +4,6 @@
 
 **State at takeover（2026-10-23）:** 题面/答案/解析、四幅 TikZ 图、四版本 tex 均已完成（Codex 前期工作）；卷登记为 `planned`、`source_ids=[]`、无 provenance、无正式构建与审查回执。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md`、`CLAUDE.md`、`docs/superpowers/plans/2026-10-22-gaokao-latex-handoff.md`。
 
 ## Fixed source
 

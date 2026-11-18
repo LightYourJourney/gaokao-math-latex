@@ -6,7 +6,7 @@
 
 **Architecture:** 同 b15–b23、phase3-b00–b05 批次：固定来源 ID 是身份根；转录与盲解角色分离；规范三件套 + TikZ 图源由主会话整合；不提交扫描件与构建中间件。**与 2015 上海卷同系版式**：A3 横向三栏书刊合排、LaTeX（CM 系）重排产物（14 字体全嵌入、零位图、文本层完整）——转录/图源精度可到内容流级。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库 `CLAUDE.md`。建模先例：`2015_上海卷_理科`（phase3-b05）。
+建模先例：`2015_上海卷_理科`（phase3-b05）。
 
 ## Global Constraints
 

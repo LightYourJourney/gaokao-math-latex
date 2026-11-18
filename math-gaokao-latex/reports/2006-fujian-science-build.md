@@ -1,7 +1,7 @@
 # 2006 福建理科候选卷：四版正式构建阶段
 
 - 日期与批次：2026-11-03，phase1-b77。
-- 工作树：feat/gaokao-phase0；paper：gk-2006-regular-fujian-science。
+- 工作树：工作分支；paper：gk-2006-regular-fujian-science。
 - 构建 attempt：fc90f3fa-ea1c-4f4e-a821-15153cfd3503。
 - 构建输入 manifest revision：5976；构建结果事务 revision：5978。
 - 正式机器回执：2006_福建卷_理科/receipts/build.json。

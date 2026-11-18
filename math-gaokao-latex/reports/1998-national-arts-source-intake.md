@@ -1,6 +1,6 @@
 # 1998 全国文科候选卷：固定来源接收与核验报告
 
-- 日期：2026-11-06；工作树 `仓库根`，分支 `feat/gaokao-phase0`。
+- 日期：2026-11-06；工作树 `仓库根`，工作分支。
 - 固定 source `src-19546ffe511fd8607988e9153f3b24ef24704bd592b19f95cfcde2844ab83cc5`，路径 `普通高考/1998/1998全国文.pdf`；清单 revision 6368 中状态为 `ready`，当前 `paper_id=null`、`paper_relation=null`、`track=null`。
 - 来源库 `https://github.com/deekur/gaokaomath` 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。现场 PDF SHA-256 `dbf7bd3f4e11621d7d31e38ed304f3617f20ecb070e96ac0ec0fbc5a17b9748b`、Git blob `187701f7207338551455492be912749f669207e5`、512,937 bytes、1 页，与清单绑定完全一致；manifest 标记 `git_oid_verified=true`、`pdf_check=passed`。
 - 忽略目录 `.work/1998-arts/` 保存 150 DPI 整页渲染 `page-1.png`（2481×1754 像素）与各题切片。

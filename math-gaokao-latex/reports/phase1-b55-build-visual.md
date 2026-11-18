@@ -2,7 +2,7 @@
 
 日期：2026-10-29
 
-本批为`gk-2007-spring-shanghai`，21题150分120分钟，7幅源图实现为6份TikZ，1张原生LaTeX表格。题面、答案、解析三源分开维护，含解析稿确定性派生，四入口共享questions/answers/answers_short。源文归档已提交a7247e80，三角色/来源与生成记录见[本批报告](phase1-b55-provenance-generation.md)。本卷完成不代表1952—2026全集完成。
+本批为`gk-2007-spring-shanghai`，21题150分120分钟，7幅源图实现为6份TikZ，1张原生LaTeX表格。题面、答案、解析三源分开维护，含解析稿确定性派生，四入口共享questions/answers/answers_short。源文归档已提交0c0767d3，三角色/来源与生成记录见[本批报告](phase1-b55-provenance-generation.md)。本卷完成不代表1952—2026全集完成。
 
 ## 当前构建与视觉证据
 
@@ -29,6 +29,6 @@ Q19保留四块相同砖旋转、公共边接点和中央恰成四边形共同�
 
 ## 接手核验与回归
 
-Claude Code最新提交3fa36a45等新增phase4-b37至b40四卷，主代理已分别运行check-batch，均FINALIZED/problems=[]，保留其全部提交。接手时manifest5406、349卷208批；本批关闭后为276 complete、70 blocked、3 compiled，全集仍有未完成工作。
+Claude Code最新提交2151bd7b等新增phase4-b37至b40四卷，主代理已分别运行check-batch，均FINALIZED/problems=[]，保留其全部提交。接手时manifest5406、349卷208批；本批关闭后为276 complete、70 blocked、3 compiled，全集仍有未完成工作。
 
 以包含Claude最新代码和四卷的当前工作树完整运行：`Ran 1747 tests in 1426.797s` / `OK (skipped=13)`，日志`.work/phase1-b55/verification/after-claude-full-tests.log`。三个生成器、provenance、solution_sources及最终回执当前性已现场通过；全量报告/CSV及暂存差异在提交前复核。此前1724项结果仅作历史记录，不冒充接手后的测试。

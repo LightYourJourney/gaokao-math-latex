@@ -1,6 +1,6 @@
 # 2007 上海文科候选卷：paper/batch 登记与问题关联
 
-- 日期：2026-11-03；工作树 `仓库根`，分支 `feat/gaokao-phase0`。
+- 日期：2026-11-03；工作树 `仓库根`，工作分支。
 - 固定 source：`src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789`，PDF SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212`。
 - paper：`gk-2007-regular-shanghai-arts`；batch：`phase1-b83`；内部项目目录：`2007_上海卷_文科`。
 

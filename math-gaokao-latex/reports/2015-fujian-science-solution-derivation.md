@@ -1,6 +1,6 @@
 # 2015 福建理科候选卷：Q1–Q23 解析正文初稿
 
-- 日期：2026-11-03；工作树 仓库根，分支 feat/gaokao-phase0。
+- 日期：2026-11-03；工作树 仓库根，工作分支。
 - 固定来源：source src-c47985c709ff8ae42e6e192879d604223c58a53c4358056d28f78ad5a9736e3c；PDF SHA-256 a33455d27abdf2c4b344a5b90395bd71269f6fbefdef350375aba074e47ef700，Git blob 421cface308a5e99649ed8c316ae0b82322e0a9c。本阶段从上游固定 commit 34c13a6cf632c0b69c95f89b9b923bbc4a08924d 重新取回忽略缓存中缺失的 PDF；SHA-256、Git blob、两页 A3 页面尺寸与原来源报告记录一致。来源副本、发布者、版次、复制链和官方身份仍未认证。
 - 新增解析正文 2015/2015_数学真题_福建理_解析正文草稿.md，SHA-256 0f44aa12b8d313949da3bcf6e12521a09cb6e518d2119ea0b9ec170de67134f6。front matter 为 solution_status=draft-independent-solutions-pending-cross-check、paper_id=null、official_answer=null。
 

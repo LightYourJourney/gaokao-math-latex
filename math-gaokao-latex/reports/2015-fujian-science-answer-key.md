@@ -1,6 +1,6 @@
 # 2015 福建理科候选卷：答案要点独立推导
 
-- 日期：2026-11-03；工作树 仓库根，分支 feat/gaokao-phase0。
+- 日期：2026-11-03；工作树 仓库根，工作分支。
 - 固定来源 source src-c47985c709ff8ae42e6e192879d604223c58a53c4358056d28f78ad5a9736e3c；PDF SHA-256 a33455d27abdf2c4b344a5b90395bd71269f6fbefdef350375aba074e47ef700。
 - 已复核题面：Q1–Q23，固定 PDF 无答案页。所有答案是本库独立推导，official_answer=null。
 

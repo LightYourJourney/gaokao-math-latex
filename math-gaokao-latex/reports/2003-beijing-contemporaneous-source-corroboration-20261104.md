@@ -1,7 +1,7 @@
 # 2003 北京普通文理卷同期来源交叉核查
 
 - 核查日期：2026-11-04。
-- worktree：`仓库根`；分支：`feat/gaokao-phase0`。
+- worktree：`仓库根`；分支：工作分支。
 - 固定卷：文科 `gk-2003-regular-beijing-arts`，source SHA-256 `7fc0fd289fc486a0ae1c16a9ab5b4f0561830897df6e8897c50666f03d511913`；理科 `gk-2003-regular-beijing-science`，source SHA-256 `d0081500bd56d03199ddcf232fe8e870f2ecd7e9c41ba849417af9af79fbb702`。
 
 ## 找到的同期材料

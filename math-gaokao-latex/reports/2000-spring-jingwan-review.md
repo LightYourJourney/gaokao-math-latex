@@ -1,6 +1,6 @@
 # 2000 春季京皖文理卷：接续复核记录
 
-日期：2026-10-23。工作位置：`phase0-wt`，分支 `feat/gaokao-phase0`。
+日期：2026-10-23。工作位置：`phase0-wt`，工作分支。
 本记录覆盖批次 `phase4-b20` 的两卷48题与八版98页，不代表1952—2026全项目完成。
 
 ## 来源和身份边界
@@ -50,4 +50,4 @@
 
 `review_receipts.py finalize-batch` 已返回 `FINALIZED`，manifest revision4740，批次closed；`check-batch`亦为FINALIZED。四版构建与生成一致性检查通过。针对来源定位与答案图隔离的2项新增回归检查通过。最终完整测试1755项通过（13跳过，451.183秒）；初跑旧来源未绑定断言已更新为canonical双向关系校验。CSV775行当前，全量报告投影一致，最终回执验证succeeded=2，pending/failed/invalid/missing/stale均0。独立终审未发现新增阻断问题。
 
-PDF及PNG保留于被忽略的build/与临时目录，不入库；未修改公共样式、转换器、`.obsidian/`、`.remember/`，未提交或推送。
+PDF及PNG保留于被忽略的build/与临时目录，不入库；

@@ -8,7 +8,6 @@
 
 **Tech Stack:** Markdown、Python 3 标准库工具、XeLaTeX、TikZ/PGFPlots、Git、Poppler（`pdfinfo` / `pdftotext` / `pdftoppm`）。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库根目录 `CLAUDE.md`。
 
 ## Global Constraints
 
@@ -16,9 +15,9 @@
 - 上游固定 commit：`34c13a6cf632c0b69c95f89b9b923bbc4a08924d`；`source_id`、SHA-256、blob OID 和路径以本表及当前 `source-manifest.json` 为准。
 - 四份源 PDF 均为两页 A3，页面已确认分别覆盖印刷页码表中所列两页；题目共 20 题/卷的预检结果必须在转录时逐题复核，不得为匹配预期补题、改题或忽略非题目说明。
 - PDF 未附答案；答案由独立求解与不同角色盲核支持等级 D，无法收敛的题标 U 并列入问题总账，不得伪称官方答案。
-- 草稿只写隔离工作树中的 `math-gaokao-latex/.work/phase2-b08/<paper_id>/`。代理开始写入前必须核对 `git rev-parse --show-toplevel` 指向 `仓库根`；严禁将草稿写进主检出 `主工作树/.work/`。
+- 草稿只写隔离工作树中的 `math-gaokao-latex/.work/phase2-b08/<paper_id>/`。代理开始写入前必须核对 `git rev-parse --show-toplevel` 指向 `仓库根`；
 - 题面必须逐页视觉对照 PDF。OCR/文本层只用于初稿；题号、选择顺序、文理差异、限定词、计分说明、原卷编号和印刷页码忠实保留。
-- 图稿只用项目 `figures/*.tex` 中的 TikZ/PGFPlots 源；不得将 PDF、页面裁图、PNG/JPEG、截图或 OCR 中间图加入 Git。不要删除主检出或其他会话遗留的 `.work/`、`/tmp` 文件；只清理本计划在当前工作树/独立临时目录中新建且已核实归属的渲染物。
+- 图稿只用项目 `figures/*.tex` 中的 TikZ/PGFPlots 源；不得将 PDF、页面裁图、PNG/JPEG、截图或 OCR 中间图加入 Git。只清理本计划在当前工作树/独立临时目录中新建且已核实归属的渲染物。
 - 四卷各构建试题、解析、简答、印刷四版；忽略的 `build/` 每卷只留四份最终 PDF，编译中间件与本批渲染图清除。
 - 不暂存或提交无关更改，不触碰上游目录中的未跟踪文件；本批不 push。
 
@@ -144,5 +143,5 @@
 - Current-PDF visual review covered all 214 pages and 1,712 page checks. Fixed the prior Tianjin Science print-edition page 4 answer-leak finding by removing internal `ISSUE-*` identifiers from reader-facing prose while retaining both U outcomes, their source-based ambiguity explanations, and issue-ledger links. The corrected page was re-rendered and rechecked; all four review receipts now pass. Historical `ISSUE-0992` remains resolved in the ledger.
 - Finalization at manifest revision 3720 reports `closed_with_blockers`, correctly retaining `ISSUE-0962`–`ISSUE-0965` for Tianjin Science Q17(3) and Q19(2). These source ambiguities remain U; no answers were invented or promoted.
 - Source manifest, issue ledger, project generation, solution-source consistency, provenance, current/final build receipts, batch review and global report checks pass. Full suite: 862 tests run, 13 baseline skips, 1 unrelated live-repository cache test fails because 335 other papers' cached `complete` states differ from their derived `editions_generated` states; this batch did not alter those papers.
-- Committed the reader-facing note correction as `f3c00676` and refreshed formal build receipts as `3e4f3d30`. Final review receipts, manifest/report projections, and this plan completion record are to be committed separately after exact-scope staging. No push.
+- Committed the reader-facing note correction as `3034baea` and refreshed formal build receipts as `2affef37`. Final review receipts, manifest/report projections, and this plan completion record are to be committed separately after exact-scope staging. No push.
 - Build cleanup retains exactly four final PDFs in each ignored `build/` directory; rendered PNGs and TeX intermediates are removed after final verification.

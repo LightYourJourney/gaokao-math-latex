@@ -1,6 +1,6 @@
 # 2000 上海文科候选卷：规范事实层、登记与确定性装配
 
-- 日期：2026-11-03；工作树 `仓库根`，分支 `feat/gaokao-phase0`。
+- 日期：2026-11-03；工作树 `仓库根`，工作分支。
 - 固定题面 source `src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5`，PDF SHA-256 `35e5d6f6bf052fcd9a2b91a1aa4215766fd4121425cfec7a62cfc4cdc7ab02a1`，来源路径 `普通高考/2000/2000上海文.pdf`。来源固定字节与本库 paper 的绑定只作内部 canonical 输入；发布者、出版物、版次、复制链及官方身份未核。固定 PDF 无答案页，`official_answer=null`。
 - 本阶段重验本地 OCR 部署：`deploy_local_ocr.py --verify-only` 与 `local_ocr.py doctor` 均通过。Xiaomi、Paddle、MinerU 安装均为 verified，模型树 SHA-256 分别为 `a56facd25f7bfcc85db843f7dfca353ff3f0c4095974b7638f9ea23f97058210`、`8060c2c8c26bfdb9e84105951390c5792bdf2208b70749479d3bb9fd30ff6c5e`、`9c8592fda806b08b4789d83cf3d92bcba06bef5057fc71e29e91c9b7ee3630aa`。本阶段没有调用 OCR 推理；沿用已完成的原页逐题核对及盲核证据。
 

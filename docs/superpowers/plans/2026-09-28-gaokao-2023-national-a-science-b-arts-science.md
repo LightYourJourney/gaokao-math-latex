@@ -8,7 +8,7 @@
 
 **技术栈：** Python 3.9 标准库、Bash 3.2、Git、XeLaTeX/TeX Live、latexmk、Poppler、TikZ/PGFPlots。
 
-**依据：** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md`，尤其第 4、6–10 节；仓库根 `CLAUDE.md`；当前 manifest revision 3243。
+**依据：** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md`，尤其第 4、6–10 节；当前 manifest revision 3243。
 
 ## Global Constraints
 
@@ -80,7 +80,7 @@
 - [x] 对照答案要点与详细解析的 23 题结论；执行来源、manifest、provenance、结构、构建、review 和报告门禁。不可解决项保持 `U`/blocked，按实际状态关闭批次。
 - [x] 更新 `manifest.csv`、问题总账、批次报告及全局报告；清理本批 PDF 以外编译产物与临时渲染；`git diff --check`、审阅精确暂存区并提交本批，不 push。
 
-**结项结果（2026-09-28）：** 12 份正式 PDF 全部通过构建与当前性校验，页数依次为甲理 4/6/23/19、乙文 4/6/21/19、乙理 4/6/22/18（试题/简答/解析/印刷），共 152 页；均为 A4。构建日志无 Overfull/Underfull、缺字或未解析引用。逐页视觉回执覆盖 152 页、每页八项检查全部通过；批次 `phase2-b06` 状态为 `closed`、无问题，finalizer revision 3255。来源/CSV/provenance/结构/生成器/构建/review/全局报告检查通过；完整测试套件 848 项通过、13 项按仓库既有条件跳过。对 12 个入口逐一执行 `latexmk -c -outdir=build <edition>.tex` 后，各 build 目录只保留 4 份 PDF；216 张临时渲染图已移除，没有 PDF、截图、PNG/JPEG 或编译中间件进入 Git。源稿与构建检查点已提交 `3da745ea`；回执、批次报告与本计划将先提交，再按派生 ownership 状态重渲染并单独提交六份全局报告，不 push。
+**结项结果（2026-09-28）：** 12 份正式 PDF 全部通过构建与当前性校验，页数依次为甲理 4/6/23/19、乙文 4/6/21/19、乙理 4/6/22/18（试题/简答/解析/印刷），共 152 页；均为 A4。构建日志无 Overfull/Underfull、缺字或未解析引用。逐页视觉回执覆盖 152 页、每页八项检查全部通过；批次 `phase2-b06` 状态为 `closed`、无问题，finalizer revision 3255。来源/CSV/provenance/结构/生成器/构建/review/全局报告检查通过；完整测试套件 848 项通过、13 项按仓库既有条件跳过。对 12 个入口逐一执行 `latexmk -c -outdir=build <edition>.tex` 后，各 build 目录只保留 4 份 PDF；216 张临时渲染图已移除，没有 PDF、截图、PNG/JPEG 或编译中间件进入 Git。源稿与构建检查点已提交 `97186b86`；回执、批次报告与本计划将先提交，再按派生 ownership 状态重渲染并单独提交六份全局报告，不 push。
 
 ## 验收标准
 

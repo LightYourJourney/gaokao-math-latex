@@ -1,6 +1,6 @@
 # 2026 北京高考数学回忆版：Q1–Q21 题面转录与独立复核
 
-- 日期：2026-11-04；canonical worktree：仓库根；分支：feat/gaokao-phase0；manifest revision：6159。
+- 日期：2026-11-04；canonical worktree：仓库根；分支：工作分支；manifest revision：6159。
 - 固定题面来源：source ID src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee，PDF SHA-256 7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9，Git blob cf49aa3671ff4143e5c665c7bc53b5f08ab38fca。
 - 转录稿：[2026_数学真题_北京回忆版_题面转录草稿.md](../../2026/2026_数学真题_北京回忆版_题面转录草稿.md)。转录分段由两个互不重叠的独立角色完成，主会话随后按固定 PDF 原页核对；转录者没有写入共享文件。
 

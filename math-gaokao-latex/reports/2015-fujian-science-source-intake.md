@@ -1,6 +1,6 @@
 # 2015 福建理科候选卷：固定来源接收与 OCR 路由
 
-- 日期：2026-11-03；工作树 `仓库根`，分支 `feat/gaokao-phase0`；source manifest revision **6074**。
+- 日期：2026-11-03；工作树 `仓库根`，工作分支；source manifest revision **6074**。
 - 固定 source `src-c47985c709ff8ae42e6e192879d604223c58a53c4358056d28f78ad5a9736e3c`，路径 `普通高考/2015/2015福建理.pdf`。manifest 状态为 `ready`、`paper_id=null`、`paper_relation=null`、`track=null`，尚无 paper、batch 或 blocker。
 - 上游登记指向 `deekur/gaokaomath` commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。现场固定 PDF SHA-256 `a33455d27abdf2c4b344a5b90395bd71269f6fbefdef350375aba074e47ef700`，Git blob `421cface308a5e99649ed8c316ae0b82322e0a9c`，大小 517,192 bytes，2 页；与 manifest 完全一致。来源库 `HEAD` 的同路径 blob 也相同。文件名及页内题签相符，仍不能据此认证发布者、版次、复制链或官方身份。
 - 原 PDF 及 200 dpi 页图保存在忽略目录 `.work/ocr-local/`。固定副本为 `.work/ocr-local/sources/2015-fujian-science.pdf`，哈希与上游 PDF 相同；页图 SHA-256：p.1 `50137b90063254632d3bec2b12cd1fccaecb66dff901190d04721eb7c283b6bf`，p.2 `402f17e4266240a61b2ee36e83881746a9ccc1301fdea3447da15e6587645464`。

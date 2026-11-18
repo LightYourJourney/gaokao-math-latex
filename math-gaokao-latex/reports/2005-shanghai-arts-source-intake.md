@@ -1,6 +1,6 @@
 # 2005 上海文科普通卷：固定来源接收
 
-- 日期：2026-11-03；工作树 `仓库根`，分支 `feat/gaokao-phase0`。
+- 日期：2026-11-03；工作树 `仓库根`，工作分支。
 - 固定 source `src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d0288e2d0bdb1638bb8d17846`，路径 `普通高考/2005/2005上海文.pdf`；manifest revision 6100 中状态为 `ready`，当前 `paper_id=null`、`paper_relation=null`、`track=null`。
 - 来源库固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。现场 PDF SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1`、Git blob `d3849e9bf2f21c95b4823be90b24669b74ee1685`、512658 bytes、2 页，与清单一致；manifest 标记 `git_oid_verified=true`、`pdf_check=passed`。
 - 固定副本位于忽略目录 `.work/ocr-local/sources/2005-shanghai-arts.pdf`。PDF 元数据显示两页 A3 横向；原页渲染位于 `.work/ocr-local/2005-shanghai-arts/`。

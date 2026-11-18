@@ -1,7 +1,7 @@
 # 2006 福建理科候选卷：三角色逐题 provenance 阶段
 
 - 日期与批次：2026-11-03，phase1-b77。
-- 工作树：feat/gaokao-phase0；paper：gk-2006-regular-fujian-science。
+- 工作树：工作分支；paper：gk-2006-regular-fujian-science。
 - 正式输出：2006_福建卷_理科/provenance.json（22题）。
 - 固定来源：source ID src-ab0f2729ee4a24495e653b44c14438b4130f8b38b11362bf84251f3595a09d27；PDF SHA-256 50d17546b94af82fb2cee653942752914cd387fe72792d74ffa5f75e7a301d83。
 

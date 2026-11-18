@@ -1,6 +1,6 @@
 # 全库构建报告（高考数学 LaTeX 题库）
 
-- 生成时间：2026-11-16；工作树 `仓库根`，分支 `feat/gaokao-phase0`。
+- 生成时间：2026-11-16；工作树 `仓库根`，工作分支。
 - 依据：`source-manifest.json` revision **8484**；批次 378；报告输出与 manifest 始终成对校验（`report.py check --all`）。
 
 ## 一、总量

@@ -1,6 +1,6 @@
 # 2004 Spring Beijing Arts Intake Registration Plan
 
-> **For agentic workers:** Execute inline in the existing `feat/gaokao-phase0` worktree. This phase ends with a reviewed, phase-scoped commit.
+> **For agentic workers:** Execute inline in the existing worktree. This phase ends with a reviewed, phase-scoped commit.
 
 **Goal:** Register the already transcribed 2004 Spring Beijing arts paper against its fixed local PDF while preserving the unresolved Q20 transcription and source identity limits.
 

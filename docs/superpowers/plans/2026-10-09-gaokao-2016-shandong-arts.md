@@ -6,7 +6,7 @@
 
 **Architecture:** 同 b15–b19 批次：固定来源 ID 是身份根；转录与盲解角色分离；规范三件套 + TikZ 图源由主会话整合；不提交扫描件与构建中间件。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库 `CLAUDE.md`。建模先例：`2016_山东卷_理科`（b19）。
+建模先例：`2016_山东卷_理科`（b19）。
 
 ## Global Constraints
 

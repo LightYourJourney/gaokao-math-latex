@@ -1,7 +1,7 @@
 # 2026 北京回忆版候选卷：四版正式构建与视觉复核
 
 - 日期：2026-11-04。
-- worktree：`仓库根`；分支：`feat/gaokao-phase0`。
+- worktree：`仓库根`；分支：工作分支。
 - paper/batch：`gk-2026-regular-beijing-recall` / `phase4-b49`。
 - 固定来源：`src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee`；PDF SHA-256 `7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9`。该来源仍是身份未认证的回忆版候选，`official_answer=null`；绑定只标识本库固定字节，不认证正式卷。
 

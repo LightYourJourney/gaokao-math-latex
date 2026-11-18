@@ -6,7 +6,7 @@
 
 **Architecture:** 同 b15–b23、phase3-b00–b06 批次：固定来源 ID 是身份根；转录与盲解角色分离；规范三件套 + TikZ 图源由主会话整合；不提交扫描件与构建中间件。**与 b06 北京理卷同书连页**（理卷 935/936 已 FINALIZED，文卷 937/938）；A3 横向三栏书刊合排、LaTeX（CM 系）重排产物。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库 `CLAUDE.md`。建模先例：`2015_北京卷_理科`（phase3-b06）。
+建模先例：`2015_北京卷_理科`（phase3-b06）。
 
 ## Global Constraints
 

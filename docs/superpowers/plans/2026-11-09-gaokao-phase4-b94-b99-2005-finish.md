@@ -1,15 +1,15 @@
 # 2005 年封年：phase4-b94 … b99 批次清单冻结
 
 - 冻结时间：2026-11-09
-- 分支 / 工作树：`feat/gaokao-phase0` @ `仓库根`
-- 基线提交：`606b7611e`（docs: 更新项目交接与进度记录至 phase4-b93）
+- 分支 / 工作树：工作分支（`仓库根`）
+- 基线提交：`a0fae969e`（docs: 更新项目交接与进度记录至 phase4-b93）
 - manifest revision：6683（775 sources / 464 papers / 310 batches）
 
 ## 1. live 状态核对（task-1 证据）
 
 | 项目 | 实测值 |
 | --- | --- |
-| `git status --short --branch` | `* feat/gaokao-phase0...origin/feat/gaokao-phase0` + 仅 `?? scratch/`（会话开始前既有，非本次创建） |
+| `git status --short --branch` | `* 工作分支...origin/工作分支` + 仅 `?? scratch/`（会话开始前既有，非本次创建） |
 | `PROGRESS.md` 末尾回执 | phase4-b80（天津理科）；顶部回执与 `reports/phase4-b93.md` 一致（福建理科，63 页，四版 succeeded，0 问题） |
 | 2005 已登记卷 | 26 套：`complete` 23，`blocked` 3 |
 | 2005 未分配来源 | **6 个**（下表） |

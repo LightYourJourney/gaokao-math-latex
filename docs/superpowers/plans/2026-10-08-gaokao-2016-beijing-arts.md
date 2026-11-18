@@ -8,7 +8,7 @@
 
 **Tech Stack:** Markdown、Python 3 标准库工具、XeLaTeX、TikZ/PGFPlots、Git、Poppler。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库 `CLAUDE.md`。建模先例：`2016_北京卷_理科`（b12，同省同年配对，本项目首个纯 `closed` 批次）与 `2017_北京卷_理科`（各含 `receipts/review.json` 可对照口径）。
+建模先例：`2016_北京卷_理科`（b12，同省同年配对，本项目首个纯 `closed` 批次）与 `2017_北京卷_理科`（各含 `receipts/review.json` 可对照口径）。
 
 ## Global Constraints
 

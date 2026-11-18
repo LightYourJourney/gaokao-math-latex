@@ -1,6 +1,6 @@
 # 2003 北京理科候选卷：固定来源接收与文字层路由
 
-- 日期：2026-11-04；canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`；source manifest revision：6146。
+- 日期：2026-11-04；canonical worktree：`仓库根`；分支：工作分支；source manifest revision：6146。
 - 固定候选 source：`src-120ea104f8cb373f5731039fa9d36469df457869849f27420831962ef1ad2306`，manifest 相对路径 `普通高考/2003/2003北京理.pdf`。manifest 状态为 `ready`，`paper_id=null`、`paper_relation=null`、`track=null`；本阶段未修改 manifest 或建立 paper/batch 绑定。
 - 固定来源 checkout：`gaokaomath-src`，HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`，工作区干净。PDF 大小 507,308 bytes；现场 SHA-256 `d0081500bd56d03199ddcf232fe8e870f2ecd7e9c41ba849417af9af79fbb702`，Git blob `1f3cde756f4b417da80d0bb4b7cf2501e1ffad37`，均与 manifest 相符。
 - PDF 为 2 页 A3 横向（1190.55 × 841.89 pt），未加密。页内题签可见“2003 普通高等学校招生考试（北京卷理）”，印刷页码 124–125；该题签只作为页面可见文字记录，不认证出版者、版次、来源链或官方身份。

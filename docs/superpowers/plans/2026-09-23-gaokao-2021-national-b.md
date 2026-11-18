@@ -6,7 +6,7 @@
 
 **来源与生成：** `source-manifest.json` 是唯一来源／试卷／批次登记表。每卷规范源为 `_试题.md`、`_答案要点.md`、`_解析正文.md`；`_含解析.md` 由 `solution_sources.py` 确定性生成。图源仅用项目内 `figures/*.tex`。`generate_projects.py`、`make_short_answers.py` 和 `make_editions.py` 生成 LaTeX、简答答案和四种版式。
 
-**依据：** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md`、仓库根目录 `CLAUDE.md`。项目文档使用简体中文。
+项目文档使用简体中文。
 
 ## 约束
 

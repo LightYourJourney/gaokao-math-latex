@@ -16,7 +16,7 @@
 
 旧测试仍断言未绑定，并从年度旧目录读取Q11/Q19/Q22图稿。本轮改核当前canonical绑定、五图完整集合、规范源/清单链接解析及项目内图稿；保留来源指纹、22题与图形拓扑、矢量及官方答案为空检查。
 
-严格题面文件SHA比较又揭示sidecar漂移：提交 `8741da8b` 只改题面答案说明一行，却未同步校对元数据。主代理核实旧sidecar SHA恰等于该提交父版本题面SHA，并比较前后22个题面块哈希完全相同，只更新 `2003_春季北京文科_来源校对.json` 的 `transcription.sha256`，不补写或更改复核结论。工作者 `/root/repair_2003_beijing_stale_tests` 复跑 `Ran 9 tests in 2.336s` / `OK`。
+严格题面文件SHA比较又揭示sidecar漂移：提交 `c8c5e41e` 只改题面答案说明一行，却未同步校对元数据。主代理核实旧sidecar SHA恰等于该提交父版本题面SHA，并比较前后22个题面块哈希完全相同，只更新 `2003_春季北京文科_来源校对.json` 的 `transcription.sha256`，不补写或更改复核结论。工作者 `/root/repair_2003_beijing_stale_tests` 复跑 `Ran 9 tests in 2.336s` / `OK`。
 
 两卷 `validate-receipts --require-final --require-current-inputs` 均返回code=OK、succeeded=1，failed/invalid/missing/stale均0；既有正式回执没有改写。
 

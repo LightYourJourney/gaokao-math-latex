@@ -1,6 +1,6 @@
 # 2007 北京文科候选卷：固定来源接收
 
-- 日期：2026-11-03。工作树：`仓库根`，分支 `feat/gaokao-phase0`。
+- 日期：2026-11-03。工作树：`仓库根`，工作分支。
 - 固定 source：`src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9`；路径 `普通高考/2007/2007北京文.pdf`。
 - 上游来源库 `gaokaomath-src` 固定 commit：`34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。该 checkout 的 HEAD 与固定 commit 相同，状态为 `main...origin/main` 且没有本地改动。
 

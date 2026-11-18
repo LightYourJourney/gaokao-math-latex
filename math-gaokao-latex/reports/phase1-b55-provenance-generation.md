@@ -2,7 +2,7 @@
 
 日期：2026-10-28
 
-固定源与三份首稿、独立源文复核已提交a7247e8；详见[来源归档](2007-shanghai-spring-source-intake.md)。本阶段paper `gk-2007-spring-shanghai`、batch `phase1-b55`，21题150分120分钟。source `src-f34e9ac131532163db0030e99318a02d0e1d74cd393e842c738bdba8a0fc4646`，SHA-256 `26bee86f9e4572a70a1b847a702b49b812f92d598f7794fc490e9c295232cb2a`，6页扫描副本，题面1–3、参考答案4–6。内部canonical只绑定采用字节，不认证出版者、版次、扫描传播链或官方身份；official_answer=null。各题答案为本库非官方独立推导D级，不将印载参考答案当成官方标准。
+固定源与三份首稿、独立源文复核已提交0c0767d；详见[来源归档](2007-shanghai-spring-source-intake.md)。本阶段paper `gk-2007-spring-shanghai`、batch `phase1-b55`，21题150分120分钟。source `src-f34e9ac131532163db0030e99318a02d0e1d74cd393e842c738bdba8a0fc4646`，SHA-256 `26bee86f9e4572a70a1b847a702b49b812f92d598f7794fc490e9c295232cb2a`，6页扫描副本，题面1–3、参考答案4–6。内部canonical只绑定采用字节，不认证出版者、版次、扫描传播链或官方身份；official_answer=null。各题答案为本库非官方独立推导D级，不将印载参考答案当成官方标准。
 
 ## 实际角色及变换复核
 

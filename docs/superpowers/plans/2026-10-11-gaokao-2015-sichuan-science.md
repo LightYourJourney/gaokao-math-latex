@@ -6,7 +6,7 @@
 
 **Architecture:** 同 phase3-b00–b08 批次：固定来源 ID 是身份根；转录与盲解角色分离；规范三件套 + TikZ 图源由主会话整合；不提交扫描件与构建中间件。**与刚完成的 2015 四川文卷（phase3-b08）同书连页**：A3 横向三栏书刊合排（印刷页码 **981/982**，文卷 983/984）、LaTeX（CM 系）重排产物、21 题结构（选择 1–10＋填空 11–15＋解答 16–21）、**无答案页（等级 D）**。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库 `CLAUDE.md`。建模先例：`2015_四川卷_文科`（phase3-b08）。
+建模先例：`2015_四川卷_文科`（phase3-b08）。
 
 ## Global Constraints
 
@@ -61,5 +61,5 @@
 - [x] 审查代理（1 图自查 + 11 段；**分波 ≤5 支并发**，零 524）：12 支全部回收，576 项中 1 fail（解析版 p32 Q21(1) 溢出）＋印刷版 Q12 Underfull（日志级）。
 - [x] 修复轮：md 治本两处（Q21 长根式区间改引 x₁/x₂；Q12 验证段去长小数原子）→ extract/generate/short/editions → 重建（attempt 9be06756，四版 0 告警）→ 同引擎差分（试题/简答零变更；解析 4 页、印刷 3 页）→ 2 支定向复审全过（bbox 585.85→532.91、墨迹 582.32→531.48）。
 - [x] 回执合并（512 pass/0 fail/64 na）→ prepare-batch 换绑 → collect_receipts → **finalize**（先于 check-batch）→ check-batch 复核 FINALIZED。
-- [x] 报告刷新（六全量＋phase3-b09.md：closed／passed／零问题）→ unittest（862 项 1 失败＝既存 poppler 基线）→ 清理 build 中间件 → manifest_csv --write → 显式路径提交 `df7170da`（31 文件；**不 push**；注明 b14 在途）。
+- [x] 报告刷新（六全量＋phase3-b09.md：closed／passed／零问题）→ unittest（862 项 1 失败＝既存 poppler 基线）→ 清理 build 中间件 → manifest_csv --write → 显式路径提交 `7179d7ce`（31 文件；**不 push**；注明 b14 在途）。
 - [x] 审查回执填写（逐页×8 项）→ finalize → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。

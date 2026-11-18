@@ -1,7 +1,7 @@
 # 2026 北京回忆版候选卷：Q10/Q14/Q18 题图重绘与登记
 
 - 日期：2026-11-04。
-- worktree：`仓库根`；分支：`feat/gaokao-phase0`。
+- worktree：`仓库根`；分支：工作分支。
 - paper/batch：`gk-2026-regular-beijing-recall` / `phase4-b49`。
 - 固定只读来源：`src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee`；PDF SHA-256 `7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9`；Git blob `cf49aa3671ff4143e5c665c7bc53b5f08ab38fca`；365585 字节、5 页。首页自称回忆版；发布者、版次、复制链与官方身份仍未核，`official_answer=null`。
 

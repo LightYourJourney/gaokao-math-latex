@@ -1,6 +1,6 @@
 # 1995全国文科phase4-b34交付阶段独立终审
 
-2026-10-26，只读工作树phase0-wt。基线内容提交4d7c4a3f；未写共享文件，未提交。
+2026-10-26，只读工作树phase0-wt。基线内容提交79d968cd；未写共享文件，未提交。
 
 ## 结论
 
@@ -8,7 +8,7 @@
 
 ## 核查证据
 
-- 当前相对4d7c4a3f的试卷内容差异只有Q5 O由below left/1pt改above left/3pt，三条直线及数学关系未改；相应来源图hash已同步。其余变更为manifest关闭状态、来源投影及新回执/视觉报告，未再改题面或答案推导。
+- 当前相对79d968cd的试卷内容差异只有Q5 O由below left/1pt改above left/3pt，三条直线及数学关系未改；相应来源图hash已同步。其余变更为manifest关闭状态、来源投影及新回执/视觉报告，未再改题面或答案推导。
 - 前轮确认的Q24(2)与Q25(2)规范推导保留：体积比给d=r；补贴函数在定义域严格下降、x=10对应t=1。Q24已补D-C、AE、BE，未增加原题没有的尺寸。Q16按指数附于自变量括号的通常读法处理，来源记录为reviewed notation-reading-note，无凭答案改题。
 - 题面draft hash和四幅图hash现场实算全部匹配来源校对记录。三事实源canonical身份和题号范围保持一致，源未给分值仍不补造。
 - 当前build attempt为761a4cb5-bd7b-47f7-b3f5-6f4c1fe91bcf、status succeeded；review的build_attempt_id与input_projection均匹配，status passed。
@@ -16,7 +16,7 @@
 - manifest revision5086，phase4-b34 closed，paper complete且issue_ids空；phase4-b34报告的attempt、页数、eligible_complete、无阻塞与manifest/回执一致。
 - 规范答案与简答明确项目独立推导、非卷内/非官方答案；Q24两问答案、Q25两问答案及Q26排除原点在简答中完整保留，与规范答案一致。解析详细推导与这些结论吻合；无把参数距离偷换为固定数值。source_has_answers=false、official_answer=null、publisher-unverified边界保留。
 - 主要最终视觉记录明确Q5修复后重看影响页、其他页一对一字节比较；没有用未绑定当前attempt的旧审查冒充新回执。该证据链与本轮单标签改动范围相符。
-- git diff --check 4d7c4a3f现场通过。
+- git diff --check 79d968cd现场通过。
 
 本结论只验本阶段现有内容及回执一致性；全测/report结论由主代理待终态补录。之后如改变题目、图稿、派生TeX或回执，应针对受影响项重新确认。
 
@@ -27,7 +27,7 @@
 
 PROGRESS末段、handoff顶部、新交付复核报告的1710项/13跳过/606.114秒互相一致，且明确官方身份未认证与全库未完成。六报告render/readback与check、CSV check、最终receipts/provenance/全生成检查已由主代理取得通过结果；新记录没有再把未结束命令写成通过，本代理没有重复执行全测或重审PDF。
 
-实际Git diff范围仍为既有Q5标签与同步哈希、batch/paper状态、六报告统计刷新、CSV继承旧绑定投影、PROGRESS/handoff和交付审查归档。现场比较CSV与内容提交4d7c4a3f：总行数均775，正好13行变化；字段限于paper_relation/paper_id/project_dir/title/production_state/question_count/batch_ids/status_note及部分issue_ids，符合从现manifest同步绑定/状态投影，不是13卷题目被修改。manifest实计775来源、321卷、182批，complete265/blocked53/compiled3，与新记录一致。git diff --check仍通过。
+实际Git diff范围仍为既有Q5标签与同步哈希、batch/paper状态、六报告统计刷新、CSV继承旧绑定投影、PROGRESS/handoff和交付审查归档。现场比较CSV与内容提交79d968cd：总行数均775，正好13行变化；字段限于paper_relation/paper_id/project_dir/title/production_state/question_count/batch_ids/status_note及部分issue_ids，符合从现manifest同步绑定/状态投影，不是13卷题目被修改。manifest实计775来源、321卷、182批，complete265/blocked53/compiled3，与新记录一致。git diff --check仍通过。
 
 下一候选1995上海文科manifest现场为ready、paper_id null；handoff明确SHA未在本轮重验，开工先固定字节核源，没有提前声称认证该来源或新卷已完成。
 

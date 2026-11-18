@@ -1,6 +1,6 @@
 # 2005 上海理科普通卷：固定来源接收
 
-- 日期：2026-11-03；工作树 `仓库根`，分支 `feat/gaokao-phase0`。
+- 日期：2026-11-03；工作树 `仓库根`，工作分支。
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，路径 `普通高考/2005/2005上海理.pdf`；manifest revision 6109 中状态为 `ready`，`paper_id=null`、`paper_relation=null`、`track=null`。当前没有对应 paper、项目目录或规范题稿。
 - 来源库固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。现场 PDF SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`、Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`、505945 bytes、2 页，与清单一致；manifest 标记 `git_oid_verified=true`、`pdf_check=passed`。
 - 固定副本与页图位于忽略目录 `.work/ocr-local/sources/2005-shanghai-science/`。PDF 为两页 A3 横向；现场 `pdfinfo` 页数、文件大小与来源清单相符。

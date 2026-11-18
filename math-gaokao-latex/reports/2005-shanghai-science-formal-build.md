@@ -7,7 +7,7 @@
 ## 首次构建失败与修正
 
 - 首次正式构建 attempt `36420edc-3229-4dfb-8fa5-9c6bde1c0d91`（manifest revision `6113`）中，试题版和简答版通过，解析版和印刷版因 `answers.tex` 第6行的 `\texttt{paper_id=null}` 触发 `Missing $ inserted` 而失败。失败时自动登记 `ISSUE-1382`、`ISSUE-1383`。
-- 根因是解析说明使用了无转义下划线的行内代码；同时该处 `paper_id=null` 已与当前来源登记冲突。已把说明改为准确表述“项目尚未认证官方答案”，保留来源身份未核、官方答案未认证、Q11/Q20(1) U/PENDING 的边界；随后按唯一生成器刷新 `_含解析.md` 与项目 TeX。修复阶段提交 `0083d4e`。
+- 根因是解析说明使用了无转义下划线的行内代码；同时该处 `paper_id=null` 已与当前来源登记冲突。已把说明改为准确表述“项目尚未认证官方答案”，保留来源身份未核、官方答案未认证、Q11/Q20(1) U/PENDING 的边界；随后按唯一生成器刷新 `_含解析.md` 与项目 TeX。修复阶段提交 `1c31cf5`。
 - 重建通过后，`ISSUE-1382`、`ISSUE-1383` 已自动改为 resolved/non_blocking；Q11 `ISSUE-1380` 与 Q20(1) `ISSUE-1381` 继续 open / blocks_completion。
 
 ## 正式构建结果

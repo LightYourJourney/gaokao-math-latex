@@ -1,6 +1,6 @@
 # 1990 全国卷理科题库录入实施计划
 
-> 本计划只覆盖下一套待录入试卷，不缩小项目 1952—2026 的总目标。主会话独占来源清单、批次与总报告；所有改动仅限 `feat/gaokao-phase0` 工作树，不触碰 Main 检出或用户的 `docs/design/` 改动。
+> 本计划只覆盖下一套待录入试卷，不缩小项目 1952—2026 的总目标。主会话独占来源清单、批次与总报告；
 
 **Goal:** 将经固定来源核对的1990全国理科26题录入共享LaTeX题库，生成可复用四版，并在证据不足处保留待核状态。
 
@@ -8,7 +8,7 @@
 
 **Tech Stack:** Markdown、LaTeX、Python `unittest`、TikZ/PGFPlots、XeLaTeX、latexmk。
 
-**Spec:** 当前高考真题 LaTeX 题库持续目标；项目流程见 `math-gaokao-latex/README.md`、`PROGRESS.md` 与 `CLAUDE.md`。
+**Spec:** 当前高考真题 LaTeX 题库持续目标；
 
 ## 全局约束
 
@@ -66,7 +66,6 @@
 - [x] 仅在题签/固定来源关系通过既有登记门禁后，以 `gk-1990-regular-national-science` 建立canonical卷记录；出版社/版次仍保持未认证。
 - [x] 按当前题面哈希登记逐题来源与验证状态，官方答案为 `null`、独立推导为生成内容；记录Q20阻塞。
 - [x] 复用项目生成器产生四个独立编译入口；运行该卷生成、manifest、provenance及四版一致性检查。
-- [x] 更新进度并提交本批所有权内文件，不包含构建产物、PNG/JPEG或 `docs/design/`。
 
 ### Task 4：正式构建、逐页视觉复核与批次报告
 

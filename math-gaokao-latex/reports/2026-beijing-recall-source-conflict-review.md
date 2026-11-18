@@ -1,6 +1,6 @@
 # 2026 北京高考数学回忆版：第三方“考试院原版”PDF 来源与异文核查
 
-- 日期：2026-11-04；canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。
+- 日期：2026-11-04；canonical worktree：`仓库根`；分支：工作分支。
 - 固定回忆版 source：`src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee`，SHA-256 `7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9`，Git blob `cf49aa3671ff4143e5e665c7bc53b5f08ab38fca`，manifest revision `6159`，目前 `paper_id=null`。
 
 ## 查阅材料与来源边界

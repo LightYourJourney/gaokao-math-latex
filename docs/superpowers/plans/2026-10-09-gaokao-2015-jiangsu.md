@@ -6,7 +6,7 @@
 
 **Architecture:** 同 b15–b23、phase3-b00/b01 批次：固定来源 ID 是身份根；转录与盲解角色分离；规范三件套 + TikZ 图源由主会话整合；不提交扫描件与构建中间件。**结构与 2016 江苏（phase3-b00）同型**（填空 1–14 + 解答 15–20 + 附加题 21–23、21 四选二）——建模与流程直接沿用。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库 `CLAUDE.md`。建模先例：`2016_江苏卷`（phase3-b00）。
+建模先例：`2016_江苏卷`（phase3-b00）。
 
 ## Global Constraints
 

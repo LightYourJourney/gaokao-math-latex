@@ -8,7 +8,7 @@
 
 **Tech Stack:** Markdown、Python 3 标准库工具、XeLaTeX、TikZ/PGFPlots、Git、Poppler。
 
-**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库 `CLAUDE.md`。建模先例：`2016_北京卷_理科`（b12，closed）与 `2016_北京卷_文科`（b13，closed_with_blockers——第 8 题隐含约定被并行会话复核降级，本卷凡依赖题面外约定的解答一律先标待核）。
+建模先例：`2016_北京卷_理科`（b12，closed）与 `2016_北京卷_文科`（b13，closed_with_blockers——第 8 题隐含约定被并行会话复核降级，本卷凡依赖题面外约定的解答一律先标待核）。
 
 ## Global Constraints
 

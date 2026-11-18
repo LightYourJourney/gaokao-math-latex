@@ -1,6 +1,6 @@
 # 2026 北京高考数学回忆版候选卷：固定来源接收与文字层路由
 
-- 日期：2026-11-04；canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`；source manifest revision：6159。
+- 日期：2026-11-04；canonical worktree：`仓库根`；分支：工作分支；source manifest revision：6159。
 - 固定候选 source：`src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee`，manifest 相对路径 `普通高考/2026/2026北京.pdf`。manifest 状态为 `ready`，`paper_id=null`、`paper_relation=null`、`track=null`；本阶段未改 manifest，也未建立 paper/batch 绑定。
 - 只读来源 checkout：`gaokaomath-src`，HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`，工作区干净。PDF 大小 365,585 bytes；现场 SHA-256 `7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9`，Git blob `cf49aa3671ff4143e5c665c7bc53b5f08ab38fca`，与 manifest 相符。
 - PDF 共 5 页，A4 纵向（595.44 × 842.04 pt）。首页题签可见“2026 年北京高考数学真题（回忆版）”；此题签只记录副本自称，不认证发布者、出版者、版次、来源链或官方身份。

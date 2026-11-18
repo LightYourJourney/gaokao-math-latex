@@ -1,7 +1,7 @@
 # 2006 福建理科候选卷：项目 TeX 与四版入口生成阶段
 
 - 日期与批次：2026-11-03，phase1-b77。
-- 工作树：feat/gaokao-phase0；paper：gk-2006-regular-fujian-science。
+- 工作树：工作分支；paper：gk-2006-regular-fujian-science。
 
 ## 生成目标
 

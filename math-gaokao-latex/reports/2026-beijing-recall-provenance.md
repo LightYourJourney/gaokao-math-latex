@@ -1,7 +1,7 @@
 # 2026 北京回忆版候选卷：逐题三角色 provenance 导入
 
 - 日期：2026-11-04。
-- worktree：`仓库根`；分支：`feat/gaokao-phase0`。
+- worktree：`仓库根`；分支：工作分支。
 - paper/batch：`gk-2026-regular-beijing-recall` / `phase4-b49`。
 - 固定来源：`src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee`；PDF SHA-256 `7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9`；Git blob `cf49aa3671ff4143e5c665c7bc53b5f08ab38fca`；5 页。来源首页自称回忆版，发布者、版次、复制链和官方身份未核，`official_answer=null`。
 - 当前 provenance 文件：`2026_北京卷_回忆版/provenance.json`；SHA-256 `b46fef9e0dcbbe9aeef8259ad1b1e3ed419bba3f3799b52615178a66515f166b`。初次导入文件的 SHA-256 为 `a9f4bc1505ec5756de513695596653625deb821236a07df9ed4803035a810de5`，后续 Q13 答案排版修正与重新绑定见[简答与四版入口阶段报告](2026-beijing-recall-short-answers-editions.md)。

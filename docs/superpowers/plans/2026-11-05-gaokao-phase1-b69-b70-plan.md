@@ -12,7 +12,7 @@
 
 ## 全局约束
 
-- 只在 `仓库根` 的 `feat/gaokao-phase0` 工作；不新建 worktree、不改 `main`、不 push。
+- 只在 `仓库根` 的工作分支上工作；不新建 worktree、不 push。
 - 每个批次的生成 TeX 由指定子代理负责互不重叠的卷目录；子代理不改 manifest、issues、receipts、报告或公共文件，也不提交。
 - 主代理检查每份实际 diff、所有权范围和 `git diff --cached --check`，再按阶段提交。
 - 只刷新生成器投影；不得改写题面、答案、解析、图稿、provenance 或 issue 内容来消除当前 blocker。

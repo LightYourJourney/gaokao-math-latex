@@ -8,7 +8,6 @@
 
 **Tech Stack:** Markdown、Python 3.12 工具链、XeLaTeX、TikZ/PGFPlots、Poppler、Git。
 
-**Spec:** `docs/AGENTS.md`、仓库根 `CLAUDE.md`、总体项目目标及本计划中的固定源表。
 
 ## Global Constraints
 

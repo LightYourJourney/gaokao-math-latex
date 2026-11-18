@@ -698,7 +698,6 @@ identity_pending_sources
 
 新会话按以下顺序恢复：
 
-1. 读取 `CLAUDE.md` 和 `AGENTS.md`；
 2. 检查 Git 状态和当前分支；
 3. 读取来源总账；
 4. 读取最近批次报告；
