@@ -26,6 +26,8 @@ python3 -m unittest discover -s math-gaokao-latex/tests -t math-gaokao-latex
 
 PDF 等编译产物不入库，可由源文件重建。
 
+年份 Markdown 里的 `images/*.png` 题图链接与指向 `_raw/`、`原卷PDF/` 的原卷链接都是逻辑引用：位图与原卷 PDF 不入库，在本仓库里会显示为断图。题图以 `math-gaokao-latex/<卷>/figures/` 下的 TikZ 源为准；原卷可按 `source-manifest.json` 记录的上游提交号从 deekur/gaokaomath 取得。
+
 ## 来源与许可
 
 - 真题原件来自 [deekur/gaokaomath](https://github.com/deekur/gaokaomath)（CC BY 4.0）。试题版权归命题方或出版方所有。

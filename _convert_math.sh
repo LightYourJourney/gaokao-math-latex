@@ -1,6 +1,6 @@
 #!/bin/bash
 # 把 <年份>/<年份>_数学真题_*.md 批量转换为 PDF 与 Word
-# 用法：bash _convert_math.sh [年份]   不给年份则转换全部
+# 用法：bash _convert_math.sh [年份]   不给年份则转换全部 20xx 年份目录（1952—1999 须显式给年份）
 #
 # 本脚本处理手工转写的数学真题 Markdown。
 set -uo pipefail

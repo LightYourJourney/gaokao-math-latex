@@ -237,8 +237,8 @@ def render_outputs(facts: Mapping[str, Any]) -> Dict[str, str]:
         "部署、模型下载、路由、交叉核对、人工校对和阶段提交统一遵循 "
         "[OCR_WORKFLOW.md](docs/OCR_WORKFLOW.md)。首选 Xiaomi-OCR-0，"
         "复杂文档与公式用 PaddleOCR-VL-1.6 交叉验证，批量 PDF 使用 MinerU。"
-        "统一入口为 `python3 tools/local_ocr.py --help`；"
-        "模型与依赖固定记录在 `tools/ocr-local-models.json`，运行资产放在忽略目录 `.work/ocr-local/`。\n"
+        "统一入口为 `python3 math-gaokao-latex/tools/local_ocr.py --help`；"
+        "模型与依赖固定记录在 `math-gaokao-latex/tools/ocr-local-models.json`，运行资产放在忽略目录 `math-gaokao-latex/.work/ocr-local/`。\n"
     )
     return {path: text if text.endswith("\n") else text + "\n" for path, text in bodies.items()}
 

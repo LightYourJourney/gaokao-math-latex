@@ -20,7 +20,7 @@
 | 2024 | 全国甲卷（文/理） |
 | 2025–2026 | 天津、北京、上海卷 |
 
-如需补充：批次扩展流程见 `report.md`（源 PDF 渲染→逐题转录三件套 MD→
+如需补充：批次扩展流程见 `math-gaokao-latex/docs/OCR_WORKFLOW.md`（源 PDF 渲染→逐题转录三件套 MD→
 `tools/md2tex.py` 转换→拆分版四版本）；进合并书则另在 `main.tex` 登记 `\gkpaper` 行。
 
 ## 二、已收录内容的保留意见
