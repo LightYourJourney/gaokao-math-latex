@@ -3188,6 +3188,14 @@
         "gk-2007-regular-sichuan-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase6-b41",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-hunan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3197,7 +3205,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0fadd501-be56-49cb-bfd0-9f71c16a87ec",
+  "last_transaction_id": "7393f8d6-2644-49a8-a851-b68141f2ccbc",
   "papers": [
     {
       "blocked_from": null,
@@ -38698,9 +38706,74 @@
       "title": "2007 年·普通高等学校招生考试·四川卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖南卷_文科/figures/f2007_hunan_arts_q06_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖南卷_文科/figures/f2007_hunan_arts_q07_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖南卷_文科/figures/f2007_hunan_arts_q18_dihedral.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_hunan_arts",
+        "id": "gk-2007-hunan-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 381、382；PDF 只有题面、无答案页，21 题答案由本库独立推导（非官方）。第 6 题正方体、第 7 题频率分布直方图、第 18 题直二面角由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖南文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-hunan-arts",
+      "production_state": "complete",
+      "project_dir": "2007_湖南卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_湖南文_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_湖南文_含解析.md",
+        "questions": "2007/2007_数学真题_湖南文_试题.md",
+        "solution_body": "2007/2007_数学真题_湖南文_解析正文.md"
+      },
+      "source_ids": [
+        "src-65d03ae2ea8d49e31abcf96e49caaad28a51110d9771abac5da81b26d5f49cba"
+      ],
+      "title": "2007 年·普通高等学校招生考试·湖南卷·文科",
+      "track": "arts",
+      "year": 2007
     }
   ],
-  "revision": 9888,
+  "revision": 9896,
   "schema_version": 1,
   "sources": [
     {
@@ -47313,8 +47386,8 @@
       "exam_type": "regular",
       "git_blob_oid": "71021c53556bafacb42f8f9d77fe0bed14fa5b40",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-hunan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007湖南文.pdf",
       "regions": [],
       "source_id": "src-65d03ae2ea8d49e31abcf96e49caaad28a51110d9771abac5da81b26d5f49cba",

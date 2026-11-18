@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2007 湖南卷文科：phase6-b41 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
+
+- 对象：`gk-2007-hunan-arts`，21 题（选择 1–10、填空 11–16、解答 17–21）；固定来源 `src-65d03ae2ea8d49e31abcf96e49caaad28a51110d9771abac5da81b26d5f49cba`，上游 `普通高考/2007/2007湖南文.pdf`，SHA-256 `8e889ae321ffa864b24c505b40e7e96956b301487f5a106264b7fcd9f943e068`，512146 字节，2 页 A3 横向，印面页码 381、382，页眉「2007 普通高等学校招生考试（湖南卷文）」。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；公式、上下标、选项与三幅图另以 300/400 dpi 原页逐题复核。第 1 页含 Q1–Q17、第 2 页含 Q18–Q21；原页未印分值，不补。来源与接收细节见 `reports/2007-hunan-arts-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1D 2B 3A 4B 5C 6D 7C 8C 9D 10B；11 $(x-1)^2+(y-1)^2=2$；12 $\frac{\pi}{6}$；13 $3$；14 $b\geqslant2$、$\frac92$；15 $3\pi$、$\sqrt2$；16 周期 $\pi$、增区间 $[\frac{\pi}{2}+k\pi,\pi+k\pi]$；17 $0.9$、$0.972$；18 $\arccos\frac{\sqrt5}{5}$；19 $-1$、$x^2-y^2=4$；20 $a_{n+2}-a_n=6$、$a=3$ 时 $b_n$ 为第 $6\cdot7^{n-1}$ 项；21 $16$、$f(x)=\frac13x^3-x^2-x$。
+- 盲解复核：盲解代理未读主稿独立完成全卷，19 题一致；发现并改正主稿两处错误——Q7 直方图应按尾部概率之和判断，$P(X\geqslant49)=1.5\%>1\%$、$P(X\geqslant50)=0.5\%\leqslant1\%$，最低水位为 **50 米（C）**（原稿 49 米错误）；Q21 的 $f'(x)=x^2+ax+b$，$a^2-4b=(x_2-x_1)^2$，最大值 **16**，穿根条件给出 **$a=-2$、$b=-1$**、$f(x)=\frac13x^3-x^2-x$（原稿 13、$a=-1$ 错误）。
+- 图形：Q6 正四棱柱（E、F 中点）、Q7 水位频率分布直方图（30–51 米，21 组，标 0.5%/1%/2% 三条虚线）、Q18 直二面角，共 3 幅 TikZ 矢量图，逐幅与固定源原页比对；`expected_occurrences` 均为 2。直方图初版 0.62 缩放仍超版心 7.15pt，改为 0.60 后归零；柱高先按原图柱顶量取，再按「各组频率之和 100%」归一（尾三组仍取 2%/1%/0.5%）。
+- 生成链：`register-papers`（revision 9889）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance init-batch`/`import-batch`（revision 9890）→ `build --formal`（attempt `2ace285e`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 5/24/7/18 页（共 54 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 54 页八类检查全 pass，0 豁免；批次 `closed`、卷 `complete`。全量门禁：`validate-receipts --all --require-final` **OK：534 卷**；`provenance check-all` **OK：534 卷**；三套生成器 `--all --check` **534 套一致**。
+- 下一步：按队列处理 2008 北京文；`source-manifest.json` 仍有 243 个来源未绑定 `paper_id`。
+
 ### 2007 四川卷文科：phase6-b40 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
 
 - 对象：`gk-2007-regular-sichuan-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-9aca159335308217b48f6d305942d30328d9bb142e4b623c35058b7c489e3821`，上游 `普通高考/2007/2007四川文.pdf`，SHA-256 `1318df44733ec939e8789379d6fa2115a2c6a63e84b73c1f2bf3c080007ce68c`，551829 字节，2 页 A3 横向，印面页码 411、412，页眉「2007 普通高等学校招生考试（四川卷文）」。
