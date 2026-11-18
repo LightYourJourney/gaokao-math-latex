@@ -3220,6 +3220,14 @@
         "gk-2009-shanghai-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase6-b45",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-beijing-arts"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -3229,7 +3237,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "3e74ae22-cc1d-40fb-bae7-3c39dfa96d61",
+  "last_transaction_id": "6e8578d3-fb56-4058-a2eb-52b090b5dd27",
   "papers": [
     {
       "blocked_from": null,
@@ -39001,9 +39009,68 @@
       "title": "2009 年·普通高等学校招生考试·上海卷·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_北京卷_文科/figures/f2009_beijing_arts_q16_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_beijing_arts",
+        "id": "gk-2009-beijing-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 501、502；PDF 只有题面、无答案页，20 题答案由本库独立推导（非官方）。第 14 题「孤立元」定义漏印「且 k+1∉A」，已登记。第 16 题四棱锥由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文科"
+      },
+      "issue_ids": [
+        "ISSUE-1478"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-beijing-arts",
+      "production_state": "blocked",
+      "project_dir": "2009_北京卷_文科",
+      "question_count": 20,
+      "resume_action": "取得同版官方勘误或更清晰原页，确认第 14 题定义是否应有「且 k+1∉A」；确认后按官方字面重录并重跑该题 provenance 与逐页复核。在此之前照录原页，答案同时给出字面 0 与官方同题 6。",
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_北京文_含解析.md",
+        "questions": "2009/2009_数学真题_北京文_试题.md",
+        "solution_body": "2009/2009_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-2fa5cfeaed5456a853963c3697298f25136b2929d317bf180c47ccef70bb1eba"
+      ],
+      "title": "2009 年·普通高等学校招生考试·北京卷·文科",
+      "track": "arts",
+      "year": 2009
     }
   ],
-  "revision": 9911,
+  "revision": 9916,
   "schema_version": 1,
   "sources": [
     {
@@ -48840,8 +48907,8 @@
       "exam_type": "regular",
       "git_blob_oid": "480e84ec865e2198f973a306212ac61bfe35a1eb",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009北京文.pdf",
       "regions": [],
       "source_id": "src-2fa5cfeaed5456a853963c3697298f25136b2929d317bf180c47ccef70bb1eba",

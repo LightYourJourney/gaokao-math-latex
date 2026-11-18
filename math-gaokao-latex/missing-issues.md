@@ -24854,3 +24854,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1478
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 14 题（印面 501）定义印作「对于 k∈A，如果 k−1∉A，那么 k 是 A 的一个孤立元」，漏去公开同题版本的「且 k+1∉A」。按原页字面，任何有限非空集合的最小元必是孤立元，故不含孤立元的 3 元子集为 0 个；按官方定义（两侧相邻数都不在 A 中），3 元集合不含孤立元等价于三个数连续，共 6 个。",
+  "fingerprint": "0ddb376d4875c706ca1adebf48b0a80ab39d34b41c7e1d6ad4946320e54ef1d2",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-beijing-arts",
+  "question_id": "gk-2009-beijing-arts-q14",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 14 题定义是否应有「且 k+1∉A」；确认后按官方字面重录并重跑该题 provenance 与逐页复核。在此之前照录原页，答案同时给出字面 0 与官方同题 6。",
+  "source_id": "src-2fa5cfeaed5456a853963c3697298f25136b2929d317bf180c47ccef70bb1eba",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

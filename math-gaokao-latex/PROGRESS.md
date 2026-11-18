@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 北京卷文科：phase6-b45 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
+
+- 对象：`gk-2009-beijing-arts`，20 题（选择 1–8、填空 9–14、解答 15–20）；固定来源 `src-2fa5cfeaed5456a853963c3697298f25136b2929d317bf180c47ccef70bb1eba`，上游 `普通高考/2009/2009北京文.pdf`，SHA-256 `5b310eb0f16d1bd48553d20e7f16b10784e6c83787ef7dd8fa96e3065ef4c159`，2 页 A3 横向，印面页码 501、502。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；公式、上下标、选项与图稿另以 300/400 dpi 原页逐题复核。第 1 页含 Q1–Q14、第 2 页含 Q15–Q20；原页未标分值，不补。来源与接收细节见 `reports/2009-beijing-arts-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1A 2D 3B 4C 5C 6A 7D 8D；9 $-\frac35$；10 $16$、$255$；11 $9$；12 $\log_3 2$；13 $2$、$\frac{2\pi}{3}$；14 字面 $0$（官方同题 $6$）；15 周期 $\pi$、值域 $[-\frac{\sqrt3}{2},1]$；16 $45^\circ$；17 $\frac4{27}$、$\frac89$；18 $a=4,b=24$，极大 $40$、极小 $8$；19 $x^2-\frac{y^2}{2}=1$、$m=\pm1$；20 $b_3=7$、$m^2+2m$、$p=\frac13,q\in[-\frac23,-\frac13)$。
+- 盲解复核：盲解代理未读主稿独立完成全卷，20 题结论一致；Q14 同时给出字面 0 与补全定义后的 6。
+- 固定源缺陷（照录并登记）：Q14「孤立元」定义只印「$k-1\notin A$」，漏去「且 $k+1\notin A$」（ISSUE-1478）；按字面任何非空集合的最小元都孤立，答案 0；按官方定义连续三数共 6 个。
+- 图形：Q16 四棱锥 P-ABCD（底面正方形、PD⊥底面、E 为 PB 中点），1 幅 TikZ 矢量图。
+- 生成链：`register-papers`（revision 9912）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9913）→ `build --formal`（attempt `5dc2b3cd`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 4/18/6/14 页（共 42 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 42 页八类检查全 pass，0 豁免；批次 `closed_with_blockers`、卷 `blocked`。全量门禁：`validate-receipts --all --require-final` **OK：538 卷**；`provenance check-all` **OK：538 卷**；`generate_projects --all --check` **538 套一致**。
+- 下一步：按年份继续 2009 北京理、四川文/理等未成卷来源；`source-manifest.json` 仍有 239 个来源未绑定 `paper_id`。
+
 ### 2009 上海卷理科：phase6-b44 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
 
 - 对象：`gk-2009-shanghai-science`，23 题（填空 1–14、选择 15–18、解答 19–23）；固定来源 `src-156ab8f023168eecb2c362dead31be551fc772beaac24b3d9bad66d1c773512f`，上游 `普通高考/2009/2009上海理.pdf`，SHA-256 `82ede013bf354097cfc65c1bab2885db813572321b6eb0012f445c1c754d3fa8`，2 页 A3 横向，印面页码 553、554。
