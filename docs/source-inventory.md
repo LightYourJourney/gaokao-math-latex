@@ -12,4 +12,4 @@
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
 - 所有批次复核门禁通过。
 
-来源逐项信息见 `exams/math-gaokao-latex/manifest.csv`。
+来源逐项信息见 `../math-gaokao-latex/manifest.csv`。
