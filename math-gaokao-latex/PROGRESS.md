@@ -815,7 +815,7 @@
 
 - `tools/provenance.py init-batch` 在忽略目录生成三角色工作文档；导入三角色独立核验结果：独立题面复核员（22 题全部 passed）、Codex 编者独立推导（20 题 D 级、2 题 U 级）与 gpt-6-luna/high 独立分段盲解（22 题 conflict_status 全部 none）。
 - 阻塞问题关联：Q19 提问条件 $B \subseteq A$ 符号脱节疑点维持 U/PENDING 并关联 `ISSUE-1386`；Q22(1) 点 $P_1(3, 0)$ 不在椭圆上且无实数解疑点维持 U/PENDING 并关联 `ISSUE-1387`。
-- `provenance.json` 落盘于 `2004_上海卷_理科/provenance.json`（SHA-256 `63767f42c111533b256cd705528a9d5310df2e7721cbfb8d1c2f6a61c0a83b1d`）；更新 manifest revision 6125→6126，批次状态更新为 `provenance_verified`，试卷状态维持 `blocked`。
+- `provenance.json` 落盘于 `2004_上海卷_理科/provenance.json`（SHA-256 `2f76275bacd8d9bf49212cd026efe62662ee2d06709cff50836a177a5a35c5a8`）；更新 manifest revision 6125→6126，批次状态更新为 `provenance_verified`，试卷状态维持 `blocked`。
 - 门禁校验全量通过：`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase4-b46`、`provenance.py check-batch --batch phase4-b46`、`manifest_csv.py --check`（当前且775行）。详情见[逐题 provenance 导入报告](reports/2004-shanghai-science-provenance.md)。项目 TeX 生成与四版构建待后续。本阶段不表示来源认证或整卷验收。
 
 ### 2004 上海理科普通卷：项目 TeX 生成、简答与四版入口（2026-11-04）
@@ -3537,7 +3537,7 @@
 - 已完成：简答版生成器第三路校验要求独立横向选择题答案行；既有逐题答案表虽含1—15题答案，但格式不符合解析器契约。先新增针对真实答案源的回归测试，观察到 `parse_quick_table(..., 15)` 因此返回 `None`；再从已核答案表添加同序横向行，测试通过。确定性 `make_short_answers.py` 三路比对后生成 `answers_short.tex`，Q20仍显示待核、未猜顺序；模板生成试题版、解析版、简答版、印刷版四个独立入口。
 - 编译与校样：smoke 模式四版均由 XeLaTeX/latexmk 成功，页数分别为5/19/7/16，共47页；四份诊断均无构建问题、Overfull 与未定义引用。Poppler 100dpi 渲染后逐页检查全部47页，未见裁切、重叠、缺图或异常空白。smoke 只写忽略的 `build/` 诊断与PDF，不是正式build receipt或最终视觉回执。
 - 修改文件：`1990/1990_数学真题_全国文_答案要点.md`、`tests/test_1990_national_arts_solutions.py`、`1990_全国卷_文科/answers_short.tex`、四个 `1990_全国卷_文科/{试题版,解析版,简答版,印刷版}.tex` 及本进度文件。未改数学答案、Q20待核结论、正式回执或其他卷；`docs/design/`未暂存。
-- 验证：答案源测试9/9、简答生成器52/52、四版壳35/35、1990转录测试15/15通过；`make_short_answers.py --check`、`make_editions.py --check`、`generate_projects.py --check`均通过。全库`unittest discover -s tests`：1676项，1662通过、13跳过、1失败；唯一失败是已记录的`test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2018全国Ⅰ理科`answers.tex`现场SHA=`11aa948221be65166d8ed6a52cc31ceb60e0ab2b8227cdad6ab199742bc7d467`，台账期望=`174857e0d75084381f36b8362c33de2fb40bd52b89f77106f79f52eb9c83ee29`；本阶段未修改该卷或漂移台账。provenance状态仍显示`blocked`。
+- 验证：答案源测试9/9、简答生成器52/52、四版壳35/35、1990转录测试15/15通过；`make_short_answers.py --check`、`make_editions.py --check`、`generate_projects.py --check`均通过。全库`unittest discover -s tests`：1676项，1662通过、13跳过、1失败；唯一失败是已记录的`test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2018全国Ⅰ理科`answers.tex`现场SHA=`62c08aa593fb29faf0f40f37a29dd452febfcb13dcd870fd41597acf986b3d7c`，台账期望=`8cfadf75b991daba6d47f3dca52cdac27a226e336dc7962172fca045b520d4b0`；本阶段未修改该卷或漂移台账。provenance状态仍显示`blocked`。
 - 成本：未调用OCR、聊天模型或外部API；本地执行四版XeLaTeX/latexmk smoke构建和47页Poppler渲染。Codex Token与实际费用不可见，记未知。
 - 剩余/下一步：1990卷仍因 `ISSUE-1124` 的 $V_1,V_2$ 区域对应不明而blocked；正式四版回执和最终视觉回执未生成。保持该题待核、不将smoke当正式验收；继续按manifest和进度选择其他可推进卷，避免重复本卷转录与盲核。
 
@@ -3562,7 +3562,7 @@
 
 - 已完成：Q21—26固定源复核完成；结合此前Q1—8、Q9—20两组回执，现已覆盖全卷26题的独立源核。题面文字、数字、公式和选项未发现其他可确认转录差异。第23题原卷自身不一致：正文称交点为 $D$，图示标为 $D'$；题面保留正文 $D$，TikZ图改为图示 $D'$，并在题稿来源说明中明确记录，不猜测或统一原卷记号。矢量图标注位置按原图放在交点上方。第20题 $V_1,V_2$ 与两部分对应仍无可靠来源可判定，保持待核。
 - 修改文件：`1990/1990_数学真题_全国文_试题.md`、`1990_全国卷_文科/figures/f1990_national_arts_q23_pyramid.tex`、`tests/test_1990_national_arts_transcription.py`及本进度。固定源PDF SHA-256仍为`89b85ba17cf8bbd3dcce6b88fd6b819e218b7d4dca2f043692ad10b2961aa029`；未改答案/解析、来源manifest、绑定、正式构建或review回执。没有新增或提交PNG/JPEG；局部渲染留在忽略的`.work/`。
-- 验证：新增回归断言先因缺少来源差异说明及图稿标号不符而按预期RED；1990定向测试`test_1990_national_arts*.py`为11/11通过。四幅TikZ图实际经XeLaTeX编译、Poppler渲染；主会话放大核对第23题新图与固定源裁图，标号及位置清晰。`git diff --check`通过。全库测试从项目根目录运行：1672项，1658通过、13跳过、1失败；唯一失败是既存`test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2018全国Ⅰ理科`answers.tex`现场SHA=`11aa948221be65166d8ed6a52cc31ceb60e0ab2b8227cdad6ab199742bc7d467`，漂移台账期望=`174857e0d75084381f36b8362c33de2fb40bd52b89f77106f79f52eb9c83ee29`；本阶段未改该文件或台账。第一次从仓库根目录调用`unittest discover -s tests`因该处不是测试包目录而未执行测试，随后在`math-gaokao-latex/`正确重跑。
+- 验证：新增回归断言先因缺少来源差异说明及图稿标号不符而按预期RED；1990定向测试`test_1990_national_arts*.py`为11/11通过。四幅TikZ图实际经XeLaTeX编译、Poppler渲染；主会话放大核对第23题新图与固定源裁图，标号及位置清晰。`git diff --check`通过。全库测试从项目根目录运行：1672项，1658通过、13跳过、1失败；唯一失败是既存`test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2018全国Ⅰ理科`answers.tex`现场SHA=`62c08aa593fb29faf0f40f37a29dd452febfcb13dcd870fd41597acf986b3d7c`，漂移台账期望=`8cfadf75b991daba6d47f3dca52cdac27a226e336dc7962172fca045b520d4b0`；本阶段未改该文件或台账。第一次从仓库根目录调用`unittest discover -s tests`因该处不是测试包目录而未执行测试，随后在`math-gaokao-latex/`正确重跑。
 - 成本：OCR、外部API及图像模型调用均为0；仅本地LaTeX编译/栅格校样。Codex Token和费用不可见，记未知。
 - 剩余/下一步：来源记录仍为`ready`且`paper_id=null`，来源出版者/版本未认证；Q20体积标签顺序仍待可靠证据。正式来源绑定、共用题目/答案入口、四版本生成、正式编译及逐页QA均未完成。下一步依项目注册器门禁准备并核实来源包，再进入规范LaTeX入口和四版构建；本阶段不宣称整卷最终验收。
 
@@ -14727,7 +14727,7 @@
 ### phase1-b82 全库 unittest 验证（2026-11-03）
 
 - 执行 `python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_*.py'`：`Ran 1769 tests in 542.593s`，`FAILED (failures=2, skipped=13)`。
-- 两项失败均为既有全库基线：`test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs` 期待 `2017_全国Ⅰ卷_理科/answers.tex` SHA-256 `9318dce3313b0575c1382eb225301dfec145683d59b54367fa13a81f3f0b3a30`，当前文件为 `8ea128d4aba0a2bed8897d4719a8df3d99c119c7bc3a15b98ee8c6f5d797f233`；`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报出 79 条历史 paper/batch 缓存状态与现场派生不符。
+- 两项失败均为既有全库基线：`test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs` 期待 `2017_全国Ⅰ卷_理科/answers.tex` SHA-256 `3ed46d841e7fce2c3614cd9bc53b7657641c1d58277d694ea47dc4216d14d569`，当前文件为 `253237aad343d37a71eda31a5364da238799391743b4e63bebe570c71beb405d`；`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报出 79 条历史 paper/batch 缓存状态与现场派生不符。
 - 失败路径不属于本批改动；该布局基线文件及其 adjudicated ledger 在本批均未改动，未顺手重写历史快照。phase1-b82 定向 build/review currentness、provenance、确定性生成、来源/问题清单、manifest CSV 与全量汇总报告检查均已通过。本卷仍为 `closed_with_blockers`，阻塞为 ISSUE-1360、ISSUE-1361。
 
 ### phase1-b83 2007 上海卷文科：题图重绘、provenance 与项目生成（2026-11-03）
@@ -15194,7 +15194,7 @@
 
 - 提交前复看每页图形适用性时发现 attempt `6cf10a91-a876-4dd5-b001-068521eb80c8` 的解析版第12页 Q10、 第18页 Q18 含图，却被误列为 `figure_label: not_applicable`。不手改已封账 receipt，改以 attempt `312cdaea-4916-49de-aedd-0d683c00949f` 重建并重走 `prepare-batch` / 视觉回执事务；新 attempt 的56张110dpi PNG与前次已审页面逐字节一致，复核确认这两页的图形与标注通过。
 - 修正四版图形适用页后，重新完成448项检查：408项通过、40项无图页图形检查为 `not_applicable`。两条 Q17 盒宽警告绑定当前 build 并分别复核解析版第17页、印刷版第16页，通过逐字段豁免。
-- 新 build receipt SHA-256 `27b06bfba5b5fddf78ace6825f2588104a7b0269421d3f5b1d1e36bfb5ee88ea`，review receipt SHA-256 `d9bd5da8ee2bf0283ecc4001483ba73e38ba63c79e8724ac6e5d7356259a7590`；PDF 哈希和逐版信息见[四版正式构建与视觉复核报告](reports/2026-beijing-recall-formal-build.md)。终结器返回 `FINALIZED`，manifest revision `6178`，batch 仍为 `closed_with_blockers`，未认证来源、`official_answer=null` 及 ISSUE-1408–1410、1414–1416 阻塞项均保持原状。
+- 新 build receipt SHA-256 `3d963028e7b359a92fa2446a1317fd194c3337bbafeccab9ec07429e7bc1f60d`，review receipt SHA-256 `b78cc1b2f25acc99b4a3eaf97dce5352c378f763e1706461676521789f42e473`；PDF 哈希和逐版信息见[四版正式构建与视觉复核报告](reports/2026-beijing-recall-formal-build.md)。终结器返回 `FINALIZED`，manifest revision `6178`，batch 仍为 `closed_with_blockers`，未认证来源、`official_answer=null` 及 ISSUE-1408–1410、1414–1416 阻塞项均保持原状。
 
 ### 2003 北京普通文理卷：同期扫描与答案交叉核查（2026-11-04）
 

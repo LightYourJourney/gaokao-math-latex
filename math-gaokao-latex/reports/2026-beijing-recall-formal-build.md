@@ -9,7 +9,7 @@
 
 - 命令：`python3 tools/build_projects.py build --manifest source-manifest.json --issues missing-issues.md --batch phase4-b49 --formal --json`。
 - 当前 attempt：`312cdaea-4916-49de-aedd-0d683c00949f`；开始 `2026-11-04T11:59:05+08:00`，结束 `2026-11-04T11:59:12+08:00`；build 输入绑定 manifest revision `6176`。
-- 当前 build receipt SHA-256：`27b06bfba5b5fddf78ace6825f2588104a7b0269421d3f5b1d1e36bfb5ee88ea`；review receipt SHA-256：`d9bd5da8ee2bf0283ecc4001483ba73e38ba63c79e8724ac6e5d7356259a7590`。
+- 当前 build receipt SHA-256：`3d963028e7b359a92fa2446a1317fd194c3337bbafeccab9ec07429e7bc1f60d`；review receipt SHA-256：`b78cc1b2f25acc99b4a3eaf97dce5352c378f763e1706461676521789f42e473`。
 
 | 版本 | 结果 | 页数 | PDF SHA-256 | 缺字 | 版面 warning |
 |---|---|---:|---|---:|---|

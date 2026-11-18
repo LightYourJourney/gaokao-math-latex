@@ -45,7 +45,7 @@ $$
 
 `python3 -B -m unittest discover -s tests -q` 结束于 `Ran 1767 tests`，结果 `FAILED (failures=2, skipped=13)`。失败为：
 
-1. `test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`：2017 全国Ⅰ理科 `answers.tex` 当前 SHA 为 `8ea128d4aba0a2bed8897d4719a8df3d99c119c7bc3a15b98ee8c6f5d797f233`，漂移账本记录 SHA 为 `9318dce3313b0575c1382eb225301dfec145683d59b54367fa13a81f3f0b3a30`。该文件当前工作树字节与本分支 HEAD 一致；本阶段没有修改该卷或其漂移账本。
+1. `test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`：2017 全国Ⅰ理科 `answers.tex` 当前 SHA 为 `253237aad343d37a71eda31a5364da238799391743b4e63bebe570c71beb405d`，漂移账本记录 SHA 为 `3ed46d841e7fce2c3614cd9bc53b7657641c1d58277d694ea47dc4216d14d569`。该文件当前工作树字节与本分支 HEAD 一致；本阶段没有修改该卷或其漂移账本。
 2. `test_the_cached_states_match_the_recomputed_ones`：全库 provenance 检查发现79项缓存状态与现场派生状态不一致；失败示例含 `gk-2012-regular-national-outline-arts` 的缓存 `complete` 与现场 `answers_verified` 不符。本批福建文科 `provenance.py check-batch` 通过，manifest 内容仅因本批事务更新了 revision 和 transaction ID。
 
 上述全量测试问题未在本阶段改动；因此记录为现有全库门禁失败，不能将本阶段描述为全量测试通过。本卷 Q11 纠错、四版构建和视觉回执完成，不表示来源认证、官方答案验证、整卷无阻塞验收或1952–2026语料完成。

@@ -39,7 +39,7 @@
 执行 `python3 -B -m unittest discover -s tests -q`：`Ran 1769 tests in 565.093s`，`FAILED (failures=3, skipped=13)`。失败项如下：
 
 1. `test_2015_fujian_arts_transcription.FujianArtsTranscriptionTests.test_source_identity_and_transcription_hash`：测试期待审查记录 `paper_id` 为 `None`，实际为 `gk-2015-regular-fujian-arts`。相关2015福建文科来源记录和测试不在本批改动路径中。
-2. `test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`：测试期待 `2017_全国Ⅰ卷_理科/answers.tex` SHA-256 为 `9318dce3313b0575c1382eb225301dfec145683d59b54367fa13a81f3f0b3a30`，当前值为 `8ea128d4aba0a2bed8897d4719a8df3d99c119c7bc3a15b98ee8c6f5d797f233`。该卷和 drift ledger 不在本批改动路径中。
+2. `test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`：测试期待 `2017_全国Ⅰ卷_理科/answers.tex` SHA-256 为 `3ed46d841e7fce2c3614cd9bc53b7657641c1d58277d694ea47dc4216d14d569`，当前值为 `253237aad343d37a71eda31a5364da238799391743b4e63bebe570c71beb405d`。该卷和 drift ledger 不在本批改动路径中。
 3. `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`：全库有79条缓存状态与现场重算不一致。此项是全库一致性失败；本批 `phase4-b43` 自身的 provenance 检查通过。
 
 因此，全量 unittest 没有通过；本报告只记录各项定向批次核验通过，不掩盖上述全库失败。

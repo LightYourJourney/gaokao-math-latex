@@ -10,9 +10,9 @@
 
 | 文件 | SHA-256 |
 |---|---|
-| `2004_上海卷_理科/questions.tex` | `de57bfe2a36edba3a57e25c144432da5a6759bea8a0ba37c2951ad8e016f66b0` |
-| `2004_上海卷_理科/answers.tex` | `85ff3c564be4e5058120a7a030e4529fa52c096c5a83931ec83d41205ae46517` |
-| `2004_上海卷_理科/answers_short.tex` | `b70a1b8071c16fa7a75a0fd190366b65cadf954a26fcb5d594b0b1ab9658a0e9` |
+| `2004_上海卷_理科/questions.tex` | `8053b46e8bbbd44280b9d6bdcb737e2e3f9b74d3f88e63df794b93ff81f7e64f` |
+| `2004_上海卷_理科/answers.tex` | `66608d7406156463bd5cdcc8f105b82b578b21b65b4a2fa5de9bbe4ba40adc55` |
+| `2004_上海卷_理科/answers_short.tex` | `65a2ca60c1930171b3798617aa9d9eb1a4ae492763538b2edb364972acda3218` |
 | `2004_上海卷_理科/试题版.tex` | `e689545e10b8c3612ccb772f5e953bbf65bb3c46780fe5b493ed44f36eb393fb` |
 | `2004_上海卷_理科/解析版.tex` | `34c3513ba8fe2a9427690c687368e532208f50a06dedd36a3c94988aac52e3f1` |
 | `2004_上海卷_理科/简答版.tex` | `63a1631d66be823fec7464f28167d41d1d9d21c493589fb5bc77e532aae8b133` |
