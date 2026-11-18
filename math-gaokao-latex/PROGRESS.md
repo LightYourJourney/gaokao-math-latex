@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 上海卷理科：phase6-b44 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
+
+- 对象：`gk-2009-shanghai-science`，23 题（填空 1–14、选择 15–18、解答 19–23）；固定来源 `src-156ab8f023168eecb2c362dead31be551fc772beaac24b3d9bad66d1c773512f`，上游 `普通高考/2009/2009上海理.pdf`，SHA-256 `82ede013bf354097cfc65c1bab2885db813572321b6eb0012f445c1c754d3fa8`，2 页 A3 横向，印面页码 553、554。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；公式、上下标、选项与四幅图另以 300/400 dpi 原页逐题复核。第 1 页含 Q1–Q20、第 2 页含 Q21–Q23；原页未标分值，不补。来源与接收细节见 `reports/2009-shanghai-science-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1 $\mathrm i$；2 $a\leqslant1$；3 $x>\frac83$；4 $y=x-2\ (x>1)$、$2^x\ (x\leqslant1)$；5 $\arccos\frac{\sqrt6}{6}$；6 $1-\sqrt2$；7 $\frac47$；8 $\sqrt{S_1}+2\sqrt{S_2}=3\sqrt{S_3}$；9 $3$；10 $\frac{3-\sqrt3}{4}$；11 $k\leqslant1$；12 $14$；13 $(3,3)$；14 $\arctan\frac23$；15 A 16 B 17 D 18 B；19 $\frac\pi3$；20 递减、$a\approx123.03$（乙）；21 $l:y=\pm\frac{x+3\sqrt2}{\sqrt2}$、距离 $\sqrt6$、右支距离恒 $>\sqrt6$；22 不满足、$f=-x+b$、$f=\frac cx\ (c\neq0)$；23 不存在、$a_n=c\ (c\neq0),b_n=1$、$p=3^j$。
+- 盲解复核：盲解代理独立完成 23 题，23 题结论一致；其中 Q22(3) 双方均只推出 $f(x)=c/x$（$c\neq0$），已在解析中注明 c 不被题设唯一确定。
+- 固定源缺陷（照录并登记）：Q20(2) 丙的 $a$ 区间印作 $(121,133]$，与乙 $(121,127]$ 重叠，$a\approx123.03$ 同时落入两区间（ISSUE-1477）；按互斥意图判为乙。
+- 图形：Q4 程序框图、Q5 正四棱柱（复用上海文图稿）、Q18 圆与四区域、Q19 直三棱柱，共 4 幅 TikZ 矢量图。
+- 生成链：`register-papers`（revision 9907）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9908）→ `build --formal`（attempt `cfbb3377`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 5/20/7/18 页（共 50 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 50 页八类检查全 pass，0 豁免；批次 `closed_with_blockers`、卷 `blocked`。全量门禁：`validate-receipts --all --require-final` **OK：537 卷**；`provenance check-all` **OK：537 卷**；`generate_projects --all --check` **537 套一致**。
+- 下一步：按年份继续 2009 其余来源（北京文/理、四川文/理等）；`source-manifest.json` 仍有 240 个来源未绑定 `paper_id`。
+
 ### 2009 上海卷文科：phase6-b43 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
 
 - 对象：`gk-2009-shanghai-arts`，23 题（填空 1–14、选择 15–18、解答 19–23）；固定来源 `src-b5304974f52311adbc105637e5323d1f742209a35072cd1e3e76dc6e538e1e08`，上游 `普通高考/2009/2009上海文.pdf`，SHA-256 `5212f16aacbac7b10c5df44f90ccd94ba0218c31c04bd0c4e9e0e8f0284ca5f3`，2 页 A3 横向，印面页码 555、556。

@@ -1,0 +1,27 @@
+% 2009 年上海卷理科第 4 题：题图。
+% 来源 PDF：普通高考/2009/2009上海理.pdf，SHA256 82ede013bf354097cfc65c1bab2885db813572321b6eb0012f445c1c754d3fa8
+% 原页：第 1 页（A3 三栏）第 1 栏，印刷页 553。
+% 重绘依据：自上而下「开始」→「输入实数 x」→ 判断「x>1」；是→y←x−2，否→y←2^x；汇合→输出 y→结束；与文科同题一致。
+\begin{tikzpicture}[scale=0.95, semithick, >=Stealth,
+  node distance=6mm, every node/.style={inner sep=4pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=2.2cm, minimum height=0.7cm] {开始};
+  \node (input) [draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=4.0cm, minimum height=0.8cm, below=of start] {输入实数 $x$};
+  \node (cond) [draw, diamond, aspect=2.2, minimum width=4.2cm, minimum height=1.2cm,
+    below=of input] {$x>1$};
+  \node (yes) [draw, minimum width=2.6cm, minimum height=0.8cm,
+    below=of cond, xshift=-2.1cm] {$y\leftarrow x-2$};
+  \node (no) [draw, minimum width=2.6cm, minimum height=0.8cm,
+    below=of cond, xshift=2.6cm] {$y\leftarrow 2^{x}$};
+  \node (output) [draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=3.6cm, minimum height=0.8cm, below=of yes, xshift=2.3cm] {输出 $y$};
+  \node (end) [draw, rounded corners=4pt, minimum width=2.2cm, minimum height=0.7cm,
+    below=of output] {结束};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (cond);
+  \draw[->] (cond) -- node[left, xshift=-1pt] {是} (yes);
+  \draw[->] (cond) -- node[above, yshift=1pt] {否} (no);
+  \draw[->] (yes) -- (output);
+  \draw[->] (no) |- (output);
+  \draw[->] (output) -- (end);
+\end{tikzpicture}
