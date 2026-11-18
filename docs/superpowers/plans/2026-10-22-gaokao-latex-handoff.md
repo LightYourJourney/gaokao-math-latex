@@ -1275,16 +1275,14 @@ canonical worktree与分支仍为`phase0-wt` / 工作分支。
 
 ## 2026-10-22 历史状态摘要（已被文首当前接续取代）
 
-题库仍在持续建设，1952—2026 全范围目标尚未完成。请在 工作分支和 canonical worktree 继续；不要 push，也不要覆盖既存未提交文件。
+题库仍在持续建设，1952—2026 全范围目标尚未完成。请在工作分支和 canonical worktree 继续；不要 push，也不要覆盖既存未提交文件。
 
 ### Git 工作位置
 
 - canonical worktree：`仓库根`
 - 分支：工作分支
 - 当前 HEAD：`30c72bf53f0222bb2e744e2446772f69ff9c4143`（refresh reports after 2006 review close）；当时与 `origin/工作分支` 同步。
-本项目不要在 main 继续。
-当前 main HEAD 为 `4859ad9b` 且工作树干净。没有把 typography 迁移提交带入题库分支。
-- 主 worktree 此前干净。此交接文档应新增在 canonical worktree。提交前再核对状态与 staging，避免夹带别的工作。
+- 此交接文档应新增在 canonical worktree。提交前再核对状态与 staging，避免夹带别的工作。
 
 新对话先核对：
 

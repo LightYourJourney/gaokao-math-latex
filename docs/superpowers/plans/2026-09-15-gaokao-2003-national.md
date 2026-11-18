@@ -19,7 +19,7 @@
 - 四卷均须以固定源为事实边界；固定源 PDF 不进入仓库，图形只提交 TikZ/PGFPlots \`.tex\`，禁止提交原卷截图、PNG/JPEG 或其他栅格媒体。
 - 各卷题量以固定源为准：新课程文 23 题，新课程理 22 题，旧课程文/理各 22 题；必须保留全部选项、图表、几何图形、开放式小问和分问。
 - 四卷各生成 4 个 PDF；每个 \`build/\` 最终只保留 \`试题版.pdf\`、\`解析版.pdf\`、\`简答版.pdf\`、\`印刷版.pdf\`，清除 \`.aux/.log/.out/.fls/.xdv/.synctex.gz\` 与 \`.work/\`。
-- 不修改主 worktree，不 push；manifest、index、CSV、provenance、build/review receipts 和批次报告必须与当前字节一致后分提交。
+- 不 push；manifest、index、CSV、provenance、build/review receipts 和批次报告必须与当前字节一致后分提交。
 
 ## File Map
 
