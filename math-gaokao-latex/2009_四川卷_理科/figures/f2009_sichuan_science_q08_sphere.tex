@@ -1,0 +1,20 @@
+% 2009 年四川卷理科第 8 题：题图。
+% 来源 PDF：普通高考/2009/2009四川理.pdf，SHA256 7f64be22c7f7c29a749b276635494972f962f91302ebc7506b55c9fae85a7406
+% 原页：第 1 页（A3 三栏）第 2 栏上部，印刷页 557。
+% 重绘依据：球面三点 A、B、C，∠ABC=90°，BA=BC；与文科第 9 题同图。
+\begin{tikzpicture}[scale=1.2, semithick, every node/.style={inner sep=1.2pt}]
+  \coordinate (O) at (0,0);
+  \draw (O) circle (2);
+  \fill (O) circle (1.2pt);
+  \node[anchor=south west] at ($(O)+(0.13,0.11)$) {$O$};
+  \coordinate (A) at (135:1.35);
+  \coordinate (B) at (215:1.35);
+  \coordinate (C) at (305:1.35);
+  \draw (A) -- (B) -- (C) -- (A);
+  \draw[dashed] (O) -- (A);
+  \draw[dashed] (O) -- (B);
+  \draw[dashed] (O) -- (C);
+  \node[anchor=south east] at (A) {$A$};
+  \node[anchor=north east] at (B) {$B$};
+  \node[anchor=north west] at (C) {$C$};
+\end{tikzpicture}

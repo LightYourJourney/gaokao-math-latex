@@ -3244,6 +3244,14 @@
         "gk-2009-sichuan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b48",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-sichuan-science"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -3253,7 +3261,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ad703996-1689-4f16-b40f-375b8be81398",
+  "last_transaction_id": "deae7308-040f-468b-bf2e-d15bb8b31c49",
   "papers": [
     {
       "blocked_from": null,
@@ -39210,9 +39218,81 @@
       "title": "2009 年·普通高等学校招生考试·四川卷·文科",
       "track": "arts",
       "year": 2009
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_四川卷_理科/figures/f2009_sichuan_science_q05_hexagon.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_四川卷_理科/figures/f2009_sichuan_science_q08_sphere.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_四川卷_理科/figures/f2009_sichuan_science_q15_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_四川卷_理科/figures/f2009_sichuan_science_q19_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_sichuan_science",
+        "id": "gk-2009-sichuan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 557、558；PDF 只有题面、无答案页，22 题答案由本库独立推导（非官方）。第 11 题四个选项印作 360、188、216、96，按题设算得 288，无一相符（188 疑为 288 的排印错误），记 U 并登记问题。第 20 题椭圆方程分母印作 y²/b（非 b²），由 e=√2/2 与准线 x=2 得 b=1，数值自洽。第 5、8、15 题图与文科同题同构，第 19 题按原图画 A 左上、B 右上、C 右下、D 左下，AB 虚线。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "四川理科"
+      },
+      "issue_ids": [
+        "ISSUE-1479",
+        "ISSUE-1480"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-sichuan-science",
+      "production_state": "blocked",
+      "project_dir": "2009_四川卷_理科",
+      "question_count": 22,
+      "resume_action": "取得同版官方勘误或更清晰原页，确认第 11 题 (B) 是否为 288；确认后按官方字面重录该选项并重跑本题 provenance 与逐页复核。在此之前照录原页四个选项，第 11 题记 U。",
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_四川理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_四川理_含解析.md",
+        "questions": "2009/2009_数学真题_四川理_试题.md",
+        "solution_body": "2009/2009_数学真题_四川理_解析正文.md"
+      },
+      "source_ids": [
+        "src-1afafe368128cb09c986eaf5f3362ab1920d96be61e97d545fe10acdf56e951b"
+      ],
+      "title": "2009 年·普通高等学校招生考试·四川卷·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 9931,
+  "revision": 9936,
   "schema_version": 1,
   "sources": [
     {
@@ -49121,8 +49201,8 @@
       "exam_type": "regular",
       "git_blob_oid": "8e003110daae73d0dbef2adf349b3b7c0ac6124f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-sichuan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009四川理.pdf",
       "regions": [],
       "source_id": "src-1afafe368128cb09c986eaf5f3362ab1920d96be61e97d545fe10acdf56e951b",

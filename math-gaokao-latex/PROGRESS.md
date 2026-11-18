@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 四川卷理科：phase6-b48 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
+
+- 对象：`gk-2009-sichuan-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-1afafe368128cb09c986eaf5f3362ab1920d96be61e97d545fe10acdf56e951b`，上游 `普通高考/2009/2009四川理.pdf`，SHA-256 `7f64be22c7f7c29a749b276635494972f962f91302ebc7506b55c9fae85a7406`，2 页 A3 横向，印面页码 557、558。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；公式、上下标、选项与四幅图另以 600 dpi 原页逐题复核。第 1 页含 Q1–Q18、第 2 页含 Q19–Q22；原页未标分值，不补。来源与接收细节见 `reports/2009-sichuan-science-source-intake.md`。
+- 答案（独立推导，等级 D，第 11 题 U）：1C 2B 3A 4D 5D 6B 7C 8B 9A 10D 11U 12A；13 $-20$；14 $4$；15 $\\frac{\\pi}{2}$；16 ①②④；17 $A+B=\\frac\\pi4$、$a=\\sqrt2,b=1,c=\\sqrt5$；18 $\\frac{36}{85}$、$E\\xi=2$；19 $M$ 为 $AE$ 中点、$\\arccos\\frac{3\\sqrt{11}}{11}$；20 $\\frac{x^2}{2}+y^2=1$、$y=\\pm(x+1)$；21 定义域与单调性、极限 $\\frac1a$、$m>0$ 及极值；22 $b_n=4+\\frac{5(-1)^n}{4^n-(-1)^n}$、$T_n<\\frac{23}{16}<\\frac32$、$\\lambda_{\\min}=4$。
+- 转录复核改正：Q12 所求为 $f(f(\\frac52))$（不是 $f(\\frac52)$），答案仍为 0；Q19 图按原页改为 A 左上、B 右上、C 右下、D 左下，AB 虚线，未知点 M 不画；Q20 分母印作 $y^2/b$，由 $e=\\frac{\\sqrt2}{2}$ 与准线 $x=2$ 得 $b=1$，与标准形数值一致。
+- 盲解复核：盲解代理独立完成全卷，21 题一致，Q11 亦独立算得 288 并确认四选项无一相符。Q22(1) 盲解把 $a_n$ 写成 $-(\\frac14)^n$、给出仅在奇数项成立的 $b_n$ 式；主稿经 $b_1=3$、$b_2=\\frac{13}3$、$b_3=\\frac{51}{13}$ 逐项验证后维持 $b_n=4+\\frac{5(-1)^n}{4^n-(-1)^n}$，provenance 记为 resolved。
+- 固定源缺陷（照录并登记）：Q11 四个选项印作 $360$、$188$、$216$、$96$，按题设算得 $288$，无一相符（$188$ 疑为 $288$ 误排）；登记 ISSUE-1479（转录）与 ISSUE-1480（选项层面的答案歧义），Q11 记 U。
+- 图形：Q5 六棱锥、Q8 球面、Q15 正三棱柱、Q19 组合体，共 4 幅 TikZ 矢量图；Q19 依原图重绘，未画第 (2) 问待求的 M。
+- 生成链：`register-papers`（revision 9932）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9933）→ `build --formal`（attempt `629776dc`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 6/28/8/23 页（共 65 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 65 页八类检查全 pass，0 豁免；批次 `closed_with_blockers`、卷 `blocked`。全量门禁：`validate-receipts --all --require-final` **OK：541 卷**；`provenance check-all` **OK：541 卷**；`generate_projects --all --check` **541 套一致**。
+- 下一步：按年份继续 2009 天津文/理等未成卷来源；`source-manifest.json` 仍有 236 个来源未绑定 `paper_id`。
+
 ### 2009 四川卷文科：phase6-b47 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
 
 - 对象：`gk-2009-sichuan-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-cb1b78af65a576cacf9151b24b1322dec0bb5838c75d0165b5fb29098d1107e9`，上游 `普通高考/2009/2009四川文.pdf`，SHA-256 `2bb14d3824466d9566238b20ec9270686c67d6e4f2af4186fd22b2a14e633ea7`，2 页 A3 横向，印面页码 559、560。

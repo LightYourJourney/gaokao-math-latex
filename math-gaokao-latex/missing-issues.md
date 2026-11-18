@@ -24871,3 +24871,37 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1479
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 11 题（印面 557）四个选项印作 (A) 360、(B) 188、(C) 216、(D) 96。按题设「3 位男生 3 位女生，甲不站两端，女生中恰有两位相邻」计算：恰有一对相邻的位置模式 12 种，女生 3!、男生 3!，共 432；甲站两端各 6×3!×2!=72，故 432−144=288。四个印刷选项无一相符，(B) 188 疑为 288 的排印错误。公开流传的同一题另有 288、228 等选项印法，官方答案对应 288。",
+  "fingerprint": "c396ac432caf70295d9511edd0d48b4c25baee6eb934c0f1c89b948f301517d3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-sichuan-science",
+  "question_id": "gk-2009-sichuan-science-q11",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 11 题 (B) 是否为 288；确认后按官方字面重录该选项并重跑本题 provenance 与逐页复核。在此之前照录原页四个选项，第 11 题记 U。",
+  "source_id": "src-1afafe368128cb09c986eaf5f3362ab1920d96be61e97d545fe10acdf56e951b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1480
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 11 题四个选项为 360、188、216、96，按题设算得 288，无一相符；因此无法在现有选项内确定应选字母（188 疑为 288 的排印错误）。该缺陷同时登记为题面转录问题 ISSUE-1479 与答案层面的选项歧义，二者共同阻断本题完成。",
+  "fingerprint": "7a81352c3a61b22b5c8ba04a27714e219fa63cefd0e52efeec5c36b1d9787698",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-sichuan-science",
+  "question_id": "gk-2009-sichuan-science-q11",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 11 题正确选项（按题设为 288）；确认后重选选项并重跑本题 provenance 与逐页复核。在此之前第 11 题记 U，不擅自改选项。",
+  "source_id": "src-1afafe368128cb09c986eaf5f3362ab1920d96be61e97d545fe10acdf56e951b",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
