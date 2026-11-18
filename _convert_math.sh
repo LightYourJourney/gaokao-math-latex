@@ -2,7 +2,7 @@
 # 把 <年份>/<年份>_数学真题_*.md 批量转换为 PDF 与 Word
 # 用法：bash _convert_math.sh [年份]   不给年份则转换全部
 #
-# 注意：物理真题由 _build.py 从 docx 构建，本脚本只处理数学真题（手工转写的 Markdown）。
+# 本脚本处理手工转写的数学真题 Markdown。
 set -uo pipefail
 cd "$(dirname "$0")" || exit 1
 ROOT="$(pwd)"
