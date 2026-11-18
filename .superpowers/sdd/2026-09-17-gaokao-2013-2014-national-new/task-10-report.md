@@ -155,7 +155,7 @@
 
 | 实际命令 | 退出码 | 摘要 |
 | --- | ---: | --- |
-| `git -C 仓库根 rev-parse HEAD` | 0 | `e7b8290901eecda05b5696616dacad037cadb94b` |
+| `git -C <仓库根> rev-parse HEAD` | 0 | `e7b8290901eecda05b5696616dacad037cadb94b` |
 | `python3 /private/tmp/task10_run.py pre` | 0 | 八固定源 SHA、canonical 题号、既有 figure 文件校验通过；输出八份 combined 与 spec 的 apply_patch 数据 |
 | apply_patch 写入八份 combined | 成功 | 八份文件存在；spec 首次创建父目录失败 |
 | `ls -ld math-gaokao-latex/.work` | 1 | `.work` 不存在；没有既有目录冲突 |
@@ -250,4 +250,4 @@ build receipts/report 提交：`4c8e22c6f0155a7a1e5cef6ace58bc83b35849ad`。恢�
 
 按 brief 和研究证据，24 条 2013/2014 q22–24 选考/作答规则缺失仍为 blocking `transcription-ambiguous`，没有猜测必答或选答；`ISSUE-0879`（2013 全国Ⅰ文 q21 公切线类型/答案冲突）和 `ISSUE-0880`（2013 全国Ⅰ理 q20 同类冲突）仍为 blocking `answer-conflict`，本轮没有可核验新证据。它们解释了 `closed_with_blockers`，不影响视觉/形式回执的真实 PASS。
 
-checkpoint commit：`a69e60fa`（正式 build/review receipts、manifest、phase2-b02 report）；final report/cleanup 内容已提交于 `e8b845da`，本次仅补记本句，不 push。主工作区 `主工作树` 未改动。
+checkpoint commit：`a69e60fa`（正式 build/review receipts、manifest、phase2-b02 report）；final report/cleanup 内容已提交于 `e8b845da`，本次仅补记本句，不 push。主工作区 未改动。

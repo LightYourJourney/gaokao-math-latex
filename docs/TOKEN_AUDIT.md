@@ -4,7 +4,7 @@
 
 ## 当前恢复检查点（2026-10-15）
 
-本报告后续已积累实现与实测，以下“现状证据”和优先级表保留的是**最初接入前基线**，不是当前缺失清单。恢复时在隔离工作树 `仓库根` 核对 `feat/gaokao-phase0` 的 Git 状态、项目 `PROGRESS.md` 与 manifest：revision 4152 有 775 个来源、279 条试卷记录、145 个批次，22 个 Python 工具、62 个测试文件。manifest 的试卷 `production_state` 为 complete 226、compiled 3、blocked 43、planned 7；批次状态为 closed 112、compiled_pending_review 3、closed_with_blockers 23、planned 7。来源记录均为 `ready`，其中 278 条 `paper_relation=canonical`、497 条未设该关系。OCR gold 当前仅 2 个样例（text/formula 各1），均为 `pending_human_review`。以上是清单字段计数，不等同于题面转录完成量、最终验收完成量或准确率。
+本报告后续已积累实现与实测，以下“现状证据”和优先级表保留的是**最初接入前基线**，不是当前缺失清单。恢复时在隔离工作树核对 `feat/gaokao-phase0` 的 Git 状态、项目 `PROGRESS.md` 与 manifest：revision 4152 有 775 个来源、279 条试卷记录、145 个批次，22 个 Python 工具、62 个测试文件。manifest 的试卷 `production_state` 为 complete 226、compiled 3、blocked 43、planned 7；批次状态为 closed 112、compiled_pending_review 3、closed_with_blockers 23、planned 7。来源记录均为 `ready`，其中 278 条 `paper_relation=canonical`、497 条未设该关系。OCR gold 当前仅 2 个样例（text/formula 各1），均为 `pending_human_review`。以上是清单字段计数，不等同于题面转录完成量、最终验收完成量或准确率。
 
 - 已有：`analyze_pdf.py` 页级文字/栅格分析与断点缓存；`ocr_pdf.py` 选择性 Tesseract 页识别、渲染/识别缓存和待审状态；`recognize_formula.py` 可选 Paddle 局部公式识别；`score_ocr.py` 评分工具与既有少量真实样本记录。无需重复安装或再造这些模块。
 - 已有后段：Markdown 规范源、四版 LaTeX 生成、latexmk/XeLaTeX、来源/provenance/构建/逐页复核门禁。新识别流程尚未端到端接入题目级数据与这些门禁；不能据局部工具通过宣布全流水线完成。
@@ -142,7 +142,7 @@ python3 -m unittest discover -s math-gaokao-latex/tests -p test_analyze_pdf.py
 
 ## 后续实测：固定来源原件与基础 OCR 对照
 
-已找到主检出既有的 `gaokaomath-src/` 原件目录，优先复用，无需网络取件。机器可读记录见 `exams/math-gaokao-latex/benchmarks/pdf-ocr-pilot.json`，以 source_id、上游 commit 和文件 SHA-256 定位，不依赖本机绝对路径。
+已找到主检出既有的 `gaokaomath-src/` 原件目录，优先复用，无需网络取件。机器可读记录见 `math-gaokao-latex/benchmarks/pdf-ocr-pilot.json`，以 source_id、上游 commit 和文件 SHA-256 定位，不依赖本机绝对路径。
 
 | 固定来源 | 页数 | 文字层分析 | 首次耗时/再次耗时（秒） |
 |---|---:|---|---|

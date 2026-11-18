@@ -11,7 +11,7 @@
 | `<年份>/` | 各卷的规范 Markdown 源与题图草稿 |
 | `math-gaokao-latex/` | LaTeX 工程：每卷一个目录，另有 `tools/`、`tests/`、`reports/` 与来源总账 `source-manifest.json`。说明见 [其 README](math-gaokao-latex/README.md) |
 | `math-gaokao-2017-2026/` | 早期的 2017–2026 全国卷工程与 Markdown → LaTeX 转换器 |
-| `docs/` | 实施计划、流程审计与迁移记录 |
+| `docs/` | 实施计划与流程审计 |
 
 ## 使用
 

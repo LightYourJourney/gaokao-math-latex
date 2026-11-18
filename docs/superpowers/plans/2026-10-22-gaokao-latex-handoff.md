@@ -982,7 +982,7 @@
 
 ### 工作位置与 Git
 
-- canonical worktree 为 `仓库根`，分支 `feat/gaokao-phase0`。本轮只使用该既有 worktree；未新建 worktree、未进入 `main`、未 push。主工作树 `主工作树` 保持原样。
+- canonical worktree 为 `仓库根`，分支 `feat/gaokao-phase0`。本轮只使用该既有 worktree；未新建 worktree、未进入 `main`、未 push。主工作树 保持原样。
 - phase4-b29 的 TeX、四版 PDF 回执、复核回执、全库报告投影、`PROGRESS.md` 与本交接记录纳入本阶段提交；提交号以 live `git log -1 --oneline` 为准，提交后核对工作区干净。
 - 本批收口后，最早剩余生成器过期项是 `phase4-b36`（1999 上海文史类）；单卷关闭不等于完成1952—2026总项目。接续时仍须核对 worktree、分支、Git 状态与 live manifest。
 
@@ -1017,7 +1017,7 @@
 
 - 生成 TeX 阶段提交 `a869a2fc` 只更新 `questions.tex`、`answers.tex` 中 5 处句号包装：由数学模式中的 `\text{。}` 改为 `\mbox{。}`，题面数学内容未改；`generate_projects.py --batch phase1-b24 --check` 通过。
 - 正式构建 attempt `4707ef56-8915-42e5-b940-b231a204f530`，输入 manifest revision `6191`；试题版 5 页、解析版 19 页、简答版 7 页、印刷版 16 页，共 47 页。四版均 `succeeded`，errors、missing characters、overfull、undefined references 均为 0。PDF SHA-256 依次为 `61e996a8bd086cb970f665e47a8c7b3aa30cac9cdccfeab9a47637d1361a9708`、`ebffaa45c4d4a74d27e009fd4a9cf020d82e83c0dd7462c786b54beec518b675`、`1b36a7c10ea9dde1f4a9ccb12e0e26b5e1f18371ffb45462aabc23922b4be89e`、`168b95d92e44558a37f5e1391603b2f5d7811ea762e4d38231ece3d806259e20`。
-- 旧 review attempt `334e6ca3-0bf1-40dd-aa2e-32f86a108949` 的 47 页均为逐项通过。将旧版 TeX 在临时目录重建后，以同一 Poppler 26.10、120 dpi 栅格和当前 attempt 逐页比对，47/47 页 PNG 字节相同，因此继承旧八项视觉结论；并抽看四版候选锚点页。当前 review 为 `passed`，`finalize-batch` 返回 `FINALIZED / closed_with_blockers`。build、review 回执及页级继承说明见卷目录 `receipts/`；批次报告见[phase1-b24 报告](../../exams/math-gaokao-latex/reports/phase1-b24.md)。
+- 旧 review attempt `334e6ca3-0bf1-40dd-aa2e-32f86a108949` 的 47 页均为逐项通过。将旧版 TeX 在临时目录重建后，以同一 Poppler 26.10、120 dpi 栅格和当前 attempt 逐页比对，47/47 页 PNG 字节相同，因此继承旧八项视觉结论；并抽看四版候选锚点页。当前 review 为 `passed`，`finalize-batch` 返回 `FINALIZED / closed_with_blockers`。build、review 回执及页级继承说明见卷目录 `receipts/`；批次报告见[phase1-b24 报告](../../../math-gaokao-latex/reports/phase1-b24.md)。
 - 局部门禁通过：source manifest、issues、三角色 provenance、26 题 solution sources、TeX/简答/四版入口 currentness、`validate-receipts --require-final --require-current-inputs`、`review_receipts.py check-batch`、`manifest_csv --check`（775 行）、`report.py check --all`。1994 专项 `tests.test_1994_shanghai_sources` 为 16/16 通过。
 - 全量测试末次结果：`Ran 1779 tests in 606.387s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_the_cached_states_match_the_recomputed_ones` 仍报告 79 卷 manifest 缓存 `production_state` 与现场 provenance 推导不一致；首例为 `gk-2012-regular-national-outline-arts`，缓存 `complete`、现场 `answers_verified`。此为跨卷状态缓存问题，不在 phase1-b24 内批量改写。
 
@@ -1044,8 +1044,8 @@
 
 - 项目 TeX、简答源和四版入口已生成；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过。题面序列化仅对 Q16/Q17 公式断行和句号位置作无语义调整；正文来源说明改为“官方答案未认证”，front matter `official_answer: null` 不变。三角色 provenance 当前 SHA-256：`458ecfb1e2aaba4dab8d3ab7e7e07e77dc62ce6a04bd7ee6ae2767c55993e662`。
 - 最终构建 attempt `99457b35-988d-486b-82bf-ee011d6982e2`（输入 manifest revision `6188`）四版成功、45 页；错误、缺字、overfull、未定义引用均为 0。PDF SHA-256：试题版 `a6e46837b6c2035e3d6fc421b32575c5ccc89ef8b65510a393ce20b76d66b5c2`；解析版 `ae19d5e02b766abc59f94f23a0e0fa9170c5c115aeb270c44640bc95e25c0941`；简答版 `60df70de5d930f533142f2cac0c13dfef0d7fba046c40d262af4eeeeced44329`；印刷版 `fcc644253685d16a91b427891b4f0a592f4c0a606389ce6608c5573707a246cb`。
-- 四版全部页面完成八项目检，视觉回执 `passed`；Q版第2、4页 PNG SHA 与前次已实际目检图逐字节相同，继承此前结论。`review_receipts.py finalize-batch` 返回 `FINALIZED`、`closed_with_blockers`；批次报告列出唯一阻塞 `ISSUE-1417`。详见[项目生成报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-project-generation-20261104.md)、[正式构建报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-formal-build-20261104.md)与[视觉审查报告](../../exams/math-gaokao-latex/reports/phase4-b50.md)。
-- 最新门禁证据：`review_receipts.py check-batch` 无问题；`build_projects.py validate-receipts --require-final` 输出 `OK`（1 succeeded、0 pending、0 stale/invalid/failed）；`manifest_csv --check` 为当前 775 行；`report.py check --all` 报告输出与 manifest 一致。完整测试 `python3 -B -m unittest discover -s tests -q` 实际运行 `1779` 项、13 项跳过、1 项失败（582.882 秒）：`test_the_cached_states_match_the_recomputed_ones` 报告 80 卷的缓存 production_state 与现场推导不符。首例 2012 全国大纲文科在 Git 基线 revision 6181 与当前 revision 6190 中都缓存为 `complete`，现场推导为 `answers_verified`；本卷 `provenance.py check-batch --batch phase4-b50` 通过。完整结果及边界见[正式构建报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-formal-build-20261104.md)。
+- 四版全部页面完成八项目检，视觉回执 `passed`；Q版第2、4页 PNG SHA 与前次已实际目检图逐字节相同，继承此前结论。`review_receipts.py finalize-batch` 返回 `FINALIZED`、`closed_with_blockers`；批次报告列出唯一阻塞 `ISSUE-1417`。详见[项目生成报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-project-generation-20261104.md)、[正式构建报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-formal-build-20261104.md)与[视觉审查报告](../../../math-gaokao-latex/reports/phase4-b50.md)。
+- 最新门禁证据：`review_receipts.py check-batch` 无问题；`build_projects.py validate-receipts --require-final` 输出 `OK`（1 succeeded、0 pending、0 stale/invalid/failed）；`manifest_csv --check` 为当前 775 行；`report.py check --all` 报告输出与 manifest 一致。完整测试 `python3 -B -m unittest discover -s tests -q` 实际运行 `1779` 项、13 项跳过、1 项失败（582.882 秒）：`test_the_cached_states_match_the_recomputed_ones` 报告 80 卷的缓存 production_state 与现场推导不符。首例 2012 全国大纲文科在 Git 基线 revision 6181 与当前 revision 6190 中都缓存为 `complete`，现场推导为 `answers_verified`；本卷 `provenance.py check-batch --batch phase4-b50` 通过。完整结果及边界见[正式构建报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-formal-build-20261104.md)。
 
 ### 下一位 Agent 的接续边界
 
@@ -1060,7 +1060,7 @@
 ### 工作位置与 Git
 
 - canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。上一阶段登记提交为 `f91a0e33`；本次接续只修改 2002 苏豫粤桂 provenance 阶段文件。阶段提交后以 live Git 状态确认结果；未切换到 `main`、未 push。
-- 当前规范源/登记与三角色回执分别见[内部卷登记报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-paper-registration-20261104.md)和[provenance 阶段报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-provenance-20261104.md)。
+- 当前规范源/登记与三角色回执分别见[内部卷登记报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-paper-registration-20261104.md)和[provenance 阶段报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-provenance-20261104.md)。
 
 ### Live manifest 概况
 
@@ -1071,15 +1071,15 @@
 ### 最近完成的来源核查
 
 - `phase4-b48`（2003 北京文理卷）已完成原卷忠实转录、构建和视觉封账，当前仍为 `closed_with_blockers`。新查到新浪教育保存的 2003-06-09 精华听课网文理题面/参考答案分页：文科 Q18 扫描图右顶点写 A2、理科 Q17 题面写“底面边长为3”。这些是同期二手材料，不认证为固定 PDF 同版或官方勘误。
-- 已更新 `ISSUE-1398`–`1401` 的 `current_evidence` 和[2003 北京来源交叉核查报告](../../exams/math-gaokao-latex/reports/2003-beijing-contemporaneous-source-corroboration-20261104.md)。四项仍 `open` / `blocks_completion`；原题面、答案、provenance、manifest 与回执均未因二手材料改写。定向查找未定位官方扫描/勘误，但这不表示其不存在。
-- 先前的 `phase4-b47`（2003 上海文理普通卷）已经完成答案/解析、盲核、图稿、provenance、四版构建及92页视觉复核；批次 `closed_with_blockers`，两卷 Q14 的 `ISSUE-1388`/`1389` 仍为 U/PENDING。原交接快照关于“下一步才开始答案”的文字已过时，细节以 [`PROGRESS.md`](../../exams/math-gaokao-latex/PROGRESS.md) 开头阶段记录及 live manifest 为准。
+- 已更新 `ISSUE-1398`–`1401` 的 `current_evidence` 和[2003 北京来源交叉核查报告](../../../math-gaokao-latex/reports/2003-beijing-contemporaneous-source-corroboration-20261104.md)。四项仍 `open` / `blocks_completion`；原题面、答案、provenance、manifest 与回执均未因二手材料改写。定向查找未定位官方扫描/勘误，但这不表示其不存在。
+- 先前的 `phase4-b47`（2003 上海文理普通卷）已经完成答案/解析、盲核、图稿、provenance、四版构建及92页视觉复核；批次 `closed_with_blockers`，两卷 Q14 的 `ISSUE-1388`/`1389` 仍为 U/PENDING。原交接快照关于“下一步才开始答案”的文字已过时，细节以 [`PROGRESS.md`](../../../math-gaokao-latex/PROGRESS.md) 开头阶段记录及 live manifest 为准。
 - 上一轮来源证据更新的确定性校验与 Git 记录详见其阶段提交；本轮注册阶段的命令结果见下方新阶段及报告。
 
 ### 2002 苏豫粤桂卷来源接收
 
 - 已目视核对固定 source `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`：SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`、Git blob `24ff45c0af6a8707358e31392c08cb4e2c96a32f`、2 页 A3、印刷页 113–114，题签“2002 普通高等学校招生考试（苏豫粤桂）”。PDF 可见 Q1–Q22 及 Q10/Q19/Q21 图；没有答案或评分页。
-- 题签未标文理轨道；来源发布身份/复制链未核。仍按单一固定文件处理，不拆成四套；现已登记内部 paper/batch，不据此认证来源身份。完整页图、范围和边界见[来源接收报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-source-intake.md)。
-- 后续与全国旧/新课程四卷的题面比对已完成，卷种与分类边界见下一小节及[比对报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-scope-comparison-20261104.md)。
+- 题签未标文理轨道；来源发布身份/复制链未核。仍按单一固定文件处理，不拆成四套；现已登记内部 paper/batch，不据此认证来源身份。完整页图、范围和边界见[来源接收报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-source-intake.md)。
+- 后续与全国旧/新课程四卷的题面比对已完成，卷种与分类边界见下一小节及[比对报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-scope-comparison-20261104.md)。
 
 ### 2002 苏豫粤桂卷范围比对
 
@@ -1089,27 +1089,27 @@
 
 ### 2002 苏豫粤桂卷题面转录
 
-- 已完成固定 PDF Q1–Q22 转录草稿，选择12题、填空4题、解答6题；报告与具体源内字形事项见[转录报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-question-transcription-20261104.md)。Q10、Q19、Q21 原页图现已矢量重绘并链接，细节见本节“图稿阶段”。
+- 已完成固定 PDF Q1–Q22 转录草稿，选择12题、填空4题、解答6题；报告与具体源内字形事项见[转录报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-question-transcription-20261104.md)。Q10、Q19、Q21 原页图现已矢量重绘并链接，细节见本节“图稿阶段”。
 - 当前题面草稿 SHA-256：`2b90924f6eedf37060b9925f3fa32a93a06d6b13c5ca696c4e97c4e990e0936b`。Q12“十·五”、Q14 指数 7、Q17 共轭横线按原页照录；来源 PDF 文字层只用于定位，未调用 OCR。
-- Q1–Q22 独立题面复核已完成，逐题结果见[复核报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-question-review-20261104.md)。Q10(B) 原先误称“竖直坐标轴”，现按原页更正为直线 $x=1/2$；它与圆心重合，对应题目方程。题面稿现已链接独立矢量图。
+- Q1–Q22 独立题面复核已完成，逐题结果见[复核报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-question-review-20261104.md)。Q10(B) 原先误称“竖直坐标轴”，现按原页更正为直线 $x=1/2$；它与圆心重合，对应题目方程。题面稿现已链接独立矢量图。
 
 ### 2002 苏豫粤桂卷答案与解析
 
-- 已形成 Q1–Q22 本库独立推导草稿：[答案要点](../../exams/math-gaokao-latex/drafts/2002-suyuyuegui/答案要点.md)、[解析正文](../../exams/math-gaokao-latex/drafts/2002-suyuyuegui/解析正文.md)。当前 SHA-256 分别为 `705c75965d6ff4f8893fd8e3c2fa8f21d86da18e66b57ff12b62a70e3a9efd1e` 与 `2be78cecb67a11310a408eab0c9cf2f588a13d93b4ed3df456c84e6b25d454c3`；逐题复核见[独立答案复核报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-answer-review-20261104.md)。
+- 已形成 Q1–Q22 本库独立推导草稿：[答案要点](../../../math-gaokao-latex/drafts/2002-suyuyuegui/答案要点.md)、[解析正文](../../../math-gaokao-latex/drafts/2002-suyuyuegui/解析正文.md)。当前 SHA-256 分别为 `705c75965d6ff4f8893fd8e3c2fa8f21d86da18e66b57ff12b62a70e3a9efd1e` 与 `2be78cecb67a11310a408eab0c9cf2f588a13d93b4ed3df456c84e6b25d454c3`；逐题复核见[独立答案复核报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-answer-review-20261104.md)。
 - 固定 PDF 无答案/评分页；答案均为非官方推导、`official_answer=null`。独立复核未发现实质性数学错误；Q18 保留零公比约定两种口径，Q19 明确采用棱锥两侧面围成的内二面角。Q21 剪线虚线现已绘入独立答案辅助图，图稿不表示剪下后的配对、翻转、剪角平移或成品展开状态，操作由解析正文说明。盲解与主会话在 Q2、Q3、Q10、Q20 四项结论不同，均以重新推导和原页复看结果修正。
 
 ### 2002 苏豫粤桂卷题图矢量转录
 
-- 按固定来源 PDF SHA `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`，重绘 Q10 四选项、Q19 四棱锥、Q21 三张空白题面图和答案剪线图；逐图报告见[题图矢量转录报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-figure-transcription-20261104.md)。
+- 按固定来源 PDF SHA `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`，重绘 Q10 四选项、Q19 四棱锥、Q21 三张空白题面图和答案剪线图；逐图报告见[题图矢量转录报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-figure-transcription-20261104.md)。
 - 四个独立 TikZ 文件位于 `2002_苏豫粤桂卷/figures/`。Q10、Q19、Q21 原题图分别链接在题面草稿；Q21 答案剪线图单独链接在解析草稿。Q10 片段首次审查发现 A/B 圆心误放原点，已按原页改为圆心 $(1/2,0)$、O 为左端点，并重新编译复看；Q21 片段只表示剪线，不能独自说明配对和平移。
 - 四图使用 XeLaTeX+CTeX scratch 编译成功并对渲染图做目视检查。scratch PDF/PNG 在忽略目录 `.work/2002-suyuyuegui-figure-review/`，不作为正式版本的构建回执或最终排版验收。
 - 已建立规范题面、答案要点、解析正文，并确定性生成 `_含解析.md`。paper `gk-2002-regular-suyuyuegui` 与 batch `phase4-b50` 已登记；source 与 paper 的关系为 `canonical`，source `track=null`、`regions=[]` 保持不变。四图均登记，引用次数为 Q10/Q19/Q21 原图各2、Q21答案剪线图1。
 - 登记阶段结束时 `ISSUE-1417` 记录 Q18 零公比约定，状态 `open / blocks_completion`；答案要点保留 U/PENDING 和两个条件分支。paper `blocked`、batch `planned`；身份未认证且 `official_answer=null`。三角色 provenance 随后的阶段状态见本交接下方记录。
-- 登记阶段的 source manifest、issues、22 题 solution sources、CSV currentness 和全量报告 currentness 结果见[登记报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-paper-registration-20261104.md)。
+- 登记阶段的 source manifest、issues、22 题 solution sources、CSV currentness 和全量报告 currentness 结果见[登记报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-paper-registration-20261104.md)。
 
 ### 2002 苏豫粤桂卷三角色 provenance
 
-- 已为 Q1–Q22 导入 question-review、answer-solve、answer-review 三角色 provenance，SHA-256 `63bd83a95aed270e90d475115ca61314148cd5e175b784e6d3a58285188d28ef`。题面复核均 passed，答案 D 21 题、U 1 题；Q18 的 U 与 `ISSUE-1417` 相连，答案复核没有另列计算冲突，未把定义约定误记作两解冲突。证据范围、页码映射及角色来源见[provenance 阶段报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-provenance-20261104.md)。
+- 已为 Q1–Q22 导入 question-review、answer-solve、answer-review 三角色 provenance，SHA-256 `63bd83a95aed270e90d475115ca61314148cd5e175b784e6d3a58285188d28ef`。题面复核均 passed，答案 D 21 题、U 1 题；Q18 的 U 与 `ISSUE-1417` 相连，答案复核没有另列计算冲突，未把定义约定误记作两解冲突。证据范围、页码映射及角色来源见[provenance 阶段报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-provenance-20261104.md)。
 - `provenance.py check-batch` 输出 `OK：1 卷`；source manifest、issues 与 22 题 solution sources 校验通过。revision `6180→6181`，batch `provenance_verified`、paper `blocked`。全量报告仍是 revision 6180 快照，项目生成刷新共享 index 后重新生成/核验。未生成项目 TeX/简答/四版入口，也未构建正式 PDF 或视觉审查。
 
 ### 当时的下一阶段计划（已完成）
@@ -1290,7 +1290,7 @@ canonical worktree与分支仍为`phase0-wt` / `feat/gaokao-phase0`。
 新对话先核对：
 
 ```sh
-cd 仓库根
+cd <仓库根>
 git status --short --branch
 git log -1 --oneline --decorate
 ```
@@ -1361,9 +1361,9 @@ git log -1 --oneline --decorate
 ## 2026-10-28 接续：phase4-b38（2015 重庆文史类）已 FINALIZED
 
 - 21 题 D 级（选 1–10／填 11–15／解 16–21），四版 5/25/7/21 页、零告警，batch closed、paper complete，revision 5369。
-- 盲解全一致；Q20(2) 图取 BC=3（另一解 3√3 已在答案披露）；Q8 框图分式改 `rac`，Q20/Q21 图标签已避让。
+- 盲解全一致；Q20(2) 图取 BC=3（另一解 3√3 已在答案披露）；Q8 框图分式改 `\frac`，Q20/Q21 图标签已避让。
 - 注意：2015 福建文已有另一会话的 22 题草稿（未登记，Q12 选择答案疑为 B，独立核算应为 A，宜复核后再登记）。
-- **纠正（2026-11-03）**：见[2015 福建文科预登记复核报告](../../exams/math-gaokao-latex/reports/2015-fujian-arts-preregistration-review.md)。固定原页 Q12 是 $k\sin x\cos x<x$（末项没有平方），令 $P$ 为该命题、$Q$ 为 $k<1$，有 $P\iff k\le1$；$Q\Rightarrow P$ 而 $P\nRightarrow Q$，故答案 B“必要而不充分”。前一行的 A 判断倒置了“P 是 Q 的条件”的蕴含方向，应视为已被本条取代。
+- **纠正（2026-11-03）**：见[2015 福建文科预登记复核报告](../../../math-gaokao-latex/reports/2015-fujian-arts-preregistration-review.md)。固定原页 Q12 是 $k\sin x\cos x<x$（末项没有平方），令 $P$ 为该命题、$Q$ 为 $k<1$，有 $P\iff k\le1$；$Q\Rightarrow P$ 而 $P\nRightarrow Q$，故答案 B“必要而不充分”。前一行的 A 判断倒置了“P 是 Q 的条件”的蕴含方向，应视为已被本条取代。
 
 ## 2026-10-28 接续：phase4-b39（2015 重庆理工农医类）已 FINALIZED
 
