@@ -1,6 +1,6 @@
 # 2006 重庆、陕西文理候选卷：第二次四版正式构建
 
-- 日期：2026-11-03；批次 `phase1-b80`；承接 attempt 01 的排版修正提交 `4590172`。
+- 日期：2026-11-03；批次 `phase1-b80`；承接 attempt 01 的排版修正提交 `4cfc88d`。
 - 工具链：TeX Live 2026，XeTeX 0.999998，latexmk 4.88，Poppler 26.10.0。四份 attempt receipt 均按 manifest revision 6006 构建；批次事务后 source manifest revision 为 6007。
 
 | 试卷 | attempt ID | 试题版 | 解析版 | 简答版 | 印刷版 | 卷回执状态 |

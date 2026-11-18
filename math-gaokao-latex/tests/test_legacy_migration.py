@@ -470,7 +470,7 @@ class MigrationTests(unittest.TestCase):
                 self.assertEqual(len(set(paths)), len(paths))
                 expected_frozen = list(frozen[entry.legacy_id])
                 if entry.legacy_id == "2019li":
-                    # 3fd0b6f0：迁移后补回、已独立核验的六爻矢量图；冻结迁移
+                    # 297fb35f：迁移后补回、已独立核验的六爻矢量图；冻结迁移
                     # 基线本身不应被改写，但 live figure tree 必须纳入它。
                     expected_frozen.append(
                         "2019_全国Ⅰ卷_理科/figures/f2019_t6_hexagram.tex"

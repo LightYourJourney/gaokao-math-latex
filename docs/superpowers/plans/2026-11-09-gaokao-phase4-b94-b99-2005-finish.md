@@ -2,7 +2,7 @@
 
 - 冻结时间：2026-11-09
 - 分支 / 工作树：工作分支（`仓库根`）
-- 基线提交：`a0fae969e`（docs: 更新项目交接与进度记录至 phase4-b93）
+- 基线提交：`71c6612d3`（docs: 更新项目交接与进度记录至 phase4-b93）
 - manifest revision：6683（775 sources / 464 papers / 310 batches）
 
 ## 1. live 状态核对（task-1 证据）

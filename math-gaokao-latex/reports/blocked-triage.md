@@ -25,8 +25,8 @@
 
 目标里的 111 套 blocked 是立项时（2026-11-09）的口径注记，**无法从当前仓库机械复算**；本轮已封账 5 套（`gk-1986-regular-guangdong-arts`、
 `gk-1987-regular-national-science`、`gk-2003-spring-beijing-science`、`gk-2020-regular-national-1-arts`、
-`gk-2022-regular-national-b-arts`；封账提交分别为 1b2233070 / e65b0d18a / 12e987200 / c30406301），
-另有 3 套原为 `compiled` 的已封账（`gk-2019-regular-national-1-{arts,science}`、`gk-2020-regular-national-1-science`，提交 12e987200）。
+`gk-2022-regular-national-b-arts`；封账提交分别为 c7e5d0dd2 / 003552c0f / 1e021f49f / 5961699ed），
+另有 3 套原为 `compiled` 的已封账（`gk-2019-regular-national-1-{arts,science}`、`gk-2020-regular-national-1-science`，提交 1e021f49f）。
 因此 111 = 本表 106 套 + 已封账 5 套。
 
 ## 计数
@@ -67,16 +67,16 @@
 
 | 年 | 试卷 | blocked_from | build | review | U 题号 | U 判定分歧 | 未结 ISSUE | ISSUE 类型 | 上游 PDF 在盘 | 结论 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 2020 | gk-2020-regular-national-1-arts | — | succeeded | passed | — | — | ISSUE-0019,ISSUE-0020,ISSUE-0021,ISSUE-0022,ISSUE-0023 | answer-missing,layout-warning,source-mismatch,source-unavailable | 是 | 补源后完成（本轮封账，提交 12e987200） |
+| 2020 | gk-2020-regular-national-1-arts | — | succeeded | passed | — | — | ISSUE-0019,ISSUE-0020,ISSUE-0021,ISSUE-0022,ISSUE-0023 | answer-missing,layout-warning,source-mismatch,source-unavailable | 是 | 补源后完成（本轮封账，提交 1e021f49f） |
 | 2025 | gk-2025-regular-national-1 | legacy_unverified | succeeded | passed | — | — | ISSUE-0048,ISSUE-0050,ISSUE-0056,ISSUE-0057,ISSUE-0058,ISSUE-0059 | source-mismatch,source-unavailable,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
 | 2026 | gk-2026-regular-national-1-recall | legacy_unverified | succeeded | passed | — | — | ISSUE-0001,ISSUE-0060,ISSUE-0061,ISSUE-0062,ISSUE-0064,ISSUE-0065,ISSUE-0066,ISSUE-0067,ISSUE-0068,ISSUE-0069 | answer-conflict,answer-missing,identity-ambiguous,source-mismatch,source-unavailable,transcription-ambiguous | — | 缺源 |
 | 1977 | gk-1977-regular-inner-mongolia-arts | planned | succeeded | passed | — | — | ISSUE-0129,ISSUE-0130 | answer-conflict | 是 | 保留 U（源缺陷/歧义） |
 | 1977 | gk-1977-regular-jiangsu | planned | succeeded | passed | — | — | ISSUE-0131,ISSUE-0132 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
 | 1977 | gk-1977-regular-fujian-arts | planned | succeeded | passed | 4,6 | 题面多 4,6 | ISSUE-0133,ISSUE-0134,ISSUE-0135,ISSUE-0136 | answer-missing,transcription-ambiguous | 是 | 保留 U |
 | 1977 | gk-1977-regular-fujian-science | planned | succeeded | passed | 7 | 题面多 7 | ISSUE-0137,ISSUE-0138,ISSUE-0139 | transcription-ambiguous | 是 | 保留 U |
-| 1986 | gk-1986-regular-guangdong-arts | — | succeeded | passed | — | — | — | — | 是 | 补源后完成（本轮封账，提交 1b2233070） |
+| 1986 | gk-1986-regular-guangdong-arts | — | succeeded | passed | — | — | — | — | 是 | 补源后完成（本轮封账，提交 c7e5d0dd2） |
 | 1986 | gk-1986-regular-guangdong-science | planned | succeeded | passed | 1,2 | 题面多 1,2 | ISSUE-0778,ISSUE-0797,ISSUE-1053,ISSUE-1054,ISSUE-1055,ISSUE-1056,ISSUE-1082,ISSUE-1083,ISSUE-1084 | answer-conflict,transcription-ambiguous | 是 | 保留 U |
-| 1987 | gk-1987-regular-national-science | — | succeeded | passed | — | — | — | — | 是 | 补源后完成（本轮封账，提交 e65b0d18a） |
+| 1987 | gk-1987-regular-national-science | — | succeeded | passed | — | — | — | — | 是 | 补源后完成（本轮封账，提交 003552c0f） |
 | 1987 | gk-1987-regular-guangdong-science | planned | succeeded | passed | — | — | ISSUE-0781,ISSUE-0782,ISSUE-0783,ISSUE-0784,ISSUE-0791,ISSUE-0792 | answer-conflict,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
 | 1988 | gk-1988-regular-guangdong-science | planned | succeeded | passed | — | — | ISSUE-0785 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
 | 1997 | gk-1997-regular-national-science | complete | succeeded | passed | 23 | — | ISSUE-1072,ISSUE-1073 | answer-missing,transcription-ambiguous | 是 | 保留 U |
@@ -97,7 +97,7 @@
 | 2021 | gk-2021-regular-national-b-arts | planned | succeeded | passed | — | — | ISSUE-0884 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
 | 2021 | gk-2021-regular-national-a-science | planned | succeeded | passed | — | — | ISSUE-0885,ISSUE-0895 | source-mismatch,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
 | 2021 | gk-2021-regular-national-b-science | planned | succeeded | passed | — | — | ISSUE-0886 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
-| 2022 | gk-2022-regular-national-b-arts | — | succeeded | passed | — | — | — | — | 是 | 补源后完成（本轮封账，提交 c30406301） |
+| 2022 | gk-2022-regular-national-b-arts | — | succeeded | passed | — | — | — | — | 是 | 补源后完成（本轮封账，提交 5961699ed） |
 | 2022 | gk-2022-regular-national-b-science | planned | succeeded | passed | 11 | — | ISSUE-0898 | answer-missing | 是 | 保留 U |
 | 2016 | gk-2016-regular-national-1-arts | planned | succeeded | passed | 23 | — | ISSUE-0932,ISSUE-0934 | answer-conflict,answer-missing | 是 | 保留 U |
 | 2016 | gk-2016-regular-national-1-science | planned | succeeded | passed | 23 | — | ISSUE-0933,ISSUE-0935 | answer-conflict,answer-missing | 是 | 保留 U |
@@ -138,7 +138,7 @@
 | 2004 | gk-2004-spring-beijing-arts | planned | succeeded | passed | — | — | ISSUE-1238 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
 | 2009 | gk-2009-spring-shanghai | planned | succeeded | passed | 16 | — | ISSUE-1239,ISSUE-1240 | answer-conflict,answer-missing | 是 | 保留 U |
 | 2015 | gk-2015-regular-shaanxi-science | planned | succeeded | passed | 11,16,19 | provenance 多 11,16,19 | ISSUE-1245,ISSUE-1246,ISSUE-1247 | answer-convention-ambiguous,answer-missing | 是 | 保留 U |
-| 2003 | gk-2003-spring-beijing-science | — | succeeded | passed | — | — | — | — | 是 | 补源后完成（本轮封账，提交 e65b0d18a） |
+| 2003 | gk-2003-spring-beijing-science | — | succeeded | passed | — | — | — | — | 是 | 补源后完成（本轮封账，提交 003552c0f） |
 | 2021 | gk-2021-spring-shanghai | planned | succeeded | passed | 9,12 | 题面多 12 | ISSUE-1251,ISSUE-1252 | answer-conflict,answer-convention-ambiguous | 是 | 保留 U |
 | 1989 | gk-1989-regular-guangdong-arts | planned | succeeded | passed | 9,16,21 | — | ISSUE-1259,ISSUE-1260,ISSUE-1261,ISSUE-1262,ISSUE-1263 | answer-conflict,answer-convention-ambiguous,answer-missing | 是 | 保留 U |
 | 2004 | gk-2004-spring-shanghai | planned | succeeded | passed | 14,18 | provenance 多 18 | ISSUE-1264,ISSUE-1265,ISSUE-1266 | answer-conflict,answer-convention-ambiguous,answer-missing | 是 | 保留 U |

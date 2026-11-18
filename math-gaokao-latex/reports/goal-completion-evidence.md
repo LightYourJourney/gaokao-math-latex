@@ -1,7 +1,7 @@
 # 目标完成证据（2026-11-09，工作分支）
 
 本文件只记录**可复算**的证据：每条给出命令、文件与当前值。所有命令均在
-`仓库根` 执行，末次校验提交 `84c7614a4`，工作树干净（`git status --short` 0 行，未 push）。
+`仓库根` 执行，末次校验提交 `47364ed9d`，工作树干净（`git status --short` 0 行，未 push）。
 
 ## 1. 三套 compiled 封账
 
@@ -21,11 +21,11 @@ print([(p['paper_id'],p['production_state']) for p in m['papers'] if p['paper_id
 链路：`build_projects.py build --formal --batch phase0-b02` → `COMPILED_PENDING_REVIEW`（failed 0）→
 `review_receipts.py prepare-batch` → 回执逐项 `pass` → `finalize-batch`（首轮因 2019 理/文
 `('简答版'|'解析版'|'试题版','Underfull','hbox',None,'53--54')` 缺豁免失败，补 `warning_exemptions` 后
-`FINALIZED`）。提交 `12e987200`。
+`FINALIZED`）。提交 `1e021f49f`。
 
-本轮另封账 5 套原 `blocked` 卷：`gk-1986-regular-guangdong-arts`（`1b2233070`）、
-`gk-1987-regular-national-science`、`gk-2003-spring-beijing-science`（`e65b0d18a`）、
-`gk-2022-regular-national-b-arts`（`c30406301`），以及 `gk-2020-regular-national-1-arts`（`12e987200`）。
+本轮另封账 5 套原 `blocked` 卷：`gk-1986-regular-guangdong-arts`（`c7e5d0dd2`）、
+`gk-1987-regular-national-science`、`gk-2003-spring-beijing-science`（`003552c0f`）、
+`gk-2022-regular-national-b-arts`（`5961699ed`），以及 `gk-2020-regular-national-1-arts`（`1e021f49f`）。
 
 ## 2. 111 套 blocked 逐条复核与分流
 
@@ -57,7 +57,7 @@ print([(p['paper_id'],p['production_state']) for p in m['papers'] if p['paper_id
 | `source_manifest.py validate --manifest …` | rc=0 |
 | `issues.py validate --file missing-issues.md` | rc=0 |
 
-316 批重扫提交 `c9bac283c`；重渲 `d2a0dc1c0`、`0c7390478`。
+316 批重扫提交 `0da37ac56`；重渲 `76cc8b384`、`bab751264`。
 
 ## 4. 报告与清单同步
 

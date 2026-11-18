@@ -61,5 +61,5 @@
 - [x] 审查代理（1 图自查 + 11 段；**分波 ≤5 支并发**，零 524）：12 支全部回收，576 项中 1 fail（解析版 p32 Q21(1) 溢出）＋印刷版 Q12 Underfull（日志级）。
 - [x] 修复轮：md 治本两处（Q21 长根式区间改引 x₁/x₂；Q12 验证段去长小数原子）→ extract/generate/short/editions → 重建（attempt 9be06756，四版 0 告警）→ 同引擎差分（试题/简答零变更；解析 4 页、印刷 3 页）→ 2 支定向复审全过（bbox 585.85→532.91、墨迹 582.32→531.48）。
 - [x] 回执合并（512 pass/0 fail/64 na）→ prepare-batch 换绑 → collect_receipts → **finalize**（先于 check-batch）→ check-batch 复核 FINALIZED。
-- [x] 报告刷新（六全量＋phase3-b09.md：closed／passed／零问题）→ unittest（862 项 1 失败＝既存 poppler 基线）→ 清理 build 中间件 → manifest_csv --write → 显式路径提交 `7179d7ce`（31 文件；**不 push**；注明 b14 在途）。
+- [x] 报告刷新（六全量＋phase3-b09.md：closed／passed／零问题）→ unittest（862 项 1 失败＝既存 poppler 基线）→ 清理 build 中间件 → manifest_csv --write → 显式路径提交 `9b5e231d`（31 文件；**不 push**；注明 b14 在途）。
 - [x] 审查回执填写（逐页×8 项）→ finalize → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。

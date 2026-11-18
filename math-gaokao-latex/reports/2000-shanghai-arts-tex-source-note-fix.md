@@ -13,7 +13,7 @@
 - 只改规范 `_试题.md`、`_答案要点.md`、`_解析正文.md` 的来源/答案归属说明，将行内标识改为普通中文，避免 TeX 裸下划线。各文件 front matter 中的 `paper_id` 与 `official_answer: null` 保持不变；题目、答案、解析数学内容未改。
 - 依序重生 `_含解析.md`、`questions.tex` 与 `answers.tex`。生成 TeX 的题面和答案说明中不再含 `official_answer` 或 `paper_id`。`solution_sources.py check-batch` 与 `provenance.py check-batch` 通过，保持 22 题转录和既有逐题证据。
 - `source_manifest.py validate`、`issues.py validate`、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过。正式失败事务导致 `manifest.csv` 过期；从仓库根目录重生后，`manifest_csv.py --check` 确认 775 行 current。
-- 初次失败回执随修正阶段提交于 `c7c0108`；后续成功构建替换了当前 `receipts/build.json`，并通过 `previous_attempt_id` 串回首次失败 attempt。自动生成的 `ISSUE-1365`–`ISSUE-1368` 在成功重建后均 resolved；Q21 的 `ISSUE-1363`/`ISSUE-1364` 仍 open 并阻止整卷完成。
+- 初次失败回执随修正阶段提交于 `9e97936`；后续成功构建替换了当前 `receipts/build.json`，并通过 `previous_attempt_id` 串回首次失败 attempt。自动生成的 `ISSUE-1365`–`ISSUE-1368` 在成功重建后均 resolved；Q21 的 `ISSUE-1363`/`ISSUE-1364` 仍 open 并阻止整卷完成。
 
 ## 阶段边界
 

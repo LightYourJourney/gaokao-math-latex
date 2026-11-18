@@ -4,7 +4,7 @@
 
 ## 实际构建与修复
 
-来源阶段提交97d5b989后启动正式四版构建。首轮attempt `63411d26-f7ed-468a-ae47-40f40fa8173f`，四版4/16/6/13页：解析版answers.tex第497行Underfull badness10000，简答版answers_short.tex第33–34行Overfull 80.75885pt。主代理实际查看解析第16页与简答第6页，确认Q20长集合让答案框字距失衡，并在简答版越出版心、右侧被裁切；没有豁免。旧build/provenance、pending视觉工作项和两页实际失败观察归档在`.work/phase1-b52/review-history/63411d26-f7ed-468a-ae47-40f40fa8173f/`；其他旧页未检查，不声称通过。
+来源阶段提交e7e03ed2后启动正式四版构建。首轮attempt `63411d26-f7ed-468a-ae47-40f40fa8173f`，四版4/16/6/13页：解析版answers.tex第497行Underfull badness10000，简答版answers_short.tex第33–34行Overfull 80.75885pt。主代理实际查看解析第16页与简答第6页，确认Q20长集合让答案框字距失衡，并在简答版越出版心、右侧被裁切；没有豁免。旧build/provenance、pending视觉工作项和两页实际失败观察归档在`.work/phase1-b52/review-history/63411d26-f7ed-468a-ae47-40f40fa8173f/`；其他旧页未检查，不声称通过。
 
 仅将规范答案要点Q20(2)的六对坐标改成六个行内数学坐标逐项列举，让中文顿号处分行。机械比对六对坐标及顺序完全相同，数学结论未改。先同步规范含解析与共享TeX、简答，再更新工作角色证据与Q20答案表示哈希，正式re-import（revision5316→5317）；题面20个哈希和其他19题整条provenance完全不变。Q20答案哈希由db62cecc625bc48ffa74a0305f4c705f511f5c575c050dfef81494b8a9d649c1变为ac73f46099b18288b5fe8796b88042c458c9a8e41071e23203658836b8c019ad。身份角色未改变，证据明确这是盲解后的编辑性等价换行，未伪称重新盲解或源文勘误。
 

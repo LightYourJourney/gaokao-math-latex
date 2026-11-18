@@ -1,6 +1,6 @@
 # 2006 重庆、陕西文理候选卷：第三次四版正式构建
 
-- 日期：2026-11-03；批次 phase1-b80；承接答案数学排版修正提交 aa83abf。
+- 日期：2026-11-03；批次 phase1-b80；承接答案数学排版修正提交 ed14223。
 - 命令：tools/build_projects.py build --manifest source-manifest.json --issues missing-issues.md --formal --batch phase1-b80 --json。
 - 四个 attempt receipts 的 manifest revision 均为6012；构建事务后 source manifest 为6013。最终 JSON 返回 COMPILED_PENDING_REVIEW，failed=0，pending=4。四卷每版均为 succeeded，且每版错误、缺字、overfull、未定义引用计数全部为0。
 

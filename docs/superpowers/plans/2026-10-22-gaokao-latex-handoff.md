@@ -607,7 +607,7 @@
 ## 2026-11-10 接续：2007 天津文/理（phase5-b02、b03）封账
 
 - 工作树与分支保持 `phase0-wt` / 工作分支，未动 main、未 push。
-- 2007 上海理科（21题）`phase5-b01` 已封账（revision 7719，attempt `91828da8-…-66c677f8`，四版 4/15/6/13 页），全量 unittest 修复已提交 `20bfd8a28`。
+- 2007 上海理科（21题）`phase5-b01` 已封账（revision 7719，attempt `91828da8-…-66c677f8`，四版 4/15/6/13 页），全量 unittest 修复已提交 `924fb3e77`。
 - 2007 天津理科（22题，`gk-2007-regular-tianjin-science`）`phase5-b02` FINALIZED/closed，revision 7722，attempt `27ddfd9b-d753-421d-8f19-8ff81431194e`；四版 5/25/7/19 页共 56 页 0 fail/pending，解析版 2 条 Overfull 已逐项豁免。
 - 2007 天津文科（22题，`gk-2007-regular-tianjin-arts`）`phase5-b03` FINALIZED/closed，revision 7736，attempt `0e644cd1-c933-4206-b40c-bb941eb8060e`；四版 5/26/7/20 页共 58 页 0 fail/pending，解析版 1 条 5.77pt Overfull 已豁免。首轮构建的解析版 Q4 公式超版心 100.44pt 已改为 `aligned` 三行修掉（属真实缺陷，未走豁免）。
 - 两卷来源与解答均为「官方身份未核 / 非官方独立推导」边界。读法疑点留证：理卷 Q15 `AB=2AC=1` 读作 AB=1、AC=1/2（−2/3），Q16 按 1×4 长条读作 390；文卷 Q16 题面另要求两端不同色 → 按环 C₄ 得 630（与理卷 390 区分）。文卷另有三处源疑点（Q1、Q11 缺逗号、Q12 裁切）按原页照录。
@@ -868,7 +868,7 @@
 
 - `gk-2016-regular-beijing-arts`，20题；source `src-ecf09b64f30a39442d38dc7cc78ae41e3b5138c23a4ddb059f098ac5816543bf`，固定 PDF SHA-256 `f25691253d50ee9aae94243518695e8e7793e32e4b3f22077c9bf6407272d89e`，印刷页995–996。固定源仅含题面，答案/解析为独立编者推导、非官方；Q8 的答案歧义仍标 `U`，ISSUE-1005 阻塞内容完成。
 - build attempt `961e27fb-5508-4457-ba18-e88b5dbe66f1`，输入 manifest revision 6312，build 后 6313，finalize 后 6314。试题/解析/简答/印刷版5/21/7/17页，共50页；均 succeeded，TeX errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：`6d2c5692ef44c5f00ccd41dcf0ff9119d1cf7701d84fd809ab6878a3871ef7b7`、`f0a9d823cb6e064cb4fcf58d81a8fafb0a12322868cf02933a33e58da6f617c7`、`564ca6b3777cd708ba5c551f55742dfdcf38e588e137b9a3c258b78f9ca3014e`、`f08fea745376bc49b88f18eb8cf1e62c8ef8e752c6f4c4b444ced3c7002d1bbf`。
-- 50页视觉检查400项：338 pass、62 not_applicable、0 fail。复核纠正了解析版的页眉误报、简答版第5页页眉误报，并将试题版总结果设为 pass。`finalize-batch` 返回 `FINALIZED`，批次 `closed_with_blockers`；solution sources、provenance、生成器、build receipts、全量报告 render/check 通过。投影提交 `c0233b2`，正式构建提交 `dc78ba5`；收口回执、报告及进度/交接记录已分阶段提交。
+- 50页视觉检查400项：338 pass、62 not_applicable、0 fail。复核纠正了解析版的页眉误报、简答版第5页页眉误报，并将试题版总结果设为 pass。`finalize-batch` 返回 `FINALIZED`，批次 `closed_with_blockers`；solution sources、provenance、生成器、build receipts、全量报告 render/check 通过。投影提交 `9974fbe`，正式构建提交 `c79b625`；收口回执、报告及进度/交接记录已分阶段提交。
 
 ### 当前门禁与接续
 
@@ -881,7 +881,7 @@
 
 ### 工作位置与 Git
 
-- 只使用既有规范 worktree `仓库根` / 工作分支；未新建 worktree、未 push。生成 TeX 阶段提交 `976b5eec`，复核输入 build 阶段提交 `8811f18`；本次视觉结案、报告投影、进度及交接记录为后续阶段提交。
+- 只使用既有规范 worktree `仓库根` / 工作分支；未新建 worktree、未 push。生成 TeX 阶段提交 `98a80c5e`，复核输入 build 阶段提交 `af7fe5e`；本次视觉结案、报告投影、进度及交接记录为后续阶段提交。
 - 用户要求本批完成后停工：phase1-b46 收口后不开始下一批。提交后确认工作分支工作区干净，并确认 worktree 列表未新增项。
 
 ### Live manifest、来源与构建
@@ -900,14 +900,14 @@
 
 ### 工作位置与 Git
 
-- 只使用现有规范 worktree `仓库根` / 工作分支；不新建 worktree、不 push。TeX/构建阶段提交 `5353fa39` 已在分支；本次视觉结案回执、全量报告投影、`PROGRESS.md` 与本交接为结案阶段提交范围。
+- 只使用现有规范 worktree `仓库根` / 工作分支；不新建 worktree、不 push。TeX/构建阶段提交 `e7d6359c` 已在分支；本次视觉结案回执、全量报告投影、`PROGRESS.md` 与本交接为结案阶段提交范围。
 本任务未触碰。接续时先读 live Git 与 manifest，不凭历史快照切换目录。
 
 ### Live manifest、来源与构建
 
 - manifest revision `6257`；`phase1-b42`=`closed`，`gk-2006-regular-shanghai-science`=`complete`，无 issue。固定题面 source `src-7f8706c4a44fd822ba2bb30b55a3f647f1fdf82d7805be1e62d4ee2030ebe4e6` / SHA-256 `0d035a931057065fdef8df4ae2019a97e9e95a04a98a6562df3cd02725e632b5`，2页题面、印刷页码328–329。发布者、版次、扫描链及官方身份未核；无答案页，答案与解析为独立编者推导、非官方。
 - 本批只把 Q13/Q15/Q16 的项目 TeX 选项投影同步到现行生成器；事实层 Markdown、图稿与 provenance 未改。正式 build attempt `e5c24644-d7fc-4170-8aea-bb54fc0139bb`，输入 revision 6255、finalizer revision 6257。试题/解析/简答/印刷版4/18/6/14页，共42页；四版均 succeeded，errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：试题 `757e4288a3b876982ebd88b692d735d09c6d3653df3c20c4a8b8a95a93787bbe`；解析 `7e234170d3dfcf6f1c69b2b8736906be87358b7395329ec3d0f201a82a814d98`；简答 `352db78251b0987eee33fde11b5a92234fa840007787325336efe4f9a2d08546`；印刷 `38230c382ac802d304544fcc7d0067dd40b83b8db033f798662085a5013b04e9`。
-- 旧 build attempt `70f8a767-2970-451f-b10b-d1dfd9feb86d` 的旧 review SHA-256 为 `884318c180706ab9ffd8f0bd0d817f12c26bc12a39b8290e23b6506ebef46658`。旧 PDF/PNG 没有归档；旧版 TeX/依赖取自提交 `957d628f`，按相同工具链重建作基线，历史 PDF 字节哈希不一致，不能写成旧 PDF 原件比较。150 dpi 下28/42页栅格与重建基线相同并继承旧回执 pass；14个变化页（试题p2；解析p2、p11–18；简答p2；印刷p2、p9–10）全尺寸检查。336项八类检查：332 pass、4 not_applicable、0 fail；警告豁免0。视觉审查报告 `reports/phase1-b42.md` 已结案。
+- 旧 build attempt `70f8a767-2970-451f-b10b-d1dfd9feb86d` 的旧 review SHA-256 为 `884318c180706ab9ffd8f0bd0d817f12c26bc12a39b8290e23b6506ebef46658`。旧 PDF/PNG 没有归档；旧版 TeX/依赖取自提交 `edc74eb8`，按相同工具链重建作基线，历史 PDF 字节哈希不一致，不能写成旧 PDF 原件比较。150 dpi 下28/42页栅格与重建基线相同并继承旧回执 pass；14个变化页（试题p2；解析p2、p11–18；简答p2；印刷p2、p9–10）全尺寸检查。336项八类检查：332 pass、4 not_applicable、0 fail；警告豁免0。视觉审查报告 `reports/phase1-b42.md` 已结案。
 
 ### 校验、全库例外与接续点
 
@@ -920,7 +920,7 @@
 
 ### 工作位置与 Git
 
-- 只使用现有 canonical worktree `仓库根` 与工作分支；不新建 worktree、不 push。构建阶段提交 `32983de6` 已在分支；视觉结案、全量投影、进度及本交接为本次待提交阶段。提交后核对分支干净。
+- 只使用现有 canonical worktree `仓库根` 与工作分支；不新建 worktree、不 push。构建阶段提交 `4f53697d` 已在分支；视觉结案、全量投影、进度及本交接为本次待提交阶段。提交后核对分支干净。
 其中的用户改动不要触碰。下一会话先核对指定 worktree、branch、status、HEAD 与 live manifest，不根据旧快照切换工作目录。
 
 ### Live manifest、内容与构建状态
@@ -940,7 +940,7 @@
 ### 工作位置与 Git
 
 - 仅在现有 canonical worktree `仓库根` 的工作分支上工作；未新建 worktree、未 push。结案阶段与此交接、`PROGRESS.md` 同步提交；新会话先用 `git log -1` 和 `git status` 确认实际提交与干净状态。
-- 本阶段 `708d7bd9` 已提交 build/TeX 阶段；当前变更是 phase4-b20 review/finalize、报告投影与交接文件。提交前仅暂存本批回执、全量报告投影及本交接相关文件，核查 staged diff 与 `git diff --cached --check`。不要顺手改写其他卷的缓存状态。
+- 本阶段 `22c9604e` 已提交 build/TeX 阶段；当前变更是 phase4-b20 review/finalize、报告投影与交接文件。提交前仅暂存本批回执、全量报告投影及本交接相关文件，核查 staged diff 与 `git diff --cached --check`。不要顺手改写其他卷的缓存状态。
 
 ### Live manifest 与来源边界
 
@@ -957,19 +957,19 @@
 
 ### 结案提交
 
-- TeX/build 阶段提交 `708d7bd9`；视觉结案及报告/交接提交 `abfe83fb`。结束时工作分支工作树干净、ahead 6，未 push。
+- TeX/build 阶段提交 `22c9604e`；视觉结案及报告/交接提交 `b7e5d269`。结束时工作分支工作树干净、ahead 6，未 push。
 ## 2026-11-05 历史快照：phase4-b36 1999 上海文史类 TeX 刷新与视觉结案（带阻塞）
 
 ### 工作位置与 Git
 
 - canonical worktree 是已存在的 `仓库根`，工作分支；本阶段没有新建 worktree、没有 push。
-- TeX 阶段提交 `bd3a67f5`、共享标点转换与回归测试提交 `deb5c3e` 已在该分支。当前 closeout 需包含本批构建/视觉回执、manifest/issues 与六个报告投影、`PROGRESS.md` 和本交接记录；提交前检查实际 staged diff 与 `git diff --cached --check`，提交后确认工作区干净。
+- TeX 阶段提交 `ba8fcc0d`、共享标点转换与回归测试提交 `9f84420` 已在该分支。当前 closeout 需包含本批构建/视觉回执、manifest/issues 与六个报告投影、`PROGRESS.md` 和本交接记录；提交前检查实际 staged diff 与 `git diff --cached --check`，提交后确认工作区干净。
 
 ### Live manifest 与本卷
 
 - manifest revision `6248`：775 sources、421 papers、267 batches。paper 状态：blocked 109、compiled 3、complete 309；batch 状态：closed 180、closed_with_blockers 86、compiled_pending_review 1。
 - `phase4-b36` / `gk-1999-regular-shanghai-arts` 的 batch 为 `closed_with_blockers`，paper 为 `blocked`。固定 source `src-f45a72cc4b6fca6b3bb48f421c9320f7c17aa8c04d746f7ae368c40ef4875742`，PDF SHA-256 `7a1c81dd9091426a8e524170336a9ba46e58fda3206e658233d6c14f5ea319e5`，10页；来源发布者、版次、答案官方身份未认证。`ISSUE-1188`–`1190` 仍 open / blocks_completion；`ISSUE-1191`–`1194` 已 resolved。
-- 生成 TeX 只刷新确定性标点包装：`bd3a67f5` 处理 Q18 句号，`deb5c3e` 修复 `md2tex.py` 数学模式中文逗号/句号包装并增加回归测试。正式 build attempt `5e0b86a5-8f8d-44af-8627-de1970871cc2`（输入 revision 6246）四版成功，共48页（5/21/7/15）；无 errors、missing characters、overfull、undefined references 或 problems。PDF SHA-256：试题 `cc612b70016676c14a54005765fb21fc11ae2198cf296d3e2c5b8cd31e66312c`；解析 `06e77d437c94e11679b150e3932836f302d1118862312a88b687119cc17ffadf`；简答 `26294b3d703aadc121af475afc59032df9dc233ccf027a2f7aae5cb6a02f9a1b`；印刷 `5d4ca3a843c2f233b82c3759418d6cf98f39d977fc050ffd9c0ea8e18b26fc0e`。
+- 生成 TeX 只刷新确定性标点包装：`ba8fcc0d` 处理 Q18 句号，`9f84420` 修复 `md2tex.py` 数学模式中文逗号/句号包装并增加回归测试。正式 build attempt `5e0b86a5-8f8d-44af-8627-de1970871cc2`（输入 revision 6246）四版成功，共48页（5/21/7/15）；无 errors、missing characters、overfull、undefined references 或 problems。PDF SHA-256：试题 `cc612b70016676c14a54005765fb21fc11ae2198cf296d3e2c5b8cd31e66312c`；解析 `06e77d437c94e11679b150e3932836f302d1118862312a88b687119cc17ffadf`；简答 `26294b3d703aadc121af475afc59032df9dc233ccf027a2f7aae5cb6a02f9a1b`；印刷 `5d4ca3a843c2f233b82c3759418d6cf98f39d977fc050ffd9c0ea8e18b26fc0e`。
 - 视觉比较中36页像素与基线一致并继承已有结论，12个变化页重新目检；384项八类检查全通过（288项继承、96项重审）。`finalize-batch`=`FINALIZED`，review passed，但 batch/paper 仍带阻塞。
 - 本批 provenance、build/review receipts、生成器、简答、版本壳、solution sources、manifest/issues/CSV 与 `report.py render --all` / `check --all` 均通过。完整测试运行1780项、13项跳过、1项失败：`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报告56项跨卷缓存漂移，首项 `gk-2016-regular-national-2-arts`；本批外问题未在此阶段批量改写。
 
@@ -991,7 +991,7 @@
 - manifest revision `6245`：775 sources、421 papers、267 batches。paper production state：blocked 109、compiled 3、complete 309；batch 状态：closed 180、closed_with_blockers 86、compiled_pending_review 1。
 - `phase4-b29` / `gk-1998-regular-shanghai-arts` 当前 batch `closed`、paper `complete`。固定来源 `src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7`，PDF SHA-256 `c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848`，6页。来源副本不认证发布者、版次或卷内答案的官方身份。
 - 本批只按当前生成器重建 Q12/Q13/Q15/Q16 的选项 TeX 排版；题干、选项、答案与解析内容未改。正式 attempt `75a696dc-1dea-46d4-8183-e687cf1c6177`，输入 manifest revision 6243；试题/解析/简答/印刷版分别4/17/6/14页，共41页。PDF SHA-256依次为 `040e61cc02967afa14bec732a13bd35c789b52e9d84f8ec3b1cea916789d7778`、`9fbd22ff749851b36e7ebb9beae43c66797113a674766c2012f6c823342c04fa`、`c1b59ec9d2790b27ae888bdd4774f084a370e8f2f7662d983697626d74cd6286`、`2049f4bb4e66bb3e2971545b688c83cc9ed4798d2b59555d6714e756b1f0ef56`。四版 errors、缺字、Overfull、undefined references、problems 均为空。
-- 视觉结论：从提交前 HEAD `03be47ff` 用相同工具链重建基线，41页中26页 PNG 像素相同；15个变化页逐页复看八项，共328项（208项继承、120项重审），274项 pass、54项 not_applicable。`finalize-batch`=`FINALIZED`，review `passed`、batch `closed`、paper `complete`。本批 build/review/provenance、生成器、简答、版本壳、solution sources、source manifest、issues、`manifest.csv`（775行）及全库 `report.py check --all` 均通过。
+- 视觉结论：从提交前 HEAD `75b0ba7b` 用相同工具链重建基线，41页中26页 PNG 像素相同；15个变化页逐页复看八项，共328项（208项继承、120项重审），274项 pass、54项 not_applicable。`finalize-batch`=`FINALIZED`，review `passed`、batch `closed`、paper `complete`。本批 build/review/provenance、生成器、简答、版本壳、solution sources、source manifest、issues、`manifest.csv`（775行）及全库 `report.py check --all` 均通过。
 - 全量测试 `Ran 1779 tests in 686.013s`，13 skipped、1 failure。唯一失败 `test_the_cached_states_match_the_recomputed_ones` 报57项跨卷 paper/batch 缓存状态漂移，首项 `gk-2016-regular-national-2-arts`；本批已由 finalizer 重新派生，不批量改写其他卷缓存。
 
 ### 当时的接续边界（已由上方状态覆盖）
@@ -1005,7 +1005,7 @@
 ### 工作位置与 Git
 
 - canonical worktree：`仓库根`；分支：工作分支。本次继续未 push。交接更新提交后先用 live `git status --short --branch` 和 `git log -5 --oneline` 核对工作区与 HEAD。
-- 最近阶段提交：`a223e014` 更新 1994 上海卷生成 TeX；`66e0bb9f` 完成 phase1-b24 正式构建、视觉回执与全量投影；`0ca2c2c1` 同步该卷标点包装回归断言。交接文档的本次提交会位于其后。
+- 最近阶段提交：`2df68ca7` 更新 1994 上海卷生成 TeX；`e09d67ec` 完成 phase1-b24 正式构建、视觉回执与全量投影；`466a37e3` 同步该卷标点包装回归断言。交接文档的本次提交会位于其后。
 
 ### Live manifest 与当前卷
 
@@ -1015,7 +1015,7 @@
 
 ### phase1-b24 正式构建与视觉复核
 
-- 生成 TeX 阶段提交 `a223e014` 只更新 `questions.tex`、`answers.tex` 中 5 处句号包装：由数学模式中的 `\text{。}` 改为 `\mbox{。}`，题面数学内容未改；`generate_projects.py --batch phase1-b24 --check` 通过。
+- 生成 TeX 阶段提交 `2df68ca7` 只更新 `questions.tex`、`answers.tex` 中 5 处句号包装：由数学模式中的 `\text{。}` 改为 `\mbox{。}`，题面数学内容未改；`generate_projects.py --batch phase1-b24 --check` 通过。
 - 正式构建 attempt `4707ef56-8915-42e5-b940-b231a204f530`，输入 manifest revision `6191`；试题版 5 页、解析版 19 页、简答版 7 页、印刷版 16 页，共 47 页。四版均 `succeeded`，errors、missing characters、overfull、undefined references 均为 0。PDF SHA-256 依次为 `61e996a8bd086cb970f665e47a8c7b3aa30cac9cdccfeab9a47637d1361a9708`、`ebffaa45c4d4a74d27e009fd4a9cf020d82e83c0dd7462c786b54beec518b675`、`1b36a7c10ea9dde1f4a9ccb12e0e26b5e1f18371ffb45462aabc23922b4be89e`、`168b95d92e44558a37f5e1391603b2f5d7811ea762e4d38231ece3d806259e20`。
 - 旧 review attempt `334e6ca3-0bf1-40dd-aa2e-32f86a108949` 的 47 页均为逐项通过。将旧版 TeX 在临时目录重建后，以同一 Poppler 26.10、120 dpi 栅格和当前 attempt 逐页比对，47/47 页 PNG 字节相同，因此继承旧八项视觉结论；并抽看四版候选锚点页。当前 review 为 `passed`，`finalize-batch` 返回 `FINALIZED / closed_with_blockers`。build、review 回执及页级继承说明见卷目录 `receipts/`；批次报告见[phase1-b24 报告](../../../math-gaokao-latex/reports/phase1-b24.md)。
 - 局部门禁通过：source manifest、issues、三角色 provenance、26 题 solution sources、TeX/简答/四版入口 currentness、`validate-receipts --require-final --require-current-inputs`、`review_receipts.py check-batch`、`manifest_csv --check`（775 行）、`report.py check --all`。1994 专项 `tests.test_1994_shanghai_sources` 为 16/16 通过。
@@ -1059,7 +1059,7 @@
 
 ### 工作位置与 Git
 
-- canonical worktree：`仓库根`；分支：工作分支。上一阶段登记提交为 `e36dfa8f`；本次接续只修改 2002 苏豫粤桂 provenance 阶段文件。阶段提交后以 live Git 状态确认结果；未 push。
+- canonical worktree：`仓库根`；分支：工作分支。上一阶段登记提交为 `2d5af167`；本次接续只修改 2002 苏豫粤桂 provenance 阶段文件。阶段提交后以 live Git 状态确认结果；未 push。
 - 当前规范源/登记与三角色回执分别见[内部卷登记报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-paper-registration-20261104.md)和[provenance 阶段报告](../../../math-gaokao-latex/reports/2002-suyuyuegui-provenance-20261104.md)。
 
 ### Live manifest 概况
@@ -1122,7 +1122,7 @@
 
 ### 工作位置与分支
 
-- canonical worktree：`仓库根`；分支：工作分支。本次交接更新前 HEAD 为 `d3f92c2b`；复核阶段提交后工作区干净，领先 `origin/工作分支` 6 个提交。交接更新会另加一个本地提交；新会话仍须重新读取 HEAD/status。没有 push。
+- canonical worktree：`仓库根`；分支：工作分支。本次交接更新前 HEAD 为 `d82d1785`；复核阶段提交后工作区干净，领先 `origin/工作分支` 6 个提交。交接更新会另加一个本地提交；新会话仍须重新读取 HEAD/status。没有 push。
 - manifest revision `6132`；本批没有写 manifest/issues，也没有注册 `phase4-b47` 或任何 paper。文理来源目前仍是 `ready/unbound`，`official_answer=null`。
 - 最新卷级阶段日志在 `math-gaokao-latex/PROGRESS.md` 顶部。当前全库统计读取 `math-gaokao-latex/reports/baseline.md`；以该文件与 live manifest 为准。
 
@@ -1135,7 +1135,7 @@
 
 - 固定来源都来自 `gaokaomath-src/普通高考/2003/`，与 manifest rev6132 的 PDF SHA、Git blob 及上游 checkout commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 相符；发布者、出版者、版次、复制/扫描链和官方身份尚未核实。
 - 文科来源接收、草稿和复核记录分别见 `math-gaokao-latex/reports/2003-shanghai-arts-source-intake.md`、`2003/2003_数学真题_上海文_题面转录草稿.md`、`math-gaokao-latex/reports/2003-shanghai-arts-question-review.md`。理科对应记录见 `math-gaokao-latex/reports/2003-shanghai-science-source-intake.md`、`math-gaokao-latex/reports/2003-shanghai-science-question-transcription.md`、`2003/2003_数学真题_上海理_题面转录草稿.md`、`math-gaokao-latex/reports/2003-shanghai-science-question-review.md`。
-- 两名未参与各自转录的独立复核者逐题对照可见 PDF 页图；主会话复查并补齐 Q16/Q18/Q20 图注，均无剩余题干、公式、选项或符号差异。转录和复核提交依序为 `6b58fe5d`（理科来源接收）、`314c751c`（文科转录）、`e8475291`（理科转录）、`d3f92c2b`（文理题面复核）。
+- 两名未参与各自转录的独立复核者逐题对照可见 PDF 页图；主会话复查并补齐 Q16/Q18/Q20 图注，均无剩余题干、公式、选项或符号差异。转录和复核提交依序为 `7729279c`（理科来源接收）、`d8e7323e`（文科转录）、`f18d0005`（理科转录）、`d82d1785`（文理题面复核）。
 - **理科文字层有明显整题错配：**第2页可见 Q22 是集合 `M` 的函数题；同页文字抽取在 Q22 位置却输出等比数列组合和题，该题可见于第1页 Q19。Q20 的“最小”也被文字层重复为“最最小”，Q13(D)绝对值线及若干平行符号/向量箭头有抽取缺陷；均按可见页面转录，不以文字层替代。
 - 本轮没有 OCR、外部 API 或项目测试/构建；token 成本未知。没有生成答案、解析、图形矢量稿或四版 TeX/PDF。本批仍只是题面层工作，不表示 1952–2026 语料完成。
 
@@ -1158,7 +1158,7 @@ manifest rev6132 的 baseline 当前记录：775来源；415试卷（complete 30
 
 ## 2026-10-26 后续（十二）：1995 全国文科接续验收
 
-- 接手HEAD6153e863，保留Claude Code既有未提交成果，继续phase4-b34（gk-1995-regular-national-1-arts）。来源/规范解析阶段已提交79d968cd；四版验收阶段另按用户授权提交，不push。
+- 接手HEAD6153e863，保留Claude Code既有未提交成果，继续phase4-b34（gk-1995-regular-national-1-arts）。来源/规范解析阶段已提交a5bd492d；四版验收阶段另按用户授权提交，不push。
 - 26题、单页A3扫描、无答案/分值，D级双求解员推导。修复Q24/Q25第二问推导漏录、Q24 AE/BE漏线及Q5 O压线；恢复来源json被覆盖丢失的逐题页/栏映射、类型范围和未知分值等字段，旧草稿测试升级为canonical双向绑定校验。
 - 最终四版4/20/6/16页，46页八项视觉通过；attempt761a4cb5-bd7b-47f7-b3f5-6f4c1fe91bcf，FINALIZED/closed/complete，rev5086。不得重复转录或使用旧图替代当前回执；完整证据见reports/1995-national-arts-*及reports/phase4-b34.md。
 - 当前775来源、321卷（complete265、blocked53、compiled3）、182批。全量1710项测试通过（13跳过，606.114秒），报告/CSV及当前回执检查均通过；详细见本轮交付复核报告；来源非官方、分值未知的边界保留。整个1952—2026目标仍未完成。
@@ -1166,73 +1166,73 @@ manifest rev6132 的 baseline 当前记录：775来源；415试卷（complete 30
 
 ## 2026-10-26 后续（十一）：1995 全国理科（D 级）收口
 
-- `phase4-b33`（`gk-1995-regular-national-1-science`）已提交 `3bf5302`：26 题、单页 A3 扫描、**来源无答案**；答案/解析为项目独立推导，两名隔离求解员 26 题结论一致；四版 4/23/6/19 页；`FINALIZED`／`closed`／complete。
+- `phase4-b33`（`gk-1995-regular-national-1-science`）已提交 `1143690`：26 题、单页 A3 扫描、**来源无答案**；答案/解析为项目独立推导，两名隔离求解员 26 题结论一致；四版 4/23/6/19 页；`FINALIZED`／`closed`／complete。
 - 源疑点：Q14 源页选项 (A)(C) 重复；Q23 E 底面按源图取下底面；Q17「过球心」按底面平面过大圆。
 - 现况：775 来源、320 卷（complete 264／compiled 3／blocked 53）、181 批，manifest rev 5066。
 
 ## 2026-10-26 后续（十）：1993 上海卷收口
 
-- `phase4-b32`（`gk-1993-regular-shanghai`）已提交 `5a47323`：26 题、7 页扫描件附解答评分、四版 5/28/7/23 页；`FINALIZED`／`closed`／complete。盲解与卷内答案数值一致。
+- `phase4-b32`（`gk-1993-regular-shanghai`）已提交 `67c1c3e`：26 题、7 页扫描件附解答评分、四版 5/28/7/23 页；`FINALIZED`／`closed`／complete。盲解与卷内答案数值一致。
 - 修复：Q13(D) 指数 1/3；Q24 的 O（题面 OA/△ADO）与 Q26 椭圆分母作为源疑点照录；Q10/Q24 标签白底、Q11 刻度偏移、Q26 删非源辅助点并移 φ 入角、Q24 PQ 线型；题面解法提示删除。
 - 现况：775 来源、319 卷（complete 263／compiled 3／blocked 53）、180 批，manifest rev 5024。
 
 ## 2026-10-25 后续（九）：1992 上海卷收口
 
-- `phase4-b31`（`gk-1992-regular-shanghai`）已提交 `1a05b88`：26 题、6 页扫描件附解答评分、四版 5/25/7/19 页；`FINALIZED`／`closed`／complete。盲解与卷内答案 26/26 一致。
+- `phase4-b31`（`gk-1992-regular-shanghai`）已提交 `cc288d6`：26 题、6 页扫描件附解答评分、四版 5/25/7/19 页；`FINALIZED`／`closed`／complete。盲解与卷内答案 26/26 一致。
 - 修复：解析 Q20 改 B（P0）、Q12 指数 1/8（P1）、Q22 口径、Q18 定义域、Q16 系数、Q10 向量方向、Q10/Q24/Q26/Q11 图标签。
 - 现况：775 来源、318 卷（complete 262／compiled 3／blocked 53）、179 批，manifest rev 5003。
 
 ## 2026-10-25 后续（八）：1991 上海卷（blocked）
 
-- `phase4-b30`（`gk-1991-regular-shanghai`）已提交 `863551b`：27 题、7 页扫描件附解答评分、四版 5/25/7/21 页；批次 `closed_with_blockers`，整卷 **blocked**。
+- `phase4-b30`（`gk-1991-regular-shanghai`）已提交 `daba5fb`：27 题、7 页扫描件附解答评分、四版 5/25/7/21 页；批次 `closed_with_blockers`，整卷 **blocked**。
 - 阻塞项 `ISSUE-1178`：Q8 题面 `(2x²−1/x)^8` 按指数 8 无常数项，卷内答案 60 只在指数 6 时成立；300 dpi 字形两孔确认 8，盲解与复核独立确认，三说并列保留。
 - 现况：775 来源、317 卷（complete 261／compiled 3／blocked 53）、178 批，manifest rev 4977。
 
 ## 2026-10-25 后续（七）：1998 上海文史收口
 
-- `phase4-b29`（`gk-1998-regular-shanghai-arts`）已提交 `44d7d79`：22 题、6 页扫描件附卷内答案（等级 C）、四版 4/17/6/13 页；`FINALIZED`／`closed`／complete。盲解与卷内答案逐项一致。
+- `phase4-b29`（`gk-1998-regular-shanghai-arts`）已提交 `7abae2d`：22 题、6 页扫描件附卷内答案（等级 C）、四版 4/17/6/13 页；`FINALIZED`／`closed`／complete。盲解与卷内答案逐项一致。
 - 修复：Q22(2) 极限式按卷内原式（P0）；Q20 辅助图从题面版移入解析版并删答案标注；Q19 图 O₁/B 标签与线型。
 - 现况：775 来源、316 卷（complete 261／compiled 3／blocked 52）、177 批，manifest rev 4950。
 
 ## 2026-10-25 后续（六）：1995 上海理工农医收口
 
-- `phase4-b28`（`gk-1995-regular-shanghai-science`）已提交 `eab300e`：25 题、9 页扫描件附卷内答案（等级 C）、四版 5/19/7/14 页；`FINALIZED`／`closed`／complete。盲解与卷内答案逐项一致。
+- `phase4-b28`（`gk-1995-regular-shanghai-science`）已提交 `56f8bc4`：25 题、9 页扫描件附卷内答案（等级 C）、四版 5/19/7/14 页；`FINALIZED`／`closed`／complete。盲解与卷内答案逐项一致。
 - 关键纠错：Q9 源式 `(2x-1)/(x+3)>1`、答案 `x<-3 或 x>4`（初稿错作 2x+1 / x>2）；Q24 卷内答案漏 `m=n`，补正 `(2-√3,+∞)`；Q6 选项图恢复 B/D 截距判别信息。
 - 现况：775 来源、315 卷（complete 260／compiled 3／blocked 52）、176 批，manifest rev 4933。
 
 ## 2026-10-25 后续（五）：1999 上海理工农医收口
 
-- `phase4-b27`（`gk-1999-regular-shanghai-science`）已提交 `c43155a`：22 题、5 页扫描件附卷内答案（等级 C）、四版 4/19/6/15 页；`FINALIZED`／`closed`／complete。盲解与卷内答案全一致。
+- `phase4-b27`（`gk-1999-regular-shanghai-science`）已提交 `36d239f`：22 题、5 页扫描件附卷内答案（等级 C）、四版 4/19/6/15 页；`FINALIZED`／`closed`／complete。盲解与卷内答案全一致。
 - 修复：来源页 4-35—4-39、Q8 多余 `}`、Q9/Q19 结论补全、Q11 断行、Q14 cases、解析前言/草稿状态句清理；Q20 删非源有 B–E、Q21 B 标签移位。
 - 现况：775 来源、314 卷（complete 259／compiled 3／blocked 52）、175 批，manifest rev 4895。
 
 ## 2026-10-25 后续（四）：1998 上海理工农医收口
 
-- `phase4-b26`（`gk-1998-regular-shanghai-science`）已提交 `d8d17fc`：22 题（填空 1–11、选择 12–16、解答 17–22）、6 页扫描件附卷内答案（等级 C）、四版 4/16/6/12 页；`FINALIZED`／`closed`／complete。盲解与卷内答案全一致。
+- `phase4-b26`（`gk-1998-regular-shanghai-science`）已提交 `29f9581`：22 题（填空 1–11、选择 12–16、解答 17–22）、6 页扫描件附卷内答案（等级 C）、四版 4/16/6/12 页；`FINALIZED`／`closed`／complete。盲解与卷内答案全一致。
 - 关键纠错：Q15 源为「且 11∈B」（初稿漏一个 1），修正后 a>6、D 唯一；Q19 图 z 轴改 O–O₁ 虚线＋O₁ 以上实线；Q22 行间公式后孤行句号删除。
 - 现况：775 来源、313 卷（complete 258／compiled 3／blocked 52）、174 批，manifest rev 4864。
 
 ## 2026-10-25 后续（三）：1997 上海理工农医收口
 
-- `phase4-b25`（`gk-1997-regular-shanghai-science`）已提交 `f22822e`：22 题、7 页扫描件附答案要点（等级 C）、四版 6/21/8/15 页；`FINALIZED`／`closed`／complete。独立盲解 22 题与印载答案全一致。
+- `phase4-b25`（`gk-1997-regular-shanghai-science`）已提交 `bbf76e6`：22 题、7 页扫描件附答案要点（等级 C）、四版 6/21/8/15 页；`FINALIZED`／`closed`／complete。独立盲解 22 题与印载答案全一致。
 - 生成端两处修复：① 解答题答案必须写成 `**答案（k）：X**` 才会进入答案框与简答版（原 `**（k）**` 会全部退化为「见解析版」）；② 简答版提示语用 `SHORT_ANSWER_NOTICE_OVERRIDES` 按「来源印载答案」改写，已加 1997 上海文/理两卷。
 - 现况：775 来源、312 卷（complete 257／compiled 3／blocked 52）、173 批，manifest rev 4846。
 
 ## 2026-10-25 后续（二）：1997 上海文史收口
 
-- `phase4-b24`（`gk-1997-regular-shanghai-arts`）已提交 `d79925d`：22 题、8 页 A4 扫描件附印载答案与评分（等级 C）、四版 5/20/7/15 页；finalize `FINALIZED`、批次 `closed`、整卷 complete。独立盲解 22 题与印载答案逐题一致。
+- `phase4-b24`（`gk-1997-regular-shanghai-arts`）已提交 `af7319f`：22 题、8 页 A4 扫描件附印载答案与评分（等级 C）、四版 5/20/7/15 页；finalize `FINALIZED`、批次 `closed`、整卷 complete。独立盲解 22 题与印载答案逐题一致。
 - 关键纠错：Q21 直线与抛物线交点坐标首稿误作 (5±√17)/2，实为 (5±√13)/2=(0.697,1.303)/(4.303,−2.303)，两份独立审查同时抓出；Q19 三棱柱补 AC′、删幻影 B′C、按源改线型；Unicode 下标 ₁/₂ 缺字改数学模式。
 - 现况：775 来源、311 卷（complete 256／compiled 3／blocked 52）、172 批，manifest rev 4824。
 
 ## 2026-10-25 后续：2002 北京文科收口
 
-- `phase4-b23`（`gk-2002-regular-beijing-arts`）已提交 `7222e634`：22 题、2 页 A3 重排件（有文字层、无答案页，等级 D）、四版 5/19/7/17 页；finalize `FINALIZED`，批次 `closed`，整卷 complete。独立盲解 22 题与库内答案逐题一致。
+- `phase4-b23`（`gk-2002-regular-beijing-arts`）已提交 `86f4779f`：22 题、2 页 A3 重排件（有文字层、无答案页，等级 D）、四版 5/19/7/17 页；finalize `FINALIZED`，批次 `closed`，整卷 complete。独立盲解 22 题与库内答案逐题一致。
 - 修复要点：Q11 零点 0.6→1（原图与选项矛盾）、Q12 虚线仅 f₂/f₃/f₄、Q18 尺寸标注改「标签贴棱外侧、无箭头」、Q4 空选项占位行、Q20 八列表超宽（表头缩写＋题面说明）、Q11 两行选项 24pt 错位。
 - 现况：775 来源、310 卷（complete 255／compiled 3／blocked 52）、171 批，manifest rev 4799。
 
 ## 2026-10-24 后续：1996 上海文史收口
 
-- `phase4-b22`（`gk-1996-regular-shanghai-arts`）已提交 `18c6e4f8`：24 题、8 页扫描件附印载答案（等级 C）、四版 6/26/8/19 页；finalize `FINALIZED`，批次 `closed_with_blockers`、整卷 blocked（Q15 A1「直线 OA」外分点歧义，ISSUE-1138–1143）。
+- `phase4-b22`（`gk-1996-regular-shanghai-arts`）已提交 `288dce55`：24 题、8 页扫描件附印载答案（等级 C）、四版 6/26/8/19 页；finalize `FINALIZED`，批次 `closed_with_blockers`、整卷 blocked（Q15 A1「直线 OA」外分点歧义，ISSUE-1138–1143）。
 - 本轮视觉审查代理多次长时间无产出，由主会话接管逐页复核并留证；后续开批建议把审查段拆到 ≤4 页/代理，并预置主会话兜底。
 - 当前 775 来源、309 卷（complete 254、blocked 52、compiled 3）、170 批；manifest rev 4773。
 
@@ -1241,7 +1241,7 @@ manifest rev6132 的 baseline 当前记录：775来源；415试卷（complete 30
 本段优先于下方旧快照。用户明确授权“每完成一个阶段就提交”，仍不push。
 canonical worktree与分支仍为`phase0-wt` / 工作分支。
 
-- 2000春季京皖文理phase4-b20已提交`911452aa`；1996上海理科来源/数学/规范登记阶段已提交`659a0c6`。
+- 2000春季京皖文理phase4-b20已提交`a316ede9`；1996上海理科来源/数学/规范登记阶段已提交`e16f759`。
 - 1996上海理科24题/150分、全部选做轨道与7幅TikZ图已登记为`gk-1996-regular-shanghai-science`，source已canonical绑定；不再重复转录或登记。
 - phase4-b21最终四版67页（7/28/9/23）视觉通过，finalize返回FINALIZED，manifest revision4752；批次closed_with_blockers、整卷blocked。最终attempt为`75a8a3fe-beda-4e63-bf17-3872c808876d`，见本卷receipts与reports/phase4-b21.md。
 - Q15 A1原文“直线OA”按通常无向距离有内外分两解，印载答案只列单解；ISSUE-1136/1137都open并阻碍完成，provenance为U/unresolved。不得按源答案把直线改线段，不得降级冲突以通过门禁。
@@ -1251,7 +1251,7 @@ canonical worktree与分支仍为`phase0-wt` / 工作分支。
 
 本文下方2026-10-22快照已过时。当前仍使用 canonical worktree
 `仓库根` 的工作分支，
-本轮接手HEAD为 `607c8c21`，未切main、未提交或推送。
+本轮接手HEAD为 `279aafcb`，未切main、未提交或推送。
 
 - 已接续并收口未提交的2000春季京皖文理两卷（phase4-b20）：48题、八版98页，
   来源视觉/数学复核及全部输出页八项审查完成；修复推导、来源记录与图标注，补答案图。
@@ -1281,7 +1281,7 @@ canonical worktree与分支仍为`phase0-wt` / 工作分支。
 
 - canonical worktree：`仓库根`
 - 分支：工作分支
-- 当前 HEAD：`30c72bf53f0222bb2e744e2446772f69ff9c4143`（refresh reports after 2006 review close）；当时与 `origin/工作分支` 同步。
+- 当前 HEAD：`a229485910bcd0b86c06c69ec90d4e92dc1ddc0b`（refresh reports after 2006 review close）；当时与 `origin/工作分支` 同步。
 - 此交接文档应新增在 canonical worktree。提交前再核对状态与 staging，避免夹带别的工作。
 
 新对话先核对：
@@ -1312,7 +1312,7 @@ git log -1 --oneline --decorate
 ### 2016 上海文理科，phase2-b14
 
 - `reports/phase2-b14.md`：closed；两卷8版97页全部审查通过。
-- 主要提交：最终审核/报告 `16c0f74c`，内容与分页修正 `e3f7e521`。
+- 主要提交：最终审核/报告 `877ba7b8`，内容与分页修正 `3008c07c`。
 - 计划：`docs/superpowers/plans/2026-10-08-gaokao-2016-shanghai.md`。
 - 文科Q11、理科Q14的概率模型早期登记 ISSUE-1006/1007；**当前报告和manifest已经结为 closed/complete**。不要照抄历史对话的旧 blocker 状态；如有必要，查当前答案、provenance、issues 再判断。
 
