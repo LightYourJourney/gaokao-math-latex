@@ -3204,6 +3204,14 @@
         "gk-2008-beijing-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase6-b43",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-shanghai-arts"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -3213,7 +3221,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d5960837-a56f-4687-856d-480e82debea0",
+  "last_transaction_id": "30df828e-972d-47d7-8500-d04d4c9b7b29",
   "papers": [
     {
       "blocked_from": null,
@@ -38847,9 +38855,76 @@
       "title": "2008 年·普通高等学校招生考试·北京卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_上海卷_文科/figures/f2009_shanghai_arts_q04_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_上海卷_文科/figures/f2009_shanghai_arts_q05_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_上海卷_文科/figures/f2009_shanghai_arts_q16_views.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_shanghai_arts",
+        "id": "gk-2009-shanghai-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 555、556；PDF 只有题面、无答案页，23 题答案由本库独立推导（非官方）。第 21(2) 题丙的 a 区间印作 (121,133]，与乙 (121,127] 重叠，已登记。第 4 题程序框图、第 5 题正四棱柱、第 16 题三视图四选项由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文科"
+      },
+      "issue_ids": [
+        "ISSUE-1476"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-shanghai-arts",
+      "production_state": "blocked",
+      "project_dir": "2009_上海卷_文科",
+      "question_count": 23,
+      "resume_action": "取得同版官方勘误或更清晰原页，确认丙的区间下限是否为 127；确认后按官方字面重录并重跑该题 provenance 与逐页复核。在此之前照录原页，答案记为乙并注明重叠。",
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_上海文_含解析.md",
+        "questions": "2009/2009_数学真题_上海文_试题.md",
+        "solution_body": "2009/2009_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-b5304974f52311adbc105637e5323d1f742209a35072cd1e3e76dc6e538e1e08"
+      ],
+      "title": "2009 年·普通高等学校招生考试·上海卷·文科",
+      "track": "arts",
+      "year": 2009
     }
   ],
-  "revision": 9901,
+  "revision": 9906,
   "schema_version": 1,
   "sources": [
     {
@@ -48638,8 +48713,8 @@
       "exam_type": "regular",
       "git_blob_oid": "395d8e4997a5b19c1d05225da13293688bed9522",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009上海文.pdf",
       "regions": [],
       "source_id": "src-b5304974f52311adbc105637e5323d1f742209a35072cd1e3e76dc6e538e1e08",

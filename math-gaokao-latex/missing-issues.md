@@ -24820,3 +24820,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1476
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 21(2) 题（印面 556）印作「学科甲、乙、丙对应的 a 的取值区间分别为 (115,121]，(121,127]，(121,133]」。丙的区间与乙完全重叠（(121,127]⊂(121,133]），由 f(6)=0.85 解得 a≈123.0，同时落在乙与丙内，按字面无法唯一确定学科。三区间应互斥时丙应为 (127,133]；本库照录原页区间，按互斥意图判定为乙并登记 ISSUE。",
+  "fingerprint": "bdaef05c5e3132e0efba4ce59d8ffa608b1398be72f0401d75b359f1e41bb614",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-shanghai-arts",
+  "question_id": "gk-2009-shanghai-arts-q21",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认丙的区间下限是否为 127；确认后按官方字面重录并重跑该题 provenance 与逐页复核。在此之前照录原页，答案记为乙并注明重叠。",
+  "source_id": "src-b5304974f52311adbc105637e5323d1f742209a35072cd1e3e76dc6e538e1e08",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

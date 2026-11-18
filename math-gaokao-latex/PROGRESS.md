@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 上海卷文科：phase6-b43 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
+
+- 对象：`gk-2009-shanghai-arts`，23 题（填空 1–14、选择 15–18、解答 19–23）；固定来源 `src-b5304974f52311adbc105637e5323d1f742209a35072cd1e3e76dc6e538e1e08`，上游 `普通高考/2009/2009上海文.pdf`，SHA-256 `5212f16aacbac7b10c5df44f90ccd94ba0218c31c04bd0c4e9e0e8f0284ca5f3`，2 页 A3 横向，印面页码 555、556。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；公式、上下标、选项与三幅图另以 300/400/800 dpi 原页逐题复核。第 1 页含 Q1–Q18、第 2 页含 Q19–Q23；原页未标分值，不补。来源与接收细节见 `reports/2009-shanghai-arts-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1 $\sqrt[3]{x-1}$；2 $a\leqslant1$；3 $x>\frac83$；4 $y=x-2\ (x>1)$、$2^x\ (x\leqslant1)$；5 $\arccos\frac{\sqrt6}{6}$；6 $2$；7 $-9$；8 $\frac{8\pi}{3}$；9 $2\sqrt6$；10 $1-\sqrt2$；11 $\frac57$；12 $3$；13 $14$；14 $(3,3)$；15 C 16 B 17 A 18 D；19 $u\in(-2,6)$；20 等腰、面积 $\sqrt3$；21 递减、$a\approx123.03$（学科乙）；22 $\frac{x^2}{2}-y^2=1$、$k=\pm\frac{\sqrt2}{2}$、右支距离恒 $>\sqrt6$；23 不存在、$a=q^c\ (c\in\mathbf Z,c\geqslant-2)$ 或 $(1,1)$、所有正奇数 $p$。
+- 盲解复核：盲解代理独立完成 23 题，22 题与主稿一致；Q16 主视图存在视角约定差异（盲解按 x 向投影得 $4\times4$ 的 A，主稿按公开官方答案与「应看到直角边 3 的顶点」取 $3\times4$ 的 B），已在解析与 provenance 中注明，按官方答案取 B。
+- 固定源缺陷（照录并登记）：Q21(2) 丙的 $a$ 区间印作 $(121,133]$，与乙 $(121,127]$ 重叠，$a\approx123.03$ 同时落入两区间（ISSUE-1476）；按三区间应互斥的意图（丙应为 $(127,133]$）判定为乙。
+- 图形：Q4 程序框图、Q5 正四棱柱、Q16 三视图四选项，共 3 幅 TikZ 矢量图；Q16 选项字母与尺寸标注已避让，Q5 视图放大后标注不再重叠。
+- 生成链：`register-papers`（revision 9902）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9903）→ `build --formal`（attempt `1d5033d7`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 4/21/6/19 页（共 50 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 50 页八类检查全 pass，0 豁免；批次 `closed_with_blockers`、卷 `blocked`。全量门禁：`validate-receipts --all --require-final` **OK：536 卷**；`provenance check-all` **OK：536 卷**；`generate_projects --all --check` **536 套一致**。
+- 下一步：取得 Q21(2) 的同版官方勘误；`source-manifest.json` 仍有 241 个来源未绑定 `paper_id`。
+
 ### 2008 北京卷文科：phase6-b42 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
 
 - 对象：`gk-2008-beijing-arts`，20 题（选择 1–8、填空 9–14、解答 15–20）；固定来源 `src-a24ac8b08aa9604b1cc0ea37ab616d01d66aedaea62913dfa7b4b124fcdb8df4`，上游 `普通高考/2008/2008北京文.pdf`，SHA-256 `9d725e3f7011f50eddddd9bebd62825365c218b08fa0c920ac23b57228f590f9`，2 页 A3 横向，印面页码 427、428。

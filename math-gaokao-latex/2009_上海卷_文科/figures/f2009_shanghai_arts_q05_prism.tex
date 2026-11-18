@@ -1,0 +1,33 @@
+% 2009 年上海卷文科第 5 题：正四棱柱 ABCD-A_1B_1C_1D_1，底面边长 2、高 4。
+% 来源 PDF：普通高考/2009/2009上海文.pdf，SHA256 5212f16aacbac7b10c5df44f90ccd94ba0218c31c04bd0c4e9e0e8f0284ca5f3
+% 原页：第 1 页（A3 三栏）第 1 栏下部，印刷页 555，图在题干下方。
+% 重绘依据：斜投影正四棱柱，A 左下、B 右下、D 左后、C 右后；上底同名加下标 1；
+%   可见棱实线，被遮棱 D-D_1、C-D、D-A 虚线；BD_1 画虚线、AD 为底面边。
+\begin{tikzpicture}[scale=0.95, semithick, every node/.style={inner sep=1.5pt}]
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (2,0);
+  \coordinate (D)  at (0.7,0.55);
+  \coordinate (C)  at (2.7,0.55);
+  \coordinate (A1) at (0,4);
+  \coordinate (B1) at (2,4);
+  \coordinate (D1) at (0.7,4.55);
+  \coordinate (C1) at (2.7,4.55);
+  \draw[dashed] (D) -- (D1);
+  \draw[dashed] (C) -- (D);
+  \draw[dashed] (D) -- (A);
+  \draw (A) -- (B) -- (C) -- (C1) -- (D1) -- (A1) -- cycle;
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (B1) -- (C1);
+  \draw (A1) -- (B1);
+  \draw[dashed] (B) -- (D1);
+  \node[anchor=north east] at (A)  {$A$};
+  \node[anchor=north west] at (B)  {$B$};
+  \node[anchor=west]       at (C)  {$C$};
+  \node[anchor=east]       at (D)  {$D$};
+  \node[anchor=south east] at (A1) {$A_1$};
+  \node[anchor=south west] at (B1) {$B_1$};
+  \node[anchor=south west] at (C1) {$C_1$};
+  \node[anchor=south east] at (D1) {$D_1$};
+\end{tikzpicture}
