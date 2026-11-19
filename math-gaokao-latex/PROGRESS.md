@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 山东卷理科：phase6-b54 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
+
+- 对象：`gk-2009-shandong-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-ac1ea8c2ca2838a9613ffe7478929fd3b71e5e281189df18e5b03bf60a48821f`，上游 `普通高考/2009/2009山东理.pdf`，SHA-256 `6c3546f276b37d6ff4fa1a8cdf77e8356b8a4c0e713e9e5485bb47fcd5ed660f`，2 页 A3 横向，印面页码 545、546。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；分数、根号、上下标与六幅图另以 600 dpi 原页逐题复核。第 1 页含 Q1–Q16、第 2 页含 Q17–Q22；原页未标分值，不补。来源与接收细节见 `reports/2009-shandong-science-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1D 2C 3B 4C 5B 6A 7B 8A 9D 10C 11A 12A；13 $(-1,1)$；14 $(1,+\\\\infty)$；15 $30$；16 $-8$；17 最大值 $(1+\\\\sqrt3)/2$、周期 $\\\\pi$、$\\\\sin A=\\\\frac13$（见下）；18 $\\\\frac{\\\\sqrt7}7$；19 $q_2=0.8$、$E\\\\xi=3.63$、全在 $B$ 投 $0.896>0.72$；20 $r=-1$、$b_n=2n$、连乘 $>\\\\sqrt{n+1}$；21 $y=\\\\frac4{x^2}+\\\\frac9{400-x^2}$、$x=4\\\\sqrt{10}$ 时最小；22 $\\\\frac{x^2}8+\\\\frac{y^2}4=1$、圆 $x^2+y^2=\\\\frac83$、$|AB|\\\\in[\\\\frac{4\\\\sqrt6}3,2\\\\sqrt3]$。
+- 盲解复核：22 题与主稿完全一致；并独立指出第 17(2) 的「$C$ 为锐角」与 $C=\\\\frac\\\\pi2$ 矛盾（若自变量原为 $\\\\frac C2$，则 $C=\\\\frac\\\\pi3$、$\\\\sin A=\\\\frac{\\\\sqrt3+2\\\\sqrt2}6$）。
+- 固定源缺陷（登记 blocker）：第 17(2) 照录原页「且 $C$ 为锐角」，但方程只得 $C=\\\\frac\\\\pi2$；两种读法答案不同（$\\\\frac13$ 与 $\\\\frac{\\\\sqrt3+2\\\\sqrt2}6$），说明原页至少一处讹误。登记 ISSUE-1484（`blocks_completion`），卷 `blocked`、批次 `closed_with_blockers`。
+- 图形：Q4 三视图、Q6 四幅候选图象、Q8 频率分布直方图、Q15 程序框图、Q18 直四棱柱、Q19 分布列表头，共 6 幅 TikZ 矢量图；Q9/Q11/Q12 的分式选项改用行内 $\\\\frac$，Q8 选项前移，避免图后首选项左顶格与选项压行。
+- 生成链：`register-papers`（revision 9972）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9978）→ `build --formal` → `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 7/28/9/23 页（共 67 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 67 页八类检查全 pass，0 豁免。
+- 下一步：按年份继续 2009 辽宁文/理等未成卷来源；`source-manifest.json` 仍有 230 个来源未绑定 `paper_id`。
+
 ### 2009 山东卷文科：phase6-b53 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
 
 - 对象：`gk-2009-shandong-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-5285e946c05f50fbdf22108e01e5565ac2dfd65c462b6e7dcb77b348b56519f3`，上游 `普通高考/2009/2009山东文.pdf`，SHA-256 `1807901a21da57e3d45382294189b0c8e795722b6879842319ae75428639fad6`，2 页 A3 横向，印面页码 547、548。

@@ -1,0 +1,27 @@
+% 2009 年山东卷理科第 8 题：产品净重的频率分布直方图。
+% 来源 PDF：普通高考/2009/2009山东理.pdf，SHA256 6c3546f276b37d6ff4fa1a8cdf77e8356b8a4c0e713e9e5485bb47fcd5ed660f
+% 原页：第 1 页（A3 三栏）第 2 栏中下部，印刷页 545。
+% 重绘依据：横轴为净重（克），标 96、98、100、102、104、106；纵轴为「频率/组距」，
+%   刻度 0.050、0.075、0.100、0.125、0.150；五根矩形的高度依次为
+%   0.050、0.100、0.150、0.125、0.075（组距 2），虚线标出各高度。
+\begin{tikzpicture}[scale=0.9, semithick, every node/.style={inner sep=1.2pt, font=\small}]
+  % 坐标轴
+  \draw[-{Stealth}] (0,0) -- (7.95,0) node[right] {克};
+  \draw[-{Stealth}] (0,0) -- (0,4.6) node[above] {频率/组距};
+  % 纵轴刻度与虚线
+  \foreach \y/\lab in {1/0.050, 1.5/0.075, 2/0.100, 2.5/0.125, 3/0.150} {
+    \node[anchor=east] at (-0.08,\y) {\lab};
+    \draw[densely dashed] (0,\y) -- (7.2,\y);
+  }
+  % 五根矩形：区间宽 1.4，依次从 x=0.2 起
+  \foreach \i/\h in {0/1, 1/2, 2/3, 3/2.5, 4/1.5} {
+    \pgfmathsetmacro{\x}{\i*1.4+0.2}
+    \draw (\x,0) rectangle (\x+1.4,\h);
+  }
+  % 横轴刻度
+  \foreach \i/\lab in {0/96, 1/98, 2/100, 3/102, 4/104, 5/106} {
+    \pgfmathsetmacro{\x}{\i*1.4+0.2}
+    \draw (\x,0) -- (\x,-0.08);
+    \node[anchor=north] at (\x,-0.08) {\lab};
+  }
+\end{tikzpicture}

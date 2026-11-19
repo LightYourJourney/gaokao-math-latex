@@ -24955,3 +24955,20 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1484
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 17 题第 (2) 问（印面 545）写「且 C 为锐角」。由 f(x)=1/2−(√3/2)sin2x 与 f(C/3)=−1/4 得 sin(2C/3)=√3/2，结合 0<C<π 解得 C=π/2 或 C=π（后者非内角），故 C=π/2 为直角，与「锐角」矛盾：以方程为准得 sinA=1/3，以「锐角」为准则无解；若自变量原为 C/2 则 C=π/3、sinA=(√3+2√2)/6。两种读法答案不同，故记为待核。",
+  "fingerprint": "6d19cbd2df0dc77c2bdf96d941e8910c6fe516a92080702d23a8857ef80bd2bd",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-shandong-science",
+  "question_id": "gk-2009-shandong-science-q17",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 17 题第 (2) 问的自变量是 C/3 还是 C/2、以及「C 为锐角」是否为衍文；确认后按官方字面改编并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-ac1ea8c2ca2838a9613ffe7478929fd3b71e5e281189df18e5b03bf60a48821f",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

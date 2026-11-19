@@ -1,0 +1,25 @@
+% 2009 年山东卷理科第 15 题：程序框图，输出 T 的值。
+% 来源 PDF：普通高考/2009/2009山东理.pdf，SHA256 6c3546f276b37d6ff4fa1a8cdf77e8356b8a4c0e713e9e5485bb47fcd5ed660f
+% 原页：第 1 页（A3 三栏）第 3 栏上部，印刷页 545。
+% 重绘依据：开始 → S=0,T=0,n=0 → 判断 T>S：是（右）输出 T 并结束；否（下）S=S+5 → n=n+2 → T=T+n，
+%   再回到判断。
+\begin{tikzpicture}[scale=0.9, semithick, >=Stealth,
+  node distance=5mm, every node/.style={inner sep=3pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=1.9cm, minimum height=0.62cm] {开始};
+  \node (init) [draw, minimum width=3.6cm, minimum height=0.62cm, below=of start] {$S=0,\ T=0,\ n=0$};
+  \node (cond) [draw, diamond, aspect=2.2, minimum width=3.0cm, minimum height=0.95cm, below=of init] {$T>S$};
+  \node (s) [draw, minimum width=2.2cm, minimum height=0.62cm, below=of cond] {$S=S+5$};
+  \node (n) [draw, minimum width=2.2cm, minimum height=0.62cm, below=of s] {$n=n+2$};
+  \node (t) [draw, minimum width=2.2cm, minimum height=0.62cm, below=of n] {$T=T+n$};
+  \node (out) [draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.2cm, minimum height=0.62cm, right=1.6cm of cond] {输出 $T$};
+  \node (end) [draw, rounded corners=4pt, minimum width=1.9cm, minimum height=0.62cm, below=of out] {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (cond);
+  \draw[->] (cond) -- node[right, pos=0.55] {否} (s);
+  \draw[->] (s) -- (n);
+  \draw[->] (n) -- (t);
+  \draw[->] (t.west) -- ++(-1.3,0) |- (cond.west);
+  \draw[->] (cond) -- node[above, pos=0.45] {是} (out);
+  \draw[->] (out) -- (end);
+\end{tikzpicture}
