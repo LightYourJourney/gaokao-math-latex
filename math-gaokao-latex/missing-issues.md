@@ -24922,3 +24922,36 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1482
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 17 题（印面 547）印作 f(x)=2sin x·cos²(x/2)+cos x·sinφ−sin x（0<φ<π），并称「在 x=π 处取最小值」。化简得 f(x)=cos x(sin x+sinφ)、f′(x)=cos2x−sin x·sinφ，故 f′(π)=cos2π=1≠0，且 f(π−ε)=f(π)−ε+O(ε²)<f(π)，即 π 既非驻点也非极小值点，原页该句与所给函数不相容。",
+  "fingerprint": "dbd763bf71c09cc5dafe733f3ed51e7f3a5febfda91a65b0e1d147fd5ed532d3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-shandong-arts",
+  "question_id": "gk-2009-shandong-arts-q17",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 17 题极值点是否应为 5π/6（或其它值）；确认后按官方字面重录该句并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-5285e946c05f50fbdf22108e01e5565ac2dfd65c462b6e7dcb77b348b56519f3",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-1483
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 17 题第 (1) 问按原页条件无解，第 (2) 问的 φ 无从确定，故整题答案为 U。常见的「由 f(π)=−sinφ 取最小值而令 sinφ=1 得 φ=π/2」既与 f′(π)=0 的必要条件矛盾，代回第 (2) 问（a=1、b=√2、f(A)=√3/2）还会因 sinB=√2 sinA>1 而无三角形，故不能采用。",
+  "fingerprint": "d3f6e85b6e980861e931b690e8fa3502e4dea0899eb1970d5646e993bc9c2b64",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-shandong-arts",
+  "question_id": "gk-2009-shandong-arts-q17",
+  "resume_action": "获得官方勘误后按更正后的极值点重解第 (1)(2) 问，并把该题答案由 U 改为实际取值；此前维持 U。",
+  "source_id": "src-5285e946c05f50fbdf22108e01e5565ac2dfd65c462b6e7dcb77b348b56519f3",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

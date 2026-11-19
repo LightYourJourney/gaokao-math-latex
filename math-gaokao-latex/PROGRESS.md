@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 山东卷文科：phase6-b53 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
+
+- 对象：`gk-2009-shandong-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-5285e946c05f50fbdf22108e01e5565ac2dfd65c462b6e7dcb77b348b56519f3`，上游 `普通高考/2009/2009山东文.pdf`，SHA-256 `1807901a21da57e3d45382294189b0c8e795722b6879842319ae75428639fad6`，2 页 A3 横向，印面页码 547、548。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；分数、根号、上下标与五幅图另以 600 dpi 原页逐题复核。第 1 页含 Q1–Q16、第 2 页含 Q17–Q22；原页未标分值，不补。来源与接收细节见 `reports/2009-shandong-arts-source-intake.md`。
+- 答案（独立推导，等级 D，第 17 题 U）：1D 2C 3B 4C 5B 6A 7B 8C 9B 10B 11A 12D；13 $13$；14 $(1,+\\\\infty)$；15 $30$；16 $2300$；18 证明；19 $z=400$、$\\\\frac7{10}$、$\\\\frac34$；20 $r=-1$、$T_n=\\\\frac32-\\\\frac{n+3}{2^{n+1}}$；21 $b^2>a$、分段的 $b$ 范围；22 $mx^2+y^2=1$、$x^2+y^2=\\\\frac45$、$R=\\\\sqrt2$ 时 $|A_1B_1|_{\\\\max}=1$。
+- 固定源缺陷（登记 blocker）：第 17 题给出 $f(x)=2\\\\sin x\\\\cos^2\\\\frac x2+\\\\cos x\\\\sin\\\\varphi-\\\\sin x$ 又称「在 $x=\\\\pi$ 处取最小值」；化简得 $f'(x)=\\\\cos2x-\\\\sin x\\\\sin\\\\varphi$，故 $f'(\\\\pi)=1\\\\neq0$ 且 $f(\\\\pi-\\\\varepsilon)<f(\\\\pi)$，条件与函数不相容，第 (1) 问无解、第 (2) 问 $\\\\varphi$ 无从确定。登记 ISSUE-1482（转录）与 ISSUE-1483（条件不相容），该题记 U。常见的 $\\\\varphi=\\\\frac\\\\pi2$ 既违背 $f'(\\\\pi)=0$，又使第 (2) 问的 $\\\\sin B=\\\\sqrt2\\\\sin A>1$ 无三角形，故未采用。
+- 盲解复核：独立解题代理完成全卷，21 题与主稿一致（Q4、Q6、Q14、Q16、Q20、Q21、Q22 均同），并以 $f'(\pi)=1\neq0$ 独立确认第 17 题条件不自洽。
+- 图形：Q4 三视图、Q6 四幅候选图象、Q15 程序框图、Q18 直四棱柱、Q19 产量表，共 5 幅 TikZ 矢量图；Q4 的选项移到图前，避免「图后首选项」被排成左顶格。
+- 生成链：`register-papers`（revision 9965）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9966）→ `build --formal`（attempt `526dc673`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 7/28/9/21 页（共 65 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 65 页八类检查全 pass，0 豁免；批次 `closed_with_blockers`、卷 `blocked`。
+- 下一步：按年份继续 2009 山东理、辽宁文/理等未成卷来源；`source-manifest.json` 仍有 231 个来源未绑定 `paper_id`。
+
 ### 2009 安徽卷理科：phase6-b52 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
 
 - 对象：`gk-2009-anhui-science`，21 题（选择 1–10、填空 11–15、解答 16–21）；固定来源 `src-b941eebc7523a0bc24b38b4e37800ba8dbf8c78f117be0fc1a8d728fcb880146`，上游 `普通高考/2009/2009安徽理.pdf`，SHA-256 `e3986483e52654337c383d27cbe67e80ee0bd62eaf64defba6fe8bcc0cdb0c6d`，2 页 A3 横向，印面页码 495、496。
