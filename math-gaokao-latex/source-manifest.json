@@ -3324,6 +3324,14 @@
         "gk-2009-nceq-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase6-b58",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-nceq-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3333,7 +3341,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "80d26ba8-2acf-4564-a1ef-7d60bc5f3fc5",
+  "last_transaction_id": "33ee02f7-168a-4bc5-bf9c-ada2d1fbfbfc",
   "papers": [
     {
       "blocked_from": null,
@@ -40062,9 +40070,111 @@
       "title": "2009 年·普通高等学校招生考试·新课标卷（琼、宁卷）·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q03_scatter.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q09_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q10_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q11_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q16_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q17_seabed.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q18_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q19_histograms.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q22_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_文科/figures/f2009_nceq_arts_q24_numberline.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_nceq_arts",
+        "id": "gk-2009-nceq-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 543、544；页眉「2009 普通高等学校招生考试（琼、宁卷文）」。PDF 只有题面、无答案页，24 题答案由本库独立推导（非官方）。第 3 题两幅散点图、第 9 题正方体、第 10 题程序框图、第 11 题三视图、第 16 题正弦型图象、第 17 题海底剖面、第 18 题三棱锥、第 19 题两幅频率分布直方图、第 22 题三角形与角平分线、第 24 题数轴均由 TikZ 重绘；第 14 题原页无图，不设图稿。第 19 题的 x、y 由 A 类 25 人、B 类 75 人的分层抽样总数确定。第 22–24 题为三选一，原页紧接第 21 题排印、未另印「四、选做题」标题，本库按 2008 同版式补出节标题。原页排印问题：第 9 题「棱线长」衍一「线」字；第 16 题图象只画出 x≥π/4 的一段，完整图象在 0≤x<π/4 上还应有一段位于 x 轴下方；第 19 题「抽插结果」应为「抽查结果」；第 22 题第 (1) 问重复印出「证明：」。以上均照录原页并在答案与解析中说明。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "新课标卷（琼、宁卷）",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            24
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "新课标文科"
+      },
+      "issue_ids": [
+        "ISSUE-1494",
+        "ISSUE-1495",
+        "ISSUE-1496",
+        "ISSUE-1497"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-nceq-arts",
+      "production_state": "complete",
+      "project_dir": "2009_新课标卷_文科",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_新课标文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_新课标文_含解析.md",
+        "questions": "2009/2009_数学真题_新课标文_试题.md",
+        "solution_body": "2009/2009_数学真题_新课标文_解析正文.md"
+      },
+      "source_ids": [
+        "src-f35fd1ea580bec9dd074c52c5a75bb0c2be8d7c00dba5943c87e41f66b493242"
+      ],
+      "title": "2009 年·普通高等学校招生考试·新课标卷（琼、宁卷）·文科",
+      "track": "arts",
+      "year": 2009
     }
   ],
-  "revision": 10022,
+  "revision": 10042,
   "schema_version": 1,
   "sources": [
     {
@@ -50285,8 +50395,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f38be60f6d954f39bacc1eec761adda4790cfccd",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-nceq-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009新课标文(海南,宁夏).pdf",
       "regions": [],
       "source_id": "src-f35fd1ea580bec9dd074c52c5a75bb0c2be8d7c00dba5943c87e41f66b493242",

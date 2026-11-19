@@ -1,0 +1,24 @@
+% 2009 年新课标卷文科第 18 题：三棱锥 P-ABC。
+% 来源 PDF：普通高考/2009/2009新课标文(琼,宁).pdf，
+% SHA256 9727691ae735985e787f7ae3febf48dc9e6c6cdd1aa53b465f5d95648abdd627
+% 原页：第 2 页（A3 横向）左上，印刷页 544。
+% 重绘依据：△PAB 为等边三角形，∠PAC=∠PBC=90°，平面 PAC⊥平面 PBC。
+% 按原图遮挡关系，PBC 为可见的前面（实线），A 在后方，PA、AB、AC 画虚线。
+\begin{tikzpicture}[scale=0.95, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \coordinate (P) at (1.0,5.0);
+  \coordinate (B) at (1.8,0.4);
+  \coordinate (C) at (8.2,1.2);
+  \coordinate (A) at (4.7,2.3);
+  % 可见棱
+  \draw (P) -- (B) -- (C) -- (P);
+  % 被遮挡的棱
+  \draw[dashed] (P) -- (A);
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (A) -- (C);
+  % 点与标注
+  \fill (P) circle (2.2pt) node[above] {$P$};
+  \fill (A) circle (2.0pt) node[below right] {$A$};
+  \fill (B) circle (2.0pt) node[below left] {$B$};
+  \fill (C) circle (2.0pt) node[right] {$C$};
+\end{tikzpicture}

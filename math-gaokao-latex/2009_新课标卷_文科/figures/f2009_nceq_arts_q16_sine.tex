@@ -1,0 +1,25 @@
+% 2009 年新课标卷文科第 16 题：f(x)=2sin(ωx+φ) 的图象。
+% 来源 PDF：普通高考/2009/2009新课标文(琼,宁).pdf，
+% SHA256 9727691ae735985e787f7ae3febf48dc9e6c6cdd1aa53b465f5d95648abdd627
+% 原页：第 1 页（A3 横向）右栏下部，印刷页 543。
+% 重绘依据：图象自 x=π/4 的上升零点画到 x=5π/4 的零点，其间含两个最大值、一个最小值，
+% 即 1.5 个周期，故 T=2π/3、ω=3、φ=−3π/4，f(x)=2sin(3x−3π/4)。
+% 原页只画这一段（x<π/4 未画），本图照原页范围绘制，不补画左侧。
+\begin{tikzpicture}[x=1.9cm, y=1.0cm, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \draw[->] (-0.35,0) -- (4.55,0) node[right] {$x$};
+  \draw[->] (0,-2.55) -- (0,2.55) node[above] {$y$};
+  \draw (-0.09,1) -- (0.09,1) node[right=7pt] {$1$};
+  \draw (-0.09,2) -- (0.09,2) node[right=7pt] {$2$};
+  \draw (-0.09,-1) -- (0.09,-1) node[right=7pt] {$-1$};
+  \draw (-0.09,-2) -- (0.09,-2) node[right=7pt] {$-2$};
+  \node[below left] at (0,0) {$O$};
+  % 曲线：f(x)=2sin(3x−3π/4)，x 从 π/4 到 5π/4
+  \draw[domain=0.785398:3.926991, samples=320, smooth]
+    plot (\x, {2*sin(deg(3*\x-2.356194))});
+  % x 轴刻度标注（与原页一致，只标两个零点）
+  \draw (0.785398,0) -- (0.785398,-0.12);
+  \node[below] at (0.785398,-0.12) {$\frac{\pi}{4}$};
+  \draw (3.926991,0) -- (3.926991,-0.12);
+  \node[below] at (3.926991,-0.12) {$\frac{5\pi}{4}$};
+\end{tikzpicture}

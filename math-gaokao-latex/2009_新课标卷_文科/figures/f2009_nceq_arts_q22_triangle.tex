@@ -1,0 +1,32 @@
+% 2009 年新课标卷文科第 22 题：△ABC 的两条角平分线 AD、CE 交于 H，F 在 AC 上且 AE=AF。
+% 来源 PDF：普通高考/2009/2009新课标文(琼,宁).pdf，
+% SHA256 9727691ae735985e787f7ae3febf48dc9e6c6cdd1aa53b465f5d95648abdd627
+% 原页：第 2 页（A3 横向）右上，印刷页 544。
+% 重绘依据：∠B=60°；AD 平分 ∠A，CE 平分 ∠C；E 在 AB 上、D 在 BC 上；
+% F 在 AC 上且 AE=AF；H 为 AD 与 CE 的交点（内心）。图中按此几何关系取点。
+\begin{tikzpicture}[scale=0.95, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (8,0);
+  \coordinate (A) at (2.6,6.0);
+  \coordinate (D) at (3.58,0);
+  \coordinate (E) at (1.30,3.0);
+  \coordinate (F) at (4.79,3.57);
+  \coordinate (H) at (3.23,2.14);
+  % 三角形
+  \draw (A) -- (B) -- (C) -- cycle;
+  % 角平分线
+  \draw (A) -- (D);
+  \draw (C) -- (E);
+  % 辅助线 EF、ED
+  \draw (E) -- (F);
+  \draw (E) -- (D);
+  % 点与标注
+  \fill (A) circle (2.0pt) node[above] {$A$};
+  \fill (B) circle (2.0pt) node[left] {$B$};
+  \fill (C) circle (2.0pt) node[right] {$C$};
+  \fill (D) circle (1.8pt) node[below] {$D$};
+  \fill (E) circle (1.8pt) node[left] {$E$};
+  \fill (F) circle (1.8pt) node[right] {$F$};
+  \fill (H) circle (1.8pt) node[below left] {$H$};
+\end{tikzpicture}

@@ -21445,6 +21445,57 @@
       "track": "理科",
       "variant": "新课标理科",
       "year": 2009
+    },
+    {
+      "base": "gk_2009_gaokao_nceq_arts",
+      "dir": "2009_新课标卷_文科",
+      "figures": [
+        "f2009_nceq_arts_q03_scatter.tex",
+        "f2009_nceq_arts_q09_cube.tex",
+        "f2009_nceq_arts_q10_flowchart.tex",
+        "f2009_nceq_arts_q11_views.tex",
+        "f2009_nceq_arts_q16_sine.tex",
+        "f2009_nceq_arts_q17_seabed.tex",
+        "f2009_nceq_arts_q18_tetrahedron.tex",
+        "f2009_nceq_arts_q19_histograms.tex",
+        "f2009_nceq_arts_q22_triangle.tex",
+        "f2009_nceq_arts_q24_numberline.tex"
+      ],
+      "id": "gk-2009-nceq-arts",
+      "legacy_ids": [],
+      "note": "固定源为 2 页 A3 横向排印，印面页码 543、544；页眉「2009 普通高等学校招生考试（琼、宁卷文）」。PDF 只有题面、无答案页，24 题答案由本库独立推导（非官方）。第 3 题两幅散点图、第 9 题正方体、第 10 题程序框图、第 11 题三视图、第 16 题正弦型图象、第 17 题海底剖面、第 18 题三棱锥、第 19 题两幅频率分布直方图、第 22 题三角形与角平分线、第 24 题数轴均由 TikZ 重绘；第 14 题原页无图，不设图稿。第 19 题的 x、y 由 A 类 25 人、B 类 75 人的分层抽样总数确定。第 22–24 题为三选一，原页紧接第 21 题排印、未另印「四、选做题」标题，本库按 2008 同版式补出节标题。原页排印问题：第 9 题「棱线长」衍一「线」字；第 16 题图象只画出 x≥π/4 的一段，完整图象在 0≤x<π/4 上还应有一段位于 x 轴下方；第 19 题「抽插结果」应为「抽查结果」；第 22 题第 (1) 问重复印出「证明：」。以上均照录原页并在答案与解析中说明。",
+      "paper": "新课标卷（琼、宁卷）",
+      "paper_id": "gk-2009-nceq-arts",
+      "pdf_pages": {
+        "questions": [
+          1,
+          2
+        ],
+        "solutions": null
+      },
+      "questions": 24,
+      "structure": {
+        "填空题": [
+          13,
+          16
+        ],
+        "解答题": [
+          17,
+          21
+        ],
+        "选做题": [
+          22,
+          24
+        ],
+        "选择题": [
+          1,
+          12
+        ]
+      },
+      "title": "2009 年·普通高等学校招生考试·新课标卷（琼、宁卷）·文科",
+      "track": "文科",
+      "variant": "新课标文科",
+      "year": 2009
     }
   ],
   "source_pdf": "../math-gaokao-2017-2026/main.pdf",

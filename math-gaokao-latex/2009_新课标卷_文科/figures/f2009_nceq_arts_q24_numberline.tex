@@ -1,0 +1,20 @@
+% 2009 年新课标卷文科第 24 题：数轴上的 O、A、B、M 与线段 OM 上的动点 C。
+% 来源 PDF：普通高考/2009/2009新课标文(琼,宁).pdf，
+% SHA256 9727691ae735985e787f7ae3febf48dc9e6c6cdd1aa53b465f5d95648abdd627
+% 原页：第 2 页（A3 横向）右下，印刷页 544。
+% 重绘依据：O 为原点，A、B、M 依次对应 10、20、30；C 在线段 OM 上，x=|OC|。
+\begin{tikzpicture}[scale=0.9, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \draw[->] (-1.2,0) -- (9.6,0);
+  \foreach \x/\lab in {0/O,3/A,6/B,9/M} {
+    \fill (\x,0) circle (2.0pt);
+    \node[above] at (\x,0.02) {$\lab$};
+  }
+  \foreach \x/\lab in {3/10,6/20,9/30} {
+    \draw (\x,0) -- (\x,-0.16);
+    \node[below] at (\x,-0.18) {$\lab$};
+  }
+  \fill (5.0,0) circle (2.0pt) node[below] {$C$};
+  \draw[<->] (0,0.55) -- (5.0,0.55);
+  \node[above] at (2.5,0.55) {$x$};
+\end{tikzpicture}

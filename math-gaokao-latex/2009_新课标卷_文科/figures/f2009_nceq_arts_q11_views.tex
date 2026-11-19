@@ -1,0 +1,48 @@
+% 2009 年新课标卷文科第 11 题：棱锥的三视图。
+% 来源 PDF：普通高考/2009/2009新课标文(琼,宁).pdf，
+% SHA256 9727691ae735985e787f7ae3febf48dc9e6c6cdd1aa53b465f5d95648abdd627
+% 原页：第 1 页（A3 横向）右栏上部，印刷页 543。
+% 重绘依据：正视图与侧视图都是底边 6、高 4 的等腰三角形；俯视图是直角边长 6 的
+% 等腰直角三角形，顶点（锥顶的投影）在斜边中点，图中标出其到直角边的距离 3。
+% 尺寸单位 cm。
+\begin{tikzpicture}[scale=0.9, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  % 正视图
+  \begin{scope}
+    \draw (0,0) -- (6,0) -- (3,4) -- cycle;
+    \draw[dashed] (3,4) -- (3,0);
+    \draw[<->] (3,4.45) -- (6,4.45);
+    \node[above] at (4.5,4.45) {$3$};
+    \draw[<->] (0,-0.55) -- (6,-0.55);
+    \node[below] at (3,-0.55) {$6$};
+    \draw[<->] (6.55,0) -- (6.55,4);
+    \node[right] at (6.6,2) {$4$};
+    \node[below] at (3,-1.2) {正（主）视图};
+  \end{scope}
+  % 侧视图
+  \begin{scope}[shift={(10.2,0)}]
+    \draw (0,0) -- (6,0) -- (3,4) -- cycle;
+    \draw[dashed] (3,4) -- (3,0);
+    \draw[<->] (3,4.45) -- (6,4.45);
+    \node[above] at (4.5,4.45) {$3$};
+    \draw[<->] (0,-0.55) -- (6,-0.55);
+    \node[below] at (3,-0.55) {$6$};
+    \draw[<->] (6.55,0) -- (6.55,4);
+    \node[right] at (6.6,2) {$4$};
+    \node[below] at (3,-1.2) {侧（左）视图};
+  \end{scope}
+  % 俯视图
+  \begin{scope}[shift={(0,-7.2)}]
+    \draw (0,0) -- (6,0) -- (0,6) -- cycle;
+    \draw (0,0) -- (3,3);
+    \draw (3,3) -- (6,3);
+    \draw[<->] (6.55,0) -- (6.55,3);
+    \node[right] at (6.6,1.5) {$3$};
+    \draw[<->] (-0.55,0) -- (-0.55,6);
+    \node[left] at (-0.6,3) {$6$};
+    \draw[<->] (0,-0.55) -- (6,-0.55);
+    \node[below] at (3,-0.55) {$6$};
+    \node[below] at (3,-1.2) {俯视图};
+  \end{scope}
+  \node at (10.2,-3.2) {（单位：$\mathrm{cm}$）};
+\end{tikzpicture}

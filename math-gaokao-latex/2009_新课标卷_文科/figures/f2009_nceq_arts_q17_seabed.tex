@@ -1,0 +1,44 @@
+% 2009 年新课标卷文科第 17 题：海平面上的 A、B、C 与海底的 D、E、F。
+% 来源 PDF：普通高考/2009/2009新课标文(琼,宁).pdf，
+% SHA256 9727691ae735985e787f7ae3febf48dc9e6c6cdd1aa53b465f5d95648abdd627
+% 原页：第 1 页（A3 横向）右栏下部，印刷页 543。
+% 重绘依据：A、B、C 在同一条海平面直线上，AB=50 m、BC=120 m；AD、BE、CF 分别
+% 垂直于海平面，AD=80 m、BE=200 m、CF=110 m；D、E、F 为海底测点，∠DEF 的顶点为 E。
+% 横向按 0.05 cm/m、纵向按 0.035 cm/m 作图；海底轮廓为示意，不参与计算。
+\begin{tikzpicture}[x=0.05cm, y=0.035cm, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  % 海平面（双波浪线）
+  \draw[domain=-15:205, samples=120]
+    plot (\x, {3*sin(deg(0.09*\x))});
+  \draw[domain=-15:205, samples=120]
+    plot (\x, {-3*sin(deg(0.09*\x))-7});
+  % 海底轮廓（示意）
+  \draw[line width=1.4pt, gray!70]
+    (-18,-98) -- (0,-80) -- (12,-92) -- (18,-108) -- (30,-128)
+    -- (38,-150) -- (42,-176) -- (50,-200) -- (62,-188) -- (72,-172)
+    -- (86,-150) -- (102,-132) -- (120,-118) -- (140,-112) -- (170,-110)
+    -- (190,-122) -- (200,-130);
+  % 竖直测线
+  \draw (0,0) -- (0,-80);
+  \draw (50,0) -- (50,-200);
+  \draw (170,0) -- (170,-110);
+  % 海底三角形 DEF 的两边
+  \draw (0,-80) -- (50,-200) -- (170,-110);
+  % 海平面点
+  \fill (0,0) circle (2.2pt) node[above] {$A$};
+  \fill (50,0) circle (2.2pt) node[above] {$B$};
+  \fill (170,0) circle (2.2pt) node[above] {$C$};
+  % 海底点
+  \fill (0,-80) circle (2.2pt) node[below left] {$D$};
+  \fill (50,-200) circle (2.2pt) node[below] {$E$};
+  \fill (170,-110) circle (2.2pt) node[right] {$F$};
+  % 水平距离
+  \draw[<->] (0,18) -- (50,18);
+  \node[above] at (25,18) {$50$};
+  \draw[<->] (50,18) -- (170,18);
+  \node[above] at (110,18) {$120$};
+  % 水深
+  \node[left] at (-8,-42) {$80$};
+  \node[left] at (42,-100) {$200$};
+  \node[right] at (178,-55) {$110$};
+\end{tikzpicture}

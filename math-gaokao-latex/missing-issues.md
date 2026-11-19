@@ -25120,3 +25120,70 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1494
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 9 题（印面 543）印作「正方体 ABCD−A1B1C1D1 的棱线长为 1」，其中「棱线长」多一「线」字，同题后文只讨论棱长与线段 B1D1，按「棱长为 1」理解。该衍字不影响正方体各棱长均为 1 的几何事实与四个选项的判断。本库照录原页字面「棱线长」，并在解析中按棱长 1 计算。",
+  "fingerprint": "305e5a86740648d6c1093b77b6a2c97fb082b0c39da19f3466c67b8df6263fee",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-nceq-arts",
+  "question_id": "gk-2009-nceq-arts-q09",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 9 题「棱线长」应为「棱长」；确认后改正并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-f35fd1ea580bec9dd074c52c5a75bb0c2be8d7c00dba5943c87e41f66b493242",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1495
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 16 题（印面 543）的图象自 x=π/4 的上升零点画到 x=5π/4 的零点，其间含两个最大值 2、一个最小值 −2，即 1.5 个周期；但 0≤x<π/4 的一段（f(0)=−√2，应为负值）原页未画出。已画出的 1.5 个周期与两端零点足以唯一确定 T=2π/3、ω=3、φ=−3π/4，故 f(7π/12)=0；本库照原页范围重绘该段，不补画左侧。该省略不影响求解，属非阻断的图象截取。",
+  "fingerprint": "e3ef042e93ec88495f45002d40e7f0260fab9f969307fb38bf6e4f0a6c777083",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-nceq-arts",
+  "question_id": "gk-2009-nceq-arts-q16",
+  "resume_action": "取得同版更完整图象或官方答案，确认第 16 题图象确为 1.5 个周期（T=2π/3、ω=3），f(7π/12)=0；确认后按完整图象重绘并复核答案。",
+  "source_id": "src-f35fd1ea580bec9dd074c52c5a75bb0c2be8d7c00dba5943c87e41f66b493242",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-1496
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 19 题第 (2) 问（印面 544）印作「从 A 类工人中的抽查结果和从 B 类工人中的抽插结果分别如下表 1 和表 2」，句中「抽插」当为「抽查」，与前一分句「抽查结果」不一致；该排印问题不影响表 1、表 2 的数据与 x、y 及平均数的计算。本库照录原页字面「抽插」，按「抽查」理解。",
+  "fingerprint": "7f08dcac518c297e4cac1edea9cbe9803a393f1eca3c142c1b9ca7ac55369153",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-nceq-arts",
+  "question_id": "gk-2009-nceq-arts-q19",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 19 题第 (2) 问「抽插」应为「抽查」；确认后改正并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-f35fd1ea580bec9dd074c52c5a75bb0c2be8d7c00dba5943c87e41f66b493242",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1497
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 22 题第 (1) 问（印面 544）印作「证明：证明：B，D，H，E 四点共圆」，连续重复「证明：」；第 (2) 问「证明：CE 平分 ∠DEF」正常。该重复排印不影响题意与证明内容。本库照录原页字面，并在解析中仅按一次「证明：」处理。",
+  "fingerprint": "af1647ce5ea9d1156a14cbfdd1eb9042d62a5dc4f286ce5a5a258df11d8c0f33",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-nceq-arts",
+  "question_id": "gk-2009-nceq-arts-q22",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 22 题第 (1) 问重复的「证明：」为排印重复；确认后删去重复并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-f35fd1ea580bec9dd074c52c5a75bb0c2be8d7c00dba5943c87e41f66b493242",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
