@@ -3308,6 +3308,14 @@
         "gk-2009-liaoning-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase6-b56",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-liaoning-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3317,7 +3325,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "05740609-9fbf-4473-8c2c-ba111c56b979",
+  "last_transaction_id": "78b9d4d2-49f2-41ad-b384-6f37deb83f3c",
   "papers": [
     {
       "blocked_from": null,
@@ -39863,9 +39871,88 @@
       "title": "2009 年·普通高等学校招生考试·辽宁卷·文科",
       "track": "arts",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_理科/figures/f2009_liaoning_science_q08_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_理科/figures/f2009_liaoning_science_q10_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_理科/figures/f2009_liaoning_science_q15_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_理科/figures/f2009_liaoning_science_q17_lighthouse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_理科/figures/f2009_liaoning_science_q18_squares.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_理科/figures/f2009_liaoning_science_q22_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_liaoning_science",
+        "id": "gk-2009-liaoning-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 537、538；PDF 只有题面、无答案页，22 题答案由本库独立推导（非官方）。第 8 题三角函数图象、第 10 题程序框图、第 15 题三视图、第 17 题灯塔仰角示意、第 18 题两个正方形、第 22 题(A) 圆内接三角形由 TikZ 重绘。第 19 题原页印作「某人向一目射击」，疑脱「标」字，照录并登记 ISSUE，按「一目标」理解，不影响所给分布列与概率。第 22 题为三选一，原页只标「三选一」并以【A】【B】【C】分列，未另印作答规则，本库三个选项均给出解答。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "辽宁理科"
+      },
+      "issue_ids": [
+        "ISSUE-1487"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-liaoning-science",
+      "production_state": "complete",
+      "project_dir": "2009_辽宁卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_辽宁理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_辽宁理_含解析.md",
+        "questions": "2009/2009_数学真题_辽宁理_试题.md",
+        "solution_body": "2009/2009_数学真题_辽宁理_解析正文.md"
+      },
+      "source_ids": [
+        "src-218a35d60b3b96dd11e35b8417c5466d49a44bf14277f096a95338429d8de1ac"
+      ],
+      "title": "2009 年·普通高等学校招生考试·辽宁卷·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 9994,
+  "revision": 10004,
   "schema_version": 1,
   "sources": [
     {
@@ -50422,8 +50509,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f46e3a010b5e2602b47c768a15dcfd3ebb36b8b9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-liaoning-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009辽宁理.pdf",
       "regions": [],
       "source_id": "src-218a35d60b3b96dd11e35b8417c5466d49a44bf14277f096a95338429d8de1ac",

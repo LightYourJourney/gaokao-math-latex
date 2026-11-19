@@ -1,0 +1,22 @@
+% 2009 年辽宁卷理科第 8 题：f(x)=Acos(ωx+φ) 的图象。
+% 来源 PDF：普通高考/2009/2009辽宁理.pdf，SHA256 5ae9708acfe7def5bddd60a34d1474cfa2e2c20a39d130255e0e4393093accad
+% 原页：第 1 页（A3 三栏）第 1 栏下部，印刷页 537。
+% 重绘依据：曲线在 x=7π/12 与 x=11π/12 处与 x 轴相交，两零点之间为正值峰；
+%   故半周期为 π/3、ω=3。又 x=π/2 处函数值为 −2/3（虚线标出），由此定出振幅，
+%   进而 f(0)=2/3。原图只画峰附近一段，y 轴在左侧。
+\begin{tikzpicture}[scale=1.15, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \draw[->] (-0.55,0) -- (3.35,0) node[right] {$x$};
+  \draw[->] (0,-1.35) -- (0,1.32) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw[domain=1.22:3.12, samples=240, smooth, thick]
+    plot (\x,{0.9428*sin(deg(3*(\x-1.8326)))});
+  \draw[densely dashed] (0,-0.6667) -- (1.5708,-0.6667);
+  \draw[densely dashed] (1.5708,-0.6667) -- (1.5708,0);
+  \draw (1.8326,0.09) -- (1.8326,-0.09);
+  \draw (2.8798,0.09) -- (2.8798,-0.09);
+  \node[left] at (-0.06,-0.6667) {$-\frac23$};
+  \node[above] at (1.5708,0.04) {$\frac{\pi}{2}$};
+  \node[below] at (1.8326,-0.72) {$\frac{7\pi}{12}$};
+  \node[below] at (2.8798,-0.72) {$\frac{11\pi}{12}$};
+\end{tikzpicture}

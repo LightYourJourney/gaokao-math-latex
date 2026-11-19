@@ -25006,3 +25006,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1487
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 19 题（印面 538）印作「某人向一目射击 4 次，每次击中目标的概率为 1/3」，句中「一目」当为「一目标」，原页脱「标」字；同句后半已明确写「每次击中目标」，题意为向同一目标射击 4 次，语义无歧义。本库照录原页字面「一目」，并在解析中按「一目标」理解；分布列 X~B(4,1/3) 与 P(A)=7/25 不受该排印问题影响。",
+  "fingerprint": "c890df94051342d91ae00fc3f4fe7e6da64c0174c548f1216b73ff20ede41d10",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-liaoning-science",
+  "question_id": "gk-2009-liaoning-science-q19",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 19 题首句应为「某人向一目标射击 4 次」；确认后补「标」字并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-218a35d60b3b96dd11e35b8417c5466d49a44bf14277f096a95338429d8de1ac",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
