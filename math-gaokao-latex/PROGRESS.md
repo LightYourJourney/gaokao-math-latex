@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 广东卷（理科）：phase6-b60 新卷转录、四版构建与视觉审查收口（2026-11-20；`closed`）
+
+- 对象：`gk-2009-guangdong-science`，21 个题号（选择 1–8、填空 9–15、解答 16–21）；固定来源 `src-6903aeae3bb3f219db7428c40cf5dafcbfe8ec61fea9c3c4f6c1c168a98652ed`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009广东理.pdf`，SHA-256 `5256b35235a042e254d36c111af3eda0f5dd8f552664021d0bace5c05582ad04`，2 页 A3 横向，印面页码 519、520。
+- 转录口径：文字层只作定位，分数、根号、上下标、选项与六幅图均按 600 dpi 原页复核。原页各题与各节均未印分值，全部记「原页未标」，不补。第 18 题 (2) 印作「直线 $FG_1\perp FEE_1$」未印「平面」，照录并在解析中说明。
+- 选做说明缺失：原页填空 9–15 连续排印，第 13–15 题完全没有「选做（三选二）」的作答说明（同版式、同字号，页眉页脚亦无注），故按原页字面把 13–15 当作普通填空题转录，三题均转录并各给答案（ISSUE-1501，`non_blocking`；每题答案只依赖本题条件）。
+- 答案（独立推导，等级 D，非官方）：1B 2C 3B 4C 5D 6D 7A 8A；9 $s=\frac{a_1+\cdots+a_n}{n}$、样本的平均数；10 $(-1,1)$ 或 $(-3,1)$；11 $\frac{x^2}{36}+\frac{y^2}9=1$；12 $a=\frac5{12}$、$b=\frac14$；13 $-1$；14 $(-\infty,-2)\cup(-2,-\frac32]$；15 $8\pi$；16 (1) $\frac25$、(2) $\frac{\sqrt2}2$；17 (1) $\frac{119}{18250}$、(2) 119 天与 100 天、(3) $\frac{76653}{78125}$；18 (1) $\frac23$、(2) $FG_1\perp$ 平面 $FEE_1$、(3) $\frac{\sqrt3}3$；19 (1) $y=2x^2-x+\frac{11}8\left(-\frac14<x<\frac54\right)$、(2) $-\frac{7\sqrt2}5$；20 (1) $m=\sqrt2-1$ 或 $-1-\sqrt2$、(2) 按 $k=1$ 与 $k\neq1$ 及 $m$ 的正负分类；21 $x_n=\frac{n}{n+1}$、$y_n=\frac{n\sqrt{2n+1}}{n+1}$，两侧不等式均证。
+- 图稿 6 张（Q1 韦恩图、Q8 速度曲线、Q9 程序框图、Q15 圆、Q17 频率分布直方图、Q18 正方体），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。Q17 直方图按原页六组、组距 50、纵轴刻度 $x,2/365,7/1825,3/1825,8/9125$ 重绘；Q18 补出 $E_1$、$G_1$ 及投影虚线。
+- 源缺陷（照录并登记）：ISSUE-1501（原页未印 13–15 的选做说明，`non_blocking`）；ISSUE-1502（Q18 (2) 未印「平面」，按平面 $FEE_1$ 理解，`non_blocking`）。卷 `complete`、批次 `closed`。
+- 验收：四版 6/27/8/22 页（共 63 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 63 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`。
+- 全量门禁：`validate-receipts --all --require-final` **OK：553 卷**；`provenance check-all` **OK：553 卷**；三套生成器 **553 一致**；`report.py render --all` 已写入并回读；`report.py check --all` 通过；`manifest.csv` 775 行；`issues.py validate` 通过（EXIT 0）。
+- 下一步：取得 13–15 的「选做（三选二）」说明与第 18 题 (2) 的「平面」二字的官方勘误或同版原页后补正并重跑本题 provenance；`source-manifest.json` 仍有未绑定 `paper_id` 的来源。
+
 ### 2009 江苏卷：phase6-b59 新卷转录、四版构建与视觉审查收口（2026-11-20；`closed_with_blockers`）
 
 - 对象：`gk-2009-jiangsu`，23 个题号、26 道子题（填空 1–14、解答 15–20、附加题 21 四选二 A–D、22、23）；固定来源 `src-5b274e0e9e9c33981fec202b7e9797899dc1a2cceb6b028f44b74c8db2a803b6`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009江苏.pdf`，SHA-256 `64e417d45911d88d77c047a419dcc259e7c7dc779c79d20df2092755c96a4501`，2 页 A3 横向，印面页码 531、532。

@@ -1,0 +1,33 @@
+% 2009 年广东卷（理科）第 9 题：求样本平均数 s 的程序框图。
+% 来源 PDF：.work/ocr-local/sources/2009广东理.pdf
+% SHA-256：5256b35235a042e254d36c111af3eda0f5dd8f552664021d0bace5c05582ad04
+% 原页：第 1 页（A3 四栏）第 2 栏，印刷页 519。
+% 绘制依据：开始 → 输入 n, a1, …, an → s=0, i=1 → 判断 i≤n：
+%   是时 s←((i−1)×s+a_i)/i、i←i+1 后回环；否时输出 s、结束。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=3pt},
+  box/.style={draw, minimum width=2.1cm, minimum height=0.55cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.9cm, minimum height=0.55cm},
+  dec/.style={draw, diamond, aspect=2, inner sep=1pt,
+              minimum width=2.3cm, minimum height=1.0cm}]
+
+  \node[box, rounded corners=3pt] (start) at (0,0) {开始};
+  \node[io] (input) at (0,-1.1) {输入 $n,a_1,a_2,\cdots,a_n$};
+  \node[box] (init) at (0,-2.2) {$s=0,\ i=1$};
+  \node[dec] (test) at (0,-3.6) {$i\leqslant n$?};
+  \node[io] (out) at (0,-5.2) {输出 $s$};
+  \node[box, rounded corners=3pt] (end) at (0,-6.3) {结束};
+
+  \node[box] (assign) at (4.0,-3.6)
+    {$s=\dfrac{(i-1)\times s+a_i}{i}$};
+  \node[box] (inc) at (4.0,-2.6) {$i=i+1$};
+
+  \draw[->,>=stealth] (start) -- (input);
+  \draw[->,>=stealth] (input) -- (init);
+  \draw[->,>=stealth] (init) -- (test);
+  \draw[->,>=stealth] (test) -- node[left] {否} (out);
+  \draw[->,>=stealth] (out) -- (end);
+  \draw[->,>=stealth] (test.east) -- node[above] {是} (assign.west);
+  \draw[->,>=stealth] (assign.north) -- (inc.south);
+  \draw[->,>=stealth] (inc.west) -- (0,-2.6);
+\end{tikzpicture}

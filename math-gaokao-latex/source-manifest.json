@@ -3340,6 +3340,14 @@
         "gk-2009-jiangsu"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase6-b60",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-guangdong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3349,7 +3357,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "34e5b903-fc5c-4c7d-81a1-9b527dcd7127",
+  "last_transaction_id": "ff5778cd-1af1-4d02-925a-8e94e4f66058",
   "papers": [
     {
       "blocked_from": null,
@@ -40265,9 +40273,89 @@
       "title": "2009 年·普通高等学校招生考试·江苏卷",
       "track": "none",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_理科/figures/f2009_guangdong_science_q01_venn.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_理科/figures/f2009_guangdong_science_q08_velocity.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_理科/figures/f2009_guangdong_science_q09_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_理科/figures/f2009_guangdong_science_q15_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_理科/figures/f2009_guangdong_science_q17_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_理科/figures/f2009_guangdong_science_q18_cube.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_guangdong_science",
+        "id": "gk-2009-guangdong-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 519、520；页眉「2009 普通高等学校招生考试 (广东卷理)」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。共 21 个题号（选择 1–8、填空 9–15、解答 16–21），答案由本库独立推导（非官方）。原页二、填空题第 9—15 题连续排印，未印「13—15 为选做题（三选二）」的作答说明，本库按原页字面把 13—15 当作普通填空题转录，三题均给答案（ISSUE-1501，non_blocking）。第 18 题 (2) 原页印「直线 FG1 ⊥ FEE1」而未印「平面」，按平面 FEE1 理解（ISSUE-1502，non_blocking）。第 1 题韦恩图、第 8 题速度曲线、第 9 题程序框图、第 15 题圆、第 17 题频率分布直方图、第 18 题正方体由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            9,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "广东"
+      },
+      "issue_ids": [
+        "ISSUE-1501",
+        "ISSUE-1502"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-guangdong-science",
+      "production_state": "complete",
+      "project_dir": "2009_广东卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_广东理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_广东理_含解析.md",
+        "questions": "2009/2009_数学真题_广东理_试题.md",
+        "solution_body": "2009/2009_数学真题_广东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-6903aeae3bb3f219db7428c40cf5dafcbfe8ec61fea9c3c4f6c1c168a98652ed"
+      ],
+      "title": "2009 年·普通高等学校招生考试·广东卷·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 10077,
+  "revision": 10092,
   "schema_version": 1,
   "sources": [
     {
@@ -50464,8 +50552,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b0dac205e98746ed9ad3577b5227fcf07cfd04c4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-guangdong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009广东理.pdf",
       "regions": [],
       "source_id": "src-6903aeae3bb3f219db7428c40cf5dafcbfe8ec61fea9c3c4f6c1c168a98652ed",

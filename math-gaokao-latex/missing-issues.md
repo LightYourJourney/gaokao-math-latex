@@ -25238,3 +25238,37 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1501
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1 页（印面 519）二、填空题自第 9 题连续排印至第 15 题，第 13（参数方程）、14（绝对值不等式）、15（圆的几何证明）三题与 9—12 同一版式、同一字号，页面上没有任何「选做」「三选二」「考生只能选做两题」之类的作答说明；页脚与页眉亦无相关注释。按同场次广东卷的通行结构，13—15 应为选做题（三选二），但固定源未印该说明，本库不得自行补写。本库按原页字面把 13—15 作为普通填空题转录，并三题各给答案；每题答案只依赖本题条件，与「三选二」规则无关。",
+  "fingerprint": "2011e7d0f7e0128aa7c83fefe4a7cc2d13623ecf0a68274b09b7491df8445ece",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-guangdong-science",
+  "question_id": "gk-2009-guangdong-science-q13",
+  "resume_action": "取得同版完整原页或含作答说明的官方印本，确认 13—15 的「选做（三选二）」说明原文；确认后在题面按原文补出该说明并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-6903aeae3bb3f219db7428c40cf5dafcbfe8ec61fea9c3c4f6c1c168a98652ed",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1502
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 2 页（印面 520）第 18 题第 (2) 问印作「证明：直线 FG1 ⊥ FEE1；」，在「⊥」与「FEE1」之间未印「平面」二字；同题第 (1) 问则印有「在平面 DCC1D1 内」，可见不是版式省略。按坐标验算 FG1 同时垂直于平面 FEE1 内的两条相交直线 FE、FE1（见解析），故唯一合理读法是「FG1 ⊥ 平面 FEE1」，本题为证明题，读法不影响任何数值答案。本库照录原页字面并在解析中说明。",
+  "fingerprint": "c8d414e7c08ed7e38c4cd09cc19804f46b3869b76988b51659aa028999a5ed2b",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-guangdong-science",
+  "question_id": "gk-2009-guangdong-science-q18",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 18 题 (2) 是否有「平面」二字；确认后改正题面并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-6903aeae3bb3f219db7428c40cf5dafcbfe8ec61fea9c3c4f6c1c168a98652ed",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

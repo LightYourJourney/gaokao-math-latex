@@ -1,0 +1,26 @@
+% 2009 年广东卷（理科）第 8 题：甲、乙两车的速度—时间曲线。
+% 来源 PDF：.work/ocr-local/sources/2009广东理.pdf
+% SHA-256：5256b35235a042e254d36c111af3eda0f5dd8f552664021d0bace5c05582ad04
+% 原页：第 1 页（A3 四栏）第 2 栏，印刷页 519。
+% 绘制依据：v(t) 纵轴、t 横轴；v甲 自原点陡升后上凸（先快后慢），v乙 自原点平缓
+%   后下凸（先慢后快），两线在 t0 之前相交；t0、t1 两处画竖直虚线至 v甲 曲线。
+\begin{tikzpicture}[scale=1.0, semithick, every node/.style={inner sep=2pt}]
+  \draw[->,>=stealth] (0,0) -- (5.6,0) node[below] {$t$};
+  \draw[->,>=stealth] (0,0) -- (0,3.5) node[right] {$v(t)$};
+  \node[below left] at (0,0) {$O$};
+
+  % v甲：陡升后趋缓
+  \draw[thick] (0,0) .. controls (0.55,1.35) and (1.5,2.05) .. (2.6,2.25)
+    .. controls (3.4,2.4) and (4.1,2.6) .. (4.7,3.0);
+  % v乙：平缓起步后急速上升
+  \draw[thick] (0,0) .. controls (1.6,0.18) and (2.6,0.75) .. (3.35,1.75)
+    .. controls (3.85,2.35) and (4.3,2.9) .. (4.6,3.35);
+
+  \draw[dashed] (3.55,0) -- (3.55,2.44);
+  \draw[dashed] (4.0,0) -- (4.0,2.56);
+  \node[below] at (3.55,0) {$t_0$};
+  \node[below] at (4.0,0) {$t_1$};
+
+  \node at (1.95,2.55) {$v_{\text{甲}}$};
+  \node at (1.75,0.8) {$v_{\text{乙}}$};
+\end{tikzpicture}

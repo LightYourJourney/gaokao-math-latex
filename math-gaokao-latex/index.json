@@ -21540,6 +21540,49 @@
       "track": "文理合卷",
       "variant": "江苏",
       "year": 2009
+    },
+    {
+      "base": "gk_2009_gaokao_guangdong_science",
+      "dir": "2009_广东卷_理科",
+      "figures": [
+        "f2009_guangdong_science_q01_venn.tex",
+        "f2009_guangdong_science_q08_velocity.tex",
+        "f2009_guangdong_science_q09_flowchart.tex",
+        "f2009_guangdong_science_q15_circle.tex",
+        "f2009_guangdong_science_q17_histogram.tex",
+        "f2009_guangdong_science_q18_cube.tex"
+      ],
+      "id": "gk-2009-guangdong-science",
+      "legacy_ids": [],
+      "note": "固定源为 2 页 A3 横向排印，印面页码 519、520；页眉「2009 普通高等学校招生考试 (广东卷理)」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。共 21 个题号（选择 1–8、填空 9–15、解答 16–21），答案由本库独立推导（非官方）。原页二、填空题第 9—15 题连续排印，未印「13—15 为选做题（三选二）」的作答说明，本库按原页字面把 13—15 当作普通填空题转录，三题均给答案（ISSUE-1501，non_blocking）。第 18 题 (2) 原页印「直线 FG1 ⊥ FEE1」而未印「平面」，按平面 FEE1 理解（ISSUE-1502，non_blocking）。第 1 题韦恩图、第 8 题速度曲线、第 9 题程序框图、第 15 题圆、第 17 题频率分布直方图、第 18 题正方体由 TikZ 重绘。",
+      "paper": "广东卷",
+      "paper_id": "gk-2009-guangdong-science",
+      "pdf_pages": {
+        "questions": [
+          1,
+          2
+        ],
+        "solutions": null
+      },
+      "questions": 21,
+      "structure": {
+        "填空题": [
+          9,
+          15
+        ],
+        "解答题": [
+          16,
+          21
+        ],
+        "选择题": [
+          1,
+          8
+        ]
+      },
+      "title": "2009 年·普通高等学校招生考试·广东卷·理科",
+      "track": "理科",
+      "variant": "广东",
+      "year": 2009
     }
   ],
   "source_pdf": "../math-gaokao-2017-2026/main.pdf",

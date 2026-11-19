@@ -1,0 +1,45 @@
+% 2009 年广东卷（理科）第 17 题：空气质量指数 API 的频率分布直方图。
+% 来源 PDF：.work/ocr-local/sources/2009广东理.pdf
+% SHA-256：5256b35235a042e254d36c111af3eda0f5dd8f552664021d0bace5c05582ad04
+% 原页：第 1 页（A3 四栏）第 4 栏，印刷页 519。
+% 绘制依据：组距 50，六组 [0,50]、[50,100]、[100,150]、[150,200]、[200,250]、
+%   [250,300]；纵轴为「频率/组距」，各柱高依次为 3/1825、x、2/365、7/1825、
+%   3/1825、8/9125（以 1/9125 为单位取 15、59.5、50、35、15、8，与原页比例一致）。
+\begin{tikzpicture}[x=0.040cm, y=0.070cm, semithick,
+  every node/.style={inner sep=2pt}]
+
+  % 坐标轴
+  \draw[->,>=stealth] (0,0) -- (345,0);
+  \draw[->,>=stealth] (0,0) -- (0,84);
+  \node[below right] at (345,0) {API};
+  \node[anchor=west] at (12,76) {频率};
+  \draw (12,72.5) -- (34,72.5);
+  \node[anchor=west] at (12,69) {组距};
+
+  % 六个柱
+  \draw (0,0) rectangle (50,15);
+  \draw (50,0) rectangle (100,59.5);
+  \draw (100,0) rectangle (150,50);
+  \draw (150,0) rectangle (200,35);
+  \draw (200,0) rectangle (250,15);
+  \draw (250,0) rectangle (300,8);
+
+  % 虚线导引
+  \draw[dashed] (0,59.5) -- (50,59.5);
+  \draw[dashed] (0,50) -- (100,50);
+  \draw[dashed] (0,35) -- (150,35);
+  \draw[dashed] (50,15) -- (200,15);
+  \draw[dashed] (0,8) -- (250,8);
+
+  % 纵轴刻度值
+  \node[left] at (0,59.5) {$x$};
+  \node[left] at (0,50) {$\dfrac{2}{365}$};
+  \node[left] at (0,35) {$\dfrac{7}{1825}$};
+  \node[left, yshift=5pt] at (0,15) {$\dfrac{3}{1825}$};
+  \node[left, yshift=-7pt] at (0,8) {$\dfrac{8}{9125}$};
+
+  % 横轴刻度
+  \node[below left] at (0,0) {$0$};
+  \foreach \x in {50,100,150,200,250,300}
+    \node[below] at (\x,0) {$\x$};
+\end{tikzpicture}
