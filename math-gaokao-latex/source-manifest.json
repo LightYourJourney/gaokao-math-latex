@@ -3348,6 +3348,14 @@
         "gk-2009-guangdong-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b61",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-guangdong-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3357,7 +3365,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ff5778cd-1af1-4d02-925a-8e94e4f66058",
+  "last_transaction_id": "1b64af57-7694-4ad5-94f6-b1985b1b1f8a",
   "papers": [
     {
       "blocked_from": null,
@@ -40353,9 +40361,84 @@
       "title": "2009 年·普通高等学校招生考试·广东卷·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_文科/figures/f2009_guangdong_arts_q01_venn.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_文科/figures/f2009_guangdong_arts_q11_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_文科/figures/f2009_guangdong_arts_q12_pie.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_文科/figures/f2009_guangdong_arts_q15_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_广东卷_文科/figures/f2009_guangdong_arts_q17_views.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_guangdong_arts",
+        "id": "gk-2009-guangdong-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 521、522；页眉「2009 普通高等学校招生考试 (广东卷文)」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。共 21 个题号，原页选择题为 1—10（第 9、10 题仍带 A—D 选项，排在中栏，其后才是「二、填空题」），填空题为 11—15，解答题为 16—21；答案由本库独立推导（非官方）。原页二、填空题第 11—15 题连续排印，未印「13—15 为选做题（三选二）」的作答说明，本库按原页字面把 13—15 当作普通填空题转录，三题均给答案（ISSUE-1503，non_blocking）。第 17 题图 2 中「60」自棱锥顶点量至长方体顶面，故正四棱锥高 60、长方体高 20，体积 64000 cm³。第 1 题四个韦恩图选项、第 11 题程序框图、第 12 题扇形图、第 15 题圆、第 17 题三视图由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "广东"
+      },
+      "issue_ids": [
+        "ISSUE-1503"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-guangdong-arts",
+      "production_state": "complete",
+      "project_dir": "2009_广东卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_广东文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_广东文_含解析.md",
+        "questions": "2009/2009_数学真题_广东文_试题.md",
+        "solution_body": "2009/2009_数学真题_广东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-36ba26dd1b47ca3d404936ea1f3c7bef110f1e1e0cb461496e9ac38e72c7e60e"
+      ],
+      "title": "2009 年·普通高等学校招生考试·广东卷·文科",
+      "track": "arts",
+      "year": 2009
     }
   ],
-  "revision": 10092,
+  "revision": 10108,
   "schema_version": 1,
   "sources": [
     {
@@ -50528,8 +50611,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6787a5b3c1946f8973ca2a918facb0c1118557e9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-guangdong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009广东文.pdf",
       "regions": [],
       "source_id": "src-36ba26dd1b47ca3d404936ea1f3c7bef110f1e1e0cb461496e9ac38e72c7e60e",

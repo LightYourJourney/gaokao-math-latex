@@ -1,0 +1,85 @@
+% 2009 年广东卷（文科）第 17 题：安全标识墩的三视图（图 1 立体图、图 2 正视图、图 3 俯视图）。
+% 来源 PDF：.work/ocr-local/sources/2009广东文.pdf
+% SHA-256：26c26718ce8f1cd1128fca4e63e1576ecec72ee27cc46ad538673bb533e61ced
+% 原页：第 1 页（A3 三栏）第 3 栏，印刷页 521。
+% 绘制依据：下半部分为长方体 ABCD-EFGH，底面 40×40、高 20；上半部分为正四棱锥 P-EFGH，
+%   高 60（图 2 右侧标注：60 由棱锥顶点量至长方体顶面，20 为长方体高）；图 3 为 40×40 正方形。
+%   图 1 中 ABCD 为下底面、EFGH 为上底面，P 在 EFGH 中心正上方；虚线为被遮挡的棱。
+%   被遮挡棱上的顶点标签加白色底，避免与虚线交叠。
+\begin{tikzpicture}[scale=0.55, semithick, font=\small,
+  every node/.style={inner sep=1.5pt}]
+
+  % ---------------- 图 1：立体图 ----------------
+  \begin{scope}
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (4,0);
+    \coordinate (C) at (5.6,1.4);
+    \coordinate (D) at (1.6,1.4);
+    \coordinate (E) at (0,2);
+    \coordinate (F) at (4,2);
+    \coordinate (G) at (5.6,3.4);
+    \coordinate (H) at (1.6,3.4);
+    \coordinate (P) at (2.8,8.7);
+
+    % 长方体的可见棱
+    \draw (A) -- (B) -- (C) -- (G) -- (F) -- (E) -- cycle;
+    \draw (B) -- (F);
+    % 长方体的被遮挡棱
+    \draw[dashed] (A) -- (D) -- (C);
+    \draw[dashed] (D) -- (H);
+    \draw[dashed] (E) -- (H) -- (G);
+    % 棱锥的棱
+    \draw (P) -- (E);
+    \draw (P) -- (F);
+    \draw (P) -- (G);
+    \draw[dashed] (P) -- (H);
+
+    \node[below left] at (A) {$A$};
+    \node[below] at (B) {$B$};
+    \node[right] at (C) {$C$};
+    \node[fill=white, below left] at (D) {$D$};
+    \node[left] at (E) {$E$};
+    \node[fill=white, below left] at (F) {$F$};
+    \node[right] at (G) {$G$};
+    \node[fill=white, above left] at (H) {$H$};
+    \node[above] at (P) {$P$};
+
+    \draw[->,>=stealth] (-1.05,-1.15) -- (-0.5,-0.6);
+    \node[below] at (-1.05,-1.2) {正视};
+    \node at (2.6,-1.75) {图 1};
+  \end{scope}
+
+  % ---------------- 图 2：正（主）视图 ----------------
+  \begin{scope}[shift={(7.2,0)}]
+    \draw (0,0) rectangle (4,2);
+    \draw (0,2) -- (2,8) -- (4,2);
+
+    % 底部宽度 40
+    \draw[<->,>=stealth] (0,-0.55) -- (4,-0.55);
+    \node[below] at (2,-0.55) {40};
+
+    % 右侧高度 60（棱锥）与 20（长方体）
+    \draw (4.35,2) -- (4.35,8);
+    \draw[<->,>=stealth] (4.35,2) -- (4.35,8);
+    \node[right] at (4.4,5.0) {60};
+    \draw[<->,>=stealth] (4.35,0) -- (4.35,2);
+    \node[right] at (4.4,1.0) {20};
+
+    \node at (2,-1.6) {图 2};
+  \end{scope}
+
+  % ---------------- 图 3：俯视图 ----------------
+  \begin{scope}[shift={(12.9,0)}]
+    \draw (0,0) rectangle (4,4);
+    \draw (0,0) -- (4,4);
+    \draw (0,4) -- (4,0);
+
+    \draw[<->,>=stealth] (0,-0.55) -- (4,-0.55);
+    \node[below] at (2,-0.55) {40};
+    \draw[<->,>=stealth] (4.35,0) -- (4.35,4);
+    \node[right] at (4.4,2.0) {40};
+
+    \node at (2,-1.6) {图 3};
+  \end{scope}
+
+\end{tikzpicture}

@@ -25272,3 +25272,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1503
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1 页（印面 521）二、填空题自第 11 题连续排印至第 15 题，第 13（圆的方程）、14（参数方程）、15（圆的几何）三题与 11、12 同一版式、同一字号，页面上没有任何「选做」「三选二」「考生只能选做两题」之类的作答说明；页脚与页眉亦无相关注释。按同场次广东卷的通行结构，13—15 应为选做题（三选二），但固定源未印该说明，本库不得自行补写。本库按原页字面把 13—15 作为普通填空题转录，并三题各给答案；每题答案只依赖本题条件，与「三选二」规则无关。",
+  "fingerprint": "5b04105b1c222bdea8a396ef8b3e20454c966c9e1a503e57ab1bbaf54bb903d7",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-guangdong-arts",
+  "question_id": "gk-2009-guangdong-arts-q13",
+  "resume_action": "取得同版完整原页或含作答说明的官方印本，确认 13—15 的「选做（三选二）」说明原文；确认后在题面按原文补出该说明并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-36ba26dd1b47ca3d404936ea1f3c7bef110f1e1e0cb461496e9ac38e72c7e60e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

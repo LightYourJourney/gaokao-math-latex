@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 广东卷（文科）：phase6-b61 新卷转录、四版构建与视觉审查收口（2026-11-20；`closed`）
+
+- 对象：`gk-2009-guangdong-arts`，21 个题号；固定来源 `src-36ba26dd1b47ca3d404936ea1f3c7bef110f1e1e0cb461496e9ac38e72c7e60e`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009广东文.pdf`，SHA-256 `26c26718ce8f1cd1128fca4e63e1576ecec72ee27cc46ad538673bb533e61ced`，2 页 A3 横向，印面页码 521、522；页眉「2009 普通高等学校招生考试 (广东卷文)」。
+- 结构（按原页）：选择题 1—10（第 9、10 题仍带 A—D 选项，排在中栏，其后才印「二、填空题」）、填空题 11—15、解答题 16—21。任务书中「选择 1–8、填空 9–15」与本卷原页不符，已按原页改正，并在 `index_metadata.note` 与 `structure` 记明。
+- 转录口径：文字层只作定位，分数、根号、上下标、选项与五幅图均按 600 dpi 原页复核。原页各题与各节均未印分值，全部记「原页未标」，不补。第 17 题图 2 的「60」自棱锥顶点量至长方体顶面，故正四棱锥高 60、长方体高 20，体积 $64000\ \mathrm{cm}^3$；不是「总高 60」。
+- 选做说明缺失：原页填空 11–15 连续排印，第 13–15 题完全没有「选做（三选二）」的作答说明（同版式、同字号，页眉页脚亦无注），故按原页字面把 13–15 当作普通填空题转录，三题均给答案（ISSUE-1503，`non_blocking`；每题答案只依赖本题条件）。
+- 答案（独立推导，等级 D，非官方）：1B 2C 3C 4A 5B 6D 7A 8D 9A 10B；11 判断框 $i\leqslant6$、$s=a_1+a_2+\cdots+a_6$；12 $37$、$20$；13 $(x-2)^2+(y+1)^2=\frac{25}{2}$；14 $-6$；15 $16\pi$；16 (1) $\frac25$、(2) $\frac{\sqrt2}{2}$；17 (1) 侧视图与正视图全等、(2) $64000\ \mathrm{cm}^3$、(3) 证明；18 (1) 乙班、(2) $57.2$、(3) $\frac25$；19 (1) $\frac{x^2}{36}+\frac{y^2}{9}=1$、(2) $6\sqrt3$、(3) 不存在；20 (1) $a_n=-\frac{2}{3^n}$、$b_n=2n-1$、(2) $112$；21 (1) $m=\sqrt2-1$ 或 $m=-1-\sqrt2$、(2) 按 $k=1$ 与 $k\neq1$ 及 $m$ 的正负分类。
+- 图稿 5 张（Q1 四个韦恩图选项、Q11 程序框图、Q12 扇形图、Q15 圆、Q17 三视图），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。Q17 图 1 的 $H$、$D$、$F$ 标签加白底避开虚线，图 2、图 3 的尺寸标注与图题分行。
+- 源缺陷（照录并登记）：ISSUE-1503（原页未印 13–15 的选做说明，`non_blocking`）。卷 `complete`、批次 `closed`。
+- 自查补正：第 18 题茎叶图甲班 18 行原转录漏掉「2」，按 600 dpi 原页补出（甲班 10 个数据含 182），与解析所用数据及方差 57.2 一致；重跑生成、build（attempt `362a6e9e`）、逐页复核与 `finalize-batch`。
+- 验收：四版 6/26/8/20 页（共 60 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 60 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`。
+- 全量门禁：`validate-receipts --all --require-final` **OK：554 卷**；`provenance check-all` **OK：554 卷**；三套生成器 **554 一致**；`report.py render --all` 已写入并回读；`report.py check --all` 通过；`manifest.csv` 775 行；`issues.py validate` 通过（EXIT 0）。
+- 下一步：取得 13–15 的「选做（三选二）」说明原文后补正并重跑本题 provenance；`source-manifest.json` 仍有未绑定 `paper_id` 的来源。
+
 ### 2009 广东卷（理科）：phase6-b60 新卷转录、四版构建与视觉审查收口（2026-11-20；`closed`）
 
 - 对象：`gk-2009-guangdong-science`，21 个题号（选择 1–8、填空 9–15、解答 16–21）；固定来源 `src-6903aeae3bb3f219db7428c40cf5dafcbfe8ec61fea9c3c4f6c1c168a98652ed`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009广东理.pdf`，SHA-256 `5256b35235a042e254d36c111af3eda0f5dd8f552664021d0bace5c05582ad04`，2 页 A3 横向，印面页码 519、520。
