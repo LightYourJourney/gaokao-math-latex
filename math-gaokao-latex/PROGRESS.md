@@ -13,19 +13,7 @@
 - 源缺陷（照录并登记）：ISSUE-1494（Q9「棱线长」，`non_blocking`）；ISSUE-1495（Q16 图象只画 1.5 个周期、左段未画，但足以定参，`non_blocking`）；ISSUE-1496（Q19「抽插」应为「抽查」，`non_blocking`）；ISSUE-1497（Q22 第 (1) 问重复「证明：」，`non_blocking`）。卷 `complete`、批次 `closed`。
 - 验收：四版 9/33/11/27 页（共 80 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 80 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`。
 - 全量门禁：`validate-receipts --all --require-final` **OK：551 卷**；`provenance check-all` **OK：551 卷**；三套生成器 **551 一致**；`report.py render --all` 已写入并回读六个报告目标；`report.py check --all` 通过；`issues.py validate` 通过（EXIT 0）；`manifest.csv` 775 行。
-- 下一步：按年份继续 2009 全国课标文等未成卷来源；`source-manifest.json` 仍有未绑定 `paper_id` 的来源。
-
-### 2009 新课标卷（琼、宁卷）文科：phase6-b58 新卷转录、四版构建与视觉审查收口（2026-11-20；`closed`）
-
-- 对象：`gk-2009-nceq-arts`，24 题（选择 1–12、填空 13–16、解答 17–21、选做 22–24 三选一）；固定来源 `src-f35fd1ea580bec9dd074c52c5a75bb0c2be8d7c00dba5943c87e41f66b493242`，上游 `普通高考/2009/2009新课标文(海南,宁夏).pdf`，SHA-256 `9727691ae735985e787f7ae3febf48dc9e6c6cdd1aa53b465f5d95648abdd627`，2 页 A3 横向，印面页码 543、544。
-- 转录口径：文字层只作定位，分数、根号、上下标与十幅图均按 600 dpi 原页复核。第 9 题「棱线长」、第 19 题「抽插结果」、第 22 题第 (1) 问重复「证明：」均照录并登记；第 22–24 题原页紧接第 21 题排印，未另印「四、选做题」标题，按 2008 同版式补出并注明。
-- 答案（独立推导，等级 D，非官方）：1D 2C 3C 4A 5B 6B 7A 8C 9D 10B 11A 12C；13 y=3x+1；14 y²=4x；15 15/2；16 0（图象含 1.5 个周期，T=2π/3、ω=3、φ=−3π/4，7π/12 为下一个零点）；17 cos∠DEF=16/65；18 (1) 证明，(2) 8/3；19 (1) 1/100，(2) x=5、y=15、B 类差异更小、均值 123/133.8/131.1；20 x²/16+y²/7=1，轨迹 y=±4√7/3（−4≤x≤4）为两条平行线段；21 极大值 6、极小值 −26，(2) 1/4<a≤4/5；22 四点共圆、CE 平分 ∠DEF；23 圆与椭圆，最小距离 8√5/5；24 y 分三段，9≤x≤23。
-- 图稿 10 张（Q3 两幅散点图、Q9 正方体、Q10 程序框图、Q11 三视图、Q16 正弦型图象、Q17 海底剖面、Q18 三棱锥、Q19 两幅频率分布直方图、Q22 三角形与角平分线、Q24 数轴），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；Q14 原页无图。
-- 自查更正：初次求解把第 16 题图象读成「两个相邻零点、一个最大值」，按 T=2π、ω=1 得 √3；经 600 dpi 复核，π/4 与 5π/4 之间实为两个最大值、一个最小值（1.5 个周期），故 T=2π/3、ω=3、f(7π/12)=0。已更正答案、解析、图稿与 provenance，重跑生成、build（attempt `2e4fc1bd`）、prepare、逐页复核与 `finalize-batch`。
-- 源缺陷（照录并登记，均 `non_blocking`）：ISSUE-1494（Q9「棱线长」衍「线」）；ISSUE-1495（Q16 图象只画 x∈[π/4,5π/4] 一段，0≤x<π/4 的负值段未画，但已含 1.5 个周期，足以定参）；ISSUE-1496（Q19「抽插」应为「抽查」）；ISSUE-1497（Q22(1) 重复「证明：」）。卷 `complete`、批次 `closed`。
-- 验收：四版 9/33/11/27 页（共 80 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 80 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`。
-- 全量门禁：`validate-receipts --all --require-final` **OK：551 卷**；`provenance check-all` **OK：551 卷**；三套生成器 **551 一致**；`report.py check --all` 通过；`issues.py validate` 通过（EXIT 0）；`manifest.csv` 775 行。
-- 下一步：继续 2009 江苏卷（已接收，SHA-256 `64e417d4…c96a4501`，印面 531–532）；`source-manifest.json` 仍有 225 个来源未绑定 `paper_id`。
+- 下一步：继续 2009 江苏卷（源 SHA-256 `64e417d4…c96a4501`，印面 531–532）；`source-manifest.json` 仍有 225 个来源未绑定 `paper_id`。
 
 ### 2009 新课标卷（琼、宁卷）理科：phase6-b57 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed_with_blockers`）
 
