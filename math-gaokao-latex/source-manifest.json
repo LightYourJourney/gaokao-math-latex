@@ -3260,6 +3260,14 @@
         "gk-2009-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b50",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-tianjin-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3269,7 +3277,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "8e837c06-2223-49b3-a048-4a479c81c01d",
+  "last_transaction_id": "43220c4f-bad3-4bac-aa6b-28efd5569a87",
   "papers": [
     {
       "blocked_from": null,
@@ -39367,9 +39375,74 @@
       "title": "2009 年·普通高等学校招生考试·天津卷·文科",
       "track": "arts",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_天津卷_理科/figures/f2009_tianjin_science_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_天津卷_理科/figures/f2009_tianjin_science_q12_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_天津卷_理科/figures/f2009_tianjin_science_q19_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_tianjin_science",
+        "id": "gk-2009-tianjin-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 561、562；PDF 只有题面、无答案页，22 题答案由本库独立推导（非官方）。第 5 题程序框图、第 12 题三视图、第 19 题五面体由 TikZ 重绘。第 21 题与天津文科第 22 题同题；第 22 题 (3) 的证明只用到 q≥n，不依赖 q 为整数。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "天津理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-tianjin-science",
+      "production_state": "complete",
+      "project_dir": "2009_天津卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_天津理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_天津理_含解析.md",
+        "questions": "2009/2009_数学真题_天津理_试题.md",
+        "solution_body": "2009/2009_数学真题_天津理_解析正文.md"
+      },
+      "source_ids": [
+        "src-5ae28cb9c2b19fb38bfbfc290a79139a1aa9a158d3b1e838dbc90aa55c196f7f"
+      ],
+      "title": "2009 年·普通高等学校招生考试·天津卷·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 9941,
+  "revision": 9951,
   "schema_version": 1,
   "sources": [
     {
@@ -49422,8 +49495,8 @@
       "exam_type": "regular",
       "git_blob_oid": "56c6f396165fb93c0c8159ee948f40d9da9b2ac5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-tianjin-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009天津理.pdf",
       "regions": [],
       "source_id": "src-5ae28cb9c2b19fb38bfbfc290a79139a1aa9a158d3b1e838dbc90aa55c196f7f",

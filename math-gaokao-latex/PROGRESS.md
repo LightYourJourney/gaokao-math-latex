@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 天津卷理科：phase6-b50 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
+
+- 对象：`gk-2009-tianjin-science`，22 题（选择 1–10、填空 11–16、解答 17–22）；固定来源 `src-5ae28cb9c2b19fb38bfbfc290a79139a1aa9a158d3b1e838dbc90aa55c196f7f`，上游 `普通高考/2009/2009天津理.pdf`，SHA-256 `ea758271e47ecf0aadf9b6ea943bcdf2df78b8bf284c3ef26b72c4b69eeb3e80`，2 页 A3 横向，印面页码 561、562。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；分数、根号、下标与三幅图另以 600 dpi 原页逐题复核。第 1 页含 Q1–Q18、第 2 页含 Q19–Q22；原页未标分值，不补。来源与接收细节见 `reports/2009-tianjin-science-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1D 2B 3D 4D 5C 6B 7A 8C 9A 10C；11 $40$；12 $\\sqrt3$；13 $\\frac{3\\sqrt{10}}5$；14 $1$；15 $\\sqrt3$；16 $324$；17 $AB=2\\sqrt5$、$\\frac{\\sqrt2}{10}$；18 $\\frac7{24},\\frac{21}{40},\\frac7{40},\\frac1{120}$、$EX=\\frac9{10}$、$\\frac{31}{120}$；19 $60^\\circ$、$\\frac{\\sqrt3}3$；20 $f'=(x+2a)(x-a+2)e^x$，按 $a\\gtrless\\frac23$ 分类；21 $e=\\frac{\\sqrt3}3$、$k=\\pm\\frac{\\sqrt2}3$、$\\frac nm=\\pm\\frac{2\\sqrt2}5$；22 $S_3=55$、恒等式、$c_1\\ne c_2$。
+- 盲解复核改正主稿一处选项字母错误：Q8 解集 $(-2,1)$ 对应选项 (C)，主稿初稿误标 (B)$(-1,2)$；已按原页选项顺序改正并在 provenance 记为 resolved。
+- 图形：Q5 程序框图、Q12 三视图、Q19 五面体，共 3 幅 TikZ 矢量图；逐幅与 600 dpi 原页比对并修正标注碰撞。
+- 生成链：`register-papers`（revision 9942）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9948）→ `build --formal`（attempt `306de37c`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 6/26/8/19 页（共 59 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 59 页八类检查全 pass，0 豁免；批次 `closed`、卷 `complete`。全量门禁：`validate-receipts --all --require-final` **OK：543 卷**；`provenance check-all` **OK：543 卷**；`generate_projects --all --check` **543 套一致**。
+- 下一步：按年份继续 2009 安徽文/理、山东文/理等未成卷来源；`source-manifest.json` 仍有 234 个来源未绑定 `paper_id`。
+
 ### 2009 天津卷文科：phase6-b49 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
 
 - 对象：`gk-2009-tianjin-arts`，22 题（选择 1–10、填空 11–16、解答 17–22）；固定来源 `src-919044cfbbbcd3b673f66f382aa397eaac8c780cc68fe39a9f460a410e9fc428`，上游 `普通高考/2009/2009天津文.pdf`，SHA-256 `5d3e0110cc9145311eed3af1cf0f691ee327cbcba3a0d245e88d635fc136203f`，2 页 A3 横向，印面页码 563、564。

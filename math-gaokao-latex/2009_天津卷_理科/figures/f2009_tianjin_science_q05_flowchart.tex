@@ -1,0 +1,26 @@
+% 2009 年天津卷理科第 5 题：求 S=2+5+8+11+14 的程序框图。
+% 来源 PDF：普通高考/2009/2009天津理.pdf，SHA256 ea758271e47ecf0aadf9b6ea943bcdf2df78b8bf284c3ef26b72c4b69eeb3e80
+% 原页：第 1 页（A3 三栏）第 1 栏下部，印刷页 561。
+% 重绘依据：开始 → S=0,i=1 → T=3i-1 → S=S+T → i=i+1 → 判断 i>5；否（右）回到 T=3i-1，
+%   是（下）→ 输出 S → 结束。
+\begin{tikzpicture}[scale=0.9, semithick, >=Stealth,
+  node distance=5mm, every node/.style={inner sep=3pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=2.0cm, minimum height=0.65cm] {开始};
+  \node (init) [draw, minimum width=3.2cm, minimum height=0.65cm, below=of start] {$S=0,\ i=1$};
+  \node (t) [draw, minimum width=3.2cm, minimum height=0.65cm, below=of init] {$T=3i-1$};
+  \node (add) [draw, minimum width=3.2cm, minimum height=0.65cm, below=of t] {$S=S+T$};
+  \node (inc) [draw, minimum width=3.2cm, minimum height=0.65cm, below=of add] {$i=i+1$};
+  \node (cond) [draw, diamond, aspect=2.0, minimum width=3.0cm, minimum height=1.0cm, below=of inc] {$i>5$};
+  \node (out) [draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.8cm, minimum height=0.65cm, below=of cond] {输出 $S$};
+  \node (end) [draw, rounded corners=4pt, minimum width=2.0cm, minimum height=0.65cm, below=of out] {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (t);
+  \draw[->] (t) -- (add);
+  \draw[->] (add) -- (inc);
+  \draw[->] (inc) -- (cond);
+  \draw[->] (cond) -- (out);
+  \node[anchor=west] at ($(cond.south)!0.5!(out.north)+(20pt,-6pt)$) {是};
+  \draw[->] (cond.east) -- ++(1.1,0) |- node[pos=0.25, right] {否} (t.east);
+  \draw[->] (out) -- (end);
+\end{tikzpicture}
