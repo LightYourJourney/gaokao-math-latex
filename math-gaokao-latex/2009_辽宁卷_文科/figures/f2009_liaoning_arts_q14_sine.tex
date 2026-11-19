@@ -1,0 +1,20 @@
+% 2009 年辽宁卷文科第 14 题：f(x)=sin(ωx+φ)（ω>0）的图象。
+% 来源 PDF：普通高考/2009/2009辽宁文.pdf，SHA256 99623efa457632f26bc5d5775293bf9fd13a56add984179360e30698afc7cb73
+% 原页：第 1 页（A3 三栏）第 3 栏中部，印刷页 539。
+% 重绘依据：y 轴处取最小值 −1，曲线在 x=π/3 处与 x 轴相交，在 x=2π/3 处取最大值 1
+%   （虚线标出 y=1 与峰位）；由图得半周期 2π/3，故 ω=3/2。
+\begin{tikzpicture}[scale=0.95, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \draw[->] (-2.6,0) -- (4.5,0) node[right] {$x$};
+  \draw[->] (0,-1.45) -- (0,1.65) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw[domain=-2.2:4.0, samples=220, smooth, thick]
+    plot (\x,{-cos(1.5*\x r)});
+  \draw[densely dashed] (0,1) -- (2.0944,1);
+  \draw[densely dashed] (2.0944,1) -- (2.0944,0);
+  \node[anchor=east] at (-0.08,1) {$1$};
+  \draw (1.0472,0) -- (1.0472,-0.18);
+  \draw (2.0944,0) -- (2.0944,-0.18);
+  \node at (1.0472,-0.68) {$\frac{\pi}{3}$};
+  \node at (2.0944,-0.68) {$\frac{2\pi}{3}$};
+\end{tikzpicture}

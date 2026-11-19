@@ -24972,3 +24972,37 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1485
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 17 题第 (2) 问（印面 539）印作「求 a1−a3=3，求 Sn」。「求 a1−a3=3」在句意上不能成立（一个等式不宜作「求」的宾语，且与后一「求 Sn」重复），当为「若 a1−a3=3」。按「若」读解得 q=−1/2、a1=4、Sn=(8/3)[1−(−1/2)^n]，代回 a1−a3=4−1=3 自洽；若按字面「求」读则本题无解。",
+  "fingerprint": "0b1b0c1987189ca5fc6cfbaf8a597b82da0b9d5c2cab7ab4e2f93a6ffec1f88a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-liaoning-arts",
+  "question_id": "gk-2009-liaoning-arts-q17",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 17 题第 (2) 问首字是「求」还是「若」；确认后按官方字面改写该句并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-d566aa9d01a601cc3b253f1a8570288f0a26e4306244e27c029e964549cf0391",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1486
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 20 题（印面 540）有三处排印问题：①「从两个分厂生产的零件中个抽出 500 件」中「个」当为「各」；②「由于以上统计数据填下面 2×2 列联表」中「由于」当为「由」；③甲乙两厂频数表的第三个分组均印作 [29.84,29.98)，与第二组 [29.90,29.94) 重叠、与第四组 [29.98,30.02) 之间留空，按组距 0.04 与其余六组首尾相接的规律应为 [29.94,29.98)。本库照录原页字面，按 [29.94,29.98) 统计优质品率（甲 72%、乙 64%），所得 χ²≈3.68 不受该三处排印问题影响。",
+  "fingerprint": "ac88d520e836d6455e817f54c050959114ba187bcaec14a6e9134ada90db8a9a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-liaoning-arts",
+  "question_id": "gk-2009-liaoning-arts-q20",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 20 题第三组区间下限是 29.84 还是 29.94，以及「个抽出」「由于」是否为「各抽出」「由」；确认后按官方字面改写并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-d566aa9d01a601cc3b253f1a8570288f0a26e4306244e27c029e964549cf0391",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

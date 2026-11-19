@@ -3300,6 +3300,14 @@
         "gk-2009-shandong-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase6-b55",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-liaoning-arts"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -3309,7 +3317,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e442f09f-91db-411e-8140-2260300405f8",
+  "last_transaction_id": "05740609-9fbf-4473-8c2c-ba111c56b979",
   "papers": [
     {
       "blocked_from": null,
@@ -39771,9 +39779,93 @@
       "title": "2009 年·普通高等学校招生考试·山东卷·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_文科/figures/f2009_liaoning_arts_q10_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_文科/figures/f2009_liaoning_arts_q14_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_文科/figures/f2009_liaoning_arts_q16_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_文科/figures/f2009_liaoning_arts_q18_lighthouse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_文科/figures/f2009_liaoning_arts_q19_squares.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_文科/figures/f2009_liaoning_arts_q20_contingency.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_辽宁卷_文科/figures/f2009_liaoning_arts_q20_tables.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_liaoning_arts",
+        "id": "gk-2009-liaoning-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 539、540；PDF 只有题面、无答案页，22 题答案由本库独立推导（非官方）。第 10 题程序框图、第 14 题三角函数图象、第 16 题三视图、第 18 题灯塔仰角示意、第 19 题两个正方形、第 20 题两张频率分布表由 TikZ 重绘。第 17 题第 (2) 问原页印作「求 a1-a3=3」，按「若 a1-a3=3」求解并登记 ISSUE；第 20 题原页印作「中个抽出」（应为「各」）、「由于以上统计数据填」（应为「由」），第三个分组印作 [29.84,29.98)（应为 [29.94,29.98)），照录并登记 ISSUE；两处均不影响所给答案。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "辽宁文科"
+      },
+      "issue_ids": [
+        "ISSUE-1485",
+        "ISSUE-1486"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-liaoning-arts",
+      "production_state": "blocked",
+      "project_dir": "2009_辽宁卷_文科",
+      "question_count": 22,
+      "resume_action": "取得同版官方勘误或更清晰原页，确认第 17 题第 (2) 问首字是「求」还是「若」；确认后按官方字面改写该句并重跑本题 provenance 与逐页复核。",
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_辽宁文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_辽宁文_含解析.md",
+        "questions": "2009/2009_数学真题_辽宁文_试题.md",
+        "solution_body": "2009/2009_数学真题_辽宁文_解析正文.md"
+      },
+      "source_ids": [
+        "src-d566aa9d01a601cc3b253f1a8570288f0a26e4306244e27c029e964549cf0391"
+      ],
+      "title": "2009 年·普通高等学校招生考试·辽宁卷·文科",
+      "track": "arts",
+      "year": 2009
     }
   ],
-  "revision": 9981,
+  "revision": 9994,
   "schema_version": 1,
   "sources": [
     {
@@ -50306,8 +50398,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0311540118acfb77243aa1e9650978d6bc7201c2",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-liaoning-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009辽宁文.pdf",
       "regions": [],
       "source_id": "src-d566aa9d01a601cc3b253f1a8570288f0a26e4306244e27c029e964549cf0391",
