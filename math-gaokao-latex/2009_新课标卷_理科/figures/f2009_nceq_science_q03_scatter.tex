@@ -1,0 +1,38 @@
+% 2009 年新课标卷理科第 3 题：两个变量的散点图（图 1：x-y；图 2：u-v）。
+% 来源 PDF：普通高考/2009/2009新课标理(海南,宁夏).pdf，
+% SHA256 f42b575218180e261a89cf8733109d4960b61560a97b5f266731a51c422a4045
+% 原页：第 1 页（A3 横向）左栏中部，印刷页 541。
+% 重绘依据：图 1 的 10 个点整体随 x 增大而下降；图 2 的 10 个点整体随 u 增大而上升。
+% 坐标按原图刻度估读，仅保留趋势，不改变题目所问的“正相关/负相关”判断。
+% 纵向坐标按原数值除以 10 作图，刻度标注仍写原数值。
+\begin{tikzpicture}[scale=0.82, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  % 图 1
+  \begin{scope}
+    \draw[->] (0,0) -- (7.6,0) node[right] {$x$};
+    \draw[->] (0,0) -- (0,3.35) node[above] {$y$};
+    \foreach \x in {1,...,7} \draw (\x,0) -- (\x,-0.12) node[below] {$\x$};
+    \foreach \y in {5,10,15,20,25,30} {
+      \draw (0,\y/10) -- (-0.14,\y/10) node[left] {$\y$};
+    }
+    \node[below left] at (0,0) {$O$};
+    \foreach \x/\y in {0.8/23,1.4/20,2.0/20.5,2.4/16.5,3.2/15,
+                      3.7/10.8,4.3/11.2,4.9/8,5.5/5.5,6.4/5}
+      \fill (\x,\y/10) circle (2.2pt);
+    \node at (3.8,-0.95) {图 1};
+  \end{scope}
+  % 图 2
+  \begin{scope}[shift={(10.6,0)}]
+    \draw[->] (0,0) -- (7.6,0) node[right] {$u$};
+    \draw[->] (0,0) -- (0,6.6) node[above] {$v$};
+    \foreach \x in {1,...,7} \draw (\x,0) -- (\x,-0.12) node[below] {$\x$};
+    \foreach \y in {10,20,30,40,50,60} {
+      \draw (0,\y/10) -- (-0.14,\y/10) node[left] {$\y$};
+    }
+    \node[below left] at (0,0) {$O$};
+    \foreach \x/\y in {1.2/12,2.0/20,2.6/22,3.2/30,3.8/38,
+                      4.2/36,4.6/46,5.2/41,5.9/54,6.5/57}
+      \fill (\x,\y/10) circle (2.2pt);
+    \node at (3.8,-0.95) {图 2};
+  \end{scope}
+\end{tikzpicture}

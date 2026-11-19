@@ -25023,3 +25023,100 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1488
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 2 题（印面 541）四个选项依次印作「0」「2」「−2i」「2」，其中 (B) 与 (D) 同为「2」，且 PDF 文字层同样为两个独立的「2」。按题面计算 (3+2i)/(2−3i)−(3−2i)/(2+3i)=i−(−i)=2i，四个选项中只有 (D) 可能是 2i，故判定 (D) 漏印虚数单位 i。本库照录原页字面并登记问题，答案按计算结果取 (D)。",
+  "fingerprint": "5356276c3cdf6b13f4fc1342919e2bbf3bd954581e50bc5d90298e9662f78b91",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-nceq-science",
+  "question_id": "gk-2009-nceq-science-q02",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 2 题选项 (D) 应为 2i；确认后补上虚数单位并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-50f7b0e1024ce6c7e65c44b482e0e7e0727fea4e27e4f8c489d2079b20d4f265",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-1489
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 17 题（印面 541）题面写「飞机能够测量的数据有俯角」，而原示意图中 A、B 位于上方、M、N 为下方山顶，从 A、B 向 M、N 的视线确实低于水平线，用「俯角」字面成立；但解题时使用的是视线与水平方向的夹角，与仰角互为对顶角，正弦、余弦定理中的角值不变。另外本题为开放设计方案题，方案不唯一，本库在答案与解析中明确写出「方案不唯一，以下为一种可行方案」。",
+  "fingerprint": "15741b26e132c31ef49c4a5dc7df47c37b81233c8f431a053f38e75816865ff0",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-nceq-science",
+  "question_id": "gk-2009-nceq-science-q17",
+  "resume_action": "本题无需勘误；若后续取得官方评分标准，可补充官方对「俯角」记法与方案表述的说明。",
+  "source_id": "src-50f7b0e1024ce6c7e65c44b482e0e7e0727fea4e27e4f8c489d2079b20d4f265",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-1490
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 18 题第 (2) 问（印面 542）印作「从 A 类工人中的抽查结果和从 B 类工人中的抽插结果分别如下表 1 和表 2」，句中「抽插」当为「抽查」，与前一分句「抽查结果」不一致；该排印问题不影响表 1、表 2 的数据与计算结果。本库照录原页字面「抽插」，按「抽查」理解。",
+  "fingerprint": "2edb9cbd66614fc7936e877dbcadb229000c92bb20fc27599596944d7bff912f",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-nceq-science",
+  "question_id": "gk-2009-nceq-science-q18",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 18 题第 (2) 问「抽插」应为「抽查」；确认后改正并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-50f7b0e1024ce6c7e65c44b482e0e7e0727fea4e27e4f8c489d2079b20d4f265",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-1491
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 19 题（印面 542）印作「每条侧棱的长都是地面边长的 √2 倍」，句中「地面」当为「底面」，与同句「四棱锥 S−ABCD 的底面是正方形」不一致；该排印问题不影响几何关系与二面角、线段比的计算。本库照录原页字面「地面」，按「底面」理解。",
+  "fingerprint": "59f71e23b7c8c2f69721c0434ef2f94e58c3ea90ac3358fb348e2ba63d8556d3",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-nceq-science",
+  "question_id": "gk-2009-nceq-science-q19",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 19 题「地面边长」应为「底面边长」；确认后改正并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-50f7b0e1024ce6c7e65c44b482e0e7e0727fea4e27e4f8c489d2079b20d4f265",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-1492
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 21 题第 (2) 问（印面 542）印作「证明：β−α<6」。由 f(x)=(x³+3x²+ax+b)e^{−x} 得 f′(x)=e^{−x}[−x³+(6−a)x+(a−b)]，其三个零点依次为 α、2、β，三次项系数为 −1，故 f′(x)=−(x−α)(x−2)(x−β)e^{−x}；比较 x² 系数得 α+2+β=0，即 α+β=−2。又 α<2<β，故 β>2，从而 β−α=2β+2>6。题面「<6」与条件推出的「>6」方向相反，无法按字面证明。本库照录原页，并在答案与解析中给出按条件推得的正确结论 β−α>6 及说明。",
+  "fingerprint": "b5b701d6ee91bd15c9388eb91ce682a0986eca9ebbffc232cae6816806d872a4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-nceq-science",
+  "question_id": "gk-2009-nceq-science-q21",
+  "resume_action": "取得同版官方勘误或官方答案，确认第 21 题第 (2) 问结论应为 β−α>6；确认后改正题面符号并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-50f7b0e1024ce6c7e65c44b482e0e7e0727fea4e27e4f8c489d2079b20d4f265",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+## ISSUE-1493
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 23 题（印面 542）直线 C3 的参数方程第一行印作「x=3+2,t」，逗号插在 2 与 t 之间；同组第二行「y=−2+t」正常，且直线需以 t 为参数，故应为「x=3+2t」。本库照录原页字面「x=3+2,t」，按 x=3+2t 计算，得直线 x−2y−7=0，最小距离 8√5/5。",
+  "fingerprint": "240fc1eaa2b0e7a2d0078d17088f414ed1e707763e35477f27adb933f2600c4f",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-nceq-science",
+  "question_id": "gk-2009-nceq-science-q23",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 23 题 C3 的参数方程应为 x=3+2t；确认后改正并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-50f7b0e1024ce6c7e65c44b482e0e7e0727fea4e27e4f8c489d2079b20d4f265",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

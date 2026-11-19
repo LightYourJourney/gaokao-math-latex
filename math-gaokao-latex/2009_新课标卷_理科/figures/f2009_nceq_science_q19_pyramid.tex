@@ -1,0 +1,37 @@
+% 2009 年新课标卷理科第 19 题：四棱锥 S-ABCD，P 为侧棱 SD 上一点。
+% 来源 PDF：普通高考/2009/2009新课标理(海南,宁夏).pdf，
+% SHA256 f42b575218180e261a89cf8733109d4960b61560a97b5f266731a51c422a4045
+% 原页：第 2 页（A3 横向）中栏中部，印刷页 542。
+% 重绘依据：底面 ABCD 为正方形，S 在底面中心正上方；P 在 SD 上。
+% 虚线为底面被遮挡的边 AC、BD 及锥高 SO。
+\begin{tikzpicture}[scale=0.92, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \coordinate (A) at (-2.4,-1.1);
+  \coordinate (B) at (2.0,-1.1);
+  \coordinate (C) at (2.8,0.7);
+  \coordinate (D) at (-1.6,0.7);
+  \coordinate (S) at (0.2,3.9);
+  \coordinate (O) at (0.2,-0.2);
+  \coordinate (P) at (-0.79,2.13);
+  % 底面
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (B) -- (D);
+  % 侧棱
+  \draw (S) -- (A);
+  \draw (S) -- (B);
+  \draw (S) -- (C);
+  \draw (S) -- (D);
+  % 锥高与 P
+  \draw[dashed] (S) -- (O);
+  \fill (P) circle (2.1pt) node[above left] {$P$};
+  \draw[dashed] (A) -- (P);
+  \draw[dashed] (C) -- (P);
+  % 顶点标注
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right]       at (C) {$C$};
+  \node[left]        at (D) {$D$};
+  \node[above]       at (S) {$S$};
+  \node[below]       at (O) {$O$};
+\end{tikzpicture}

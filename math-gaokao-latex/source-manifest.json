@@ -3316,6 +3316,14 @@
         "gk-2009-liaoning-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b57",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-nceq-science"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -3325,7 +3333,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "78b9d4d2-49f2-41ad-b384-6f37deb83f3c",
+  "last_transaction_id": "80d26ba8-2acf-4564-a1ef-7d60bc5f3fc5",
   "papers": [
     {
       "blocked_from": null,
@@ -39950,9 +39958,113 @@
       "title": "2009 年·普通高等学校招生考试·辽宁卷·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": "complete",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q03_scatter.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q08_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q10_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q11_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q14_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q17_mountains.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q18_histograms.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q22_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_新课标卷_理科/figures/f2009_nceq_science_q24_numberline.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_nceq_science",
+        "id": "gk-2009-nceq-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 541、542；页眉「2009 普通高等学校招生考试（琼、宁卷理）」。PDF 只有题面、无答案页，24 题答案由本库独立推导（非官方）。第 3 题两幅散点图、第 8 题正方体、第 10 题程序框图、第 11 题三视图、第 14 题正弦型图象、第 17 题山体与俯角示意、第 18 题两幅频率分布直方图、第 19 题四棱锥、第 22 题三角形与角平分线、第 24 题数轴均由 TikZ 重绘。第 17 题为开放设计方案题，方案不唯一，本库给出一种可行方案并在答案与解析中明确说明。第 22–24 题为三选一，原页紧接第 21 题排印、未另印「四、选做题」标题，本库按 2008 同版式补出节标题。原页排印问题：第 2 题选项 (D) 印作「2」，与 (B) 重复，应为 2i；第 18 题「抽插」应为「抽查」；第 19 题「地面」应为「底面」；第 21 题第 (2) 问印作「β−α<6」，与题设条件矛盾，按条件应得 β−α>6；第 23 题 C3 参数方程印作「x=3+2,t」，应为 x=3+2t。另有第 8 题「棱线长」、第 13 题「设已知」两处衍字，照录原页，不影响题意。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "新课标卷（琼、宁卷）",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            24
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "新课标理科"
+      },
+      "issue_ids": [
+        "ISSUE-1488",
+        "ISSUE-1489",
+        "ISSUE-1490",
+        "ISSUE-1491",
+        "ISSUE-1492",
+        "ISSUE-1493"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-nceq-science",
+      "production_state": "blocked",
+      "project_dir": "2009_新课标卷_理科",
+      "question_count": 24,
+      "resume_action": "取得同版官方勘误或官方答案，确认第 21 题第 (2) 问结论应为 β−α>6；确认后改正题面符号并重跑本题 provenance 与逐页复核。",
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_新课标理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_新课标理_含解析.md",
+        "questions": "2009/2009_数学真题_新课标理_试题.md",
+        "solution_body": "2009/2009_数学真题_新课标理_解析正文.md"
+      },
+      "source_ids": [
+        "src-50f7b0e1024ce6c7e65c44b482e0e7e0727fea4e27e4f8c489d2079b20d4f265"
+      ],
+      "title": "2009 年·普通高等学校招生考试·新课标卷（琼、宁卷）·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 10004,
+  "revision": 10022,
   "schema_version": 1,
   "sources": [
     {
@@ -50197,8 +50309,8 @@
       "exam_type": "regular",
       "git_blob_oid": "45bf338e7800ef1f641f56d3f7805432d06d33c4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-nceq-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009新课标理(海南,宁夏).pdf",
       "regions": [],
       "source_id": "src-50f7b0e1024ce6c7e65c44b482e0e7e0727fea4e27e4f8c489d2079b20d4f265",

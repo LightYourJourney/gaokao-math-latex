@@ -1,0 +1,25 @@
+% 2009 年新课标卷理科第 14 题：y=sin(ωx+φ) 的图象。
+% 来源 PDF：普通高考/2009/2009新课标理(海南,宁夏).pdf，
+% SHA256 f42b575218180e261a89cf8733109d4960b61560a97b5f266731a51c422a4045
+% 原页：第 1 页（A3 横向）右栏中部，印刷页 541。
+% 重绘依据：图象在 x=3π/4 处取最小值 −1，在 x=2π 处取最大值 1；
+% 由此半周期为 5π/4，ω=4/5，φ=9π/10。曲线按该解析式绘制。
+\begin{tikzpicture}[scale=0.95, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \draw[->] (-0.7,0) -- (7.8,0) node[right] {$x$};
+  \draw[->] (0,-1.45) -- (0,1.55) node[above] {$y$};
+  \draw (-0.12,1) -- (0.12,1) node[right=6pt] {$1$};
+  \draw (-0.12,-1) -- (0.12,-1) node[right=6pt] {$-1$};
+  \node[below left] at (0,0) {$O$};
+  % 曲线
+  \draw[domain=-0.55:7.45, samples=200, smooth]
+    plot (\x, {sin(deg(0.8*\x+0.9*pi))});
+  % 极值点虚线
+  \draw[dashed] (2.356,-1) -- (2.356,0);
+  \draw[dashed] (6.283,1) -- (6.283,0);
+  \draw[dashed] (0,1) -- (6.283,1);
+  \draw[dashed] (0,-1) -- (2.356,-1);
+  % 刻度标注
+  \node[below] at (2.356,-0.06) {$\frac{3\pi}{4}$};
+  \node[below] at (6.283,-0.06) {$2\pi$};
+\end{tikzpicture}

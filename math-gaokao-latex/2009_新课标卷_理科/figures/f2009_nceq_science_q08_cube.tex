@@ -1,0 +1,47 @@
+% 2009 年新课标卷理科第 8 题：正方体 ABCD-A1B1C1D1，E、F 在 B1D1 上。
+% 来源 PDF：普通高考/2009/2009新课标理(海南,宁夏).pdf，
+% SHA256 f42b575218180e261a89cf8733109d4960b61560a97b5f266731a51c422a4045
+% 原页：第 1 页（A3 横向）右栏上部，印刷页 541。
+% 重绘依据：正方体棱长 1；E、F 是上底面对角线 B1D1 上的两个动点，EF=√2/2；
+% 虚线为被遮挡的棱及辅助线，实线为可见棱与 B1D1。
+\begin{tikzpicture}[scale=0.92, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  % 下底面 ABCD，上底面 A1B1C1D1
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (4,0);
+  \coordinate (C)  at (4.8,2.0);
+  \coordinate (D)  at (0.8,2.0);
+  \coordinate (A1) at (0,2.8);
+  \coordinate (B1) at (4,2.8);
+  \coordinate (C1) at (4.8,4.8);
+  \coordinate (D1) at (0.8,4.8);
+  % 可见棱：下底面前两条、四条侧棱、上底面
+  \draw (A) -- (B) -- (C);
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+  % 被遮挡的棱
+  \draw[dashed] (C) -- (D) -- (A);
+  \draw[dashed] (D) -- (D1);
+  % 上底面对角线 B1D1 与动点 E、F
+  \draw (B1) -- (D1);
+  \coordinate (E) at (2.72,3.60);
+  \coordinate (F) at (1.76,4.20);
+  \fill (E) circle (2.2pt) node[above left] {$E$};
+  \fill (F) circle (2.2pt) node[above right] {$F$};
+  % 辅助线（原图中的虚线）
+  \draw[dashed] (A) -- (E);
+  \draw[dashed] (B) -- (F);
+  \draw[dashed] (B) -- (D);
+  \draw[dashed] (A) -- (C);
+  % 顶点标注
+  \node[below left]  at (A)  {$A$};
+  \node[below right] at (B)  {$B$};
+  \node[right]       at (C)  {$C$};
+  \node[left]        at (D)  {$D$};
+  \node[left]        at (A1) {$A_1$};
+  \node[right]       at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above left]  at (D1) {$D_1$};
+\end{tikzpicture}

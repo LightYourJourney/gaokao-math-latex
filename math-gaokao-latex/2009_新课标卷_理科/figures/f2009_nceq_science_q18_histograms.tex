@@ -1,0 +1,37 @@
+% 2009 年新课标卷理科第 18 题：A 类、B 类工人生产能力的频率分布直方图（空白网格）。
+% 来源 PDF：普通高考/2009/2009新课标理(海南,宁夏).pdf，
+% SHA256 f42b575218180e261a89cf8733109d4960b61560a97b5f266731a51c422a4045
+% 原页：第 2 页（A3 横向）左下，印刷页 542。
+% 重绘依据：两组组距均为 10，横轴 100–150；A 类纵轴 0.004–0.036（步长 0.004），
+% B 类纵轴 0.004–0.048（步长 0.004）。原页只给空白网格，矩形条由答题者补全。
+\begin{tikzpicture}[scale=0.78, semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  % A 类
+  \begin{scope}
+    \draw[->] (0,0) -- (5.9,0) node[right] {生产能力};
+    \draw[->] (0,0) -- (0,4.9) node[above] {频率/组距};
+    \foreach \i in {0,1,2,3,4,5} {
+      \draw (\i,0) -- (\i,-0.14) node[below,font=\scriptsize] {\pgfmathparse{int(100+10*\i)}\pgfmathresult};
+    }
+    \foreach \k in {1,...,9} {
+      \draw[gray!55] (0,0.5*\k) -- (5,0.5*\k);
+      \draw (-0.12,0.5*\k) -- (0,0.5*\k)
+        node[left] {\pgfmathparse{0.004*\k}\pgfmathprintnumber[fixed,precision=3]{\pgfmathresult}};
+    }
+    \node[below] at (2.5,-2.0) {A 类工人生产能力的频率分布直方图};
+  \end{scope}
+  % B 类
+  \begin{scope}[shift={(10.4,0)}]
+    \draw[->] (0,0) -- (5.9,0) node[right] {生产能力};
+    \draw[->] (0,0) -- (0,6.4) node[above] {频率/组距};
+    \foreach \i in {0,1,2,3,4,5} {
+      \draw (\i,0) -- (\i,-0.14) node[below,font=\scriptsize] {\pgfmathparse{int(100+10*\i)}\pgfmathresult};
+    }
+    \foreach \k in {1,...,12} {
+      \draw[gray!55] (0,0.5*\k) -- (5,0.5*\k);
+      \draw (-0.12,0.5*\k) -- (0,0.5*\k)
+        node[left] {\pgfmathparse{0.004*\k}\pgfmathprintnumber[fixed,precision=3]{\pgfmathresult}};
+    }
+    \node[below] at (2.5,-2.0) {B 类工人生产能力的频率分布直方图};
+  \end{scope}
+\end{tikzpicture}

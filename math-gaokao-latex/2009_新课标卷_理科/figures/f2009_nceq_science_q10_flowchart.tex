@@ -1,0 +1,38 @@
+% 2009 年新课标卷理科第 10 题：分段函数求值并累加输出的程序框图。
+% 来源 PDF：普通高考/2009/2009新课标理(海南,宁夏).pdf，
+% SHA256 f42b575218180e261a89cf8733109d4960b61560a97b5f266731a51c422a4045
+% 原页：第 1 页（A3 横向）右栏中部，印刷页 541。
+% 重绘依据：开始 → 输入 x,h → 判断 x<0：是则 y=0；否则判断 x<1：是则 y=x，否则 y=1；
+%   汇合后输出 y → 判断 x≥2：否则 x=x+h 返回 x<0 之前，是则结束。
+\begin{tikzpicture}[scale=0.82, semithick, >=Stealth,
+  every node/.style={inner sep=3pt, font=\small}]
+  \node (start) at (0,0) [draw, rounded corners=4pt, minimum width=2.0cm, minimum height=0.6cm] {开始};
+  \node (input) at (0,-1.25) [draw, trapezium, trapezium left angle=75, trapezium right angle=105,
+    minimum width=3.6cm, minimum height=0.7cm] {输入 $x,\,h$};
+  \node (c1) at (0,-2.85) [draw, diamond, aspect=2.2, minimum width=3.0cm, minimum height=1.0cm] {$x<0$};
+  \node (y0) at (-3.1,-4.45) [draw, minimum width=1.7cm, minimum height=0.62cm] {$y=0$};
+  \node (c2) at (2.5,-4.45) [draw, diamond, aspect=2.0, minimum width=2.5cm, minimum height=0.92cm] {$x<1$};
+  \node (yx) at (1.0,-5.95) [draw, minimum width=1.7cm, minimum height=0.62cm] {$y=x$};
+  \node (y1) at (4.6,-5.95) [draw, minimum width=1.7cm, minimum height=0.62cm] {$y=1$};
+  \coordinate (merge) at (0.8,-7.0);
+  \node (out) at (0.8,-7.55) [draw, trapezium, trapezium left angle=75, trapezium right angle=105,
+    minimum width=2.6cm, minimum height=0.68cm] {输出 $y$};
+  \node (c3) at (0.8,-9.15) [draw, diamond, aspect=2.2, minimum width=2.8cm, minimum height=1.0cm] {$x\geqslant2$};
+  \node (inc) at (5.9,-9.15) [draw, minimum width=2.2cm, minimum height=0.62cm] {$x=x+h$};
+  \node (end) at (0.8,-10.8) [draw, rounded corners=4pt, minimum width=2.0cm, minimum height=0.6cm] {结束};
+
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (c1);
+  \draw[->] (c1.west) -| node[pos=0.22, above] {是} (y0.north);
+  \draw[->] (c1.east) -| node[pos=0.22, above] {否} (c2.north);
+  \draw[->] (c2.south) -- node[right=2pt, pos=0.45] {是} (yx.north);
+  \draw[->] (c2.east) -| node[pos=0.22, above] {否} (y1.north);
+  \draw (y0.south) -- (y0.south |- merge) -- (merge);
+  \draw (yx.south) -- (yx.south |- merge) -- (merge);
+  \draw (y1.south) -- (y1.south |- merge) -- (merge);
+  \draw[->] (merge) -- (out.north);
+  \draw[->] (out) -- (c3.north);
+  \draw[->] (c3.east) -- node[above, pos=0.45] {否} (inc.west);
+  \draw[->] (inc.north) |- (5.9,-1.9) -- (0,-1.9) -- (c1.north);
+  \draw[->] (c3.south) -- node[right=2pt, pos=0.45] {是} (end.north);
+\end{tikzpicture}
