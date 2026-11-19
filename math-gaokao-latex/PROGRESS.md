@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 江苏卷：phase6-b59 新卷转录、四版构建与视觉审查收口（2026-11-20；`closed_with_blockers`）
+
+- 对象：`gk-2009-jiangsu`，23 个题号、26 道子题（填空 1–14、解答 15–20、附加题 21 四选二 A–D、22、23）；固定来源 `src-5b274e0e9e9c33981fec202b7e9797899dc1a2cceb6b028f44b74c8db2a803b6`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009江苏.pdf`，SHA-256 `64e417d45911d88d77c047a419dcc259e7c7dc779c79d20df2092755c96a4501`，2 页 A3 横向，印面页码 531、532。
+- 转录口径：文字层只作定位，分数、根号、上下标与七幅图均按 600 dpi 原页复核。原页各题与各节均未印分值，不补。第 18 题 (2)「互相垂的直线」脱「直」字照录；第 19 题 (1)「求 h 和 h_乙」第一个 h 缺下标「甲」，按 h_甲 理解并照录。附加题部分原页紧接第 20 题排印，未另印「三、附加题」标题，按 2008 同版式补出并注明。
+- 答案（独立推导，等级 D，非官方；第 19 题 U）：1 −20；2 3；3 (−1,11)；4 3；5 1/5；6 2/5；7 22；8 1:8；9 (−2,15)；10 m<n；11 4；12（1）（2）；13 2√7−5；14 −9；15 (1) 2，(2) 4√2，(3) 证明；16 证明；17 a_n=2n−7、S_n=n²−6n，m=2；18 y=0 或 7x+24y−28=0，P(−3/2,13/2)、(5/2,−1/2)；19 U；20 a≤−1，a≥0 时 min=−2a²、a<0 时 min=2a²/3，解集分四段；21 B [[−1,2],[2,−3]]、C y=3x²+6、A/D 证明；22 y²=2x、2x+2y−1=0、f(m)=(3/2)√(m²+4m)；23 T_{n²}=n(n+1)(2n+1)/6+n²(n²−n)、P_{n²}=1−1/n+(2n²+3n+1)/(6n³)，(2) 证明。
+- 图稿 7 张（Q4 正弦型图象、Q7 算法流程图、Q13 椭圆与交点 T、Q16 直三棱柱、Q18 两圆、Q21A 四边形、Q22 抛物线），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。Q7 的 N 支改为右行再上行，避免斜向箭头与 N 旋转；Q13 的 A1B2 延长至 T、A2 与 M 标注避开坐标轴与曲线。
+- 源缺陷（照录并登记）：ISSUE-1499（Q18「互相垂」脱「直」，`non_blocking`）；ISSUE-1498（Q19 (1) h 缺下标、原页未印 m_A、m_B 的取值范围，`blocks_completion`）；ISSUE-1500（Q19 按字面 (2) 无最大值、(3) 为「能」，补入官方解答所用 3≤m_A≤12、5≤m_B≤20 后 (2) m_A=12、m_B=20、h0=√10/5、(3)「不能」，两种读法答案不同，`blocks_completion`）。卷 `blocked`、批次 `closed_with_blockers`。
+- 自查补全：第 20 题 (3) 原分段在 $a=-\frac{\sqrt2}2$ 处留空（「$|a|<\frac{\sqrt2}2$」与「$-\frac{\sqrt6}2\leqslant a<-\frac{\sqrt2}2$」都不含该点）；该点解集应为 $[0,+\infty)$，已把第二支改为 $-\frac{\sqrt2}2\leqslant a<\frac{\sqrt2}2$ 并说明 $a=\frac{\sqrt2}2$ 时右端点与 $a$ 重合，重跑生成、build（attempt `dd5b77ba`）、逐页复核与 `finalize-batch`。
+- 验收：四版 6/29/8/23 页（共 66 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 66 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`。
+- 全量门禁：`validate-receipts --all --require-final` **OK：552 卷**；`provenance check-all` **OK：552 卷**；三套生成器 **552 一致**；`report.py render --all` 已写入并回读；`report.py check --all` 通过；`manifest.csv` 775 行；`issues.py validate` 通过（EXIT 0）。
+- 下一步：取得第 19 题官方勘误或同版完整原页，确认单价范围后把该题由 U 改为实际取值；`source-manifest.json` 仍有 224 个来源未绑定 `paper_id`。
+
 ### 2009 新课标卷（琼、宁卷）文科：phase6-b58 新卷转录、四版构建与视觉审查收口（2026-11-20；`closed`）
 
 - 对象：`gk-2009-nceq-arts`，24 题（选择 1–12、填空 13–16、解答 17–21、选做 22–24 三选一）；固定来源 `src-f35fd1ea580bec9dd074c52c5a75bb0c2be8d7c00dba5943c87e41f66b493242`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009新课标文.pdf`，SHA-256 `9727691ae735985e787f7ae3febf48dc9e6c6cdd1aa53b465f5d95648abdd627`，2 页 A3 横向，印面页码 543、544。

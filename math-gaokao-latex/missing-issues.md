@@ -25187,3 +25187,54 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1498
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 19 题（印面 532）给出买进满意度 n/(n+a)，并设产品 A、B 的单价分别为 m_A 元、m_B 元，但原页正文未印 m_A、m_B 的取值范围。按字面，h_甲²=m_A m_B/((m_A+12)(m_B+5))、h_乙²=m_A m_B/((m_A+3)(m_B+20)) 对 m_A、m_B 均严格递增：在 m_A=(3/5)m_B 下两者同为 t²/((t+4)(t+1))，随 t 严格递增且上确界 1 取不到，故 (2) 的「最大的综合满意度」不存在；此时 (3) 取充分大的 m_A、m_B 可使两者同时超过任意 h0，结论为「能」。而公开流传的该题官方解答均以 3≤m_A≤12、5≤m_B≤20 为前提，由此得 m_A=12、m_B=20、h0=√10/5，(3) 为「不能」。两种读法答案不同，原页至少脱漏一处条件，故该题记 U。 同题第 (1) 问又印作「求 h 和 h_乙 关于 m_A、m_B 的表达式」，第一个 h 缺下标「甲」，与同段「甲买进 A 与卖出 B 的综合满意度为 h_甲」不一致，按 h_甲 理解，(1) 的表达式与 h_甲=h_乙 的证明不受影响，本库照录原页字面并在解析中说明。",
+  "fingerprint": "ef493d0c748b6524a16c87cb33451093b0f2fb1cc7fd66a6d6fcb130cf7e1093",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-jiangsu",
+  "question_id": "gk-2009-jiangsu-q19",
+  "resume_action": "取得同版完整原页或官方勘误，确认第 19 题是否印有 3≤m_A≤12、5≤m_B≤20 的单价范围；确认后按补全的题面重解 (2)(3)，把该题答案由 U 改为实际取值，并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-5b274e0e9e9c33981fec202b7e9797899dc1a2cceb6b028f44b74c8db2a803b6",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1499
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 18 题第 (2) 问（印面 531）印作「存在过点 P 的无穷多对互相垂的直线 l1 和 l2」，句中「互相垂」脱「直」字，按「互相垂直」理解；该排印问题不影响条件「l1 与 l2 垂直」及所得两点 (−3/2,13/2)、(5/2,−1/2)。本库照录原页字面并在解析中按「互相垂直」处理。",
+  "fingerprint": "d75052c25c999a5e0da6f891a62046a8779cf6156fcb0fca67d31d470239516d",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-jiangsu",
+  "question_id": "gk-2009-jiangsu-q18",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 18 题 (2)「互相垂」应为「互相垂直」；确认后改正并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-5b274e0e9e9c33981fec202b7e9797899dc1a2cceb6b028f44b74c8db2a803b6",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1500
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 19 题按原页字面（未印 m_A、m_B 的取值范围）(2) 无最大值、(3) 为「能」；补入公开流传官方解答所用的 3≤m_A≤12、5≤m_B≤20 后 (2) 为 m_A=12、m_B=20、h0=√10/5，(3) 为「不能」。两种读法答案不同，故整题记 U，不代拟任一读法的结论。",
+  "fingerprint": "3ec90afafff668355d386891fd2b6e396f25b27136928e71a8cc26a90e3a430e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-jiangsu",
+  "question_id": "gk-2009-jiangsu-q19",
+  "resume_action": "取得同版完整原页或官方勘误，确认第 19 题是否印有 3≤m_A≤12、5≤m_B≤20 的单价范围；确认后按补全题面重解 (2)(3)，把该题答案由 U 改为实际取值，并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-5b274e0e9e9c33981fec202b7e9797899dc1a2cceb6b028f44b74c8db2a803b6",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

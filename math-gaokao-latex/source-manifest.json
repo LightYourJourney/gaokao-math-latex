@@ -3332,6 +3332,14 @@
         "gk-2009-nceq-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b59",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-jiangsu"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -3341,7 +3349,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "33ee02f7-168a-4bc5-bf9c-ada2d1fbfbfc",
+  "last_transaction_id": "34e5b903-fc5c-4c7d-81a1-9b527dcd7127",
   "papers": [
     {
       "blocked_from": null,
@@ -40172,9 +40180,94 @@
       "title": "2009 年·普通高等学校招生考试·新课标卷（琼、宁卷）·文科",
       "track": "arts",
       "year": 2009
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_江苏卷/figures/f2009_jiangsu_q04_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_江苏卷/figures/f2009_jiangsu_q07_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_江苏卷/figures/f2009_jiangsu_q13_ellipse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_江苏卷/figures/f2009_jiangsu_q16_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_江苏卷/figures/f2009_jiangsu_q18_circles.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_江苏卷/figures/f2009_jiangsu_q21a_quad.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_江苏卷/figures/f2009_jiangsu_q22_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_jiangsu",
+        "id": "gk-2009-jiangsu",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 531、532；页眉「2009 普通高等学校招生考试（江苏卷）」。PDF 只有题面、无答案页，原页未标分值，不补。本卷为文理合卷，正卷 20 题（填空 1–14、解答 15–20），另有附加题 21（四选二 A–D）、22、23，共 23 个题号、26 道子题，答案由本库独立推导（非官方）。附加题部分原页紧接第 20 题排印，未另印「三、附加题」标题，本库按 2008 同版式补出并注明。第 4 题正弦型图象、第 7 题流程图、第 13 题椭圆与交点 T、第 16 题直三棱柱、第 18 题两圆、第 21A 题四边形、第 22 题抛物线由 TikZ 重绘。原页排印问题：第 18 题 (2)「互相垂的直线」脱「直」字（ISSUE-1499，non_blocking）；第 19 题 (1)「求 h 和 h_乙」缺下标「甲」、原页又未印 m_A、m_B 的取值范围（ISSUE-1498，transcription，blocks_completion）；按字面 (2) 无最大值、(3) 为「能」，补入官方解答所用 3≤m_A≤12、5≤m_B≤20 后为 m_A=12、m_B=20、h0=√10/5、(3)「不能」，两种读法答案不同，整题记 U（ISSUE-1500，convention，blocks_completion）。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "附加题": [
+            21,
+            23
+          ]
+        },
+        "track": "文理合卷",
+        "variant": "江苏"
+      },
+      "issue_ids": [
+        "ISSUE-1498",
+        "ISSUE-1499",
+        "ISSUE-1500"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-jiangsu",
+      "production_state": "blocked",
+      "project_dir": "2009_江苏卷",
+      "question_count": 23,
+      "resume_action": "取得同版完整原页或官方勘误，确认第 19 题是否印有 3≤m_A≤12、5≤m_B≤20 的单价范围；确认后按补全的题面重解 (2)(3)，把该题答案由 U 改为实际取值，并重跑本题 provenance 与逐页复核。",
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_江苏_含解析.md",
+        "questions": "2009/2009_数学真题_江苏_试题.md",
+        "solution_body": "2009/2009_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-5b274e0e9e9c33981fec202b7e9797899dc1a2cceb6b028f44b74c8db2a803b6"
+      ],
+      "title": "2009 年·普通高等学校招生考试·江苏卷",
+      "track": "none",
+      "year": 2009
     }
   ],
-  "revision": 10042,
+  "revision": 10077,
   "schema_version": 1,
   "sources": [
     {
@@ -50443,8 +50536,8 @@
       "exam_type": "regular",
       "git_blob_oid": "dfc5efa5b224ff9546dfd22f283d87141806d3ee",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009江苏.pdf",
       "regions": [],
       "source_id": "src-5b274e0e9e9c33981fec202b7e9797899dc1a2cceb6b028f44b74c8db2a803b6",

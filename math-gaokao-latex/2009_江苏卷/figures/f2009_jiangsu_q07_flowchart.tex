@@ -1,0 +1,34 @@
+% 2009 年江苏卷第 7 题：求 W 的算法流程图。
+% 来源 PDF：普通高考/2009/2009江苏.pdf
+% SHA-256：64e417d45911d88d77c047a419dcc259e7c7dc779c79d20df2092755c96a4501
+% 原页：2009江苏.pdf 第 1 页（A3 三栏）第 1 栏，书页码 531。
+% 绘制依据：按原页流程：开始 → S←0 → T←1 → S←T²−S → 判断 S≥10 →
+%   N 时 T←T+2 回环 → Y 时 W←S+T → 输出 W → 结束。
+\begin{tikzpicture}[node distance=0.55cm, semithick, every node/.style={inner sep=3pt},
+  box/.style={draw, minimum width=2.0cm, minimum height=0.55cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.3cm, minimum height=0.55cm},
+  dec/.style={draw, diamond, aspect=1.9, inner sep=1pt}]
+
+  \node[box, rounded corners=2pt] (start) {开始};
+  \node[box, below=of start] (s0) {$S\leftarrow0$};
+  \node[box, below=of s0] (t1) {$T\leftarrow1$};
+  \node[dec, below=0.6cm of t1, minimum width=2.4cm, minimum height=0.95cm] (assign)
+    {$S\leftarrow T^2-S$};
+  \node[dec, below=0.55cm of assign, minimum width=1.9cm, minimum height=0.95cm] (test)
+    {$S\geqslant10$};
+  \node[box, below=0.65cm of test] (w) {$W\leftarrow S+T$};
+  \node[io, below=of w] (out) {输出 $W$};
+  \node[box, rounded corners=2pt, below=of out] (end) {结束};
+  \node[box, right=1.5cm of assign] (inc) {$T\leftarrow T+2$};
+
+  \draw[->,>=stealth] (start) -- (s0);
+  \draw[->,>=stealth] (s0) -- (t1);
+  \draw[->,>=stealth] (t1) -- (assign);
+  \draw[->,>=stealth] (assign) -- (test);
+  \draw[->,>=stealth] (test) -- node[left] {Y} (w);
+  \draw[->,>=stealth] (w) -- (out);
+  \draw[->,>=stealth] (out) -- (end);
+  \draw[->,>=stealth] (test.east) -- node[above] {N} ++(0.30,0) -| (inc.south);
+  \draw (inc.north) -- ++(0,0.65) -| ($(t1.south)!0.45!(assign.north)$);
+\end{tikzpicture}
