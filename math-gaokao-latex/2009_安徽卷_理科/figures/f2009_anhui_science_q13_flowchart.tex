@@ -1,0 +1,21 @@
+% 2009 年安徽卷理科第 13 题：程序框图，输出 a 的值。
+% 来源 PDF：普通高考/2009/2009安徽理.pdf，SHA256 e3986483e52654337c383d27cbe67e80ee0bd62eaf64defba6fe8bcc0cdb0c6d
+% 原页：第 1 页（A3 三栏）第 2 栏下部，印刷页 495。
+% 重绘依据：开始 → a=1 → a=2a+1 → 判断 a>100；否（左）回到 a=2a+1，是（下）→ 输出 a → 结束。
+\begin{tikzpicture}[scale=0.9, semithick, >=Stealth,
+  node distance=5mm, every node/.style={inner sep=3pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=1.9cm, minimum height=0.62cm] {开始};
+  \node (init) [draw, minimum width=1.9cm, minimum height=0.62cm, below=of start] {$a=1$};
+  \node (step) [draw, minimum width=2.6cm, minimum height=0.62cm, below=of init] {$a=2a+1$};
+  \node (cond) [draw, diamond, aspect=2.0, minimum width=2.6cm, minimum height=0.95cm, below=of step] {$a>100$};
+  \node (out) [draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.4cm, minimum height=0.62cm, below=of cond] {输出 $a$};
+  \node (end) [draw, rounded corners=4pt, minimum width=1.9cm, minimum height=0.62cm, below=of out] {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (step);
+  \draw[->] (step) -- (cond);
+  \draw[->] (cond) -- (out);
+  \node[anchor=west] at ($(cond.south)!0.5!(out.north)+(16pt,-4pt)$) {是};
+  \draw[->] (cond.west) -- ++(-0.85,0) |- node[pos=0.25, left] {否} (step.west);
+  \draw[->] (out) -- (end);
+\end{tikzpicture}

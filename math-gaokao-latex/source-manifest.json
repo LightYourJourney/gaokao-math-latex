@@ -3276,6 +3276,14 @@
         "gk-2009-anhui-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b52",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-anhui-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3285,7 +3293,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "49dbd393-04bf-4118-babb-94fee974cffd",
+  "last_transaction_id": "f867fbb5-b62a-4df8-b202-6d4c6ba95330",
   "papers": [
     {
       "blocked_from": null,
@@ -39523,9 +39531,78 @@
       "title": "2009 年·普通高等学校招生考试·安徽卷·文科",
       "track": "arts",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_安徽卷_理科/figures/f2009_anhui_science_q06_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_安徽卷_理科/figures/f2009_anhui_science_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_安徽卷_理科/figures/f2009_anhui_science_q14_arc.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_安徽卷_理科/figures/f2009_anhui_science_q18_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_anhui_science",
+        "id": "gk-2009-anhui-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 495、496；PDF 只有题面、无答案页，21 题答案由本库独立推导（非官方）。第 6 题四幅候选图象、第 13 题程序框图、第 14 题圆弧向量图、第 18 题双四棱锥由 TikZ 重绘。第 6 题与同年安徽文科第 8 题同题同图，第 3 题与文科第 6 题同题。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "安徽理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-anhui-science",
+      "production_state": "complete",
+      "project_dir": "2009_安徽卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_安徽理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_安徽理_含解析.md",
+        "questions": "2009/2009_数学真题_安徽理_试题.md",
+        "solution_body": "2009/2009_数学真题_安徽理_解析正文.md"
+      },
+      "source_ids": [
+        "src-b941eebc7523a0bc24b38b4e37800ba8dbf8c78f117be0fc1a8d728fcb880146"
+      ],
+      "title": "2009 年·普通高等学校招生考试·安徽卷·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 9959,
+  "revision": 9964,
   "schema_version": 1,
   "sources": [
     {
@@ -49626,8 +49703,8 @@
       "exam_type": "regular",
       "git_blob_oid": "93cbbb329476ed48ebd285241c3f195b6471b0c5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-anhui-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009安徽理.pdf",
       "regions": [],
       "source_id": "src-b941eebc7523a0bc24b38b4e37800ba8dbf8c78f117be0fc1a8d728fcb880146",

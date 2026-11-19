@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 安徽卷理科：phase6-b52 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
+
+- 对象：`gk-2009-anhui-science`，21 题（选择 1–10、填空 11–15、解答 16–21）；固定来源 `src-b941eebc7523a0bc24b38b4e37800ba8dbf8c78f117be0fc1a8d728fcb880146`，上游 `普通高考/2009/2009安徽理.pdf`，SHA-256 `e3986483e52654337c383d27cbe67e80ee0bd62eaf64defba6fe8bcc0cdb0c6d`，2 页 A3 横向，印面页码 495、496。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；分数、根号、上下标与四幅图另以 600 dpi 原页逐题复核。第 1 页含 Q1–Q17、第 2 页含 Q18–Q21；原页未标分值，不补。来源与接收细节见 `reports/2009-anhui-science-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1B 2D 3B 4A 5B 6C 7A 8C 9A 10D；11 $\\\\frac12$；12 $\\\\sqrt{14}$；13 $127$；14 $2$；15 ①④⑤；16 $\\\\sin A=\\\\frac{\\\\sqrt3}{3}$、面积 $3\\\\sqrt2$；17 $P(1)=\\\\frac13,P(2)=\\\\frac12,P(3)=\\\\frac16$、$EX=\\\\frac{11}{6}$；18 二面角 $90^\\\\circ$、公共体积 $\\\\frac{2\\\\sqrt2}{9}$；19 分段单调性；20 切线唯一性与 $\\\\tan\\\\alpha\\\\tan\\\\gamma=\\\\tan^2\\\\beta$；21 $a_1\\\\in(0,1)\\\\cup(3,+\\\\infty)$。
+- 盲解复核：20 题一致；第 18(1) 盲解给出 $\\\\arccos(-3/7)$，复核发现其把 $\\\\overrightarrow{AF}$ 误作 $(2,0,1)$（相当于 $F(1,0,1)$，与 $CF=2$ 矛盾），按题设 $F(1,0,2)$ 时两平面法向量点积为 $0$，二面角确为 $90^\\\\circ$，维持主稿。第 18(2) 盲解与主稿同为 $\\\\frac{2\\\\sqrt2}{9}$，并给出「公共部分是以 $ABCD$ 为底、顶点 $Q(-\\\\frac13,0,\\\\frac23)$ 的四棱锥」的解释，主稿采纳为截面法结果的核对。provenance 记为 resolved。
+- 图形：Q6 四幅候选图象（复用同年安徽文科第 8 题同题同图）、Q13 程序框图、Q14 圆弧向量图、Q18 双四棱锥，共 4 幅 TikZ 矢量图；Q7、Q10 的分式选项改用行内 $\\\\frac$，消除选项互相压行。
+- 生成链：`register-papers`（revision 9960）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9961）→ `build --formal`（attempt `705c11c8`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 5/26/7/19 页（共 57 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 57 页八类检查全 pass，0 豁免；批次 `closed`、卷 `complete`。全量门禁：`validate-receipts --all --require-final` **OK：545 卷**；`provenance check-all` **OK：545 卷**；`generate_projects --all --check` **545 套一致**。
+- 下一步：按年份继续 2009 山东文/理、辽宁文/理等未成卷来源；`source-manifest.json` 仍有 232 个来源未绑定 `paper_id`。
+
 ### 2009 安徽卷文科：phase6-b51 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
 
 - 对象：`gk-2009-anhui-arts`，21 题（选择 1–10、填空 11–15、解答 16–21）；固定来源 `src-ae8e3f2c063e196f048f93f2cad83e474fa961a986553b3d04e911fcf6fa0189`，上游 `普通高考/2009/2009安徽文.pdf`，SHA-256 `83b982d22fd84a0158f909bce3d1f62e1fa228868e7915ded21e7a5ed9774897`，2 页 A3 横向，印面页码 497、498。

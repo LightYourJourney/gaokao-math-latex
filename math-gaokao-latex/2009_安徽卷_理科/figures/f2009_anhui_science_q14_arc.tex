@@ -1,0 +1,20 @@
+% 2009 年安徽卷理科第 14 题：单位向量 OA、OB 夹角 120°，C 在圆弧 AB 上变动。
+% 来源 PDF：普通高考/2009/2009安徽理.pdf，SHA256 e3986483e52654337c383d27cbe67e80ee0bd62eaf64defba6fe8bcc0cdb0c6d
+% 原页：第 1 页（A3 三栏）第 3 栏上部，印刷页 495。
+% 重绘依据：O 在左下，OA 水平向右，OB 与 OA 成 120°；以 O 为圆心、OA 为半径作从 B 到 A 的圆弧，
+%   C 取在弧上，画向量 OC；OA、OB、OC 均为带箭头向量。
+\begin{tikzpicture}[scale=0.95, semithick, >=Stealth, every node/.style={inner sep=1.4pt}]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (3,0);
+  \coordinate (B) at (120:3);
+  \coordinate (C) at (55:3);
+  \draw (B) arc[start angle=120, end angle=0, radius=3];
+  \draw[->] (O) -- (A);
+  \draw[->] (O) -- (B);
+  \draw[->] (O) -- (C);
+  \fill (C) circle (1.1pt);
+  \node[below left] at (O) {$O$};
+  \node[below right] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+\end{tikzpicture}
