@@ -1,0 +1,64 @@
+% 2009 年安徽卷文科第 8 题：y=(x-a)^2(x-b)（a<b）的四个候选图象。
+% 来源 PDF：普通高考/2009/2009安徽文.pdf，SHA256 83b982d22fd84a0158f909bce3d1f62e1fa228868e7915ded21e7a5ed9774897
+% 原页：第 1 页（A3 三栏）第 1 栏下部与第 2 栏顶部，印刷页 497。
+% 重绘依据：按原图四幅小图 2×2 排布，a 靠近原点、b 在右。(A) 与 x 轴有三个不同交点；
+%   (B) 在 a 处穿过、在 b 处与 x 轴相切且开口向下；(C) 在 a 处与 x 轴相切（局部极大为 0）、
+%   在 b 处自下而上穿过；(D) 在 a 处穿过、在 b 处相切（局部极小为 0）。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.1pt, font=\small}]
+  % ---------- (A) ----------
+  \begin{scope}[shift={(0,0)}, x=0.62cm, y=0.62cm]
+    \begin{scope}
+      \clip (-1.35,-2.35) rectangle (3.55,2.35);
+      \draw[domain=-1.15:3.4,samples=200,smooth,variable=\x]
+        plot (\x, {0.7*(-(\x+0.5))*(\x-0.35)*(\x-2.2)});
+    \end{scope}
+    \draw[-{Stealth}] (-1.3,0) -- (3.5,0) node[right] {$x$};
+    \draw[-{Stealth}] (0,-2.25) -- (0,2.25) node[above] {$y$};
+    \node[anchor=north east] at (-0.06,-0.08) {$O$};
+    \node[below] at (0.75,-0.06) {$a$};
+    \node[below] at (2.2,-0.06) {$b$};
+    \node at (1.2,-3.05) {(A)};
+  \end{scope}
+  % ---------- (B) ----------
+  \begin{scope}[shift={(5.0,0)}, x=0.62cm, y=0.62cm]
+    \begin{scope}
+      \clip (-1.35,-2.35) rectangle (3.55,2.35);
+      \draw[domain=-1.15:3.4,samples=200,smooth,variable=\x]
+        plot (\x, {0.7*(-(\x-0.35))*(\x-2.2)*(\x-2.2)});
+    \end{scope}
+    \draw[-{Stealth}] (-1.3,0) -- (3.5,0) node[right] {$x$};
+    \draw[-{Stealth}] (0,-2.25) -- (0,2.25) node[above] {$y$};
+    \node[anchor=north east] at (-0.06,-0.08) {$O$};
+    \node[below] at (0.75,-0.06) {$a$};
+    \node[below] at (2.2,-0.06) {$b$};
+    \node at (1.2,-3.05) {(B)};
+  \end{scope}
+  % ---------- (C) ----------
+  \begin{scope}[shift={(0,-4.2)}, x=0.62cm, y=0.62cm]
+    \begin{scope}
+      \clip (-1.35,-2.35) rectangle (3.55,2.35);
+      \draw[domain=-1.15:3.4,samples=200,smooth,variable=\x]
+        plot (\x, {0.7*(\x-0.35)*(\x-0.35)*(\x-2.2)});
+    \end{scope}
+    \draw[-{Stealth}] (-1.3,0) -- (3.5,0) node[right] {$x$};
+    \draw[-{Stealth}] (0,-2.25) -- (0,2.25) node[above] {$y$};
+    \node[anchor=north east] at (-0.06,-0.08) {$O$};
+    \node[below] at (0.75,-0.06) {$a$};
+    \node[below] at (2.2,-0.06) {$b$};
+    \node at (1.2,-3.05) {(C)};
+  \end{scope}
+  % ---------- (D) ----------
+  \begin{scope}[shift={(5.0,-4.2)}, x=0.62cm, y=0.62cm]
+    \begin{scope}
+      \clip (-1.35,-2.35) rectangle (3.55,2.35);
+      \draw[domain=-1.15:3.4,samples=200,smooth,variable=\x]
+        plot (\x, {0.7*(\x-0.35)*(\x-2.2)*(\x-2.2)});
+    \end{scope}
+    \draw[-{Stealth}] (-1.3,0) -- (3.5,0) node[right] {$x$};
+    \draw[-{Stealth}] (0,-2.25) -- (0,2.25) node[above] {$y$};
+    \node[anchor=north east] at (-0.06,-0.08) {$O$};
+    \node[below] at (0.75,-0.06) {$a$};
+    \node[below] at (2.2,-0.06) {$b$};
+    \node at (1.2,-3.05) {(D)};
+  \end{scope}
+\end{tikzpicture}

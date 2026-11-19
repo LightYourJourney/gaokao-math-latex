@@ -3268,6 +3268,14 @@
         "gk-2009-tianjin-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b51",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-anhui-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3277,7 +3285,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "43220c4f-bad3-4bac-aa6b-28efd5569a87",
+  "last_transaction_id": "49dbd393-04bf-4118-babb-94fee974cffd",
   "papers": [
     {
       "blocked_from": null,
@@ -39440,9 +39448,84 @@
       "title": "2009 年·普通高等学校招生考试·天津卷·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_安徽卷_文科/figures/f2009_anhui_arts_q08_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_安徽卷_文科/figures/f2009_anhui_arts_q12_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_安徽卷_文科/figures/f2009_anhui_arts_q17_stemleaf.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "2009_安徽卷_文科/figures/f2009_anhui_arts_q17_stemleaf_filled.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_安徽卷_文科/figures/f2009_anhui_arts_q20_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_anhui_arts",
+        "id": "gk-2009-anhui-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 497、498；PDF 只有题面、无答案页，21 题答案由本库独立推导（非官方）。第 8 题四个候选图象、第 12 题程序框图、第 17 题茎叶图、第 20 题六面体由 TikZ 重绘。第 17 题原页称两种小麦各种植 25 亩，但 A、B 各只印 24 个亩产数据，按原页照录不补。第 21 题原页印作 e=0.71828…，应为 2.71828…，照录并在解析中说明，不影响值域。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "安徽文科"
+      },
+      "issue_ids": [
+        "ISSUE-1481"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-anhui-arts",
+      "production_state": "complete",
+      "project_dir": "2009_安徽卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_安徽文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_安徽文_含解析.md",
+        "questions": "2009/2009_数学真题_安徽文_试题.md",
+        "solution_body": "2009/2009_数学真题_安徽文_解析正文.md"
+      },
+      "source_ids": [
+        "src-ae8e3f2c063e196f048f93f2cad83e474fa961a986553b3d04e911fcf6fa0189"
+      ],
+      "title": "2009 年·普通高等学校招生考试·安徽卷·文科",
+      "track": "arts",
+      "year": 2009
     }
   ],
-  "revision": 9951,
+  "revision": 9959,
   "schema_version": 1,
   "sources": [
     {
@@ -49519,8 +49602,8 @@
       "exam_type": "regular",
       "git_blob_oid": "cd63e344769ba7f95c06d3707aeb8cda67fdffbb",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-anhui-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009安徽文.pdf",
       "regions": [],
       "source_id": "src-ae8e3f2c063e196f048f93f2cad83e474fa961a986553b3d04e911fcf6fa0189",

@@ -24905,3 +24905,20 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1481
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 21 题（印面 498）印作「其中 e=0.71828… 是自然对数的底数」；自然对数的底为 2.71828…，故原页首位数显系 2 误排为 0。本库照录原页字面 0.71828，并在题注与解析中说明应为 2.71828；所问值域只用到 e 为自然对数的底，结论不受该误印影响。",
+  "fingerprint": "971e52cfaa324ad98b7dea89f4d806da6585e1b0d8f43f82a3ad76d60bafa286",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-anhui-arts",
+  "question_id": "gk-2009-anhui-arts-q21",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 21 题自然对数底数应印作 2.71828…；确认后改正题面字面并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-ae8e3f2c063e196f048f93f2cad83e474fa961a986553b3d04e911fcf6fa0189",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

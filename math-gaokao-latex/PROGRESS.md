@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 安徽卷文科：phase6-b51 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
+
+- 对象：`gk-2009-anhui-arts`，21 题（选择 1–10、填空 11–15、解答 16–21）；固定来源 `src-ae8e3f2c063e196f048f93f2cad83e474fa961a986553b3d04e911fcf6fa0189`，上游 `普通高考/2009/2009安徽文.pdf`，SHA-256 `83b982d22fd84a0158f909bce3d1f62e1fa228868e7915ded21e7a5ed9774897`，2 页 A3 横向，印面页码 497、498。
+- 转录口径：PDF 自带文字层，`pdftotext -layout` 取值作候选；分数、根号、上下标与四幅图另以 600 dpi 原页逐题复核。第 1 页含 Q1–Q17、第 2 页含 Q18–Q21；原页未标分值，不补。来源与接收细节见 `reports/2009-anhui-arts-source-intake.md`。
+- 答案（独立推导，等级 D，非官方）：1D 2B 3C 4A 5B 6B 7A 8C 9D 10A；11 $(0,-1,0)$；12 $127$；13 $\\\\frac34$；14 $\\\\frac43$；15 ①④⑤；16 $\\\\sin A=\\\\frac{\\\\sqrt3}{3}$、面积 $3\\\\sqrt2$；17 茎叶图与统计结论；18 $a=\\\\sqrt3,b=\\\\sqrt2$、$y^2=-4x$；19 $a_n=4n$、$b_n=2^{1-n}$、$c_{n+1}<c_n\\\\iff n\\\\geqslant3$；20 体积 $2\\\\sqrt2$；21 单调性分 $0<a\\\\leqslant2\\\\sqrt2$ 与 $a>2\\\\sqrt2$，$a=3$ 时值域 $[2-3\\\\ln2,\\\\ \\\\mathrm e^2-5-2\\\\mathrm e^{-2}]$。
+- 盲解复核：盲解代理独立完成全卷，21 题结论一致；Q20 另以「$AB$、$DC$、$EF$ 平行且相等 ⇒ $ABCDEF$ 是以 $\\\\triangle ADE$ 为底、侧棱 $2$ 的直三棱柱」独立算得体积同为 $2\\\\sqrt2$，主稿据此改写体积解法并以四面体剖分复核。
+- 图形：Q8 四幅候选图象（2×2）、Q12 程序框图、Q17 茎叶图空白表与填写版、Q20 六面体，共 5 个图稿文件；Q8 的分式选项与 Q3/Q6/Q10 的选项改用行内 $\\\\frac$，消除选项互相压行。
+- 源排版缺陷（照录并登记）：第 21 题原页印作「$\\\\mathrm e=0.71828\\\\cdots$」，自然对数的底应为 $2.71828\\\\cdots$；照字面读会使区间 $[1,\\\\mathrm e^2]$ 为空，故只能读作 $2.71828$。登记 ISSUE-1481（`non_blocking`），值域结论不受影响。第 17 题原页称各种植 $25$ 亩而 A、B 各只印 $24$ 个数据，按原页所印数据填图，不补造。
+- 生成链：`register-papers`（revision 9952）→ `extract-batch` → `sync-figure-registry` → `generate_projects` / `make_short_answers` / `make_editions` → `provenance import-batch`（revision 9956）→ `build --formal`（attempt `0a3fb781`）→ `prepare-batch` → 逐页复核 → `finalize-batch` 返回 `FINALIZED`。
+- 验收：四版 5/26/7/18 页（共 56 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 56 页八类检查全 pass，0 豁免；批次 `closed`、卷 `complete`。全量门禁：`validate-receipts --all --require-final` **OK：544 卷**；`provenance check-all` **OK：544 卷**；`generate_projects --all --check` **544 套一致**。
+- 下一步：按年份继续 2009 安徽理、山东文/理等未成卷来源；`source-manifest.json` 仍有 233 个来源未绑定 `paper_id`。
+
 ### 2009 天津卷理科：phase6-b50 新卷转录、四版构建与视觉审查收口（2026-11-19；`closed`）
 
 - 对象：`gk-2009-tianjin-science`，22 题（选择 1–10、填空 11–16、解答 17–22）；固定来源 `src-5ae28cb9c2b19fb38bfbfc290a79139a1aa9a158d3b1e838dbc90aa55c196f7f`，上游 `普通高考/2009/2009天津理.pdf`，SHA-256 `ea758271e47ecf0aadf9b6ea943bcdf2df78b8bf284c3ef26b72c4b69eeb3e80`，2 页 A3 横向，印面页码 561、562。
