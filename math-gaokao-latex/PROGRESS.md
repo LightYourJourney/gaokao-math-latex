@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 福建卷（理科）：phase6-b75 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2009-fujian-science`，21 个题号（选择 1—10、填空 11—15、解答 16—21，第 21 题为 A/B/C 三选二）；固定来源 `src-a57532e2d136183f2e5bdd87808ce0f381e55d77cbdd4daf9e55c94d002f0b85`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009福建理.pdf`，SHA-256 `44d650687de50fff3efc1d37624b1272c9045e96d41491464f6713a708f202b9`，534,627 bytes，2 页 A3 横向，印面页码 515、516；页眉「2009 普通高等学校招生考试（福建卷理）」。
+- 转录口径：PDF 文字层可读度一般，只作定位；分数、根号、上下标、选项与四幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—15、解答题 16—21（第 21 题 A/B/C 三选二）。
+- 答案（独立推导，等级 D，非官方）：1B 2A 3C 4D 5A 6C 7A 8C 9C 10D；11 $2$；12 $1$；13 $2$；14 $(-\infty,0)$；15 $5$；16 (1) $\frac3{31}$、(2) 分布列 $\frac5{31},\frac{10}{31},\frac{10}{31},\frac5{31},\frac1{31}$、$E\xi=\frac{80}{31}$；17 (1) $\frac{\sqrt{10}}{10}$、(2) 存在，$AS=\frac{\sqrt2}2$；18 (1) $A=2\sqrt3$、$\omega=\frac\pi6$、$|MP|=5$、(2) $N(4+\sqrt3,0)$、最长 $4+\sqrt3$；19 (1) $S(1,2\sqrt3)$ 或 $\left(1,\frac{2\sqrt3}3\right)$、(2) $a=\sqrt2$；20 (1) $b=2a-1$、单调区间分类、(2) ①$t=2$、②$m\in(1,3]$；21 【A】$M^{-1}=\begin{pmatrix}-1&3\\-1&2\end{pmatrix}$、$A(2,-3)$，【B】$2$ 个，【C】$(0,2)$。
+- 逐题复核要点：第 3 题 $S_3=12+3d=6$ 得 $d=-2$（原页选项 C 漏负号）；第 6 题 $S$ 依次 $2,-1,1/2,2$，$n=1,2,4,8$；第 8 题恰两次命中的组为 $271,932,393,537$，$4/20=0.20$；第 15 题斐波那契模 3 周期 8，甲报 $n\equiv1\pmod5$，100 项内共 5 次；第 16 题和为 10 的子集为 $\{1,2,3,4\},\{1,4,5\},\{2,3,5\}$；第 17 题建系得 $NE$ 与 $AM$ 余弦 $\sqrt{10}/10$，$S$ 为 $AN$ 中点；第 18 题焦点弦/赛道折线，$\angle MNP=120^\circ$ 定出 $N(4+\sqrt3,0)$；第 19 题一般 $a$ 时 $T\left(\frac{a(4-s^2)}{4+s^2},\frac{4s}{4+s^2}\right)$，由 $TB\perp OS$ 得 $a=\sqrt2$；第 20 题 $f'=(x+1)(x+2a-1)$，$a=-1$ 时 $M(-1,5/3)$、$N(3,-9)$，直线 $MP$ 第三交点 $r=4-m$，$t=2$，第二问 $r=3-n-m$ 得 $m\in(1,3]$；第 21 题三选二逐题独立求解。
+- 图稿 4 张（Q6 程序框图、Q17 正方形与两垂线、Q18 赛道曲线与折线、Q19 半椭圆与直线 $l$），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。
+- 源缺陷（照录并登记）：第 3 题选项（C）原页印作 $2$，由 $S_3=6$、$a_1=4$ 实算 $d=-2$，公开答案册亦作（C）$-2$，按 $-2$ 转录，登记 `ISSUE-1518`（`transcription-ambiguous`、`non_blocking`）。
+- 验收：四版 5/20/7/17 页（共 49 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 49 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b75.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **568 一致**；`manifest.csv` 775 行。
+- 里程碑：**2009 年可核验来源已全部登记完毕**（福建理为最后一套）；下一步转入 2010—2014 未绑定来源。
+
 ### 2009 福建卷（文科）：phase6-b74 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2009-fujian-arts`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-2d82234384a5376adac918af438e846b84f8a5ca90f8b48a9441e90414e2dcb8`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009福建文.pdf`，SHA-256 `f0a5111a6f86f4d4e8618c5c2cd0ecfd678a590b36ecbd033bb63b189700a0bc`，529,475 bytes，2 页 A3 横向，印面页码 517、518；页眉「2009 普通高等学校招生考试（福建卷文）」。

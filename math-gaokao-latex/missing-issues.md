@@ -25527,3 +25527,93 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1518
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1 页第 3 题选项（C）印作 2，但由 S3=6、a1=4 得 12+3d=6，d=−2；选项 A=1、B=5/3、D=3 均不合，公开答案册亦作（C）−2，故原页漏印负号。本库按 −2 转录。",
+  "fingerprint": "0175b967c7156b0fbb56304ca49f4944b78c869d4902547060c5eeba40ad41a5",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-fujian-science",
+  "question_id": "gk-2009-fujian-science-q03",
+  "resume_action": "取得同版勘误或清晰原页后核定选项 C 字面；在此之前按 −2 转录并保留本题出处登记。",
+  "source_id": "src-a57532e2d136183f2e5bdd87808ce0f381e55d77cbdd4daf9e55c94d002f0b85",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1519
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "784a1bcdebba95b3b4d369824eb7cf4eeb921741b3afd058996098810284142e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2009-fujian-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1520
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "ac27c0d1b8e5f888c8b2f47f95450afd7e09598e36ce8fa97114de9401f81c45",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2009-fujian-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1521
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "45a5e707e6593b2f9b8e32daf184a01060a4633667cfae38195bdb03f7d88142",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2009-fujian-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1522
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "60462d9d75cc277ce03ee430689538d9cc1be6aa6c3df1204c343d1ed25e497c",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2009-fujian-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```

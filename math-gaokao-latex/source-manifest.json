@@ -3460,6 +3460,14 @@
         "gk-2009-fujian-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b75",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-fujian-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3469,7 +3477,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c8aeefa1-3ca4-4154-adbc-08b2c25bf295",
+  "last_transaction_id": "a2752e36-497e-4a5d-bd94-43645659c09a",
   "papers": [
     {
       "blocked_from": null,
@@ -41452,9 +41460,84 @@
       "title": "2009 年·普通高等学校招生考试·福建卷·文科",
       "track": "arts",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_福建卷_理科/figures/f2009_fujian_sci_q06_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_福建卷_理科/figures/f2009_fujian_sci_q17_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_福建卷_理科/figures/f2009_fujian_sci_q18_track.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_福建卷_理科/figures/f2009_fujian_sci_q19_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_fujian_science",
+        "id": "gk-2009-fujian-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 515、516；页眉「2009 普通高等学校招生考试（福建卷理）」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。福建卷题号：选择 1—10、填空 11—15、解答 16—21（第 21 题为 A/B/C 三选二），共 21 题。答案由本库独立推导（非官方）。文字层可读度一般、只作定位，分数、根号、上下标、选项与四幅图均按 600 dpi 原页逐项复核。第 1 题 sinxcosx=1/2 sin2x；第 2 题补集 [0,2]；第 3 题 S3=12+3d=6 得 d=−2（原页选项 C 漏印负号，按 −2 转录并登记 ISSUE-1518）；第 4 题积分 π+2；第 5 题 1/x 递减；第 6 题 S 依次 2、−1、1/2、2，n=1,2,4,8，输出 8；第 7 题 α∥β 推出 m∥β 且 l1∥α；第 8 题恰两次命中的组为 271、932、393、537，4/20=0.20；第 9 题 |b·c| 为以 a,b 为邻边的平行四边形面积；第 10 题解集为至多两对关于同轴对称的数，D 不可能；第 11 题 2/(1−i)=1+i，a+b=2；第 12 题九数去 88、94 后和为637，总和818+x，x=1；第 13 题焦点弦 4p=8，p=2；第 14 题 f′=3ax²+1/x=0 需 a<0；第 15 题斐波那契模3周期8，甲报 n≡1 mod5，100 项内 n=16,36 等共5次；第 16 题非空子集31个，和为10的有 {1,2,3,4},{1,4,5},{2,3,5}，P=3/31，ξ 分布列 C(5,k)/31，E=80/31；第 17 题建系 A(0,0,0)、B(1,0,0)、D(0,1,0)、M(0,1,1)、N(1,0,1)、E(1,1/2,0)，NE 与 AM 余弦 √10/10；S=(t,0,t)，ES∥平面 AMN 法向量 (1,1,−1) 得 t=1/2，AS=√2/2；第 18 题 A=2√3、ω=π/6，M(4,3)、P(8,0)，MP=5；∠MNP=120° 得 N(4+√3,0)，最长 4+√3；第 19 题半圆三等分点给 S(1,2√3) 或 (1,2√3/3)；一般 a 时 T 坐标 x=a(4−s²)/(4+s²)、y=4s/(4+s²)，O,M,S 共线且 M 在 TB 上推出 TB⊥OS，斜率积 −2/a²=−1，a=√2；第 20 题 b=2a−1，f′=(x+1)(x+2a−1)，按 a>1、a<1、a=1 分区间；a=−1 时 M(−1,5/3)、N(3,−9)，直线 MP 第三交点 r=4−m，需 −1<r<m 得 m>2，t=2；第二问 r=3−n−m 需 n<r<m，存在 n 的条件 m∈(1,3]；第 21 题 A 行列式1，逆矩阵 [[−1,3],[−1,2]]，A(2,−3)；B 圆心到直线距离 7/5<2，2 个公共点；C 分区间得 (0,2)。源缺陷：第 3 题选项 C 原页印作 2，漏负号，按 −2 转录并登记 ISSUE-1518（non_blocking）。原页共 4 幅图：第 6 题程序框图、第 17 题正方形与两垂线、第 18 题赛道曲线与折线、第 19 题半椭圆与直线 l；其余题无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "福建理科"
+      },
+      "issue_ids": [
+        "ISSUE-1518",
+        "ISSUE-1519",
+        "ISSUE-1520",
+        "ISSUE-1521",
+        "ISSUE-1522"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-fujian-science",
+      "production_state": "complete",
+      "project_dir": "2009_福建卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_福建理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_福建理_含解析.md",
+        "questions": "2009/2009_数学真题_福建理_试题.md",
+        "solution_body": "2009/2009_数学真题_福建理_解析正文.md"
+      },
+      "source_ids": [
+        "src-a57532e2d136183f2e5bdd87808ce0f381e55d77cbdd4daf9e55c94d002f0b85"
+      ],
+      "title": "2009 年·普通高等学校招生考试·福建卷·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 10293,
+  "revision": 10304,
   "schema_version": 1,
   "sources": [
     {
@@ -51963,8 +52046,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d155bdb099980e3e88f05b8b36874e7881d88210",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-fujian-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009福建理.pdf",
       "regions": [],
       "source_id": "src-a57532e2d136183f2e5bdd87808ce0f381e55d77cbdd4daf9e55c94d002f0b85",
