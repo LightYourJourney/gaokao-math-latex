@@ -25374,3 +25374,37 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1509
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "原页第 6 题（印面 529）首句印作「平面六面体 $ABCD-A_1B_1C_1D_1$ 中」，其中「平面」当为「平行」。「平面六面体」不是数学名词（六个面的多面体不一定是平行六面体），而题中记号 $ABCD-A_1B_1C_1D_1$ 与后文「既与 $AB$ 共面也与 $CC_1$ 共面的棱」的设问都只在平行六面体下才有确定答案，故按「平行六面体」读法唯一，不影响答案：与 $AB$ 共面的棱为 $CD$、$A_1B_1$、$C_1D_1$（平行）及 $AD$、$BC$、$AA_1$、$BB_1$（相交），与 $CC_1$ 共面的棱为 $AA_1$、$BB_1$、$DD_1$（平行）及 $CD$、$CB$、$C_1D_1$、$C_1B_1$（相交），两组公共部分为 $AA_1$、$BB_1$、$BC$、$CD$、$C_1D_1$ 共 5 条，答案唯一为（C）。本库题面照录原页字面，未擅改。",
+  "fingerprint": "25fc0deb99eaf88813501528fe1179a1e37738b24fbaac8e06f36d94bf1a1693",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-hunan-arts",
+  "question_id": "gk-2009-hunan-arts-q06",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 6 题「平面六面体」是否为「平行六面体」；确认后按原文改正并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-8f952daa9c063386e369ff0322811171b3b900a0560749c263440acd3d2ad297",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1510
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "原页第 13 题（印面 529）末句印作「则双曲线线 $C$ 的离心率为______」，其中「线」字重复一次，应为「则双曲线 $C$ 的离心率为」。题首已完整给出「过双曲线 $C:\\dfrac{x^2}{a^2}-\\dfrac{y^2}{b^2}=1$（$a>0$，$b>0$）的一个焦点作圆 $x^2+y^2=a^2$ 的两条切线」，末句所指的 $C$ 明确无疑，重复的「线」字属排印衍字，不影响答案：由对称性 $\\angle AOF=60^\\circ$，$\\cos60^\\circ=\\dfrac ac=\\dfrac12$，$e=\\dfrac ca=2$。本库题面照录原页字面（保留重复的「线」字），未擅改。",
+  "fingerprint": "0ba9f722776f70a9cdfa1e2778a27fb9457561984833f5525cef4bef5152e516",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-hunan-arts",
+  "question_id": "gk-2009-hunan-arts-q13",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认第 13 题末句「双曲线线 $C$」是否为衍字；确认后按原文改正并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-8f952daa9c063386e369ff0322811171b3b900a0560749c263440acd3d2ad297",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
