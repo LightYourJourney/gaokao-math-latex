@@ -25289,3 +25289,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1504
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "原页第 14 题第二张表（表题「低谷时间段用电价格表」）的表头印作「高峰月用电量（单位：千瓦时）」「高峰电价（单位：元/千瓦时）」，与表题「低谷」及题文「低谷时间段用电量为 100 千瓦时」矛盾，同一版第一张表才是高峰表（0.568/0.598/0.668）。这是原页表头误印：第二张表的三档电价 0.288、0.318、0.388 明显低于第一张表，且表题明写「低谷」，故唯一合理读法是用该表的低谷电价计费，本题为填空题，答案为 148.4 元，两种表头读法（按表题取低谷电价）下数值唯一，不影响任何结论。本库题面照录原页表头，未擅改。",
+  "fingerprint": "434147e3081bf01a877744ca6ca664576cbe19f943ec6bd26b088d98e02f1cd6",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-zhejiang-science",
+  "question_id": "gk-2009-zhejiang-science-q14",
+  "resume_action": "取得同版官方勘误或更清晰原页，确认低谷电价表表头是否应为「低谷月用电量」「低谷电价」；确认后按原文改正表头并重跑本题 provenance 与逐页复核。",
+  "source_id": "src-f4d2310930016654e1f565e85b83c095306b80a2b3645d4269b0d999f5c2b4da",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
