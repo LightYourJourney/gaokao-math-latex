@@ -1,0 +1,46 @@
+% 2009 年湖南卷理科第 15 题：正三角形分割成 n^2 个小正三角形（n=2,3）。
+% 来源 PDF：普通高考/2009/2009湖南理.pdf，SHA-256 0237bd2509e6645937e3473eabb63dba69098024fb6f451cb44ef8ac0e3165c1。
+% 原页：第 1 页（A3 三栏）第 2 栏下部，书页码 527。
+% 重绘依据：按原页两幅图重绘；左图 n=2 连接三边中点，右图 n=3 连接各边三等分点并作三组平行线。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.4pt, font=\small}]
+  % 左图 n=2
+  \coordinate (A) at (0,3.464);
+  \coordinate (B) at (-2,0);
+  \coordinate (C) at (2,0);
+  \coordinate (MAB) at (-1,1.732);
+  \coordinate (MBC) at (0,0);
+  \coordinate (MCA) at (1,1.732);
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (MAB) -- (MBC) -- (MCA) -- cycle;
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[below] at (0,-0.42) {图 1};
+
+  % 右图 n=3
+  \begin{scope}[xshift=1.0cm]
+  \coordinate (A2) at (5,3.464);
+  \coordinate (B2) at (3,0);
+  \coordinate (C2) at (7,0);
+  \coordinate (AB1) at (4.333,2.309);
+  \coordinate (AB2) at (3.667,1.155);
+  \coordinate (AC1) at (5.667,2.309);
+  \coordinate (AC2) at (6.333,1.155);
+  \coordinate (BC1) at (4.333,0);
+  \coordinate (BC2) at (5.667,0);
+  \draw (A2) -- (B2) -- (C2) -- cycle;
+  % 平行于 BC 的两条
+  \draw (AB1) -- (AC1);
+  \draw (AB2) -- (AC2);
+  % 平行于 AB 的两条
+  \draw (AC1) -- (BC1);
+  \draw (AC2) -- (BC2);
+  % 平行于 AC 的两条
+  \draw (AB1) -- (BC2);
+  \draw (AB2) -- (BC1);
+  \node[above] at (A2) {$A$};
+  \node[below left] at (B2) {$B$};
+  \node[below right] at (C2) {$C$};
+  \node[below] at (5,-0.42) {图 2};
+  \end{scope}
+\end{tikzpicture}

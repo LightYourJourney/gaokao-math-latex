@@ -3412,6 +3412,14 @@
         "gk-2009-hunan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b69",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-hunan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3421,7 +3429,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "bafecb7e-b38f-46fa-9367-a9f1b852bb99",
+  "last_transaction_id": "397cf5c1-bffb-4682-ac49-cf8f3d1245e0",
   "papers": [
     {
       "blocked_from": null,
@@ -41003,9 +41011,79 @@
       "title": "2009 年·普通高等学校招生考试·湖南卷·文科",
       "track": "arts",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_湖南卷_理科/figures/f2009_hunan_sci_q04_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_湖南卷_理科/figures/f2009_hunan_sci_q15_triangular_grid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_湖南卷_理科/figures/f2009_hunan_sci_q18_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_hunan_science",
+        "id": "gk-2009-hunan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 527、528；页眉「2009 普通高等学校招生考试（湖南卷理）」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。湖南卷题号：选择 1—8、填空 9—15、解答 16—21，共 21 题。答案由本库独立推导（非官方）。文字层可读度一般、只作定位，分数、根号、上下标、选项与三幅图均以 600 dpi 原页逐项复核。第 1 题 log₂a<0 且 (1/2)^b>1，得 0<a<1、b<0；第 2 题 a+b=0 推出反向，充分不必要；第 3 题左移 11π/6；第 4 题 λ>0 时曲线单调递增且上凸，固定 x 时 y 随 λ 增大而减小，C2 在上故 λ2<λ1；第 5 题排除丙后在 9 人中选 3 人减去甲乙都不入选，84−35=49；第 6 题两边界夹角 π/4，弧长 2·π/4=π/2；第 7 题逐棱解方程得 D、B1 及两中点共 4 点；第 8 题 f 最大值 f(0)=1，故 K 的最小值为 1；第 9 题容斥得两项都爱 3 人，只爱篮球 12 人；第 10 题 x 系数 3+4+1=8；第 11 题 2t+1/t 最小 2√2；第 12 题焦点处半角 30°，b/c=1/√3，e=√6/2；第 13 题 B 层抽 2 人，1/C(N,2)=1/28 得 N=8，总体 40；第 14 题 6²+8²=10²，外接圆半径 5，球心距 12，二面角正切 12/4=3；第 15 题格点值 (ia+jb+kc)/n 求和得 f(n)=(n+1)(n+2)/6，f(3)=10/3；第 16 题 cosA=√3/2、a²=bc/√3，得 (A,B,C)=(30°,120°,30°) 或 (30°,30°,120°)；第 17 题 3!·(1/2)(1/3)(1/6)=1/6，ξ~B(3,2/3)，分布列 1/27、2/9、4/9、8/27，Eξ=2；第 18 题以 A 为原点建系，E(1/4,√3/4,√2)，DE∥平面 ACC1A1 法向量，sinθ=√10/5；第 19 题 y=m√x+256m/x+2m−256，m=640 时 x=64、新建 9 个桥墩；第 20 题 x≥2 得椭圆 x²/36+y²/27=1、x<2 得抛物线 y²=12x，两段在 A(2,±2√6) 相接，过 F 的弦长最大 100/11（在直线过 A 的临界位置取到，两椭圆交点时弦长 9+9/(3+4k²) 在 k²=24 处为 100/11）；第 21 题等比级数部分和 <|1−q|/(1−|q|)，②⇒④ 真，其余三条以 x_n=1、2^{1−n}、(−1)^n 反例，乘积用有界性 |a_n|≤|a_1|+M_a。源缺陷：第 4 题选项（A）（B）把 λ₂ 印成 λ；第 5 题「种数位」应为「种数为」；第 12 题「为原点的四边形」应为「为顶点的四边形」。三处均照录原页字面、按更正后语义读法唯一，不改变答案，分别登记 ISSUE-1511、ISSUE-1512、ISSUE-1513（non_blocking）。原页共 3 幅图：第 4 题两条曲线、第 15 题 n=2 与 n=3 两幅分割图（合并为一幅图稿）、第 18 题正三棱柱；第 19、20、21 题原页无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            9,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "湖南理科"
+      },
+      "issue_ids": [
+        "ISSUE-1511",
+        "ISSUE-1512",
+        "ISSUE-1513",
+        "ISSUE-1514"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-hunan-science",
+      "production_state": "complete",
+      "project_dir": "2009_湖南卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_湖南理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_湖南理_含解析.md",
+        "questions": "2009/2009_数学真题_湖南理_试题.md",
+        "solution_body": "2009/2009_数学真题_湖南理_解析正文.md"
+      },
+      "source_ids": [
+        "src-ff630e7c67a0cd90fe7009c1a2ee69641ef7462312fcb50d1503a607444f2d9a"
+      ],
+      "title": "2009 年·普通高等学校招生考试·湖南卷·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 10241,
+  "revision": 10254,
   "schema_version": 1,
   "sources": [
     {
@@ -51466,8 +51544,8 @@
       "exam_type": "regular",
       "git_blob_oid": "49403cbeb195711e2e7c4584574e493ce76ad717",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-hunan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009湖南理.pdf",
       "regions": [],
       "source_id": "src-ff630e7c67a0cd90fe7009c1a2ee69641ef7462312fcb50d1503a607444f2d9a",

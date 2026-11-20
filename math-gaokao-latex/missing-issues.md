@@ -25408,3 +25408,71 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1511
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 4 题选项（A）印作“0<λ₁<λ”、（B）印作“0<λ<λ₁”，而（C）（D）用 λ₁、λ₂；题设“参数 λ=λ₁,λ₂”表明（A）（B）中的 λ 应为 λ₂。题面照录原页，按更正语义答案唯一（B）。",
+  "fingerprint": "fe4eff00cd75dda56fcba173c99b4890e5815309aad47ed4974f3e0563f6a799",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-hunan-science",
+  "question_id": "gk-2009-hunan-science-q04",
+  "resume_action": "取得同版勘误或官方答案后核定选项；在此之前照录原页并以 λ=λ₂ 读取。",
+  "source_id": "src-ff630e7c67a0cd90fe7009c1a2ee69641ef7462312fcb50d1503a607444f2d9a",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1512
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 5 题“不同选法的种数位”中“位”应为“为”，属同音排印错误，不影响组合计数。题面照录。",
+  "fingerprint": "50220c3cc8a4cebabea677f768251dc8a72d6fcb6743117d88d11982e1b4e121",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-hunan-science",
+  "question_id": "gk-2009-hunan-science-q05",
+  "resume_action": "无需外部证据即可按“种数为”理解；若取得勘误则更新字面。",
+  "source_id": "src-ff630e7c67a0cd90fe7009c1a2ee69641ef7462312fcb50d1503a607444f2d9a",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1513
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 12 题“以……两个端点为原点的四边形”中“原点”应为“顶点”，否则四边形无法定义。题面照录，按“顶点”求解，答案唯一。",
+  "fingerprint": "7389257c70842825d2aa5d7ec7b19d80b4380879c6a9b2a0dd4c850d08d12188",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-hunan-science",
+  "question_id": "gk-2009-hunan-science-q12",
+  "resume_action": "取得同版勘误后核定字面；在此之前按“顶点”读取。",
+  "source_id": "src-ff630e7c67a0cd90fe7009c1a2ee69641ef7462312fcb50d1503a607444f2d9a",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1514
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 18 题若取 E=A₁（A₁C₁ 的端点），仍有 DE⊥AE，但平面 ADA₁ 的法向量 (0,1,0) 与平面 ACC₁A₁ 的法向量 (√3,−1,0) 不垂直，题设结论不成立；故题设的“E 在 A₁C₁ 上”应取内点。按内点解得 t=1/4、答案唯一。",
+  "fingerprint": "64ad3d0231d776c3fa582f5a73c2a5f858825d94d970ad5a5c7e905e7fb9e8b2",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-hunan-science",
+  "question_id": "gk-2009-hunan-science-q18",
+  "resume_action": "取得原卷作答说明或勘误，确认 E 为内点；在此之前按内点求解并在解析中标明端点退化。",
+  "source_id": "src-ff630e7c67a0cd90fe7009c1a2ee69641ef7462312fcb50d1503a607444f2d9a",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

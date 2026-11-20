@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 湖南卷（理科）：phase6-b69 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2009-hunan-science`，21 个题号（选择 1—8、填空 9—15、解答 16—21）；固定来源 `src-ff630e7c67a0cd90fe7009c1a2ee69641ef7462312fcb50d1503a607444f2d9a`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009湖南理.pdf`，SHA-256 `0237bd2509e6645937e3473eabb63dba69098024fb6f451cb44ef8ac0e3165c1`，524,542 bytes，2 页 A3 横向，印面页码 527、528；页眉「2009 普通高等学校招生考试（湖南卷理）」。
+- 转录口径：PDF 文字层可读度一般，只作定位；分数、根号、上下标、选项与三幅图均按 600 dpi 原页逐题复核（第 2、16 题的向量记号与第 4 题选项另放大确认）。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—8、填空题 9—15、解答题 16—21。
+- 答案（独立推导，等级 D，非官方）：1D 2A 3D 4B 5C 6B 7C 8D；9 $12$；10 $8$；11 $2\sqrt2$；12 $\frac{\sqrt6}{2}$；13 $40$；14 (1) $12$、(2) $3$；15 $\frac{10}{3}$、$\frac{(n+1)(n+2)}6$；16 $A=30^\circ$，$(B,C)=(120^\circ,30^\circ)$ 或 $(30^\circ,120^\circ)$；17 (1) $\frac16$、(2) 分布列 $\frac1{27},\frac29,\frac49,\frac8{27}$、$E\xi=2$；18 (1) 证明、(2) $\frac{\sqrt{10}}5$；19 (1) $y=m\sqrt x+\frac{256m}{x}+2m-256$（$x>0$）、(2) $9$ 个；20 (1) $\frac{x^2}{36}+\frac{y^2}{27}=1$（$x\geqslant2$）或 $y^2=12x$（$0\leqslant x<2$）、(2) $\frac{100}{11}$；21 (1) 是、(2) ②$\Rightarrow$④ 为真、(3) 证明。
+- 逐题复核要点：第 7 题逐棱解 $y^2+z^2=(x-1)^2+(y-1)^2$，合并重复端点后为 $D$、$B_1$ 及 $A_1D_1$、$BC$ 的中点共 4 点。第 12 题焦点处半角 30°，$b/c=1/\sqrt3$、$c=\sqrt3b$，$e=\sqrt6/2$；端点处内角必为钝角，已排除另一读法。第 15 题格点值 $(ia+jb+kc)/n$，$\sum i=n(n+1)(n+2)/6$，得 $f(n)=(n+1)(n+2)/6$，$f(3)=10/3$。第 18 题以 $A$ 为原点建系，$E(1/4,\sqrt3/4,\sqrt2)$，$\overrightarrow{DE}$ 平行于平面 $ACC_1A_1$ 的法向量，$\sin\theta=\sqrt{10}/5$。第 19 题 $n=m/x-1$，$y'=0$ 得 $x=64$、$n=9$，并用 $n=8,10$ 两个相邻整数情形回验 $y\approx8725,8722>8704$。第 20 题两段轨迹在 $A(2,\pm2\sqrt6)$ 相接；椭圆弦长 $9+9/(3+4k^2)$ 在 $k^2=24$ 处为 $100/11$，混合分支令 $u=\sqrt{1+k^2}$ 化为 $3u(14u^2+3u-5)/((4u^2-1)(u+1))$，再证 $100(4u^2-1)(u+1)-33u(14u^2+3u-5)=(5-u)(62u^2+9u-20)\geqslant0$，故全局最大值为 $100/11$。第 21 题等比级数部分和 $<|1-q|/(1-|q|)$；③$\Rightarrow$① 故 ②$\Rightarrow$④ 真，另三条以 $x_n=1$、$2^{1-n}$、$(-1)^n$ 反例；乘积用 $|a_n|\leqslant|a_1|+M_a$、$|b_n|\leqslant|b_1|+M_b$ 控制。
+- 图稿 3 张（Q4 两条曲线、Q15 $n=2$ 与 $n=3$ 两幅分割图合并为一幅、Q18 正三棱柱），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。Q4 的 $C_1$、$C_2$ 标注下移/上移避开曲线；Q15 右图整体右移 1 cm，消除「C B」相碰；Q18 的 $D$ 标注下移 9pt、$E$ 标注左移，均不再压棱线。
+- 源缺陷（照录并登记）：第 4 题选项（A）（B）把 $\lambda_2$ 印成 $\lambda$（`ISSUE-1511`）；第 5 题「种数位」应为「种数为」（`ISSUE-1512`）；第 12 题「为原点的四边形」应为「为顶点的四边形」（`ISSUE-1513`）。第 18 题若取端点 $E=A_1$，仍有 $DE\perp AE$，但平面 $ADA_1$ 不与 $ACC_1A_1$ 垂直，题设结论不成立，故按「$E$ 在 $A_1C_1$ 上」通常指内点的约定取内点（`ISSUE-1514`）。四条均为 `transcription-ambiguous`、`non_blocking`，题面照录、按更正后语义读法唯一，并写入两版说明。
+- 自查补正：首轮视觉审查发现第 6 题把两射线与圆的交点误写为 $(2,1)$、$(2,-1)$（半径应为 2），改为 $(4\sqrt5/5,2\sqrt5/5)$ 与 $(3\sqrt{10}/5,-\sqrt{10}/5)$，圆心角改为 $\arctan\frac12+\arctan\frac13=\frac\pi4$；第 19 题原用 $x=49,81$ 检验，但 $x$ 必须使 $n$ 为整数，改为 $n=8,10$ 两个相邻情形；第 20 题原以四个数值点说明混合分支，改为 $u=\sqrt{1+k^2}$ 的解析不等式证明；第 21 题前加 `question-needspace: 0.5`，消除试题版/解析版第 5 页仅剩题尾的孤页；第 18 题端点退化说明由错误的「$AE=0$」改为「平面 $ADA_1$ 不垂直于 $ACC_1A_1$」。
+- 验收：四版 5/29/7/23 页（共 64 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 64 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b69.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **562 一致**；`manifest.csv` 775 行；`source_manifest.py validate`、`issues.py validate` 通过（EXIT 0）；`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过。
+- 下一步：继续下一套 2009 卷（余湖南理已收官；2009 只剩福建文理、重庆文理、陕西文理 6 套未绑定，另有 11 套 blocked）；`source-manifest.json` 仍有未绑定 `paper_id` 的来源。
+
 ### 2009 湖南卷（文科）：phase6-b68 新卷转录、四版构建与视觉审查收口（2026-11-20；`closed`）
 
 - 对象：`gk-2009-hunan-arts`，21 个题号（选择 1—8、填空 9—15、解答 16—21）；固定来源 `src-8f952daa9c063386e369ff0322811171b3b900a0560749c263440acd3d2ad297`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009湖南文.pdf`，SHA-256 `db41a34b5d57a8db3f2ee49872e3dbc1e290c2e7390fc96cf4e084b5a679e3eb`，510,869 bytes，2 页 A3 横向，印面页码 529、530；页眉「2009 普通高等学校招生考试（湖南卷文）」。
