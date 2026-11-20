@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 福建卷（文科）：phase6-b74 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2009-fujian-arts`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-2d82234384a5376adac918af438e846b84f8a5ca90f8b48a9441e90414e2dcb8`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009福建文.pdf`，SHA-256 `f0a5111a6f86f4d4e8618c5c2cd0ecfd678a590b36ecbd033bb63b189700a0bc`，529,475 bytes，2 页 A3 横向，印面页码 517、518；页眉「2009 普通高等学校招生考试（福建卷文）」。
+- 转录口径：PDF 文字层可读度一般，只作定位；分数、根号、上下标、选项与五幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1B 2A 3C 4D 5C 6D 7B 8C 9D 10A 11A 12A；13 $-1$；14 $\frac23$；15 $(-\infty,0)$；16 $7$；17 (1) $a_n=2^n$、(2) $b_n=12n-28$、$S_n=6n^2-22n$；18 (1) $8$ 种、(2) $\frac38$；19 (1) $\varphi=\frac\pi4$、(2) $f(x)=\sin(3x+\frac\pi4)$、$m_{\min}=\frac\pi{12}$；20 (1) 证明、(2) $8+2\sqrt3$；21 (1) $b=2a-1$、(2) 单调区间分类、(3) 证明；22 (1) $\frac{x^2}4+y^2=1$、(2) $\frac83$、(3) 存在 $2$ 个。
+- 逐题复核要点：第 3 题 $(10,40)$ 频数 $13+24+15=52$；第 6 题 $S$ 依次 $2\to-1\to1/2\to2$，$n=4$ 输出；第 7 题 $6\sin C=3\sqrt3$，锐角取 $60^\circ$；第 8 题 $f$ 在 $(-2,0)$ 递减，只有 C 的 $x^3+1$ 递增；第 9 题三顶点 $(0,1),(1,0),(1,a+1)$，面积 $(a+1)/2=2$ 得 $a=3$；第 10 题 $\alpha\parallel\beta$ 可推出（A），反之不成立；第 11 题 $g$ 零点在 $(0,1/2)$，$4x-1$ 零点 $1/4$；第 12 题 $|b\cdot c|$ 等于以 $a,b$ 为邻边的平行四边形面积；第 16 题斐波那契模 3 周期 8，前 30 项共 7 次；第 20 题 $BD=2\sqrt3$、$CD\perp BD$，折叠后 $ED\perp$ 平面 $ABD$，侧面积 $4+4+2\sqrt3$；第 21 题 $f'=(x+1)(x+2a-1)$，$a=-1$ 时第三交点 $(1,-11/3)$ 在线段 $MN$ 上；第 22 题 $|MN|=2(5-3\cos\theta)/(3\sin\theta)$ 最小 $8/3$（$\cos\theta=3/5$），$T$ 满足 $x+y=3/2$ 与椭圆两交、$x+y=5/2$ 无交，故 2 个。
+- 图稿 5 张（Q5 四个俯视图、Q6 程序框图、Q8 偶函数图象、Q20 折叠三棱锥、Q22 椭圆），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。
+- 源缺陷（照录并登记）：第 3 题分组表头原页印作 $(20,20]$，与前后组 $(0,10]$、$(20,30)$ 及频数和 100 矛盾，按 $(10,20]$ 转录，登记 `ISSUE-1517`（`transcription-ambiguous`、`non_blocking`）。
+- 验收：四版 6/22/8/18 页（共 54 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 54 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b74.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **567 一致**；`manifest.csv` 775 行。
+- 下一步：2009 年仅剩福建理科 1 套未绑定；完成后转入 2010—2014 未绑定来源。
+
 ### 2009 重庆卷（理科）：phase6-b73 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2009-chongqing-science`，21 个题号（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-c7797a8bb76d481c356c86b2d05c5c60c8a68abda323b8d6d90747f0fcf54f3b`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009重庆理.pdf`，SHA-256 `6a815fa472e380a3f1143e8cdd93712e142309acb7a95176783499406a8e15f1`，511,102 bytes，2 页 A3 横向，印面页码 503、504；页眉「2009 普通高等学校招生考试（重庆卷理）」。

@@ -25510,3 +25510,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1517
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1 页第 3 题分组表头印作 (0,10]、(20,20]、(20,30)、(30,40)…，其中第二组 (20,20] 为空区间，与前后组不衔接；按频数和 100 及题目所求 (10,40) 判断应为 (10,20]。本库按 (10,20] 转录，频率 52/100=0.52。",
+  "fingerprint": "0db99d11cdf8d59bfca32f9dac15d6adf8c2d0a85cef379e7935658c2ebe5087",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-fujian-arts",
+  "question_id": "gk-2009-fujian-arts-q03",
+  "resume_action": "取得同版勘误或清晰原页后核定第二组下限；在此之前按 (10,20] 理解并在题面出处登记。",
+  "source_id": "src-2d82234384a5376adac918af438e846b84f8a5ca90f8b48a9441e90414e2dcb8",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

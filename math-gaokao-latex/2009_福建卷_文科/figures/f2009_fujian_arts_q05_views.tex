@@ -1,0 +1,18 @@
+% 2009 年福建卷文科第 5 题：四个俯视图选项（A）—（D）。
+% 来源 PDF：普通高考/2009/2009福建文.pdf，SHA-256 f0a5111a6f86f4d4e8618c5c2cd0ecfd678a590b36ecbd033bb63b189700a0bc。
+% 原页：第 1 页（A3 三栏）第 1 栏下部，书页码 517。
+% 重绘依据：按原页四幅小图重绘；A 正方形、B 圆、C 等腰直角三角形、D 四分之一圆。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.4pt, font=\small}]
+  % A：正方形
+  \draw (0,0) rectangle (1.2,1.2);
+  \node[below] at (0.6,-0.15) {（A）};
+  % B：圆
+  \draw (2.6,0.6) circle (0.6);
+  \node[below] at (2.6,-0.15) {（B）};
+  % C：等腰直角三角形
+  \draw (4.0,0) -- (5.2,0) -- (4.0,1.2) -- cycle;
+  \node[below] at (4.6,-0.15) {（C）};
+  % D：四分之一圆
+  \draw (6.2,0) -- (7.4,0) arc (0:90:1.2) -- cycle;
+  \node[below] at (6.8,-0.15) {（D）};
+\end{tikzpicture}
