@@ -1,0 +1,47 @@
+% 2009 年湖北卷文科第 20 题：抛物线与准线。
+% 来源 PDF：普通高考/2009/2009湖北文.pdf，SHA-256 f60ba7a5a2fef3449fba9474fa973c616aa52a15926b3a97f0dda6b909f4c861。
+% 原页：第 2 页第 2 栏中部，书页码 526。
+% 重绘依据：抛物线 y^2=2px（取 p=1 作图），焦点 F，准线 l 在 y 轴左侧；
+%   过 F 的直线交抛物线于 M（上）、N（下），M1、N1 为 M、N 在 l 上的垂足；
+%   M1M、N1N 水平，FM1、FN1 与 MN 均按原页画出。
+%   标注位置按几何避让：M1、N1 左移让开准线与水平垂线段；O、N 置于准线与
+%   y 轴之间的空档（O 在 N1N 之上，N 在 N1N 之下、直线 MN 之上）；F 下移让开直线 MN。
+\begin{tikzpicture}[x=1.3cm, y=1.3cm, semithick,
+  every node/.style={inner sep=1.2pt, font=\small}]
+
+  % 坐标轴
+  \draw[-{Stealth}] (-1.25,0) -- (3.95,0) node[right, inner sep=3pt] {$x$};
+  \draw[-{Stealth}] (0,-2.15) -- (0,2.95) node[above, inner sep=3pt] {$y$};
+
+  % 准线
+  \draw (-0.5,-2.15) -- (-0.5,2.85);
+  \node[left=2pt] at (-0.5,2.55) {$l$};
+
+  % 抛物线 y^2=2x 的上下两支
+  \draw[domain=0:3.55, samples=120, smooth]
+    plot (\x,{sqrt(2*\x)});
+  \draw[domain=0:3.55, samples=120, smooth]
+    plot (\x,{-sqrt(2*\x)});
+
+  % 过焦点 F 的直线（斜率 1.6），交抛物线于 M、N
+  \coordinate (F)  at (0.5,0);
+  \coordinate (M)  at (1.627,1.803);
+  \coordinate (N)  at (0.154,-0.554);
+  \coordinate (M1) at (-0.5,1.803);
+  \coordinate (N1) at (-0.5,-0.554);
+  \draw (-0.12,-0.99) -- (2.55,3.28);
+
+  % 垂线段与两腰
+  \draw (M1) -- (M);
+  \draw (N1) -- (N);
+  \draw (F) -- (M1);
+  \draw (F) -- (N1);
+
+  % 标签
+  \node[left=4pt] at (M1) {$M_1$};
+  \node[below right=3pt] at (M) {$M$};
+  \node[left=4pt] at (N1) {$N_1$};
+  \node at (-0.25,-0.78) {$N$};
+  \node at (-0.25,-0.20) {$O$};
+  \node at (0.62,-0.18) {$F$};
+\end{tikzpicture}

@@ -1,0 +1,73 @@
+% 2009 年湖北卷文科第 10 题：三角形数与正方形数的点阵图（图 1、图 2）。
+% 来源 PDF：普通高考/2009/2009湖北文.pdf，SHA-256 f60ba7a5a2fef3449fba9474fa973c616aa52a15926b3a97f0dda6b909f4c861。
+% 原页：第 1 页第 2 栏中部，书页码 525。
+% 重绘依据：按原页逐点重绘，点数与排列照原页。
+%   图 1：三角形数 1、3、6、10，自下而上每行比下一行少一点且逐行居中（1+2+3+4 点）。
+%   图 2：正方形数 1、4、9、16，为 1×1、2×2、3×3、4×4 的方阵，各组底边对齐。
+%   两组末均以省略号表示后续。
+\begin{tikzpicture}[x=0.46cm, y=0.46cm, semithick,
+  every node/.style={inner sep=1pt, font=\small}]
+
+  % ---------- 图 1：三角形数 ----------
+  % 1
+  \fill (0,0) circle (2.1pt);
+  % 3
+  \fill (2.4,0) circle (2.1pt);
+  \fill (3.4,0) circle (2.1pt);
+  \fill (2.9,1) circle (2.1pt);
+  % 6
+  \fill (5.8,0) circle (2.1pt);
+  \fill (6.8,0) circle (2.1pt);
+  \fill (7.8,0) circle (2.1pt);
+  \fill (6.3,1) circle (2.1pt);
+  \fill (7.3,1) circle (2.1pt);
+  \fill (6.8,2) circle (2.1pt);
+  % 10
+  \fill (10.2,0) circle (2.1pt);
+  \fill (11.2,0) circle (2.1pt);
+  \fill (12.2,0) circle (2.1pt);
+  \fill (13.2,0) circle (2.1pt);
+  \fill (10.7,1) circle (2.1pt);
+  \fill (11.7,1) circle (2.1pt);
+  \fill (12.7,1) circle (2.1pt);
+  \fill (11.2,2) circle (2.1pt);
+  \fill (12.2,2) circle (2.1pt);
+  \fill (11.7,3) circle (2.1pt);
+
+  \node at (14.7,1.4) {$\cdots$};
+  \node[below] at (0,-0.6) {$1$};
+  \node[below] at (2.9,-0.6) {$3$};
+  \node[below] at (6.8,-0.6) {$6$};
+  \node[below] at (11.7,-0.6) {$10$};
+  \node at (7.3,-2.55) {图 1};
+
+  % ---------- 图 2：正方形数 ----------
+  \begin{scope}[yshift=-3.5cm]
+    % 1
+    \fill (0,0) circle (2.1pt);
+    % 4
+    \fill (2.4,0) circle (2.1pt);
+    \fill (3.4,0) circle (2.1pt);
+    \fill (2.4,1) circle (2.1pt);
+    \fill (3.4,1) circle (2.1pt);
+    % 9
+    \foreach \i in {5.8,6.8,7.8} {
+      \foreach \j in {0,1,2} {
+        \fill (\i,\j) circle (2.1pt);
+      }
+    }
+    % 16
+    \foreach \i in {10.2,11.2,12.2,13.2} {
+      \foreach \j in {0,1,2,3} {
+        \fill (\i,\j) circle (2.1pt);
+      }
+    }
+
+    \node at (14.7,1.4) {$\cdots$};
+    \node[below] at (0,-0.6) {$1$};
+    \node[below] at (2.9,-0.6) {$4$};
+    \node[below] at (6.8,-0.6) {$9$};
+    \node[below] at (11.7,-0.6) {$16$};
+    \node at (7.3,-2.55) {图 2};
+  \end{scope}
+\end{tikzpicture}
