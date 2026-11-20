@@ -1,7 +1,7 @@
 # 试卷目录说明与索引
 
 本仓库的高考数学试卷按「年份_卷别」独立成目录，命名规则与任务书一致；目录根为
-`math-gaokao-latex/`，例如 `math-gaokao-latex/2020_全国Ⅰ卷/`。任务书示例写作
+`math-gaokao-latex/`，例如 `math-gaokao-latex/2020_全国Ⅰ卷_理科/`。任务书示例写作
 `docs/exams/<年份>_<卷别>/`；本工程在阶段 0 已把首批目录固定在 `math-gaokao-latex/`
 下，后续 500 余卷沿同一约定增量登记。整体搬迁会使全部 build/review 回执中的仓库相对
 路径失效，故保留现根目录，并用本页与 `math-gaokao-latex/index.json` 提供等价索引。
