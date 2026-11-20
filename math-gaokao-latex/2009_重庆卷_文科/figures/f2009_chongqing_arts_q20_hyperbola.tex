@@ -1,0 +1,32 @@
+% 2009 年重庆卷文科第 20 题：双曲线右支、圆 x^2+(y-√5)^2=1 与点 A、B、M。
+% 来源 PDF：普通高考/2009/2009重庆文.pdf，SHA-256 c4d433586be8144d34c8ee2d4074c6308f53ffe84aa3a8a7ea28bb6f0cf86a39。
+% 原页：第 2 页（A3 三栏）第 2 栏上部，书页码 506。
+% 重绘依据：按题设双曲线 x^2-y^2/4=1 与圆 x^2+(y-√5)^2=1 等比绘制；
+%   A(-√5,0) 为左焦点，M 取右支上使 |MA|+|MB| 最小的点，B 取圆上相应点。
+\begin{tikzpicture}[semithick, x=1.2cm, y=1.2cm, every node/.style={inner sep=1.5pt, font=\small}]
+  % 坐标轴
+  \draw[-stealth] (-3.0,0) -- (3.0,0) node[below] {$x$};
+  \draw[-stealth] (0,-0.5) -- (0,4.0) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 双曲线右支
+  \draw[domain=-2.3:2.3, samples=120, thick] plot ({sqrt(1+(\x*\x)/4)},{\x});
+
+  % 圆
+  \draw[thick] (0,2.236) circle (1);
+
+  % 点与线段
+  \coordinate (A) at (-2.236,0);
+  \coordinate (B) at (0.707,1.529);
+  \coordinate (M) at (1.140,1.096);
+  \fill (A) circle (1.4pt);
+  \fill (B) circle (1.4pt);
+  \fill (M) circle (1.4pt);
+  \draw (A) -- (M);
+  \draw[dashed] (M) -- (B);
+
+  % 标注
+  \node[below left] at (A) {$A$};
+  \node[above left] at (B) {$B$};
+  \node[right] at (M) {$M$};
+\end{tikzpicture}

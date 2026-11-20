@@ -25476,3 +25476,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1515
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 16 题第（1）问原页作“求 ω 的最小正周期”，而 ω 是正实数、本身没有周期；题面同时给出 f(x) 的最小正周期为 2π/3。按题面唯一可读的含义理解为“求 ω 及函数的最小正周期”，ω=3/2、最小正周期 2π/3，两个值均由题面唯一确定，答案不受影响。",
+  "fingerprint": "31c7fa799667cc09ed1bdd942f7565a9cad22a175d1abea6cf9bdd0f1209f513",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-chongqing-arts",
+  "question_id": "gk-2009-chongqing-arts-q16",
+  "resume_action": "取得同版勘误或官方答案后核定该问字面；在此之前照录原页并按“求 ω 与最小正周期”作答。",
+  "source_id": "src-71e5b05130d88e68742fa61dbe463ee21c94d2ca268b697be509e5f5fb38b47c",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
