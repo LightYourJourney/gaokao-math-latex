@@ -3444,6 +3444,14 @@
         "gk-2009-shaanxi-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b73",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-chongqing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3453,7 +3461,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "1793f898-2d80-47d7-911f-664a2576a2b6",
+  "last_transaction_id": "655cef23-dd47-46cf-860b-0dab7a305be2",
   "papers": [
     {
       "blocked_from": null,
@@ -41298,9 +41306,72 @@
       "title": "2009 年·普通高等学校招生考试·陕西卷·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_重庆卷_理科/figures/f2009_chongqing_sci_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_重庆卷_理科/figures/f2009_chongqing_sci_q20_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_chongqing_science",
+        "id": "gk-2009-chongqing-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 503、504；页眉「2009 普通高等学校招生考试（重庆卷理）」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。重庆卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（非官方）。文字层可读度一般、只作定位，分数、根号、上下标、选项与两幅图均按 600 dpi 原页逐项复核。第 1 题圆心到 x−y+1=0 距离 1/√2<1 且原点不在线上；第 2 题 z=−1+2i，5i/z=2−i；第 3 题通项 C(8,k)2^k x^{16−3k}，k=4，系数 1120；第 4 题 a·b=3，cosθ=1/2；第 5 题 |x+3|−|x−1| 最大 4，a²−3a−4≥0；第 6 题三类 2,1,1 分配共 720，概率 48/91；第 7 题 m·n=√3 sinC，1+cos(A+B)=1−cosC，得 C=2π/3；第 8 题 2x²/(x+1)=2x−2+2/(x+1)，a=2、b=−4、a−b=6；第 9 题两平面法向量夹角 50°，方向方程给出 3 条直线；第 10 题周期 4，[−1,3] 恒有 3 解，下一周期半圆支需 2 解，判别式给 m>√15/3，再下一周期开始出解于 m=8/3，故 (√15/3,8/3)；第 11 题 A=(−3,3)、B=(0,∞)，交集 (0,3)；第 12 题奇函数 f(x)+f(−x)=−1+2a=0，a=1/2；第 13 题 3·C(4,2)·2=36；第 14 题 b_{n+1}=−2b_n，b_n=(−1)^{n−1}2^{n+1}；第 15 题正弦定理给 PF2/PF1=1/e，结合右支 r1−r2=2a 与焦半径比范围得 e∈(1,1+√2]；第 16 题 f=√3 sin(πx/4−π/3)，T=8，g(x)=f(2−x) 在 [0,4/3] 最大 √3/2；第 17 题各活 1 株 (4/9)(1/2)=2/9，ξ 分布列 1/36、1/6、13/36、1/3、1/9，Eξ=7/3；第 18 题 b=0、2a=2 得 a=1，g′=e^x((x−1)²+k−1)/(x²+k)²，按 k≥1 与 0<k<1 分类；第 19 题建系得 CD=√6、BC=2，平面 BCS:x+√2z−√6=0，距离 √2，二面角 π/6；第 20 题原页准线印 x=4√3/3，但与 C(0,±√3)、e=√3/2、公开答案最大值 4 矛盾，按 y=4√3/3（椭圆 x²+y²/4=1）解，(1) |MC||MD|=4−3sin²θ 最大 4，(2) 设 M、N、Q、B、P 坐标，联立椭圆与 QA·BA=0 消元得 (x−1/2)²+y²=1；第 21 题 q=d，q²+q=12 得 q=d=3、a1=2，前段 an=3n−1，后段 an=2·3^{2010−n}；第二问由 an=a_{n−1}a_{n+1} 得周期 6 且六项积 1，m=6k 时用均值不等式证严格大于 m。源缺陷：第 20 题准线字母印作 x，按上下文与公开答案应为 y，登记 ISSUE-1516（non_blocking，按更正语义读法唯一）。原页共 2 幅图：第 19 题四棱锥、第 20 题椭圆与单位圆；其余题无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "重庆卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "重庆理科"
+      },
+      "issue_ids": [
+        "ISSUE-1516"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-chongqing-science",
+      "production_state": "complete",
+      "project_dir": "2009_重庆卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_重庆理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_重庆理_含解析.md",
+        "questions": "2009/2009_数学真题_重庆理_试题.md",
+        "solution_body": "2009/2009_数学真题_重庆理_解析正文.md"
+      },
+      "source_ids": [
+        "src-c7797a8bb76d481c356c86b2d05c5c60c8a68abda323b8d6d90747f0fcf54f3b"
+      ],
+      "title": "2009 年·普通高等学校招生考试·重庆卷·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 10278,
+  "revision": 10286,
   "schema_version": 1,
   "sources": [
     {
@@ -51905,8 +51976,8 @@
       "exam_type": "regular",
       "git_blob_oid": "12c4e7a9ce499ecc76b72d67a05eac14a02703aa",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-chongqing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009重庆理.pdf",
       "regions": [],
       "source_id": "src-c7797a8bb76d481c356c86b2d05c5c60c8a68abda323b8d6d90747f0fcf54f3b",

@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 重庆卷（理科）：phase6-b73 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2009-chongqing-science`，21 个题号（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-c7797a8bb76d481c356c86b2d05c5c60c8a68abda323b8d6d90747f0fcf54f3b`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009重庆理.pdf`，SHA-256 `6a815fa472e380a3f1143e8cdd93712e142309acb7a95176783499406a8e15f1`，511,102 bytes，2 页 A3 横向，印面页码 503、504；页眉「2009 普通高等学校招生考试（重庆卷理）」。
+- 转录口径：PDF 文字层可读度一般，只作定位；分数、根号、上下标、选项与两幅图均按 600 dpi 原页逐题复核（第 10 题分段函数、第 20 题准线、第 21 题 q=d 另放大确认）。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—15、解答题 16—21。
+- 答案（独立推导，等级 D，非官方）：1B 2A 3D 4C 5A 6C 7C 8D 9B 10A；11 $(0,3)$；12 $\frac12$；13 $36$；14 $(-1)^{n-1}2^{n+1}$；15 $(1,1+\sqrt2]$；16 (1) $T=8$、(2) $\frac{\sqrt3}2$；17 (1) $\frac29$、(2) 分布列 $\frac1{36},\frac16,\frac{13}{36},\frac13,\frac19$、$E\xi=\frac73$；18 (1) $a=1,b=0$、(2) 按 $k\geqslant1$ 与 $0<k<1$ 分类；19 (1) $\sqrt2$、(2) $\frac\pi6$；20 (1) $4$、(2) $\left(x-\frac12\right)^2+y^2=1$；21 (1) 前段 $a_n=3n-1$、后段 $a_n=2\cdot3^{2010-n}$、(2) 证明。
+- 逐题复核要点：第 7 题 $\boldsymbol m\cdot\boldsymbol n=\sqrt3\sin C=1-\cos C$，得 $C=2\pi/3$；第 8 题 $2x^2/(x+1)=2x-2+2/(x+1)$，$a=2,b=-4$；第 9 题两平面法向量夹角 $50^\circ$，方向方程合并后共 3 条；第 10 题周期 4，$[-1,3]$ 恒有 3 解，下一周期半圆支判别式给 $m>\sqrt{15}/3$，再下一周期开始出解于 $m=8/3$；第 15 题正弦定理给 $PF_2/PF_1=1/e$，结合右支 $r_1-r_2=2a$ 与焦半径比范围得 $(1,1+\sqrt2]$；第 19 题建系得 $CD=\sqrt6$、$BC=2$，平面 $BCS:x+\sqrt2z-\sqrt6=0$，距离 $\sqrt2$，二面角 $\pi/6$；第 20 题按更正后的 $y=4\sqrt3/3$ 解，$|MC||MD|=4-3\sin^2\theta\leqslant4$，轨迹为圆 $\left(x-\frac12\right)^2+y^2=1$；第 21 题 $q=d$、$q^2+q=12$ 得 $q=d=3$、$a_1=2$，第二问由 $a_n=a_{n-1}a_{n+1}$ 得周期 6、全积为 1，$m=6k$ 时用均值不等式证严格大于 $m$。
+- 图稿 2 张（Q19 四棱锥、Q20 椭圆与单位圆），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；Q19 按 $D(0,0,0)$、$C(\sqrt6,0,0)$、$A(0,1,0)$、$B(\sqrt6,2,0)$、$S(\sqrt6/3,0,2/\sqrt3)$ 投影；Q20 按更正后的 $x^2+y^2/4=1$ 绘制。
+- 源缺陷（照录并登记）：第 20 题准线原页印作 $x=\frac{4\sqrt3}3$，但与 $C(0,-\sqrt3)$、$D(0,\sqrt3)$、$e=\frac{\sqrt3}2$、$a=2$ 及公开答案册的 $|MC|\cdot|MD|$ 最大值 $4$ 矛盾；按唯一自洽的 $y=\frac{4\sqrt3}3$ 求解，登记 `ISSUE-1516`（`transcription-ambiguous`，`non_blocking`）。第 21 题公比原页作 $q=d$，按此得 $q=d=3$。
+- 验收：四版 5/23/7/16 页（共 51 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 51 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b73.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **566 一致**；`manifest.csv` 775 行。
+- 下一步：2009 年只剩福建文理 2 套未绑定；继续按 phase6 流程处理，之后转入 2010—2014 未绑定来源。
+
 ### 2009 陕西卷（理科）：phase6-b72 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2009-shaanxi-science`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-b2093267306c9299bc77da4e4a8833a5fc83858dead40d4c7ac2f0d80d2c1c19`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009陕西理.pdf`，SHA-256 `2de883f74aaf8e5b4135abcc17354b49dc5366a24cb7ee3ce27551a406de74c2`，530,634 bytes，2 页 A3 横向，印面页码 549、550；页眉「2009 普通高等学校招生考试（陕西卷理）」。

@@ -25493,3 +25493,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1516
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 2 页第 20 题把椭圆准线印作 x=4√3/3，但同题给出的 C(0,−√3)、D(0,√3) 与 e=√3/2、a=2 只有在椭圆 x²/1+y²/4=1、准线 y=4√3/3 时才自洽；公开答案册给出的 |MC|·|MD| 最大值为 4，也与 y 版本一致（x 版本实算为 7）。题面照录原页 x，解题按唯一自洽的 y 理解。",
+  "fingerprint": "6a950b5b3c0b70ab8ca032abda3dc749c69f181d714044a37e1731dbe7332cf8",
+  "impact": "non_blocking",
+  "paper_id": "gk-2009-chongqing-science",
+  "question_id": "gk-2009-chongqing-science-q20",
+  "resume_action": "取得同版勘误或官方答案册原文后核定准线字母；在此之前保留原页 x 字面，并在题面说明与解析中按 y=4√3/3 求解。",
+  "source_id": "src-c7797a8bb76d481c356c86b2d05c5c60c8a68abda323b8d6d90747f0fcf54f3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
