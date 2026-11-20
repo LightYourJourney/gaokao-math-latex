@@ -1,0 +1,23 @@
+% 2010 年上海卷理科第 7 题：世博入园人数统计程序框图。
+% 来源 PDF：普通高考/2010/2010上海文.pdf，SHA-256 5e81bdb27659512a50968275bf502ee666e2ac3f25f9fcaa1b166576fbe9cf62。
+% 原页：第 1 页（A3 三栏）第 1 栏下部，书页码 627。
+% 重绘依据：T←9、S←0；输出 T,S；判断 T≤19，是则 T←T+1、输入 a、S←S+a 后回到输出，否则结束。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=2pt, font=\small}, >=stealth]
+  \node[draw,rounded corners] (start) at (0,0) {开始};
+  \node[draw,rectangle] (init) at (0,-1.1) {$T\leftarrow9,\ S\leftarrow0$};
+  \node[draw,rectangle] (out) at (0,-2.2) {输出 $T,S$};
+  \node[draw,diamond,aspect=2] (test) at (0,-3.5) {$T\leqslant19$};
+  \node[draw,rectangle] (inc) at (0,-4.7) {$T\leftarrow T+1$};
+  \node[draw,rectangle] (inp) at (0,-5.7) {输入 $a$};
+  \node[draw,rectangle] (add) at (0,-6.7) {$S\leftarrow S+a$};
+  \node[draw,rounded corners] (end) at (3.2,-3.5) {结束};
+
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (out);
+  \draw[->] (out) -- (test);
+  \draw[->] (test) -- node[right] {是} (inc);
+  \draw[->] (inc) -- (inp);
+  \draw[->] (inp) -- (add);
+  \draw[->] (add.east) -- (2.0,-6.7) -- (2.0,-2.2) -- (out.east);
+  \draw[->] (test) -- node[above] {否} (end);
+\end{tikzpicture}
