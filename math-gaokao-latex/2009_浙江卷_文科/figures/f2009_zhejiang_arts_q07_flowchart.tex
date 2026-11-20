@@ -1,0 +1,39 @@
+% 2009 年浙江卷文科第 7 题：程序框图。
+%   开始 → k=0 → S=0 → 判断 S<100?
+%   是 → S=S+2^S → k=k+1 → 回到判断；否 → 输出 k → 结束。
+% 来源 PDF：普通高考/2009/2009浙江文.pdf，SHA-256 8e609d19459cb4234a4d6dd9db5be5c8cc9af2169c00d4337b3988089cfb0709。
+% 原页：第 1 页（A3 三栏）第 1 栏下部，书页码 567。
+% 重绘依据：原页方框内为 S=S+2^S（指数为 S，非 k，已按 600 dpi 逐字复核），
+%   判断框菱形，输出用平行四边形，「是」向下、「否」向右。
+\begin{tikzpicture}[scale=1.0, semithick,
+  every node/.style={inner sep=2pt, font=\small},
+  box/.style={draw, minimum width=2.35cm, minimum height=0.62cm, align=center},
+  term/.style={draw, rounded corners=6pt, minimum width=1.9cm,
+    minimum height=0.60cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=70,
+    trapezium right angle=110, minimum width=2.0cm, minimum height=0.62cm,
+    align=center},
+  dec/.style={draw, diamond, aspect=2.6, minimum width=2.5cm,
+    minimum height=1.05cm, align=center, inner sep=1pt},
+  arr/.style={->, >=stealth}]
+
+  \node[term] (start) at (0,8.3) {开始};
+  \node[box] (k0) at (0,7.30) {$k=0$};
+  \node[box] (s0) at (0,6.25) {$S=0$};
+  \node[dec] (test) at (0,4.90) {$S<100?$};
+  \node[box] (add) at (0,3.45) {$S=S+2^{S}$};
+  \node[box] (inc) at (0,2.35) {$k=k+1$};
+  \node[para] (out) at (4.6,4.90) {输出 $k$};
+  \node[term] (end) at (4.6,3.85) {结束};
+
+  \draw[arr] (start) -- (k0);
+  \draw[arr] (k0) -- (s0);
+  \draw[arr] (s0) -- (test);
+  \draw[arr] (test) -- node[left] {是} (add);
+  \draw[arr] (add) -- (inc);
+  % 回到判断
+  \draw[arr] (inc.west) -- ++(-1.55,0) |- (test.west);
+  % 否分支
+  \draw[arr] (test.east) -- node[above] {否} (out.west);
+  \draw[arr] (out) -- (end);
+\end{tikzpicture}

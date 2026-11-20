@@ -1,0 +1,85 @@
+% 2009 年浙江卷文科第 10 题：函数 f(x)=1+a\sin(ax) 的四个候选图象（A）—（D）。
+% 来源 PDF：普通高考/2009/2009浙江文.pdf，SHA-256 8e609d19459cb4234a4d6dd9db5be5c8cc9af2169c00d4337b3988089cfb0709。
+% 原页：第 1 页第 2 栏上部，书页码 567。
+% 重绘依据：四幅小图均以虚线标出 y=1、y=2 与 x=\pi、x=2\pi。
+%   （A）最大值约 1.8、最小值约 0.2（即 |a|<1）且周期约 2.4\pi；
+%   （B）最大值约 2.2、最小值约 -0.2（|a|>1），周期约 1.7\pi；
+%   （C）恒为 y=1（a=0）；
+%   （D）最大值约 2.2、最小值约 -0.2，但相邻最大值与最小值相距约 1.1\pi（> \pi），
+%       与 |a|>1 时相距 \pi/|a|<\pi 矛盾，故按原页原样重绘其形状。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.2pt, font=\small}]
+
+  % ================= 面板 (A) =================
+  \begin{scope}[shift={(0,0)}]
+    \draw[-{Stealth}] (0,0) -- (4.75,0) node[right] {$x$};
+    \draw[-{Stealth}] (0,-0.55) -- (0,2.55) node[above] {$y$};
+    \node[below left=1pt] at (0,0) {$O$};
+    \draw[dashed] (0,0.95) -- (4.55,0.95);
+    \draw[dashed] (0,1.90) -- (4.55,1.90);
+    \draw[dashed] (1.99,0) -- (1.99,2.45);
+    \draw[dashed] (3.98,0) -- (3.98,2.45);
+    \node[below] at (1.99,0) {$\pi$};
+    \node[below] at (3.98,0) {$2\pi$};
+    \node[left] at (0,0.95) {$1$};
+    \node[left] at (0,1.90) {$2$};
+    \draw[thick] plot[domain=0:7.0,samples=140]
+      ({0.6335*\x}, {0.95*(1+0.8*sin(0.8*\x r))});
+    \node at (0.55,-0.95) {(A)};
+  \end{scope}
+
+  % ================= 面板 (B) =================
+  \begin{scope}[shift={(6.0,0)}]
+    \draw[-{Stealth}] (0,0) -- (4.75,0) node[right] {$x$};
+    \draw[-{Stealth}] (0,-0.55) -- (0,2.55) node[above] {$y$};
+    \node[below left=1pt] at (0,0) {$O$};
+    \draw[dashed] (0,0.95) -- (4.55,0.95);
+    \draw[dashed] (0,1.90) -- (4.55,1.90);
+    \draw[dashed] (1.99,0) -- (1.99,2.45);
+    \draw[dashed] (3.98,0) -- (3.98,2.45);
+    \node[below] at (1.99,0) {$\pi$};
+    \node[below] at (3.98,0) {$2\pi$};
+    \node[left] at (0,0.95) {$1$};
+    \node[left] at (0,1.90) {$2$};
+    \draw[thick] plot[domain=0:6.35,samples=140]
+      ({0.6335*\x}, {0.95*(1+1.2*sin(1.2*\x r))});
+    \node at (0.55,-0.95) {(B)};
+  \end{scope}
+
+  % ================= 面板 (C) =================
+  \begin{scope}[shift={(0,-4.75)}]
+    \draw[-{Stealth}] (0,0) -- (4.75,0) node[right] {$x$};
+    \draw[-{Stealth}] (0,-0.55) -- (0,2.55) node[above] {$y$};
+    \node[below left=1pt] at (0,0) {$O$};
+    \draw[dashed] (1.99,0) -- (1.99,2.45);
+    \draw[dashed] (3.98,0) -- (3.98,2.45);
+    \node[below] at (1.99,0) {$\pi$};
+    \node[below] at (3.98,0) {$2\pi$};
+    \node[left] at (0,0.95) {$1$};
+    \node[left] at (0,1.90) {$2$};
+    \draw[thick] (0,0.95) -- (4.55,0.95);
+    \node at (0.55,-0.95) {(C)};
+  \end{scope}
+
+  % ================= 面板 (D) =================
+  \begin{scope}[shift={(6.0,-4.75)}]
+    \draw[-{Stealth}] (0,0) -- (4.75,0) node[right] {$x$};
+    \draw[-{Stealth}] (0,-0.55) -- (0,2.55) node[above] {$y$};
+    \node[below left=1pt] at (0,0) {$O$};
+    \draw[dashed] (0,0.95) -- (4.55,0.95);
+    \draw[dashed] (0,1.90) -- (4.55,1.90);
+    \draw[dashed] (1.99,0) -- (1.99,2.45);
+    \draw[dashed] (3.98,0) -- (3.98,2.45);
+    \node[below] at (1.99,0) {$\pi$};
+    \node[below] at (3.98,0) {$2\pi$};
+    \node[left] at (0,0.95) {$1$};
+    \node[left] at (0,1.90) {$2$};
+    % 按原页：峰在 \pi/2 之右约 0.55\pi、谷在约 1.65\pi，两峰谷相距超过 \pi
+    \draw[thick] plot[smooth] coordinates {
+      (0,0.95) (0.30,1.20) (0.60,1.55) (0.85,1.85) (1.09,2.09)
+      (1.35,2.03) (1.65,1.75) (1.95,1.35) (2.20,0.95) (2.50,0.52)
+      (2.85,0.17) (3.10,0.00) (3.31,-0.16) (3.60,-0.12) (3.85,0.08)
+      (3.98,0.24) (4.30,0.75) (4.58,1.33)
+    };
+    \node at (0.55,-0.95) {(D)};
+  \end{scope}
+\end{tikzpicture}

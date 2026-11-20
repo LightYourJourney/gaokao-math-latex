@@ -3380,6 +3380,14 @@
         "gk-2009-zhejiang-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b65",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-zhejiang-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3389,7 +3397,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "1338c333-2655-428b-b739-d575068ebc97",
+  "last_transaction_id": "659debe1-0818-480e-b411-a1f0f6b4d6e7",
   "papers": [
     {
       "blocked_from": null,
@@ -40673,9 +40681,88 @@
       "title": "2009 年·普通高等学校招生考试·浙江卷·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_浙江卷_文科/figures/f2009_zhejiang_arts_q07_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_浙江卷_文科/figures/f2009_zhejiang_arts_q10_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_浙江卷_文科/figures/f2009_zhejiang_arts_q12_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_浙江卷_文科/figures/f2009_zhejiang_arts_q14_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_浙江卷_文科/figures/f2009_zhejiang_arts_q19_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_浙江卷_文科/figures/f2009_zhejiang_arts_q22_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2009_gaokao_zhejiang_arts",
+        "id": "gk-2009-zhejiang-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 567、568；页眉「2009 普通高等学校招生考试（浙江卷文）」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。浙江卷题号紧凑：选择 1—10、填空 11—17、解答 18—22，共 22 题。答案由本库独立推导（非官方）。文字层按栏混排严重，只作定位，分数、根号、上下标、选项均以 600 dpi 原页逐项复核。第 7 题程序框图的方框内为 S=S+2^S（指数是 S 不是 k，已按 600 dpi 放大逐字确认），输出 k=4；第 10 题四个选项本身即为图象（振幅与周期须满足 |a|·T=2π），按原页四幅小图重绘并入同一幅图，(D) 中最大值在 π/2 之右而振幅又大于 1，与 f(x)=1+a sin(ax) 矛盾；第 12 题三视图为 T 形棱柱（上横条 3×3×1、竖柱 1×3×3），体积 18 cm³；第 14 题直方图 [4,5) 组高 0.30，样本容量 100，频数 30；第 15 题第二张表（低谷电价表）表头误印为「高峰月用电量」「高峰电价」（与表题及题文矛盾，见逐题问题登记），计费取该表所列低谷电价 0.288、0.318、0.388，答案 148.4 元；第 16 题为等比数列前 n 项积的类比，两空依次填 T8/T4、T12/T8；第 19 题以 C 为原点建系，PQ 平行于平面 ACD，AD 与平面 ABE 所成角的正弦值为 √5/5；第 20 题 (2) 由 2km(1-k)=0 对任意 m 成立得 k=0 或 k=1（k=0 时各项均为 1，公比为 1，仍为等比数列，已单独验算）；第 21 题 f'(x)=3(x-a)(x+(a+2)/3)，不单调区间为 (-5,1)，端点 a=-5、a=1 时 f' 在 (-1,1) 内不变号，已单独验算；第 22 题 (1) p=1/2，m=±2，(2) 由切线截距条件得 s²+3st+1=0，t=(u+1/u)/3 的最小值为 2/3。第 7、10、12、14、19、22 题共 6 幅图由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "浙江卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "浙江文科"
+      },
+      "issue_ids": [
+        "ISSUE-1505"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-zhejiang-arts",
+      "production_state": "complete",
+      "project_dir": "2009_浙江卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_浙江文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_浙江文_含解析.md",
+        "questions": "2009/2009_数学真题_浙江文_试题.md",
+        "solution_body": "2009/2009_数学真题_浙江文_解析正文.md"
+      },
+      "source_ids": [
+        "src-84e95105af00a16aa580da9693731347ba0e5c0ebb8f36b0b8f9dbbe7208e284"
+      ],
+      "title": "2009 年·普通高等学校招生考试·浙江卷·文科",
+      "track": "arts",
+      "year": 2009
     }
   ],
-  "revision": 10153,
+  "revision": 10180,
   "schema_version": 1,
   "sources": [
     {
@@ -51016,8 +51103,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d253367ec16f0becd4a7443f5174c97a79e8b5c3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-zhejiang-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009浙江文.pdf",
       "regions": [],
       "source_id": "src-84e95105af00a16aa580da9693731347ba0e5c0ebb8f36b0b8f9dbbe7208e284",

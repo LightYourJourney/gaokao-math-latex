@@ -1,0 +1,29 @@
+% 2009 年浙江卷文科第 22 题：抛物线 C: x^2=2py 与切线、垂线构图。
+% 来源 PDF：普通高考/2009/2009浙江文.pdf，SHA-256 8e609d19459cb4234a4d6dd9db5be5c8cc9af2169c00d4337b3988089cfb0709。
+% 原页：第 2 页第 3 栏中部，书页码 568。
+% 重绘依据：由 (1) 得 2p=1，故 C: y=x^2。按题意图原样取一组满足 MN 为切线的
+%   位置（t=2/3 时的临界图）：P(2/3,4/9)，Q(-1,1)，M(2,0)，N(4,16)；
+%   x 方向缩放 0.8、y 方向缩放 0.28，仅作示意，不按等比例。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.5pt, font=\small},
+  x=0.8cm, y=0.28cm]
+  % 坐标轴
+  \draw[-{Stealth}] (-1.55,0) -- (4.25,0) node[right] {$x$};
+  \draw[-{Stealth}] (0,-1.0) -- (0,5.65) node[above] {$y$};
+  \node[below left=1pt] at (0,0) {$O$};
+
+  % 抛物线 y=x^2
+  \draw[thick] plot[domain=-1.42:4.28,samples=160] (\x,{\x*\x});
+
+  % 割线 QP，延长交 x 轴于 M 并稍过 M
+  \draw (-1,1) -- (2.55,-0.1833);
+  % Q 到 N 的垂线（斜率为 3）
+  \draw (-1,1) -- (4.28,16.84);
+  % 切线 MN（斜率为 8）
+  \draw (1.75,-2) -- (4.18,17.44);
+
+  % 点
+  \fill (-1,1) circle (1.7pt) node[left=5pt] {$Q$};
+  \fill (0.6667,0.4444) circle (1.7pt) node[below=4pt] {$P$};
+  \fill (2,0) circle (1.7pt) node[below right] {$M$};
+  \fill (4,16) circle (1.7pt) node[above left=8pt] {$N$};
+\end{tikzpicture}
