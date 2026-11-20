@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 上海卷（文科）：phase6-b76 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2010-shanghai-arts`，23 个题号（填空 1—14、选择 15—18、解答 19—23）；固定来源 `src-68f7301824f331fa253de6fc6c7e9463f412b550a4e2377ade47e44e9d187027`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2010上海文.pdf`，SHA-256 `5e81bdb27659512a50968275bf502ee666e2ac3f25f9fcaa1b166576fbe9cf62`，508,908 bytes，2 页 A3 横向，印面页码 629、630；页眉「2010 普通高等学校招生考试（上海卷文）」。
+- 来源获取：该来源未预置本地副本，按 `source-manifest.json` 的上游 commit `34c13a6c…` 从 deekur/gaokaomath 取 `普通高考/2010/2010上海文.pdf`，现场 SHA-256 与 manifest 登记值一致后才开始转录。
+- 转录口径：PDF 文字层可读度一般，只作定位；分数、根号、上下标、选项与两幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：填空题 1—14、选择题 15—18、解答题 19—23。
+- 答案（独立推导，等级 D，非官方）：1 $2$；2 $(-4,2)$；3 $\frac12$；4 $6-2\mathrm i$；5 $20$；6 $96$；7 $3$；8 $y^2=8x$；9 $(0,-2)$；10 $\frac1{17}$；11 $S\leftarrow S+a$；12 $45$；13 $ab=\frac14$；14 $\frac12$；15C 16A 17D 18C；19 $0$；20 (1) $r=0.4$、$S_{\max}=0.48\pi\approx1.51$ 平方米、(2) 三视图；21 (1) 证明、(2) $S_n=n-90+75\left(\frac56\right)^{n-1}$、最小 $n=15$；22 (1) $(-2,2)$、(2) 证明、(3) $f(x)=1-\lvert\sin x\rvert$；23 (1) $\left(\frac a2,-\frac b2\right)$、(2) 证明、(3) $P_1(8,3)$、$P_2(-6,-4)$。
+- 逐题复核要点：第 3 题行列式 $\cos^2\frac\pi6-\sin^2\frac\pi6=\frac12$；第 4 题 $z\overline z=5$；第 5 题 $C$ 层占 $\frac15$，抽 $20$；第 12 题循环矩阵对角线为 $1,3,5,7,9,2,4,6,8$，和 $45$；第 13 题 $a=2,b=1$，$P=(2(a+b),a-b)$ 代入得 $ab=\frac14$；第 14 题面积 $\frac{n-1}{2(n+1)}\to\frac12$；第 19 题三项分别化为 $\sin x+\cos x$、$\sin x+\cos x$、$(\sin x+\cos x)^2$，结果为 $0$；第 20 题四矩形骨架给 $h=1.2-2r$，$S=2.4\pi r-3\pi r^2$，$r=0.4$ 时 $S=0.48\pi\approx1.51$；第 21 题 $a_1=-14$、$a_n=\frac56a_{n-1}+\frac16$，$S_{n+1}>S_n$ 需 $\left(\frac56\right)^{n-1}<0.08$，最小 $n=15$；第 22 题令 $x=\sqrt a,y=\sqrt b$ 作差分解；第 23 题中点弦 $x-2y=2$，交点 $(8,3),(-6,-4)$。
+- 图稿 2 张（Q11 世博入园统计程序框图、Q20 圆柱形灯笼），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。
+- 源缺陷：无关键歧义；第 5 题明确写“从 $C$ 层中抽取”，按原页语义作答。
+- 验收：四版 4/19/6/15 页（共 44 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 44 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b76.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **569 一致**；`manifest.csv` 775 行。
+- 里程碑：开始处理 **2010 年及以后**未绑定来源；本卷为 2010 年第一套。
+
 ### 2009 福建卷（理科）：phase6-b75 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2009-fujian-science`，21 个题号（选择 1—10、填空 11—15、解答 16—21，第 21 题为 A/B/C 三选二）；固定来源 `src-a57532e2d136183f2e5bdd87808ce0f381e55d77cbdd4daf9e55c94d002f0b85`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009福建理.pdf`，SHA-256 `44d650687de50fff3efc1d37624b1272c9045e96d41491464f6713a708f202b9`，534,627 bytes，2 页 A3 横向，印面页码 515、516；页眉「2009 普通高等学校招生考试（福建卷理）」。

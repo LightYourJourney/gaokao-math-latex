@@ -3468,6 +3468,14 @@
         "gk-2009-fujian-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b76",
+      "issues": [],
+      "paper_ids": [
+        "gk-2010-shanghai-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3477,7 +3485,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a2752e36-497e-4a5d-bd94-43645659c09a",
+  "last_transaction_id": "90ebc866-6e01-4379-bbe0-b1c47e909831",
   "papers": [
     {
       "blocked_from": null,
@@ -41535,9 +41543,70 @@
       "title": "2009 年·普通高等学校招生考试·福建卷·理科",
       "track": "science",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2010_上海卷_文科/figures/f2010_shanghai_arts_q11_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_上海卷_文科/figures/f2010_shanghai_arts_q20_cylinder.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2010_gaokao_shanghai_arts",
+        "id": "gk-2010-shanghai-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 629、630；页眉「2010 普通高等学校招生考试（上海卷文）」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。上海卷题号：填空 1—14、选择 15—18、解答 19—23，共 23 题。答案由本库独立推导（非官方）。文字层可读度一般、只作定位，分数、根号、上下标、选项与两幅图均按 600 dpi 原页逐项复核。第 1 题并集给 m=2；第 2 题 (2−x)/(x+4)>0 得 (−4,2)；第 3 题行列式 cosπ/3=1/2；第 4 题 z\bar z=5，5+z=6−2i；第 5 题 C 层占 1/5，抽 20；第 6 题 V=1/3·36·8=96；第 7 题圆心 (1,2) 到直线距离 3；第 8 题抛物线 y²=8x；第 9 题反函数 3^x−3，y 轴截距 −2；第 10 题 C(13,2)/C(52,2)=1/17；第 11 题空框 S←S+a；第 12 题循环矩阵对角线 1,3,5,7,9,2,4,6,8，和 45；第 13 题渐近线斜率 ±1/2、c=√5 得 a=2,b=1，P=(2(a+b),a−b) 代入得 ab=1/4；第 14 题三顶点 (1,0),(0,1),(n/(n+1),n/(n+1))，面积 (n−1)/(2(n+1))→1/2；第 15 题线性规划最大 2；第 16 题 tanx=1 的充分不必要条件；第 17 题 lgx+x=2 根在 (1.75,2)；第 18 题三边 5,11,13，13²>5²+11²，钝角；第 19 题 cosx tanx=sinx、1−2sin²(x/2)=cosx、√2cos(x−π/4)=sinx+cosx、1+sin2x=(sinx+cosx)²，原式为 0；第 20 题四矩形骨架 4·2(2r+h)=9.6 得 h=1.2−2r，S=2πrh+πr²=2.4πr−3πr²，r=0.4 时 S=0.48π≈1.51；第 21 题 a1=−14，a_n=(5/6)a_{n−1}+1/6，{a_n−1} 等比，S_n=n−90+75(5/6)^{n−1}，S_{n+1}>S_n 需 (5/6)^{n−1}<0.08，最小 n=15；第 22 题 (1) |x²−1|<3 得 (−2,2)，(2) 令 x=√a,y=√b，两边分别为 x²y²(x−y)² 与 (x−y)²(x²+xy+y²)²，(3) f=1−|sinx|；第 23 题 (1) M=(a/2,−b/2)，(2) 联立 l1 与椭圆用韦达定理与 k1k2=−b²/a² 证 E 为中点，(3) F(1,−1/2)，中点弦 x−2y=2，交点 (8,3),(−6,−4)。原页共 2 幅图：第 11 题程序框图、第 20 题圆柱形灯笼；其余题无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2010-shanghai-arts",
+      "production_state": "complete",
+      "project_dir": "2010_上海卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2010/2010_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2010/2010_数学真题_上海文_含解析.md",
+        "questions": "2010/2010_数学真题_上海文_试题.md",
+        "solution_body": "2010/2010_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-68f7301824f331fa253de6fc6c7e9463f412b550a4e2377ade47e44e9d187027"
+      ],
+      "title": "2010 年·普通高等学校招生考试·上海卷·文科",
+      "track": "arts",
+      "year": 2010
     }
   ],
-  "revision": 10304,
+  "revision": 10309,
   "schema_version": 1,
   "sources": [
     {
@@ -52214,8 +52283,8 @@
       "exam_type": "regular",
       "git_blob_oid": "babb0a3bc310f28b5324d8bb3ede690fc5a13e01",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2010-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2010上海文.pdf",
       "regions": [],
       "source_id": "src-68f7301824f331fa253de6fc6c7e9463f412b550a4e2377ade47e44e9d187027",
