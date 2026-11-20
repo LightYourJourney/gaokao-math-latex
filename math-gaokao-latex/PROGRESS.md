@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 陕西卷（文科）：phase6-b71 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2009-shaanxi-arts`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-a3a1d5911fe162281c6c9a255e2e74bb419313630e66622006c5e9223d9423f6`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009陕西文.pdf`，SHA-256 `c4760285004d01aee97af7821783660b08339cca3a3fc8645052f11001ba586a`，529,924 bytes，2 页 A3 横向，印面页码 551、552；页眉「2009 普通高等学校招生考试（陕西卷文）」。
+- 转录口径：PDF 文字层可读度一般，只作定位；分数、根号、上下标、选项与三幅图均按 600 dpi 原页逐题复核（第 6 题二项式、第 19 题向量、第 22 题指数另放大确认）。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1A 2B 3D 4D 5B 6C 7C 8D 9C 10A 11B 12B；13 $2n$；14 $1$、$11$；15 $\frac\pi2$；16 $8$；17 (1) $f(x)=2\sin\left(2x+\frac\pi6\right)$、(2) 最小值 $1$、最大值 $\sqrt3$；18 (1) $0.9$、(2) $0.33$；19 (1) 证明、(2) $\arccos\frac{\sqrt{15}}5$（正切 $\frac{\sqrt6}3$）；20 (1) $a<0$ 时全增，$a>0$ 时增区间 $(-\infty,-\sqrt a)$、$(\sqrt a,+\infty)$、减区间 $(-\sqrt a,\sqrt a)$，(2) $-3<m<1$；21 (1) 证明、(2) $a_n=\frac53-\frac23\left(-\frac12\right)^{n-1}$；22 (1) $\frac{y^2}4-x^2=1$、(2) $\left[2,\frac83\right]$。
+- 逐题复核要点：第 6 题令 $x=1/2$，$a_0=1$，故所求和为 $-1$；第 9 题 $\mathrm C_4^2\mathrm C_3^2\cdot2\cdot3!=216$；第 11 题六面中心构成正八面体，$V=2\cdot\frac13\cdot1^2\cdot\frac{\sqrt2}2=\frac{\sqrt2}3$；第 14 题三顶点 $(0,1),(1,0),(3,4)$，$z$ 最小 $1$、最大 $11$；第 15 题球心角 $\pi/3$、弦 $AB=2$、小圆半径 $\sqrt2$，得 $\angle AO_1B=\pi/2$；第 16 题 $36=26+15+13-6-4-x$ 得 $x=8$；第 19 题由余弦定理得 $BC=2$，建系后 $\overrightarrow{AB}\cdot\overrightarrow{A_1C}=0$，平面 $BA_1C$ 法向量 $(-3,\sqrt3,\sqrt3)$，$\cos\theta=\sqrt{15}/5$、$\tan\theta=\sqrt6/3$；第 20 题 $f'=3(x^2-a)$，$a=1$ 时极大 $1$、极小 $-3$，三交点条件给出 $-3<m<1$；第 21 题 $b_{n+1}=-b_n/2$，$b_n=(-1/2)^{n-1}$，$a_n=5/3-(2/3)(-1/2)^{n-1}$；第 22 题 $e=\sqrt5/2$ 得 $b=a/2$，顶点到渐近线距离 $ab/c=a/\sqrt5=2\sqrt5/5$ 得 $a=2,b=1$，设 $A(s,2s)$、$B(-t,2t)$，$P=(A+\lambda B)/(1+\lambda)$ 在双曲线上得 $st=(1+\lambda)^2/(4\lambda)$，面积 $2st=1+(\lambda+1/\lambda)/2$，$\lambda\in[1/3,2]$ 时值域 $[2,8/3]$。
+- 图稿 3 张（Q15 球与小圆、Q19 直三棱柱、Q22 双曲线与渐近线），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。Q15 小圆背面虚线改为上半弧；Q19 横向投影加宽到 0.60，A₁、C₁ 标注分开；Q22 的 A、P 标注外移避开曲线。
+- 源缺陷：无。第 19 题“直三棱柱”、第 22 题“顶点到渐近线”等关键措辞均按原页 600 dpi 核对，未见两种读法会改变答案的情形。卷 `complete`、批次 `closed`。
+- 验收：四版 5/22/7/19 页（共 53 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 53 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b71.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **564 一致**；`manifest.csv` 775 行。
+- 下一步：继续下一套 2009 卷（余福建文理、重庆理、陕西理 4 套未绑定；另有 11 套 blocked）。
+
 ### 2009 重庆卷（文科）：phase6-b70 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2009-chongqing-arts`，21 个题号（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-71e5b05130d88e68742fa61dbe463ee21c94d2ca268b697be509e5f5fb38b47c`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2009重庆文.pdf`，SHA-256 `c4d433586be8144d34c8ee2d4074c6308f53ffe84aa3a8a7ea28bb6f0cf86a39`，509,326 bytes，2 页 A3 横向，印面页码 505、506；页眉「2009 普通高等学校招生考试（重庆卷文）」。
