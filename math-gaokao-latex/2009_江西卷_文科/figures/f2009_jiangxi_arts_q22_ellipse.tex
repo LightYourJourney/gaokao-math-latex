@@ -1,0 +1,37 @@
+% 2009 年江西卷文科第 22 题：椭圆 x^2/16+y^2=1 的内接三角形 ABC 及其内切圆 G。
+% 来源 PDF：普通高考/2009/2009江西文.pdf，SHA-256 468ed0d312446a29e8cdaebe70fab4f803741b0b542cd991781b2f13fed5168f。
+% 原页：第 2 页（A3 三栏）第 3 栏，书页码 536。
+% 重绘依据：按真实坐标等比绘制（x、y 同尺度）：A(-4,0)，B(8/3,√5/3)，C(8/3,-√5/3)，
+%   圆 G 以 (2,0) 为心、r=2/3；M(0,1) 处的两条切线分别交椭圆于 E(1.946,-0.874)、F(3.654,0.407)。
+\begin{tikzpicture}[scale=0.92, semithick, every node/.style={inner sep=1.3pt, font=\small}]
+  % 坐标轴
+  \draw[-{Stealth}] (-4.85,0) -- (5.05,0) node[right] {$x$};
+  \draw[-{Stealth}] (0,-1.80) -- (0,1.85) node[above] {$y$};
+  \node[below left=1pt] at (0,0) {$O$};
+
+  % 椭圆
+  \draw (0,0) ellipse (4 and 1);
+
+  % 圆 G
+  \draw (2,0) circle (0.6667);
+
+  % 三角形 ABC 的三边
+  \draw (-4,0) -- (2.6667,0.7454);
+  \draw (-4,0) -- (2.6667,-0.7454);
+  \draw (2.6667,0.7454) -- (2.6667,-0.7454);
+
+  % 过 M 的两条切线（切于圆 G，交椭圆于 E、F）
+  \draw (0,1) -- (1.9463,-0.8736);
+  \draw (0,1) -- (3.6537,0.4070);
+
+  % 圆心
+  \fill (2,0) circle (1.4pt);
+
+  \node[left=3pt] at (-4,0) {$A$};
+  \node[above right=1pt] at (2.6667,0.7454) {$B$};
+  \node[below right=1pt] at (2.6667,-0.7454) {$C$};
+  \node[anchor=south east] at (-0.06,1.02) {$M$};
+  \node[below=3pt] at (1.9463,-0.8736) {$E$};
+  \node[right=3pt] at (3.6537,0.4070) {$F$};
+  \node[above right=0pt, fill=white, inner sep=1pt] at (2,0) {$G$};
+\end{tikzpicture}
