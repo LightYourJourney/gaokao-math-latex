@@ -2,12 +2,12 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**565**；生产状态：blocked 118，complete 447
-- 批次总数：**411**；manifest 状态：closed 314，closed_with_blockers 97
-- 正式复核门禁：FINALIZED 411
-- 已编译版本：2260/2260；构建回执状态：succeeded 565
-- review 回执状态：passed 565
-- 问题总账：1515 条，未解决问题：359，阻塞完成 261。
+- 试卷总数：**566**；生产状态：blocked 118，complete 448
+- 批次总数：**412**；manifest 状态：closed 315，closed_with_blockers 97
+- 正式复核门禁：FINALIZED 412
+- 已编译版本：2264/2264；构建回执状态：succeeded 566
+- review 回执状态：passed 566
+- 问题总账：1516 条，未解决问题：360，阻塞完成 261。
 - 回执日志警告汇总（包含待复核回执）：Overfull 35，Underfull 131，豁免记录 166。
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
 - 所有批次复核门禁通过。
@@ -427,3 +427,4 @@
 | phase6-b70 | 1 | closed | FINALIZED | committed |
 | phase6-b71 | 1 | closed | FINALIZED | committed |
 | phase6-b72 | 1 | closed | FINALIZED | committed |
+| phase6-b73 | 1 | closed | FINALIZED | committed |
