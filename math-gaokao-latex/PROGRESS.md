@@ -4,6 +4,22 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 天津卷（理科）：phase6-b82 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2010-tianjin-science`，22 个题号（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-81642c909a2bf7023667bd3b7e3b157d0f84e0fa642b1c54aa969a7c841a1b4f`，原固定件 SHA-256 `340aba76699a12f330637f9c682abbc893e03e0e91788287934c0a7e0a3cace9`（512,109 bytes），2 页 A3 横向，印面页码 635、636；页眉「2010 普通高等学校招生考试（天津卷理）」。
+- 来源核对：按 manifest 的上游 pin commit `34c13a6c…` 取回 `普通高考/2010/2010天津理.pdf`，现场 SHA-256 与登记值一致；上游 HEAD 同名文件 SHA-256 不同（`9021fd6e…`），但 `pdftotext -layout` 全文与 pin 版逐字一致，仅二进制元数据差异，按 pin 版转录，artifact 未替换，不登记为源勘误。
+- 转录口径：PDF 文字层只作定位；分数、根号、上下标、选项、表格与六幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1A 2B 3B 4D 5B 6C 7A 8C 9D 10B；11 $24$ 和 $23$；12 $\frac{10}3$；13 $(x+1)^2+y^2=2$；14 $\frac{\sqrt6}6$；15 $\sqrt3$；16 $\left(-\infty,-\frac{\sqrt3}2\right]\cup\left[\frac{\sqrt3}2,+\infty\right)$；17 (1) $T=\pi$、最大值 $2$、最小值 $-1$，(2) $\frac{3-4\sqrt3}{10}$；18 (1) $\frac{40}{243}$，(2) $\frac8{81}$，(3) $\xi$ 取 $0,1,2,3,6$，概率 $\frac1{27},\frac29,\frac4{27},\frac8{27},\frac8{27}$；19 (1) $\frac35$、(2) 证明、(3) $\frac{\sqrt5}3$；20 (1) $\frac{x^2}4+y^2=1$、(2) $\pm\frac{2\sqrt{14}}5$；21 (1) 增区间 $(-\infty,1)$、减区间 $(1,+\infty)$、极大值 $\frac1{\mathrm e}$，(2)(3) 证明；22 (1) 证明，(2)① 公差为 $1$ 的等差数列，② 证明。
+- 逐题复核要点：第 4 题判断框取 $i<6?$ 时 $s$ 依次 $1,-2,-7$，输出 $-7$（其余条件分别输出 $1,-2,-2$）；第 6 题 $9S_3=S_6$ 得 $q^3=8$，$q=2$，前 5 项和 $\frac{31}{16}$；第 7 题由 $\sin C=2\sqrt3\sin B$ 得 $c=2\sqrt3b$，$a^2=7b^2$，$\cos A=\frac{\sqrt3}2$；第 10 题按 $A,C$ 同色与否分四类，涂色数 $12\times2+24\times3+24\times3+24\times4=264$；第 12 题由下方正四棱柱（$1\times1\times2$）与上方正四棱锥（底 $2\times2$、高 $1$）组合，体积 $2+\frac43=\frac{10}3$；第 14 题 $\triangle PBC\sim\triangle PDA$ 与割线定理得 $\frac{BC}{AD}=\frac{\sqrt6}6$；第 16 题化为 $x^2\left(\frac1{m^2}-4m^2-1\right)+2x+3\leqslant0$，顶点不能在区间内，端点条件给 $A\leqslant-\frac83$，即 $|m|\geqslant\frac{\sqrt3}2$；第 19 题建系 $A(0,0,0)$、$B(1,0,0)$、$C(1,2,0)$、$D(0,2,0)$、$A_1(0,0,4)$、$E\left(1,\frac32,0\right)$、$F(1,2,1)$，得 $\cos\theta=\frac35$、$AF\perp$ 平面 $A_1ED$、$\sin\theta=\frac{\sqrt5}3$；第 20 题 $ab=2$、$a=2b$ 得椭圆，$k^2=\frac27$、$y_0=\pm\frac{2\sqrt{14}}5$；第 22 题由 $d_k=2k$ 累加得 $a_{2k}=2k^2$、$a_{2k+1}=2k(k+1)$，$q_{k+1}=2-\frac1{q_k}$，故 $\left\{\frac1{q_k-1}\right\}$ 公差为 $1$。
+- **第 4 题源核对结论**：600 dpi 原页判断框内为空、正文为「若输出 $s$ 的值为 $-7$」，框图流程为判断在前、$s=s-i$ 与 $i=i+2$ 在后；按 $i<6?$ 逐轮复算与题面一致，无源缺陷。
+- 自查补正（均在封账前完成）：① 第 4 题流程图首版因 `scale` 压缩坐标而节点重叠，改为按节点尺寸定位、拉开判断框与 $s=2$ 的间距；② 第 12 题正视图、侧视图的三角形底边首版未闭合，补画底边；③ 第 6 题题干在印刷版收窄版心后使「（　）」孤行，按语义在「且 $9S_3=S_6$。」后分段；④ 第 16 题解析补出「顶点不能在 $\left[\frac32,+\infty\right)$ 内」的理由，消除循环论证；⑤ 第 19 题 $A$ 标注移到隐藏顶点右下方，避开 $AF$ 虚线；⑥ 第 5、6 题选项由 `\dfrac` 改为 `\frac`，压缩过高的选项堆叠（解析版由 28 页降为 27 页）。
+- 图稿 6 张（Q4 程序框图、Q10 矩形与两内点、Q12 三视图、Q14 圆内接四边形、Q15 三角形、Q19 长方体），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；第 20、21、22 题原页无图，未补绘。
+- 源缺陷：无。
+- 验收：四版 7/27/9/20 页（共 63 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 63 页八类检查 435 pass + 69 not_applicable、0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b82.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **575 一致**；`build_projects.py validate-receipts --all --require-final` → **OK：575 卷**；manifest **575 卷 / 775 来源 / 421 批次**，complete 457、blocked 118，未绑定来源 203 → **201**。
+- 下一步：继续 2010 年未绑定来源（余安徽文理、山东文理、广东文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理）。
+
 ### 2010 天津卷（文科）：phase6-b81 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2010-tianjin-arts`，22 个题号（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-70e91cde2c185ebe92ffcf383f7b72ebd13279e14753a10eb33b48bda17615ac`，原固定件 SHA-256 `1210823b6018020b1915f17ba0ebf3d74ea26f62471c180d0283a48a66599462`（519,846 bytes），2 页 A3 横向，印面页码 637、638；页眉「2010 普通高等学校招生考试（天津卷文）」。
