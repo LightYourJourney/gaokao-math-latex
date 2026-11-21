@@ -17,7 +17,7 @@
 - 图稿 6 张（Q4 程序框图、Q10 矩形与两内点、Q12 三视图、Q14 圆内接四边形、Q15 三角形、Q19 长方体），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；第 20、21、22 题原页无图，未补绘。
 - 源缺陷：无。
 - 验收：四版 7/27/9/20 页（共 63 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 63 页八类检查 435 pass + 69 not_applicable、0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b82.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
-- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **575 一致**；`build_projects.py validate-receipts --all --require-final` → **OK：575 卷**；manifest **575 卷 / 775 来源 / 421 批次**，complete 457、blocked 118，未绑定来源 203 → **201**。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **575 一致**；`build_projects.py validate-receipts --all --require-final` → **OK：575 卷**；manifest **575 卷 / 775 来源 / 421 批次**，complete 457、blocked 118，未绑定来源 202 → **201**。
 - 下一步：继续 2010 年未绑定来源（余安徽文理、山东文理、广东文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理）。
 
 ### 2010 天津卷（文科）：phase6-b81 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
