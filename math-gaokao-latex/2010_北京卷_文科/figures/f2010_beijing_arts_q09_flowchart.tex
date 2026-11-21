@@ -1,0 +1,19 @@
+% 2010 年北京卷文科第 9 题：分段函数程序框图。
+% 来源 PDF：普通高考/2010/2010北京文.pdf，SHA-256 8def639c25748266a140a99f6111811c7037bced389a451089eff7b1a0b0ba52。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 575。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=2pt, font=\small}, >=stealth]
+  \node[draw,rounded corners] (start) at (0,0) {开始};
+  \node[draw,rectangle] (in) at (0,-1.1) {输入 $x$};
+  \node[draw,diamond,aspect=2] (test) at (0,-2.4) {①};
+  \node[draw,rectangle] (no) at (2.2,-2.4) {②};
+  \node[draw,rectangle] (yes) at (0,-3.7) {$y=2-x$};
+  \node[draw,rectangle] (out) at (1.1,-5.0) {输出 $y$};
+  \node[draw,rounded corners] (end) at (1.1,-6.1) {结束};
+  \draw[->] (start) -- (in);
+  \draw[->] (in) -- (test);
+  \draw[->] (test) -- node[above] {是} (yes);
+  \draw[->] (test) -- node[above] {否} (no);
+  \draw[->] (yes) -- (out);
+  \draw[->] (no) |- (out);
+  \draw[->] (out) -- (end);
+\end{tikzpicture}

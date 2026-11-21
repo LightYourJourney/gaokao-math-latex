@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 北京卷（文科）：phase6-b78 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2010-beijing-arts`，20 个题号（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-9caab3875c433f41ca0363a18f3e720ea39bb258c0b9a2539b8c2e1fdda6da2b`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2010北京文.pdf`，SHA-256 `8def639c25748266a140a99f6111811c7037bced389a451089eff7b1a0b0ba52`，605,304 bytes，2 页 A3 横向，印面页码 575、576；页眉「2010 普通高等学校招生考试（北京卷文）」。
+- 来源获取：按 manifest 上游 commit `34c13a6c…` 从 deekur/gaokaomath 取回，现场 SHA-256 与登记值一致。
+- 转录口径：PDF 文字层可读度一般，只作定位；分数、根号、上下标、选项与七幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—8、填空题 9—14、解答题 15—20。
+- 答案（独立推导，等级 D，非官方）：1B 2C 3D 4A 5B 6B 7A 8B；9 ①$x<2$、②$y=\log_2x$；10 $1$；11 $-3$；12 $0.030$、$3$；13 $(\pm4,0)$、$y=\pm\sqrt3x$；14 $4$、$\frac\pi2+3$；15 (1) $-\frac14$、(2) 最大 $2$、最小 $-1$；16 (1) $a_n=2n-12$、(2) $S_n=-4(3^n-1)$；17 两问证明；18 (1) $f=x^3-3x^2+12x$、(2) $(0,1]\cup[9,+\infty)$；19 (1) $\frac{x^2}3+y^2=1$、(2) $(0,\pm\frac{\sqrt3}2)$、(3) $2$；20 (1) $(1,0,1,0,1)$、$d=3$、(2)(3) 证明。
+- 逐题复核要点：第 4 题 $f=(|b|^2-|a|^2)x$；第 8 题 $V_{P-EFQ}=2/3$ 与 $x,y$ 无关；第 14 题滚动正方形周期 $4$、面积 $\pi/2+3$；第 17 题建系 $A(0,0,0)$、$B(\sqrt2,0,0)$、$C(\sqrt2,\sqrt2,0)$、$D(0,\sqrt2,0)$、$E(\sqrt2,\sqrt2,1)$、$F(1/\sqrt2,1/\sqrt2,1)$，平面 $BDE$ 法向量 $(\sqrt2,\sqrt2,-2)$，$AF\cdot n=0$、$CF\parallel -n$；第 18 题由 $f'-9x$ 两根 $1,4$ 得 $a=3$ 时 $b=-3,c=12$，无极点需 $(9-9a)(9-a)\le0$；第 19 题圆与 $x$ 轴相切 $t=\pm\sqrt3/2$，$y_{\max}=2$；第 20 题逐分量证距离平移不变、三距离之和为偶数。
+- 图稿 7 张（Q5 正侧视图与四个俯视图、Q7 八边形、Q8 正方体、Q9 程序框图、Q12 直方图、Q14 滚动正方形、Q17 正方形与 ACEF），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。
+- 源缺陷：无关键歧义。
+- 验收：四版 5/20/7/18 页（共 50 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 50 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b78.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **571 一致**；`manifest.csv` 775 行。
+- 下一步：继续 2010 年未绑定来源（北京文理、上海文理已收官；余四川、天津、安徽、山东、广东等）。
+
 ### 2010 上海卷（理科）：phase6-b77 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2010-shanghai-science`，23 个题号（填空 1—14、选择 15—18、解答 19—23）；固定来源 `src-f3db3798f1a7a6efb0daa00ebe030d55ee5c109b5ec6f6746e1e1ddd834b6f0d`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2010上海理.pdf`，SHA-256 `e6181a8e02bfda976d5a2cee9432881769c184da4d3fca3b5a4d75c57a497ec6`，534,539 bytes，2 页 A3 横向，印面页码 627、628；页眉「2010 普通高等学校招生考试（上海卷理）」。

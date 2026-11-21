@@ -1,0 +1,14 @@
+% 2010 年北京卷文科第 12 题：频率分布直方图。
+% 来源 PDF：普通高考/2010/2010北京文.pdf，SHA-256 8def639c25748266a140a99f6111811c7037bced389a451089eff7b1a0b0ba52。
+% 原页：第 1 页（A3 三栏）第 3 栏中部，书页码 575。
+\begin{tikzpicture}[semithick, x=0.9cm, y=28cm, every node/.style={inner sep=1.2pt, font=\small}]
+  \draw[-stealth] (0,0) -- (5.6,0) node[below] {身高};
+  \draw[-stealth] (0,0) -- (0,0.04) node[left] {$\dfrac{\text{频率}}{\text{组距}}$};
+  \foreach \i/\h/\lab in {0/0.005/,1/0.035/,2/0.030/a,3/0.020/,4/0.010/}{
+    \draw[fill=gray!15] (\i,0) rectangle (\i+0.9,\h);
+    \node[above] at (\i+0.45,\h) {$\lab$};
+  }
+  \foreach \i/\t in {0/100,1/110,2/120,3/130,4/140,5/150}{
+    \node[below] at (\i,0) {\t};
+  }
+\end{tikzpicture}
