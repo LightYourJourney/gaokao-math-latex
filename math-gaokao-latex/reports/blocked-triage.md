@@ -31,16 +31,16 @@
 
 ## 计数
 
-- 复核总数：**111** 套（106 套当前未完成 + 5 套本轮已封账）
+- 复核总数：**123** 套（106 套当前未完成 + 5 套本轮已封账）
 - 补源后完成：**5** 套
 - 可收口：**0** 套
-- 保留 U：**78** 套
-- 保留 U（源缺陷/歧义）：**27** 套
+- 保留 U：**82** 套
+- 保留 U（源缺陷/歧义）：**35** 套
 - 缺源：**1** 套
 
 ## U 判定分歧
 
-- 存在分歧的卷：**20** 套（题面标记与 provenance 判定不一致，按并集仍计为保留 U）
+- 存在分歧的卷：**24** 套（题面标记与 provenance 判定不一致，按并集仍计为保留 U）
 
 - `gk-1977-regular-fujian-arts`：题面多 4,6
 - `gk-1977-regular-fujian-science`：题面多 7
@@ -62,6 +62,10 @@
 - `gk-2026-regular-beijing-recall`：题面多 10,13
 - `gk-1998-regular-national-arts`：题面多 12,13；provenance 多 25
 - `gk-2003-regular-yuegui`：题面多 10
+- `gk-2009-sichuan-science`：provenance 多 11
+- `gk-2009-shandong-arts`：provenance 多 17
+- `gk-2009-shandong-science`：题面多 17
+- `gk-2009-jiangsu`：provenance 多 19
 
 ## 逐卷
 
@@ -178,3 +182,15 @@
 | 2002 | gk-2002-regular-suyuyuegui | planned | succeeded | passed | 18 | — | ISSUE-1417 | answer-convention-ambiguous | 是 | 保留 U |
 | 1998 | gk-1998-regular-national-arts | planned | succeeded | passed | 12,13,25 | 题面多 12,13；provenance 多 25 | ISSUE-1426,ISSUE-1427,ISSUE-1428 | answer-conflict,answer-convention-ambiguous | 是 | 保留 U |
 | 2003 | gk-2003-regular-yuegui | planned | succeeded | passed | 10 | 题面多 10 | ISSUE-1429 | answer-conflict | 是 | 保留 U |
+| 2007 | gk-2007-regular-sichuan-science | planned | succeeded | passed | — | — | ISSUE-1449,ISSUE-1450,ISSUE-1451 | answer-conflict,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2007 | gk-2007-regular-sichuan-arts | planned | succeeded | passed | — | — | ISSUE-1470,ISSUE-1471,ISSUE-1472,ISSUE-1473 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2008 | gk-2008-beijing-arts | planned | succeeded | passed | — | — | ISSUE-1474,ISSUE-1475 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2009 | gk-2009-shanghai-arts | planned | succeeded | passed | — | — | ISSUE-1476 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2009 | gk-2009-shanghai-science | planned | succeeded | passed | — | — | ISSUE-1477 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2009 | gk-2009-beijing-arts | planned | succeeded | passed | — | — | ISSUE-1478 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2009 | gk-2009-sichuan-science | planned | succeeded | passed | 11 | provenance 多 11 | ISSUE-1479,ISSUE-1480 | answer-convention-ambiguous,transcription-ambiguous | 是 | 保留 U |
+| 2009 | gk-2009-shandong-arts | planned | succeeded | passed | 17 | provenance 多 17 | ISSUE-1482,ISSUE-1483 | answer-convention-ambiguous,transcription-ambiguous | 是 | 保留 U |
+| 2009 | gk-2009-shandong-science | complete | succeeded | passed | 17 | 题面多 17 | ISSUE-1484 | transcription-ambiguous | 是 | 保留 U |
+| 2009 | gk-2009-liaoning-arts | planned | succeeded | passed | — | — | ISSUE-1485,ISSUE-1486 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2009 | gk-2009-nceq-science | complete | succeeded | passed | — | — | ISSUE-1488,ISSUE-1489,ISSUE-1490,ISSUE-1491,ISSUE-1492,ISSUE-1493 | answer-conflict,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2009 | gk-2009-jiangsu | planned | succeeded | passed | 19 | provenance 多 19 | ISSUE-1498,ISSUE-1499,ISSUE-1500 | answer-convention-ambiguous,transcription-ambiguous | 是 | 保留 U |
