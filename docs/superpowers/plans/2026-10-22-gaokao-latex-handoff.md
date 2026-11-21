@@ -1,5 +1,15 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-21 接续：2010 天津文封账（phase6-b81，第 574 卷）
+
+- 对象 `gk-2010-tianjin-arts`：22 题（选择 1—10、填空 11—16、解答 17—22），四版 6/24/8/19 = 57 页，四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 57 页八类检查 389 pass + 67 not_applicable、0 fail、0 豁免；`finalize-batch` → `FINALIZED`，批次 `closed`，`production_state=complete`。报告 `reports/phase6-b81.md`。
+- 全库：**574 卷 / 775 来源 / 420 批次**，complete 456、blocked 118，未绑定 **202**；`validate-receipts --all --require-final` → **OK：574 卷**；三套生成器 `--all --check` 均 574 一致；`report.py render/check --all` 在主代理重跑后一致（子代理的 render 早于 finalize，导致 report.md/baseline.md 一度落后一个 revision，已修正）。
+- **Q3 源勘误落地方案（后续同类问题照此办理）**：manifest 该 source 的 `artifact` 已更新为上游 `8e715a8` 的同页修正版（sha256 `e6b06813…07c9`、550,524 bytes、blob `48839f75…`），`source_id` 仍为 `src-70e91…`（由 pin commit+path 派生，不变）；原固定件留档 `math-gaokao-latex/.work/phase6-b81/source/2010天津文.orig.pdf`；issue `ISSUE-1523`（`q3-contradicts-flowchart`，`resolved`，`non_blocking`）记录两版 sha、全文 diff 与依据。题面按修正版「运行相应的程序，则输出 s 的值为」转录，答案 0（B）。
+- **操作告警**：`tools/source_manifest.py::merge_inventory` 对 `git_blob_oid` 变化会直接 `ValueError`。本卷 source 现在持有修正版 blob，与 pin commit 不一致，因此**不要对该 source 直接跑 inventory merge**；若要重新合并上游清单，需从已包含修正版 blob 的快照合并，或先把该 source 的替换登记为正式豁免。日常 `validate-receipts` / `provenance` / `solution_sources` 不受影响（均只看 artifact sha）。
+- **Q22(1) 已核实**：600 dpi 原页为「证明 $a_4,a_5,a_6$ 成等比数列」，$8,12,18$ 满足 $12^2=8\times18$，无第二处源缺陷。
+- **图稿 6 张**（Q3 流程图、Q8 正弦图象、Q9 三角形、Q11 圆内接四边形、Q12 三视图、Q19 五面体）；原页第 21 题无图，未补绘。
+- 下一步：继续 2010 剩余 26 个来源（春季上海、四川理、天津理、安徽文理、山东文理、广东文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理），随后推进 2011–2014 省级卷（约 132 套）。
+
 ## 2026-11-21 接续：状态复核、缺失清单刷新与 2010 天津文源勘误发现
 
 - 复核口径：`validate-receipts --all --require-final` → `OK：573 卷`；`report.py check --all` → 报告与 manifest 一致。manifest 现为 **573 卷 / 775 来源 / 419 批次**，`complete` 455、`blocked` 118；`ready` 775；未绑定来源 **203**。
