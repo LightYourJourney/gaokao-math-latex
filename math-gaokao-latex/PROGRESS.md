@@ -4,6 +4,21 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 四川卷（文科）：phase6-b80 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2010-sichuan-arts`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-4f89c774179433f803456744aa1864a03cc0d1224a802dad4d4e6b452240475b`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2010四川文.pdf`，SHA-256 `2e342add328217ef1fa0fc2a996f37d00cfc044a104397b29bdd75bedb1867fc`，530,191 bytes，2 页 A3 横向，印面页码 633、634；页眉「2010 普通高等学校招生考试（四川卷文）」。
+- 来源获取：按 manifest 上游 commit `34c13a6c…` 从 deekur/gaokaomath 取回，现场 SHA-256 与登记值一致。
+- 转录口径：PDF 文字层可读度一般，只作定位；分数、根号、上下标、选项与三幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1D 2C 3C 4D 5A 6C 7C 8B 9A 10D 11D 12A；13 $24$；14 $2\sqrt3$；15 $\frac{\sqrt3}4$；16 ①②；17 (1) $\frac{125}{216}$、(2) $\frac{25}{27}$；18 (1) 证明、(2) $\arccos\frac13$；19 (1) 证明、(2) $\frac{3\sqrt{10}}{10}$；20 (1) $a_n=4-n$、(2) $q=1$ 时 $S_n=\frac{n(n+1)}2$，$q\neq1$ 时 $S_n=\frac{1-(n+1)q^n+nq^{n+1}}{(1-q)^2}$；21 (1) $x^2-\frac{y^2}3=1$、(2) 圆过点 $F$；22 (1) $g(x)=\log_a\frac{x-1}{x+1}$、(2) $a>1$ 时 $0<t<5$、$0<a<1$ 时 $t>32$、(3) $\sum_{k=1}^n f(k)<n+4$。
+- 逐题复核要点：第 6 题 $M$ 为 $BC$ 中点给 $\overrightarrow{AB}+\overrightarrow{AC}=2\overrightarrow{AM}$、$\overrightarrow{AB}-\overrightarrow{AC}=\overrightarrow{CB}$，故 $|AM|=2$。第 8 题线性规划交点 $(15,55)$ 获利 $15200$。第 9 题容斥 $120-(48+48-12)=36$。第 10 题 $|AF|=\frac{b^2}c$ 须落在 $[a-c,a+c]$，得 $e\in[\frac12,1)$。第 11 题 $\frac1{ab}+\frac1{a(a-b)}\ge\frac4{a^2}$，再用 $a^2+\frac4{a^2}\ge4$。第 12 题建系得 $M\left(\frac{2R}5,\frac{2\sqrt3R}5,\frac{2R}5\right)$、$N\left(-\frac{2R}5,\frac{2\sqrt3R}5,\frac{2R}5\right)$，$\cos\angle MON=\frac{17}{25}$。第 18 题建系证 $OM\perp AA'$、$OM\perp BD'$，平面 $MBC'$ 法向量 $\left(\frac12,-1,1\right)$，二面角 $\arccos\frac13$。第 19 题用单位圆上 $P(\cos\alpha,\sin\alpha)$、$Q(\cos\beta,-\sin\beta)$ 两算 $|PQ|^2$ 得余弦公式，再用诱导公式推正弦公式。第 20 题错位相减得通项和。第 21 题以 $x=my+2$ 代入得 $(m^2-\frac13)y^2+4my+3=0$，由韦达定理与 $y_M y_N=-\frac94$ 得 $\overrightarrow{FM}\cdot\overrightarrow{FN}=\frac94+y_My_N=0$。第 22 题 $t>0$ 由对数真数为正补出；第三问用 $\sum\frac1{2^k-1}<2$ 收口。
+- 自查补正（均在封账前完成）：① 第 2 题图象 (C) 曲线原伸出坐标框并与选项字母相碰，改为完整的对数曲线（过 $(1,0)$）且四个字母统一下移；② 第 15 题 $30^\circ$ 标注原压在线段 $AB$ 上，移至 $AB$ 与 $l$ 之间空白处；③ 第 18 题正方体原投影畸变、$D'$ 误标为 $D$、附了多余的对角线，按标准斜二测重绘并改正全部顶点与 $M$、$O$ 标注；④ 第 16 题 ④ 原反例（$T=[0,1]$ 却取 $x=y=\sqrt2\notin T$）不成立，改为 $S=\{0\}$、$T=\{0,2\}$，$2\cdot2=4\notin T$；⑤ 第 22 题第 (2) 问原只写 $t<5$，漏掉对数真数为正要求的 $t>0$，改为 $0<t<5$（速查表、解析、答案框三处同步）；⑥ 第 19 题 (1) 原仅写「由两点距离公式与余弦定理可证」，补出两算 $|PQ|^2$ 的完整过程；⑦ 第 21 题 (2) 原写「计算可得 $\overrightarrow{FM}\cdot\overrightarrow{FN}=0$」，补出韦达定理与 $y_My_N=-\frac94$ 的完整推导；⑧ 第 6 题题面较长导致印刷版出现孤立的「（　）」，改为行间公式分行并加 `question-needspace: 0.5`，消除选项跨页。
+- 图稿 3 张（Q2 四个函数图象、Q15 二面角、Q18 正方体），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。
+- 源缺陷：无。第 16 题 ④ 的表述与第 22 题 $t$ 的正负约束属本库推导疏漏，已在封账前改正，未登记为源问题。
+- 验收：四版 5/21/7/17 页（共 50 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 50 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b80.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **573 一致**；`manifest.csv` 775 行。
+- 下一步：继续 2010 年未绑定来源（上海文理、北京文理、四川文已收官；余四川理、天津、安徽、山东、广东等）。
+
 ### 2010 北京卷（理科）：phase6-b79 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2010-beijing-science`，20 个题号（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-81cd78ab834a873d999cb3dc4a7ec41e48d3d162794f855959574aa628ed886d`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2010北京理.pdf`，SHA-256 `6b5819672aaf59aecfce92e08c2d045a80575803527d61813497dd669a8d5529`，599,113 bytes，2 页 A3 横向，印面页码 573、574；页眉「2010 普通高等学校招生考试（北京卷理）」。

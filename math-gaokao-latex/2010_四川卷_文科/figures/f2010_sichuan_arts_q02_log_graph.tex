@@ -1,0 +1,28 @@
+% 2010 年四川卷文科第 2 题：四个函数图象选项（A）—（D）。
+% 来源 PDF：普通高考/2010/2010四川文.pdf，SHA-256 2e342add328217ef1fa0fc2a996f37d00cfc044a104397b29bdd75bedb1867fc。
+% 原页：第 1 页（A3 三栏）第 1 栏中部，书页码 633。
+% 重绘依据：四幅均为「坐标系 + 一条曲线」，只示意形状，不标刻度；
+%   (A) 递增上凸（根式型），(B) 递增下凸（抛物线型），(C) 对数型（过 (1,0)、x→0+ 时下降），
+%   (D) 递减（指数型）。选项字母统一放在坐标轴下方、与曲线留出空隙。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.2pt, font=\small}]
+  % A：递增上凸
+  \draw[-stealth] (0,0) -- (1.35,0);
+  \draw[-stealth] (0,0) -- (0,1.35);
+  \draw[thick,domain=0:1.15,samples=60] plot (\x,{0.85*sqrt(\x)});
+  \node[below] at (0.675,-1.05) {（A）};
+  % B：递增下凸
+  \draw[-stealth] (2.3,0) -- (3.65,0);
+  \draw[-stealth] (2.3,0) -- (2.3,1.35);
+  \draw[thick,domain=0:1.12,samples=60] plot ({2.3+\x},{0.75*\x*\x});
+  \node[below] at (2.975,-1.05) {（B）};
+  % C：对数型
+  \draw[-stealth] (4.6,0) -- (5.95,0);
+  \draw[-stealth] (4.6,0) -- (4.6,1.35);
+  \draw[thick,domain=0.45:1.50,samples=100] plot ({4.6+\x},{0.70*ln(\x)/ln(2)});
+  \node[below] at (5.275,-1.05) {（C）};
+  % D：递减
+  \draw[-stealth] (6.9,0) -- (8.25,0);
+  \draw[-stealth] (6.9,0) -- (6.9,1.35);
+  \draw[thick,domain=0:1.25,samples=60] plot ({6.9+\x},{1.05*exp(-1.3*\x)});
+  \node[below] at (7.575,-1.05) {（D）};
+\end{tikzpicture}
