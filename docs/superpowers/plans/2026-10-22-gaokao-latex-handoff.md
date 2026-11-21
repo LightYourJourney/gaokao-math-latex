@@ -1,5 +1,14 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-21 接续：2010 天津理封账（phase6-b82，第 575 卷）
+
+- `gk-2010-tianjin-science`：22 题，四版 7/27/9/20 = 63 页，四 log 全 0；review 63 页 435 pass + 69 not_applicable、0 fail、0 豁免；`FINALIZED` / `closed` / `complete`。报告 `reports/phase6-b82.md`。
+- 源核对：pin `34c13a6c…` 的 sha256 `340aba76…a3cace9`（512,109 bytes，2 页 A3，印面 635–636）与 manifest 一致；上游 HEAD 的 `9021fd6e…` 仅元数据差异、文字层逐字相同，artifact 未替换、无勘误。
+- 图稿 6 张（Q4 流程图、Q10 矩形与内点、Q12 三视图、Q14 圆内接四边形、Q15 三角形、Q19 长方体）；Q20–22 原页无图，未补。
+- 全库 **575 卷 / 775 来源 / 421 批次**，complete 457、blocked 118，未绑定 **201**；`validate-receipts --all --require-final` → OK：575 卷；三套生成器 575 一致。
+- **复发性坑**：子代理在 finalize 后未再跑 `report.py render`，导致 report.md/baseline 落后一个 revision（b81、b82 均出现）。以后由主代理在整卷封账后统一重跑 render+check，并把这两步写入验收清单。
+- 下一步：继续 2010 剩余来源（安徽文理、山东文理、广东文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理、四川理、春季上海），再推进 2011–2014 省级卷。
+
 ## 2026-11-21 接续：2010 天津文封账（phase6-b81，第 574 卷）
 
 - 对象 `gk-2010-tianjin-arts`：22 题（选择 1—10、填空 11—16、解答 17—22），四版 6/24/8/19 = 57 页，四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 57 页八类检查 389 pass + 67 not_applicable、0 fail、0 豁免；`finalize-batch` → `FINALIZED`，批次 `closed`，`production_state=complete`。报告 `reports/phase6-b81.md`。
