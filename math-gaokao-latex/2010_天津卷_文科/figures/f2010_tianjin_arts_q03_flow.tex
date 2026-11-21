@@ -1,0 +1,26 @@
+% 2010 年天津卷文科第 3 题：程序框图，输出 s 的值。
+% 来源 PDF：普通高考/2010/2010天津文.pdf（上游勘误版），SHA-256 e6b06813e17b7c332b651b8784c8fab0fcad0c8666ea6032a2958917c55307c9。
+% 原页：第 1 页（A3 四栏）第 1 栏中部，书页码 637。
+% 重绘依据：开始 → s=1 → i=1 → s=s(3−i)+1 → i=i+1 → 判断 i>4；
+%   是（下）→ 输出 s → 结束；否（右）回到 s=s(3−i)+1 上方。
+\begin{tikzpicture}[scale=0.66, semithick, >=Stealth,
+  node distance=2.8mm, every node/.style={inner sep=2pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=1.7cm, minimum height=0.52cm] {开始};
+  \node (init) [draw, minimum width=1.7cm, minimum height=0.52cm, below=of start] {$s=1$};
+  \node (idx) [draw, minimum width=1.7cm, minimum height=0.52cm, below=of init] {$i=1$};
+  \node (step) [draw, minimum width=4.3cm, minimum height=0.52cm, below=of idx] {$s=s\cdot(3-i)+1$};
+  \node (inc) [draw, minimum width=1.9cm, minimum height=0.52cm, below=of step] {$i=i+1$};
+  \node (cond) [draw, diamond, aspect=1.9, minimum width=2.2cm, minimum height=0.8cm, below=of inc] {$i>4?$};
+  \node (out) [draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.2cm, minimum height=0.52cm, below=of cond] {输出 $s$};
+  \node (end) [draw, rounded corners=4pt, minimum width=1.7cm, minimum height=0.52cm, below=of out] {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (idx);
+  \draw[->] (idx) -- (step);
+  \draw[->] (step) -- (inc);
+  \draw[->] (inc) -- (cond);
+  \draw[->] (cond) -- (out);
+  \node[anchor=west] at ($(cond.south)!0.5!(out.north)+(10pt,-2pt)$) {是};
+  \draw[->] (cond.east) -- ++(0.8,0) |- node[pos=0.25, right] {否} (step.north);
+  \draw[->] (out) -- (end);
+\end{tikzpicture}

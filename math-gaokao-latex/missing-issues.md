@@ -25617,3 +25617,21 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1523
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "q3-contradicts-flowchart",
+  "current_evidence": "原固定件（pin 34c13a6 的 blob be265ea9…，SHA-256 1210823b6018020b1915f17ba0ebf3d74ea26f62471c180d0283a48a66599462，519,846 bytes，2 页 A3，印面 637–638）第 1 页第 3 题题面印「若输出 s 的值为 −7，则判断框内可填写」，但同页框图为 s=s·(3−i)+1、判断 i>4?，实算 s=0；四个选项 −1/0/1/3 无一能使输出为 −7，该页自相矛盾。上游后续提交 8e715a8（说明「根据 DxAThing/Gaokao-Math-Problems-Compilation/ 和权威来源修正一些错误」）把同页该题改为「运行相应的程序，则输出 s 的值为」，选项不变，答案 0（B）。修正版 blob 48839f75efbc4cb09f96524c31638c732411346c，SHA-256 e6b06813e17b7c332b651b8784c8fab0fcad0c8666ea6032a2958917c55307c9，550,524 bytes，2 页 A3；两份 PDF 的 pdftotext -layout 全文 diff 仅第 3 题这一行（原「若输出 s 的值为 −7，则判断框内可填写」→「运行相应的程序，则输出 s 的值为」）。",
+  "fingerprint": "31ed8209b9395e4a811e6673645094fc7b5ba2b2147b88aa9a8afdb58ee92e62",
+  "impact": "non_blocking",
+  "paper_id": "gk-2010-tianjin-arts",
+  "resolution": "按上游勘误处理：manifest 该来源 artifact 已同步更新为修正版（sha256/size_bytes/git_blob_oid 一并更新，commit 34c13a6 的 source_id 身份不变），本卷题面按修正版转录为「运行相应的程序，则输出 s 的值为」，答案 0（B）；原固定件保留在 .work/phase6-b81/source/2010天津文.orig.pdf 供复核。",
+  "resume_action": "已完成：题面按上游 8e715a8 勘误版转录，答案 B；若上游再次改动同一页，按新 blob 重核第 3 题并更新本记录。",
+  "source_id": "src-70e91cde2c185ebe92ffcf383f7b72ebd13279e14753a10eb33b48bda17615ac",
+  "status": "resolved",
+  "type": "source-mismatch"
+}
+```

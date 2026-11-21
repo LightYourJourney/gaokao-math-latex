@@ -4,6 +4,21 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 天津卷（文科）：phase6-b81 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
+
+- 对象：`gk-2010-tianjin-arts`，22 个题号（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-70e91cde2c185ebe92ffcf383f7b72ebd13279e14753a10eb33b48bda17615ac`，原固定件 SHA-256 `1210823b6018020b1915f17ba0ebf3d74ea26f62471c180d0283a48a66599462`（519,846 bytes），2 页 A3 横向，印面页码 637、638；页眉「2010 普通高等学校招生考试（天津卷文）」。
+- 来源勘误：原固定件第 3 题题面与同页框图矛盾（题面「若输出 s 的值为 −7」，框图为 s=s·(3−i)+1、i>4?，实算 s=0，四选项无一致值）。按上游提交 `8e715a8` 的同页修正版转录，manifest 该来源 artifact 同步更新为 SHA-256 `e6b06813e17b7c332b651b8784c8fab0fcad0c8666ea6032a2958917c55307c9`、550,524 bytes、git blob `48839f75…`，source_id 身份不变；原固定件留档 `.work/phase6-b81/source/2010天津文.orig.pdf`，登记 `ISSUE-1523`（`source-mismatch`、`resolved`、`non_blocking`）。
+- 转录口径：PDF 文字层只作定位；分数、根号、上下标、选项、表格与六幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1A 2B 3B 4C 5A 6D 7C 8C 9D 10D；11 $\frac13$；12 $3$；13 $\frac{x^2}4-\frac{y^2}{12}=1$；14 $(x+1)^2+y^2=2$；15 $4$；16 $(-\infty,-1)$；17 (1) 证明、(2) $\frac{4\sqrt2-7\sqrt3}{18}$；18 (1) $\frac35$、(2)① 15 种组合、② $\frac25$；19 (1) $\frac{2\sqrt2}3$、(2) 证明、(3) $\frac14$；20 (1) $y=6x-9$、(2) $0<a<5$；21 (1) $\frac{x^2}4+y^2=1$、(2)① $\frac\pi4$ 或 $\frac{3\pi}4$、② $\pm\frac{2\sqrt{14}}5$；22 (1) 证明、(2) $a_{2k}=2k^2$、$a_{2k-1}=2(k-1)k$、(3) 证明。
+- 逐题复核要点：第 3 题循环依次 $s=3,4,1,0$，$i=5>4$ 输出 $0$；第 7 题 $A=(a-1,a+1)$ 与 $(1,5)$ 不交得 $a\leqslant0$ 或 $a\geqslant6$；第 9 题取 $A(0,0)$、$D(1,0)$、$B(0,-b)$，由 $\overrightarrow{BC}=\sqrt3\overrightarrow{BD}$ 得 $C=(\sqrt3,b(\sqrt3-1))$，故 $\overrightarrow{AC}\cdot\overrightarrow{AD}=\sqrt3$；第 10 题分段值域 $[-9/4,0]\cup(2,+\infty)$；第 11 题 $\triangle PBC\sim\triangle PDA$，$BC/AD=PB/PD=1/3$；第 12 题俯视图梯形面积 $3$、正视图高 $1$，体积 $3$；第 15 题 $T_n=(17-q^n-16q^{-n})/(q-1)$，$u=2^{n/2}=4$ 时最大，$n_0=4$；第 16 题恒成立化为 $2mx-(m+1/m)/x<0$，得 $m<-1$；第 17 题正弦定理给 $\sin(B-C)=0$，$B=C$，$\sin(4B+\pi/3)=\sin(\pi/3-2A)=(4\sqrt2-7\sqrt3)/18$；第 19 题建系 $A(0,0,0)$、$D(2\sqrt2,0,0)$、$F(0,0,2\sqrt2)$、$E(2\sqrt2,0,2\sqrt2)$、$C(3\sqrt2/2,-\sqrt2/2,0)$、$B(\sqrt2/2,-\sqrt2/2,0)$，得 $\cos\theta=2\sqrt2/3$、$CD\perp AB$ 且 $CD\perp AF$、$\tan\theta=1/4$；第 21 题 $ab=2$、$a=2b$ 得椭圆，$|AB|=4\sqrt{1+k^2}/(1+4k^2)=4\sqrt2/5$ 给 $k=\pm1$，$y_0=-3y_B/2$ 与 $\overrightarrow{QA}\cdot\overrightarrow{QB}=4$ 联立得 $y_B^2=224/225$；第 22 题 $a_{2k+1}-a_{2k-1}=4k$ 累加，奇数项 $2k(k-1)$、偶数项 $2k^2$。
+- **第 22 题 (1) 核对结论**：600 dpi 放大原页为「证明 $a_4,a_5,a_6$ 成等比数列」，非 $a_1$；$a_4=8,a_5=12,a_6=18$，$12^2=8\times18$ 成立，无第二处源缺陷。
+- 自查补正（均在封账前完成）：① 第 3 题流程图首版过高，导致选项跨页；压缩为 0.66 倍并加宽处理框至 4.3cm，题面与四选项同页；② 第 12 题三视图首版「正视图」「俯视图」标注与尺寸箭头重叠，重排为三视图分区并留足标注间距；③ 第 7、10、14 题题面尾部「（　）」/「为____」孤行，改成分段（第 10 题分段函数改行间公式）；④ 第 17 题解答减少一条行间公式，答案框回到同页；⑤ 第 12 题解析首段拆为「先求俯视图的面积。」短段 + 公式段，消除印刷版页尾孤立的「解析」标题。
+- 图稿 6 张（Q3 程序框图、Q8 正弦图象、Q9 三角形、Q11 圆内接四边形、Q12 三视图、Q19 五面体），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；**Q21 原页无图，未补绘**（与任务清单的「Q21 椭圆」不符，按源页从实）。
+- 验收：四版 6/24/8/19 页（共 57 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 57 页八类检查全 pass，0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b81.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **574 一致**；`build_projects.py validate-receipts --all --require-final` → **OK：574 卷**；`manifest.csv` 775 行；未绑定来源 203 → **202**。
+- 下一步：继续 2010 年未绑定来源（余春季上海、四川理、天津理、安徽文理、山东文理、广东文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理）。
+
 ### 2010 四川卷（文科）：phase6-b80 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2010-sichuan-arts`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-4f89c774179433f803456744aa1864a03cc0d1224a802dad4d4e6b452240475b`，仓库内固定候选 PDF `math-gaokao-latex/.work/ocr-local/sources/2010四川文.pdf`，SHA-256 `2e342add328217ef1fa0fc2a996f37d00cfc044a104397b29bdd75bedb1867fc`，530,191 bytes，2 页 A3 横向，印面页码 633、634；页眉「2010 普通高等学校招生考试（四川卷文）」。
