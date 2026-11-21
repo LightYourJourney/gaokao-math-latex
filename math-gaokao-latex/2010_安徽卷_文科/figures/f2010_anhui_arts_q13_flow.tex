@@ -1,0 +1,32 @@
+% 2010 年安徽卷文科第 13 题：算法流程图。
+% 来源 PDF：普通高考/2010/2010安徽文.pdf，SHA-256 1bd928e09356787e648fa9efb9b4c1525f26334f65b08ba82fc736ebb110a4cb。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 571。
+% 重绘依据：开始 → x=1 → 判断「x 是奇数?」；是（右）→ x=x+1 → 回到判断前；
+%   否（下）→ x=x+2 → 判断「x>8?」；否（右）→ 回到「x 是奇数?」前；是（下）→ 输出 x → 结束。
+\begin{tikzpicture}[semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=1.9cm, minimum height=0.55cm] at (0,0) {开始};
+  \node (x1) [draw, minimum width=1.9cm, minimum height=0.55cm] at (0,-1.35) {$x=1$};
+  \node (c1) [draw, diamond, aspect=2.1, minimum width=3.1cm,
+    minimum height=1.15cm] at (0,-3.15) {$x$ 是奇数?};
+  \node (p1) [draw, minimum width=2.5cm, minimum height=0.55cm] at (3.7,-3.15) {$x=x+1$};
+  \node (p2) [draw, minimum width=2.5cm, minimum height=0.55cm] at (0,-4.85) {$x=x+2$};
+  \node (c2) [draw, diamond, aspect=2.1, minimum width=3.1cm,
+    minimum height=1.15cm] at (0,-6.65) {$x>8?$};
+  \node (out) [draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.4cm, minimum height=0.55cm] at (0,-8.25) {输出 $x$};
+  \node (end) [draw, rounded corners=4pt, minimum width=1.9cm, minimum height=0.55cm] at (0,-9.45) {结束};
+
+  \draw[->] (start) -- (x1);
+  \draw[->] (x1) -- (c1);
+  \draw[->] (c1.east) -- node[above] {是} (p1.west);
+  \draw[->] (c1.south) -- node[right] {否} (p2.north);
+  \draw[->] (p2) -- (c2);
+  \draw[->] (c2.south) -- node[right] {是} (out.north);
+  \draw[->] (out) -- (end);
+  % x=x+1 的回流
+  \draw (p1.north) -- (3.7,-2.0) -- (0,-2.0);
+  % x>8? 为否时的回流
+  \draw (c2.east) -- node[above] {否} (5.2,-6.65) -- (5.2,-2.0) -- (0,-2.0);
+  \draw[->] (0,-2.0) -- (c1.north);
+\end{tikzpicture}
