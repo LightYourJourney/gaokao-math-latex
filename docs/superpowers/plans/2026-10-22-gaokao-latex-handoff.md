@@ -1,5 +1,14 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-21 接续：2010 安徽文封账（phase6-b83，第 576 卷）
+
+- `gk-2010-anhui-arts`：21 题（选择 1—10、填空 11—15、解答 16—21），四版 6/23/8/20 = 57 页，四 log 全 0；review 57 页 398 pass + 58 not_applicable、0 fail、0 豁免；`FINALIZED`/`closed`/`complete`。报告 `reports/phase6-b83.md`。
+- 源核对：pin `34c13a6c…` 的 sha256 `1bd928e0…a4cb`（536,028 bytes，2 页 A3，印面 571–572）与 manifest 一致，artifact 未替换、无勘误。
+- 图稿 6 张；Q18 原页无图，未补频率直方图。
+- 源页瑕疵：Q10 的 (A)(B) 均印 `3/18`，照录并在解析注明，唯一正确项 (C)，按非阻塞处理。
+- 全库 **576 卷 / 775 来源 / 422 批次**，complete 458、blocked 118，未绑定 **200**；`validate-receipts --all --require-final` → OK：576 卷；三套生成器 576 一致；主代理已重跑 render/check 并一致。
+- 下一步：2010 四川理（b84）→ 山东文理 → 广东文理 → 江苏 → 江西文理 → 浙江文理 → 湖北文理 → 湖南文理 → 福建文理 → 辽宁文理 → 重庆文理 → 陕西文理 → 春季上海。
+
 ## 2026-11-21 接续：2010 天津理封账（phase6-b82，第 575 卷）
 
 - `gk-2010-tianjin-science`：22 题，四版 7/27/9/20 = 63 页，四 log 全 0；review 63 页 435 pass + 69 not_applicable、0 fail、0 豁免；`FINALIZED` / `closed` / `complete`。报告 `reports/phase6-b82.md`。
