@@ -1,0 +1,19 @@
+% 2010 年广东卷理科第 17 题：频率分布直方图。
+% 来源 PDF：普通高考/2010/2010广东理.pdf，SHA-256 1c708f5a82d57782cd31357148f1dba05af44c63ffab0045cf301c88eb5d5fd7。
+% 原页：第 1 页（A3 三栏）第 3 栏中部，书页码 593。
+% 重绘依据：组距 5，各组高度依次为 0.01、0.03、0.04、0.05、0.07，样本容量 40。
+\begin{tikzpicture}[semithick, x=0.53cm, y=50cm, every node/.style={inner sep=1.5pt, font=\small}]
+  \draw[-stealth] (489,0) -- (516,0) node[right] {重量/克};
+  \draw[-stealth] (490,0) -- (490,0.08) node[above] {$\dfrac{\text{频率}}{\text{组距}}$};
+  \foreach \h/\lab in {0.01/0.01,0.03/0.03,0.04/0.04,0.05/0.05,0.07/0.07} {
+    \draw (489.8,\h) -- (490.2,\h);
+    \node[left,font=\scriptsize] at (489.4,\h) {$\lab$};
+  }
+  \foreach \x/\h in {490/0.01,495/0.03,500/0.04,505/0.05,510/0.07} {
+    \draw[fill=gray!25] (\x,0) rectangle (\x+5,\h);
+  }
+  \foreach \x in {490,495,500,505,510,515} {
+    \draw (\x,0) -- (\x,-0.003) node[below] {$\x$};
+  }
+  \node[below] at (502.5,-0.009) {};
+\end{tikzpicture}

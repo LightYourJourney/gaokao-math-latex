@@ -1,0 +1,30 @@
+% 2010 年广东卷理科第 13 题：程序框图。
+% 来源 PDF：普通高考/2010/2010广东理.pdf，SHA-256 1c708f5a82d57782cd31357148f1dba05af44c63ffab0045cf301c88eb5d5fd7。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 593。
+% 重绘依据：开始 → 输入 n,x1..xn → s1=s2=0,i=1 → 判断 i≤n；
+%   是（右）→ s1=s1+xi, s2=s2+xi^2 → s=(1/i)(s2-(1/i)s1^2) → i=i+1 → 回到判断前；
+%   否（下）→ 输出 s → 结束。
+\begin{tikzpicture}[semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=1.8cm, minimum height=0.55cm] at (0,0) {开始};
+  \node (in) [draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=3.8cm, minimum height=0.55cm] at (0,-1.45) {输入 $n,x_1,\cdots,x_n$};
+  \node (init) [draw, minimum width=3.2cm, minimum height=0.6cm] at (0,-3.05) {$s_1=0$，$s_2=0$，$i=1$};
+  \node (test) [draw, diamond, aspect=2.2, minimum width=2.8cm, minimum height=1.15cm] at (0,-4.95) {$i\leqslant n$};
+  \node (out) [draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.2cm, minimum height=0.55cm] at (0,-6.95) {输出 $s$};
+  \node (end) [draw, rounded corners=4pt, minimum width=1.8cm, minimum height=0.55cm] at (0,-8.25) {结束};
+  \node (add) [draw, minimum width=3.6cm, minimum height=0.65cm] at (4.8,-4.15) {$s_1=s_1+x_i$，$s_2=s_2+x_i^2$};
+  \node (avg) [draw, minimum width=3.0cm, minimum height=0.95cm] at (4.8,-2.6) {$s=\dfrac1i\left(s_2-\dfrac1i s_1^2\right)$};
+  \node (inc) [draw, minimum width=1.5cm, minimum height=0.55cm] at (4.8,-1.55) {$i=i+1$};
+
+  \draw[->] (start) -- (in);
+  \draw[->] (in) -- (init);
+  \draw[->] (init) -- (test);
+  \draw[->] (test.south) -- node[right] {否} (out.north);
+  \draw[->] (out) -- (end);
+  \draw[->] (test.east) -- node[above] {是} (add.west);
+  \draw[->] (add) -- (avg);
+  \draw[->] (avg) -- (inc);
+  \draw[->] (inc.north) -- (4.8,-1.0) -- (-4.0,-1.0) -- (-4.0,-3.05) -- (init.west);
+\end{tikzpicture}

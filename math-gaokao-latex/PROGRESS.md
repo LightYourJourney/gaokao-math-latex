@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 广东卷（理科）：phase6-b89 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+
+- 对象：`gk-2010-guangdong-science`，21 个题号（选择 1—8、填空 9—15、解答 16—21）；固定来源 `src-43483ab55a1bda8fa0b52260ccc53c621def4589b7388fba10876c156138966a`，固定件 SHA-256 `1c708f5a82d57782cd31357148f1dba05af44c63ffab0045cf301c88eb5d5fd7`（513,366 bytes），2 页 A3 横向，印面页码 593、594；页眉「2010 普通高等学校招生考试（广东卷理）」。
+- 来源核对：按 manifest 上游 pin commit `34c13a6c…` 取回 `普通高考/2010/2010广东理.pdf`，现场 SHA-256 与登记值一致；文字层只作定位，分数、根号、上下标、选项、三张表与五幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—8、填空题 9—15、解答题 16—21。
+- 答案（独立推导，等级 D，非官方）：1D 2A 3B 4C 5A 6D 7B 8C；9 $(2,+\infty)$；10 $2$；11 $1$；12 $(x+2)^2+y^2=2$；13 $\dfrac14$；14 $\dfrac{9a}8$；15 $\left(\sqrt2,\dfrac{3\pi}4\right)$；16 (1) $\dfrac{2\pi}3$、(2) $f(x)=4\sin(3x+\frac\pi4)$、(3) $\pm\frac{\sqrt5}5$；17 (1) $24$ 件、(2) $P(Y=0)=\frac2{13}$、$P(Y=1)=\frac{32}{65}$、$P(Y=2)=\frac{23}{65}$、(3) $\frac{144}{625}$；18 (1) 证明、(2) $\frac{2\sqrt{29}}{29}$；19 午餐 $4$、晚餐 $3$，最低 $22$ 元；20 (1) $\frac{x^2}2+y^2=1$（除去 $(\pm\sqrt2,0)$）、(2) $h=\sqrt3$；21 (1) 证明、(2) 存在，等号点按两坐标同向/反向分别为 $x+y$ 或 $x-y$ 等于相应常数。
+- 逐题复核要点：第 1 题交集 $(0,1)$；第 4 题同文科第 4 题 $S_5=31$；第 5 题 $\Delta=1-4m\geqslant0$ 给 $m\leqslant\frac14$；第 6 题正视图左低右高、中央最高，选 D；第 7 题正态对称给 $0.1587$；第 8 题 $5!=120$ 个闪烁，$120\times5+119\times5=1195$ 秒；第 10 题 $(c-a)\cdot(2b)=2(1-x)=-2$ 给 $x=2$；第 11 题 $B=\frac\pi3$、$A=\frac\pi6$、$C=\frac\pi2$；第 13 题逐轮 $s$ 为 $0,\frac14$；第 14 题 $AP=\frac{\sqrt3a}2$、相交弦定理给 $CP=\frac{9a}8$；第 15 题 $x=-1,y=1$ 对应 $\left(\sqrt2,\frac{3\pi}4\right)$；第 16 题 $A=4,\varphi=\frac\pi4$，$4\cos2\alpha=\frac{12}5$；第 17 题各组频数 $2,6,8,10,14$，超 505 克 24 件；第 18 题建系 $A(-a,0,0)$、$B(0,0,0)$、$C(a,0,0)$、$D(2a,0,0)$、$E(0,a,0)$、$F(a,0,2a)$，$Q(\frac a3,\frac{2a}3,\frac{2a}3)$、$R(\frac a3,0,\frac{2a}3)$，二面角正弦 $\frac{2\sqrt{29}}{29}$；第 19 题 $(4,3)$ 费用 $22$；第 20 题消去参数得 $x^2+2y^2=2$，切线条件 $k^2=\frac{h^2-1}2$ 与 $k_1k_2=-1$ 给 $h=\sqrt3$；第 21 题 $a+c=b+d$，用符号函数统一处理同向/反向两种情形。
+- 自查补正（封账前完成）：① 第 17 题直方图初版宽逾版心并触发 Overfull，改为 $x=0.53$cm、$y=50$cm 并重排纵轴刻度，`0.07/0.05/0.04/0.03/0.01` 不再相压；② 第 13 题流程图初版节点过密、右列与输入框贴近，改为分列并绕左侧回流；③ 第 14 题 $P$ 标注原被弦遮挡，移至点右上方；④ 第 18 题题干 `\overparen` 改为 `\overset{\frown}`，$Q$、$R$ 标注分开；⑤ 第 21 题 (2) 初版符号推导写错，改为 `sgn` 统一处理 $a-b$、$d-c$，并同步答案要点与简答。
+- 图稿 6 张（Q6 多面体、Q6 四个正视图、Q13 程序框图、Q14 圆与两条弦、Q17 频率分布直方图、Q18 半圆与三棱锥），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 源缺陷：无。第 16 题题面未限定 $\alpha$ 象限，答案保留 $\pm\frac{\sqrt5}5$。
+- 验收：四版 6/26/8/20 页（共 60 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 60 页八类检查 408 pass + 72 not_applicable、0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b89.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **582 一致**；`build_projects.py validate-receipts --all --require-final` → **OK：582 卷**；manifest **582 卷 / 775 来源 / 428 批次**，complete 464、blocked 118，未绑定来源 **194**；`manifest.csv` 775 行。
+- 下一步：继续 2010 年未绑定来源（余江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理）。
+
 ### 2010 广东卷（文科）：phase6-b88 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
 
 - 对象：`gk-2010-guangdong-arts`，21 个题号（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-570cf4a53cb0fa9bbea951416f5f61d0324f2856afd9c919ebd17b59f06021af`，固定件 SHA-256 `dd04b2053a22c854a9abe1ee03241fc04d5a25c91cda1d7997183bdfaa4a8c6f`（515,762 bytes），2 页 A3 横向，印面页码 595、596；页眉「2010 普通高等学校招生考试（广东卷文）」。

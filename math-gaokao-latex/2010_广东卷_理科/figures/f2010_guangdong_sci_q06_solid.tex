@@ -1,0 +1,27 @@
+% 2010 年广东卷理科第 6 题：多面体 ABC-A'B'C'。
+% 来源 PDF：普通高考/2010/2010广东理.pdf，SHA-256 1c708f5a82d57782cd31357148f1dba05af44c63ffab0045cf301c88eb5d5fd7。
+% 原页：第 1 页（A3 三栏）第 1 栏下部，书页码 593。
+% 重绘依据：ABC 为正三角形；AA'、BB'、CC' 平行且 CC'⊥平面 ABC；
+%   3AA'=(3/2)BB'=CC'=AB。AC 与 CC' 为不可见棱，画虚线。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.6pt, font=\small}]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4,0);
+  \coordinate (C) at (2,1.1);
+  \coordinate (Ap) at (0,1.1);
+  \coordinate (Bp) at (4,2.2);
+  \coordinate (Cp) at (2,3.3);
+
+  \draw (A) -- (B) -- (C);
+  \draw[dashed] (C) -- (A);
+  \draw (A) -- (Ap);
+  \draw (B) -- (Bp);
+  \draw[dashed] (C) -- (Cp);
+  \draw (Ap) -- (Bp) -- (Cp) -- cycle;
+
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[left] at (Ap) {$A'$};
+  \node[right] at (Bp) {$B'$};
+  \node[above] at (Cp) {$C'$};
+\end{tikzpicture}
