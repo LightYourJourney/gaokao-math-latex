@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 四川卷（理科）：phase6-b84 新卷转录、四版构建与视觉审查收口（2026-11-22；`closed`）
+
+- 对象：`gk-2010-sichuan-science`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-6c206dc50135216ccd0326e808d276bd691568d1ebed92df4ae4c1b807a40b08`，固定件 SHA-256 `499425696359cfc2cf4418254bdaa1a37487b3dbaa072ff3c7cbe18dbabe73dc`（546,297 bytes），2 页 A3 横向，印面页码 631、632；页眉「2010 普通高等学校招生考试（四川卷理）」。
+- 来源核对：按 manifest 上游 pin commit `34c13a6c…` 取回 `普通高考/2010/2010四川理.pdf`，现场 SHA-256 与登记值一致；PDF 文字层只作定位，分数、根号、上下标、选项与四幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1A 2D 3C 4A 5C 6C 7B 8B 9D 10C 11A 12B；13 $-\dfrac{160}{x}$；14 $2\sqrt3$；15 $\dfrac{\sqrt3}{4}$；16 ①②；17 (1) $\dfrac{25}{216}$、(2) 分布列见解析，$E\xi=\dfrac12$；18 (1) 证明、(2) $\arccos\dfrac13$、(3) $\dfrac{1}{24}$；19 (1) 证明、(2) $-\dfrac{\sqrt{10}}{10}$；20 (1) $x^2-\dfrac{y^2}{3}=1$、(2) 以 $MN$ 为直径的圆过点 $F$；21 (1) $a_3=6$、$a_5=20$，(2) $b_n=8n-2$、公差 $8$，(3) 错位相减求和；22 (1) $5\leqslant t\leqslant32$、(2) 证明、(3) $\left|\sum\limits_{k=1}^nf(k)-n\right|<4$。
+- 逐题复核要点：第 5 题 $\overrightarrow{AB}\perp\overrightarrow{AC}$、$|AM|=\frac12|BC|=2$；第 7 题可行域顶点 $(0,70)$、$(48,0)$、$(15,55)$，目标 $280x+200y$ 在 $(15,55)$ 取 $15200$；第 8 题 $S_n+a_1$ 为公比 $2$ 的等比数列，$\lim a_n/S_n=1/2$；第 9 题 $|AF|=b^2/c$ 须落在 $[a-c,a+c]$，得 $e\in[1/2,1)$；第 10 题容斥 $360-144-144+36=108$；第 11 题建系得 $\cos\angle MON=17/25$；第 12 题 $\frac1{ab}+\frac1{a(a-b)}=\frac1{b(a-b)}\geq\frac4{a^2}$，再加 $a^2+\frac4{a^2}\geq4$；第 13 题 $T_4=\mathrm C_6^3\cdot2^3\left(-x^{-1/3}\right)^3=-160/x$；第 15 题 $\sin\theta=\sin30^\circ\sin60^\circ=\sqrt3/4$；第 18 题建系证 $OM\perp AA'$、$OM\perp BD'$，二面角 $\arccos\frac13$，体积 $\frac1{24}$；第 20 题以 $x=my+2$ 代入双曲线，韦达定理给 $y_My_N=-\frac94$、$\overrightarrow{FM}\cdot\overrightarrow{FN}=0$；第 21 题由 $a_{2m-1}=2a_m+2(m-1)^2$ 两式相减得 $a_{p+q-1}=a_p+a_q+2(p-1)(q-1)$，取 $q=2$ 得 $a_{n+1}-a_n=2n$；第 22 题 $t=(x-1)^2(7-x)\in[5,32]$，第二问化为 $\ln x<(x-1)/\sqrt x$，第三问用 $\frac{a^k}{1-a^k}\leqslant2a^k$ 收口。
+- 自查补正（封账前完成）：① 解析版第 11 题答案框原孤行到第 16 页顶端（「故选 A。」与答案框离开解析）——将 $|OP|=R$ 的二次方程并入行文、合并点积中间步骤并把行内分式改为 `\frac`，重编后 Q11 题面、配图、解析与答案框全部收在解析版第 15 页，四版页数仍为 6/28/8/21，题面字符未动；② `2010_数学真题_四川理_含解析.md` 与确定性生成结果不一致，已用 `solution_sources extract-batch --write` 重生成并复检通过。
+- 图稿 4 张（Q2 四个函数图象、Q11 球与平面、Q15 二面角、Q18 正方体），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 源缺陷：无。
+- 验收：四版 6/28/8/21 页（共 63 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 63 页八类检查 425 pass + 79 not_applicable、0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b84.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **577 一致**；`build_projects.py validate-receipts --all --require-final` → **OK：577 卷**；manifest **577 卷 / 775 来源 / 423 批次**，complete 459、blocked 118，未绑定来源 **199**；`manifest.csv` 775 行。
+- 下一步：继续 2010 年未绑定来源（余安徽理、山东文理、广东文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理）。
+
 ### 2010 安徽卷（文科）：phase6-b83 新卷转录、四版构建与视觉审查收口（2026-11-21；`closed`）
 
 - 对象：`gk-2010-anhui-arts`，21 个题号（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-9aec85daace90e652201ac70c589559cc4d4909d941a0da2878a6970ef3096a1`，固定件 SHA-256 `1bd928e09356787e648fa9efb9b4c1525f26334f65b08ba82fc736ebb110a4cb`（536,028 bytes），2 页 A3 横向，印面页码 571、572；页眉「2010 普通高等学校招生考试（安徽卷文）」。

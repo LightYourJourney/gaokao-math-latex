@@ -1,0 +1,53 @@
+% 2010 年四川卷理科第 2 题：四个函数图象选项（A）—（D）。
+% 来源 PDF：普通高考/2010/2010四川理.pdf，SHA-256 499425696359cfc2cf4418254bdaa1a37487b3dbaa072ff3c7cbe18dbabe73dc。
+% 原页：第 1 页（A3 三栏）第 1 栏中部，书页码 631。
+% 重绘依据：原页为两行两列四幅图象，均只画坐标系与曲线、不标刻度；
+%   (A) 双曲线型，x=0 左右两支各自趋于无穷，无定义点；
+%   (B) 递增曲线在 x=0 处挖去一点（空心圈），极限存在但函数值缺失；
+%   (C) y=|x| 形状，原点挖空、另在 y 轴负半轴实心一点；
+%   (D) 左支曲线渐平后自 x=0 起接一条下降直线，两段在该点相接，连续。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.2pt, font=\small}]
+  % ===== (A)：双曲线型，x=0 处两侧都趋于无穷
+  \draw[-stealth] (0.25,1.40) -- (4.00,1.40);
+  \draw[-stealth] (1.55,0.05) -- (1.55,3.15);
+  \draw[thick,domain=1.67:3.85,samples=80] plot (\x,{1.40+0.25/(\x-1.55)});
+  \draw[thick,domain=0.30:1.28,samples=80] plot (\x,{1.40-0.25/(1.55-\x)});
+  \node[below left] at (1.55,1.40) {$O$};
+  \node[left] at (1.55,3.15) {$y$};
+  \node[below] at (4.00,1.40) {$x$};
+  \node at (2.05,-0.45) {（A）};
+
+  % ===== (B)：递增曲线，x=0 处为空心圈
+  \draw[-stealth] (5.85,1.40) -- (9.60,1.40);
+  \draw[-stealth] (7.15,0.05) -- (7.15,3.15);
+  \draw[thick,domain=5.95:8.55,samples=100]
+    plot (\x,{1.72+0.50*(\x-7.15)+0.18*(\x-7.15)*(\x-7.15)*(\x-7.15)});
+  \draw[fill=white,thick] (7.15,1.72) circle (2.2pt);
+  \node[below right] at (7.15,1.40) {$O$};
+  \node[left] at (7.15,3.15) {$y$};
+  \node[below] at (9.60,1.40) {$x$};
+  \node at (7.65,-0.45) {（B）};
+
+  % ===== (C)：y=|x| 形状，原点挖空、y 轴负半轴另有实心点
+  \draw[-stealth] (0.25,-2.15) -- (4.00,-2.15);
+  \draw[-stealth] (1.55,-3.45) -- (1.55,-0.95);
+  \draw[thick] (0.35,-0.95) -- (1.55,-2.15);
+  \draw[thick] (1.55,-2.15) -- (2.75,-0.95);
+  \draw[fill=white,thick] (1.55,-2.15) circle (2.2pt);
+  \fill (1.55,-2.75) circle (1.6pt);
+  \node[below left] at (1.55,-2.15) {$O$};
+  \node[left] at (1.55,-0.95) {$y$};
+  \node[below] at (4.00,-2.15) {$x$};
+  \node at (2.05,-3.95) {（C）};
+
+  % ===== (D)：左支渐平、x=0 处接一条下降直线
+  \draw[-stealth] (5.85,-2.15) -- (9.60,-2.15);
+  \draw[-stealth] (7.15,-3.45) -- (7.15,-0.95);
+  \draw[thick,domain=5.95:7.15,samples=80]
+    plot (\x,{-2.02+0.95*((7.15-\x)/1.20)*((7.15-\x)/1.20)});
+  \draw[thick] (7.15,-2.02) -- (8.45,-3.18);
+  \node[below left] at (7.15,-2.15) {$O$};
+  \node[left] at (7.15,-0.95) {$y$};
+  \node[below] at (9.60,-2.15) {$x$};
+  \node at (7.65,-3.95) {（D）};
+\end{tikzpicture}
