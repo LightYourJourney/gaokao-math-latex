@@ -3548,6 +3548,14 @@
         "gk-2010-anhui-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b86",
+      "issues": [],
+      "paper_ids": [
+        "gk-2010-shandong-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3557,7 +3565,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ebf2dd35-748f-449c-80c2-e67657f5f4ac",
+  "last_transaction_id": "f7e842f4-ce79-410f-82f0-75c4769d9b79",
   "papers": [
     {
       "blocked_from": null,
@@ -42351,9 +42359,78 @@
       "title": "2010 年·普通高等学校招生考试·安徽卷·理科",
       "track": "science",
       "year": 2010
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2010_山东卷_文科/figures/f2010_shandong_arts_q11_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_山东卷_文科/figures/f2010_shandong_arts_q13_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_山东卷_文科/figures/f2010_shandong_arts_q20_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_山东卷_文科/figures/f2010_shandong_arts_q22_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2010_gaokao_shandong_arts",
+        "id": "gk-2010-shandong-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 621、622；页眉「2010 普通高等学校招生考试（山东卷文）」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。山东卷题号：选择 1—12、填空 13—16、解答 17—22，共 22 题。答案由本库独立推导（非官方）。第 1 题补集 (−∞,−2)∪(2,+∞)；第 2 题 (a+2i)/i=2−ai，a=−1、b=2；第 3 题值域 (0,+∞)；第 4 题垂直于同一平面的两条直线平行；第 5 题 f(0)=0 给 b=−1，f(−1)=−3；第 6 题去 95、89 后平均 92、方差 2.8；第 7 题 a1>0 时 a1<a2 与递增均等价于 q>1；第 8 题 y′=−x²+81，x=9；第 9 题中点纵坐标 p=2，准线 x=−1；第 10 题偶函数导数为奇函数；第 11 题图象 A；第 12 题 b⊙a=−a⊙b，B 错；第 13 题循环输出 −5/4；第 14 题 xy≤3；第 15 题 B=π/4，A=π/6；第 16 题圆心 (3,0)，x+y−3=0；第 17 题 ω=1，g 最小值 1；第 18 题 a_n=2n+1、S_n=n²+2n，T_n=n/(4(n+1))；第 19 题 1/3 与 13/16；第 20 题建系证平面垂直，体积比 1/4；第 21 题切线 y=x+ln2，按 a<0、a=0、0<a<1/2、a=1/2 讨论单调性；第 22 题 x²/2+y²=1，1/k1−3/k2=2，P(0,2) 或 (5/4,3/4)。原页共 4 幅图：第 11 题四个函数图象、第 13 题程序框图、第 20 题多面体、第 22 题椭圆与直线 l；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "山东文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2010-shandong-arts",
+      "production_state": "complete",
+      "project_dir": "2010_山东卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2010/2010_数学真题_山东文_答案要点.md",
+        "combined_rendered": "2010/2010_数学真题_山东文_含解析.md",
+        "questions": "2010/2010_数学真题_山东文_试题.md",
+        "solution_body": "2010/2010_数学真题_山东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-7a8577501a76c6e78ae1f130b8baa902343345d90f0972753a94aa21a864c2fe"
+      ],
+      "title": "2010 年·普通高等学校招生考试·山东卷·文科",
+      "track": "arts",
+      "year": 2010
     }
   ],
-  "revision": 10451,
+  "revision": 10456,
   "schema_version": 1,
   "sources": [
     {
@@ -53366,8 +53443,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d22ab7d773250e1e77f87e2a03a1268b44db7726",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2010-shandong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2010山东文.pdf",
       "regions": [],
       "source_id": "src-7a8577501a76c6e78ae1f130b8baa902343345d90f0972753a94aa21a864c2fe",

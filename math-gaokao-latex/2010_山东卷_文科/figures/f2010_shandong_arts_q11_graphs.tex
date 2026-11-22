@@ -1,0 +1,41 @@
+% 2010 年山东卷文科第 11 题：四个函数图象选项（A）—（D）。
+% 来源 PDF：普通高考/2010/2010山东文.pdf，SHA-256 95a69b861a29ca594f9118c9643efcdfd04cae3c4f374ff9fa009f7ac99712f4。
+% 原页：第 1 页（A3 三栏）第 2 栏上部，书页码 621。
+% 重绘依据：正确图象为 y=2^x-x^2：x→-∞ 时 y→-∞，过负根后上升，x=0 时 y=1，
+%   x=2 与 x=4 时 y=0，2<x<4 时 y<0，x>4 后上升。其余三幅为干扰项。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.2pt, font=\small}]
+  % (A) 正确图象
+  \begin{scope}
+    \draw[-stealth] (-2.5,0) -- (5.0,0) node[right] {$x$};
+    \draw[-stealth] (0,-1.6) -- (0,1.3) node[above] {$y$};
+    \draw[thick,domain=-2.3:4.75,samples=180]
+      plot (\x,{0.28*(exp(\x*ln(2))-(\x)*(\x))});
+    \node at (1.2,-2.15) {（A）};
+  \end{scope}
+  % (B) 干扰项
+  \begin{scope}[shift={(7.2,0)}]
+    \draw[-stealth] (-2.3,0) -- (4.8,0) node[right] {$x$};
+    \draw[-stealth] (0,-1.5) -- (0,1.6) node[above] {$y$};
+    \draw[thick] (-2.2,-1.1) .. controls (-1.2,1.8) and (1.4,1.7) .. (3.6,0.05)
+      .. controls (4.1,-0.1) and (4.4,0.5) .. (4.7,1.4);
+    \node at (1.2,-2.15) {（B）};
+  \end{scope}
+  % (C) 干扰项
+  \begin{scope}[shift={(0,-4.6)}]
+    \draw[-stealth] (-2.2,0) -- (4.8,0) node[right] {$x$};
+    \draw[-stealth] (0,-1.4) -- (0,1.6) node[above] {$y$};
+    \draw[thick] (-2.1,1.2) .. controls (-1.2,-0.4) and (0.4,-0.2) .. (1.4,0.9)
+      .. controls (2.2,1.6) and (2.8,0.9) .. (3.0,-0.1)
+      .. controls (3.2,-1.0) and (3.5,-1.2) .. (3.9,-1.4);
+    \node at (1.2,-2.15) {（C）};
+  \end{scope}
+  % (D) 干扰项
+  \begin{scope}[shift={(7.2,-4.6)}]
+    \draw[-stealth] (-2.2,0) -- (4.8,0) node[right] {$x$};
+    \draw[-stealth] (0,-1.6) -- (0,1.5) node[above] {$y$};
+    \draw[thick] (-2.1,0.7) .. controls (-1.4,-0.5) and (-0.8,0.4) .. (0.0,0.65)
+      .. controls (0.9,0.9) and (1.1,-0.5) .. (1.5,-1.1)
+      .. controls (2.1,-1.8) and (3.3,-0.3) .. (4.6,1.2);
+    \node at (1.2,-2.15) {（D）};
+  \end{scope}
+\end{tikzpicture}

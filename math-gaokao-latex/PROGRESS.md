@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 山东卷（文科）：phase6-b86 新卷转录、四版构建与视觉审查收口（2026-11-22；`closed`）
+
+- 对象：`gk-2010-shandong-arts`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-7a8577501a76c6e78ae1f130b8baa902343345d90f0972753a94aa21a864c2fe`，固定件 SHA-256 `95a69b861a29ca594f9118c9643efcdfd04cae3c4f374ff9fa009f7ac99712f4`（528,835 bytes），2 页 A3 横向，印面页码 621、622；页眉「2010 普通高等学校招生考试（山东卷文）」。
+- 来源核对：按 manifest 上游 pin commit `34c13a6c…` 取回 `普通高考/2010/2010山东文.pdf`，现场 SHA-256 与登记值一致；文字层只作定位，分数、根号、上下标、选项与四幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1C 2B 3A 4D 5A 6B 7C 8C 9B 10D 11A 12B；13 $-\dfrac54$；14 $3$；15 $\dfrac\pi6$；16 $x+y-3=0$；17 (1) $\omega=1$、(2) 最小值 $1$；18 (1) $a_n=2n+1$、$S_n=n^2+2n$，(2) $T_n=\dfrac{n}{4(n+1)}$；19 (1) $\dfrac13$、(2) $\dfrac{13}{16}$；20 (1) 证明、(2) $\dfrac14$；21 (1) $y=x+\ln2$、(2) 按 $a<0$、$a=0$、$0<a<\frac12$、$a=\frac12$ 分类讨论；22 (1) $\dfrac{x^2}{2}+y^2=1$、(2)① 证明，② $P(0,2)$ 或 $P\left(\dfrac54,\dfrac34\right)$。
+- 逐题复核要点：第 1 题 $M=[-2,2]$，补集 $(-\infty,-2)\cup(2,+\infty)$；第 2 题 $(a+2\mathrm i)/\mathrm i=2-a\mathrm i$，$a=-1,b=2$；第 4 题 D 为真，其余可举反例；第 5 题 $f(0)=1+b=0$，$f(-1)=-f(1)=-3$；第 6 题去 $95$、$89$ 后平均 $92$、方差 $14/5=2.8$；第 7 题 $a_1>0$ 时 $a_1<a_2$ 与递增均等价于 $q>1$；第 8 题 $y'=-x^2+81$，$x=9$；第 9 题 $y_1+y_2=2p$ 给 $p=2$，准线 $x=-1$；第 10 题偶函数导数为奇函数；第 11 题按零点 $2,4$ 与 $2<x<4$ 时 $y<0$ 选 A；第 12 题 $\boldsymbol b\odot\boldsymbol a=-\boldsymbol a\odot\boldsymbol b$；第 13 题循环 $4\to1\to-\frac12\to-\frac54$；第 14 题 $xy\leqslant3$；第 15 题 $B=\frac\pi4$，$A=\frac\pi6$；第 16 题圆心 $(3,0)$，垂线 $x+y-3=0$；第 17 题 $f=\frac12+\frac{\sqrt2}2\sin(2\omega x+\frac\pi4)$，$g_{\min}=1$；第 18 题 $a_1=3,d=2$，$b_n=\frac14(\frac1n-\frac1{n+1})$；第 19 题 2/6 与 13/16；第 20 题建系 $A(0,0,0)$、$B(2,0,0)$、$D(0,2,0)$、$M(0,0,1)$、$P(0,2,2)$，$n_{EFG}=(1,0,0)$ 与 $n_{PDC}=(0,1,0)$ 垂直，体积比 $1/4$；第 21 题 $f'=\frac{(x-1)(-ax+1-a)}{x^2}$ 分类；第 22 题 $1/k_1-3/k_2=2$，由 $k_1/(1-k_1^2)+k_2/(1-k_2^2)=0$ 得 $(k_1+k_2)(1-k_1k_2)=0$。
+- 自查补正（封账前完成）：① 第 11 题四幅图象初版坐标轴与选项标签互相压叠，改为 2×2 分栏、标签置于各图下方，并将正确项 A 按 $y=2^x-x^2$ 的零点与符号变化重绘；② 第 13 题流程图初版 $y=\frac12x-1$、判断框与 $x=y$ 回流线重叠，重新拉开层距并改走右侧回流；③ 第 20 题多面体初版 $P-D$ 线既实又虚，删去重复实线，并调整 $D$、$E$、$G$ 标注锚点；④ 第 22 题椭圆按 $P(0.4,1.6)$ 重算四个交点，放大图形并分开标注。
+- 图稿 4 张（Q11 四个函数图象、Q13 程序框图、Q20 多面体、Q22 椭圆与直线 $l$），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 源缺陷：无。
+- 验收：四版 6/26/8/21 页（共 61 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 61 页八类检查 413 pass + 75 not_applicable、0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b86.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **579 一致**；`build_projects.py validate-receipts --all --require-final` → **OK：579 卷**；manifest **579 卷 / 775 来源 / 425 批次**，complete 461、blocked 118，未绑定来源 **197**；`manifest.csv` 775 行。
+- 下一步：继续 2010 年未绑定来源（余山东理、广东文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理）。
+
 ### 2010 安徽卷（理科）：phase6-b85 新卷转录、四版构建与视觉审查收口（2026-11-22；`closed`）
 
 - 对象：`gk-2010-anhui-science`，21 个题号（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-ed75f16a2d0aa4a45a7cdb452f60d0db069925fa930f83d47d757d02a17037c9`，固定件 SHA-256 `2760eb9e09374139a51303b0c2590746c74dfef7fed99ac6b2eace305af646c5`（539,854 bytes），2 页 A3 横向，印面页码 569、570；页眉「2010 普通高等学校招生考试（安徽卷理）」。
