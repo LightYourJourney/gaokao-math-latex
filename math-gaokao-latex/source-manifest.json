@@ -3580,6 +3580,14 @@
         "gk-2010-guangdong-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b90",
+      "issues": [],
+      "paper_ids": [
+        "gk-2010-jiangsu"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3589,7 +3597,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7ed52d7c-7eda-4783-b6f5-179d6f13d042",
+  "last_transaction_id": "aa58337a-e865-46a9-a49d-38d1d3e4eac9",
   "papers": [
     {
       "blocked_from": null,
@@ -42671,9 +42679,86 @@
       "title": "2010 年·普通高等学校招生考试·广东卷·理科",
       "track": "science",
       "year": 2010
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2010_江苏卷/figures/f2010_jiangsu_q04_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_江苏卷/figures/f2010_jiangsu_q07_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_江苏卷/figures/f2010_jiangsu_q16_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_江苏卷/figures/f2010_jiangsu_q17_tower.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_江苏卷/figures/f2010_jiangsu_q18_ellipse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_江苏卷/figures/f2010_jiangsu_q21a_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2010_gaokao_jiangsu",
+        "id": "gk-2010-jiangsu",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 605、606；页眉「2010 普通高等学校招生考试（江苏卷）」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。江苏卷结构：填空 1—14、解答 15—20、附加题 21—23（21 为四选二 A—D），共 23 个题号。答案由本库独立推导（非官方）。第 1 题 a=1；第 2 题 z=2i、|z|=2；第 3 题 1/2；第 4 题 30 根；第 5 题 a=−1；第 6 题 4；第 7 题输出 63；第 8 题 21；第 9 题 (−13,13)；第 10 题 2/3；第 11 题 (−1,√2−1)；第 12 题 27；第 13 题 4；第 14 题 32√3/3；第 15 题对角线 2√10、4√2，t=−11/5；第 16 题 PC⊥BC，距离 √2；第 17 题 H=124，d=55√5；第 18 题轨迹 x=9/2，T(7,10/3)，MN 过定点 (1,0)；第 19 题 a_n=(2n−1)d²，c_max=9/2；第 20 题性质 P 证明与分类单调性，m∈(0,1)；第 21A 题 AB=2BC，21B 题 k=±2，21C 题 a=2 或 −8，21D 题不等式；第 22 题 X 取 −3、2、5、10，概率 0.02、0.08、0.18、0.72，4 件甲利润≥10 万元概率 512/625；第 23 题 cosA 与 cos nA 有理。原页共 6 幅图：第 4 题频率分布直方图、第 7 题流程图、第 16 题四棱锥、第 17 题电视塔测高、第 18 题椭圆、第 21A 题圆与切线；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "附加题": [
+            21,
+            23
+          ]
+        },
+        "track": "理科",
+        "variant": "江苏"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2010-jiangsu",
+      "production_state": "complete",
+      "project_dir": "2010_江苏卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2010/2010_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2010/2010_数学真题_江苏_含解析.md",
+        "questions": "2010/2010_数学真题_江苏_试题.md",
+        "solution_body": "2010/2010_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-cce8d6099ac4f453e9cdd2d40e09276cf1e8b50e6d6c44d0ab347099ed348e41"
+      ],
+      "title": "2010 年·普通高等学校招生考试·江苏卷",
+      "track": "science",
+      "year": 2010
     }
   ],
-  "revision": 10471,
+  "revision": 10476,
   "schema_version": 1,
   "sources": [
     {
@@ -53830,8 +53915,8 @@
       "exam_type": "regular",
       "git_blob_oid": "469d67bc08cd66d2fa34ef647e4db1596595c351",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2010-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2010江苏.pdf",
       "regions": [],
       "source_id": "src-cce8d6099ac4f453e9cdd2d40e09276cf1e8b50e6d6c44d0ab347099ed348e41",

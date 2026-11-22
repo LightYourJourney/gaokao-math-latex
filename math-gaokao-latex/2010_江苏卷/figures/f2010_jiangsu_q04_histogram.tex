@@ -1,0 +1,18 @@
+% 2010 年江苏卷第 4 题：棉花纤维长度频率分布直方图。
+% 来源 PDF：普通高考/2010/2010江苏.pdf，SHA-256 e701df878d51a700720549274fe7969bd54342f0f58acb051c516fc502b58af7。
+% 原页：第 1 页（A3 三栏）第 1 栏中部，书页码 605。
+% 重绘依据：组距 5，各组高度 0.01、0.01、0.04、0.05、0.06、0.02、0.01，样本 100。
+\begin{tikzpicture}[semithick, x=0.32cm, y=60cm, every node/.style={inner sep=1.5pt, font=\small}]
+  \draw[-stealth] (0,0) -- (41,0) node[right] {长度（mm）};
+  \draw[-stealth] (0,0) -- (0,0.07) node[above] {$\dfrac{\text{频率}}{\text{组距}}$};
+  \foreach \h/\lab in {0.01/0.01,0.02/0.02,0.04/0.04,0.05/0.05,0.06/0.06} {
+    \draw (0,\h) -- (0.6,\h);
+    \node[left,font=\scriptsize] at (-0.2,\h) {$\lab$};
+  }
+  \foreach \x/\h in {5/0.01,10/0.01,15/0.04,20/0.05,25/0.06,30/0.02,35/0.01} {
+    \draw[fill=gray!25] (\x,0) rectangle (\x+5,\h);
+  }
+  \foreach \x in {0,5,10,15,20,25,30,35,40} {
+    \draw (\x,0) -- (\x,-0.003) node[below] {$\x$};
+  }
+\end{tikzpicture}
