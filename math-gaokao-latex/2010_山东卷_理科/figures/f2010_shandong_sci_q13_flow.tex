@@ -1,0 +1,27 @@
+% 2010 年山东卷理科第 13 题：程序框图。
+% 来源 PDF：普通高考/2010/2010山东理.pdf，SHA-256 c0298cae8fcf19d5f6343a7257702c03f2b618318b10d2340f0c9cc3d67d61f5。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 619。
+% 重绘依据：开始 → 输入 x → y=(1/2)x-1 → 判断 |y-x|<1；
+%   是（下）→ 输出 y → 结束；否（右）→ x=y → 回到 y=(1/2)x-1 之前。
+\begin{tikzpicture}[semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=1.8cm, minimum height=0.55cm] at (0,0) {开始};
+  \node (in) [draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.2cm, minimum height=0.55cm] at (0,-1.35) {输入 $x$};
+  \node (calc) [draw, minimum width=2.6cm, minimum height=0.65cm] at (0,-2.9) {$y=\dfrac12x-1$};
+  \node (test) [draw, diamond, aspect=2.2, minimum width=3.4cm, minimum height=1.25cm] at (0,-4.8) {$|y-x|<1$};
+  \node (out) [draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.2cm, minimum height=0.55cm] at (0,-6.7) {输出 $y$};
+  \node (end) [draw, rounded corners=4pt, minimum width=1.8cm, minimum height=0.55cm] at (0,-8.1) {结束};
+  \node (assign) [draw, minimum width=1.5cm, minimum height=0.6cm] at (4.2,-2.9) {$x=y$};
+
+  \draw[->] (start) -- (in);
+  \draw[->] (in) -- (calc);
+  \draw[->] (calc) -- (test);
+  \draw[->] (test.south) -- node[right] {是} (out.north);
+  \draw[->] (out) -- (end);
+  \draw[->] (test.east) -- node[above] {否} (4.2,-4.8);
+  \draw[->] (4.2,-4.8) -- (assign.south);
+  \draw[->] (assign.north) -- (4.2,-1.7) -- (0,-1.7);
+  \draw[->] (0,-1.7) -- (calc.north);
+\end{tikzpicture}

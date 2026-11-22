@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 山东卷（理科）：phase6-b87 新卷转录、四版构建与视觉审查收口（2026-11-22；`closed`）
+
+- 对象：`gk-2010-shandong-science`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-593fd82fe2eca84d794ef8c1b6d332f3486977994ae9bd43eb6979e05cfa4374`，固定件 SHA-256 `c0298cae8fcf19d5f6343a7257702c03f2b618318b10d2340f0c9cc3d67d61f5`（530,261 bytes），2 页 A3 横向，印面页码 619、620；页眉「2010 普通高等学校招生考试（山东卷理）」。
+- 来源核对：按 manifest 上游 pin commit `34c13a6c…` 取回 `普通高考/2010/2010山东理.pdf`，现场 SHA-256 与登记值一致；文字层只作定位，分数、根号、上下标、选项、约束条件与四幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1C 2B 3D 4D 5C 6D 7A 8B 9C 10A 11A 12B；13 $-\dfrac54$；14 $\left[\dfrac15,+\infty\right)$；15 $\dfrac\pi6$；16 $x+y-3=0$；17 (1) $\varphi=\dfrac\pi3$、(2) 最大 $\dfrac12$、最小 $-\dfrac14$；18 (1) $a_n=2n+1$、$S_n=n^2+2n$，(2) $T_n=\dfrac{n}{4(n+1)}$；19 (1) 证明、(2) $30^\circ$、(3) $2\sqrt2$；20 (1) $\dfrac14$、(2) $P(\xi=2)=\dfrac18$、$P(\xi=3)=\dfrac38$、$P(\xi=4)=\dfrac12$、$E\xi=\dfrac{27}{8}$；21 (1) 椭圆 $\dfrac{x^2}{8}+\dfrac{y^2}{4}=1$、双曲线 $\dfrac{x^2}{4}-\dfrac{y^2}{4}=1$，(2) 证明，(3) $\lambda=\dfrac{3\sqrt2}{8}$；22 (1) 分类单调性，(2) $\left[\dfrac{17}{8},+\infty\right)$。
+- 逐题复核要点：第 1 题 $M=[-1,3]$，补集 $(-\infty,-1)\cup(3,+\infty)$；第 2 题 $(a+2\mathrm i)/\mathrm i=2-a\mathrm i$；第 4 题 $b=-1$、$f(-1)=-3$；第 5 题正态对称给 $1-2\times0.023=0.954$；第 6 题 $a=-1$、方差 $10/5=2$；第 7 题 $\int_0^1(x^2-x^3)=1/12$；第 8 题 $4\times3!+3\times3!=42$；第 9 题按 $a_1$ 符号与 $q$ 讨论；第 10 题顶点 $(0,2)$、$(5,3)$、$(3,5)$，$z$ 最大 $3$、最小 $-11$；第 11 题按零点 $2,4$ 与 $2<x<4$ 时 $y<0$ 选 A；第 12 题 $\boldsymbol b\odot\boldsymbol a=-\boldsymbol a\odot\boldsymbol b$；第 13 题循环 $10\to4\to1\to-\frac12\to-\frac54$；第 14 题 $\frac1{x+3+1/x}\leqslant\frac15$；第 15 题 $B=\frac\pi4$、$A=\frac\pi6$；第 16 题圆心 $(3,0)$；第 17 题 $f=\frac12\cos(2x-\varphi)$，$\varphi=\frac\pi3$，$g_{\max}=\frac12$、$g_{\min}=-\frac14$；第 18 题裂项；第 19 题建系 $B(0,0,0)$、$C(4,0,0)$、$A(2,2,0)$、$E(4,2,0)$、$D(5,1,0)$、$P(2,2,2\sqrt2)$，$\boldsymbol n_{PAC}=(1,1,0)$、$\boldsymbol n_{PCD}=(\sqrt2,-\sqrt2,2)$，$\sin\theta=\frac12$，底面积 $3$、体积 $2\sqrt2$；第 20 题五条晋级路径概率和 $1/4$，$\xi$ 分布 $1/8,3/8,1/2$；第 21 题焦点弦长 $L(k)=\frac{4\sqrt2(1+k^2)}{1+2k^2}$，$k_1k_2=1$ 给 $\lambda=\frac{3\sqrt2}{8}$；第 22 题 $f'=\frac{(x-1)(-ax+1-a)}{x^2}$，$b\geqslant\frac{17}{8}$。
+- 自查补正（封账前完成）：① 第 8 题解析末行原为行间公式，导致答案框孤行到下一页，改为行内 $24+18=42$；② 第 19 题五棱锥初版 $A$、$E$ 标注相压，按底面 $B(0,0)$、$C(4,0)$、$A(2,2)$、$E(4,2)$、$D(5,1)$ 重设投影并分开 $A$、$E$ 标签；③ 第 21 题初版 $P$ 与 $A$、$C$ 过近，改取 $P(4,\sqrt{12})$ 重算四个交点并重绘；④ 第 6 题两个根式选项改用 `\sqrt{\dfrac65}` 与 `\dfrac65` 的原始形状。
+- 图稿 4 张（Q11 四个函数图象、Q13 程序框图、Q19 五棱锥、Q21 椭圆与等轴双曲线），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 源缺陷：无。
+- 验收：四版 6/28/8/21 页（共 63 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 63 页八类检查 425 pass + 79 not_applicable、0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b87.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **580 一致**；`build_projects.py validate-receipts --all --require-final` → **OK：580 卷**；manifest **580 卷 / 775 来源 / 426 批次**，complete 462、blocked 118，未绑定来源 **196**；`manifest.csv` 775 行。
+- 下一步：继续 2010 年未绑定来源（余广东文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理）。
+
 ### 2010 山东卷（文科）：phase6-b86 新卷转录、四版构建与视觉审查收口（2026-11-22；`closed`）
 
 - 对象：`gk-2010-shandong-arts`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-7a8577501a76c6e78ae1f130b8baa902343345d90f0972753a94aa21a864c2fe`，固定件 SHA-256 `95a69b861a29ca594f9118c9643efcdfd04cae3c4f374ff9fa009f7ac99712f4`（528,835 bytes），2 页 A3 横向，印面页码 621、622；页眉「2010 普通高等学校招生考试（山东卷文）」。
