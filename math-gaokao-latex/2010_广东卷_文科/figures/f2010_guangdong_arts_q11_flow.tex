@@ -1,0 +1,30 @@
+% 2010 年广东卷文科第 11 题：程序框图。
+% 来源 PDF：普通高考/2010/2010广东文.pdf，SHA-256 dd04b2053a22c854a9abe1ee03241fc04d5a25c91cda1d7997183bdfaa4a8c6f。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 595。
+% 重绘依据：开始 → 输入 x1..x4 → s1=0,i=1 → 判断 i≤4；
+%   是（右）→ s1=s1+xi → s=(1/i)s1 → i=i+1 → 回到判断前；
+%   否（下）→ 输出 s → 结束。
+\begin{tikzpicture}[semithick, >=Stealth,
+  every node/.style={inner sep=1.5pt, font=\small}]
+  \node (start) [draw, rounded corners=4pt, minimum width=1.8cm, minimum height=0.55cm] at (0,0) {开始};
+  \node (in) [draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=3.2cm, minimum height=0.55cm] at (0,-1.4) {输入 $x_1,\cdots,x_4$};
+  \node (init) [draw, minimum width=2.8cm, minimum height=0.6cm] at (0,-3.0) {$s_1=0$，$i=1$};
+  \node (test) [draw, diamond, aspect=2.2, minimum width=2.8cm, minimum height=1.15cm] at (0,-4.9) {$i\leqslant4$};
+  \node (out) [draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.2cm, minimum height=0.55cm] at (0,-6.9) {输出 $s$};
+  \node (end) [draw, rounded corners=4pt, minimum width=1.8cm, minimum height=0.55cm] at (0,-8.2) {结束};
+  \node (add) [draw, minimum width=2.4cm, minimum height=0.6cm] at (4.4,-3.8) {$s_1=s_1+x_i$};
+  \node (avg) [draw, minimum width=2.2cm, minimum height=0.65cm] at (4.4,-2.7) {$s=\dfrac1i s_1$};
+  \node (inc) [draw, minimum width=1.5cm, minimum height=0.55cm] at (4.4,-1.65) {$i=i+1$};
+
+  \draw[->] (start) -- (in);
+  \draw[->] (in) -- (init);
+  \draw[->] (init) -- (test);
+  \draw[->] (test.south) -- node[right] {否} (out.north);
+  \draw[->] (out) -- (end);
+  \draw[->] (test.east) -- node[above] {是} (add.west);
+  \draw[->] (add) -- (avg);
+  \draw[->] (avg) -- (inc);
+  \draw[->] (inc.north) -- (4.4,-0.75) -- (-3.8,-0.75) -- (-3.8,-3.0) -- (init.west);
+\end{tikzpicture}
