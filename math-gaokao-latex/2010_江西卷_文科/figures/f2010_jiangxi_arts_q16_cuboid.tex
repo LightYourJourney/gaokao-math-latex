@@ -1,0 +1,32 @@
+% 2010 年江西卷文科第 16 题：长方体 ABCD-A1B1C1D1。
+% 来源 PDF：普通高考/2010/2010江西文.pdf，SHA-256 c8c86a7272df02211069e27098dcaf04a5cd8af9a9b4d54ffd14a8eb91347af3。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 609。
+% 重绘依据：AB=AA1=1，BC=√2；A1D1、D1C1、DD1 为不可见棱，画虚线。
+\begin{tikzpicture}[semithick, scale=1.5, every node/.style={inner sep=1.6pt, font=\small}]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (1.5,0);
+  \coordinate (C) at (2.4,0.55);
+  \coordinate (D) at (0.9,0.55);
+  \coordinate (A1) at (0,-1.4);
+  \coordinate (B1) at (1.5,-1.4);
+  \coordinate (C1) at (2.4,-0.85);
+  \coordinate (D1) at (0.9,-0.85);
+
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (A1) -- (B1) -- (C1);
+  \draw[dashed] (C1) -- (D1);
+  \draw[dashed] (A1) -- (D1);
+  \draw[dashed] (D) -- (D1);
+
+  \node[above left] at (A) {$A$};
+  \node[above right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[below left] at (A1) {$A_1$};
+  \node[below right] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[right] at (D1) {$D_1$};
+\end{tikzpicture}

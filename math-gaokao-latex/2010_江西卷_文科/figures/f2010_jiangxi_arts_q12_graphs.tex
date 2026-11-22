@@ -1,0 +1,61 @@
+% 2010 年江西卷文科第 12 题：四个图象选项（A）—（D）。
+% 来源 PDF：普通高考/2010/2010江西文.pdf，SHA-256 c8c86a7272df02211069e27098dcaf04a5cd8af9a9b4d54ffd14a8eb91347af3。
+% 原页：第 1 页（A3 三栏）第 3 栏中部，书页码 609。
+% 题设三条曲线：y=sin2x（周期 π）、y=sin(x+π/6)、y=sin(x−π/3)（后两条周期 2π，
+%   相位差 π/2）；前者的频率是后两条的两倍，同区间内波峰数约为两倍。
+% 重绘依据：原页每幅仅约 4cm 宽、曲线在上边框被裁切，逐像素判读不可靠，故本图为
+%   按题设关系绘制的示意图：A、B、D 三幅中 sin2x 呈二倍频、两条慢曲线相差四分之一
+%   周期；C 幅三条曲线同频（无二倍频），即错误项。已在 PROGRESS 登记。
+% 实现说明：TikZ 的 plot 以度为角度单位，\x 取 0..720 度并线性映射到面板宽度，
+%   正弦用 (\x) 度计算，避免把弧度误当角度。
+\begin{tikzpicture}[semithick]
+  \def\w{4.6}       % 面板宽 (cm)
+  \def\hh{1.5}      % 面板高 (cm)
+  \def\amp{0.62}    % 振幅 (cm)
+  \def\xscale{0.0063889}  % cm/度 = 4.6/720
+  % 正确画法：#1 为整体相位平移（度）
+  \newcommand{\goodpanel}[1]{%
+    % y = sin 2x ：720 度内四个波峰
+    \draw[thick] plot[domain=0:720,samples=361]
+      ({\x*\xscale},{\amp*sin(2*\x+#1)});
+    % y = sin(x + pi/6)：三十度为 30 度相位
+    \draw[thick] plot[domain=0:720,samples=241]
+      ({\x*\xscale},{\amp*sin(\x+30+#1)});
+    % y = sin(x - pi/3)：-60 度相位，与上一条相差 90 度
+    \draw[thick] plot[domain=0:720,samples=241]
+      ({\x*\xscale},{\amp*sin(\x-60+#1)});
+  }
+  % 错误画法：三条曲线同为慢频（无二倍频），相位各不相同
+  \newcommand{\badpanel}{%
+    \draw[thick] plot[domain=0:720,samples=241]
+      ({\x*\xscale},{\amp*sin(\x+20)});
+    \draw[thick] plot[domain=0:720,samples=241]
+      ({\x*\xscale},{\amp*sin(\x+110)});
+    \draw[thick] plot[domain=0:720,samples=241]
+      ({\x*\xscale},{\amp*sin(\x+200)});
+  }
+  % (A)
+  \begin{scope}
+    \draw (0,-\hh/2) rectangle (\w,\hh/2);
+    \goodpanel{90}
+    \node at (\w/2,-\hh/2-0.35) {（A）};
+  \end{scope}
+  % (B)
+  \begin{scope}[shift={(5.5,0)}]
+    \draw (0,-\hh/2) rectangle (\w,\hh/2);
+    \goodpanel{150}
+    \node at (\w/2,-\hh/2-0.35) {（B）};
+  \end{scope}
+  % (C) 错误项
+  \begin{scope}[shift={(0,-2.5)}]
+    \draw (0,-\hh/2) rectangle (\w,\hh/2);
+    \badpanel
+    \node at (\w/2,-\hh/2-0.35) {（C）};
+  \end{scope}
+  % (D)
+  \begin{scope}[shift={(5.5,-2.5)}]
+    \draw (0,-\hh/2) rectangle (\w,\hh/2);
+    \goodpanel{210}
+    \node at (\w/2,-\hh/2-0.35) {（D）};
+  \end{scope}
+\end{tikzpicture}

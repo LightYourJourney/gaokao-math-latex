@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 江西卷（文科）：phase6-b91 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+
+- 对象：`gk-2010-jiangxi-arts`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-d7202656a26ce5ccba93f168a5db5226f4bed247687f7c56c08b744fffd0786c`，固定件 SHA-256 `c8c86a7272df02211069e27098dcaf04a5cd8af9a9b4d54ffd14a8eb91347af3`（576,884 bytes），2 页 A3 横向，印面页码 609、610；页眉「2010 普通高等学校招生考试（江西卷文）」。
+- 来源核对：按 manifest 上游 pin commit `34c13a6c…` 取回 `普通高考/2010/2010江西文.pdf`，现场 SHA-256 与登记值一致；文字层只作定位，分数、根号、上下标、选项与五幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1B 2C 3D 4B 5A 6C 7A 8B 9D 10B 11C 12C；13 $1$；14 $90$；15 $2$；16 $\dfrac\pi3$；17 (1) $a=9$、(2) 不存在；18 (1) $\dfrac13$、(2) $\dfrac12$；19 (1) $\dfrac35$、(2) $\left[0,\dfrac12+\dfrac{\sqrt2}{2}\right]$；20 (1) $45^\circ$、(2) $\dfrac{2\sqrt5}5$；21 (1) $\dfrac{\sqrt2}{2}$、(2) $C_1:x^2+y=1$、$C_2:\dfrac{x^2}2+y^2=1$；22 (1) 证明、(2) 共 $67$ 项、和为 $6733$。
+- 逐题复核要点：第 1 题 $ac^2>bc^2$ 可推 $a>b$，反向取 $c=0$ 失效；第 3 题 $T_4=\mathrm C_{10}^3(-1)^3=-120$；第 4 题 $f'$ 为奇函数；第 5 题 $|t|>t\iff t<0$；第 6 题 $t=\sin x$ 顶点 $t=-\frac12$ 给最小值 $-\frac54$；第 7 题 $q^3=-8$、$a_1=1$；第 8 题反函数重合给 $a=-1$；第 10 题 $d^2\leqslant1$ 给 $|k|\leqslant\frac{\sqrt3}3$；第 11 题建系验证 ①②④ 真；第 13 题投影 $|\boldsymbol b|\cos60^\circ=1$；第 14 题 $\frac{\mathrm C_5^2\mathrm C_3^2}{2}\times3!=90$；第 15 题 $e=3$、$3x_0-2=2x_0$；第 16 题 $2R=2$、球心角 $\frac\pi3$；第 17 题 $x_1x_2=\frac a9=1$，$\Delta=36(a^2+4)>0$ 故无单调情形；第 18 题超 $3$ 小时为 $\frac13\cdot\frac12+\frac13=\frac12$；第 19 题化简得 $\sin x\cos x+\cos^2x$，$2x+\frac\pi4\in\left[\frac{5\pi}{12},\frac{5\pi}4\right]$；第 20 题建系 $B(0,0,0)$、$C(2,0,0)$、$D(1,\sqrt3,0)$、$A(0,0,2\sqrt3)$、$M\left(\frac32,\frac{\sqrt3}2,\sqrt3\right)$，$\boldsymbol n_{ACM}=(3,-\sqrt3,\sqrt3)$；第 21 题 $c^2=b^2$、$a^2=2b^2$，重心 $(1,0)\in C_1$ 给 $b=1$；第 22 题 $a_n^2=24n-23$，整数项对应 $m$ 为奇数且 $3\nmid m$，$m<200$ 共 $100-33=67$ 项，和 $10000-3267=6733$。
+- 自查补正（封账前完成）：① 第 12 题四幅图象初版把 `\x r` 当作弧度传给 TikZ，实际按度解释，导致曲线只走出极短一段、C 幅退化成单条曲线；改为以度为单位（$\theta$ 取 $0..720$，$\sin2x$ 写作 `sin(2*\x)`），并按原页波峰数校准——A、B、D 高频曲线为二倍频，C 幅三条同频，与扫描件“C 幅波峰数与另三条相同”一致；② 该图与解析口径同步改写为“看 $y=\sin2x$ 是否呈二倍频”，答案要点同步更新；③ 因原页每幅仅约 4cm 宽且曲线在上边框被裁切，逐像素判读不可靠，本图在文件头与 `index.json` note 中均登记为按题设关系重绘的示意，不声称逐点复原。
+- 图稿 5 张（Q11 正方体、Q12 四个图象选项、Q16 长方体、Q20 两个正三角形与 $AB$、Q21 抛物线与椭圆），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 源缺陷：无。
+- 验收：四版 6/27/8/20 页（共 61 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 61 页八类检查 395 pass + 93 not_applicable、0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b91.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 全量门禁：`solution_sources check-batch`、`provenance check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects --all --check`、`make_short_answers --all --check`、`make_editions --all --check` 均 **584 一致**；`build_projects.py validate-receipts --all --require-final` → **OK：584 卷**；manifest **584 卷 / 775 来源 / 430 批次**，complete 466、blocked 118，未绑定来源 **192**；`manifest.csv` 775 行。
+- 下一步：继续 2010 年未绑定来源（余江西理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理）。
+
 ### 2010 江苏卷：phase6-b90 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
 
 - 对象：`gk-2010-jiangsu`，23 个题号（填空 1—14、解答 15—20、附加题 21—23，其中 21 为四选二 A—D）；固定来源 `src-cce8d6099ac4f453e9cdd2d40e09276cf1e8b50e6d6c44d0ab347099ed348e41`，固定件 SHA-256 `e701df878d51a700720549274fe7969bd54342f0f58acb051c516fc502b58af7`（516,085 bytes），2 页 A3 横向，印面页码 605、606；页眉「2010 普通高等学校招生考试（江苏卷）」。
