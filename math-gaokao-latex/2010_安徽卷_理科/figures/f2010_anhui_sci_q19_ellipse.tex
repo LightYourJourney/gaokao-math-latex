@@ -1,0 +1,16 @@
+% 2010 年安徽卷理科第 19 题：椭圆 E、焦点 F1、F2、点 A 与角平分线 l。
+% 来源 PDF：普通高考/2010/2010安徽理.pdf，SHA-256 2760eb9e09374139a51303b0c2590746c74dfef7fed99ac6b2eace305af646c5。
+% 原页：第 2 页（A3 三栏）第 2 栏中部，书页码 570。
+% 重绘依据：椭圆 x^2/16+y^2/12=1，F1(-2,0)、F2(2,0)，A(2,3)；
+%   l 为 ∠F1AF2 的角平分线，方程 2x-y-1=0。
+\begin{tikzpicture}[semithick, scale=0.95, every node/.style={inner sep=1.6pt, font=\small}]
+  \draw[-stealth] (-4.6,0) -- (4.6,0) node[right] {$x$};
+  \draw[-stealth] (0,-3.9) -- (0,4.1) node[above] {$y$};
+  \draw[thick] (0,0) ellipse (4 and 3.464);
+  \fill (-2,0) circle (1.6pt) node[below] {$F_1$};
+  \fill (2,0) circle (1.6pt) node[below] {$F_2$};
+  \fill (2,3) circle (1.6pt) node[above right] {$A$};
+  \node[below left] at (0,0) {$O$};
+  \draw[thick] (-0.25,-1.5) -- (2.15,3.3);
+  \node[left] at (-0.25,-1.5) {$l$};
+\end{tikzpicture}

@@ -1,0 +1,36 @@
+% 2010 年安徽卷理科第 6 题：四个二次函数图象选项（A）—（D）。
+% 来源 PDF：普通高考/2010/2010安徽理.pdf，SHA-256 2760eb9e09374139a51303b0c2590746c74dfef7fed99ac6b2eace305af646c5。
+% 原页：第 1 页（A3 三栏）第 1 栏，书页码 569。
+% 重绘依据：四幅均只示意开口方向、y 轴截距符号与对称轴位置，不标刻度：
+%   (A) 开口向下、截距为负、顶点在 y 轴左侧；(B) 开口向下、截距为正、顶点在右侧；
+%   (C) 开口向上、截距为正、顶点在右侧；(D) 开口向上、截距为负、顶点在右侧。
+\begin{tikzpicture}[semithick, scale=1.15, every node/.style={inner sep=1.2pt, font=\small}]
+  % (A)
+  \begin{scope}[shift={(0,0)}]
+    \draw[-stealth] (-1.75,0) -- (0.75,0) node[right] {$x$};
+    \draw[-stealth] (0,-0.95) -- (0,0.65) node[above] {$y$};
+    \draw[thick,domain=-1.55:0.10,samples=80] plot (\x,{-0.8*(\x+0.9)^2+0.3});
+    \node[below] at (-0.45,-1.35) {（A）};
+  \end{scope}
+  % (B)
+  \begin{scope}[shift={(3.3,0)}]
+    \draw[-stealth] (-0.55,0) -- (1.95,0) node[right] {$x$};
+    \draw[-stealth] (0,-0.65) -- (0,1.05) node[above] {$y$};
+    \draw[thick,domain=-0.45:1.85,samples=80] plot (\x,{-0.8*(\x-0.7)^2+0.9});
+    \node[below] at (0.7,-1.35) {（B）};
+  \end{scope}
+  % (C)
+  \begin{scope}[shift={(0,-3.1)}]
+    \draw[-stealth] (-1.65,0) -- (1.65,0) node[right] {$x$};
+    \draw[-stealth] (0,-0.75) -- (0,0.85) node[above] {$y$};
+    \draw[thick,domain=-0.20:1.60,samples=80] plot (\x,{0.8*(\x-0.7)^2-0.2});
+    \node[below] at (0.45,-1.35) {（C）};
+  \end{scope}
+  % (D)
+  \begin{scope}[shift={(3.3,-3.1)}]
+    \draw[-stealth] (-0.40,0) -- (1.95,0) node[right] {$x$};
+    \draw[-stealth] (0,-0.80) -- (0,0.75) node[above] {$y$};
+    \draw[thick,domain=-0.25:1.80,samples=80] plot (\x,{0.8*(\x-0.75)^2-0.6});
+    \node[below] at (0.75,-1.35) {（D）};
+  \end{scope}
+\end{tikzpicture}
