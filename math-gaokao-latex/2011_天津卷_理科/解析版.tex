@@ -1,0 +1,29 @@
+% !TeX program = xelatex
+% ============================================================
+% 2011 年·天津卷·理科 · 解析版
+% 由 tools/make_editions.py 生成（重跑会覆盖本文件）；
+% 题目/解析内容在 questions.tex / answers*.tex，勿在本文件内写内容。
+% ============================================================
+\documentclass[zihao=-4, a4paper]{ctexart}
+\input{../common/preamble}
+\input{../common/macros}
+\input{../common/questions_env}
+\renewcommand{\gkpaperid}{gk-2011-tianjin-science}
+\renewcommand{\gkheadL}{2011 年·天津卷·理科 · 数学}
+\renewcommand{\gkheadR}{解析版}
+\hypersetup{pdftitle={2011 年·天津卷·理科 数学 · 解析版}}
+\begin{document}
+\begin{center}
+  {\Large\bfseries 2011 年·天津卷·理科}\\[4pt]
+  {\large 数学 · 解析版}
+\end{center}
+\medskip
+\pdfbookmark[1]{试题}{sec:q}
+\input{questions}
+\clearpage
+\pdfbookmark[1]{参考答案与详细解析}{sec:s}
+\Needspace{8\baselineskip}
+\begin{center}{\Large\bfseries 参考答案与详细解析}\end{center}
+\medskip
+\input{answers}
+\end{document}

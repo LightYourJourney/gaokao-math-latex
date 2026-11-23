@@ -1,0 +1,36 @@
+% 2011 年天津卷理科第 3 题：程序框图。
+% 来源 PDF：普通高考/2011/2011天津理.pdf，SHA-256 4d77f7437f1f7191d1fd3cd766c7c3014859dec8fdd7a4d8f4bca348c0ef06e5。
+% 原页：第 1 页（A3 三栏）第 1 栏中部，书页码 705。
+% 重绘依据：照原页竖排主干 开始→a=1,i=0→i=i+1→a=i×a+1→判断 a>50?；
+%   「否」自判断框左端向左引出、向上、再向右回到主干（箭头落在 a=1,i=0 与 i=i+1 之间）；
+%   「是」沿主干向下→输出 i→结束。
+\begin{tikzpicture}[>=stealth, semithick,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, minimum height=0.66cm, minimum width=2.6cm, align=center},
+  round/.style={draw, rounded corners=6pt, minimum height=0.66cm,
+    minimum width=1.7cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum height=0.66cm, minimum width=1.9cm, align=center},
+  dec/.style={draw, diamond, aspect=1.9, minimum width=2.3cm,
+    minimum height=0.98cm, align=center},
+  arr/.style={->}]
+
+  \node[round] (start) at (0,2.1) {开始};
+  \node[box]   (init)  at (0,0.9)  {$a=1$，$i=0$};
+  \node[box]   (inc)   at (0,-0.4) {$i=i+1$};
+  \node[box]   (mul)   at (0,-1.7) {$a=i\times a+1$};
+  \node[dec]   (test)  at (0,-3.2) {$a>50$?};
+  \node[para]  (out)   at (0,-4.5) {输出 $i$};
+  \node[round] (end)   at (0,-5.6) {结束};
+
+  \draw[arr] (start) -- (init);
+  \draw[arr] (init) -- (inc);
+  \draw[arr] (inc) -- (mul);
+  \draw[arr] (mul) -- (test);
+  \draw[arr] (test) -- node[right, pos=0.45] {是} (out);
+  \draw[arr] (out) -- (end);
+
+  % 「否」回边：向左、向上、再向右接入主干
+  \draw[arr] (test.west) -- node[above, pos=0.15] {否} (-2.5,-3.2)
+             -- (-2.5,0.25) -- (0,0.25);
+\end{tikzpicture}

@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 天津卷（理科）：phase7-b11 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+- 对象：`gk-2011-tianjin-science`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20，无选做题）；固定来源 `src-ea26fce042c3b6106b240f7a5689e3722b0bfce04ecbae9b20b1cb4e6b332696`，固定件 SHA-256 `4d77f7437f1f7191d1fd3cd766c7c3014859dec8fdd7a4d8f4bca348c0ef06e5`（515,647 bytes），2 页 A3 横向，印面页码 705、706。
+- 来源核对：文字层只作定位，题面、选项、三视图尺寸、圆中弦切关系与三棱柱均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—8、填空题 9—14、解答题 15—20。
+- 答案（独立推导，等级 D，非官方）：1B 2A 3B 4D 5C 6D 7C 8B；9 $12$；10 $6+\pi$；11 $\sqrt2$；12 $\dfrac{\sqrt7}2$；13 $[-2,5]$；14 $5$；15 定义域 $\left\{x\ \middle|\ x\neq\dfrac\pi8+\dfrac{k\pi}2\right\}$、$T=\dfrac\pi2$，$\alpha=\dfrac{\pi}{12}$；16 ① $\dfrac15$ ② $\dfrac7{10}$，$X$ 取 $\dfrac9{100},\dfrac{21}{50},\dfrac{49}{100}$，$E(X)=\dfrac75$；17 (1) $\dfrac{\sqrt2}3$、(2) $\dfrac{3\sqrt5}7$、(3) $\dfrac{\sqrt{10}}4$；18 (1) $e=\dfrac12$、(2) $6x^2-\dfrac{16\sqrt3}3xy=5$（$x-\dfrac{y}{\sqrt3}>0$ 的部分）；19 (1) 在 $\left(0,\dfrac1{\sqrt{2a}}\right)$ 增、在 $\left(\dfrac1{\sqrt{2a}},+\infty\right)$ 减，(2)(3) 证明；20 (1) $a_3=-3$、$a_4=-5$、$a_5=4$、(2) $c_n=(-1)^n$、(3) 证明。
+- 源说明：第 10 题正视图三角形底宽未直接标注，由俯视图内切圆半径 $1$ 反推为 $2$；第 18 题点 $P(a,b)$ 与椭圆半轴共用字母 $a,b$，照录；第 19 题末尾「（$f(x)$ 的图象连续不断）」为原页提示性括注，照录。
+- 解析器兼容：第 15—20 题解析原用 `**（k）**` 加粗小问锚点，答案要点也在行首用「（k）」，与试题的小问集合判定不一致；已统一为不加粗的行首「（k）」标签，并在试题小问标签间保留空格，使三路小问集合一致后重建。
+- 图稿 5 张（Q3 程序框图、Q6 三角形与 BD、Q10 三视图、Q12 圆中两弦与切线、Q17 三棱柱），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 验收：四版 6/34/8/24 页（共 72 页），四 log 全 0（初版 3.9pt/8.3pt/71.0pt Overfull 已通过第 13 题集合改行间 `aligned`、第 16 题概率式拆三行消除）；review 72 页八类检查 **476 pass + 100 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b11.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `0fffa65f-f446-424e-a7d1-476d44c8e5e5`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **603 卷 / 775 来源 / 449 批次**，complete 485、blocked 118，未绑定来源 **173**；manifest revision 10684。
+- 修改文件：`2011/2011_数学真题_天津理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_天津卷_理科/`（questions/answers/answers_short、四版入口、5 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b11.md`、`PROGRESS.md`。
+- 下一步：继续 2011 北京文、四川文理、安徽文理等未绑定来源。
+
 ### 2011 北京卷（理科）：phase7-b10 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
 - 对象：`gk-2011-beijing-science`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20，无选做题）；固定来源 `src-0cf6387dcd564021012c9abd4829a89f8093992c02eafa5bde297332cdaea242`，固定件 SHA-256 `79351b2b5d5afd29a2d46d50526284443edad4deb64fbaf841db31ce2570c311`（604,849 bytes），2 页 A3 横向，印面页码 647、648。
 - 来源核对：文字层只作定位，题面、选项、程序框图箭头、茎叶图与五幅图均按 600 dpi 核对；原页未印分值、无答案页，全部记「原页未标」，不补。
