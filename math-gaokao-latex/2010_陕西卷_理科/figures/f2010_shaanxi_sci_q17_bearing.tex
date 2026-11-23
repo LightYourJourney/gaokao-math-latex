@@ -1,0 +1,44 @@
+% 2010 年陕西卷理科第 17 题：海面上的两个观测点 A、B 与船 D、救援船 C 的方位图。
+% 来源 PDF：普通高考/2010/2010陕西理.pdf，SHA-256 8406e303e7aa1ac7813893781c903a7d9c904530028e6fd1c06062d1c32bd645。
+% 原页：第 1 页（A3 三栏）第 3 栏下部，书页码 623。
+% 重绘依据：照原页——A 在左、B 在右，AB 为水平（东西方向）；A、B 上方各有一条竖直「北」向箭头；
+%   D 在 AB 上方偏左，DA、DB 均连；45° 标在 A 的北向射线与 AD 之间，60° 标在 B 的北向射线与 BD 之间，
+%   另一 60° 标在 B 的南向射线（北向线的延长线）与 BC 之间；C 在 A 的左下方，CA、CB 均连。
+%   按题设取 AB=5(3+√3) 的比例坐标（整体缩放 1/4）：A=(0,0)，B=(5.90,0)，D=(2.17,2.17)，C=(-1.58,-4.33)。
+\begin{tikzpicture}[semithick, line join=round]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5.90,0);
+  \coordinate (D) at (2.17,2.17);
+  \coordinate (C) at (-1.58,-4.33);
+
+  % 方位线：AB 水平；DA、DB；CA、CB
+  \draw (A) -- (B);
+  \draw (D) -- (A);
+  \draw (D) -- (B);
+  \draw (C) -- (A);
+  \draw (C) -- (B);
+
+  % A 处的北向箭头
+  \draw[->, >=stealth] (0,0) -- (0,3.05);
+  \node[above, inner sep=2pt] at (0,3.05) {北};
+
+  % B 处的竖直方位线（上端带箭头，下端延伸以标示南向）
+  \draw[->, >=stealth] (5.90,-1.35) -- (5.90,3.05);
+  \node[above, inner sep=2pt] at (5.90,3.05) {北};
+
+  % 角标记与度数
+  \draw (45:0.80) arc[start angle=45, end angle=90, radius=0.80];
+  \node at (67:1.30) {$45^\circ$};
+
+  \draw (5.90,0) ++(90:1.00) arc[start angle=90, end angle=150, radius=1.00];
+  \node at ($(5.90,0)+(118:1.55)$) {$60^\circ$};
+
+  \draw (5.90,0) ++(210:1.00) arc[start angle=210, end angle=270, radius=1.00];
+  \node at ($(5.90,0)+(238:1.50)$) {$60^\circ$};
+
+  % 顶点标注
+  \node[left, inner sep=3pt] at (A) {$A$};
+  \node[right, inner sep=3pt] at (B) {$B$};
+  \node[above, inner sep=2pt] at (D) {$D$};
+  \node[left, inner sep=3pt] at (C) {$C$};
+\end{tikzpicture}

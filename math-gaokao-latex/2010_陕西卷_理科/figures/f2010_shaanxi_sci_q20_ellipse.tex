@@ -1,0 +1,58 @@
+% 2010 年陕西卷理科第 20 题：椭圆 C 与过原点直线 n、与之垂直的直线 l。
+% 来源 PDF：普通高考/2010/2010陕西理.pdf，SHA-256 8406e303e7aa1ac7813893781c903a7d9c904530028e6fd1c06062d1c32bd645。
+% 原页：第 2 页（A3 三栏）第 2 栏上部，书页码 624。
+% 重绘依据：照原页——椭圆中心为 O，长短轴端点为 A1（左）、A2（右）、B1（上）、B2（下），
+%   两焦点 F1（左）、F2（右）用圆点标出；直线 n 过 O 斜向右上到 P，直线 l 过 P 且与 n 垂直，
+%   在 P 处画直角符号；l 与椭圆交于右上的 A、右下的 B，并在 A、B 之外略作延长。
+%   按 (1) 的结论 a=2、b=√3 取图（整体乘 1.5）：A1=(-3,0)，A2=(3,0)，B1=(0,2.598)，B2=(0,-2.598)，
+%   F1=(-1.5,0)，F2=(1.5,0)；再取 |OP|=1.5、n 的倾角约 18.4°，得 P=(1.423,0.474)，
+%   l: y=-3x+4.743，与椭圆交于 A=(0.742,2.517)、B=(2.177,-1.788)。
+\begin{tikzpicture}[semithick, line join=round]
+  \coordinate (O)  at (0,0);
+  \coordinate (A1) at (-3,0);
+  \coordinate (A2) at (3,0);
+  \coordinate (B1) at (0,{1.5*sqrt(3)});
+  \coordinate (B2) at (0,{-1.5*sqrt(3)});
+  \coordinate (F1) at (-1.5,0);
+  \coordinate (F2) at (1.5,0);
+  \coordinate (P)  at (1.423,0.474);
+  \coordinate (A)  at (0.742,2.517);
+  \coordinate (B)  at (2.177,-1.788);
+
+  % 坐标轴
+  \draw[->, >=stealth] (-4.10,0) -- (4.30,0) node[below, inner sep=3pt] {$x$};
+  \draw[->, >=stealth] (0,-3.70) -- (0,3.60) node[left, inner sep=3pt] {$y$};
+
+  % 椭圆
+  \draw plot[domain=0:360, samples=160] ({3*cos(\x)}, {1.5*sqrt(3)*sin(\x)});
+
+  % 直线 l（在 A、B 之外略作延长）
+  \draw (0.62,2.88) -- (2.35,-2.31);
+
+  % 直线 n：O 到 P
+  \draw (O) -- (P);
+
+  % P 处直角符号（n ⊥ l）
+  \coordinate (Pu) at ($(P)!0.32cm!(A)$);
+  \coordinate (Pv) at ($(P)!0.32cm!(O)$);
+  \draw ($(Pu)+(Pv)-(P)$) -- (Pu);
+  \draw ($(Pu)+(Pv)-(P)$) -- (Pv);
+
+  % 焦点圆点
+  \fill (F1) circle (1.7pt);
+  \fill (F2) circle (1.7pt);
+
+  % 标注
+  \node[below left, inner sep=2pt] at (A1) {$A_1$};
+  \node[below right, inner sep=2pt] at (A2) {$A_2$};
+  \node[above left, inner sep=2pt] at (B1) {$B_1$};
+  \node[below left, inner sep=2pt] at (B2) {$B_2$};
+  \node[below, inner sep=3pt] at (F1) {$F_1$};
+  \node[below, inner sep=3pt] at (F2) {$F_2$};
+  \node[left, inner sep=3pt] at (O) {$O$};
+  \node[right, inner sep=3pt] at (P) {$P$};
+  \node[right, inner sep=2pt] at (A) {$A$};
+  \node[left, inner sep=3pt] at (B) {$B$};
+  \node[above left, inner sep=3pt] at (1.05,0.55) {$n$};
+  \node[above left, inner sep=2pt] at (0.60,2.92) {$l$};
+\end{tikzpicture}

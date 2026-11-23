@@ -1,0 +1,46 @@
+% 2010 年陕西卷理科第 18 题：四棱锥 P-ABCD 与平面 BEF。
+% 来源 PDF：普通高考/2010/2010陕西理.pdf，SHA-256 8406e303e7aa1ac7813893781c903a7d9c904530028e6fd1c06062d1c32bd645。
+% 原页：第 2 页（A3 三栏）第 1 栏上部，书页码 624。
+% 重绘依据：照原页——P 在最高处、A 在其下方（A 为被遮挡的后角，故 PA 画虚线），
+%   B 在左下、C 在右下、D 在右侧与 A 同一水平高度；矩形 ABCD 中 AB、AD 为被遮挡的边（虚线），
+%   BC、CD 为可见边（实线）；PB、PC、PD 为可见棱（实线）。
+%   E 为 AD 中点、F 为 PC 中点：BF 落在可见侧面 PBC 内（实线），BE、EF 为体内辅助线（虚线）。
+%   坐标（cm）：B=(0,0)，C=(6.4,0)，A=(1.9,2.3)，D=(8.3,2.3)，P=(2.0,7.6)，
+%   则 E=(5.1,2.3)，F=(4.2,3.8)。
+\begin{tikzpicture}[semithick, line join=round]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (6.4,0);
+  \coordinate (A) at (1.9,2.3);
+  \coordinate (D) at (8.3,2.3);
+  \coordinate (P) at (2.0,7.6);
+  \coordinate (E) at (5.1,2.3);
+  \coordinate (F) at (4.2,3.8);
+
+  % 可见棱与可见底边（实线）
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  \draw (B) -- (F);
+
+  % 被遮挡的棱与体内辅助线（虚线）
+  \draw[dashed] (P) -- (A);
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (B) -- (E);
+  \draw[dashed] (E) -- (F);
+
+  % 中点记号
+  \draw ($(E)!0.055cm!90:(A)$) -- ($(E)!-0.055cm!90:(A)$);
+  \draw ($(F)!0.055cm!90:(P)$) -- ($(F)!-0.055cm!90:(P)$);
+
+  % 顶点标注
+  \node[above, inner sep=2pt] at (P) {$P$};
+  \node[above left, inner sep=1pt] at (A) {$A$};
+  \node[below left, inner sep=2pt] at (B) {$B$};
+  \node[below right, inner sep=2pt] at (C) {$C$};
+  \node[right, inner sep=3pt] at (D) {$D$};
+  \node[below, inner sep=3pt] at (E) {$E$};
+  \node[right, inner sep=3pt] at (F) {$F$};
+\end{tikzpicture}
