@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 四川卷（文科）：phase7-b14 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+- 对象：`gk-2011-sichuan-arts`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-ab0070c58014682841553fcd909cdd1ff367ffaef58ffa0b976882c263eb319c`，固定件 SHA-256 `9df4a6b69bb06bfab2f7d7ee0e7fcc50ae547f226260996d7a060c31ad14e64a`（539,413 bytes），2 页 A3 横向，印面页码 703、704。
+- 来源核对：文字层只作定位，题面、选项、四联图象、正六边形、球内接圆柱、直三棱柱与椭圆均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1B 2B 3D 4A 5A 6B 7D 8C 9A 10C 11A 12B；13 $84$；14 $16$；15 $32\pi$；16 ②③④；17 (1) 甲、乙均为 $\dfrac14$、(2) $\dfrac34$；18 (1) $T=2\pi$、最小值 $-2$、(2) 证明（$\beta=\dfrac\pi2$，$f(\beta)=\sqrt2$）；19 (1) 证明（$\overrightarrow{PB_1}=\overrightarrow{BA_1}-2\overrightarrow{BD}$）、(2) $\dfrac23$；20 (1) $q=\dfrac{1\pm\sqrt5}2$、(2) 证明（分 $q=1$／$q\neq1$）；21 (1) $\dfrac{16}7$、(2) 定值 $4$；22 (1) 增 $[0,2]$、减 $[2,+\infty)$，极大值 $25$、无极小值、(2) $1<a\leqslant4$ 时 $x=3-\sqrt{5-a}$，$4<a<5$ 时 $x=3\pm\sqrt{5-a}$，$a=5$ 时 $x=3$，$a\leqslant1$ 或 $a>5$ 无解、(3) 证明（仅 $n=1$ 取等）。
+- 源说明：第 7 题 (A) 原页为粗体「0」，按零向量 $\boldsymbol 0$ 转录；第 20(1) 方程给出 $q(q^2-q-1)=0$，$q=0$ 不满足等比数列公比非零要求，题面照录、解析说明取舍依据；第 4 题 (D) 为干扰项、原页未给函数式，按可辨形态重绘并在图注声明；第 22(2) 第二行印面为「$2\lg h(4-x)$」，行首 $2$ 已按 600 dpi 确认。
+- 图稿 5 张（Q4 四选项图象、Q7 正六边形、Q15 球内接圆柱、Q19 直三棱柱、Q21 椭圆），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 验收：四版 7/34/9/26 页（共 76 页），四 log 全 0（初版解析版 125.0pt／印刷版 24.2pt Overfull 已把行列式展开拆成 `aligned` 三行消除）；review 76 页八类检查 **506 pass + 102 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b14.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `6aa3e1c3-9d71-4d6a-bf5e-c0a840d85c37`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **606 卷 / 775 来源 / 452 批次**，complete 488、blocked 118，未绑定来源 **170**；manifest revision 10703。
+- 修改文件：`2011/2011_数学真题_四川文_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_四川卷_文科/`（questions/answers/answers_short、四版入口、5 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b14.md`、`PROGRESS.md`。
+- 下一步：继续 2011 安徽文理、山东文理、广东文理等未绑定来源。
+
 ### 2011 四川卷（理科）：phase7-b13 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
 - 对象：`gk-2011-sichuan-science`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-fb0c8a78285c68646a2af10c7e9d5f4366d453aedd9868770fd4f48289975ace`，固定件 SHA-256 `116ce515679869425079ef4777505df3735ba4cba64847c9069b7d7acdb4fda4`（558,934 bytes），2 页 A3 横向，印面页码 701、702。
 - 来源核对：文字层只作定位，题面、选项、四联图象、球内接圆柱、直三棱柱与椭圆均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。

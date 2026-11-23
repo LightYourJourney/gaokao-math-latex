@@ -3764,6 +3764,14 @@
         "gk-2011-sichuan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b14",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-sichuan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3773,7 +3781,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "670b8363-668b-4b4d-b81c-252801f41afe",
+  "last_transaction_id": "244a6bfc-2942-4f49-9ada-02ff5b480b06",
   "papers": [
     {
       "blocked_from": null,
@@ -44538,9 +44546,82 @@
       "title": "2011 年·四川卷·理科",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_四川卷_文科/figures/f2011_sichuan_arts_q04_inverse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_四川卷_文科/figures/f2011_sichuan_arts_q07_hexagon.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_四川卷_文科/figures/f2011_sichuan_arts_q15_sphere_cylinder.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_四川卷_文科/figures/f2011_sichuan_arts_q19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_四川卷_文科/figures/f2011_sichuan_arts_q21_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_sichuan_arts",
+        "id": "gk-2011-sichuan-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 703、704。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。四川卷题号：选择 1—12、填空 13—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。选择 1B 2B 3D 4A 5A 6B 7D 8C 9A 10C 11A 12B；13 84；14 16；15 32π；16 ②③④；17 (1) 甲、乙均为 1/4、(2) 3/4；18 (1) T=2π、最小值 −2、(2) 证明（β=π/2，f(β)=√2）；19 (1) 证明（PB₁=BA₁−2BD）、(2) 2/3；20 (1) q=(1±√5)/2、(2) 证明（分 q=1／q≠1）；21 (1) 16/7、(2) 定值 4；22 (1) 增 [0,2]、减 [2,+∞)，极大值 25、无极小值、(2) 1<a≤4 时 x=3−√(5−a)，4<a<5 时 x=3±√(5−a)，a=5 时 x=3，a≤1 或 a>5 无解、(3) 证明（仅 n=1 取等）。源说明：第 7 题 (A) 原页为粗体 0，按零向量 0 转录；第 20(1) 方程给出 q(q²−q−1)=0，q=0 不满足等比数列公比非零要求，题面照录、解析说明取舍；第 4 题 (D) 为干扰项、原页未给函数式，按可辨形态重绘；第 22(2) 第二行印面为「2 lg h(4−x)」，行首 2 已按 600 dpi 确认。原页共 5 幅图：第 4 题四选项图象、第 7 题正六边形、第 15 题球内接圆柱、第 19 题直三棱柱、第 21 题椭圆；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "四川文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-sichuan-arts",
+      "production_state": "complete",
+      "project_dir": "2011_四川卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_四川文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_四川文_含解析.md",
+        "questions": "2011/2011_数学真题_四川文_试题.md",
+        "solution_body": "2011/2011_数学真题_四川文_解析正文.md"
+      },
+      "source_ids": [
+        "src-ab0070c58014682841553fcd909cdd1ff367ffaef58ffa0b976882c263eb319c"
+      ],
+      "title": "2011 年·四川卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 10696,
+  "revision": 10703,
   "schema_version": 1,
   "sources": [
     {
@@ -56201,8 +56282,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1604ba3eb5a590aabec23a65e617ed9d4f46fa10",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-sichuan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011四川文.pdf",
       "regions": [],
       "source_id": "src-ab0070c58014682841553fcd909cdd1ff367ffaef58ffa0b976882c263eb319c",
