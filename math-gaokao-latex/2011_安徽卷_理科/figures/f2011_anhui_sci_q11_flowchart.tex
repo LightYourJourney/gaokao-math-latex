@@ -1,0 +1,25 @@
+% 2011 年安徽卷理科第 11 题：程序框图（算法流程图）。
+% 来源 PDF：普通高考/2011/2011安徽理.pdf，SHA-256 83dabf28711e3020c00f9fc73f3bf7be70f65fed94ab6ad5b6a39ac840820c0f。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 643。
+% 重绘依据：照原页——自上而下「开始」→ 矩形 T=0,k=0 → 矩形 T=T+k → 菱形 T>105?；
+%   「是」向下经平行四边形「输出 k」到「结束」；「否」向右到矩形 k=k+1，
+%   再上行折回、汇入 T=0,k=0 与 T=T+k 之间的竖直连线（原页箭头指入 T=T+k 上边）。
+\begin{tikzpicture}[>=stealth, semithick, font=\small]
+  \node[draw, rounded corners=0.12cm, minimum width=1.15cm, minimum height=0.50cm] (start) at (0,0) {开始};
+  \node[draw, minimum width=2.05cm, minimum height=0.50cm] (init) at (0,-1.05) {$T=0,\ k=0$};
+  \node[draw, minimum width=1.30cm, minimum height=0.50cm] (add) at (0,-2.00) {$T=T+k$};
+  \node[draw, diamond, aspect=2.2, minimum width=2.10cm, minimum height=0.80cm] (test) at (0,-3.10) {$T>105$?};
+  \node[draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+        minimum width=1.40cm, minimum height=0.55cm] (out) at (0,-4.30) {输出 $k$};
+  \node[draw, rounded corners=0.12cm, minimum width=1.15cm, minimum height=0.50cm] (stop) at (0,-5.30) {结束};
+  \node[draw, minimum width=1.20cm, minimum height=0.50cm] (inc) at (2.70,-3.10) {$k=k+1$};
+  % 主干
+  \draw[->] (start.south) -- (init.north);
+  \draw[->] (init.south) -- (add.north);
+  \draw[->] (add.south) -- (test.north);
+  \draw[->] (test.south) -- (out.north) node[midway,right] {是};
+  \draw[->] (out.south) -- (stop.north);
+  % 「否」分支与回环
+  \draw[->] (test.east) -- (inc.west) node[midway,above] {否};
+  \draw (inc.north) -- (2.70,-1.55) -- (0,-1.55);
+\end{tikzpicture}

@@ -1,0 +1,41 @@
+% 2011 年安徽卷理科第 21 题：抛物线 y=x^2，A(1,1)，B 在抛物线上，BQ=λQA，
+%   过 Q 作 x 轴垂线交抛物线于 M，QM=λMP。
+% 来源 PDF：普通高考/2011/2011安徽理.pdf，SHA-256 83dabf28711e3020c00f9fc73f3bf7be70f65fed94ab6ad5b6a39ac840820c0f。
+% 原页：第 2 页（A3 三栏）第 3 栏上部，书页码 644。
+% 重绘依据：照原页——抛物线 y=x^2，A(1,1) 在右支上，B 在左支上（高于 A），
+%   直线 BA 与 y 轴相交后向右下延伸过 A；Q 在 BA 上、位于 y 轴右侧，M 为过 Q 的竖直线与抛物线的交点，
+%   P 在该竖直线上、位于 M 下方并以实心点标出；竖直线上端越过 Q 继续向上、下端伸到 x 轴下方。
+%   x 轴上标 -1 与 1，y 轴在 y=1 处有刻度并标 1。取 B=(-1.15,1.3225)，Q、M、P 按解析式算得，
+%   P 落在 y=2x-1 上；不按原页绝对比例。
+\begin{tikzpicture}[x=2.1cm, y=2.1cm, >=stealth, semithick, font=\small]
+  % 坐标轴
+  \draw[->] (-1.70,0) -- (1.70,0) node[right] {$x$};
+  \draw[->] (0,-1.05) -- (0,2.45) node[above] {$y$};
+  % 抛物线
+  \draw[line width=0.9pt] plot[domain=-1.549:1.549, samples=160] (\x, {\x*\x});
+  % 竖直虚线所在直线（过 Q 的竖直线，原页为实线）
+  \draw (0.45,-0.95) -- (0.45,2.30);
+  % 直线 BA
+  \draw (-1.15,1.3225) -- (1.16,0.9760);
+  % 点
+  \coordinate (A) at (1,1);
+  \coordinate (B) at (-1.15,1.3225);
+  \coordinate (Q) at (0.45,1.0825);
+  \coordinate (M) at (0.45,0.2025);
+  \coordinate (P) at (0.45,-0.10);
+  \fill (P) circle (1.3pt);
+  % 刻度
+  \draw (-0.035,1) -- (0,1);
+  \node[left] at (-0.05,1) {$1$};
+  \draw (-1,0) -- (-1,-0.035);
+  \node[below] at (-1,-0.045) {$-1$};
+  \draw (1,0) -- (1,-0.035);
+  \node[below] at (1,-0.045) {$1$};
+  % 标注
+  \node[below left] at (-0.04,-0.02) {$O$};
+  \node[right] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[right] at (Q) {$Q$};
+  \node[left] at (M) {$M$};
+  \node[left] at (P) {$P$};
+\end{tikzpicture}

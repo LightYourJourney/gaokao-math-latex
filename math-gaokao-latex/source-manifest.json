@@ -3772,6 +3772,14 @@
         "gk-2011-sichuan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b15",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-anhui-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3781,7 +3789,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "244a6bfc-2942-4f49-9ada-02ff5b480b06",
+  "last_transaction_id": "90edd452-38bd-43fe-a5ae-5aeb9a6b4aa6",
   "papers": [
     {
       "blocked_from": null,
@@ -44619,9 +44627,82 @@
       "title": "2011 年·四川卷·文科",
       "track": "arts",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_安徽卷_理科/figures/f2011_anhui_sci_q06_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_安徽卷_理科/figures/f2011_anhui_sci_q10_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_安徽卷_理科/figures/f2011_anhui_sci_q11_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_安徽卷_理科/figures/f2011_anhui_sci_q17_polyhedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_安徽卷_理科/figures/f2011_anhui_sci_q21_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_anhui_science",
+        "id": "gk-2011-anhui-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 643、644。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。安徽卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。选择 1A 2C 3A 4B 5D 6C 7D 8B 9C 10B；11 15；12 0；13 π/3；14 15√3；15 ①③⑤；16 (1) 极大值点 x=1/2、极小值点 x=3/2、(2) 0<a≤1；17 (1) 证明（EF=2BC）、(2) 3/2；18 (1) aₙ=n+2、(2) Sₙ=(tan(n+3)−tan3)/tan1−n；19 (1)(2) 证明（恒等式 (xy−1)(x−1)(y−1)）；20 (1) 1−(1−p₁)(1−p₂)(1−p₃)、换序不变、(2) P(X=1)=q₁、P(X=2)=(1−q₁)q₂、P(X=3)=(1−q₁)(1−q₂)，EX=3−2q₁−q₂+q₁q₂、(3) 按概率由大到小派甲、乙、丙；21 y=2x−1。源说明：第 6 题侧视图梯形上底未标数，由俯视图 1+2+1 推得为 2（表面积 48+8√17 依赖此值）；第 17 题线段 BF 原页为实线，照录；第 20 题三人全失败时仍记 X=3，题面未明示、按此理解；第 21 题未排除 B=A，此时 Q=M=P=A，(1,1) 仍在 y=2x−1 上，不剔除该点。原页共 5 幅图：第 6 题三视图、第 10 题函数图象、第 11 题程序框图、第 17 题多面体、第 21 题抛物线；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "安徽理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-anhui-science",
+      "production_state": "complete",
+      "project_dir": "2011_安徽卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_安徽理_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_安徽理_含解析.md",
+        "questions": "2011/2011_数学真题_安徽理_试题.md",
+        "solution_body": "2011/2011_数学真题_安徽理_解析正文.md"
+      },
+      "source_ids": [
+        "src-2d6321be03ee87952001ff3e137123d526fcb4e98c86bc4792b044780fe94159"
+      ],
+      "title": "2011 年·安徽卷·理科",
+      "track": "science",
+      "year": 2011
     }
   ],
-  "revision": 10703,
+  "revision": 10712,
   "schema_version": 1,
   "sources": [
     {
@@ -56450,8 +56531,8 @@
       "exam_type": "regular",
       "git_blob_oid": "8aa12c0b58a9584c544764bd6bf82dc5d6b1703d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-anhui-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011安徽理.pdf",
       "regions": [],
       "source_id": "src-2d6321be03ee87952001ff3e137123d526fcb4e98c86bc4792b044780fe94159",
