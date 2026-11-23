@@ -3716,6 +3716,14 @@
         "gk-2010-chongqing-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b08",
+      "issues": [],
+      "paper_ids": [
+        "gk-2010-spring-shanghai"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3725,7 +3733,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7b4f08c6-b95f-4eb5-83a1-55328148b8e5",
+  "last_transaction_id": "ebc0d383-b3c4-4bda-a3f0-c549bc9cc9c8",
   "papers": [
     {
       "blocked_from": null,
@@ -44076,9 +44084,74 @@
       "title": "2010 年·普通高等学校招生考试·重庆卷·文科",
       "track": "arts",
       "year": 2010
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2010_春季上海卷/figures/f2010_spring_sh_q12_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_春季上海卷/figures/f2010_spring_sh_q13_cylinder.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_春季上海卷/figures/f2010_spring_sh_q21_globe.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2010_gaokao_spring_shanghai",
+        "id": "gk-2010-spring-shanghai",
+        "note": "固定源为 4 页（208×289 mm）期刊转载版《数学教学》2010 年第 2 期，印刷页 2-37～2-40：第 1—2 页题面，第 3—4 页印有参考答案。原页全卷 150 分、120 分钟，填空题 14 题（1—14，每空 4 分）、选择题 4 题（15—18，每题 5 分）、解答题 5 题（19—23，共 74 分），分值照录。答案等级 A：印载答案与独立推导逐题一致，但副本为期刊转载、官方身份未核，`official_answer` 仍为 null。答案：1 π；2 0；3 1+i；4 {x|−1<x<2}；5 4；6 80；7 x²/(2/3)−y²/2=1；8 60；9 1/12；10 √2/6；11 {−3,2}；12 7/3；13 2600π；14 1；15 D；16 B；17 B；18 C；19 √2a/(1−a)；20 (1) a=2、(2) 最大值 log_a49（x=0）；21 (1) 约 1.2 小时、(2) 约 10009 千米；22 (1) (17/5,−6/5)、(2) 仍为直线 −(3A+4B)x/5+(−4A+3B)y/5+C=0、(3) l⊥b，b=±(√2/2,−√2/2)；23 (1) a=−1、(2) 递减、(3) 充要条件 x₁=1/(1−2^m)（m∈N*），项数 m。源疑点：第 23 题 (1) 与 (3) 的 a 口径不同，照录；第 19 题印载末步分母为 1−a，600 dpi 下可辨；第 21 题 (2) 印载约 10009 km，独立球面余弦定理约 10008.8 km，四舍五入一致。原页共 3 幅图：第 12 题程序框图、第 13 题斜截圆柱、第 21 题地球与纬线；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "none",
+        "variant": "春季上海"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2010-spring-shanghai",
+      "production_state": "complete",
+      "project_dir": "2010_春季上海卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2010/2010_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2010/2010_数学真题_春季上海_含解析.md",
+        "questions": "2010/2010_数学真题_春季上海_试题.md",
+        "solution_body": "2010/2010_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-b2e8e8586e23752110accc0ac7548eba970a34accd6df481f26d993f74e0ce1d"
+      ],
+      "title": "2010 年·春季上海卷",
+      "track": "none",
+      "year": 2010
     }
   ],
-  "revision": 10657,
+  "revision": 10664,
   "schema_version": 1,
   "sources": [
     {
@@ -44671,8 +44744,8 @@
       "exam_type": "spring",
       "git_blob_oid": "19c5d87a3abe417f00394b39e9745cac9b0b8329",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2010-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2010春季上海.pdf",
       "regions": [],
       "source_id": "src-b2e8e8586e23752110accc0ac7548eba970a34accd6df481f26d993f74e0ce1d",

@@ -1,0 +1,32 @@
+% 2010 年上海春季卷第 21 题：地球示意图（北极—南极、赤道、上海/大连所在经线与纬线、里斯本）。
+% 来源 PDF：春季高考/2010/2010春季上海.pdf，SHA-256 24926e5272a6316cbaa399c0a097b3986ab34563db975016f98bae99f2274c56。
+% 原页：第 2 页右栏中部（印刷页 2-38，《数学教学》2010 年第 2 期转载）。
+% 重绘依据：球面轮廓 + 地轴虚线；北纬 39° 圈（实线）过大连、里斯本；
+% 北纬 31° 圈（虚线）过上海；南侧另有赤道圈（实线）；经线用椭圆弧表示，
+% 大连与上海同在东经 121° 经线上。
+\begin{tikzpicture}[semithick, every node/.style={inner sep=1.5pt, font=\small}]
+  % 球面轮廓与地轴
+  \draw (0,0) circle (2);
+  \draw[dashed] (0,2) -- (0,-2);
+  % 纬圈：北纬 39°（实线，过大连、里斯本）
+  \draw (0,1.15) ellipse (1.55 and 0.30);
+  % 纬圈：北纬 31°（虚线，过上海）
+  \draw[dashed] (0,0.66) ellipse (1.72 and 0.33);
+  % 赤道（实线，位于视点下方）
+  \draw (0,-0.45) ellipse (1.94 and 0.38);
+  % 经线：左前方一条（实线）、过上海与大连一条（实线）、近中央背面一条（虚线）
+  \draw (0,2) arc[start angle=90, end angle=270, x radius=0.55, y radius=2];
+  \draw (0,2) arc[start angle=90, end angle=-90, x radius=0.735, y radius=2];
+  \draw[dashed] (0,2) arc[start angle=90, end angle=-90, x radius=0.40, y radius=2];
+  % 三地位置
+  \fill (-1.55,1.15) circle (1.6pt);
+  \node[left] at (-1.60,1.15) {里斯本};
+  \fill (0.655,0.878) circle (1.6pt);
+  \node at (0.60,1.15) {大连};
+  \fill (0.727,0.361) circle (1.6pt);
+  \node[right] at (0.755,0.361) {上海};
+  % 球心与两极
+  \node at (0.20,-0.10) {$O$};
+  \node[above] at (0,2.05) {北极};
+  \node[below] at (0,-2.05) {南极};
+\end{tikzpicture}
