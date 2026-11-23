@@ -1,0 +1,20 @@
+% 2011 年四川卷理科第 4 题：正六边形 ABCDEF，求 BA+CD+EF。
+% 来源 PDF：普通高考/2011/2011四川理.pdf，SHA-256 116ce515679869425079ef4777505df3735ba4cba64847c9069b7d7acdb4fda4。
+% 原页：第 1 页（A3 三栏）第 1 栏中部偏上，书页码 701。
+% 重绘依据：照原页——上边 DE 水平、下边 BA 水平，D 在左上、E 在右上、C 在左、F 在右，
+%   B 在左下、A 在右下；按正六边形作图，原页不画顶点圆点。
+\begin{tikzpicture}[scale=1.7, >=stealth, semithick]
+  \coordinate (A) at (0.5,-0.8660);
+  \coordinate (B) at (-0.5,-0.8660);
+  \coordinate (C) at (-1,0);
+  \coordinate (D) at (-0.5,0.8660);
+  \coordinate (E) at (0.5,0.8660);
+  \coordinate (F) at (1,0);
+  \draw (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- cycle;
+  \node at (A) [below right] {$A$};
+  \node at (B) [below left] {$B$};
+  \node at (C) [left] {$C$};
+  \node at (D) [above left] {$D$};
+  \node at (E) [above right] {$E$};
+  \node at (F) [right] {$F$};
+\end{tikzpicture}
