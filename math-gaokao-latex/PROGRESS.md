@@ -4,11 +4,60 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 福建卷（理科）：phase6-b97 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+- 对象：`gk-2010-fujian-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21；第 21 题为「三选二」，含【A】矩阵、【B】极坐标与参数方程、【C】绝对值不等式）；固定来源 `src-efdcd3443ab62975e94e43fb98de0934aa5825cfed53588d94a1adb3e7783e05`，固定件 SHA-256 `7c811af1fc113435bb53b4e967c30d769e6297a558f617dd322adf3152d9df84`（517,918 bytes），2 页 A3 横向，印面页码 589、590；页眉「2010 普通高等学校招生考试（福建卷理）」。
+- 来源核对：文字层只作定位，分数、根号、上下标、选项、三视图尺寸与四幅图均按 600 dpi 原页核对；原页各题与各节均未印分值，全部记「原页未标」，不补。第 21 题原页仅印「三选二」，无分值说明，照录。
+- 结构（按原页）：选择题 1—10、填空题 11—15、解答题 16—21。
+- 答案（独立推导，等级 D，非官方）：1A 2D 3A 4C 5C 6D 7B 8B 9B 10C；11 $a_n=4^{n-1}$；12 $6+2\sqrt3$；13 $0.128$；14 $\left[-\dfrac32,3\right]$；15 ①②④；16 (1) $(-2,2),(-1,1),(0,0),(1,-1),(2,-2)$，(2) $P(\xi=0)=\frac16$、$P(\xi=1)=\frac13$、$P(\xi=4)=\frac13$、$P(\xi=9)=\frac16$、$E\xi=\frac{19}6$；17 (1) $\dfrac{x^2}{16}+\dfrac{y^2}{12}=1$、(2) 不存在；18 (1) 证明、(2) $p_{\max}=\dfrac1\pi$、$\cos\theta=\dfrac{\sqrt{10}}5$；19 (1) $30\sqrt3$ 海里/小时、(2) 北偏东 $30^\circ$、$30$ 海里/小时、最短 $\dfrac23$ 小时；20 (1) 单调区间与 $\dfrac{S_1}{S_2}=\dfrac1{16}$，(2) 一般三次函数同结论；21【A】$a=b=-1$、$c=d=2$，像 $y=-x$；【B】$x^2+(y-\sqrt5)^2=5$、$3\sqrt2$；【C】$a=2$、$m\leqslant5$。
+- **主代理复核纠错一处**：第 13 题原稿把两条合格序列 $(1,0,1,1)$ 与 $(0,0,1,1)$ 都按 $0.8^2\cdot0.2^2$ 计，漏掉 $(1,0,1,1)$ 中的三个正确；正确概率为 $0.8\cdot0.2\cdot0.8^2+0.2^2\cdot0.8^2=0.1024+0.0256=0.128$（原 $0.0512$ 错误）。已改答案要点速查表、逐题答案、解析正文并重算第 13 题 `answer_sha256`。
+- 逐题复核要点：第 6 题由 $EH\parallel A_1D_1$ 与截面得 $FG\parallel EH$，截得几何体不是棱台（选 D）；第 7 题 $\overrightarrow{OP}\cdot\overrightarrow{FP}=\frac43x^2+2x-1$ 在 $x\geqslant\sqrt3$ 上递增，最小值 $3+2\sqrt3$；第 8 题两区域关于直线对称，最近点在 $(1,1)$，$|AB|_{\min}=2\times\frac{|3-4-9|}5=4$；第 9 题需用集合元素互异定 $b=-1$；第 12 题正视图中间一条竖线，底面边长 $2$、高 $1$，表面积 $6+2\sqrt3$；第 13 题见上；第 16 题 $S=[-2,3]$ 的 6 个整数，$E\xi=19/6$。
+- 版式补正：第 21 题（三选二）题面把「解析」标签挤到第 30 页页末、正文另起一页；在【C】前加 0.8 行间距后，题面在第 30 页收尾、「解析」标题与【A】解答同页起于第 31 页，解析版仍 32 页。
+- 图稿 4 张（Q5 程序框图、Q6 长方体与截面、Q12 三视图、Q18 圆柱内接三棱柱），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 源说明：第 21 题三选二三个小问均已给出独立解答；第 9 题按元素互异取 $b=-1$，解析注明依据；第 12 题按中间一条竖线读底面边长 2。
+- 验收：四版 7/32/9/24 页（共 72 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 72 页八类检查 **481 pass + 95 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b97.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `c9642605-1dd4-42e5-879c-f7e2ac129b3e`）。
+- 版式说明：印刷版第 5 页「参考答案与详细解析」标题与使用说明落在页末、首题自第 6 页起，同 phase6-b92～b96 的模板既有行为，未改公共模板。
+- 全量门禁：`provenance check-batch`、`solution_sources check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects`、`make_short_answers`、`make_editions` 定向 `--check` 一致。
+- 全库（本卷封账后）：manifest **590 卷 / 775 来源 / 436 批次**，complete 472、blocked 118，未绑定来源 **186**；manifest revision 10596。
+- 修改文件：`2010/2010_数学真题_福建理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2010_福建卷_理科/`（questions/answers/answers_short、四版入口、4 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase6-b97.md`、`PROGRESS.md`。
+- 下一步：继续 2010 辽宁文理、重庆文理、陕西文理、春季上海等未绑定来源。
+
+### 2010 湖南卷（理科）：phase6-b96 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+- 对象：`gk-2010-hunan-science`，**21 个题号**（选择 1—8、填空 9—15、解答 16—21）；固定来源 `src-8ad9da54dafbf1ef76145b8deadd76f4a45587a8a41c2ae09994ad176caf7c80`，固定件 SHA-256 `db6274a80ebb0022ff1b91b2cd3714fe8cca335e48be69805dcd87cdefd8c8d1`（508,496 bytes），2 页 A3 横向，印面页码 601、602；页眉「2010 普通高等学校招生考试（湖南卷理）」。
+- 来源核对：文字层只作定位，分数、根号、上下标、选项、直方图读数与六幅图均按 600 dpi 原页逐题复核；原页各题与各节均未印分值，全部记「原页未标」，不补。易错处按原页确认：Q6 为 $c=\sqrt2a$、Q16 为 $\sqrt3\sin2x-2\sin^2x$、Q18(2) 为 $B_1F\parallel$ 平面 $A_1BE$、Q12 流程图先 $s=s+i^2$ 后 $i=i+1$。
+- 结构（按原页）：选择题 1—8、填空题 9—15、解答题 16—21。
+- 答案（独立推导，等级 D，非官方）：1C 2B 3A 4D 5D 6A 7B 8D；9 $171.8$ 或 $148.2$；10 $6$；11 $\dfrac23$；12 $100$；13 $4$；14 $2$；15 $2$、$n^2$；16 (1) $1$、(2) $\{x\mid x=k\pi$ 或 $x=k\pi+\dfrac\pi3,\ k\in\mathbf Z\}$；17 (1) $0.12$、(2) $X\sim B(3,0.1)$，$P(X=0)=0.729$、$P(X=1)=0.243$、$P(X=2)=0.027$、$P(X=3)=0.001$，$EX=0.3$；18 (1) $\dfrac23$、(2) 存在，$F$ 为 $C_1D_1$ 中点；19 (1) 右段 $(x-4)^2+y^2=\dfrac{36}5$（$x\geqslant2$）、左段 $\dfrac{x^2}{20}+\dfrac{y^2}4=1$（$x\leqslant2$）、(2) $4$ 年；20 (1) 证明、(2) $\dfrac32$；21 (1) $a_1=0$、$a_2=1$、$a_n=4\cdot3^{n-3}$（$n\geqslant3$）、(2) 存在，$a>\dfrac49$。
+- 复核要点：第 6 题 $b^2+ab-a^2=0$ 给 $b/a=(\sqrt5-1)/2$，故 $a>b$；第 10 题 $PT^2=PA\cdot PB$ 给 $PB=8$、$AB=6$；第 13 题三视图为三直角边 5、6、$h$ 的四面体，$(1/6)\cdot5\cdot6\cdot h=20$ 给 $h=4$；第 14 题梯形面积 $3\sqrt2p^2=12\sqrt2$ 给 $p=2$；第 18 题建系（棱长 2）得 $\sin=2/3$、$F$ 为中点；第 19 题按边界线首次抵达区域计 4 年（$P_1P_2$ 4 年、$P_2P_3$ 5 年取短）；第 20 题由 $f'(x)\leqslant f(x)$ 得 $c\geqslant b^2/4+1$，$M_{\min}=3/2$；第 21 题 $a_{n+1}=\max\{3a_n,n^2\}$，等比条件按严格极小值点排除 $a=4/9$，得 $a>4/9$。
+- 源说明：第 9 题「可以是」故 0.618 法首试点两值并列；第 19 题「已融化/冰川」字样照原页字位排布；原页未印分值，不补。
+- 图稿 6 张（Q10 圆与切线割线、Q12 程序框图、Q13 三视图、Q17 频率分布直方图、Q18 正方体与辅助三角形、Q19 冰川边界与考察区域），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 验收：四版 7/28/9/19 页（共 63 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 63 页八类检查 **432 pass + 72 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b96.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `5b7af140-a5ba-4db7-b15d-4ad692f5cd40`）。
+- 版式说明：印刷版第 5 页「参考答案与详细解析」标题与使用说明落在页末、首题自第 6 页起，同 phase6-b92/b93/b94 的模板既有行为，未改公共模板。
+- 全量门禁：`provenance check-batch`、`solution_sources check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects`、`make_short_answers`、`make_editions` 定向 `--check` 一致。
+- 全库（本卷封账后）：manifest **589 卷 / 775 来源 / 435 批次**，complete 470、blocked 118，未绑定来源 **187**；manifest revision 10569。
+- 修改文件：`2010/2010_数学真题_湖南理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2010_湖南卷_理科/`（questions/answers/answers_short、四版入口、6 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase6-b96.md`、`PROGRESS.md`。
+- 下一步：继续 2010 福建文理、辽宁文理、重庆文理、陕西文理、春季上海等未绑定来源。
+
+### 2010 浙江卷（文科）：phase6-b95 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+- 对象：`gk-2010-zhejiang-arts`，22 个题号（选择 1—10、填空 11—17、解答 18—22）；固定来源 `src-3976345bdad1b270ec6898a5996a76519363be74478d129b8f767951e80aab99`，固定件 SHA-256 `a73e22ea405697775b2d5cd82532fcffad0f506b849d9f199265b4297b8a754b`（513,695 bytes），2 页 A3 横向，印面页码 641、642；页眉「2010 普通高等学校招生考试（浙江卷文）」。
+- 来源核对：固定件 SHA-256 与 manifest 登记值一致；文字层只作定位，分数、根号、上下标、选项、三视图尺寸、茎叶图读数与七幅图表均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—17、解答题 18—22。
+- 答案（独立推导，等级 D，非官方）：1D 2B 3C 4A 5A 6B 7A 8B 9B 10D；11 $45$，$46$；12 $\dfrac{\pi}{2}$；13 $\sqrt{10}$；14 $n(n+1)$；15 $18$；16 $20$；17 $\dfrac34$；18 (1) $\dfrac\pi3$、(2) $\sqrt3$；19 (1) $S_6=-3$、$a_1=7$，(2) $(-\infty,-2\sqrt2]\cup[2\sqrt2,+\infty)$；20 (1) 证明、(2) $\dfrac12$；21 (1) $x-y-2=0$、(2) $x_4=\dfrac{2a+b}3$；22 (1) $y^2=8x$、(2) 证明。
+- 逐题复核要点：第 1 题 $Q=(-2,2)$ 与 $P=(-\infty,1)$ 交为 $(-2,1)$；第 4 题逐轮 $S=4,11,26,57$，$k>4$ 首次成立；第 5 题 $q=-2$，$\frac{S_5}{S_2}=\frac{33}{-3}$；第 7 题可行域顶点 $\left(\frac{12}7,\frac37\right)$、$(0,1)$、$(4,5)$，$x+y$ 最大 $9$；第 8 题下部棱台 $\frac23(64+16+32)=\frac{224}3$、上部 $32$，合 $\frac{320}3$；第 9 题 $f$ 在 $(1,+\infty)$ 上严格递增；第 10 题 $mn=4b^2$ 与 $m^2+n^2=14a^2+2c^2$ 给 $b^2=2a^2$，渐近线 $\sqrt2x\pm y=0$；第 11 题甲组 9 个数据中位数 $45$、乙组 $46$；第 15 题令 $t=\sqrt{xy}$ 得 $t\geqslant3\sqrt2$；第 16 题令 $u=1+\frac x{100}$，$u^2+u\geqslant2.64$ 给 $x\geqslant20$；第 17 题 $16$ 个 $(E,F)$ 中 $|s|+|t|=1$ 的 $4$ 个落在边界；第 19 题视为 $a_1$ 的二次方程，$\Delta=d^2-8$；第 20 题建系 $A'\left(\frac32,\frac{\sqrt3}2,\sqrt3\right)$、$\boldsymbol n=(-3,-\sqrt3,0)$，$\sin\theta=\frac{\sqrt3}2$；第 21 题 $a,\frac{a+2b}3,b$ 已定公差 $\frac{b-a}3$，四项位置逐一排除得 $x_4=\frac{2a+b}3$；第 22 题 $\overrightarrow{DG}\cdot\overrightarrow{DH}=\frac{p^2m^2}3>0$。
+- 版式与自查补正（封账前完成）：① 第 7 题四个选项原跨页（(D) 顶到次页），按 `question-needspace: 0.4` 令整题同页，四版选项不再跨页（本卷唯一的无图题预留，理由记于此）。② 第 8 题四选项初版用 `\dfrac`，在本模板逐段单行排版下与下一行数值相撞，改用 `\frac`（仍为上下叠置分式）；三视图图幅按 0.45 缩放并上移俯视图，四版内不再与「解析」标题争页。③ 第 14 题数表图初版把表头画在框外且多出一空行，改为表头入框、五列行闭合。④ 印刷版第 9 页一度只剩孤行「解析」，调整三视图图幅后该标题回到正文首行；末页答案框曾自成孤页，合并第 22 题一行推演后恢复 18 页。⑤ 第 8/11/19 题解析首段改为以行间公式收尾，使「解析」标题独立成行。
+- 图稿 7 张（Q4 程序框图、Q8 三视图、Q11 茎叶图、Q14 数表、Q17 平行四边形、Q20 翻折、Q22 抛物线），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；第 22 题按 $p=m^2$、取 $m=0.35$ 归一化作图（抛物线 $y^2=4x$、准线 $x=-1$、$F(1,0)$、$A(1.99,2.82)$、$B(0.50,-1.42)$）；第 20 题原页虚线为 D–C 与 M–F，其余实线，均照原页拓扑。
+- 源缺陷与不确定点：无阻塞性缺陷。第 22 题原页示意图并不严格满足 $p=m^2$（B 点横坐标偏大），本库按题设关系自洽重绘，拓扑与标注左右位置照原页；第 14 题原页为全框格，按全框格重绘；第 11 题叶序按原页自左至右逐字照录（甲 $8\mid9\,1\mid2\,5\mid7\,8\,5\mid6$，乙 $9\mid5\,5\mid8\,2\,6\mid3\,5\mid7$）。
+- 验收：四版 7/26/9/18 页（共 60 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 60 页八类检查 **422 pass + 58 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b95.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `484415c3-0a82-4051-9a1c-59c122baf677`）。
+- 全量门禁：`provenance check-batch`、`solution_sources check-batch`、`validate-receipts --paper --require-final --require-current-inputs`、`review_receipts check-batch` 均通过；`generate_projects`、`make_short_answers`、`make_editions` 定向 `--check` 一致。
+- 全库（本卷封账后）：manifest **589 卷 / 775 来源 / 435 批次**，complete 471、blocked 118，未绑定来源 **187**；manifest revision 10584。
+- 修改文件：`2010/2010_数学真题_浙江文_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2010_浙江卷_文科/`（questions/answers/answers_short、四版入口、7 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase6-b95.md`、`PROGRESS.md`。
+- 下一步：继续 2010 年未绑定来源（余湖南文、福建文理、辽宁文理、重庆文理、陕西文理、春季上海）。
+
 ### 2010 湖北卷（理科）：phase6-b94 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
 - 对象：`gk-2010-hubei-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-b243c9fc92f5669e8dba0c24d347c9b8b443d1278885258d457c6637c6881086`，固定件 SHA-256 `2cfb3d100d55f89c58fe4475caf29f039496afbd0f16d7a7d07857eed5759f55`（507,364 bytes），2 页 A3 横向，印面页码 597、598；页眉「2010 普通高等学校招生考试（湖北卷理）」。原页第 598 页第 21 题后为空白，无第 22 题，按 21 题入账，未补题。
 - 来源核对：任务书初稿写“22 题”，按 600 dpi 两页逐栏复核确认为 21 题（10+5+6，合计 150 分）；分数、根号、上下标、选项、复平面网格与五幅图均按原页核对。原页未印分值，全部记「原页未标」，不补。
 - 结构（按原页）：选择题 1—10、填空题 11—15、解答题 16—21。
-- 答案（独立推导，等级 D，非官方）：1D 2A 3D 4C 5B 6B 7C 8B 9C 10A；11 $6$；12 $5$；13 $4$；14 $0.4$；15 $CD$（几何平均）、$DE$（调和平均）；16 最小正周期 $\pi$，$h(x)$ 最大值 $\dfrac{\sqrt2}2$、$x=k\pi-\dfrac\pi8$；17 $k=40$、$f(x)=6x+\dfrac{800}{3x+5}$，$x=5$ 时最小 $70$ 万元；18 (1) $\dfrac{AB}{AQ}=3$、(2) $\dfrac{\sqrt{15}}5$；19 (1) $y^2=4x$（$x>0$）、(2) $m\in(3-2\sqrt2,\,3+2\sqrt2)$；20 $a_n=(-1)^{n-1}\sqrt{1-rac34\left(rac23ight)^{n-1}}$、$b_n=rac14\left(rac23ight)^{n-1}$，任三项不成等差数列用 $3^{k-i}+2^{k-i}$ 为奇数反证；21 (1) $b=a-1$、$c=1-2a$，(2) $a\geqslantrac12$，(3) 数列不等式证明。
+- 答案（独立推导，等级 D，非官方）：1D 2A 3D 4C 5B 6B 7C 8B 9C 10A；11 $6$；12 $5$；13 $4$；14 $0.4$；15 $CD$（几何平均）、$DE$（调和平均）；16 最小正周期 $\pi$，$h(x)$ 最大值 $\dfrac{\sqrt2}2$、$x=k\pi-\dfrac\pi8$；17 $k=40$、$f(x)=6x+\dfrac{800}{3x+5}$，$x=5$ 时最小 $70$ 万元；18 (1) $\dfrac{AB}{AQ}=3$、(2) $\dfrac{\sqrt{15}}5$；19 (1) $y^2=4x$（$x>0$）、(2) $m\in(3-2\sqrt2,\,3+2\sqrt2)$；20 $a_n=(-1)^{n-1}\sqrt{1-rac34\left(rac23
+ight)^{n-1}}$、$b_n=rac14\left(rac23
+ight)^{n-1}$，任三项不成等差数列用 $3^{k-i}+2^{k-i}$ 为奇数反证；21 (1) $b=a-1$、$c=1-2a$，(2) $a\geqslantrac12$，(3) 数列不等式证明。
 - 主代理复核与版式修正：① 第 1 题框图原在题干与选项之间，导致 (A) 丢失缩进且标注压点；改为“题面→四选项→图”，并加大 E/F/G/H/Z 标签与点的间距。② 第 7 题同理改为选项在前、图在后，消除 (A) 顶格。③ 第 10 题题面在解析版末行溢出 3.19pt（两组 max/min 集合式不可断），试过 `\allowbreak`/`\par`/`\\` 均不能自然断开且会破坏题面版式，最终恢复原题面并按 `warning_exemptions` 登记（pdf_page=16、visual_result=pass）。④ 修正过程中曾把第 10 题题面误留成两段重复，已删除重复段并重建。
 - 图稿 5 张（Q1 复平面、Q7 两圆两正六边形、Q13 圆筒三球、Q15 半圆与垂足、Q18 四面体 ABOC），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；第 14 题分布列用 Markdown 表格，未做图。
 - 源说明：第 19 题题面称曲线在 $y$ 轴右边，但解出的抛物线含顶点 $(0,0)$（在 $y$ 轴上），本库按题面去掉顶点记 $x>0$，不影响第 (2) 问结论；第 18 题 (2) 二面角按半平面内指向 $O$、$B$ 的射线复算取锐角 $rac{\sqrt{15}}5$。

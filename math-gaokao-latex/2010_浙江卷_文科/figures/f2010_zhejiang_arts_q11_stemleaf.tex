@@ -1,0 +1,48 @@
+% 2010 年浙江卷文科第 11 题：甲、乙两组数据的茎叶图。
+% 来源 PDF：普通高考/2010/2010浙江文.pdf，SHA-256 a73e22ea405697775b2d5cd82532fcffad0f506b849d9f199265b4297b8a754b。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 641。
+% 重绘依据：照原页布局，中间一列为公共茎，左为甲组叶、右为乙组叶；
+%   茎自上而下为 2、3、4、5、6，叶按原页自左至右逐字照录（甲 8｜9 1｜2 5｜7 8 5｜6；
+%   乙 9｜5 5｜8 2 6｜3 5｜7），两列竖线夹住茎列，表头上方一条横线。
+\begin{tikzpicture}[scale=1.0, semithick, every node/.style={inner sep=1.5pt, font=\small}]
+
+  % 表头与框线
+  \node at (-1.0,0.8) {甲};
+  \node at (1.5,0.8) {乙};
+  \draw (-2.05,0.42) -- (2.4,0.42);
+  \draw (0,0.42) -- (0,-2.55);
+  \draw (0.62,0.42) -- (0.62,-2.55);
+
+  % 第 1 行：茎 2
+  \node at (0.31,0) {2};
+  \node[anchor=east] at (-0.14,0) {8};
+  \node[anchor=west] at (0.76,0) {9};
+
+  % 第 2 行：茎 3
+  \node at (0.31,-0.55) {3};
+  \node[anchor=east] at (-0.48,-0.55) {9};
+  \node[anchor=east] at (-0.14,-0.55) {1};
+  \node[anchor=west] at (0.76,-0.55) {5};
+  \node[anchor=west] at (1.10,-0.55) {5};
+
+  % 第 3 行：茎 4
+  \node at (0.31,-1.1) {4};
+  \node[anchor=east] at (-0.48,-1.1) {2};
+  \node[anchor=east] at (-0.14,-1.1) {5};
+  \node[anchor=west] at (0.76,-1.1) {8};
+  \node[anchor=west] at (1.10,-1.1) {2};
+  \node[anchor=west] at (1.44,-1.1) {6};
+
+  % 第 4 行：茎 5
+  \node at (0.31,-1.65) {5};
+  \node[anchor=east] at (-0.82,-1.65) {7};
+  \node[anchor=east] at (-0.48,-1.65) {8};
+  \node[anchor=east] at (-0.14,-1.65) {5};
+  \node[anchor=west] at (0.76,-1.65) {3};
+  \node[anchor=west] at (1.10,-1.65) {5};
+
+  % 第 5 行：茎 6
+  \node at (0.31,-2.2) {6};
+  \node[anchor=east] at (-0.14,-2.2) {6};
+  \node[anchor=west] at (0.76,-2.2) {7};
+\end{tikzpicture}

@@ -1,0 +1,34 @@
+% 2010 年浙江卷文科第 4 题：程序框图（判断框内容待填）。
+% 来源 PDF：普通高考/2010/2010浙江文.pdf，SHA-256 a73e22ea405697775b2d5cd82532fcffad0f506b849d9f199265b4297b8a754b。
+% 原页：第 1 页（A3 三栏）第 1 栏中部，书页码 641。
+% 重绘依据：照原页流程，开始→S=1,k=1→k=k+1→S=2S+k→判断框；
+%   判断框“是”向下经“输出 S”到“结束”，“否”自左侧折回 k=k+1 上方。
+\begin{tikzpicture}[scale=1.0, semithick,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, minimum width=2.4cm, minimum height=0.58cm, align=center},
+  round/.style={draw, rounded corners=5pt, minimum width=1.4cm,
+    minimum height=0.58cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.2cm, minimum height=0.6cm, align=center},
+  dec/.style={draw, diamond, aspect=2.2, minimum width=3.0cm,
+    minimum height=1.15cm, align=center},
+  arr/.style={->, >=stealth}]
+
+  \node[round] (start) at (0,8.4) {开始};
+  \node[box]   (init)  at (0,7.35) {$S=1,\ k=1$};
+  \node[box]   (inc)   at (0,5.75) {$k=k+1$};
+  \node[box]   (sum)   at (0,4.55) {$S=2S+k$};
+  \node[dec]   (test)  at (0,3.05) {};
+  \node[para]  (out)   at (0,1.75) {输出 $S$};
+  \node[round] (end)   at (0,0.7)  {结束};
+
+  \draw[arr] (start) -- (init);
+  \draw[arr] (init) -- (inc);
+  \draw[arr] (inc) -- (sum);
+  \draw[arr] (sum) -- (test);
+  \draw[arr] (test.south) -- (out.north);
+  \node[right] at (0.12,2.35) {是};
+  \draw[arr] (out) -- (end);
+  \draw[arr] (test.west) -- (-2.35,3.05) -- (-2.35,6.55) -- (0,6.55);
+  \node[left] at (-2.5,3.2) {否};
+\end{tikzpicture}

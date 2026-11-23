@@ -1,0 +1,37 @@
+% 2010 年湖南卷理科第 17 题：月均用水量的频率分布直方图。
+% 来源 PDF：普通高考/2010/2010湖南理.pdf，SHA-256 db6274a80ebb0022ff1b91b2cd3714fe8cca335e48be69805dcd87cdefd8c8d1。
+% 原页：第 1 页（A3 三栏）第 3 栏中部，书页码 601。
+% 重绘依据：组距 1，五组 [0,1]、[1,2]、[2,3]、[3,4]、[4,5] 的高度依次为
+%   x、0.37、0.39、0.1、0.02；纵轴标「频率/组距」，横轴标「月均用水量/吨」；
+%   0.39、0.37、0.1、0.02 以虚线引到对应矩形条顶部。
+\begin{tikzpicture}[x=1.2cm, y=10cm, semithick, font=\scriptsize]
+  \draw[->] (0,0) -- (8.4,0);
+  \draw[->] (0,0) -- (0,0.55);
+  \node[anchor=west, font=\small] at (0.04,0.535) {频率};
+  \node[anchor=west, font=\small] at (0.04,0.492) {组距};
+
+  % 五个矩形条（组距 1）
+  \draw (0,0) rectangle (1,0.12);
+  \draw (1,0) rectangle (2,0.37);
+  \draw (2,0) rectangle (3,0.39);
+  \draw (3,0) rectangle (4,0.10);
+  \draw (4,0) rectangle (5,0.02);
+
+  % 横轴刻度
+  \foreach \k in {0,1,2,3,4,5} {
+    \draw (\k,0) -- ++(0,-0.008);
+    \node[below] at (\k,-0.010) {\k};
+  }
+  \node[anchor=west, font=\small] at (5.35,-0.012) {月均用水量/吨};
+
+  % 纵轴读数与虚线
+  \draw[dashed] (0,0.39) -- (2,0.39);
+  \draw[dashed] (0,0.37) -- (1,0.37);
+  \draw[dashed] (0,0.10) -- (3,0.10);
+  \draw[dashed] (0,0.02) -- (4,0.02);
+  \node[left] at (0,0.405) {0.39};
+  \node[left] at (0,0.37) {0.37};
+  \node[left] at (0,0.12) {$x$};
+  \node[left] at (0,0.10) {0.1};
+  \node[left] at (0,0.02) {0.02};
+\end{tikzpicture}

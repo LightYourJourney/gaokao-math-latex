@@ -1,0 +1,36 @@
+% 2010 年湖南卷理科第 12 题：求 1^2+2^2+...+100^2 的程序框图。
+% 来源 PDF：普通高考/2010/2010湖南理.pdf，SHA-256 db6274a80ebb0022ff1b91b2cd3714fe8cca335e48be69805dcd87cdefd8c8d1。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 601。
+% 重绘依据：照原页，开始→i=1,s=0→判断 i<=n?；判断框「是」向右、向上依次经
+%   s=s+i^2、i=i+1 后向左汇入主干（即在判断前先累加再自增）；「否」向下经输出 s 到结束。
+\begin{tikzpicture}[scale=1.0, semithick,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, minimum width=2.6cm, minimum height=0.6cm, align=center},
+  round/.style={draw, rounded corners=6pt, minimum width=1.5cm,
+    minimum height=0.6cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.2cm, minimum height=0.65cm, align=center},
+  dec/.style={draw, diamond, aspect=2.4, minimum width=2.8cm,
+    minimum height=1.1cm, align=center},
+  arr/.style={->, >=stealth}]
+
+  \node[round] (start) at (0,9.1) {开始};
+  \node[box]   (init)  at (0,8.1) {$i=1,\ s=0$};
+  \node[dec]   (test)  at (0,4.9) {$i\leqslant n$?};
+  \node[para]  (out)   at (0,3.0) {输出 $s$};
+  \node[round] (end)   at (0,1.9) {结束};
+
+  \node[box] (sum) at (3.5,5.9) {$s=s+i^2$};
+  \node[box] (inc) at (3.5,7.2) {$i=i+1$};
+
+  \draw[arr] (start) -- (init);
+  \draw[arr] (init) -- (test);
+  \draw[arr] (test.south) -- (out.north);
+  \node[right] at (0.14,3.85) {否};
+  \draw[arr] (out) -- (end);
+
+  \draw[arr] (test.east) -| (sum.south);
+  \node[right] at (1.75,5.08) {是};
+  \draw[arr] (sum.north) -- (inc.south);
+  \draw[arr] (inc.west) -- (0,7.2);
+\end{tikzpicture}
