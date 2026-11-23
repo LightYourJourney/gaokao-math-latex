@@ -3676,6 +3676,14 @@
         "gk-2010-shaanxi-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b03",
+      "issues": [],
+      "paper_ids": [
+        "gk-2010-shaanxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3685,7 +3693,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "49884e2d-23e6-4251-ba22-eafcf2fa588f",
+  "last_transaction_id": "539e93da-a4c4-427b-bdbe-af681eaae97a",
   "papers": [
     {
       "blocked_from": null,
@@ -43659,9 +43667,98 @@
       "title": "2010 年·普通高等学校招生考试·陕西卷·理科",
       "track": "science",
       "year": 2010
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2010_陕西卷_文科/figures/f2010_shaanxi_arts_q04_samples.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_陕西卷_文科/figures/f2010_shaanxi_arts_q05_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_陕西卷_文科/figures/f2010_shaanxi_arts_q08_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_陕西卷_文科/figures/f2010_shaanxi_arts_q15b_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_陕西卷_文科/figures/f2010_shaanxi_arts_q17_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_陕西卷_文科/figures/f2010_shaanxi_arts_q18_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_陕西卷_文科/figures/f2010_shaanxi_arts_q19_hist.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_陕西卷_文科/figures/f2010_shaanxi_arts_q20_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2010_gaokao_shaanxi_arts",
+        "id": "gk-2010-shaanxi-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 625、626。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。陕西卷题号：选择 1—10、填空 11—14、选考 15（三选一：【A】不等式、【B】几何证明、【C】参数方程）、解答 16—21，共 21 题。答案由本库独立推导（非官方）。选择 1D 2A 3C 4B 5D 6A 7C 8B 9C 10B；11 1³+2³+3³+4³+5³=15²；12 −1；13 2；14 5；15【A】(−1,2)、【B】16/5、【C】x²+(y−1)²=1；16 a_n=n、S_n=2^{n+1}−2；17 5√6；18 (1) 证明、(2) 45°；19 (1) 400、(2) 26/35、(3) 93/100；20 (1) x²/4+y²/3=1、(2) 不存在；21 (1) a=e/2、切线 y=x/(2e)+e/2、(2) φ(a)=2a−2a ln(2a)、(3) 证明。第 8 题与陕西理第 7 题同图同答（V=1，选 B），按俯视图为正方形判为「竖直截面为直角边 1 与 √2 的直角三角形、棱长 √2 的直三棱柱」。第 20 题 (2) 的 AP·PB 值域为 [9/4,8/3]，恒不为 1，故不存在。第 10 题原页「招开」、第 15 题只印「三选一」均照录。原页共 8 幅图：第 4 题两幅样本折线图、第 5 题程序框图、第 8 题三视图、第 15【B】圆、第 17 题三角形、第 18 题四棱锥、第 19 题男女频数直方图、第 20 题椭圆与直线；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            11,
+            14
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ],
+          "选考题": [
+            15,
+            15
+          ]
+        },
+        "track": "文科",
+        "variant": "陕西文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2010-shaanxi-arts",
+      "production_state": "complete",
+      "project_dir": "2010_陕西卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2010/2010_数学真题_陕西文_答案要点.md",
+        "combined_rendered": "2010/2010_数学真题_陕西文_含解析.md",
+        "questions": "2010/2010_数学真题_陕西文_试题.md",
+        "solution_body": "2010/2010_数学真题_陕西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-13b191f504bb2968c3e633ee71d025625e956467107ae8e7d4f85c82b85cd834"
+      ],
+      "title": "2010 年·普通高等学校招生考试·陕西卷·文科",
+      "track": "arts",
+      "year": 2010
     }
   ],
-  "revision": 10624,
+  "revision": 10629,
   "schema_version": 1,
   "sources": [
     {
@@ -55178,8 +55275,8 @@
       "exam_type": "regular",
       "git_blob_oid": "949400296a09ca1dd4ac6e898bd7e5010e37f2c8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2010-shaanxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2010陕西文.pdf",
       "regions": [],
       "source_id": "src-13b191f504bb2968c3e633ee71d025625e956467107ae8e7d4f85c82b85cd834",

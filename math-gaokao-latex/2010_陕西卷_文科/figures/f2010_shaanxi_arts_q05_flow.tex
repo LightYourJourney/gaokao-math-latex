@@ -1,0 +1,44 @@
+% 2010 年陕西卷文科第 5 题：求 x1,x2,…,x10 的乘积 S 的程序框图。
+% 来源 PDF：普通高考/2010/2010陕西文.pdf，SHA-256 428bcb4aee4c6a7a6a9c9d0dca1377b14112594015d1d50a931e725ae0c5c130。
+% 原页：第 1 页（A3 三栏）第 1 栏下部，书页码 625。
+% 重绘依据：照原页——竖排主干为 开始→输入 x1,…,x10→n=1,S=1→〔空白框〕→判断 n≥10?
+%   →「是」向下进 输出 S→结束；「否」向左进 n=n+1 框，该框顶部再向上折回主干，
+%   在空白框正上方汇入主干（原页此处只在空白框上方画一个向下箭头）。空白框在原页为空。
+\begin{tikzpicture}[semithick,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, minimum width=3.6cm, minimum height=0.66cm, align=center},
+  round/.style={draw, rounded corners=7pt, minimum width=1.7cm,
+    minimum height=0.66cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=6.2cm, minimum height=0.74cm, align=center},
+  paraout/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=3.0cm, minimum height=0.74cm, align=center},
+  dec/.style={draw, diamond, aspect=2.7, minimum width=2.9cm,
+    minimum height=1.05cm, align=center},
+  arr/.style={->, >=stealth}]
+
+  \node[round] (start) at (0,0) {开始};
+  \node[para]  (in)    at (0,-1.20) {输入 $x_1,\,x_2,\,\cdots,\,x_{10}$};
+  \node[box]   (init)  at (0,-2.45) {$n=1$，$S=1$};
+  \node[box, minimum height=0.86cm] (acc) at (0,-3.80) {};
+  \node[dec]   (test)  at (0,-5.60) {$n\geqslant 10$};
+  \node[box]   (inc)   at (-4.55,-3.80) {$n=n+1$};
+  \node[paraout] (out)  at (0,-7.15) {输出 $S$};
+  \node[round] (end)   at (0,-8.70) {结束};
+
+  \draw[arr] (start) -- (in);
+  \draw[arr] (in) -- (init);
+  \draw[arr] (init) -- (acc);
+  \draw[arr] (acc) -- (test);
+
+  \draw[arr] (test) -- (out);
+  \node[right] at (0.16,-6.40) {是};
+  \draw[arr] (out) -- (end);
+
+  % 「否」分支：由判断框左顶点向左，再向上进入 n=n+1 框
+  \draw[arr] (test.west) -- (-4.55,-5.60) -- (inc.south);
+  \node[above] at (-2.55,-5.45) {否};
+
+  % 回边：n=n+1 框顶部向上、再向右，汇入空白框上方的竖线
+  \draw (inc.north) -- (-4.55,-2.95) -- (0,-2.95);
+\end{tikzpicture}
