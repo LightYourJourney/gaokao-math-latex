@@ -1,0 +1,29 @@
+% 2010 年湖北卷文科第 18 题：四面体 ABOC 及点 P、Q。
+% 来源 PDF：普通高考/2010/2010湖北文.pdf，SHA-256 70d7537f9072187051a41095e97fab1d72cc357ee9cd04e831da8cf99217af78。
+% 原页：第 2 页（A3 两栏）第 1 栏上部，书页码 600。
+% 重绘依据：照原页——C 在最高处，B 在右，A 在左下，O 在形内偏下居中；
+%   线段 CO、OA、OB 为虚线（被遮挡），CA、CB、AB 与 P Q 为实线；
+%   P 在棱 CA 上（中点），Q 在棱 AB 上（AQ = AB/3），P Q 在图中穿过 CO、OA 两条虚线之间。
+\begin{tikzpicture}[scale=0.78, semithick, line join=round]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6.60,3.30);
+  \coordinate (C) at (2.00,6.70);
+  \coordinate (O) at (2.20,2.10);
+  \coordinate (P) at ($(A)!0.5!(C)$);
+  \coordinate (Q) at ($(A)!0.3333!(B)$);
+  % 被遮挡的棱（虚线）
+  \draw[dashed, dash pattern=on 4pt off 3pt] (C) -- (O);
+  \draw[dashed, dash pattern=on 4pt off 3pt] (O) -- (A);
+  \draw[dashed, dash pattern=on 4pt off 3pt] (O) -- (B);
+  % 可见棱（实线）
+  \draw (C) -- (A) -- (B) -- (C) -- cycle;
+  % 截面内线段 P Q
+  \draw (P) -- (Q);
+  % 顶点与分点标注
+  \node[above, inner sep=1pt] at (C) {$C$};
+  \node[right, inner sep=1pt] at (B) {$B$};
+  \node[below left, inner sep=1pt] at (A) {$A$};
+  \node[right=2pt, inner sep=1pt] at (O) {$O$};
+  \node[left=3pt, inner sep=1pt] at (P) {$P$};
+  \node[below, inner sep=1pt] at (Q) {$Q$};
+\end{tikzpicture}

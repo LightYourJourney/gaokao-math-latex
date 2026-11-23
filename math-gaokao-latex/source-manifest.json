@@ -3660,6 +3660,14 @@
         "gk-2010-chongqing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b01",
+      "issues": [],
+      "paper_ids": [
+        "gk-2010-hubei-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3669,7 +3677,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "b516cf36-072c-4ec4-a145-ab169520bd88",
+  "last_transaction_id": "e5be9e84-3c6c-4f96-9c4c-31db1ba7d54f",
   "papers": [
     {
       "blocked_from": null,
@@ -43489,9 +43497,74 @@
       "title": "2010 年·普通高等学校招生考试·重庆卷·理科",
       "track": "science",
       "year": 2010
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2010_湖北卷_文科/figures/f2010_hubei_arts_q14_cylinder.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_湖北卷_文科/figures/f2010_hubei_arts_q17_hist.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_湖北卷_文科/figures/f2010_hubei_arts_q18_tetrahedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2010_gaokao_hubei_arts",
+        "id": "gk-2010-hubei-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 599、600；页眉「2010 普通高等学校招生考试（湖北卷文）」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。湖北卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（非官方）。选择 1C 2D 3B 4C 5A 6A 7C 8B 9D 10A；11 45；12 5；13 0.9477；14 4；15 [2,2√2)∪{0}；16 (1) g 由 f 左移 π/4、上移 1/4 得到、(2) 最小值 1/4−√2/2、x=3π/8+kπ；17 (1) 各矩形高 0.4、1、4、5.6、6、3、(2) 0.73、(3) 2000 条；18 (1) 证明、(2) √15/5；19 (1) 1.1a−b、1.21a−2.1b、(2) b=a/20；20 (1) y²=4x（x>0）、(2) 存在，m∈(3−2√2,3+2√2)；21 (1) b=0、c=1、(2) 证明、(3) a>2·⁴√3。第 9 题上界由端点 (0,3) 给出为 3（整圆切点纵坐标 3+√2 不在上半圆），值域 [1−2√2,3]。第 10 题 t=max·min 化简为 min{c/b,b/a}，t=1 等价于等腰。第 16 题原页印作「已经函数」，照录并在解析注明应为「已知」。第 19 题原页取 1.1⁵=1.6（近似），解析按原页数值计算并说明。原页共 3 幅图：第 14 题圆筒三球、第 17 题频率分布直方图、第 18 题三棱锥与 PQ；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖北卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖北文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2010-hubei-arts",
+      "production_state": "complete",
+      "project_dir": "2010_湖北卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2010/2010_数学真题_湖北文_答案要点.md",
+        "combined_rendered": "2010/2010_数学真题_湖北文_含解析.md",
+        "questions": "2010/2010_数学真题_湖北文_试题.md",
+        "solution_body": "2010/2010_数学真题_湖北文_解析正文.md"
+      },
+      "source_ids": [
+        "src-cfcb9e0230499165368b75087df98901b5935d0ecc95cbcb5f5036bef4c12d7f"
+      ],
+      "title": "2010 年·普通高等学校招生考试·湖北卷·文科",
+      "track": "arts",
+      "year": 2010
     }
   ],
-  "revision": 10612,
+  "revision": 10619,
   "schema_version": 1,
   "sources": [
     {
@@ -54768,8 +54841,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9374900379f58baa3148d64bf2f41948207a4f47",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2010-hubei-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2010湖北文.pdf",
       "regions": [],
       "source_id": "src-cfcb9e0230499165368b75087df98901b5935d0ecc95cbcb5f5036bef4c12d7f",
