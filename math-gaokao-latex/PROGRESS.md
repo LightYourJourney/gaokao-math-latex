@@ -17,7 +17,7 @@
 - 验收：四版 7/32/9/24 页（共 72 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 72 页八类检查 **481 pass + 95 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b97.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `c9642605-1dd4-42e5-879c-f7e2ac129b3e`）。
 - 版式说明：印刷版第 5 页「参考答案与详细解析」标题与使用说明落在页末、首题自第 6 页起，同 phase6-b92～b96 的模板既有行为，未改公共模板。
 - 全量门禁：`provenance check-batch`、`solution_sources check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects`、`make_short_answers`、`make_editions` 定向 `--check` 一致。
-- 全库（本卷封账后）：manifest **590 卷 / 775 来源 / 436 批次**，complete 472、blocked 118，未绑定来源 **186**；manifest revision 10596。
+- 全库（本卷封账后）：manifest **590 卷 / 775 来源 / 436 批次**，complete 472、blocked 118，未绑定来源 **186**；manifest revision 10600。
 - 修改文件：`2010/2010_数学真题_福建理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2010_福建卷_理科/`（questions/answers/answers_short、四版入口、4 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase6-b97.md`、`PROGRESS.md`。
 - 下一步：继续 2010 辽宁文理、重庆文理、陕西文理、春季上海等未绑定来源。
 
