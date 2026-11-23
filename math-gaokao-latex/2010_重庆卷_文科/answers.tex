@@ -1,0 +1,743 @@
+% answers.tex —— 2010 年·普通高等学校招生考试·重庆卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2010/2010_数学真题_重庆文_试题.md + 2010/2010_数学真题_重庆文_解析正文.md + 2010/2010_数学真题_重庆文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+\begin{gktip}
+固定候选 PDF 仅含题面、无答案页；以下解析与结论均由本库独立推导（非官方答案），并按 600 dpi 原页复核题面。原页未印分值，不补。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+$(x+1)^4$ 的展开式中 $x^2$ 的系数为（　）
+
+（A）$4$
+
+（B）$6$
+
+（C）$10$
+
+（D）$20$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+$(x+1)^4$ 的展开式通项为 $\mathrm C_4^k x^k$（$k=0,1,2,3,4$），求 $x^2$ 的系数即取 $k=2$：
+\nopagebreak[4]
+\[\mathrm C_4^2=\frac{4\times3}{2}=6.\]
+直接展开核对：$(x+1)^4=x^4+4x^3+6x^2+4x+1$，$x^2$ 的系数为 $6$。
+逐项核对：$4$ 是 $x^3$ 与 $x$ 的系数；$10=\mathrm C_5^2$ 不是本展开式的系数；$20$ 也不是。只有 $6$ 符合。
+故选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+在等差数列 $\{a_n\}$ 中，$a_1+a_9=10$，则 $a_5$ 的值为（　）
+
+（A）$5$
+
+（B）$6$
+
+（C）$8$
+
+（D）$10$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+等差数列中下标成等差的两项之和满足 $a_1+a_9=2a_5$（因 $1+9=2\times5$，也可由 $a_1=a_5-4d$，$a_9=a_5+4d$ 相加得到）。代入 $a_1+a_9=10$ 得
+\nopagebreak[4]
+\[2a_5=10\iff a_5=5.\]
+逐项核对：若 $a_5=6$，则 $a_1+a_9=12$；若 $a_5=8$，则为 $16$；若 $a_5=10$，则为 $20$，都与 $10$ 不符。只有 $5$ 使 $a_1+a_9=10$。
+故选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+若向量 $\boldsymbol a=(3,m)$，$\boldsymbol b=(2,-1)$，$\boldsymbol a\cdot\boldsymbol b=0$，则实数 $m$ 的值为（　）
+
+（A）$-\dfrac32$
+
+（B）$\dfrac32$
+
+（C）$2$
+
+（D）$6$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由数量积的坐标公式，
+\nopagebreak[4]
+\[\boldsymbol a\cdot\boldsymbol b=3\times2+m\times(-1)=6-m.\]
+由 $\boldsymbol a\cdot\boldsymbol b=0$ 得 $6-m=0$，即 $m=6$。
+逐项核对：$m=-\dfrac32$ 时 $6-m=\dfrac{15}{2}$；$m=\dfrac32$ 时 $6-m=\dfrac92$；$m=2$ 时 $6-m=4$，均不为零。只有 $m=6$ 使 $6-m=0$。
+故选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+函数 $y=\sqrt{16-4^x}$ 的值域是（　）
+
+（A）$[0,+\infty)$
+
+（B）$[0,4]$
+
+（C）$[0,4)$
+
+（D）$(0,4)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+先确定定义域：被开方数非负，$16-4^x\geqslant0$，即 $4^x\leqslant16=4^2$，故 $x\leqslant2$。
+\Needspace{5\baselineskip}
+在定义域上 $4^x$ 取遍 $(0,16]$（$x\to-\infty$ 时 $4^x\to0^+$，$x=2$ 时 $4^x=16$），于是
+\nopagebreak[4]
+\[0\leqslant16-4^x<16,\qquad 0\leqslant\sqrt{16-4^x}<4.\]
+下限 $0$ 在 $x=2$ 处取到；上限 $4$ 不能取到，因为那要求 $4^x=0$，而指数函数恒正。故值域为 $[0,4)$。
+逐项核对：（A）$[0,+\infty)$ 含 $y\geqslant4$ 的值，取不到；（B）$[0,4]$ 含 $4$，取不到；（D）$(0,4)$ 漏掉 $0$，而 $x=2$ 时 $y=0$。只有（C）正确。
+故选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+某单位有职工 $750$ 人，其中青年职工 $350$ 人，中年职工 $250$ 人，老年职工 $150$ 人，为了了解该单位职工的健康情况，用分层抽样的方法从中抽取样本。若样本中的青年职工为 $7$ 人，则样本容量为（　）
+
+（A）$7$
+
+（B）$15$
+
+（C）$25$
+
+（D）$35$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+分层抽样按比例分配，青年职工占全体职工的比例为
+\nopagebreak[4]
+\[\frac{350}{750}=\frac{7}{15}.\]
+样本中青年职工为 $7$ 人，设样本容量为 $n$，则 $\dfrac{7}{n}=\dfrac{7}{15}$，故 $n=15$。
+代回验证：抽样比为 $\dfrac{15}{750}=\dfrac1{50}$，青年 $350\times\dfrac1{50}=7$ 人，中年 $250\times\dfrac1{50}=5$ 人，老年 $150\times\dfrac1{50}=3$ 人，合计 $7+5+3=15$，与样本容量一致且各层人数都是整数。
+逐项核对：$7$ 只是青年职工样本数；$25$、$35$ 会使青年职工样本数分别为 $\dfrac{35}{3}$、$\dfrac{49}{3}$，非整数，不合。
+故选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+下列函数中，周期为 $\pi$，且在 $\left[\dfrac{\pi}{4},\dfrac{\pi}{2}\right]$ 上为减函数的是（　）
+
+（A）$y=\sin\left(2x+\dfrac{\pi}{2}\right)$
+
+（B）$y=\cos\left(2x+\dfrac{\pi}{2}\right)$
+
+（C）$y=\sin\left(x+\dfrac{\pi}{2}\right)$
+
+（D）$y=\cos\left(x+\dfrac{\pi}{2}\right)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+先看周期。$\sin\left(2x+\dfrac{\pi}{2}\right)$ 与 $\cos\left(2x+\dfrac{\pi}{2}\right)$ 的周期为 $\dfrac{2\pi}{2}=\pi$；$\sin\left(x+\dfrac{\pi}{2}\right)$ 与 $\cos\left(x+\dfrac{\pi}{2}\right)$ 的周期为 $2\pi$。
+
+故（C）（D）先排除。
+再化简（A）（B）：在 $\left[\dfrac{\pi}{4},\dfrac{\pi}{2}\right]$ 上 $2x\in\left[\dfrac{\pi}{2},\pi\right]$。
+（A）$y=\sin\left(2x+\dfrac{\pi}{2}\right)=\cos2x$，$\cos$ 在 $\left[\dfrac{\pi}{2},\pi\right]$ 上单调递减，符合。
+（B）$y=\cos\left(2x+\dfrac{\pi}{2}\right)=-\sin2x$，$\sin2x$ 在 $\left[\dfrac{\pi}{2},\pi\right]$ 上由 $1$ 减到 $0$，故 $-\sin2x$ 由 $-1$ 增到 $0$，为增函数，不合。
+逐项核对：只有（A）同时满足「周期为 $\pi$」与「在给定区间上递减」。
+故选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设变量 $x$，$y$ 满足约束条件
+\nopagebreak[4]
+\[\begin{cases}x\geqslant 0,\\x-y\geqslant 0,\\2x-y-2\leqslant 0,\end{cases}\]
+则 $z=3x-2y$ 的最大值为（　）
+
+（A）$0$
+
+（B）$2$
+
+（C）$4$
+
+（D）$6$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+约束条件 $x\geqslant0$，$y\leqslant x$，$y\geqslant2x-2$ 的可行域是三角形，顶点为三条边界两两的交点：
+\begin{itemize}
+\item $x=0$ 与 $y=x$ 交于 $(0,0)$；
+\item $x=0$ 与 $y=2x-2$ 交于 $(0,-2)$；
+\item $y=x$ 与 $y=2x-2$ 交于 $(2,2)$。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+在三个顶点处 $z=3x-2y$ 的值依次为
+\nopagebreak[4]
+\[0,\qquad 4,\qquad 2.\]
+线性目标函数在有界闭可行域上必在顶点取到最值，故 $z_{\max}=4$，在 $(0,-2)$ 处取得。
+检验 $(0,-2)$：$x=0\geqslant0$，$x-y=2\geqslant0$，$2x-y-2=0\leqslant0$，确在可行域内。
+逐项核对：$0$ 是 $z$ 的最小值；$2$ 是 $(2,2)$ 处的值；$6$ 在可行域上取不到（$3x-2y=6$ 与可行域无公共点）。只有 $4$ 是最大值。
+故选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+若直线 $y=x-b$ 与曲线
+\nopagebreak[4]
+\[\begin{cases}x=2+\cos\theta,\\y=\sin\theta,\end{cases}\quad(\theta\in[0,2\pi))\]
+有两个不同的公共点，则实数 $b$ 的取值范围为（　）
+
+（A）$(2-\sqrt2,1)$
+
+（B）$[2-\sqrt2,2+\sqrt2]$
+
+（C）$(-\infty,2-\sqrt2)\cup(2+\sqrt2,+\infty)$
+
+（D）$(2-\sqrt2,2+\sqrt2)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+消去参数：由 $x=2+\cos\theta$ 得 $\cos\theta=x-2$，又 $y=\sin\theta$，故曲线是圆
+\nopagebreak[4]
+\[(x-2)^2+y^2=1,\]
+圆心 $(2,0)$，半径 $1$。
+\Needspace{5\baselineskip}
+直线 $y=x-b$ 即 $x-y-b=0$。直线与圆有两个不同公共点，等价于圆心到直线的距离小于半径：
+\nopagebreak[4]
+\[\frac{|2-0-b|}{\sqrt{1^2+(-1)^2}}<1\iff|b-2|<\sqrt2\iff 2-\sqrt2<b<2+\sqrt2.\]
+端点检验：$b=2\pm\sqrt2$ 时距离恰为 $1$，直线与圆相切，只有一个公共点，故两端不能取。
+逐项核对：（B）含两个端点，相切时只有一个公共点；（C）是距离大于 $1$ 的情形，无公共点；（A）只是解集的一部分。只有（D）是完整的开区间。
+故选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+到两互相垂直的异面直线的距离相等的点（　）
+
+（A）只有 $1$ 个
+
+（B）恰有 $3$ 个
+
+（C）恰有 $4$ 个
+
+（D）有无穷多个
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+设两异面直线为 $l_1$：$x$ 轴，$l_2=\{(x_0,t,h)\mid t\in\mathbf R\}$，其中 $h\neq0$（两直线垂直即方向向量 $(1,0,0)$ 与 $(0,1,0)$ 垂直，$h$ 是两直线的公垂线段长）。
+过 $l_1$ 且平行于 $l_2$ 的平面为 $z=0$。任取平面 $z=0$ 内的点 $P(x,y,0)$：
+\begin{itemize}
+\item 到 $x$ 轴的距离为 $|y|$；
+\item 到 $l_2$ 的距离为 $\sqrt{(x-x_0)^2+h^2}$（$l_2$ 与平面 $z=0$ 平行，距离即到垂足的距离）。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+由距离相等得
+\nopagebreak[4]
+\[y^2=(x-x_0)^2+h^2\iff y^2-(x-x_0)^2=h^2,\]
+这是平面 $z=0$ 内的双曲线（$h\neq0$），其上每一点到两异面直线的距离都相等，故满足条件的点已有无穷多个（实际上不必局限于 $z=0$：一般点 $(x,y,z)$ 的条件为 $y^2+z^2=(x-x_0)^2+(z-h)^2$，轨迹是双曲抛物面，同样含无穷多个点）。
+逐项核对：「只有 $1$ 个」「恰有 $3$ 个」「恰有 $4$ 个」都是有限数，与上述无穷多个点矛盾。
+故选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+某单位拟安排 $6$ 位员工在今年 $6$ 月 $14$ 日至 $16$ 日（端午节假期）值班，每天安排 $2$ 人，每人值班 $1$ 天。若 $6$ 位员工中的甲不值 $14$ 日，乙不值 $16$ 日，则不同的安排方法共有（　）
+
+（A）$30$ 种
+
+（B）$36$ 种
+
+（C）$42$ 种
+
+（D）$48$ 种
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+先不考虑限制，把 $6$ 人分成三组（$14$ 日、$15$ 日、$16$ 日各 $2$ 人，组内不计次序）：
+\nopagebreak[4]
+\[\mathrm C_6^2\mathrm C_4^2\mathrm C_2^2=15\times6\times1=90.\]
+记 $A$ 为「甲在 $14$ 日」，$B$ 为「乙在 $16$ 日」。
+\begin{itemize}
+\item $|A|$：甲占 $14$ 日一个名额，再从其余 $5$ 人中选 $1$ 人同日，余下 $4$ 人分到 $15$、$16$ 日：$\mathrm C_5^1\mathrm C_4^2=5\times6=30$。
+\item $|B|$：同理 $30$。
+\item $|A\cap B|$：甲在 $14$ 日、乙在 $16$ 日，余下 $4$ 人中选 $1$ 人陪甲（$4$ 种），再从剩下 $3$ 人选 $2$ 人去 $15$ 日（$3$ 种）：$4\times3=12$。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+由容斥原理，所求为
+\nopagebreak[4]
+\[90-30-30+12=42.\]
+检验：$42$ 与每个选项比较，只有（C）相符；逐个枚举 $6$ 人的 $6!=720$ 种排列（把每天的两个位置视为有序），合条件的有 $336$ 种，$\dfrac{336}{720}=\dfrac{7}{15}=\dfrac{42}{90}$，与上面一致。
+故选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+设 $A=\{x\mid x+1>0\}$，$B=\{x\mid x<0\}$，则 $A\cap B=$ $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+$A=\{x\mid x+1>0\}=\{x\mid x>-1\}=(-1,+\infty)$，$B=\{x\mid x<0\}=(-\infty,0)$，故
+\nopagebreak[4]
+\[A\cap B=(-1,0).\]
+代回验证：取 $x=-\dfrac12$，$-\dfrac12+1=\dfrac12>0$ 且 $-\dfrac12<0$，在交集中；取 $x=0$，不满足 $x<0$；取 $x=-1$，不满足 $x+1>0$。故端点 $-1$、$0$ 都不含，区间为开区间。
+
+\gkanswer{答案：$(-1,0)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+已知 $t>0$，则函数 $y=\dfrac{t^2-4t+1}{t}$ 的最小值为 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+$t>0$，故
+\nopagebreak[4]
+\[y=\frac{t^2-4t+1}{t}=t+\frac1t-4\geqslant2\sqrt{t\cdot\frac1t}-4=2-4=-2,\]
+等号当且仅当 $t=\dfrac1t$，即 $t=1$ 时成立。故最小值为 $-2$。
+代回验证：$t=1$ 时 $y=\dfrac{1-4+1}{1}=-2$；$t=2$ 时 $y=\dfrac{4-8+1}{2}=-\dfrac32>-2$；$t=\dfrac12$ 时 $y=\dfrac{\frac14-2+1}{\frac12}=-\dfrac32>-2$，与最小值一致。
+
+\gkanswer{答案：$-2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知过抛物线 $y^2=4x$ 的焦点 $F$ 的直线交该抛物线于 $A$、$B$ 两点，$|AF|=2$，则 $|BF|=$ $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+抛物线 $y^2=4x$ 的焦点为 $F(1,0)$，准线为 $x=-1$。由抛物线定义，$|AF|=x_A+1$（$x_A$ 为 $A$ 的横坐标），故
+\nopagebreak[4]
+\[x_A+1=2\iff x_A=1.\]
+\Needspace{5\baselineskip}
+于是 $A$ 的横坐标与焦点相同，$y_A^2=4$，$y_A=\pm2$，即 $A(1,\pm2)$。过 $F(1,0)$ 与 $A$ 的直线是竖直线 $x=1$，它与抛物线的另一交点 $B$ 为 $(1,\mp2)$，故
+\nopagebreak[4]
+\[|BF|=x_B+1=1+1=2.\]
+复核：焦点弦性质 $\dfrac{1}{|AF|}+\dfrac{1}{|BF|}=\dfrac{2}{p}=\dfrac{2}{2}=1$，代入 $|AF|=2$ 得 $\dfrac{1}{|BF|}=\dfrac12$，$|BF|=2$，与上面一致。
+
+\gkanswer{答案：$2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+加工某一零件需经过三道工序，设第一、二、三道工序的次品率分别为 $\dfrac{1}{70}$、$\dfrac{1}{69}$、$\dfrac{1}{68}$，且各道工序互不影响，则加工出来的零件的次品率为 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+各道工序互不影响，零件合格要求三道工序都合格，故合格率为
+\nopagebreak[4]
+\[\left(1-\frac{1}{70}\right)\left(1-\frac{1}{69}\right)\left(1-\frac{1}{68}\right)=\frac{69}{70}\times\frac{68}{69}\times\frac{67}{68}=\frac{67}{70}.\]
+\Needspace{5\baselineskip}
+次品率为
+\nopagebreak[4]
+\[1-\frac{67}{70}=\frac{3}{70}.\]
+复核（按「至少一道次品」直接算）：$\dfrac{1}{70}+\dfrac{1}{69}+\dfrac{1}{68}$ 减去两两同时次品的概率、再加回三道同时次品的概率，结果同为 $\dfrac{3}{70}$；数值上 $\dfrac{3}{70}\approx0.0429$，与 $\dfrac{1}{70}+\dfrac{1}{69}+\dfrac{1}{68}\approx0.0435$ 接近且略小（因为扣掉了重复计入的部分），合理。
+
+\gkanswer{答案：$\dfrac{3}{70}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+如图，图中的实线是由三段圆弧连接而成的一条封闭曲线 $C$，各段弧所在的圆经过同一点 $P$（点 $P$ 不在 $C$ 上）且半径相等。设第 $i$ 段弧所对的圆心角 $\alpha_i$（$i=1,2,3$），则 $\cos\dfrac{\alpha_1}{3}\cos\dfrac{\alpha_2+\alpha_3}{3}-\sin\dfrac{\alpha_1}{3}\sin\dfrac{\alpha_2+\alpha_3}{3}=$ $\underline{\qquad}$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_chongqing_arts_q15_arcs}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设三个圆的圆心依次为 $O_1$，$O_2$，$O_3$，半径均为 $r$。三圆都经过 $P$，故
+\nopagebreak[4]
+\[O_1P=O_2P=O_3P=r,\]
+即 $P$ 是 $\triangle O_1O_2O_3$ 的外心；图中 $P$ 在该三角形内部（三个内角都是锐角）。
+
+设 $Q_i$ 为圆 $i$ 与圆 $i+1$ 除 $P$ 外的另一个交点（下标按 $1,2,3$ 循环），则曲线 $C$ 的三个顶点就是 $Q_1$，$Q_2$，$Q_3$。两个等半径圆的公共弦被连心线垂直平分，故 $O_iQ_i$ 是 $O_iP$ 关于连心线 $O_iO_{i+1}$ 的对称射线。于是射线 $O_iP$ 把 $\angle Q_{i-1}O_iQ_i$ 分成 $2\angle PO_iO_{i-1}$ 与 $2\angle PO_iO_{i+1}$ 两个角（对称翻折使角加倍），二者之和为 $2\angle O_i$；故圆 $i$ 上\textbf{含 $P$} 的那段弧的圆心角为 $2\angle O_i$。
+\Needspace{5\baselineskip}
+题中 $C$ 取的是\textbf{不含 $P$} 的那段弧，故
+\nopagebreak[4]
+\[\alpha_i=2\pi-2\angle O_i.\]
+\Needspace{5\baselineskip}
+三内角之和 $\angle O_1+\angle O_2+\angle O_3=\pi$，相加得
+\nopagebreak[4]
+\[\alpha_1+\alpha_2+\alpha_3=6\pi-2\pi=4\pi.\]
+\Needspace{5\baselineskip}
+所求和式是余弦的差角公式：
+\nopagebreak[4]
+\[\cos\frac{\alpha_1}{3}\cos\frac{\alpha_2+\alpha_3}{3}-\sin\frac{\alpha_1}{3}\sin\frac{\alpha_2+\alpha_3}{3}=\cos\frac{\alpha_1+\alpha_2+\alpha_3}{3}=\cos\frac{4\pi}{3}=-\frac12.\]
+检验（正三角形特例）：三圆心构成正三角形时 $\angle O_i=\dfrac{\pi}{3}$，$\alpha_i=2\pi-\dfrac{2\pi}{3}=\dfrac{4\pi}{3}$，和仍为 $4\pi$，$\cos\dfrac{4\pi}{3}=-\dfrac12$，与上面一致。
+【源疑点】原页图形为示意图，三圆半径与圆心位置同理想的等边分布略有出入（量得半径并不完全相等）；本题按题面「各段弧所在的圆……半径相等」求解，结论只用到 $\alpha_1+\alpha_2+\alpha_3=4\pi$，与作图的细微偏差无关。
+
+\gkanswer{答案：$-\dfrac12$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知 $\{a_n\}$ 是首项为 $19$，公差为 $-2$ 的等差数列，$S_n$ 为 $\{a_n\}$ 的前 $n$ 项和。
+
+（1）求通项 $a_n$ 及 $S_n$；
+
+（2）设 $\{b_n-a_n\}$ 是首项为 $1$，公比为 $3$ 的等比数列，求数列 $\{b_n\}$ 的通项公式及前 $n$ 项和 $T_n$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）$\{a_n\}$ 是首项 $19$、公差 $-2$ 的等差数列，故
+\nopagebreak[4]
+\[a_n=19+(n-1)\times(-2)=21-2n.\]
+\Needspace{5\baselineskip}
+前 $n$ 项和
+\nopagebreak[4]
+\[S_n=\frac{n(a_1+a_n)}{2}=\frac{n\left(19+21-2n\right)}{2}=n(20-n)=20n-n^2.\]
+检验：$S_1=20-1=19=a_1$；$S_2=40-4=36=19+17$，均相符。
+
+\Needspace{5\baselineskip}
+（2）$\{b_n-a_n\}$ 是首项为 $1$、公比为 $3$ 的等比数列，故 $b_n-a_n=3^{n-1}$，即
+\nopagebreak[4]
+\[b_n=a_n+3^{n-1}=3^{n-1}+21-2n.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[T_n=\sum_{k=1}^{n}3^{k-1}+\sum_{k=1}^{n}(21-2k)=\frac{3^n-1}{3-1}+\left(21n-n(n+1)\right)=\frac{3^n-1}{2}+20n-n^2.\]
+检验：$T_1=\dfrac{3-1}{2}+20-1=1+19=20=b_1$；$T_2=20+b_2$，而 $b_2=3+17=20$，故 $T_2=40$，公式给出 $\dfrac{9-1}{2}+40-4=4+36=40$，相符。
+
+\gkanswer{答案：（1）$a_n=21-2n$，$S_n=20n-n^2$；（2）$b_n=3^{n-1}+21-2n$，$T_n=\dfrac{3^n-1}{2}+20n-n^2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+在甲、乙等 $6$ 个单位参加的一次“唱读讲传”演出活动中，每个单位的节目集中安排在一起。若采用抽签的方式随机确定各单位的演出顺序（序号为 $1$，$2$，$\cdots$，$6$），求：
+
+（1）甲、乙两单位的演出序号均为偶数的概率；
+
+（2）甲、乙两单位的演出序号不相邻的概率。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+$6$ 个单位的演出顺序是 $1,2,\cdots,6$ 的一个排列，共 $6!=720$ 种，抽签保证每种顺序等可能。
+
+只考察甲、乙两人的序号，记甲在第 $i$ 位、乙在第 $j$ 位（$i\neq j$）。有序对 $(i,j)$ 共有 $6\times5=30$ 个，且对应的 $30$ 个事件彼此互斥；固定 $(i,j)$ 后其余 $4$ 个单位有 $4!=24$ 种排法，故每个有序对对应 $24$ 种顺序，概率为 $\dfrac{24}{720}=\dfrac1{30}$。
+
+\Needspace{5\baselineskip}
+（1）甲、乙序号均为偶数，即 $i,j\in\{2,4,6\}$ 且 $i\neq j$，有 $3\times2=6$ 个有序对。逐对求和：
+\nopagebreak[4]
+\[P=6\times\frac1{30}=\frac15.\]
+（也可算补集：至少一个为奇数的概率为 $1-\dfrac15=\dfrac45$，与直接计数 $720-144=576$、$\dfrac{576}{720}=\dfrac45$ 一致。）
+
+（2）甲、乙序号不相邻，即 $|i-j|\geqslant2$。按距离逐类计数：
+\begin{itemize}
+\item $|i-j|=2$：$(1,3),(2,4),(3,5),(4,6)$ 及其反向，共 $8$ 个；
+\item $|i-j|=3$：$(1,4),(2,5),(3,6)$ 及其反向，共 $6$ 个；
+\item $|i-j|=4$：$(1,5),(2,6)$ 及其反向，共 $4$ 个；
+\item $|i-j|=5$：$(1,6)$ 及其反向，共 $2$ 个。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+合计 $8+6+4+2=20$ 个有序对，逐对求和得
+\nopagebreak[4]
+\[P=20\times\frac1{30}=\frac23.\]
+复核：相邻的有序对为 $|i-j|=1$，共 $2\times5=10$ 个，$10\times\dfrac1{30}=\dfrac13$，而 $1-\dfrac13=\dfrac23$，两种算法的和 $\dfrac13+\dfrac23=1$，一致。
+
+\gkanswer{答案：（1）$\dfrac15$；（2）$\dfrac23$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+设 $\triangle ABC$ 的内角 $A$，$B$，$C$ 的对边长分别为 $a$，$b$，$c$，且 $3b^2+3c^2-3a^2=4\sqrt2bc$。
+
+（1）求 $\sin A$ 的值；
+
+（2）求 $\dfrac{2\sin\left(A+\dfrac{\pi}{4}\right)\sin\left(B+C+\dfrac{\pi}{4}\right)}{1-\cos 2A}$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）由 $3b^2+3c^2-3a^2=4\sqrt2bc$ 两边除以 $3$：
+\nopagebreak[4]
+\[b^2+c^2-a^2=\frac{4\sqrt2}{3}bc.\]
+\Needspace{5\baselineskip}
+由余弦定理，
+\nopagebreak[4]
+\[\cos A=\frac{b^2+c^2-a^2}{2bc}=\frac{2\sqrt2}{3}.\]
+\Needspace{5\baselineskip}
+因 $0<A<\pi$，$\sin A>0$，故
+\nopagebreak[4]
+\[\sin A=\sqrt{1-\cos^2A}=\sqrt{1-\frac89}=\frac13.\]
+复核：$\sin^2A+\cos^2A=\dfrac19+\dfrac89=1$，且 $\dfrac{2\sqrt2}{3}<1$，符合余弦值范围。
+
+\Needspace{5\baselineskip}
+（2）由 $A+B+C=\pi$ 得 $B+C=\pi-A$，于是
+\nopagebreak[4]
+\[\sin\left(B+C+\frac{\pi}{4}\right)=\sin\left(\pi-A+\frac{\pi}{4}\right)=\sin\left(A-\frac{\pi}{4}\right)\]
+（用了 $\sin(\pi+t)=-\sin t$：$\sin\left(\dfrac{5\pi}{4}-A\right)=-\sin\left(\dfrac{\pi}{4}-A\right)=\sin\left(A-\dfrac{\pi}{4}\right)$）。
+\Needspace{5\baselineskip}
+分子用积化和差：
+\nopagebreak[4]
+\[2\sin\left(A+\frac{\pi}{4}\right)\sin\left(A-\frac{\pi}{4}\right)=\cos\frac{\pi}{2}-\cos2A=-\cos2A.\]
+\Needspace{5\baselineskip}
+分母
+\nopagebreak[4]
+\[1-\cos2A=2\sin^2A=2\times\frac19=\frac29.\]
+\Needspace{5\baselineskip}
+又 $\cos2A=1-2\sin^2A=1-\dfrac29=\dfrac79$，故
+\nopagebreak[4]
+\[\frac{2\sin\left(A+\frac{\pi}{4}\right)\sin\left(B+C+\frac{\pi}{4}\right)}{1-\cos2A}=\frac{-\frac79}{\frac29}=-\frac72.\]
+复核：取 $\sin A=\dfrac13$（$A\approx19.5^\circ$），数值计算分子为 $2\sin64.5^\circ\sin(-25.5^\circ)\approx-0.778$，分母为 $1-\cos39^\circ\approx0.222$，商约 $-3.5=-\dfrac72$，一致。
+
+\gkanswer{答案：（1）$\dfrac13$；（2）$-\dfrac72$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=ax^3+x^2+bx$（其中常数 $a$，$b\in\mathbf R$），$g(x)=f(x)+f'(x)$ 是奇函数。
+
+（1）求 $f(x)$ 的表达式；
+
+（2）讨论 $g(x)$ 的单调性，并求 $g(x)$ 在区间 $[1,2]$ 上的最大值和最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）先求导：$f'(x)=3ax^2+2x+b$，故
+\nopagebreak[4]
+\[g(x)=f(x)+f'(x)=ax^3+(1+3a)x^2+(b+2)x+b.\]
+\Needspace{5\baselineskip}
+$g$ 是奇函数，等价于偶次项系数与常数项都为零（奇函数的图象关于原点对称，$x^2$ 项与常数项必须消失）：
+\nopagebreak[4]
+\[1+3a=0,\qquad b=0.\]
+\Needspace{5\baselineskip}
+解得 $a=-\dfrac13$，$b=0$，即
+\nopagebreak[4]
+\[f(x)=-\frac13x^3+x^2.\]
+复核：此时 $f'(x)=-x^2+2x$，$g(x)=-\dfrac13x^3+x^2-x^2+2x=-\dfrac13x^3+2x$，确为奇函数。
+
+\Needspace{5\baselineskip}
+（2）由（1）得
+\nopagebreak[4]
+\[g(x)=-\frac13x^3+2x,\qquad g'(x)=2-x^2.\]
+$g'(x)>0\iff x^2<2\iff-\sqrt2<x<\sqrt2$；$g'(x)<0\iff x<-\sqrt2$ 或 $x>\sqrt2$。故
+\begin{itemize}
+\item 增区间：$\left(-\sqrt2,\sqrt2\right)$；
+\item 减区间：$\left(-\infty,-\sqrt2\right)$，$\left(\sqrt2,+\infty\right)$。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+在 $[1,2]$ 上，$g$ 在 $\left[1,\sqrt2\right]$ 上递增、在 $\left[\sqrt2,2\right]$ 上递减，故最大值在 $x=\sqrt2$ 处：
+\nopagebreak[4]
+\[g\left(\sqrt2\right)=-\frac{2\sqrt2}{3}+2\sqrt2=\frac{4\sqrt2}{3}.\]
+\Needspace{5\baselineskip}
+最小值在区间端点处取得，比较
+\nopagebreak[4]
+\[g(1)=-\frac13+2=\frac53,\qquad g(2)=-\frac83+4=\frac43,\]
+故最小值为 $\dfrac43$（$x=2$）。
+复核：$\dfrac{4\sqrt2}{3}\approx1.886>\dfrac53\approx1.667>\dfrac43\approx1.333$，最大值、最小值次序正确。
+
+\gkanswer{答案：（1）$f(x)=-\dfrac13x^3+x^2$；（2）增区间 $(-\sqrt2,\sqrt2)$，减区间 $(-\infty,-\sqrt2)$，$(\sqrt2,+\infty)$；在 $[1,2]$ 上最大值 $\dfrac{4\sqrt2}{3}$，最小值 $\dfrac43$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+如图，四棱锥 $P-ABCD$ 中，底面 $ABCD$ 为矩形，$PA\perp$ 底面 $ABCD$，$PA=AB=\sqrt2$，点 $E$ 是棱 $PB$ 的中点。
+
+（1）证明：$AE\perp$ 平面 $PBC$；
+
+（2）若 $AD=1$，求二面角 $B-EC-D$ 的平面角的余弦值。
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_chongqing_arts_q20_pyramid}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+（1）证明：
+\Needspace{5\baselineskip}
+由 $PA\perp$ 平面 $ABCD$，得 $PA\perp AB$，$PA\perp AD$。在 $\triangle PAB$ 中 $PA=AB=\sqrt2$，$E$ 是 $PB$ 的中点，故
+\nopagebreak[4]
+\[AE\perp PB.\]
+\Needspace{5\baselineskip}
+又 $BC\perp AB$，$BC\perp PA$（$PA\perp$ 平面 $ABCD$），且 $AB\cap PA=A$，故
+\nopagebreak[4]
+\[BC\perp\text{\text{平面} }PAB\Longrightarrow BC\perp AE.\]
+\Needspace{5\baselineskip}
+$AE$ 垂直于平面 $PBC$ 内的两条相交直线 $PB$、$BC$（$PB\cap BC=B$），故
+\nopagebreak[4]
+\[AE\perp\text{\text{平面} }PBC.\]
+
+\Needspace{5\baselineskip}
+（2）以 $A$ 为原点，$\overrightarrow{AB}$，$\overrightarrow{AD}$，$\overrightarrow{AP}$ 的方向为 $x$，$y$，$z$ 轴方向建立空间直角坐标系。由 $AB=PA=\sqrt2$，$AD=1$ 得
+\nopagebreak[4]
+\[A(0,0,0),\quad B(\sqrt2,0,0),\quad C(\sqrt2,1,0),\quad D(0,1,0),\quad P(0,0,\sqrt2),\]
+\nopagebreak[4]
+\[E\left(\frac{\sqrt2}{2},0,\frac{\sqrt2}{2}\right).\]
+由（1）知 $\overrightarrow{AE}=\left(\dfrac{\sqrt2}{2},0,\dfrac{\sqrt2}{2}\right)$ 是平面 $BEC$（即平面 $PBC$）的法向量，取 $\boldsymbol n_1=(1,0,1)$。
+\Needspace{5\baselineskip}
+平面 $DEC$ 内 $\overrightarrow{EC}=\left(\dfrac{\sqrt2}{2},1,-\dfrac{\sqrt2}{2}\right)$，$\overrightarrow{ED}=\left(-\dfrac{\sqrt2}{2},1,-\dfrac{\sqrt2}{2}\right)$，取法向量
+\nopagebreak[4]
+\[\boldsymbol n_2=\overrightarrow{EC}\times\overrightarrow{ED}=(0,1,\sqrt2).\]
+设 $\theta$ 为两法向量的夹角，则 $\cos\theta=\dfrac{\boldsymbol n_1\cdot\boldsymbol n_2}{|\boldsymbol n_1||\boldsymbol n_2|}=\dfrac{\sqrt2}{\sqrt2\cdot\sqrt3}=\dfrac{\sqrt3}{3}$。
+
+\Needspace{5\baselineskip}
+下面确定二面角 $B-EC-D$ 的平面角是 $\theta$ 还是 $\pi-\theta$。$\overrightarrow{EC}$ 的单位向量为 $\boldsymbol u=\left(\dfrac12,\dfrac{\sqrt2}{2},-\dfrac12\right)$。把 $\overrightarrow{EB}=\left(\dfrac{\sqrt2}{2},0,-\dfrac{\sqrt2}{2}\right)$，$\overrightarrow{ED}=\left(-\dfrac{\sqrt2}{2},1,-\dfrac{\sqrt2}{2}\right)$ 投影到与 $EC$ 垂直的方向：
+\nopagebreak[4]
+\[\boldsymbol p_1=\overrightarrow{EB}-\left(\overrightarrow{EB}\cdot\boldsymbol u\right)\boldsymbol u=\left(\frac{\sqrt2}{4},-\frac12,-\frac{\sqrt2}{4}\right),\]
+\nopagebreak[4]
+\[\boldsymbol p_2=\overrightarrow{ED}-\left(\overrightarrow{ED}\cdot\boldsymbol u\right)\boldsymbol u=\left(-\frac{3\sqrt2}{4},\frac12,-\frac{\sqrt2}{4}\right).\]
+\Needspace{5\baselineskip}
+它们分别在含 $B$、含 $D$ 的半平面内且垂直于 $EC$，夹角就是二面角的平面角。计算
+\nopagebreak[4]
+\[\boldsymbol p_1\cdot\boldsymbol p_2=-\frac38-\frac14+\frac18=-\frac12,\qquad |\boldsymbol p_1|=\frac{\sqrt2}{2},\quad |\boldsymbol p_2|=\frac{\sqrt6}{2}.\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\cos\angle\left(\boldsymbol p_1,\boldsymbol p_2\right)=\frac{-\frac12}{\frac{\sqrt2}{2}\cdot\frac{\sqrt6}{2}}=-\frac{\sqrt3}{3}.\]
+二面角 $B-EC-D$ 的平面角为钝角（约 $125.3^\circ$），其余弦值为 $-\dfrac{\sqrt3}{3}$。
+复核：由 $\boldsymbol p_1\cdot\boldsymbol u=\overrightarrow{EB}\cdot\boldsymbol u-\left(\overrightarrow{EB}\cdot\boldsymbol u\right)\left(\boldsymbol u\cdot\boldsymbol u\right)=0$（$\boldsymbol p_2$ 同理）知 $\boldsymbol p_1$，$\boldsymbol p_2$ 确为垂直于 $EC$ 的方向；又 $\overrightarrow{EB}\cdot\boldsymbol u=\overrightarrow{ED}\cdot\boldsymbol u=\dfrac{\sqrt2}{2}$，两条投影公式的系数相同。另 $\left(-\dfrac{\sqrt3}{3}\right)^2=\dfrac13=1-\dfrac23$，与 $\sin^2=1-\cos^2$ 相符。
+
+\gkanswer{答案：（1）证明；（2）$-\dfrac{\sqrt3}{3}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知以原点 $O$ 为中心，$F(\sqrt5,0)$ 为右焦点的双曲线 $C$ 的离心率 $e=\dfrac{\sqrt5}{2}$。
+
+（1）求双曲线 $C$ 的标准方程及其渐近线方程；
+
+（2）如图，已知过点 $M(x_1,y_1)$ 的直线 $l_1$：$x_1x+4y_1y=4$ 与过点 $N(x_2,y_2)$（其中 $x_2\neq x_1$）的直线 $l_2$：$x_2x+4y_2y=4$ 的交点 $E$ 在双曲线 $C$ 上，直线 $MN$ 与两条渐近线分别交于 $G$、$H$ 两点，求 $\overrightarrow{OG}\cdot\overrightarrow{OH}$ 的值。
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_chongqing_arts_q21_hyperbola}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）设双曲线为 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$（$a>0$，$b>0$），右焦点 $F(c,0)$，则 $c=\sqrt5$。由离心率
+\nopagebreak[4]
+\[e=\frac ca=\frac{\sqrt5}{2}\Longrightarrow a=2,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[b^2=c^2-a^2=5-4=1.\]
+\Needspace{5\baselineskip}
+双曲线 $C$ 的标准方程为
+\nopagebreak[4]
+\[\frac{x^2}{4}-y^2=1,\]
+渐近线为 $\dfrac{x^2}{4}-y^2=0$，即 $y=\pm\dfrac12x$。
+
+\Needspace{5\baselineskip}
+（2）设 $E(x_0,y_0)$，则 $E$ 在 $C$ 上，故
+\nopagebreak[4]
+\[\frac{x_0^2}{4}-y_0^2=1\iff x_0^2-4y_0^2=4.\]
+\Needspace{5\baselineskip}
+由 $E\in l_1$ 得 $x_1x_0+4y_1y_0=4$，即 $M(x_1,y_1)$ 满足方程 $x_0x+4y_0y=4$；由 $E\in l_2$ 得 $x_2x_0+4y_2y_0=4$，即 $N(x_2,y_2)$ 也满足同一方程。故 $M$，$N$ 都在直线
+\nopagebreak[4]
+\[MN:\ x_0x+4y_0y=4\]
+上（$x_2\neq x_1$ 保证 $M\neq N$，直线唯一）。
+
+\Needspace{5\baselineskip}
+求 $G$：与渐近线 $y=\dfrac x2$ 联立，$x_0x+2y_0x=4$，故
+\nopagebreak[4]
+\[x_G=\frac{4}{x_0+2y_0},\qquad y_G=\frac{2}{x_0+2y_0}.\]
+\Needspace{5\baselineskip}
+求 $H$：与渐近线 $y=-\dfrac x2$ 联立，$x_0x-2y_0x=4$，故
+\nopagebreak[4]
+\[x_H=\frac{4}{x_0-2y_0},\qquad y_H=-\frac{2}{x_0-2y_0}.\]
+（$x_0\pm2y_0\neq0$：若 $x_0=2y_0$，则 $x_0^2-4y_0^2=0$，与 $x_0^2-4y_0^2=4$ 矛盾。）
+
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\overrightarrow{OG}\cdot\overrightarrow{OH}=x_Gx_H+y_Gy_H=\frac{16}{\left(x_0+2y_0\right)\left(x_0-2y_0\right)}+\frac{-4}{\left(x_0+2y_0\right)\left(x_0-2y_0\right)}=\frac{12}{x_0^2-4y_0^2}.\]
+\Needspace{5\baselineskip}
+代入 $x_0^2-4y_0^2=4$ 得
+\nopagebreak[4]
+\[\overrightarrow{OG}\cdot\overrightarrow{OH}=3.\]
+复核（数值特例）：取 $E\left(2\sqrt2,-1\right)$，则 $x_0^2-4y_0^2=8-4=4$，$MN$：$2\sqrt2x-4y=4$，与 $y=\dfrac x2$ 交于 $G\left(\dfrac{4}{2\sqrt2-2},\dfrac{2}{2\sqrt2-2}\right)$，与 $y=-\dfrac x2$ 交于 $H\left(\dfrac{4}{2\sqrt2+2},-\dfrac{2}{2\sqrt2+2}\right)$，直接计算 $\overrightarrow{OG}\cdot\overrightarrow{OH}=3$，与公式一致。
+
+\gkanswer{答案：（1）$\dfrac{x^2}{4}-y^2=1$，渐近线 $y=\pm\dfrac12x$；（2）$3$。}
+
+\end{answer}

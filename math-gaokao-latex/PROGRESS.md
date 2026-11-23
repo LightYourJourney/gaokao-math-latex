@@ -4,6 +4,21 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 重庆卷（文科）：phase7-b07 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+- 对象：`gk-2010-chongqing-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-ba9f9215dd928b0f7b6b313b1fa48d34a32ad2c2c2cb014320528756eb1908be`，固定件 SHA-256 `634c8ac529a6ea52305b2909eff8730888048b77d082897394bfda22cb3fe73b`（512,990 bytes），2 页 A3 横向，印面页码 579、580。
+- 来源核对：文字层只作定位，题面、选项、圆弧题图与三幅图均按 600 dpi 核对；原页未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—15、解答题 16—21。
+- 答案（独立推导，等级 D，非官方）：1B 2A 3D 4C 5B 6A 7C 8D 9D 10C；11 $(-1,0)$；12 $-2$；13 $2$；14 $\dfrac3{70}$；15 $-\dfrac12$；16 $a_n=21-2n$、$S_n=20n-n^2$，$b_n=3^{n-1}+21-2n$、$T_n=\dfrac{3^n-1}2+20n-n^2$；17 (1) $\dfrac15$、(2) $\dfrac23$；18 (1) $\dfrac13$、(2) $-\dfrac72$；19 $f(x)=-\dfrac{x^3}3+x^2$，增 $(-\sqrt2,\sqrt2)$、减 $(-\infty,-\sqrt2)$ 与 $(\sqrt2,+\infty)$，$[1,2]$ 上最大 $\dfrac{4\sqrt2}3$、最小 $\dfrac43$；20 (1) 证明、(2) $-\dfrac{\sqrt3}3$；21 $\dfrac{x^2}4-y^2=1$、渐近线 $y=\pm\dfrac x2$、$\overrightarrow{OG}\cdot\overrightarrow{OH}=3$。
+- 复核说明：第 20 题 (2) 按平面角定义得二面角为钝角（余弦 $-\sqrt3/3$），两次独立计算（法向量夹角、半平面内射线投影）一致；第 15 题三段圆弧按题面「半径相等」处理，结论只依赖 $\alpha_1+\alpha_2+\alpha_3=4\pi$，解析已注明【源疑点】。
+- 版式修正：初版解析版第 4 题「先看周期…」长段落出现 Underfull badness 3354，改为两句分段（「故（C）（D）先排除」另起段）后四版归零。
+- 图稿 3 张（Q15 三段圆弧封闭曲线、Q20 四棱锥、Q21 双曲线与 $l_1,l_2,MN$），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 验收：四版 5/23/7/19 页（共 54 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 54 页八类检查 **361 pass + 71 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b07.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `ecc62cef-a885-4155-ac0c-12371015615e`）。
+- 版式说明：印刷版第 5 页「参考答案与详细解析」标题与使用说明落在页末、首题自第 6 页起，同既有模板行为。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **599 卷 / 775 来源 / 445 批次**，complete 481、blocked 118，未绑定来源 **177**；manifest revision 10657。
+- 修改文件：`2010/2010_数学真题_重庆文_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2010_重庆卷_文科/`（questions/answers/answers_short、四版入口、3 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b07.md`、`PROGRESS.md`。
+- 下一步：完成 2010 春季上海（phase7-b08）后，2010 年全部来源绑定完毕。
+
 ### 2010 辽宁卷（文科）：phase7-b06 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
 - 对象：`gk-2010-liaoning-arts`，**24 个题号**（选择 1—12、填空 13—16、解答 17—21、选考 22—24 三选一）；固定来源 `src-184c58fa7099413a3c47ae76c61c7e868875ab5acd7292e2109bf73132b51739`，固定件 SHA-256 `b402a859318cb9854e9b8257ea128e84f1d52e834556dd80625e883f88dea1fd`（515,681 bytes），2 页 A3 横向，印面页码 613、614。
 - 来源核对：文字层只作定位，题面、选项、三视图网格（8 列 × 8 行 L 形）与五幅图均按 600 dpi 核对；原页未印分值，全部记「原页未标」，不补。第 22—24 题原页未另立「选考」栏目，照录并在解析注明。
