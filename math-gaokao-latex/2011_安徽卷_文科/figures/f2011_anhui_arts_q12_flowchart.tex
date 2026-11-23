@@ -1,0 +1,36 @@
+% 2011 年安徽卷文科第 12 题：程序框图（算法流程图），求输出结果。
+% 来源 PDF：普通高考/2011/2011安徽文.pdf，SHA-256 af8382bc2cd47a1d5e08bb622275f77ad100aa4f844b5cfd2fd5cd217de58ffc。
+% 原页：第 1 页（A3 三栏）第 2 栏下部，书页码 645。
+% 重绘依据：照原页——自上而下为「开始」→「T=0,k=0」→「T=T+k」→判断框「T>105?」；
+%   判断为「是」时向下经平行四边形「输出 k」到「结束」，为「否」时向右到「k=k+1」，
+%   再由 k=k+1 向上、向左回到 T=T+k 上方的流程线（原页在该汇合点画向左的箭头，
+%   并在 T=T+k 上方另画一个向下箭头）。原页不标其他文字。
+\begin{tikzpicture}[>=stealth, semithick, font=\small]
+  % 开始
+  \node[draw, rounded corners=0.22cm, minimum width=1.80cm, minimum height=0.65cm] (start) at (0,0) {开始};
+  % T=0, k=0
+  \node[draw, minimum width=2.90cm, minimum height=0.65cm] (init) at (0,-1.05) {$T=0,\ k=0$};
+  \draw[->] (start) -- (init);
+  % T=T+k
+  \node[draw, minimum width=2.90cm, minimum height=0.65cm] (acc) at (0,-2.80) {$T=T+k$};
+  \draw (init.south) -- (0,-2.05);
+  \draw[->] (0,-2.05) -- (acc.north);
+  % 判断框 T>105?
+  \node[draw, diamond, aspect=2.4, minimum width=3.00cm, minimum height=1.25cm] (test) at (0,-4.20) {$T>105$?};
+  \draw[->] (acc.south) -- (test.north);
+  % 否 分支：k=k+1
+  \node[draw, minimum width=1.85cm, minimum height=0.65cm] (inc) at (3.30,-4.20) {$k=k+1$};
+  \draw[->] (test.east) -- (inc.west);
+  \node[above] at (2.20,-4.15) {否};
+  % 回边：k=k+1 向上、向左汇入 T=T+k 上方
+  \draw[-] (inc.north) -- (3.30,-2.05);
+  \draw[->] (3.30,-2.05) -- (0,-2.05);
+  % 输出 k
+  \draw (-1.10,-5.90) -- (0.90,-5.90) -- (1.10,-5.20) -- (-0.90,-5.20) -- cycle;
+  \node at (0,-5.55) {输出 $k$};
+  \draw[->] (test.south) -- (0,-5.18);
+  \node[left] at (-0.05,-4.98) {是};
+  % 结束
+  \node[draw, rounded corners=0.22cm, minimum width=1.80cm, minimum height=0.65cm] (end) at (0,-6.60) {结束};
+  \draw[->] (0,-5.92) -- (end.north);
+\end{tikzpicture}

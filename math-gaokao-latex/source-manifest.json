@@ -3780,6 +3780,14 @@
         "gk-2011-anhui-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b16",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-anhui-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3789,7 +3797,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "90edd452-38bd-43fe-a5ae-5aeb9a6b4aa6",
+  "last_transaction_id": "5492abdb-49cd-443f-b9e6-81c340d7be37",
   "papers": [
     {
       "blocked_from": null,
@@ -44700,9 +44708,78 @@
       "title": "2011 年·安徽卷·理科",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_安徽卷_文科/figures/f2011_anhui_arts_q08_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_安徽卷_文科/figures/f2011_anhui_arts_q10_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_安徽卷_文科/figures/f2011_anhui_arts_q12_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_安徽卷_文科/figures/f2011_anhui_arts_q19_polyhedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_anhui_arts",
+        "id": "gk-2011-anhui-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 645、646。PDF 无答案页，原页未印分值、未印参考公式，全部记「原页未标」，不补。安徽卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。选择 1A 2B 3C 4B 5D 6B 7A 8C 9D 10A；11 −3；12 15；13 (−3,2)；14 π/3；15 ①③；16 高 (√3+1)/2；17 (1)(2) 证明；18 (1) 极大值点 x=1/2、极小值点 x=3/2、(2) 0<a≤1；19 (1) 证明、(2) 3/2；20 (1) ŷ=6.5x−12778.8（x 为年份）、(2) 299.2 万吨；21 (1) aₙ=n+2、(2) Sₙ=(tan(n+3)−tan3)/tan1−n。源说明：原页不印分值与参考公式，第 20 题最小二乘式由本库补出并注明；第 19(2)「棱锥 F−OBED」按底面为四边形 OBED 处理；第 2 题原页带括号 S∩(∁_U T)，第 5 题分式选项写在括号内，均照录；第 10 题图未标 a，只能由峰位判断 n；第 8 题侧视图上底按 600 dpi 量得约 2，还原为下底 4×4、上底 4×2、高 4（表面积 48+8√17）。原页共 4 幅图：第 8 题三视图、第 10 题函数图象、第 12 题程序框图、第 19 题多面体；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "安徽文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-anhui-arts",
+      "production_state": "complete",
+      "project_dir": "2011_安徽卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_安徽文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_安徽文_含解析.md",
+        "questions": "2011/2011_数学真题_安徽文_试题.md",
+        "solution_body": "2011/2011_数学真题_安徽文_解析正文.md"
+      },
+      "source_ids": [
+        "src-9385558371cf24f5e56ffb52884f3a5d6e1bf336a1de9159db0ba99bd744afed"
+      ],
+      "title": "2011 年·安徽卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 10712,
+  "revision": 10720,
   "schema_version": 1,
   "sources": [
     {
@@ -56507,8 +56584,8 @@
       "exam_type": "regular",
       "git_blob_oid": "583cbc225fddf078730496f51fdc44d35754fa22",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-anhui-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011安徽文.pdf",
       "regions": [],
       "source_id": "src-9385558371cf24f5e56ffb52884f3a5d6e1bf336a1de9159db0ba99bd744afed",
