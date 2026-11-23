@@ -1,0 +1,38 @@
+% 2010 年福建卷文科第 6 题：程序框图。
+% 来源 PDF：普通高考/2010/2010福建文.pdf，SHA-256 56e9e7a7fe9733a605b2d88773e59f83f49c173184cc77d721633adf13c16b78。
+% 原页：第 1 页（A3 三栏）第 1 栏下部，书页码 591。
+% 重绘依据：照原页竖排主干 开始→s=0→i=1→a=i×2^i→s=s+a→i=i+1→判断 s>11?；
+%   判断框「是」向下经「输出 i」到「结束」；「否」向左再向上，汇入 a=i×2^i 之前的主干
+%   （即先自增、后判断，循环体为 a=i×2^i、s=s+a、i=i+1）。
+\begin{tikzpicture}[semithick,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, minimum width=2.9cm, minimum height=0.62cm, align=center},
+  round/.style={draw, rounded corners=6pt, minimum width=1.7cm,
+    minimum height=0.62cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.4cm, minimum height=0.65cm, align=center},
+  dec/.style={draw, diamond, aspect=2.2, minimum width=3.0cm,
+    minimum height=1.15cm, align=center},
+  arr/.style={->, >=stealth}]
+  \node[round] (start) at (0,0) {开始};
+  \node[box]   (s0)    at (0,-1.10) {$s=0$};
+  \node[box]   (i1)    at (0,-2.10) {$i=1$};
+  \node[box]   (a)     at (0,-3.10) {$a=i\times2^{i}$};
+  \node[box]   (ss)    at (0,-4.10) {$s=s+a$};
+  \node[box]   (inc)   at (0,-5.10) {$i=i+1$};
+  \node[dec]   (test)  at (0,-6.45) {$s>11$?};
+  \node[para]  (out)   at (0,-8.00) {输出 $i$};
+  \node[round] (end)   at (0,-9.20) {结束};
+  \draw[arr] (start) -- (s0);
+  \draw[arr] (s0) -- (i1);
+  \draw[arr] (i1) -- (a);
+  \draw[arr] (a) -- (ss);
+  \draw[arr] (ss) -- (inc);
+  \draw[arr] (inc) -- (test);
+  \draw[arr] (test) -- (out);
+  \node[right] at (0.22,-7.20) {是};
+  \draw[arr] (out) -- (end);
+  % 「否」分支：向左、向上，再向右汇入 a=i×2^i 之前的主干
+  \draw[arr] (test.west) -- (-3.05,-6.45) -- (-3.05,-2.60) -- (0,-2.60);
+  \node[above] at (-1.75,-6.42) {否};
+\end{tikzpicture}
