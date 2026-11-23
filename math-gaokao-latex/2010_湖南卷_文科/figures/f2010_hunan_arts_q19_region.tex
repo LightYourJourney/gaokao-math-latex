@@ -1,0 +1,39 @@
+% 2010 年湖南卷文科第 19 题：冰川边界线段 P1P2 与考察区域的平面示意图。
+% 来源 PDF：普通高考/2010/2010湖南文.pdf，SHA-256 38611c33c9da2139ad6cd4117513ee144b09a6860180eb976c446b4858ada122。
+% 原页：第 2 页（A3 三栏）第 1 栏下部，书页码 604。
+% 重绘依据：照原页坐标系，A(-4,0)、B(4,0)，冰川部分边界线为线段 P1P2，
+%   P1(-5,9)、P2(-14,-3)；「已融化」「区域」标于界线左侧，「冰」「川」标于右侧。
+%   原页不画考察区域（椭圆）本身，此处亦不补画。
+\begin{tikzpicture}[scale=0.5, semithick, every node/.style={inner sep=2pt}]
+  \draw[->] (-15.8,0) -- (7,0) node[right] {$x$};
+  \draw[->] (0,-4.2) -- (0,10.6) node[above] {$y$};
+
+  \coordinate (A)  at (-4,0);
+  \coordinate (B)  at (4,0);
+  \coordinate (P1) at (-5,9);
+  \coordinate (P2) at (-14,-3);
+
+  \draw (P1) -- (P2);
+
+  \fill (A) circle (2.2pt);
+  \fill (B) circle (2.2pt);
+  \fill (P1) circle (2.2pt);
+  \fill (P2) circle (2.2pt);
+
+  \node[above left]  at (P1) {$P_1(-5,9)$};
+  \node[below left]  at (P2) {$P_2(-14,-3)$};
+  \node[below]       at (A)  {$A(-4,0)$};
+  \node[below]       at (B)  {$B(4,0)$};
+  \node[below left]  at (0,0) {$O$};
+
+  % 「已融化」「区域」沿界线左侧竖排
+  \node at (-6.6,7.7) {已};
+  \node at (-7.6,6.2) {融};
+  \node at (-8.6,4.7) {化};
+  \node at (-9.8,2.9) {区};
+  \node at (-10.4,1.6) {域};
+
+  % 「冰」「川」在界线右侧
+  \node at (-4.4,4.8) {冰};
+  \node at (0.6,-3.0) {川};
+\end{tikzpicture}

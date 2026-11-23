@@ -1,0 +1,33 @@
+% 2010 年湖南卷文科第 12 题：求实数 x 的绝对值的算法程序框图。
+% 来源 PDF：普通高考/2010/2010湖南文.pdf，SHA-256 38611c33c9da2139ad6cd4117513ee144b09a6860180eb976c446b4858ada122。
+% 原页：第 1 页（A3 三栏）第 2 栏中部，书页码 603。
+% 重绘依据：照原页，开始→输入 x→判断框①；判断为「是」向下经「输出 x」，
+%   为「否」向右再向下经「输出 -x」；两输出框合成一线后向下到「结束」。
+%   判断框内原页只印「①」，不预填条件。
+\begin{tikzpicture}[scale=0.95, semithick,
+  every node/.style={inner sep=2pt},
+  round/.style={draw, rounded corners=6pt, minimum width=1.7cm,
+    minimum height=0.62cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.6cm, minimum height=0.72cm, align=center},
+  dec/.style={draw, diamond, aspect=2.6, minimum width=3.0cm,
+    minimum height=1.15cm, align=center},
+  arr/.style={->, >=stealth}]
+
+  \node[round] (start) at (0,8.4) {开始};
+  \node[para]  (in)    at (0,7.0) {输入 $x$};
+  \node[dec]   (test)  at (0,4.9) {①};
+  \node[para]  (out1)  at (0,2.9) {输出 $x$};
+  \node[para]  (out2)  at (4.0,2.9) {输出 $-x$};
+  \node[round] (end)   at (0,1.2) {结束};
+
+  \draw[arr] (start) -- (in);
+  \draw[arr] (in) -- (test);
+  \draw[arr] (test.south) -- (out1.north);
+  \node[right] at (0.16,3.95) {是};
+  \draw[arr] (test.east) -| (out2.north);
+  \node[above] at (2.2,4.98) {否};
+  \draw (out1.south) -- (0,1.9);
+  \draw (out2.south) -- (4.0,1.9) -- (0,1.9);
+  \draw[arr] (0,1.9) -- (end.north);
+\end{tikzpicture}
