@@ -1,0 +1,1090 @@
+% answers.tex —— 2010 年·普通高等学校招生考试·湖北卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2010/2010_数学真题_湖北理_试题.md + 2010/2010_数学真题_湖北理_解析正文.md + 2010/2010_数学真题_湖北理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{gktip}
+固定候选 PDF 仅含题面，无答案页；以下解析与结论均由本库独立推导（非官方答案），并按 600 dpi 原页复核题面。原页未印分值，不补。源页未见缺图或错印；个别处（第 19 题定义域、第 18 题二面角的取角）在题解中另行说明。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+若 $\mathrm i$ 为虚数单位，图中复平面内点 $Z$ 表示复数 $z$，则表示复数 $\dfrac{z}{1+\mathrm i}$ 的点是（　）
+
+（A）$E$
+
+（B）$F$
+
+（C）$G$
+
+（D）$H$
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_hubei_sci_q01_complex}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+按 600 dpi 原页量取网格（每格 $1$ 个单位，$x$ 方向 $-3$ 至 $3$，$y$ 方向 $-2$ 至 $2$），得
+
+\nopagebreak[4]
+\[E(1,2),\quad F(-3,1),\quad G(-2,-1),\quad H(2,-1),\quad Z(3,1).\]
+
+\Needspace{5\baselineskip}
+故 $z=3+\mathrm i$。
+
+\nopagebreak[4]
+\[\frac{z}{1+\mathrm i}=\frac{(3+\mathrm i)(1-\mathrm i)}{(1+\mathrm i)(1-\mathrm i)}
+=\frac{3-3\mathrm i+\mathrm i+1}{2}=\frac{4-2\mathrm i}{2}=2-\mathrm i.\]
+
+对应点为 $(2,-1)$，即点 $H$。
+
+（其余各点：$E$ 对应 $1+2\mathrm i$，$F$ 对应 $-3+\mathrm i$，$G$ 对应 $-2-\mathrm i$，均不是 $2-\mathrm i$，故 A、B、C 均错。）
+
+故选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+设集合 $A=\left\{(x,y)\ \middle|\ \dfrac{x^2}{4}+\dfrac{y^2}{16}=1\right\}$，$B=\{(x,y)\mid y=3^x\}$，则 $A\cap B$ 的子集的个数是（　）
+
+（A）$4$
+
+（B）$3$
+
+（C）$2$
+
+（D）$1$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+椭圆上点的纵坐标满足 $y^2=16\left(1-\dfrac{x^2}{4}\right)$，$x\in[-2,2]$；而 $B$ 中 $y=3^x>0$。令
+
+\nopagebreak[4]
+\[h(x)=16\left(1-\frac{x^2}{4}\right)-9^x=16-4x^2-9^x,\qquad x\in[-2,2],\]
+
+\Needspace{5\baselineskip}
+则 $A\cap B$ 中点的个数就是 $h$ 在 $[-2,2]$ 上的零点个数。因
+
+\nopagebreak[4]
+\[h''(x)=-8-9^x(\ln9)^2<0,\]
+
+\Needspace{5\baselineskip}
+$h$ 为凹函数，零点至多两个。又
+
+\nopagebreak[4]
+\[h(-2)=16-16-\frac1{81}<0,\qquad h(0)=16-0-1=15>0,\qquad h(2)=16-16-81<0,\]
+
+故 $h$ 在 $(-2,0)$ 与 $(0,2)$ 内各恰有一个零点，即 $A\cap B$ 恰有 $2$ 个元素。
+
+含 $2$ 个元素的集合共有 $2^2=4$ 个子集。
+
+（$2$ 只是 $A\cap B$ 的元素个数，误把元素个数当成子集个数才会选 C；元素个数为 $0,1,3$ 时子集数分别为 $1,2,8$，与 B、D 也不符。）
+
+故选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，$a=15$，$b=10$，$A=60^\circ$，则 $\cos B=$（　）
+
+（A）$-\dfrac{2\sqrt2}{3}$
+
+（B）$\dfrac{2\sqrt2}{3}$
+
+（C）$-\dfrac{\sqrt6}{3}$
+
+（D）$\dfrac{\sqrt6}{3}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由正弦定理
+
+\nopagebreak[4]
+\[\sin B=\frac{b\sin A}{a}=\frac{10\cdot\frac{\sqrt3}{2}}{15}=\frac{\sqrt3}{3}.\]
+
+\Needspace{5\baselineskip}
+因 $a>b$，故 $A>B$，从而 $B<60^\circ$，$\cos B>0$。于是
+
+\nopagebreak[4]
+\[\cos B=\sqrt{1-\sin^2B}=\sqrt{1-\frac13}=\frac{\sqrt6}{3}.\]
+
+（$\cos B>0$ 排除 A、C；又 $\cos B=\dfrac{\sqrt6}{3}\ne\dfrac{2\sqrt2}{3}$，排除 B。）
+
+故选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+投掷一枚均匀硬币和一枚均匀骰子各一次，记“硬币正面向上”为事件 $A$，“骰子向上的点数是 $3$”为事件 $B$，则事件 $A$，$B$ 中至少有一件发生的概率是（　）
+
+（A）$\dfrac{5}{12}$
+
+（B）$\dfrac12$
+
+（C）$\dfrac{7}{12}$
+
+（D）$\dfrac34$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+硬币与骰子的结果相互独立，且
+
+\nopagebreak[4]
+\[P(A)=\frac12,\qquad P(B)=\frac16.\]
+
+\Needspace{5\baselineskip}
+“$A$，$B$ 至少有一件发生”的对立事件是“$A$，$B$ 都不发生”：
+
+\nopagebreak[4]
+\[P=1-P(\overline A)P(\overline B)=1-\frac12\cdot\frac56=1-\frac5{12}=\frac7{12}.\]
+
+（$\dfrac{5}{12}$ 是“两件都不发生”的概率，$\dfrac12$ 只计了硬币，$\dfrac34$ 无依据，故 A、B、D 均错。）
+
+故选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+已知 $\triangle ABC$ 和点 $M$ 满足 $\overrightarrow{MA}+\overrightarrow{MB}+\overrightarrow{MC}=\boldsymbol 0$。若存在实数 $m$ 使得 $\overrightarrow{AB}+\overrightarrow{AC}=m\overrightarrow{AM}$ 成立，则 $m=$（　）
+
+（A）$2$
+
+（B）$3$
+
+（C）$4$
+
+（D）$5$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+以 $A$ 为原点，记 $\overrightarrow{AB}=\boldsymbol b$，$\overrightarrow{AC}=\boldsymbol c$，$\overrightarrow{AM}=\boldsymbol m$。由
+
+\nopagebreak[4]
+\[\overrightarrow{MA}+\overrightarrow{MB}+\overrightarrow{MC}=\boldsymbol 0\]
+
+\Needspace{5\baselineskip}
+得
+
+\nopagebreak[4]
+\[-\boldsymbol m+(\boldsymbol b-\boldsymbol m)+(\boldsymbol c-\boldsymbol m)=\boldsymbol 0
+\iff \boldsymbol m=\frac{\boldsymbol b+\boldsymbol c}{3}.\]
+
+\Needspace{5\baselineskip}
+即 $M$ 为 $\triangle ABC$ 的重心，且
+
+\nopagebreak[4]
+\[\overrightarrow{AB}+\overrightarrow{AC}=\boldsymbol b+\boldsymbol c=3\boldsymbol m=3\overrightarrow{AM}.\]
+
+故 $m=3$。
+
+（由重心性质直接得 $m=3$，代入可验 $2,4,5$ 均不满足 $\overrightarrow{AB}+\overrightarrow{AC}=m\overrightarrow{AM}$，排除 A、C、D。）
+
+故选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+将参加夏令营的 $600$ 名学生编号为：$001$，$002$，$\cdots$，$600$。采用系统抽样方法抽取一个容量为 $50$ 的样本，且随机抽得的号码为 $003$。这 $600$ 名学生分住在三个营区，从 $001$ 到 $300$ 在第 I 营区，从 $301$ 到 $495$ 住在第 II 营区，从 $496$ 到 $600$ 住在第 III 营区。三个营区被抽中的人数依次为（　）
+
+（A）$26,16,8$
+
+（B）$25,17,8$
+
+（C）$25,16,9$
+
+（D）$24,17,9$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+抽样间距为 $\dfrac{600}{50}=12$，随机起点为 $003$，故样本号码为
+
+\nopagebreak[4]
+\[3+12k,\qquad k=0,1,\cdots,49.\]
+
+第 I 营区（$001$—$300$）：$3+12k\leqslant300$，即 $k\leqslant24.75$，得 $k=0,1,\cdots,24$，共 $25$ 人。
+
+第 II 营区（$301$—$495$）：$301\leqslant3+12k\leqslant495$，即 $24.83\leqslant k\leqslant41$，得 $k=25,\cdots,41$，共 $17$ 人。
+
+第 III 营区（$496$—$600$）：$496\leqslant3+12k\leqslant600$，即 $41.08\leqslant k\leqslant49.75$，得 $k=42,\cdots,49$，共 $8$ 人。
+
+校验：$25+17+8=50$。三个营区被抽中的人数依次为 $25,17,8$。
+
+（四个选项的三数之和都等于 $50$，只能按号码逐个核对；由 $3+12k$ 的分布排除 A、C、D。）
+
+故选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+如图，在半径为 $r$ 的圆内作内接正六边形，再作正六边形的内切圆，又在此内切圆内作内接正六边形，如此无限继续下去，设 $S_n$ 为前 $n$ 个圆的面积之和，则 $\lim\limits_{n\to\infty}S_n=$（　）
+
+（A）$2\pi r^2$
+
+（B）$\dfrac83\pi r^2$
+
+（C）$4\pi r^2$
+
+（D）$6\pi r^2$
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_hubei_sci_q07_circles}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+半径为 $r$ 的圆内接正六边形的边心距为 $r\cos30^\circ=\dfrac{\sqrt3}{2}r$，这就是下一个内切圆的半径。故各圆半径依次为
+
+\nopagebreak[4]
+\[r,\ \frac{\sqrt3}{2}r,\ \left(\frac{\sqrt3}{2}\right)^2r,\ \cdots\]
+
+\Needspace{5\baselineskip}
+公比为 $\dfrac34$。于是
+
+\nopagebreak[4]
+\[\lim_{n\to\infty}S_n=\pi r^2\left[1+\frac34+\left(\frac34\right)^2+\cdots\right]
+=\frac{\pi r^2}{1-\frac34}=4\pi r^2.\]
+
+（$S_n$ 的首项为 $\pi r^2$、公比 $\dfrac34$，和为 $4\pi r^2$；$2\pi r^2$、$\dfrac83\pi r^2$、$6\pi r^2$ 均不符。）
+
+故选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+现安排甲、乙、丙、丁、戊 $5$ 名同学参加上海世博会志愿者服务活动，每人从事翻译、导游、礼仪、司机四项工作之一，每项工作至少有一人参加。甲、乙不会开车但能从事其他三项工作，丙、丁、戊都能胜任四项工作，则不同安排方案的种数是（　）
+
+（A）$152$
+
+（B）$126$
+
+（C）$90$
+
+（D）$54$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+四项工作各至少一人、共 $5$ 人，故人数分配必为 $2,1,1,1$。按司机人数分类。
+
+\Needspace{5\baselineskip}
+（i）司机恰 $1$ 人：只能从丙、丁、戊中选，有 $3$ 种。余下 $4$ 人分任翻译、导游、礼仪且每项至少一人（不能再当司机），有
+
+\nopagebreak[4]
+\[3^4-\mathrm C_3^1\cdot2^4+\mathrm C_3^2\cdot1^4=81-48+3=36\]
+
+种。共 $3\times36=108$ 种。
+
+（ii）司机恰 $2$ 人：从丙、丁、戊中选 $2$ 人，有 $\mathrm C_3^2=3$ 种。余下 $3$ 人分任其余三项工作，每项一人，有 $3!=6$ 种。共 $3\times6=18$ 种。
+
+\Needspace{5\baselineskip}
+合计
+
+\nopagebreak[4]
+\[108+18=126.\]
+
+（分类计数得 $126$；$152$、$90$、$54$ 与上述两种情形之和不符。）
+
+故选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+若直线 $y=x+b$ 与曲线 $y=3-\sqrt{4x-x^2}$ 有公共点，则 $b$ 的取值范围是（　）
+
+（A）$[-1,1+2\sqrt2]$
+
+（B）$[1-2\sqrt2,1+2\sqrt2]$
+
+（C）$[1-2\sqrt2,3]$
+
+（D）$[1-\sqrt2,3]$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 $y=3-\sqrt{4x-x^2}$ 得 $(x-2)^2+(y-3)^2=4$ 且 $y\leqslant3$，即曲线是圆心 $(2,3)$、半径 $2$ 的圆的下半圆（含端点 $(0,3)$、$(4,3)$），$x\in[0,4]$。
+
+\Needspace{5\baselineskip}
+圆心到直线 $x-y+b=0$ 的距离为 $\dfrac{|b-1|}{\sqrt2}$，直线与圆有公共点需
+
+\nopagebreak[4]
+\[\frac{|b-1|}{\sqrt2}\leqslant2\iff 1-2\sqrt2\leqslant b\leqslant1+2\sqrt2. \tag{1}\]
+
+还须交点落在下半圆上。
+
+上界：若 $b>3$ 且交点在 $y\leqslant3$ 处，则 $x=y-b\leqslant3-b<0$，与 $x\in[0,4]$ 矛盾；$b=3$ 时直线过端点 $(0,3)$，符合。故 $b\leqslant3$。
+
+下界：$b=1-2\sqrt2$ 时直线与圆相切，切点为 $\left(2+\sqrt2,\,3-\sqrt2\right)$，其纵坐标 $3-\sqrt2<3$，在下半圆上；$b<1-2\sqrt2$ 时由 (1) 无公共点。
+
+\Needspace{5\baselineskip}
+当 $b$ 由 $3$ 连续减至 $1-2\sqrt2$ 时，直线与圆的两个交点中较低者沿下半圆从 $(0,3)$ 连续移动到切点，始终满足 $y\leqslant3$。故所求范围为
+
+\nopagebreak[4]
+\[\left[1-2\sqrt2,\ 3\right].\]
+
+（A 的下界误取 $-1$、上界误取 $1+2\sqrt2$（该上界对应上半圆的切点）；B 未顾及 $y\leqslant3$；D 的下界 $1-\sqrt2$ 既非切点值也非端点值。）
+
+故选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+记实数 $x_1$，$x_2$，$\cdots$，$x_n$ 中的最大数为 $\max\{x_1,x_2,\cdots,x_n\}$，最小数为 $\min\{x_1,x_2,\cdots,x_n\}$。已知 $\triangle ABC$ 的三边边长为 $a$，$b$，$c$（$a\leqslant b\leqslant c$），定义它的倾斜度为 $t=\max\left\{\dfrac ab,\dfrac bc,\dfrac ca\right\}\cdot\min\left\{\dfrac ab,\dfrac bc,\dfrac ca\right\}$，则“$t=1$”是“$\triangle ABC$ 为等边三角形”的（　）
+
+（A）必要而不充分的条件
+
+（B）充分而不必要的条件
+
+（C）充要条件
+
+（D）既不充分也不必要的条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+因 $a\leqslant b\leqslant c$，有 $\dfrac ab\leqslant1$，$\dfrac bc\leqslant1$，$\dfrac ca\geqslant1$，且
+
+\nopagebreak[4]
+\[\frac ca-\frac bc=\frac{c^2-ab}{ac}\geqslant0,\qquad
+\frac ca-\frac ab=\frac{bc-a^2}{ab}\geqslant0,\]
+
+故 $\max\left\{\dfrac ab,\dfrac bc,\dfrac ca\right\}=\dfrac ca$，而最小值是 $\dfrac ab$ 与 $\dfrac bc$ 中的较小者。
+
+若 $\triangle ABC$ 为等边三角形，三个比均为 $1$，$t=1$，所以“$t=1$”是必要条件。
+
+\Needspace{5\baselineskip}
+反之，取 $a=1$，$b=c=2$（等腰三角形，非等边）。此时
+
+\nopagebreak[4]
+\[\max\left\{\frac12,1,2\right\}=2,\qquad \min\left\{\frac12,1,2\right\}=\frac12,\qquad t=2\cdot\frac12=1,\]
+
+但三角形并非等边。故“$t=1$”不是充分条件。
+
+因此“$t=1$”是“$\triangle ABC$ 为等边三角形”的必要而不充分条件。
+
+（由反例知 B、C 错；又等边三角形必有 $t=1$，故 D 也错。）
+
+故选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+在 $\left(x+\sqrt[4]{3y}\right)^{20}$ 的展开式中，系数为有理数的项共有 $\underline{\qquad}$ 项。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+展开式的通项为
+
+\nopagebreak[4]
+\[\mathrm T_{k+1}=\mathrm C_{20}^k x^{20-k}\left(\sqrt[4]{3y}\right)^{k}
+=\mathrm C_{20}^k\,3^{k/4}\,x^{20-k}y^{k/4},\qquad k=0,1,\cdots,20.\]
+
+\Needspace{5\baselineskip}
+其系数 $\mathrm C_{20}^k3^{k/4}$ 为有理数，当且仅当 $k$ 是 $4$ 的倍数。故
+
+\nopagebreak[4]
+\[k=0,4,8,12,16,20,\]
+
+共 $6$ 项。
+
+填 $6$。
+
+\gkanswer{答案：$6$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知 $z=2x-y$，式中变量 $x$，$y$ 满足约束条件
+
+\nopagebreak[4]
+\[\begin{cases}y\leqslant x,\\ x+y\geqslant1,\\ x\leqslant2,\end{cases}\]
+
+则 $z$ 的最大值为 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+可行域由 $y\leqslant x$、$x+y\geqslant1$、$x\leqslant2$ 围成，顶点为
+
+\nopagebreak[4]
+\[(0.5,0.5),\qquad (2,2),\qquad (2,-1).\]
+
+（$y=x$ 与 $x+y=1$ 交于 $(0.5,0.5)$；$x=2$ 与 $y=x$ 交于 $(2,2)$；$x=2$ 与 $x+y=1$ 交于 $(2,-1)$。）
+
+\Needspace{5\baselineskip}
+$z=2x-y$ 为线性函数，最大值在顶点处取得：
+
+\nopagebreak[4]
+\[z(0.5,0.5)=0.5,\qquad z(2,2)=2,\qquad z(2,-1)=5.\]
+
+故 $z$ 的最大值为 $5$。
+
+填 $5$。
+
+\gkanswer{答案：$5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+圆柱形容器内部盛有高度为 $8\ \mathrm{cm}$ 的水，若放入三个相同的球（球的半径与圆柱的底面半径相同）后，水恰好淹没最上面的球（如图所示），则球的半径是 $\underline{\qquad}$ cm。
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_hubei_sci_q13_cylinder}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设球的半径为 $r$，则圆柱底面半径为 $r$。三个球上下相切放置，总高度为 $6r$，水面恰好淹没最上面的球，故水面高 $6r$。
+
+\Needspace{5\baselineskip}
+水的体积不变：
+
+\nopagebreak[4]
+\[\pi r^2\cdot8=\pi r^2\cdot6r-3\cdot\frac43\pi r^3=6\pi r^3-4\pi r^3=2\pi r^3.\]
+
+\Needspace{5\baselineskip}
+由 $r>0$ 得
+
+\nopagebreak[4]
+\[8=2r\iff r=4.\]
+
+填 $4$。
+
+\gkanswer{答案：$4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+某射手射击所得环数 $\xi$ 的分布列如下：
+
+\begin{center}
+\begin{tabular}{lllll}
+\toprule
+$\xi$ & $7$ & $8$ & $9$ & $10$ \\
+\midrule
+$P$ & $x$ & $0.1$ & $0.3$ & $y$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+已知 $\xi$ 的期望 $E\xi=8.9$，则 $y$ 的值为 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由分布列性质
+
+\nopagebreak[4]
+\[x+0.1+0.3+y=1\iff x+y=0.6. \tag{1}\]
+
+\Needspace{5\baselineskip}
+又 $E\xi=8.9$：
+
+\nopagebreak[4]
+\[7x+8\times0.1+9\times0.3+10y=8.9
+\iff 7x+10y=8.9-0.8-2.7=5.4. \tag{2}\]
+
+\Needspace{5\baselineskip}
+由 (1) 得 $x=0.6-y$，代入 (2)：
+
+\nopagebreak[4]
+\[7(0.6-y)+10y=5.4\iff 4.2+3y=5.4\iff y=0.4.\]
+
+填 $0.4$。
+
+\gkanswer{答案：$0.4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+设 $a>0$，$b>0$，称 $\dfrac{2ab}{a+b}$ 为 $a$，$b$ 的调和平均数。如图，$C$ 为线段 $AB$ 上的点，且 $AC=a$，$CB=b$，$O$ 为 $AB$ 中点，以 $AB$ 为直径做半圆。过点 $C$ 作 $AB$ 的垂线交半圆于 $D$。连接 $OD$，$AD$，$BD$。过点 $C$ 作 $OD$ 的垂线，垂足为 $E$。则图中线段 $OD$ 的长度是 $a$，$b$ 的算术平均数，线段 $\underline{\qquad}$ 的长度是 $a$，$b$ 的几何平均数，线段 $\underline{\qquad}$ 的长度是 $a$，$b$ 的调和平均数。
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_hubei_sci_q15_semicircle}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设 $AB=a+b$，则 $OA=OB=OD=\dfrac{a+b}{2}$，$OC=\left|\dfrac{a+b}{2}-a\right|=\dfrac{|b-a|}{2}$。
+
+\Needspace{5\baselineskip}
+在 $\mathrm{Rt}\triangle OCD$ 中（$DC\perp AB$，故 $DC\perp OC$）：
+
+\nopagebreak[4]
+\[DC^2=OD^2-OC^2=\frac{(a+b)^2-(a-b)^2}{4}=ab,\]
+
+故 $DC=\sqrt{ab}$，即线段 $CD$ 的长度是 $a$，$b$ 的几何平均数。
+
+\Needspace{5\baselineskip}
+又在 $\mathrm{Rt}\triangle OCD$ 中 $CE\perp OD$，由射影定理
+
+\nopagebreak[4]
+\[DC^2=OD\cdot DE\Longrightarrow DE=\frac{DC^2}{OD}=\frac{ab}{\frac{a+b}{2}}=\frac{2ab}{a+b},\]
+
+即线段 $DE$ 的长度是 $a$，$b$ 的调和平均数。
+
+故两空依次填 $CD$，$DE$。
+
+\gkanswer{答案：$CD$（几何平均数），$DE$（调和平均数）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=\cos\left(\dfrac\pi3+x\right)\cos\left(\dfrac\pi3-x\right)$，$g(x)=\dfrac12\sin2x-\dfrac14$。
+
+（1）求函数 $f(x)$ 的最小正周期；
+
+（2）求函数 $h(x)=f(x)-g(x)$ 的最大值，并求使 $h(x)$ 取得最大值的 $x$ 的集合。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由积化和差
+
+\nopagebreak[4]
+\[f(x)=\cos\left(\frac\pi3+x\right)\cos\left(\frac\pi3-x\right)
+=\frac12\left[\cos2x+\cos\frac{2\pi}3\right]
+=\frac12\cos2x-\frac14.\]
+
+\Needspace{5\baselineskip}
+（1）$\omega=2$，故最小正周期
+
+\nopagebreak[4]
+\[T=\frac{2\pi}{2}=\pi.\]
+
+\Needspace{5\baselineskip}
+（2）
+
+\nopagebreak[4]
+\[\begin{aligned}
+h(x)&=f(x)-g(x)=\left(\frac12\cos2x-\frac14\right)-\left(\frac12\sin2x-\frac14\right)\\
+&=\frac12(\cos2x-\sin2x)=\frac{\sqrt2}{2}\cos\left(2x+\frac\pi4\right).
+\end{aligned}\]
+
+\Needspace{5\baselineskip}
+故 $h(x)$ 的最大值为 $\dfrac{\sqrt2}{2}$，当且仅当
+
+\nopagebreak[4]
+\[2x+\frac\pi4=2k\pi\iff x=k\pi-\frac\pi8\qquad(k\in\mathbf Z).\]
+
+所求集合为 $\left\{x\ \middle|\ x=k\pi-\dfrac\pi8,\ k\in\mathbf Z\right\}$。
+
+\gkanswer{答案：（1）$\pi$；（2）最大值 $\dfrac{\sqrt2}{2}$，$x$ 的集合为 $\left\{x\ \middle|\ x=k\pi-\dfrac\pi8,\ k\in\mathbf Z\right\}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+为了在夏季降温和冬季供暖时减少能源损耗，房屋的屋顶和外墙需要建造隔热层。某幢建筑物要建造可使用 $20$ 年的隔热层，每厘米厚的隔热层建造成本为 $6$ 万元。该建筑物每年的能源消耗费用 $C$（单位：万元）与隔热层厚度 $x$（单位：cm）满足关系：$C(x)=\dfrac{k}{3x+5}$（$0\leqslant x\leqslant10$），若不建隔热层，每年能源消耗费用为 $8$ 万元。设 $f(x)$ 为隔热层建造费用与 $20$ 年的能源消耗费用之和。
+
+（1）求 $k$ 的值及 $f(x)$ 的表达式。
+
+（2）隔热层修建多厚时，总费用 $f(x)$ 达到最小，并求最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+（1）不建隔热层即 $x=0$，此时
+
+\nopagebreak[4]
+\[C(0)=\frac k5=8\Longrightarrow k=40.\]
+
+\Needspace{5\baselineskip}
+隔热层建造费用为 $6x$（万元），$20$ 年能源消耗费用为 $20C(x)=\dfrac{800}{3x+5}$（万元），故
+
+\nopagebreak[4]
+\[f(x)=6x+\frac{800}{3x+5},\qquad 0\leqslant x\leqslant10.\]
+
+\Needspace{5\baselineskip}
+（2）求导：
+
+\nopagebreak[4]
+\[f'(x)=6-\frac{2400}{(3x+5)^2}.\]
+
+\Needspace{5\baselineskip}
+令 $f'(x)=0$：
+
+\nopagebreak[4]
+\[(3x+5)^2=400\Longrightarrow 3x+5=20\Longrightarrow x=5.\]
+
+\Needspace{5\baselineskip}
+当 $0\leqslant x<5$ 时 $f'(x)<0$，$f$ 递减；当 $5<x\leqslant10$ 时 $f'(x)>0$，$f$ 递增。故 $x=5$ 时取最小值
+
+\nopagebreak[4]
+\[f(5)=6\times5+\frac{800}{20}=30+40=70.\]
+
+（端点值 $f(0)=160$，$f(10)=60+\dfrac{800}{35}\approx82.9$，均大于 $70$。）
+
+\gkanswer{答案：（1）$k=40$，$f(x)=6x+\dfrac{800}{3x+5}$（$0\leqslant x\leqslant10$）；（2）$x=5$ 时总费用最小，最小值为 $70$ 万元。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，在四面体 $ABOC$ 中，$OC\perp OA$，$OC\perp OB$，$\angle AOB=120^\circ$，且 $OA=OB=OC=1$。
+
+（1）设 $P$ 为 $AC$ 的中点，证明：在 $AB$ 上存在一点 $Q$，使 $PQ\perp OA$，并计算 $\dfrac{AB}{AQ}$ 的值；
+
+（2）求二面角 $O-AC-B$ 的平面角的余弦值。
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_hubei_sci_q18_tetra}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+以 $O$ 为原点，$OA$ 为 $x$ 轴正方向，平面 $AOB$ 为 $xOy$ 平面，$OC$ 为 $z$ 轴正方向建系。则
+
+\nopagebreak[4]
+\[O(0,0,0),\quad A(1,0,0),\quad B\left(-\frac12,\frac{\sqrt3}{2},0\right),\quad C(0,0,1).\]
+
+（$\angle AOB=120^\circ$，$OA=OB=1$；$OC\perp OA$，$OC\perp OB$，故 $OC\perp$ 平面 $AOB$。）
+
+\Needspace{5\baselineskip}
+（1）$P$ 为 $AC$ 中点，
+
+\nopagebreak[4]
+\[P\left(\frac12,0,\frac12\right).\]
+
+\Needspace{5\baselineskip}
+设 $Q=A+t\overrightarrow{AB}$（$0\leqslant t\leqslant1$），则
+
+\nopagebreak[4]
+\[Q\left(1-\frac32t,\ \frac{\sqrt3}{2}t,\ 0\right),\qquad
+\overrightarrow{PQ}=\left(\frac12-\frac32t,\ \frac{\sqrt3}{2}t,\ -\frac12\right).\]
+
+\Needspace{5\baselineskip}
+由 $PQ\perp OA$ 得 $\overrightarrow{PQ}\cdot(1,0,0)=0$，即
+
+\nopagebreak[4]
+\[\frac12-\frac32t=0\Longrightarrow t=\frac13\in[0,1].\]
+
+\Needspace{5\baselineskip}
+故这样的点 $Q$ 存在（$Q$ 在 $AB$ 上且 $AQ=\dfrac13AB$），并且
+
+\nopagebreak[4]
+\[\frac{AB}{AQ}=\frac{1}{t}=3.\]
+
+（2）平面 $OAC$ 即 $y=0$，其法向量可取 $\boldsymbol n_1=(0,1,0)$。
+
+\Needspace{5\baselineskip}
+平面 $ABC$ 过 $A(1,0,0)$、$B\left(-\frac12,\frac{\sqrt3}{2},0\right)$、$C(0,0,1)$，由
+
+\nopagebreak[4]
+\[\overrightarrow{AB}=\left(-\frac32,\frac{\sqrt3}{2},0\right),\qquad \overrightarrow{AC}=(-1,0,1),\]
+
+\Needspace{5\baselineskip}
+得法向量
+
+\nopagebreak[4]
+\[\boldsymbol n_2=\overrightarrow{AB}\times\overrightarrow{AC}
+=\left(\frac{\sqrt3}{2},\frac32,\frac{\sqrt3}{2}\right),\]
+
+\Needspace{5\baselineskip}
+即 $\boldsymbol n_2\parallel(1,\sqrt3,1)$，平面 $ABC$ 的方程为
+
+\nopagebreak[4]
+\[x+\sqrt3y+z=1.\]
+
+\Needspace{5\baselineskip}
+二面角 $O-AC-B$ 的平面角，是两半平面内垂直于棱 $AC$、分别指向 $O$ 和 $B$ 的两条射线的夹角。注意 $AC$ 的中点 $M=\left(\frac12,0,\frac12\right)$，$\overrightarrow{MO}=\left(-\frac12,0,-\frac12\right)$，故在平面 $OAC$ 内取
+
+\nopagebreak[4]
+\[\boldsymbol u=\frac{(-1,0,-1)}{\sqrt2}\quad(\perp AC\text{\text{，指向} }O),\]
+
+\Needspace{5\baselineskip}
+在平面 $ABC$ 内，$B$ 到直线 $AC$ 的垂足为 $\left(\frac14,0,\frac34\right)$，由该垂足指向 $B$ 的向量为 $\left(-\frac34,\frac{\sqrt3}{2},-\frac34\right)$，故取
+
+\nopagebreak[4]
+\[\boldsymbol v=\frac{(-3,\,2\sqrt3,\,-3)}{\sqrt{30}}\quad(\perp AC\text{\text{，指向} }B).\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[\cos\theta=\boldsymbol u\cdot\boldsymbol v
+=\frac{3+0+3}{\sqrt2\cdot\sqrt{30}}
+=\frac{6}{2\sqrt{15}}=\frac{3}{\sqrt{15}}=\frac{\sqrt{15}}{5}.\]
+
+故二面角 $O-AC-B$ 的平面角的余弦值为 $\dfrac{\sqrt{15}}{5}$，平面角约为 $39.2^\circ$，为锐角。
+
+（校验：两半平面分别以 $(0,-1,0)$、$\dfrac{(1,\sqrt3,1)}{\sqrt5}$ 为外法向，$\cos\theta=-\boldsymbol n_1\cdot\boldsymbol n_2=\dfrac{\sqrt3}{\sqrt5}=\dfrac{\sqrt{15}}5$，与上式一致。）
+
+\gkanswer{答案：（1）证明见解析，$\dfrac{AB}{AQ}=3$；（2）$\dfrac{\sqrt{15}}5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知一条曲线 $C$ 在 $y$ 轴的右边，$C$ 上每一点到点 $F(1,0)$ 的距离减去它到 $y$ 轴距离的差都是 $1$。
+
+（1）求曲线 $C$ 的方程；
+
+（2）是否存在正数 $m$，对于过点 $M(m,0)$ 且与曲线 $C$ 有两个交点 $A$、$B$ 的任一直线，都有 $\overrightarrow{FA}\cdot\overrightarrow{FB}<0$？若存在，求出 $m$ 的取值范围；若不存在，请说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+（1）设 $P(x,y)$ 为曲线 $C$ 上任一点。$C$ 在 $y$ 轴右边，故 $x>0$，到 $y$ 轴距离为 $x$。由题意
+
+\nopagebreak[4]
+\[\sqrt{(x-1)^2+y^2}-x=1
+\Longrightarrow \sqrt{(x-1)^2+y^2}=x+1.\]
+
+\Needspace{5\baselineskip}
+两边平方：
+
+\nopagebreak[4]
+\[(x-1)^2+y^2=(x+1)^2\Longrightarrow y^2=4x.\]
+
+\Needspace{5\baselineskip}
+故曲线 $C$ 的方程为
+
+\nopagebreak[4]
+\[y^2=4x\quad(x>0).\]
+
+【源疑点】题面称 $C$ 在 $y$ 轴右边，而由距离条件解得的抛物线 $y^2=4x$ 含顶点 $(0,0)$：该点在 $y$ 轴上，到 $F$ 的距离为 $1$、到 $y$ 轴距离为 $0$，差恰为 $1$，也满足距离条件。此处照录题面，取 $x>0$（去掉顶点）；该端点不影响第（2）问。
+
+\Needspace{5\baselineskip}
+（2）过 $M(m,0)$ 且与 $C$ 有两个交点的直线不能是 $x$ 轴（$x$ 轴与抛物线只有一个交点），故可设
+
+\nopagebreak[4]
+\[x=ty+m\qquad(t\in\mathbf R).\]
+
+\Needspace{5\baselineskip}
+代入 $y^2=4x$：
+
+\nopagebreak[4]
+\[y^2-4ty-4m=0.\]
+
+\Needspace{5\baselineskip}
+设 $A(x_1,y_1)$，$B(x_2,y_2)$，则
+
+\nopagebreak[4]
+\[y_1+y_2=4t,\qquad y_1y_2=-4m,\]
+
+且判别式 $16t^2+16m>0$ 对 $m>0$ 恒成立，故任一这样的直线都与 $C$ 有两个交点。
+
+\Needspace{5\baselineskip}
+由 $x_i=\dfrac{y_i^2}{4}$ 得 $x_1x_2=\dfrac{(y_1y_2)^2}{16}=m^2$，$x_1+x_2=\dfrac{y_1^2+y_2^2}{4}=4t^2+2m$。于是
+
+\nopagebreak[4]
+\[\overrightarrow{FA}\cdot\overrightarrow{FB}=(x_1-1)(x_2-1)+y_1y_2
+=\left(x_1x_2-x_1-x_2+1\right)+y_1y_2\]
+
+\nopagebreak[4]
+\[=m^2-(4t^2+2m)+1-4m=m^2-6m+1-4t^2.\]
+
+\Needspace{5\baselineskip}
+要求对任意 $t\in\mathbf R$ 都有 $\overrightarrow{FA}\cdot\overrightarrow{FB}<0$，等价于
+
+\nopagebreak[4]
+\[m^2-6m+1<0\iff 3-2\sqrt2<m<3+2\sqrt2.\]
+
+\Needspace{5\baselineskip}
+又 $m>0$，而 $3-2\sqrt2>0$，故这样的正数 $m$ 存在，其取值范围为
+
+\nopagebreak[4]
+\[\left(3-2\sqrt2,\ 3+2\sqrt2\right).\]
+
+当 $m$ 取该区间内任一值时，对一切过 $M$ 且与 $C$ 有两个交点的直线均有 $\overrightarrow{FA}\cdot\overrightarrow{FB}<0$。
+
+\gkanswer{答案：（1）$y^2=4x$（$x>0$）；（2）存在，$m\in\left(3-2\sqrt2,\,3+2\sqrt2\right)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+已知数列 $\{a_n\}$ 满足：$a_1=\dfrac12$，$\dfrac{3(1+a_{n+1})}{1-a_n}=\dfrac{2(1+a_n)}{1-a_{n+1}}$，$a_na_{n+1}<0$（$n\geqslant1$）；数列 $\{b_n\}$ 满足：$b_n=a_{n+1}^2-a_n^2$（$n\geqslant1$）。
+
+（1）求数列 $\{a_n\}$，$\{b_n\}$ 的通项公式；
+
+（2）证明：数列 $\{b_n\}$ 中的任意三项不可能成等差数列。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+（1）由
+
+\nopagebreak[4]
+\[\frac{3(1+a_{n+1})}{1-a_n}=\frac{2(1+a_n)}{1-a_{n+1}}\]
+
+\Needspace{5\baselineskip}
+去分母（需 $a_n\neq1$，$a_{n+1}\neq1$，由下面的通项可知成立）：
+
+\nopagebreak[4]
+\[3(1+a_{n+1})(1-a_{n+1})=2(1+a_n)(1-a_n),\]
+
+\Needspace{5\baselineskip}
+即
+
+\nopagebreak[4]
+\[3\left(1-a_{n+1}^2\right)=2\left(1-a_n^2\right).\]
+
+\Needspace{5\baselineskip}
+令 $u_n=1-a_n^2$，则 $u_{n+1}=\dfrac23u_n$，且
+
+\nopagebreak[4]
+\[u_1=1-\frac14=\frac34.\]
+
+\Needspace{5\baselineskip}
+故
+
+\nopagebreak[4]
+\[u_n=\frac34\left(\frac23\right)^{n-1},\qquad
+a_n^2=1-\frac34\left(\frac23\right)^{n-1}.\]
+
+\Needspace{5\baselineskip}
+由 $a_na_{n+1}<0$ 知相邻两项异号，又 $a_1=\dfrac12>0$，故符号正负交替：
+
+\nopagebreak[4]
+\[a_n=(-1)^{n-1}\sqrt{1-\frac34\left(\frac23\right)^{n-1}}\qquad(n\geqslant1).\]
+
+（可验证 $1-\dfrac34\left(\dfrac23\right)^{n-1}>0$。）
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[b_n=a_{n+1}^2-a_n^2=u_n-u_{n+1}
+=\frac13u_n=\frac14\left(\frac23\right)^{n-1}\qquad(n\geqslant1).\]
+
+即 $\{b_n\}$ 是首项 $\dfrac14$、公比 $\dfrac23$ 的等比数列。
+
+\Needspace{5\baselineskip}
+（2）反设 $\{b_n\}$ 中存在三项 $b_i$，$b_j$，$b_k$（$i<j<k$）成等差数列，则
+
+\nopagebreak[4]
+\[2b_j=b_i+b_k.\]
+
+\Needspace{5\baselineskip}
+代入 $b_n=\dfrac14\left(\dfrac23\right)^{n-1}$，约去 $\dfrac14$ 得
+
+\nopagebreak[4]
+\[2\left(\frac23\right)^{j-1}=\left(\frac23\right)^{i-1}+\left(\frac23\right)^{k-1}.\]
+
+\Needspace{5\baselineskip}
+两边除以 $\left(\dfrac23\right)^{i-1}$，记 $m=j-i\geqslant1$，$n=k-i>m$，得
+
+\nopagebreak[4]
+\[2\left(\frac23\right)^{m}=1+\left(\frac23\right)^{n}.\]
+
+\Needspace{5\baselineskip}
+两边乘以 $3^n$：
+
+\nopagebreak[4]
+\[2^{m+1}3^{n-m}=3^n+2^n. \tag{$*$}\]
+
+左边被 $3$ 整除（因 $n-m\geqslant1$）；右边 $3^n+2^n\equiv2^n\pmod 3$，而 $2^n$ 不被 $3$ 整除。矛盾。
+
+故数列 $\{b_n\}$ 中的任意三项不可能成等差数列。
+
+\gkanswer{答案：（1）$a_n=(-1)^{n-1}\sqrt{1-\dfrac34\left(\dfrac23\right)^{n-1}}$，$b_n=\dfrac14\left(\dfrac23\right)^{n-1}$；（2）证明见解析。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=ax+\dfrac bx+c$（$a>0$）的图象在点 $(1,f(1))$ 处的切线方程为 $y=x-1$。
+
+（1）用 $a$ 表示出 $b$，$c$；
+
+（2）若 $f(x)\geqslant\ln x$ 在 $[1,+\infty)$ 上恒成立，求 $a$ 的取值范围。
+
+（3）证明：$1+\dfrac12+\dfrac13+\cdots+\dfrac1n>\ln(n+1)+\dfrac{n}{2(n+1)}$（$n\geqslant1$）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+（1）切点为 $(1,f(1))$，且切线 $y=x-1$ 过点 $(1,0)$，故
+
+\nopagebreak[4]
+\[f(1)=a+b+c=0. \tag{1}\]
+
+\Needspace{5\baselineskip}
+又
+
+\nopagebreak[4]
+\[f'(x)=a-\frac{b}{x^2},\qquad f'(1)=a-b=1. \tag{2}\]
+
+\Needspace{5\baselineskip}
+由 (2) 得 $b=a-1$，代入 (1)：
+
+\nopagebreak[4]
+\[a+(a-1)+c=0\Longrightarrow c=1-2a.\]
+
+\Needspace{5\baselineskip}
+即
+
+\nopagebreak[4]
+\[b=a-1,\qquad c=1-2a.\]
+
+\Needspace{5\baselineskip}
+（2）此时
+
+\nopagebreak[4]
+\[f(x)=ax+\frac{a-1}{x}+1-2a.\]
+
+\Needspace{5\baselineskip}
+令
+
+\nopagebreak[4]
+\[g(x)=f(x)-\ln x=ax+\frac{a-1}{x}+1-2a-\ln x,\qquad x\geqslant1.\]
+
+\Needspace{5\baselineskip}
+由 $f(1)=0=\ln1$ 知 $g(1)=0$，且
+
+\nopagebreak[4]
+\[g'(x)=a-\frac{a-1}{x^2}-\frac1x
+=\frac{ax^2-x-(a-1)}{x^2}
+=\frac{(x-1)(ax+a-1)}{x^2}.\]
+
+\Needspace{5\baselineskip}
+对 $x\geqslant1$ 有 $x-1\geqslant0$，故 $g'(x)\geqslant0$ 当且仅当 $ax+a-1\geqslant0$ 对一切 $x\geqslant1$ 成立。由于 $ax+a-1$ 关于 $x$ 递增，这等价于
+
+\nopagebreak[4]
+\[a+a-1\geqslant0\iff a\geqslant\frac12.\]
+
+当 $a\geqslant\dfrac12$ 时 $g'(x)\geqslant0$，$g$ 在 $[1,+\infty)$ 上递增，$g(x)\geqslant g(1)=0$，即 $f(x)\geqslant\ln x$ 恒成立。
+
+当 $0<a<\dfrac12$ 时，$2a-1<0$，在 $x$ 充分接近 $1$（且 $x>1$）时 $ax+a-1<0$，从而 $g'(x)<0$，$g$ 在 $1$ 右侧递减，$g(x)<g(1)=0$，不满足恒成立。
+
+故 $a$ 的取值范围是 $\left[\dfrac12,+\infty\right)$。
+
+\Needspace{5\baselineskip}
+（3）在（2）中取 $a=\dfrac12$（此时 $b=-\dfrac12$，$c=0$），得
+
+\nopagebreak[4]
+\[f(x)=\frac12\left(x-\frac1x\right)\geqslant\ln x,\qquad x\geqslant1,\]
+
+且等号仅在 $x=1$ 处成立，故 $x>1$ 时严格不等。
+
+\Needspace{5\baselineskip}
+对 $k\geqslant1$ 取 $x=\dfrac{k+1}{k}>1$：
+
+\nopagebreak[4]
+\[\frac12\left(\frac{k+1}{k}-\frac{k}{k+1}\right)
+=\frac12\cdot\frac{(k+1)^2-k^2}{k(k+1)}
+=\frac12\left(\frac1k+\frac1{k+1}\right)>\ln\frac{k+1}{k}.\]
+
+\Needspace{5\baselineskip}
+对 $k=1,2,\cdots,n$ 求和：
+
+\nopagebreak[4]
+\[\frac12\left[\left(1+\frac12+\cdots+\frac1n\right)+\left(\frac12+\frac13+\cdots+\frac1{n+1}\right)\right]>\ln(n+1).\]
+
+\Needspace{5\baselineskip}
+左边等于
+
+\nopagebreak[4]
+\[\frac12\left[2\left(1+\frac12+\cdots+\frac1n\right)-1+\frac1{n+1}\right]
+=\left(1+\frac12+\cdots+\frac1n\right)-\frac12+\frac1{2(n+1)}.\]
+
+\Needspace{5\baselineskip}
+故
+
+\nopagebreak[4]
+\[1+\frac12+\cdots+\frac1n>\ln(n+1)+\frac12-\frac1{2(n+1)}
+=\ln(n+1)+\frac{n}{2(n+1)}.\]
+
+命题得证。
+
+\gkanswer{答案：（1）$b=a-1$，$c=1-2a$；（2）$a\in\left[\dfrac12,+\infty\right)$；（3）证明见解析。}
+
+\end{answer}
