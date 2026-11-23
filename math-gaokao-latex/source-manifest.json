@@ -3724,6 +3724,14 @@
         "gk-2010-spring-shanghai"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b09",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-shanghai-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3733,7 +3741,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ebc0d383-b3c4-4bda-a3f0-c549bc9cc9c8",
+  "last_transaction_id": "e03f5478-ef79-451f-93ad-da1ff47b7332",
   "papers": [
     {
       "blocked_from": null,
@@ -44149,9 +44157,70 @@
       "title": "2010 年·春季上海卷",
       "track": "none",
       "year": 2010
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_上海卷_文科/figures/f2011_shanghai_arts_q07_cone.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_上海卷_文科/figures/f2011_shanghai_arts_q20_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_shanghai_arts",
+        "id": "gk-2011-shanghai-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 699、700。PDF 无答案页，且原页完全未印分值（两页均无「本大题满分」「本题满分」字样），题面不补；仅在试题稿说明中备录上海卷当年通例（填空 14×4、选择 4×5、解答 12/14/14/16/18，合计 150），明确标注非原页印载。答案由本库独立推导（等级 D，非官方）。上海卷题号：填空 1—14、选择 15—18、解答 19—23，共 23 题。选择 15A 16D 17A 18B；填空 1 {x|x<1}；2 −2；3 −3/2；4 √5；5 x+2y−11=0；6 (−∞,0)∪(1,+∞)；7 3π；8 √6；9 5/2；10 2；11 6；12 15/2；13 0.985；14 [−2,7]；19 z₂=4+2i；20 (1) √10/10、(2) 2/3；21 (1) a,b 同正递增、同负递减、(2) a>0,b<0 时 x<log_{2/3}(−2b/a)，a<0,b>0 时 x>log_{2/3}(−2b/a)；22 (1) (±√3,0)、(2) 最大 5、最小 √2/2、(3) 1<m≤1+√2；23 (1) 9,15,21、(2) 10 项、(3) S_{4n}=12n²+33n。源说明：第 8 题「距离是千米____」语序照录；第 17 题原页为「⊂＋≠」叠印，按本库上海卷约定写作 ⊊/⊋。原页共 2 幅图：第 7 题圆锥主视图、第 20 题正四棱柱；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-shanghai-arts",
+      "production_state": "complete",
+      "project_dir": "2011_上海卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_上海文_含解析.md",
+        "questions": "2011/2011_数学真题_上海文_试题.md",
+        "solution_body": "2011/2011_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-3f590c44dd6b553d606926e1c5e63394df0eb587f43fe9cc1a0e748767d8de51"
+      ],
+      "title": "2011 年·上海卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 10664,
+  "revision": 10669,
   "schema_version": 1,
   "sources": [
     {
@@ -55716,8 +55785,8 @@
       "exam_type": "regular",
       "git_blob_oid": "56a32f7369fa4774b703a3bda501a241ed68986b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011上海文.pdf",
       "regions": [],
       "source_id": "src-3f590c44dd6b553d606926e1c5e63394df0eb587f43fe9cc1a0e748767d8de51",
