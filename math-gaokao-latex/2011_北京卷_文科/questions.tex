@@ -1,0 +1,206 @@
+% questions.tex —— 2011 年·北京卷·文科 · 题目内容片段（无答案）
+% 由 tools/generate_projects.py 依来源总账自 2011/2011_数学真题_北京文_试题.md 生成，勿手改（改源 MD 后重跑）
+
+
+\gkpart{数学}
+
+\begin{gktip}
+\textbf{来源说明}：本题面依据固定源 PDF 两页 A3 题面逐题转录，原卷印刷页码 649–650。固定源不附答案；原页各题与各节均未印分值，记「原页未标」，不补。答案和解析均由本库独立复算。
+
+\textbf{源疑点}：第 20 题的定义在印面上写作「$|a_{n+1}-a_k|=1$（$k=1,2,\cdots,n-1$）」，此处照录。若按印面下标理解，则 $a_{n+1}$ 须与前面每一项都相差 $1$：由 $a_2=\pm1$ 出发，第（1）问的 $a_3=0$ 已与 $|a_3-a_1|=|a_3-a_2|=1$ 矛盾，$A_3$ 根本不存在，第（1）（3）问亦无解；而第（2）问的 $a_1=12$、$n=2000$、$a_n=2011$ 恰为 $12+1999$，说明每步变化 $1$（即下标应为 $a_{k+1}$）。本库判定印面下标有误，解析按 $|a_{k+1}-a_k|=1$（$k=1,2,\cdots,n-1$）处理，题面仍照录印面。
+
+\textbf{图形说明}：第 5 题的三视图、第 6 题的程序框图、第 16 题的茎叶图、第 17 题的四面体重绘为 TikZ 矢量图，依原页拓扑重绘，不按比例。原页其余各题无图。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{question}
+\gkti{1}已知全集 $U=\mathbf R$，集合 $P=\{x\mid x^2\leqslant 1\}$，那么 $\complement_U P=$\mbox{（　　）}
+
+（A）$(-\infty,-1)$
+
+（B）$(1,+\infty)$
+
+（C）$(-1,1)$
+
+（D）$(-\infty,-1)\cup(1,+\infty)$
+
+\end{question}
+\begin{question}
+\gkti{2}复数 $\dfrac{\mathrm{i}-2}{1+2\mathrm{i}}=$\mbox{（　　）}
+
+（A）$\mathrm{i}$
+
+（B）$-\mathrm{i}$
+
+（C）$-\dfrac45-\dfrac35\mathrm{i}$
+
+（D）$-\dfrac45+\dfrac35\mathrm{i}$
+
+\end{question}
+\begin{question}
+\gkti{3}如果 $\log_{\frac12}x<\log_{\frac12}y<0$，那么\mbox{（　　）}
+
+（A）$y<x<1$
+
+（B）$x<y<1$
+
+（C）$1<x<y$
+
+（D）$1<y<x$
+
+\end{question}
+\begin{question}
+\gkti{4}若 $p$ 是真命题，$q$ 是假命题，则\mbox{（　　）}
+
+（A）$p\wedge q$ 是真命题
+
+（B）$p\vee q$ 是假命题
+
+（C）$\neg p$ 是真命题
+
+（D）$\neg q$ 是真命题
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{5}某四棱锥的三视图如图所示，该四棱锥的表面积是\mbox{（　　）}
+
+（A）$32$
+
+（B）$16+16\sqrt2$
+
+（C）$48$
+
+（D）$16+32\sqrt2$
+\nopagebreak[4]
+\begin{center}\input{figures/f2011_beijing_arts_q05_views}\end{center}
+\nopagebreak[4]
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{6}执行如图所示的程序框图，若输入 $A$ 的值为 $2$，则输出的 $P$ 的值为\mbox{（　　）}
+
+（A）$2$
+
+（B）$3$
+
+（C）$4$
+
+（D）$5$
+\nopagebreak[4]
+\begin{center}\input{figures/f2011_beijing_arts_q06_flow}\end{center}
+\nopagebreak[4]
+\end{question}
+\begin{question}
+\gkti{7}某车间分批生产某种产品，每批的生产准备费用为 $800$ 元。若每批生产 $x$ 件，则平均仓储时间为 $\dfrac x8$ 天，且每件产品每天的仓储费用为 $1$ 元。为使平均到每件产品的生产准备费用与仓储费用之和最小，每批应生产产品\mbox{（　　）}
+
+（A）$60$ 件
+
+（B）$80$ 件
+
+（C）$100$ 件
+
+（D）$120$ 件
+
+\end{question}
+\begin{question}
+\gkti{8}已知点 $A(0,2)$，$B(2,0)$。若点 $C$ 在函数 $y=x^2$ 的图象上，则使得 $\triangle ABC$ 的面积为 $2$ 的点 $C$ 的个数为\mbox{（　　）}
+
+（A）$4$
+
+（B）$3$
+
+（C）$2$
+
+（D）$1$
+
+\end{question}
+\gkpart{二、填空题}
+
+\begin{question}
+\gkti{9}在 $\triangle ABC$ 中，若 $b=5$，$\angle B=\dfrac{\pi}{4}$，$\sin A=\dfrac13$，则 $a=$\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{10}已知双曲线 $x^2-\dfrac{y^2}{b^2}=1$（$b>0$）的一条渐近线的方程为 $y=2x$，则 $b=$\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{11}已知向量 $\boldsymbol a=(\sqrt3,1)$，$\boldsymbol b=(0,-1)$，$\boldsymbol c=(k,\sqrt3)$。若 $\boldsymbol a-2\boldsymbol b$ 与 $\boldsymbol c$ 共线，则 $k=$\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{12}在等比数列 $\{a_n\}$ 中，$a_1=\dfrac12$，$a_4=-4$，则公比 $q=$\gkblank{}；$a_1+a_2+\cdots+a_n=$\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{13}已知函数 $f(x)=\begin{cases}\dfrac2x,&x\geqslant 2,\\3mm^3,&x<2,\end{cases}$ 若关于 $x$ 的方程 $f(x)=k$ 有两个不同的实根，则实数 $k$ 的取值范围是\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{14}设 $A(0,0)$，$B(4,0)$，$C(t+4,3)$，$D(t,3)$（$t\in\mathbf R$）。记 $N(t)$ 为平行四边形 $ABCD$ 内部（不含边界）的整点的个数，其中整点是指横、纵坐标都是整数的点，则 $N(0)=$\gkblank{}；$N(t)$ 的所有可能取值为\gkblank{}。
+
+\end{question}
+\gkpart{三、解答题}
+
+\begin{question}
+\gkti{15}已知函数 $f(x)=4\cos x\sin\left(x+\dfrac{\pi}{6}\right)-1$。
+
+（1） 求 $f(x)$ 的最小正周期；
+
+（2） 求 $f(x)$ 在区间 $\left[-\dfrac{\pi}{6},\dfrac{\pi}{4}\right]$ 上的最大值和最小值。
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{16}以下茎叶图记录了甲、乙两组各四名同学的植树棵数。乙组记录中有一个数据模糊，无法确认，在图中以 $X$ 表示。
+\nopagebreak[4]
+\begin{center}\input{figures/f2011_beijing_arts_q16_stemleaf}\end{center}
+\nopagebreak[4]
+（1） 如果 $X=8$，求乙组同学植树棵数的平均数和方差；
+
+（2） 如果 $X=9$，分别从甲、乙两组中随机选取一名同学，求这两名同学的植树总棵数为 $19$ 的概率。
+
+（注：方差 $s^2=\dfrac1n\left[(x_1-\overline x)^2+(x_2-\overline x)^2+\cdots+(x_n-\overline x)^2\right]$，其中 $\overline x$ 为 $x_1$，$x_2$，$\cdots$，$x_n$ 的平均数）
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{17}如图，在四面体 $PABC$ 中，$PC\perp AB$，$PA\perp BC$，点 $D$，$E$，$F$，$G$ 分别是棱 $AP$，$AC$，$BC$，$PB$ 的中点。
+
+（1） 求证：$DE\parallel$ 平面 $BCP$；
+
+（2） 求证：四边形 $DEFG$ 为矩形；
+
+（3） 是否存在点 $Q$，到四面体 $PABC$ 六条棱的中点的距离相等？说明理由。
+\nopagebreak[4]
+\begin{center}\input{figures/f2011_beijing_arts_q17_tetra}\end{center}
+\nopagebreak[4]
+\end{question}
+\begin{question}
+\gkti{18}已知函数 $f(x)=(x-k)\mathrm{e}^x$。
+
+（1） 求 $f(x)$ 的单调区间；
+
+（2） 求 $f(x)$ 在区间 $[0,1]$ 上的最小值。
+
+\end{question}
+\begin{question}
+\gkti{19}已知椭圆 $G:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的离心率为 $\dfrac{\sqrt6}{3}$，右焦点为 $(2\sqrt2,0)$，斜率为 $1$ 的直线 $l$ 与椭圆 $G$ 交于 $A$，$B$ 两点，以 $AB$ 为底边作等腰三角形，顶点为 $P(-3,2)$。
+
+（1） 求椭圆 $G$ 的方程；
+
+（2） 求 $\triangle PAB$ 的面积。
+
+\end{question}
+\begin{question}
+\gkti{20}若数列 $A_n:a_1,a_2,\cdots,a_n$（$n\geqslant 2$）满足 $|a_{n+1}-a_k|=1$（$k=1,2,\cdots,n-1$），则称 $A_n$ 为 $E$ 数列。记 $S(A_n)=a_1+a_2+\cdots+a_n$。
+
+（1） 写出一个 $E$ 数列 $A_5$ 满足 $a_1=a_3=0$；
+
+（2） 若 $a_1=12$，$n=2000$，证明：$E$ 数列 $A_n$ 是递增数列的充要条件是 $a_n=2011$；
+
+（3） 在 $a_1=4$ 的 $E$ 数列 $A_n$ 中，求使得 $S(A_n)=0$ 成立的 $n$ 的最小值。
+
+\end{question}

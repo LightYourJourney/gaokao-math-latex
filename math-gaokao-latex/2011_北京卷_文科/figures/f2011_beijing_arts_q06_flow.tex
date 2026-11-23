@@ -1,0 +1,39 @@
+% 2011 年北京卷文科第 6 题：程序框图。
+% 来源 PDF：普通高考/2011/2011北京文.pdf，SHA-256 1ba0def5e75e0a4d7cc4e4e52a11a65ad598b98bc2a8e6c98df8f29fb6b9f4a6。
+% 原页：第 1 页（A3 三栏）第 1 栏下部，书页码 649。
+% 重绘依据：照原页竖排主干 开始→输入 A→P=1,S=1→判断 S⩽A；「否」向右→输出 P→结束；
+%   「是」向下→P=P+1→S=S+1/P→向左、向上回到主干（箭头落在主干上，位于判断框之上），
+%   再向下进入判断框。原页「结束」在「输出 P」正下方，不在主干上。
+\begin{tikzpicture}[>=stealth, semithick,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, minimum height=0.7cm, minimum width=2.7cm, align=center},
+  round/.style={draw, rounded corners=6pt, minimum height=0.7cm,
+    minimum width=1.9cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum height=0.7cm, minimum width=2.4cm, align=center},
+  dec/.style={draw, diamond, aspect=2.0, minimum width=2.5cm,
+    minimum height=1.1cm, align=center},
+  arr/.style={->}]
+
+  \node[round] (start) at (0,2.55) {开始};
+  \node[box]   (input) at (0,1.55) {输入 $A$};
+  \node[box]   (init)  at (0,0.55) {$P=1$，$S=1$};
+  \node[dec]   (test)  at (0,-1.05) {$S\leqslant A$};
+  \node[box]   (inc)   at (0,-2.85) {$P=P+1$};
+  \node[box, minimum width=3.2cm, minimum height=1.45cm]
+    (sbox) at (0,-4.55) {$S=S+\dfrac1P$};
+  \node[para]  (out)   at (3.85,-2.85) {输出 $P$};
+  \node[round] (end)   at (3.85,-4.55) {结束};
+
+  \draw[arr] (start) -- (input);
+  \draw[arr] (input) -- (init);
+  \draw[arr] (init) -- (test);
+  \draw[arr] (test) -- node[right=3pt, pos=0.55] {是} (inc);
+  \draw[arr] (inc) -- (sbox);
+  % 「否」分支：自判断框右顶点先向右，再向下进入「输出 P」
+  \draw[arr] (test.east) -- node[above=1pt, pos=0.45] {否} (3.85,-1.05) -- (out.north);
+  \draw[arr] (out) -- (end);
+
+  % 回边：自 S 框左侧向左、向上，再向右进入主干（落在判断框之上）
+  \draw[arr] (sbox.west) -- (-2.45,-4.55) -- (-2.45,-0.25) -- (0,-0.25);
+\end{tikzpicture}

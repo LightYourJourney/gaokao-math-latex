@@ -3748,6 +3748,14 @@
         "gk-2011-tianjin-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b12",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-beijing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3757,7 +3765,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "440676d3-b66c-4d41-ab38-950fc1b83314",
+  "last_transaction_id": "6d67ded7-3a29-4b61-8106-b52f706a6534",
   "papers": [
     {
       "blocked_from": null,
@@ -44380,9 +44388,78 @@
       "title": "2011 年·天津卷·理科",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_北京卷_文科/figures/f2011_beijing_arts_q05_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_北京卷_文科/figures/f2011_beijing_arts_q06_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_北京卷_文科/figures/f2011_beijing_arts_q16_stemleaf.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_北京卷_文科/figures/f2011_beijing_arts_q17_tetra.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_beijing_arts",
+        "id": "gk-2011-beijing-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 649、650。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。北京卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题，无选做题。答案由本库独立推导（等级 D，非官方）。选择 1D 2A 3D 4D 5B 6C 7B 8A；9 a=5√2/3；10 b=2；11 k=1；12 q=−2、a₁+…+aₙ=(1−(−2)ⁿ)/6；13 (0,1)；14 N(0)=6、取值 6,7,8；15 T=π、最大 2（x=π/6）、最小 −1（x=−π/6）；16 平均数 35/4、方差 11/16，概率 1/4；17 (1)(2) 证明、(3) 存在（矩形 DEFG 中心）；18 (1) (−∞,k−1) 减、(k−1,+∞) 增、(2) k≤1 时 −k，1<k<2 时 −e^{k−1}，k≥2 时 (1−k)e；19 (1) x²/12+y²/4=1、(2) 面积 9/2；20 (1) 0,1,0,1,0、(2) 证明、(3) n_min=9（4,3,2,1,0,−1,−2,−3,−4）。**源缺陷**：第 20 题印面定义写作 |a_{n+1}−a_k|=1（k=1,…,n−1），按字面 a₃ 须同时与 a₁、a₂ 相差 1，由 a₂=±1 即矛盾，第 (1)(3) 问无解；据第 (2) 问 12+1999=2011 判定下标应为 a_{k+1}，题面照录印面并在试题卷首、答案要点、解析正文三处注明，解析按 |a_{k+1}−a_k|=1 作答。第 5 题侧视图未标数，按「高平齐」取 2，解析注明。原页共 4 幅图：第 5 题三视图、第 6 题程序框图、第 16 题甲乙茎叶图、第 17 题四面体；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-beijing-arts",
+      "production_state": "complete",
+      "project_dir": "2011_北京卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_北京文_含解析.md",
+        "questions": "2011/2011_数学真题_北京文_试题.md",
+        "solution_body": "2011/2011_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-4a0ef03fcabbf22a486bf0c48f3e96724cbab2e6296263e98e89e571f115865a"
+      ],
+      "title": "2011 年·北京卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 10684,
+  "revision": 10689,
   "schema_version": 1,
   "sources": [
     {
@@ -55995,8 +56072,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ca51e704d2017d2b331cefb642950d32034ebc34",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011北京文.pdf",
       "regions": [],
       "source_id": "src-4a0ef03fcabbf22a486bf0c48f3e96724cbab2e6296263e98e89e571f115865a",
