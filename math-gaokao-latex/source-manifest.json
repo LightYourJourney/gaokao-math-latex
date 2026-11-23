@@ -3700,6 +3700,14 @@
         "gk-2010-fujian-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b06",
+      "issues": [],
+      "paper_ids": [
+        "gk-2010-liaoning-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3709,7 +3717,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "25412f46-0170-45f6-b6db-ff117d11d62d",
+  "last_transaction_id": "c4d60b01-e953-49af-a425-11e3a4da632d",
   "papers": [
     {
       "blocked_from": null,
@@ -43918,9 +43926,86 @@
       "title": "2010 年·普通高等学校招生考试·福建卷·文科",
       "track": "arts",
       "year": 2010
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2010_辽宁卷_文科/figures/f2010_liaoning_arts_q05_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_辽宁卷_文科/figures/f2010_liaoning_arts_q16_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_辽宁卷_文科/figures/f2010_liaoning_arts_q18_hist.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_辽宁卷_文科/figures/f2010_liaoning_arts_q19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2010_辽宁卷_文科/figures/f2010_liaoning_arts_q22_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2010_gaokao_liaoning_arts",
+        "id": "gk-2010-liaoning-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 613、614；首行标题「2010 普通高等学校招生考试（辽宁卷文）」。PDF 只有题面、无答案页，原页未印分值，全部记「原页未标」，不补。辽宁卷题号：选择 1—12、填空 13—16、解答 17—21、选考 22—24（三选一，原页未另立栏目，照录），共 24 题。答案由本库独立推导（非官方）。选择 1D 2A 3B 4C 5B 6C 7B 8C 9D 10A 11A 12D；13 1/3；14 15；15 (3,8)；16 2√3；17 A=2π/3、等腰三角形（B=C=π/6）；18 频率/组距 A 0.06,0.08,0.04,0.02、B 0.02,0.05,0.04,0.06,0.03，中位数 A 67.5<B 73.75，a=70,b=30,c=35,d=65,n=200，K²≈24.56>10.828，有 99.9% 把握；19 (1) 证明、(2) A₁D:DC₁=1；20 焦距 4、x²/9+y²/5=1；21 三区间讨论、a≤−2 时证明；22 证明、∠BAC=90°；23 M(π/3,π/3)、参数方程；24 证明，等号 a=b=c=⁴√3。第 16 题三视图按「俯视图只有一条对角线」唯一还原为顶点在底面一顶点正上方的四棱锥，体积 2√3。原页共 5 幅图：第 5 题程序框图、第 16 题三视图、第 18 题两张待完成直方图、第 19 题棱柱与 D、第 22 题外接圆；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选择题": [
+            1,
+            12
+          ],
+          "选考题": [
+            22,
+            24
+          ]
+        },
+        "track": "文科",
+        "variant": "辽宁文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2010-liaoning-arts",
+      "production_state": "complete",
+      "project_dir": "2010_辽宁卷_文科",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2010/2010_数学真题_辽宁文_答案要点.md",
+        "combined_rendered": "2010/2010_数学真题_辽宁文_含解析.md",
+        "questions": "2010/2010_数学真题_辽宁文_试题.md",
+        "solution_body": "2010/2010_数学真题_辽宁文_解析正文.md"
+      },
+      "source_ids": [
+        "src-184c58fa7099413a3c47ae76c61c7e868875ab5acd7292e2109bf73132b51739"
+      ],
+      "title": "2010 年·普通高等学校招生考试·辽宁卷·文科",
+      "track": "arts",
+      "year": 2010
     }
   ],
-  "revision": 10645,
+  "revision": 10650,
   "schema_version": 1,
   "sources": [
     {
@@ -55341,8 +55426,8 @@
       "exam_type": "regular",
       "git_blob_oid": "40aba224ae6b569e9bd717eea9c87e0a13be9b95",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2010-liaoning-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2010辽宁文.pdf",
       "regions": [],
       "source_id": "src-184c58fa7099413a3c47ae76c61c7e868875ab5acd7292e2109bf73132b51739",

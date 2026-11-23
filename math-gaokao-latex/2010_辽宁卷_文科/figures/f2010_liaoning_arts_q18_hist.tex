@@ -1,0 +1,68 @@
+% 2010 年辽宁卷文科第 18 题（1）：两张待完成的频率分布直方图坐标系。
+% 来源 PDF：普通高考/2010/2010辽宁文.pdf，SHA-256 b402a859318cb9854e9b8257ea128e84f1d52e834556dd80625e883f88dea1fd。
+% 原页：第 1 页（A3 三栏）第 3 栏中部，书页码 613。
+% 重绘依据：照原页画空坐标系（原页即要求学生补画小矩形）——纵轴「频率/组距」自
+%   0.01 到 0.08，横轴自 0 断裂后为 60 到 85（每 5 一格），纵横虚线网格、两轴各有一处
+%   断裂记号；左为图 1：注射药物 A，右为图 2：注射药物 B。不代画柱形，保持与原页一致。
+\begin{tikzpicture}[x=0.7cm, y=0.49cm, semithick]
+  % ---------- 图 1：注射药物 A ----------
+  \begin{scope}
+    % 坐标轴
+    \draw[->, >=stealth] (0,0) -- (0,9.15);
+    \draw[->, >=stealth] (0,0) -- (7.05,0);
+    % 虚线网格：竖线 x=1..6（即 60..85），横线 y=1..8（即 0.01..0.08）
+    \foreach \i in {1,2,3,4,5,6} {
+      \draw[dashed, dash pattern=on 3pt off 3pt] (\i,0) -- (\i,8);
+    }
+    \foreach \j in {1,2,3,4,5,6,7,8} {
+      \draw[dashed, dash pattern=on 3pt off 3pt] (0,\j) -- (6,\j);
+    }
+    % 纵轴刻度值
+    \foreach \j/\v in {1/0.01, 2/0.02, 3/0.03, 4/0.04, 5/0.05, 6/0.06, 7/0.07, 8/0.08} {
+      \node[anchor=east, inner sep=1pt] at (-0.12,\j) {\v};
+    }
+    % 横轴刻度值
+    \node[anchor=north, inner sep=2pt] at (0,-0.12) {0};
+    \foreach \i/\v in {1/60, 2/65, 3/70, 4/75, 5/80, 6/85} {
+      \node[anchor=north, inner sep=2pt] at (\i,-0.12) {\v};
+    }
+    % 轴断裂记号
+    \draw (0.42,0.10) -- (0.56,-0.10) -- (0.70,0.10);
+    \draw (0.62,0.10) -- (0.76,-0.10) -- (0.90,0.10);
+    \draw (0.10,0.42) -- (-0.10,0.56) -- (0.10,0.70);
+    % 轴名
+    \node[align=center, inner sep=1pt] at (0.92,10.75) {频率};
+    \draw[semithick] (0.36,10.25) -- (1.48,10.25);
+    \node[align=center, inner sep=1pt] at (0.92,9.75) {组距};
+    \node[anchor=west, inner sep=2pt] at (7.15,1.0) {疱疹面积};
+    % 图题
+    \node[anchor=north, inner sep=3pt] at (3,-1.05) {图 1：注射药物 $A$};
+  \end{scope}
+
+  % ---------- 图 2：注射药物 B ----------
+  \begin{scope}[xshift=7.95cm]
+    \draw[->, >=stealth] (0,0) -- (0,9.15);
+    \draw[->, >=stealth] (0,0) -- (7.05,0);
+    \foreach \i in {1,2,3,4,5,6} {
+      \draw[dashed, dash pattern=on 3pt off 3pt] (\i,0) -- (\i,8);
+    }
+    \foreach \j in {1,2,3,4,5,6,7,8} {
+      \draw[dashed, dash pattern=on 3pt off 3pt] (0,\j) -- (6,\j);
+    }
+    \foreach \j/\v in {1/0.01, 2/0.02, 3/0.03, 4/0.04, 5/0.05, 6/0.06, 7/0.07, 8/0.08} {
+      \node[anchor=east, inner sep=1pt] at (-0.12,\j) {\v};
+    }
+    \node[anchor=north, inner sep=2pt] at (0,-0.12) {0};
+    \foreach \i/\v in {1/60, 2/65, 3/70, 4/75, 5/80, 6/85} {
+      \node[anchor=north, inner sep=2pt] at (\i,-0.12) {\v};
+    }
+    \draw (0.42,0.10) -- (0.56,-0.10) -- (0.70,0.10);
+    \draw (0.62,0.10) -- (0.76,-0.10) -- (0.90,0.10);
+    \draw (0.10,0.42) -- (-0.10,0.56) -- (0.10,0.70);
+    \node[align=center, inner sep=1pt] at (0.92,10.75) {频率};
+    \draw[semithick] (0.36,10.25) -- (1.48,10.25);
+    \node[align=center, inner sep=1pt] at (0.92,9.75) {组距};
+    \node[anchor=west, inner sep=2pt] at (7.15,1.0) {疱疹面积};
+    \node[anchor=north, inner sep=3pt] at (3,-1.05) {图 2：注射药物 $B$};
+  \end{scope}
+\end{tikzpicture}
