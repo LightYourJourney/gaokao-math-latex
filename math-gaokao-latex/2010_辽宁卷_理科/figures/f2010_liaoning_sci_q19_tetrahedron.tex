@@ -1,0 +1,44 @@
+% 2010 年辽宁卷理科第 19 题：三棱锥 P-ABC 及点 M、S、N。
+% 来源 PDF：普通高考/2010/2010辽宁理.pdf，SHA-256 ba46f70f9d718652c24d14b28a0b473b768e864248ff0a9f1feb2374aec708f9。
+% 原页：第 2 页（A3 三栏）第 1 栏上部，书页码 612。
+% 重绘依据：照原页——P 在最高处，B 在左下，C 在右且与 A 近乎等高，A 在形内偏左，
+%   PA 为几乎竖直的虚线；M 在棱 PB 上，S 在棱 BC 上，N 在棱 AB 上（N 距 A 为 AB/4）。
+%   可见棱 PB、PC、BC 与线段 MC 用实线；被遮挡的 PA、AB、AC 及辅助线 MN、CN、SN 用虚线。
+\begin{tikzpicture}[scale=0.72, semithick, line join=round]
+  \coordinate (B) at (0,0);
+  \coordinate (A) at (2.6,3.2);
+  \coordinate (C) at (7.4,3.2);
+  \coordinate (P) at (3.0,7.4);
+  \coordinate (M) at ($(P)!0.5!(B)$);
+  \coordinate (S) at ($(B)!0.5!(C)$);
+  \coordinate (N) at ($(A)!0.25!(B)$);
+
+  % 可见棱：实线
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (B) -- (C);
+  % 线段 MC：实线（自 M 过 A 上方到 C）
+  \draw (M) -- (C);
+
+  % 被遮挡的棱与辅助线：虚线
+  \draw[dashed] (P) -- (A);
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (M) -- (N);
+  \draw[dashed] (N) -- (C);
+  \draw[dashed] (N) -- (S);
+
+  % M、S、N 处的等分记号（短横线）
+  \draw ($(M)!0.07cm!90:(P)$) -- ($(M)!-0.07cm!90:(P)$);
+  \draw ($(S)!0.07cm!90:(B)$) -- ($(S)!-0.07cm!90:(B)$);
+  \draw ($(N)!0.07cm!90:(A)$) -- ($(N)!-0.07cm!90:(A)$);
+
+  % 顶点标注
+  \node[above] at (P) {$P$};
+  \node[left]  at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left, inner sep=1pt] at (A) {$A$};
+  \node[left=3pt, inner sep=1pt] at (M) {$M$};
+  \node[below left=1pt and 3pt, inner sep=1pt] at (N) {$N$};
+  \node[below right, inner sep=1pt] at (S) {$S$};
+\end{tikzpicture}

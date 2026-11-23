@@ -1,0 +1,40 @@
+% 2010 年辽宁卷理科第 4 题：程序框图。
+% 来源 PDF：普通高考/2010/2010辽宁理.pdf，SHA-256 ba46f70f9d718652c24d14b28a0b473b768e864248ff0a9f1feb2374aec708f9。
+% 原页：第 1 页（A3 三栏）第 1 栏中部，书页码 611。
+% 重绘依据：照原页竖排主干 开始→输入 n,m→k=1,p=1→p=p(n-m+k)→判断 k<m?
+%   「是」向右再向上进入右侧 k=k+1 框，该框顶部再向左汇入 p=p(n-m+k) 上方主干（循环体为
+%   p=p(n-m+k)、k=k+1）；「否」向下经「输出 p」到「结束」。
+\begin{tikzpicture}[semithick,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, minimum width=3.7cm, minimum height=0.62cm, align=center},
+  round/.style={draw, rounded corners=6pt, minimum width=1.7cm,
+    minimum height=0.62cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.5cm, minimum height=0.66cm, align=center},
+  dec/.style={draw, diamond, aspect=2.2, minimum width=2.6cm,
+    minimum height=1.05cm, align=center},
+  arr/.style={->, >=stealth}]
+
+  \node[round] (start) at (0,0) {开始};
+  \node[para]  (in)    at (0,-1.15) {输入 $n,\,m$};
+  \node[box]   (init)  at (0,-2.32) {$k=1$，$p=1$};
+  \node[box]   (prod)  at (0,-3.62) {$p=p(n-m+k)$};
+  \node[box]   (inc)   at (4.15,-3.62) {$k=k+1$};
+  \node[dec]   (test)  at (0,-5.05) {$k<m$};
+  \node[para]  (out)   at (0,-6.40) {输出 $p$};
+  \node[round] (end)   at (0,-7.50) {结束};
+
+  \draw[arr] (start) -- (in);
+  \draw[arr] (in) -- (init);
+  \draw[arr] (init) -- (prod);
+  \draw[arr] (test) -- (out);
+  \node[right] at (0.18,-5.85) {否};
+  \draw[arr] (out) -- (end);
+
+  % 「是」分支：由判断框右侧向右、再向上进入 k=k+1
+  \draw[arr] (test.east) -| (inc.south);
+  \node[above] at (1.65,-5.03) {是};
+
+  % 回边：k=k+1 顶部向上、再向左汇入 p=p(n-m+k) 上方主干
+  \draw (inc.north) -- (4.15,-2.95) -- (0,-2.95);
+\end{tikzpicture}

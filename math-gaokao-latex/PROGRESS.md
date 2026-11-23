@@ -4,6 +4,34 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 辽宁卷（理科）：phase6-b98 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+- 对象：`gk-2010-liaoning-science`，**24 个题号**（选择 1—12、填空 13—16、解答 17—21、选考 22—24 三选一）；固定来源 `src-4e36b765e6c28138b622e4f0ada5d20c2f7307ce720a16eb84895ee9dfffd36c`，固定件 SHA-256 `ba46f70f9d718652c24d14b28a0b473b768e864248ff0a9f1feb2374aec708f9`（520,938 bytes），2 页 A3 横向，印面页码 611、612；页眉「2010 普通高等学校招生考试（辽宁卷理）」。
+- 来源核对：文字层只作定位，分数、根号、上下标、选项、三视图网格与五幅图均按 600 dpi 原页核对；原页各题与各节均未印分值，全部记「原页未标」，不补。第 22—24 题原页未印「选考」栏目名，照录并在文首注明三选一。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—21、选考 22—24。
+- 答案（独立推导，等级 D，非官方）：1D 2A 3B 4D 5C 6B 7B 8C 9D 10D 11C 12A；13 $-5$；14 $(3,8)$；15 $2\sqrt3$；16 $\dfrac{21}2$；17 (1) $A=\dfrac{2\pi}3$、(2) 最大值 $1$；18 (1) $\dfrac{100}{199}$、(2) ① A 中位数 $67.5<$ B 中位数 $73.75$ ② $a=70,b=30,c=35,d=65,n=200$，$K^2\approx24.56>10.828$，有 $99.9\%$ 把握；19 (1) 证明、(2) $45^\circ$；20 (1) $e=\dfrac23$、(2) $\dfrac{x^2}9+\dfrac{y^2}5=1$；21 (1) 三段单调性、(2) $a\leqslant-2$；22 (1) 证明、(2) $90^\circ$；23 (1) $M\left(\dfrac\pi3,\dfrac\pi3\right)$、(2) 参数方程；24 证明，等号 $a=b=c=\sqrt[4]{3}$。
+- **第 12 题口径（已登记）**：原页未限定两根 $a$ 铁条的相对位置；两 $a$ 棱为对棱时 $a\in(0,2\sqrt2)$，相邻时 $a\in(\sqrt6-\sqrt2,\sqrt6+\sqrt2)$，并集为 $(0,\sqrt6+\sqrt2)$，故取 A；解析登记了该口径与 $a=1$ 的坐标反例，未按流传的 C 收窄。
+- 图稿 5 张（Q4 程序框图、Q15 三视图、Q18 两张空直方图、Q19 三棱锥、Q22 外接圆），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；第 18 题原页为空坐标系，解析用文字给出补画数据，未代画柱形。
+- 验收：四版 7/36/9/25 页（共 77 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference）；review 77 页八类检查 **509 pass + 107 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b98.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `d6af25b5-96a8-4bb6-b2f7-66658724f9a5`）。
+- 版式说明：印刷版第 5 页「参考答案与详细解析」标题与使用说明落在页末、首题自第 6 页起，同既有模板行为，未改公共模板。
+- 全量门禁：provenance / solution_sources / validate-receipts / review check 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **592 卷 / 775 来源 / 438 批次**，complete 474、blocked 118，未绑定来源 **184**；manifest revision 10612。
+- 修改文件：`2010/2010_数学真题_辽宁理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2010_辽宁卷_理科/`（questions/answers/answers_short、四版入口、5 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase6-b98.md`、`PROGRESS.md`。
+- 下一步：继续 2010 陕西文理、春季上海等未绑定来源。
+
+### 2010 重庆卷（理科）：phase6-b99 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+- 对象：`gk-2010-chongqing-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-223890538766868e36be047d9da5bfb94da3a3318401f6c46b1b3ebb31f7c64c`，固定件 SHA-256 `e981a8805207e307d0ec0d8ef50ac0e0cbf93eec9559a29fb88591b483ae0136`（518,192 bytes），2 页 A3 横向，印面页码 577、578；页首标题「2010 普通高等学校招生考试（重庆卷理）」。
+- 来源核对：原 PDF 的 CID 字体 ToUnicode 损坏，文字层仅用于定位；全部题面以 600 dpi 逐题裁切核对，图形用 `pdftocairo -svg` 提取矢量路径还原端点与虚实后比对。原页未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—15、解答题 16—21。
+- 答案（独立推导，等级 D，非官方）：1A 2B 3B 4C 5D 6D 7B 8C 9C 10D；11 $-2\mathrm i$；12 $-3$；13 $\dfrac35$；14 $\dfrac83$；15 $\dfrac12$；16 (1) $[0,2]$、(2) $a=1$ 或 $2$；17 (1) $\dfrac45$、(2) 分布列 $\left(\dfrac13,\dfrac4{15},\dfrac15,\dfrac2{15},\dfrac1{15}\right)$、$E\xi=\dfrac43$；18 (1) $7x-4y-2=0$、(2) 增区间 $(-1,1)$ 与 $(7,+\infty)$、减区间 $(1,3)$ 与 $(3,7)$；19 (1) $\sqrt3$、(2) $\dfrac{\sqrt6}3$；20 (1) $\dfrac{x^2}4-y^2=1$、渐近线 $y=\pm\dfrac x2$、(2) $2$；21 (1) $a_n=(n^2-1)c^n+c^{n-1}$、(2) $c\in\left(-\infty,-\dfrac{1+\sqrt{13}}6\right)\cup[1,+\infty)$。
+- 复核说明：第 21 题 (2) 右端点取 $c\geqslant1$（$c=1$ 时 $a_n=n^2$，$a_{2k}-a_{2k-1}=4k-1>0$ 成立）；第 20 题题面「过点 $M$ 的直线 $l_1:x_1x+4y_1y=4$」隐含 $x_1^2+4y_1^2=4$，解析注明结论不依赖 $M,N$ 是否在 $C$ 上；第 19 题原图不按比例，图稿按原页拓扑重绘并在解析注明。
+- 图稿 3 张（Q6 正弦曲线、Q19 四棱锥、Q20 双曲线与渐近线），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 验收：四版 5/28/7/20 页（共 60 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference；初版两处 3.04pt/2.39pt Overfull 已用 aligned 拆行消除）；review 60 页八类检查 **393 pass + 87 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b99.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `75093215-8e9e-48ca-a541-196eafd4a448`）。
+- 版式说明：印刷版第 5 页「参考答案与详细解析」标题与使用说明落在页末、首题自第 6 页起，同既有模板行为，未改公共模板。
+- 全量门禁：provenance / solution_sources / validate-receipts / review check 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **592 卷 / 775 来源 / 438 批次**，complete 474、blocked 118，未绑定来源 **184**；manifest revision 10612。
+- 修改文件：`2010/2010_数学真题_重庆理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2010_重庆卷_理科/`（questions/answers/answers_short、四版入口、3 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase6-b99.md`、`PROGRESS.md`。
+- 下一步：继续 2010 陕西文理、春季上海等未绑定来源。
+
 ### 2010 福建卷（理科）：phase6-b97 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
 - 对象：`gk-2010-fujian-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21；第 21 题为「三选二」，含【A】矩阵、【B】极坐标与参数方程、【C】绝对值不等式）；固定来源 `src-efdcd3443ab62975e94e43fb98de0934aa5825cfed53588d94a1adb3e7783e05`，固定件 SHA-256 `7c811af1fc113435bb53b4e967c30d769e6297a558f617dd322adf3152d9df84`（517,918 bytes），2 页 A3 横向，印面页码 589、590；页眉「2010 普通高等学校招生考试（福建卷理）」。
 - 来源核对：文字层只作定位，分数、根号、上下标、选项、三视图尺寸与四幅图均按 600 dpi 原页核对；原页各题与各节均未印分值，全部记「原页未标」，不补。第 21 题原页仅印「三选二」，无分值说明，照录。

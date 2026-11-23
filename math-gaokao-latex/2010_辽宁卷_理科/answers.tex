@@ -1,0 +1,1100 @@
+% answers.tex —— 2010 年·普通高等学校招生考试·辽宁卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2010/2010_数学真题_辽宁理_试题.md + 2010/2010_数学真题_辽宁理_解析正文.md + 2010/2010_数学真题_辽宁理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+\begin{gktip}
+固定候选 PDF 仅含题面、无答案页；以下解析与结论均由本库独立推导（非官方答案），并按 600 dpi 原页复核题面。原页未印分值，不补。
+
+【源疑点】原页第 22–24 题紧接第 21 题排在同一条「三、解答题」之下，未另印「选考题」栏目名，也未标「三选一」；按课标卷体例这三题分属几何证明选讲、坐标系与参数方程、不等式选讲，属选考。此处照录，不改栏目名。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知 $A$，$B$ 均为集合 $U=\{1,3,5,7,9\}$ 的子集，且 $A\cap B=\{3\}$，$\complement_U B\cap A=\{9\}$，则 $A=$（　）
+
+（A）$\{1,3\}$
+
+（B）$\{3,7,9\}$
+
+（C）$\{3,5,9\}$
+
+（D）$\{3,9\}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由 $A\cap B=\{3\}$ 得 $3\in A$；由 $\complement_U B\cap A=A\setminus B=\{9\}$ 得 $9\in A$ 且 $9\notin B$。而
+\nopagebreak[4]
+\[A=(A\cap B)\cup(A\setminus B),\]
+\Needspace{5\baselineskip}
+两个部分互不相交，故
+\nopagebreak[4]
+\[A=\{3\}\cup\{9\}=\{3,9\}.\]
+逐项核对：A 中无 $9$，不满足 $A\setminus B=\{9\}$；B 含 $7$，而 $7\notin A\cap B$ 也 $\notin A\setminus B$；C 含 $5$，同理不可能出现；只有 D 同时满足两个条件。
+故选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+设 $a$，$b$ 为实数，若复数 $\dfrac{1+2\mathrm i}{a+b\mathrm i}=1+\mathrm i$，则（　）
+
+（A）$a=\dfrac32$，$b=\dfrac12$
+
+（B）$a=3$，$b=1$
+
+（C）$a=\dfrac12$，$b=\dfrac32$
+
+（D）$a=1$，$b=3$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+两边乘 $a+b\mathrm i$：
+\nopagebreak[4]
+\[1+2\mathrm i=(1+\mathrm i)(a+b\mathrm i)=(a-b)+(a+b)\mathrm i.\]
+\Needspace{5\baselineskip}
+比较实部、虚部得
+\nopagebreak[4]
+\[a-b=1,\qquad a+b=2,\]
+解得 $a=\dfrac32$，$b=\dfrac12$。
+\Needspace{5\baselineskip}
+代回检验：
+\nopagebreak[4]
+\[\frac{1+2\mathrm i}{\dfrac32+\dfrac12\mathrm i}=\frac{(1+2\mathrm i)\left(\dfrac32-\dfrac12\mathrm i\right)}{\left(\dfrac32\right)^2+\left(\dfrac12\right)^2}=\frac{\dfrac52+\dfrac52\mathrm i}{\dfrac52}=1+\mathrm i,\]
+与题意相符。其余三项代入均不能使商为 $1+\mathrm i$（如 B 得 $\dfrac{1+2\mathrm i}{3+\mathrm i}=\dfrac12+\dfrac12\mathrm i$）。
+故选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+两个实习生每人加工一个零件，加工为一等品的概率分别为 $\dfrac23$ 和 $\dfrac34$，两个零件是否加工为一等品相互独立，则这两个零件中恰有一个一等品的概率为（　）
+
+（A）$\dfrac12$
+
+（B）$\dfrac{5}{12}$
+
+（C）$\dfrac14$
+
+（D）$\dfrac16$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+记“甲加工一等品”为事件 $A$，“乙加工一等品”为事件 $B$，则 $P(A)=\dfrac23$，$P(B)=\dfrac34$，且 $A$、$B$ 相互独立。
+
+\Needspace{5\baselineskip}
+“恰有一个一等品”是两个互斥事件的并：$A\bar B$（甲一等、乙非一等）与 $\bar AB$（甲非一等、乙一等）。分别计算
+\nopagebreak[4]
+\[P(A\bar B)=P(A)\bigl(1-P(B)\bigr)=\frac23\times\frac14=\frac16,\]
+\nopagebreak[4]
+\[P(\bar AB)=\bigl(1-P(A)\bigr)P(B)=\frac13\times\frac34=\frac14.\]
+\Needspace{5\baselineskip}
+两事件互斥，故
+\nopagebreak[4]
+\[P=P(A\bar B)+P(\bar AB)=\frac16+\frac14=\frac{2}{12}+\frac{3}{12}=\frac{5}{12}.\]
+（两个基本事件的概率不相等，不能合并成一个再乘 $2$。）逐项核对：$\dfrac12$、$\dfrac14$、$\dfrac16$ 均不符。
+故选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+如果执行如图所示的程序框图，输入正整数 $n$，$m$，满足 $n\geqslant m$，那么输出的 $p$ 等于（　）
+
+（A）$\mathrm C_n^{m-1}$
+
+（B）$\mathrm A_n^{m-1}$
+
+（C）$\mathrm C_n^{m}$
+
+（D）$\mathrm A_n^{m}$
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_liaoning_sci_q04_flow}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+按框图追踪变量。初始 $k=1$，$p=1$，随后每轮先执行
+\nopagebreak[4]
+\[p\leftarrow p\,(n-m+k),\]
+再判断 $k<m$：若成立则 $k\leftarrow k+1$ 并回到乘法框，否则输出 $p$。
+
+\Needspace{5\baselineskip}
+于是 $p$ 依次乘上
+\nopagebreak[4]
+\[n-m+1,\quad n-m+2,\quad\cdots,\quad n-m+m=n,\]
+\Needspace{5\baselineskip}
+共 $m$ 个连续整数，故
+\nopagebreak[4]
+\[p=(n-m+1)(n-m+2)\cdots n=\frac{n!}{(n-m)!}=\mathrm A_n^m.\]
+数值验证：取 $n=5$，$m=3$，框图算出 $p=3\times4\times5=60$，而 $\mathrm A_5^3=5\times4\times3=60$，与 $\mathrm C_5^2=\mathrm C_5^3=10$、$\mathrm A_5^2=20$ 均不同。
+故选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+设 $\omega>0$，函数 $y=\sin\left(\omega x+\dfrac{\pi}{3}\right)+2$ 的图象向右平移 $\dfrac{4\pi}{3}$ 个单位后与原图象重合，则 $\omega$ 的最小值是（　）
+
+（A）$\dfrac23$
+
+（B）$\dfrac43$
+
+（C）$\dfrac32$
+
+（D）$3$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+图象向右平移 $\dfrac{4\pi}{3}$ 个单位后为
+\nopagebreak[4]
+\[y=\sin\left[\omega\left(x-\frac{4\pi}{3}\right)+\frac{\pi}{3}\right]+2
+=\sin\left(\omega x+\frac{\pi}{3}-\frac{4\pi\omega}{3}\right)+2.\]
+\Needspace{5\baselineskip}
+与原图象重合，需初相之差是 $2\pi$ 的整数倍：
+\nopagebreak[4]
+\[\frac{4\pi\omega}{3}=2k\pi\quad(k\in\mathbf Z),\qquad \omega=\frac{3k}{2}.\]
+由 $\omega>0$ 得 $k\geqslant1$，故 $\omega$ 的最小值为 $\dfrac32$（此时平移量恰为一个周期 $T=\dfrac{2\pi}{\omega}=\dfrac{4\pi}{3}$）。
+逐项核对：$\omega=\dfrac23$ 时周期 $T=3\pi$，平移量 $\dfrac{4\pi}{3}$ 不是 $T$ 的整数倍；$\omega=\dfrac43$ 时 $T=\dfrac{3\pi}{2}$，$\dfrac{4\pi}{3}$ 也不是 $T$ 的整数倍；$\omega=3$ 时 $T=\dfrac{2\pi}{3}$，$\dfrac{4\pi}{3}=2T$，虽也重合但 $\omega$ 不是最小。
+故选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+设 $\{a_n\}$ 是由正数组成的等比数列，$S_n$ 为其前 $n$ 项和。已知 $a_2a_4=1$，$S_3=7$，则 $S_5=$（　）
+
+（A）$\dfrac{15}{2}$
+
+（B）$\dfrac{31}{4}$
+
+（C）$\dfrac{33}{4}$
+
+（D）$\dfrac{17}{2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设首项为 $a_1>0$，公比为 $q>0$。由等比中项
+\nopagebreak[4]
+\[a_2a_4=a_3^2=1\iff a_3=1\ (\text{\text{各项为正}}).\]
+\Needspace{5\baselineskip}
+又 $a_3=a_1q^2$，故 $a_1=\dfrac{1}{q^2}$。代入 $S_3=7$：
+\nopagebreak[4]
+\[a_1(1+q+q^2)=\frac{1+q+q^2}{q^2}=7
+\iff 1+q+q^2=7q^2\iff 6q^2-q-1=0,\]
+解得 $q=\dfrac12$ 或 $q=-\dfrac13$，由 $q>0$ 取 $q=\dfrac12$，此时 $a_1=4$。
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[S_5=\frac{4\left[1-\left(\dfrac12\right)^5\right]}{1-\dfrac12}=8\left(1-\frac1{32}\right)=\frac{31}{4}.\]
+代回检验：$a_1=4$，$a_2=2$，$a_3=1$，$a_4=\dfrac12$，$a_5=\dfrac14$，$a_2a_4=2\times\dfrac12=1$，$S_3=4+2+1=7$，均符合。
+故选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+设抛物线 $y^2=8x$ 的焦点为 $F$，准线为 $l$，$P$ 为抛物线上一点，$PA\perp l$，$A$ 为垂足，如果直线 $AF$ 的斜率为 $-\sqrt3$，那么 $|PF|=$（　）
+
+（A）$4\sqrt3$
+
+（B）$8$
+
+（C）$8\sqrt3$
+
+（D）$16$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+由 $y^2=2px=8x$ 得 $p=4$，焦点 $F(2,0)$，准线 $l:x=-2$。
+
+\Needspace{5\baselineskip}
+设 $P(x_0,y_0)$，则 $A(-2,y_0)$。直线 $AF$ 的斜率
+\nopagebreak[4]
+\[k_{AF}=\frac{y_0-0}{-2-2}=-\frac{y_0}{4}=-\sqrt3\iff y_0=4\sqrt3.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[x_0=\frac{y_0^2}{8}=\frac{48}{8}=6.\]
+由抛物线定义，$|PF|=|PA|=x_0-\left(-2\right)=6+2=8$。
+逐项核对：$4\sqrt3\approx6.93$、$8\sqrt3\approx13.86$、$16$ 均与 $8$ 不符。
+故选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+平面上 $O$，$A$，$B$ 三点不共线，设 $\overrightarrow{OA}=\boldsymbol a$，$\overrightarrow{OB}=\boldsymbol b$，则 $\triangle OAB$ 的面积等于（　）
+
+（A）$\sqrt{|\boldsymbol a|^2|\boldsymbol b|^2-(\boldsymbol a\cdot\boldsymbol b)^2}$
+
+（B）$\sqrt{|\boldsymbol a|^2|\boldsymbol b|^2+(\boldsymbol a\cdot\boldsymbol b)^2}$
+
+（C）$\dfrac12\sqrt{|\boldsymbol a|^2|\boldsymbol b|^2-(\boldsymbol a\cdot\boldsymbol b)^2}$
+
+（D）$\dfrac12\sqrt{|\boldsymbol a|^2|\boldsymbol b|^2+(\boldsymbol a\cdot\boldsymbol b)^2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+记 $\theta=\angle AOB$，则
+\nopagebreak[4]
+\[S_{\triangle OAB}=\frac12|\boldsymbol a||\boldsymbol b|\sin\theta.\]
+\Needspace{5\baselineskip}
+由数量积定义 $\boldsymbol a\cdot\boldsymbol b=|\boldsymbol a||\boldsymbol b|\cos\theta$，得
+\nopagebreak[4]
+\[|\boldsymbol a|^2|\boldsymbol b|^2-(\boldsymbol a\cdot\boldsymbol b)^2
+=|\boldsymbol a|^2|\boldsymbol b|^2\left(1-\cos^2\theta\right)
+=|\boldsymbol a|^2|\boldsymbol b|^2\sin^2\theta.\]
+\Needspace{5\baselineskip}
+因 $O$、$A$、$B$ 不共线，$\sin\theta>0$，故
+\nopagebreak[4]
+\[S_{\triangle OAB}=\frac12\sqrt{|\boldsymbol a|^2|\boldsymbol b|^2-(\boldsymbol a\cdot\boldsymbol b)^2}.\]
+逐项排除：面积公式含因子 $\dfrac12$，A、B 缺此因子；根号内应为“差的平方”即 $|\boldsymbol a|^2|\boldsymbol b|^2-(\boldsymbol a\cdot\boldsymbol b)^2$，B、D 误作加号。
+故选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+设双曲线的一个焦点为 $F$，虚轴的一个端点为 $B$，如果直线 $FB$ 与该双曲线的一条渐近线垂直，那么此双曲线的离心率为（　）
+
+（A）$\sqrt2$
+
+（B）$\sqrt3$
+
+（C）$\dfrac{\sqrt3+1}{2}$
+
+（D）$\dfrac{\sqrt5+1}{2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由对称性，不妨设焦点在 $x$ 轴上，双曲线方程为 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$（$a,b>0$，$c^2=a^2+b^2$），取焦点 $F(c,0)$、虚轴端点 $B(0,b)$，则
+\nopagebreak[4]
+\[k_{FB}=\frac{b-0}{0-c}=-\frac bc.\]
+\Needspace{5\baselineskip}
+两条渐近线的斜率为 $\pm\dfrac ba$。直线 $FB$ 与一条渐近线垂直，需
+\nopagebreak[4]
+\[k_{FB}\cdot\frac ba=-1\iff -\frac bc\cdot\frac ba=-1\iff b^2=ac.\]
+\Needspace{5\baselineskip}
+代入 $c^2=a^2+b^2$：
+\nopagebreak[4]
+\[c^2=a^2+ac\iff c^2-ac-a^2=0.\]
+\Needspace{5\baselineskip}
+两边除以 $a^2$，记 $e=\dfrac ca$：
+\nopagebreak[4]
+\[e^2-e-1=0\iff e=\frac{1+\sqrt5}{2}\ \left(\text{\text{舍} }e=\frac{1-\sqrt5}{2}<0\right).\]
+由对称性，若焦点在 $y$ 轴上或改取另一焦点、另一虚轴端点，所得方程与离心率相同。
+逐项核对：$\sqrt2$、$\sqrt3$、$\dfrac{\sqrt3+1}{2}$ 均不满足 $e^2-e-1=0$。
+故选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知点 $P$ 在曲线 $y=\dfrac{4}{\mathrm e^x+1}$ 上，$\alpha$ 为曲线在点 $P$ 处的切线的倾斜角，则 $\alpha$ 的取值范围是（　）
+
+（A）$\left[0,\dfrac{\pi}{4}\right)$
+
+（B）$\left[\dfrac{\pi}{4},\dfrac{\pi}{2}\right)$
+
+（C）$\left(\dfrac{\pi}{2},\dfrac{3\pi}{4}\right]$
+
+（D）$\left[\dfrac{3\pi}{4},\pi\right)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\nopagebreak[4]
+\[y=\frac{4}{\mathrm e^x+1}\quad\Longrightarrow\quad
+y'=-\frac{4\mathrm e^x}{\left(\mathrm e^x+1\right)^2}.\]
+\Needspace{5\baselineskip}
+令 $u=\mathrm e^x>0$，则
+\nopagebreak[4]
+\[y'=-\frac{4u}{(u+1)^2}.\]
+\Needspace{5\baselineskip}
+由 $u+1\geqslant2\sqrt u$ 得 $\dfrac{4u}{(u+1)^2}\leqslant1$，且等号在 $u=1$ 时成立；又 $u>0$ 时该式恒正。故
+\nopagebreak[4]
+\[-1\leqslant y'<0.\]
+\Needspace{5\baselineskip}
+切线倾斜角 $\alpha\in[0,\pi)$ 满足 $\tan\alpha=y'$，在 $\left[\dfrac{3\pi}{4},\pi\right)$ 上 $\tan\alpha$ 取遍 $[-1,0)$，故
+\nopagebreak[4]
+\[\alpha\in\left[\frac{3\pi}{4},\pi\right).\]
+逐项核对：$\left[0,\dfrac\pi4\right)$ 对应 $\tan\alpha\in[0,1)$，$\left[\dfrac\pi4,\dfrac\pi2\right)$ 对应 $\tan\alpha\in[1,+\infty)$，$\left(\dfrac\pi2,\dfrac{3\pi}{4}\right]$ 对应 $\tan\alpha\in(-\infty,-1]$，三者都不等于 $[-1,0)$。
+故选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+已知 $a>0$，则 $x_0$ 满足关于 $x$ 的方程 $ax=b$ 的充要条件是（　）
+
+（A）$\exists x\in\mathbf R$，$\dfrac12ax^2-bx\geqslant\dfrac12ax_0^2-bx_0$
+
+（B）$\exists x\in\mathbf R$，$\dfrac12ax^2-bx\leqslant\dfrac12ax_0^2-bx_0$
+
+（C）$\forall x\in\mathbf R$，$\dfrac12ax^2-bx\geqslant\dfrac12ax_0^2-bx_0$
+
+（D）$\forall x\in\mathbf R$，$\dfrac12ax^2-bx\leqslant\dfrac12ax_0^2-bx_0$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+记
+\nopagebreak[4]
+\[g(x)=\frac12ax^2-bx,\qquad g'(x)=ax-b.\]
+因 $a>0$，$g$ 的图象是开口向上的抛物线，在 $x=\dfrac ba$ 处取最小值。
+
+\textbf{充分性}：若 $ax_0=b$，则 $x_0=\dfrac ba$ 是最小值点，对一切 $x\in\mathbf R$ 有 $g(x)\geqslant g(x_0)$，即 C 成立。
+
+\textbf{必要性}：若 C 成立，即 $x_0$ 是 $g$ 在 $\mathbf R$ 上的最小值点。$g$ 处处可导，故 $g'(x_0)=0$，即 $ax_0-b=0$，$ax_0=b$。
+
+\textbf{排除其余选项}：A 中取 $x=x_0$ 便成立，对任意 $x_0$ 都真，不能推出 $ax_0=b$；B 中当 $x_0\neq\dfrac ba$ 时 $g(x_0)>g\left(\dfrac ba\right)$，取 $x=\dfrac ba$ 即知 B 成立，也不能推出 $ax_0=b$；D 要求 $x_0$ 为最大值点，而 $a>0$ 时 $g$ 无最大值，D 恒假。
+故选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+有四根长都为 $2$ 的直铁条，若再选两根长都为 $a$ 的直铁条，使这六根铁条端点处相连能够焊接成一个三棱锥形的铁架，则 $a$ 的取值范围是（　）
+
+（A）$(0,\sqrt6+\sqrt2)$
+
+（B）$(1,2\sqrt2)$
+
+（C）$(\sqrt6-\sqrt2,\sqrt6+\sqrt2)$
+
+（D）$(0,2\sqrt2)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+三棱锥有六条棱，其中四条长为 $2$、两条长为 $a$。两条长为 $a$ 的棱只有两种相对位置，需分别讨论。
+
+\Needspace{5\baselineskip}
+\textbf{（i）两条 $a$ 棱为对棱}：不妨设 $AB=CD=a$，其余四棱 $AC=AD=BC=BD=2$。此时三组对棱分别相等，四个面全等，都是边长 $2,2,a$ 的三角形。取
+\nopagebreak[4]
+\[A(x,y,z),\ B(x,-y,-z),\ C(-x,y,-z),\ D(-x,-y,z),\]
+\Needspace{5\baselineskip}
+则六条棱长为 $2\sqrt{y^2+z^2}$、$2\sqrt{x^2+z^2}$、$2\sqrt{x^2+y^2}$ 各出现两次。令
+\nopagebreak[4]
+\[2\sqrt{y^2+z^2}=a,\qquad 2\sqrt{x^2+z^2}=2\sqrt{x^2+y^2}=2,\]
+\Needspace{5\baselineskip}
+得 $y^2=z^2=\dfrac{a^2}{8}$，$x^2=1-\dfrac{a^2}{8}$。四个顶点不共面要求 $x^2>0$，即
+\nopagebreak[4]
+\[a^2<8\iff 0<a<2\sqrt2.\]
+\Needspace{5\baselineskip}
+反之当 $0<a<2\sqrt2$ 时上述坐标给出一个合要求的铁架。故此种摆法允许
+\nopagebreak[4]
+\[a\in\left(0,2\sqrt2\right).\]
+
+\Needspace{5\baselineskip}
+\textbf{（ii）两条 $a$ 棱相邻}：不妨设 $AB=AC=a$，其余四棱 $BC=BD=CD=AD=2$。由 $AB=AC$ 知 $A$ 在 $BC$ 的垂直平分面上。取
+\nopagebreak[4]
+\[B(-1,0,0),\quad C(1,0,0),\quad D(0,\sqrt3,0),\quad A(0,y,z),\]
+\Needspace{5\baselineskip}
+则 $BC=BD=CD=2$ 自动成立，余下
+\nopagebreak[4]
+\[AB^2=1+y^2+z^2=a^2,\qquad AD^2=(y-\sqrt3)^2+z^2=4.\]
+\Needspace{5\baselineskip}
+两式相减得 $y=\dfrac{a^2-2}{2\sqrt3}$，回代得
+\nopagebreak[4]
+\[z^2=a^2-1-\frac{(a^2-2)^2}{12}=\frac{-a^4+16a^2-16}{12}.\]
+\Needspace{5\baselineskip}
+$A$ 不在平面 $BCD$ 内要求 $z^2>0$，即
+\nopagebreak[4]
+\[a^4-16a^2+16<0\iff\left(\sqrt6-\sqrt2\right)^2<a^2<\left(\sqrt6+\sqrt2\right)^2,\]
+\Needspace{5\baselineskip}
+亦即
+\nopagebreak[4]
+\[a\in\left(\sqrt6-\sqrt2,\ \sqrt6+\sqrt2\right).\]
+（同时 $a+a>BC=2$ 即 $a>1$ 已由 $\sqrt6-\sqrt2\approx1.035>1$ 自动满足。）
+
+\Needspace{5\baselineskip}
+\textbf{两种摆法的并集}。因 $\sqrt6-\sqrt2\approx1.035<2\sqrt2\approx2.828$，两区间相接且互相重叠于 $\left(\sqrt6-\sqrt2,2\sqrt2\right)$，并集为
+\nopagebreak[4]
+\[\left(0,\sqrt6+\sqrt2\right).\]
+逐项核对：C 只含情形（ii），漏掉 $a\leqslant\sqrt6-\sqrt2$ 时情形（i）可行的取值（如 $a=1$ 可取 $AB=CD=1$、其余四棱为 $2$）；D 只含情形（i），漏掉 $a\in\left[2\sqrt2,\sqrt6+\sqrt2\right)$ 时情形（ii）可行的取值（如 $a=3$）；B 的下界 $1$、上界 $2\sqrt2$ 两头都不对。
+故选 A。
+
+【源疑点】题面只说“这六根铁条端点处相连能够焊接成一个三棱锥形的铁架”，并未限定两根长 $a$ 的铁条是相邻还是相对，故两种摆法都应计入，答案取并集。部分流传的答案只讨论相邻情形而给 C，但 $a=1$ 时确实可焊成铁架：取 $x=\sqrt{7/8}$，$y=z=\sqrt{1/8}$，四顶点取 $\left(x,y,z\right)$、$\left(x,-y,-z\right)$、$\left(-x,y,-z\right)$、$\left(-x,-y,z\right)$，六条棱的长恰为 $1,1,2,2,2,2$。故本库不取只为 C 的结论，此处留待复核。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+$(1+x+x^2)\left(x-\dfrac1x\right)^6$ 的展开式中的常数项为 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+先展开 $\left(x-\dfrac1x\right)^6$，其通项为
+\nopagebreak[4]
+\[\mathrm C_6^k x^{6-k}\left(-\frac1x\right)^k=\mathrm C_6^k(-1)^kx^{6-2k}\quad(k=0,1,\dots,6),\]
+\Needspace{5\baselineskip}
+即各项为
+\nopagebreak[4]
+\[x^6,\ -6x^4,\ 15x^2,\ -20,\ 15x^{-2},\ -6x^{-4},\ x^{-6}.\]
+再与 $1+x+x^2$ 相乘，凑常数项：
+
+$1\cdot(-20)=-20$；
+
+$x\cdot$（各项）：需 $x^{-1}$，而各指数 $6-2k$ 均为偶数，无此项，贡献 $0$；
+
+$x^2\cdot 15x^{-2}=15$。
+
+\Needspace{5\baselineskip}
+故常数项为
+\nopagebreak[4]
+\[-20+0+15=-5.\]
+代回验证：只保留含 $x^{-2},x^{-1},x^{0}$ 的项，乘积中常数项确实只由 $1\cdot(-20)$ 与 $x^2\cdot15x^{-2}$ 两处产生。
+
+\gkanswer{答案：$-5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+已知 $-1<x+y<4$ 且 $2<x-y<3$，则 $z=2x-3y$ 的取值范围是 $\underline{\qquad}$。（答案用区间表示）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+令
+\nopagebreak[4]
+\[u=x+y,\qquad v=x-y,\]
+\Needspace{5\baselineskip}
+则 $x=\dfrac{u+v}{2}$，$y=\dfrac{u-v}{2}$，且题设即
+\nopagebreak[4]
+\[-1<u<4,\qquad 2<v<3.\]
+\Needspace{5\baselineskip}
+代入
+\nopagebreak[4]
+\[z=2x-3y=2\cdot\frac{u+v}{2}-3\cdot\frac{u-v}{2}
+=u+v-\frac32u+\frac32v=\frac{5v-u}{2}.\]
+\Needspace{5\baselineskip}
+$z$ 关于 $u$ 递减、关于 $v$ 递增，故
+\nopagebreak[4]
+\[z>\frac{5\times2-4}{2}=3,\qquad z<\frac{5\times3-(-1)}{2}=8.\]
+\Needspace{5\baselineskip}
+两端都取不到（否则相应端点处 $u$ 或 $v$ 需取到端点值），且当 $u\to4^-$、$v\to2^+$ 时 $z\to3^+$，当 $u\to-1^+$、$v\to3^-$ 时 $z\to8^-$，故
+\nopagebreak[4]
+\[z\in(3,8).\]
+代回检验：取 $x=\dfrac{4+2}{2}=3$，$y=\dfrac{4-2}{2}=1$ 时 $z=6-3=3$，与 $z>3$ 一致；取 $x=\dfrac{-1+3}{2}=1$，$y=\dfrac{-1-3}{2}=-2$ 时 $z=2+6=8$，与 $z<8$ 一致，两端确为开区间。
+
+\gkanswer{答案：$(3,8)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+如图，网格纸的小正方形的边长是 $1$，在其上用粗线画出了某多面体的三视图，则这个多面体最长的一条棱的长为 $\underline{\qquad}$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_liaoning_sci_q15_views}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+按三视图的位置识别：左上为正视图，右上为侧视图，左下为俯视图。
+
+俯视图是边长 $2$ 的正方形加一条对角线，说明底面是边长 $2$ 的正方形，且另有一个顶点在底面上的投影落在底面的边界上，对角线的两个端点正是该顶点与其对角底顶点的投影；正视图与侧视图都是直角边长 $2$ 的等腰直角三角形，说明该顶点到底面的高为 $2$，且投影必落在底面的一个顶点上。
+
+于是该多面体是底面为边长 $2$ 的正方形、高为 $2$、顶点在底面某一顶点正上方的四棱锥（五个顶点、八条棱）。
+
+\Needspace{5\baselineskip}
+八条棱中：四条底面棱长为 $2$；顶点到它正下方那个底顶点的棱长为 $2$；到两个相邻底顶点的棱长为 $\sqrt{2^2+2^2}=2\sqrt2$；到对角底顶点的棱长最大，为
+\nopagebreak[4]
+\[\sqrt{2^2+2^2+2^2}=2\sqrt3.\]
+故最长的一条棱的长为 $2\sqrt3$。
+
+【源疑点】原页三个视图均未标注“正视图/侧视图/俯视图”字样，只能按位置识别；本解析按左上、右上、左下依次读作正、侧、俯视图。
+
+\gkanswer{答案：$2\sqrt3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知数列 $\{a_n\}$ 满足 $a_1=33$，$a_{n+1}-a_n=2n$，则 $\dfrac{a_n}{n}$ 的最小值为 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由 $a_{n+1}-a_n=2n$ 累加：
+\nopagebreak[4]
+\[a_n=a_1+\sum_{k=1}^{n-1}2k=33+2\cdot\frac{(n-1)n}{2}=n^2-n+33\quad(n\geqslant2),\]
+\Needspace{5\baselineskip}
+且 $n=1$ 时 $33=1-1+33$ 也成立。于是
+\nopagebreak[4]
+\[\frac{a_n}{n}=\frac{n^2-n+33}{n}=n+\frac{33}{n}-1.\]
+\Needspace{5\baselineskip}
+$g(n)=n+\dfrac{33}{n}$ 在 $n=\sqrt{33}\approx5.74$ 处取最小，故只需比较 $n=5$ 与 $n=6$：
+\nopagebreak[4]
+\[n=5:\ 5+\frac{33}{5}-1=\frac{53}{5}=10.6;\qquad
+n=6:\ 6+\frac{33}{6}-1=6+\frac{11}{2}-1=\frac{21}{2}=10.5.\]
+$n\leqslant4$ 时 $g$ 递减、$n\geqslant7$ 时 $g$ 递增，故最小值为 $\dfrac{21}{2}$（$n=6$ 时取得）。
+代回检验：$a_6=36-6+33=63$，$\dfrac{63}{6}=\dfrac{21}{2}$；$a_5=25-5+33=53$，$\dfrac{53}{5}=\dfrac{212}{10}>\dfrac{210}{10}=\dfrac{21}{2}$，符合。
+
+\gkanswer{答案：$\dfrac{21}{2}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，$a$，$b$，$c$ 分别为内角 $A$，$B$，$C$ 的对边，且 $2a\sin A=(2b+c)\sin B+(2c+b)\sin C$。
+
+（1）求 $A$ 的大小；
+
+（2）求 $\sin B+\sin C$ 的最大值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）由正弦定理 $\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}=2R$，得 $\sin A=\dfrac{a}{2R}$ 等。题设
+\nopagebreak[4]
+\[2a\sin A=(2b+c)\sin B+(2c+b)\sin C\]
+\Needspace{5\baselineskip}
+两边乘 $2R$：
+\nopagebreak[4]
+\[2a^2=(2b+c)b+(2c+b)c=2b^2+2bc+2c^2,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[a^2=b^2+c^2+bc.\]
+\Needspace{5\baselineskip}
+由余弦定理 $a^2=b^2+c^2-2bc\cos A$，比较得
+\nopagebreak[4]
+\[-2bc\cos A=bc\iff\cos A=-\frac12,\]
+\Needspace{5\baselineskip}
+因 $A\in(0,\pi)$，故
+\nopagebreak[4]
+\[A=\frac{2\pi}{3}.\]
+
+\Needspace{5\baselineskip}
+（2）由 $A=\dfrac{2\pi}{3}$ 得 $B+C=\dfrac\pi3$，且 $B,C\in\left(0,\dfrac\pi3\right)$。和差化积：
+\nopagebreak[4]
+\[\sin B+\sin C=2\sin\frac{B+C}{2}\cos\frac{B-C}{2}
+=2\sin\frac{\pi}{6}\cos\frac{B-C}{2}=\cos\frac{B-C}{2}.\]
+因 $\left|\dfrac{B-C}{2}\right|<\dfrac{\pi}{6}<\dfrac{\pi}{2}$，故 $\cos\dfrac{B-C}{2}\leqslant1$，等号当且仅当 $B=C=\dfrac{\pi}{6}$。
+故 $\sin B+\sin C$ 的最大值为 $1$。
+
+\gkanswer{答案：（1）$A=\dfrac{2\pi}{3}$；（2）最大值为 $1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+为了比较注射 $A$，$B$ 两种药物后产生的皮肤疱疹的面积，选 $200$ 只家兔做试验，将这 $200$ 只家兔随机地分成两组，每组 $100$ 只，其中一组注射药物 $A$，另一组注射药物 $B$。
+
+（1）甲、乙是 $200$ 只家兔中的 $2$ 只，求甲、乙分在不同组的概率；
+
+（2）下表 1 和表 2 分别是注射药物 $A$ 和 $B$ 后的试验结果。（疱疹面积单位：$\mathrm{mm}^2$）
+
+表 1：注射药物 $A$ 后皮肤疱疹面积的频数分布表
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+疱疹面积 & $[60,65)$ & $[65,70)$ & $[70,75)$ & $[75,80)$ \\
+\midrule
+频数 & $30$ & $40$ & $20$ & $10$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+表 2：注射药物 $B$ 后皮肤疱疹面积的频数分布表
+
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+疱疹面积 & $[60,65)$ & $[65,70)$ & $[70,75)$ & $[75,80)$ & $[80,85)$ \\
+\midrule
+频数 & $10$ & $25$ & $20$ & $30$ & $15$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+① 完成下面频率分布直方图，并比较注射两种药物后疱疹面积的中位数大小；
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_liaoning_sci_q18_hist}\end{center}
+\nopagebreak[4]
+② 完成下面 $2\times2$ 列联表，并回答能否有 $99.9\%$ 的把握认为“注射药物 $A$ 后的疱疹面积与注射药物 $B$ 后的疱疹面积有差异”。
+
+\begin{center}
+\begin{tabular}{lllr}
+\toprule
+ & 疱疹面积小于 $70\ \mathrm{mm}^2$ & 疱疹面积不小于 $70\ \mathrm{mm}^2$ & 合计 \\
+\midrule
+注射药物 $A$ & $a=$ & $b=$ &  \\
+注射药物 $B$ & $c=$ & $d=$ &  \\
+合计 &  &  & $n=$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{5\baselineskip}
+附：
+\nopagebreak[4]
+\[K^2=\frac{n(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}.\]
+
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+$P(K^2\geqslant k)$ & $0.100$ & $0.050$ & $0.025$ & $0.010$ & $0.001$ \\
+\midrule
+$k$ & $2.706$ & $3.841$ & $5.024$ & $6.635$ & $10.828$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）把 $200$ 只家兔随机分成两组、每组 $100$ 只，等价于从 $200$ 只中随机选出 $100$ 只进甲组。甲所在的组除甲外还有 $99$ 个名额，这 $99$ 个名额是从其余 $199$ 只家兔中随机选出的，故
+\nopagebreak[4]
+\[P(\text{\text{乙与甲同组}})=\frac{99}{199},\qquad
+P(\text{\text{甲、乙分在不同组}})=1-\frac{99}{199}=\frac{100}{199}.\]
+\Needspace{5\baselineskip}
+也可直接计数：总的分组方式为 $\mathrm C_{200}^{100}$，甲、乙同组的方式为 $2\mathrm C_{198}^{98}$，故
+\nopagebreak[4]
+\[P(\text{\text{同组}})=\frac{2\mathrm C_{198}^{98}}{\mathrm C_{200}^{100}}
+=2\cdot\frac{100\times99}{200\times199}=\frac{99}{199},\]
+与上面一致，从而不同组的概率为 $\dfrac{100}{199}$。
+
+\Needspace{5\baselineskip}
+（2）① 组距为 $5$，各组频率为 $\dfrac{\text{\text{频数}}}{100}$，故
+\nopagebreak[4]
+\[\frac{\text{\text{频率}}}{\text{\text{组距}}}=\frac{\text{\text{频数}}}{100\times5}=\frac{\text{\text{频数}}}{500}.\]
+
+\Needspace{5\baselineskip}
+注射药物 $A$（$n=100$）：频数 $30,40,20,10$ 对应
+\nopagebreak[4]
+\[0.06,\ 0.08,\ 0.04,\ 0.02.\]
+
+\Needspace{5\baselineskip}
+注射药物 $B$（$n=100$）：频数 $10,25,20,30,15$ 对应
+\nopagebreak[4]
+\[0.02,\ 0.05,\ 0.04,\ 0.06,\ 0.03.\]
+
+中位数：把 $100$ 个数据自小到大排列，中位数为第 $50$ 与第 $51$ 个数据的平均数，落在累计频数首次达到 $50$ 的组内。
+
+\Needspace{5\baselineskip}
+$A$ 的累计频数：$30,\ 70,\ \dots$，第 $50$ 个数在 $[65,70)$ 内，故
+\nopagebreak[4]
+\[m_A=65+\frac{50-30}{40}\times5=65+2.5=67.5.\]
+
+\Needspace{5\baselineskip}
+$B$ 的累计频数：$10,\ 35,\ 55,\ \dots$，第 $50$ 个数在 $[70,75)$ 内，故
+\nopagebreak[4]
+\[m_B=70+\frac{50-35}{20}\times5=70+3.75=73.75.\]
+
+因此 $m_A<m_B$，即注射药物 $A$ 后疱疹面积的中位数较小。
+
+\Needspace{5\baselineskip}
+② 逐格统计（以 $70\ \mathrm{mm}^2$ 为界）：
+\nopagebreak[4]
+\[a=30+40=70,\qquad b=20+10=30,\]
+\nopagebreak[4]
+\[c=10+25=35,\qquad d=20+30+15=65,\]
+合计 $a+b=100$，$c+d=100$，$a+c=105$，$b+d=95$，$n=200$。
+
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[K^2=\frac{200(70\times65-30\times35)^2}{100\times100\times105\times95}
+=\frac{200\times(4550-1050)^2}{99750000}
+=\frac{200\times12250000}{99750000}\approx24.56.\]
+因 $24.56>10.828$，故有 $99.9\%$ 的把握认为“注射药物 $A$ 后的疱疹面积与注射药物 $B$ 后的疱疹面积有差异”。
+
+核对：$ad-bc=4550-1050=3500>0$，说明 $A$ 组中面积小于 $70\ \mathrm{mm}^2$ 的比例（$\dfrac{70}{100}$）高于 $B$ 组（$\dfrac{35}{100}$），与（1）中 $m_A<m_B$ 的结论方向一致。
+
+\gkanswer{答案：（1）$\dfrac{100}{199}$；（2）① $A$ 的中位数为 $67.5$、$B$ 的中位数为 $73.75$，故 $A$ 的中位数较小；② $a=70$，$b=30$，$c=35$，$d=65$，$n=200$，有 $99.9\%$ 的把握认为两者有差异。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知三棱锥 $P-ABC$ 中，$PA\perp$ 平面 $ABC$，$AB\perp AC$，$PA=AC=\dfrac12AB$，$N$ 为 $AB$ 上一点，$AB=4AN$，$M$，$S$ 分别为 $PB$，$BC$ 的中点。
+
+（1）证明：$CM\perp SN$；
+
+（2）求 $SN$ 与平面 $CMN$ 所成角的大小。
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_liaoning_sci_q19_tetrahedron}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+取 $AC=PA=2$，则 $AB=4$。以 $A$ 为原点，以 $\overrightarrow{AC}$、$\overrightarrow{AB}$、$\overrightarrow{AP}$ 的方向分别为 $x$、$y$、$z$ 轴建立空间直角坐标系（因 $PA\perp$ 平面 $ABC$、$AB\perp AC$，三轴两两垂直），则
+\nopagebreak[4]
+\[A(0,0,0),\quad C(2,0,0),\quad B(0,4,0),\quad P(0,0,2).\]
+\Needspace{5\baselineskip}
+由 $AB=4AN$ 得 $AN=1$，故 $N(0,1,0)$；$M$ 为 $PB$ 中点，$S$ 为 $BC$ 中点，故
+\nopagebreak[4]
+\[M(0,2,1),\qquad S(1,2,0).\]
+
+\Needspace{5\baselineskip}
+（1）
+\nopagebreak[4]
+\[\overrightarrow{CM}=(0-2,\ 2-0,\ 1-0)=(-2,2,1),\]
+\nopagebreak[4]
+\[\overrightarrow{SN}=(0-1,\ 1-2,\ 0-0)=(-1,-1,0).\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\overrightarrow{CM}\cdot\overrightarrow{SN}=(-2)\times(-1)+2\times(-1)+1\times0=2-2+0=0,\]
+故 $CM\perp SN$。
+
+\Needspace{5\baselineskip}
+（2）
+\nopagebreak[4]
+\[\overrightarrow{CN}=(-2,1,0),\qquad \overrightarrow{CM}=(-2,2,1).\]
+\Needspace{5\baselineskip}
+设平面 $CMN$ 的法向量为 $\boldsymbol n=(x,y,z)$，则
+\nopagebreak[4]
+\[\begin{cases}-2x+2y+z=0,\\-2x+y=0,\end{cases}\]
+取 $x=1$，得 $y=2$，$z=-2\cdot1+2\cdot2=2$，即 $\boldsymbol n=(1,2,-2)$，$|\boldsymbol n|=3$。
+
+\Needspace{5\baselineskip}
+设 $SN$ 与平面 $CMN$ 所成角为 $\theta$，则
+\nopagebreak[4]
+\[\sin\theta=\frac{\left|\overrightarrow{SN}\cdot\boldsymbol n\right|}{\left|\overrightarrow{SN}\right|\left|\boldsymbol n\right|}
+=\frac{\left|-1\times1+(-1)\times2+0\times(-2)\right|}{\sqrt2\times3}
+=\frac{3}{3\sqrt2}=\frac{\sqrt2}{2}.\]
+故 $\theta=45^\circ$，即 $SN$ 与平面 $CMN$ 所成角为 $45^\circ$。
+
+核对：$\overrightarrow{SN}=(-1,-1,0)$ 与 $\boldsymbol n=(1,2,-2)$ 的夹角余弦为 $-\dfrac{\sqrt2}{2}$，即直线与法向量的夹角为 $135^\circ$，其与平面的夹角为 $135^\circ-90^\circ=45^\circ$，与上式一致。
+
+\gkanswer{答案：（1）证明见解析；（2）$45^\circ$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+设椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的左焦点为 $F$，过点 $F$ 的直线与椭圆 $C$ 相交于 $A$，$B$ 两点，直线 $l$ 的倾斜角为 $60^\circ$，$\overrightarrow{AF}=2\overrightarrow{FB}$。
+
+（1）求椭圆 $C$ 的离心率；
+
+（2）如果 $|AB|=\dfrac{15}{4}$，求椭圆 $C$ 的方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）设 $F(-c,0)$（$c^2=a^2-b^2$）。直线 $l$ 过 $F$、倾斜角 $60^\circ$，取其参数式
+\nopagebreak[4]
+\[\begin{cases}x=-c+\dfrac t2,\\[4pt] y=\dfrac{\sqrt3}{2}t,\end{cases}\quad t\in\mathbf R,\]
+其中 $F$ 对应 $t=0$，交点 $A$、$B$ 分别对应 $t_1$、$t_2$（$t$ 为沿直线方向的位移参数，$|t_1-t_2|$ 即 $|AB|$）。
+
+\Needspace{5\baselineskip}
+代入椭圆方程：
+\nopagebreak[4]
+\[\frac{\left(-c+\dfrac t2\right)^2}{a^2}+\frac{\dfrac34t^2}{b^2}=1.\]
+\Needspace{5\baselineskip}
+两边乘 $4a^2b^2$ 并整理：
+\nopagebreak[4]
+\[b^2\left(c^2-ct+\frac{t^2}{4}\right)+3a^2\cdot\frac{t^2}{4}=a^2b^2,\]
+\nopagebreak[4]
+\[\frac{b^2+3a^2}{4}t^2-b^2ct+b^2\left(c^2-a^2\right)=0.\]
+\Needspace{5\baselineskip}
+记 $k=\dfrac{b^2+3a^2}{4}$，注意 $c^2-a^2=-b^2$，得
+\nopagebreak[4]
+\[kt^2-b^2ct-b^4=0.\]
+\Needspace{5\baselineskip}
+由 $\overrightarrow{AF}=2\overrightarrow{FB}$ 知 $F$ 在 $A$、$B$ 之间且 $|AF|=2|FB|$，即 $t_1$、$t_2$ 异号且 $t_1=-2t_2$。由韦达定理
+\nopagebreak[4]
+\[t_1+t_2=\frac{b^2c}{k},\qquad t_1t_2=-\frac{b^4}{k}.\]
+\Needspace{5\baselineskip}
+以 $t_1=-2t_2$ 代入：$-t_2=\dfrac{b^2c}{k}$，即 $t_2=-\dfrac{b^2c}{k}$；再由
+\nopagebreak[4]
+\[t_1t_2=-2t_2^2=-\frac{2b^4c^2}{k^2}=-\frac{b^4}{k},\]
+\Needspace{5\baselineskip}
+得 $k=2c^2$，即
+\nopagebreak[4]
+\[\frac{b^2+3a^2}{4}=2c^2\iff b^2+3a^2=8c^2.\]
+\Needspace{5\baselineskip}
+代入 $b^2=a^2-c^2$：
+\nopagebreak[4]
+\[4a^2=9c^2\iff e^2=\frac{c^2}{a^2}=\frac49\iff e=\frac23.\]
+
+\Needspace{5\baselineskip}
+（2）由 $e=\dfrac23$ 得 $c=\dfrac{2a}{3}$，$b^2=a^2-c^2=\dfrac{5a^2}{9}$。由（1），
+\nopagebreak[4]
+\[|AB|=|t_1-t_2|=3|t_2|=\frac{3b^2c}{k}=\frac{3b^2c}{2c^2}=\frac{3b^2}{2c}
+=\frac{3\cdot\dfrac{5a^2}{9}}{2\cdot\dfrac{2a}{3}}=\frac{5a}{4}.\]
+令 $\dfrac{5a}{4}=\dfrac{15}{4}$，得 $a=3$，$c=2$，$b^2=9-4=5$。
+\Needspace{5\baselineskip}
+故椭圆 $C$ 的方程为
+\nopagebreak[4]
+\[\frac{x^2}{9}+\frac{y^2}{5}=1.\]
+核对：$a=3$，$b^2=5$，$c=2$，$e=\dfrac23$；焦点弦长公式 $\dfrac{2ab^2}{a^2-c^2\cos^2 60^\circ}=\dfrac{2\times3\times5}{9-4\times\frac14}=\dfrac{30}{8}=\dfrac{15}{4}$，与 $|AB|$ 相符。
+
+\gkanswer{答案：（1）$e=\dfrac23$；（2）$\dfrac{x^2}{9}+\dfrac{y^2}{5}=1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=(a+1)\ln x+ax^2+1$。
+
+（1）讨论函数 $f(x)$ 的单调性；
+
+（2）设 $a<-1$，如果对任意 $x_1$，$x_2\in(0,+\infty)$，$|f(x_1)-f(x_2)|\geqslant4|x_1-x_2|$，求 $a$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）定义域为 $(0,+\infty)$，
+\nopagebreak[4]
+\[f'(x)=\frac{a+1}{x}+2ax=\frac{2ax^2+a+1}{x}.\]
+分母 $x>0$，只需看分子 $2ax^2+a+1$。
+
+① 当 $a\geqslant0$ 时，$a+1>0$，$2ax^2\geqslant0$，故 $f'(x)>0$，$f$ 在 $(0,+\infty)$ 上单调递增。
+
+② 当 $a\leqslant-1$ 时，$a+1\leqslant0$，$2ax^2\leqslant0$，且两者不同时为零，故 $f'(x)<0$，$f$ 在 $(0,+\infty)$ 上单调递减。
+
+\Needspace{5\baselineskip}
+③ 当 $-1<a<0$ 时，$2ax^2+a+1=0$ 有正根
+\nopagebreak[4]
+\[x_0=\sqrt{-\frac{a+1}{2a}}.\]
+在 $(0,x_0)$ 上 $2ax^2+a+1>0$，$f$ 递增；在 $(x_0,+\infty)$ 上 $2ax^2+a+1<0$，$f$ 递减。
+
+综上：$a\geqslant0$ 时 $f$ 在 $(0,+\infty)$ 上递增；$a\leqslant-1$ 时 $f$ 在 $(0,+\infty)$ 上递减；$-1<a<0$ 时 $f$ 在 $\left(0,\sqrt{-\dfrac{a+1}{2a}}\right)$ 上递增、在 $\left(\sqrt{-\dfrac{a+1}{2a}},+\infty\right)$ 上递减。
+
+（2）由（1），$a<-1$ 时 $f$ 在 $(0,+\infty)$ 上单调递减，故 $f$ 可导且 $f'<0$。
+
+\Needspace{5\baselineskip}
+题设“对任意 $x_1,x_2\in(0,+\infty)$，$|f(x_1)-f(x_2)|\geqslant4|x_1-x_2|$”。不妨设 $x_1<x_2$，因 $f$ 递减有 $f(x_1)>f(x_2)$，条件化为
+\nopagebreak[4]
+\[f(x_1)-f(x_2)\geqslant4(x_2-x_1)\iff f(x_1)+4x_1\geqslant f(x_2)+4x_2.\]
+\Needspace{5\baselineskip}
+即 $g(x)=f(x)+4x$ 在 $(0,+\infty)$ 上单调不增，等价于
+\nopagebreak[4]
+\[g'(x)=f'(x)+4=\frac{2ax^2+4x+a+1}{x}\leqslant0\quad(\forall x>0),\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[2ax^2+4x+a+1\leqslant0\quad(\forall x>0).\]
+\Needspace{5\baselineskip}
+记 $h(x)=2ax^2+4x+a+1$。因 $a<0$，$h$ 的图象开口向下，在 $x=-\dfrac{4}{4a}=-\dfrac1a>0$ 处取最大值，故条件等价于
+\nopagebreak[4]
+\[h\left(-\frac1a\right)=2a\cdot\frac{1}{a^2}+4\cdot\left(-\frac1a\right)+a+1=a+1-\frac2a\leqslant0.\]
+\Needspace{5\baselineskip}
+两边乘 $a<0$（不等号反向）：
+\nopagebreak[4]
+\[a^2+a-2\geqslant0\iff(a+2)(a-1)\geqslant0\iff a\leqslant-2\ \text{\text{或}}\ a\geqslant1.\]
+\Needspace{5\baselineskip}
+结合 $a<-1$，得
+\nopagebreak[4]
+\[a\leqslant-2.\]
+（此时 $h(0)=a+1<0$ 也满足，验证了 $x\to0^+$ 处不等式成立。）
+故 $a$ 的取值范围为 $(-\infty,-2]$。
+
+\gkanswer{答案：（1）见解析；（2）$a\leqslant-2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+如图，$\triangle ABC$ 的角平分线 $AD$ 的延长线交它的外接圆于点 $E$。
+
+（1）证明：$\triangle ABE\sim\triangle ADC$；
+
+（2）若 $\triangle ABC$ 的面积 $S=\dfrac12AD\cdot AE$，求 $\angle BAC$ 的大小。
+\nopagebreak[4]
+\begin{center}\input{figures/f2010_liaoning_sci_q22_circle}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）因 $AD$ 平分 $\angle BAC$，且 $E$ 在 $AD$ 的延长线上，故
+\nopagebreak[4]
+\[\angle BAE=\angle EAC=\angle DAC.\]
+\Needspace{5\baselineskip}
+又 $A$、$B$、$C$、$E$ 四点共圆，$\angle AEB$ 与 $\angle ACB$（即 $\angle ACD$）是同弧 $AB$ 上的圆周角，故
+\nopagebreak[4]
+\[\angle AEB=\angle ACD.\]
+\Needspace{5\baselineskip}
+两个角对应相等，故
+\nopagebreak[4]
+\[\triangle ABE\sim\triangle ADC\]
+（对应关系为 $A\leftrightarrow A$，$E\leftrightarrow C$，$B\leftrightarrow D$）。
+
+\Needspace{5\baselineskip}
+（2）由（1）的相似得
+\nopagebreak[4]
+\[\frac{AB}{AD}=\frac{AE}{AC}\iff AB\cdot AC=AD\cdot AE.\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[S_{\triangle ABC}=\frac12AB\cdot AC\sin\angle BAC.\]
+\Needspace{5\baselineskip}
+题设 $S_{\triangle ABC}=\dfrac12AD\cdot AE$，结合上式得
+\nopagebreak[4]
+\[\frac12AB\cdot AC\sin\angle BAC=\frac12AB\cdot AC,\]
+\Needspace{5\baselineskip}
+因 $AB\cdot AC>0$，故
+\nopagebreak[4]
+\[\sin\angle BAC=1.\]
+\Needspace{5\baselineskip}
+而 $\angle BAC\in(0,\pi)$，故
+\nopagebreak[4]
+\[\angle BAC=\frac{\pi}{2}=90^\circ.\]
+
+【图注】原页图形中 $BC$ 恰通过圆心（即为直径），这与本问答案 $\angle BAC=90^\circ$ 相符；但解题只能依据题设，不能依据示意图。
+
+\gkanswer{答案：（1）证明见解析；（2）$\angle BAC=90^\circ$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+已知 $P$ 为半圆 $C:\begin{cases}x=\cos\theta,\\y=\sin\theta,\end{cases}$（$\theta$ 为参数，$0\leqslant\theta\leqslant\pi$）上的点，点 $A$ 的坐标为 $(1,0)$，$O$ 为坐标原点，点 $M$ 在射线 $OP$ 上，线段 $OM$ 与 $C$ 的弧 $\overset{\frown}{AP}$ 的长度均为 $\dfrac{\pi}{3}$。
+
+（1）以 $O$ 为极点，$x$ 轴的正半轴为极轴建立极坐标系，求点 $M$ 的极坐标；
+
+（2）求直线 $AM$ 的参数方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+（1）半圆 $C$ 的半径为 $1$，$A(1,0)$ 对应参数 $\theta=0$。弧 $\overset{\frown}{AP}$ 的长为 $\dfrac{\pi}{3}$，由弧长公式 $l=R\theta$ 得圆心角
+\nopagebreak[4]
+\[\angle AOP=\frac{\pi}{3},\]
+故 $P$ 对应的参数 $\theta=\dfrac{\pi}{3}$（在 $0\leqslant\theta\leqslant\pi$ 内唯一），射线 $OP$ 的极角为 $\dfrac{\pi}{3}$。
+
+\Needspace{5\baselineskip}
+又 $|OM|=\dfrac{\pi}{3}$，故 $M$ 的极坐标为
+\nopagebreak[4]
+\[\left(\rho,\theta\right)=\left(\frac{\pi}{3},\ \frac{\pi}{3}\right).\]
+
+\Needspace{5\baselineskip}
+（2）由（1），$M$ 的直角坐标为
+\nopagebreak[4]
+\[x_M=\frac{\pi}{3}\cos\frac{\pi}{3}=\frac{\pi}{6},\qquad
+y_M=\frac{\pi}{3}\sin\frac{\pi}{3}=\frac{\sqrt3\pi}{6}.\]
+\Needspace{5\baselineskip}
+取方向向量
+\nopagebreak[4]
+\[\overrightarrow{AM}=\left(\frac{\pi}{6}-1,\ \frac{\sqrt3\pi}{6}\right),\]
+\Needspace{5\baselineskip}
+故直线 $AM$ 的参数方程为
+\nopagebreak[4]
+\[\begin{cases}x=1+\left(\dfrac{\pi}{6}-1\right)t,\\[6pt] y=\dfrac{\sqrt3\pi}{6}t,\end{cases}\quad(t\ \text{\text{为参数}}).\]
+核对：$t=0$ 给出 $A(1,0)$，$t=1$ 给出 $M\left(\dfrac{\pi}{6},\dfrac{\sqrt3\pi}{6}\right)$，两点均在直线上，且 $t\in\mathbf R$ 时取遍整条直线。
+
+\gkanswer{答案：（1）$M\left(\dfrac{\pi}{3},\dfrac{\pi}{3}\right)$；（2）$\begin{cases}x=1+\left(\dfrac{\pi}{6}-1\right)t,\\y=\dfrac{\sqrt3\pi}{6}t,\end{cases}$（$t$ 为参数）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{24}{}
+
+\textbf{题目}：
+
+已知 $a$，$b$，$c$ 均为正数，证明：$a^2+b^2+c^2+\left(\dfrac1a+\dfrac1b+\dfrac1c\right)^2\geqslant6\sqrt3$，并确定 $a$，$b$，$c$ 为何值时，等号成立。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由三元均值不等式
+\nopagebreak[4]
+\[a^2+b^2+c^2\geqslant3\sqrt[3]{a^2b^2c^2}=3(abc)^{\frac23},\]
+\nopagebreak[4]
+\[\frac1a+\frac1b+\frac1c\geqslant3\sqrt[3]{\frac1{abc}}=\frac{3}{(abc)^{\frac13}},\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\left(\frac1a+\frac1b+\frac1c\right)^2\geqslant\frac{9}{(abc)^{\frac23}}.\]
+\Needspace{5\baselineskip}
+令 $t=(abc)^{\frac23}>0$（$a,b,c>0$），则
+\nopagebreak[4]
+\[a^2+b^2+c^2+\left(\frac1a+\frac1b+\frac1c\right)^2\geqslant3t+\frac9t.\]
+\Needspace{5\baselineskip}
+再由二元均值不等式
+\nopagebreak[4]
+\[3t+\frac9t\geqslant2\sqrt{3t\cdot\frac9t}=2\sqrt{27}=6\sqrt3.\]
+\Needspace{5\baselineskip}
+两式连起来即得
+\nopagebreak[4]
+\[a^2+b^2+c^2+\left(\frac1a+\frac1b+\frac1c\right)^2\geqslant6\sqrt3.\]
+
+\textbf{等号条件}：第一处等号需 $a=b=c$；第二处等号需 $3t=\dfrac9t$，即 $t^2=3$，$t=\sqrt3$。由 $a=b=c$ 得 $t=(a^3)^{\frac23}=a^2$，故 $a^2=\sqrt3$，$a=3^{\frac14}=\sqrt[4]{3}$。
+
+\Needspace{5\baselineskip}
+即当且仅当
+\nopagebreak[4]
+\[a=b=c=\sqrt[4]{3}\]
+时等号成立。核对：此时 $a^2+b^2+c^2=3\sqrt3$，$\dfrac1a+\dfrac1b+\dfrac1c=3\cdot3^{-\frac14}$，其平方为 $\dfrac{9}{\sqrt3}=3\sqrt3$，左边 $=6\sqrt3$，与结论一致。
+
+\gkanswer{答案：证明见解析；当且仅当 $a=b=c=\sqrt[4]{3}$ 时等号成立。}
+
+\end{answer}
