@@ -4,6 +4,22 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2010 江西卷（理科）：phase6-b92 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
+- 对象：`gk-2010-jiangxi-science`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-7deeefff1775532d0a978a56891b5769bfc94de07f76a3959ce093eac9925e85`，固定件 SHA-256 `994a56c33da151e22af3fabe292d1b5b193866dfc35773a4431e6dfc8a0cc934`（515,571 bytes），2 页 A3 横向，印面页码 607、608；页眉「2010 普通高等学校招生考试（江西卷理）」。
+- 来源核对：按 manifest 上游 pin commit `34c13a6c…` 取回 `普通高考/2010/2010江西理.pdf`，现场 SHA-256 与登记值一致；文字层只作定位，分数、根号、上下标、选项与五幅图均按 600 dpi 原页逐题复核。原页各题与各节均未印分值，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1D 2C 3A 4B 5C 6B 7D 8A 9C 10D 11B 12D；13 $\sqrt3$；14 $1080$；15 $2$；16 $S_1>S_2>S_3$；17 (1) $\left[0,\dfrac{1+\sqrt2}{2}\right]$、(2) $m=-2$；18 (1) $P(\xi=1)=\dfrac13$、$P(\xi=3)=\dfrac16$、$P(\xi=4)=\dfrac16$、$P(\xi=6)=\dfrac13$、(2) $E\xi=\dfrac72$；19 (1) 增 $(0,\sqrt2)$、减 $(\sqrt2,2)$、(2) $a=\dfrac12$；20 (1) $\dfrac{2\sqrt{15}}5$、(2) $\dfrac{2\sqrt5}5$；21 (1) $\dfrac{\sqrt2}{2}$、(2) $C_1:\dfrac{3x^2}{16}+\dfrac{y^2}4=1$、$C_2:x^2+2y=4$；22 两条存在性证明。
+- **接续复核纠错两处**（原稿已有、本次逐页复算发现）：
+  1. 第 18 题原稿把「先走 2 号、再走 3 号」记成 $\xi=5$，漏掉最后 1 号通道的 1 小时走出时间；三条通道的访问顺序是随机排列，$\xi$ 只能取 $1,3,4,6$，$P=\frac13,\frac16,\frac16,\frac13$，$E\xi=\frac72$（原为 $19/6$）。已改答案要点速查表、逐题答案、解析正文与 index 备注，并重算第 18 题 `answer_sha256`。
+  2. 第 11 题解析把 $\sqrt{0.98}\approx0.98995$ 写成「$>0.99$」且 $(\sqrt{0.98})^{10}>(0.99)^{10}$，与结论 $p_1<p_2$ 自相矛盾；正确方向是 $\sqrt{0.98}<0.99$、$(\sqrt{0.98})^{10}<(0.99)^{10}$。已同步改答案要点与解析正文。
+- 图稿 5 张（Q10 正方体、Q12 水柱五角星与四个导函数图象、Q16 三棱锥、Q20 两个正三角形与 $AB$、Q21 抛物线与椭圆），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2。接续复核按原页改绘四处：Q10 改为前脸 B-C-C1-B1、后脸 A-D-D1-A1 的原始视角（虚线棱 A-A1、A1-D1、A1-B1）；Q16 把 C 移到 O-B 右侧中部（原稿误置于三角形内部，AC 虚线）；Q20 把 M 改到 CD 中点正上方（原稿误置于 BC 中点上方）；Q21 改为 M 左、N 右并补 AM、AN、QM、QN 与公共底 MN（原稿误连 AQ、漏 AM）。Q12 的水面改为筒内虚线椭圆并让下臂尖没入，原为一根直虚线。
+- 源缺陷：无阻塞性缺陷；第 12 题四幅导函数图原页每幅宽不足 3cm，按题设定性特征重绘并登记为示意。
+- 验收：四版 6/28/8/21 页（共 63 页），四 log 全 0（0 error / 0 missing char / 0 Overfull / 0 Underfull / 0 undefined reference / 0 warning）；review 63 页八类检查 427 pass + 77 not_applicable、0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase6-b92.md`，批次结论 `closed`，内容候选 `eligible_complete`）。
+- 版式说明：印刷版第 5 页的「参考答案与详细解析」标题与使用说明落在页末、首题自第 6 页起。根因是模板 `\Needspace{8\baselineskip}` 与 answer 整块高度交界，属全库既有版式行为（抽检 2018/2020 年 24 卷中 13 卷同此）；本次未改公共模板，审查回执按既有做法记 pass 并在该页注明成因。另将 Q21(1) 的 $c^2=b^2$ 行间式改为行内，消除了印刷版「解析」标签的孤行。
+- 全量门禁：`provenance check-batch`、`solution_sources check-batch`、`validate-receipts --paper`、`review_receipts check-batch` 均通过；`generate_projects`、`make_short_answers`、`make_editions` 定向 `--check` 一致。
+- 全库：manifest **585 卷 / 775 来源 / 431 批次**，complete 467、blocked 118，未绑定来源 **191**；manifest revision 10494。
+- 修改文件：`2010/2010_数学真题_江西理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2010_江西卷_理科/`（questions/answers/answers_short、四版入口、5 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、manifest/report/README 投影与 `reports/phase6-b92.md`。
+- 下一步：继续 2010 年未绑定来源（余浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理）。
 ### 2010 江西卷（文科）：phase6-b91 新卷转录、四版构建与视觉审查收口（2026-11-23；`closed`）
 
 - 对象：`gk-2010-jiangxi-arts`，22 个题号（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-d7202656a26ce5ccba93f168a5db5226f4bed247687f7c56c08b744fffd0786c`，固定件 SHA-256 `c8c86a7272df02211069e27098dcaf04a5cd8af9a9b4d54ffd14a8eb91347af3`（576,884 bytes），2 页 A3 横向，印面页码 609、610；页眉「2010 普通高等学校招生考试（江西卷文）」。
