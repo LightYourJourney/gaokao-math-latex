@@ -3892,6 +3892,14 @@
         "gk-2011-hunan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b30",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-fujian-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3901,7 +3909,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0daa8d98-059c-41ee-a887-e53dc1489f18",
+  "last_transaction_id": "4c259bdb-574b-46b6-bc42-d6e9338771d6",
   "papers": [
     {
       "blocked_from": null,
@@ -45806,9 +45814,78 @@
       "title": "2011 年·湖南卷·文科",
       "track": "arts",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_福建卷_理科/figures/f2011_fujian_sci_q04_rectangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_福建卷_理科/figures/f2011_fujian_sci_q11_code.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_福建卷_理科/figures/f2011_fujian_sci_q14_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_福建卷_理科/figures/f2011_fujian_sci_q20_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_fujian_science",
+        "id": "gk-2011-fujian-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 659、660。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。福建卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题；第 21 题三选二（A 矩阵、B 参数方程、C 不等式）。答案由本库独立推导（等级 D，非官方）。1 B；2 A；3 D；4 C；5 C；6 B；7 A；8 C；9 D；10 B；11 3；12 √3；13 3/5；14 √2；15 ①③；16 (1) aₙ=3ⁿ⁻²、(2) f(x)=3sin(2x+π/6)；17 (1) (x−2)²+y²=8、(2) m=1 时相切；18 (1) a=2、(2) x=4 时最大 42 元；19 (1) a=0.3、b=0.2、(2) EX₂=4.8、(3) 乙厂性价比 1.2 更高；20 (1) 证明、(2) ① AB=4/5、② 不存在；21 (1) A M⁻¹、B 点在 l 上、C M=(0,1)，(2) A a=2,b=1、B √2、C ab+1>a+b。原页共 4 幅图：第 4 题矩形、第 11 题伪代码、第 14 题三角形、第 20 题四棱锥；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "福建理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-fujian-science",
+      "production_state": "complete",
+      "project_dir": "2011_福建卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_福建理_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_福建理_含解析.md",
+        "questions": "2011/2011_数学真题_福建理_试题.md",
+        "solution_body": "2011/2011_数学真题_福建理_解析正文.md"
+      },
+      "source_ids": [
+        "src-fdcceebcb25922119793672d3cdc57bd3a0750706ddf9d4ae6ac5f8e40648260"
+      ],
+      "title": "2011 年·福建卷·理科",
+      "track": "science",
+      "year": 2011
     }
   ],
-  "revision": 10799,
+  "revision": 10804,
   "schema_version": 1,
   "sources": [
     {
@@ -58045,8 +58122,8 @@
       "exam_type": "regular",
       "git_blob_oid": "517db43e5d713e0ca2377a106a145887ba27e9a3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-fujian-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011福建理.pdf",
       "regions": [],
       "source_id": "src-fdcceebcb25922119793672d3cdc57bd3a0750706ddf9d4ae6ac5f8e40648260",
