@@ -3900,6 +3900,14 @@
         "gk-2011-fujian-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b31",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-fujian-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3909,7 +3917,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "4c259bdb-574b-46b6-bc42-d6e9338771d6",
+  "last_transaction_id": "d2864c4f-4def-4759-8586-502166b52717",
   "papers": [
     {
       "blocked_from": null,
@@ -45883,9 +45891,82 @@
       "title": "2011 年·福建卷·理科",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_福建卷_文科/figures/f2011_fujian_arts_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_福建卷_文科/figures/f2011_fujian_arts_q07_rectangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_福建卷_文科/figures/f2011_fujian_arts_q15_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_福建卷_文科/figures/f2011_fujian_arts_q18_parabola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_福建卷_文科/figures/f2011_fujian_arts_q20_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_fujian_arts",
+        "id": "gk-2011-fujian-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 661、662。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。福建卷题号：选择 1—12、填空 13—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。1 A；2 D；3 A；4 B；5 B；6 C；7 C；8 A；9 D；10 D；11 A；12 C；13 1；14 2；15 √2；16 (√5−1)/2；17 (1) aₙ=3−2n、(2) k=7；18 (1) b=−1、(2) (x−2)²+(y−1)²=4；19 (1) a=0.1、b=0.15、c=0.1、(2) 2/5；20 (1) 证明、(2) (√3−√2+√6)/6；21 (1) 2、(2) θ∈[0,π/2]，最小值 1、最大值 2；22 (1) b=2、(2) a>0 减 (0,1) 增 (1,+∞)，a<0 增 (0,1) 减 (1,+∞)、(3) 存在，m=1、M=2。原页共 5 幅图：第 5 题程序框图、第 7 题矩形、第 15 题正方体、第 18 题抛物线与切线、第 20 题四棱锥；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "福建文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-fujian-arts",
+      "production_state": "complete",
+      "project_dir": "2011_福建卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_福建文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_福建文_含解析.md",
+        "questions": "2011/2011_数学真题_福建文_试题.md",
+        "solution_body": "2011/2011_数学真题_福建文_解析正文.md"
+      },
+      "source_ids": [
+        "src-1dc27e88b6d393fa9737e7e6d382e6b6dafa5c946ee45c4970c698a4069eeaec"
+      ],
+      "title": "2011 年·福建卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 10804,
+  "revision": 10809,
   "schema_version": 1,
   "sources": [
     {
@@ -58098,8 +58179,8 @@
       "exam_type": "regular",
       "git_blob_oid": "76cc2f4bf0cb07f8da4298001cbb21f5aa32b1a2",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-fujian-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011福建文.pdf",
       "regions": [],
       "source_id": "src-1dc27e88b6d393fa9737e7e6d382e6b6dafa5c946ee45c4970c698a4069eeaec",

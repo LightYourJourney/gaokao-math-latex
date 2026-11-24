@@ -1,0 +1,16 @@
+% 2011 年福建卷文科第 5 题：程序框图。
+% 来源 PDF：普通高考/2011/2011福建文.pdf，SHA-256 e649bdc736a215d4e41e02c6a7945953aca84a87a23e6a903596d61025cdf322。
+% 原页：第 1 页第 1 栏中部，书页码 661。
+\begin{tikzpicture}[>=stealth, semithick, font=\small]
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (start) at (0,0) {开始};
+  \node[draw, minimum width=1.4cm, minimum height=0.5cm] (a) at (0,-1.1) {$a=1$};
+  \node[draw, minimum width=2.4cm, minimum height=0.55cm] (upd) at (0,-2.4) {$a=a^2+2$};
+  \node[draw, diamond, aspect=1.7, minimum width=1.5cm, minimum height=0.9cm] (test) at (0,-3.8) {$a<10$};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.6cm, minimum height=0.55cm] (out) at (0,-5.2) {输出 $a$};
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (stop) at (0,-6.3) {结束};
+  \draw[->] (start)--(a); \draw[->] (a)--(upd); \draw[->] (upd)--(test);
+  \draw[->] (test.south)--(out.north) node[midway, right] {否};
+  \draw[->] (out)--(stop);
+  \draw[->] (test.east) -- ++(1.5,0) |- (upd.east) node[pos=0.25, right] {是};
+\end{tikzpicture}

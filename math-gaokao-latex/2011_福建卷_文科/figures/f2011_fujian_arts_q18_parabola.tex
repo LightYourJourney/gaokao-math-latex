@@ -1,0 +1,12 @@
+% 2011 年福建卷文科第 18 题：抛物线 x^2=4y 与切线 l。
+% 来源 PDF：普通高考/2011/2011福建文.pdf，SHA-256 e649bdc736a215d4e41e02c6a7945953aca84a87a23e6a903596d61025cdf322。
+% 原页：第 1 页第 3 栏中部，书页码 661。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=0.9, yscale=1.2]
+  \draw[->] (-2.6,0)--(2.6,0) node[right] {$x$};
+  \draw[->] (0,-0.8)--(0,3.2) node[above] {$y$};
+  \draw[thick, domain=-2.2:2.2, samples=100] plot (\x,{\x*\x/4});
+  \draw[thick] (0.5,-1.0)--(2.4,0.4) node[right] {$l$};
+  \fill (2,1) circle (1.2pt) node[above right] {$A$};
+  \node[below left] at (0,0) {$O$};
+  \node at (0.9,2.4) {$C$};
+\end{tikzpicture}
