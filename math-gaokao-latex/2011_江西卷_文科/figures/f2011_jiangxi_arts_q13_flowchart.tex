@@ -1,0 +1,20 @@
+% 2011 年江西卷文科第 13 题：程序框图。
+% 来源 PDF：普通高考/2011/2011江西文.pdf，SHA-256 cfb2f18956d0fea24770d3a18e2cc1f32d58b06a4c74b29f83515f64611b0b1f。
+% 原页：第 1 页第 2 栏中部，书页码 679。
+\begin{tikzpicture}[>=stealth, semithick, font=\small]
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (start) at (0,0) {开始};
+  \node[draw, minimum width=2.4cm, minimum height=0.55cm] (init) at (0,-1.1) {$s=0,\ n=1$};
+  \node[draw, minimum width=2.8cm, minimum height=0.6cm] (upd) at (0,-2.4) {$s=(s+n)n$};
+  \node[draw, minimum width=1.8cm, minimum height=0.55cm] (inc) at (0,-3.7) {$n=n+1$};
+  \node[draw, diamond, aspect=1.7, minimum width=1.6cm, minimum height=0.9cm] (test) at (0,-5.1) {$s>3$};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.6cm, minimum height=0.55cm] (out) at (3.0,-5.1) {输出 $s$};
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (stop) at (3.0,-6.3) {结束};
+  \draw[->] (start.south) -- (init.north);
+  \draw[->] (init.south) -- (upd.north);
+  \draw[->] (upd.south) -- (inc.north);
+  \draw[->] (inc.south) -- (test.north);
+  \draw[->] (test.east) -- (out.west) node[midway, above] {是};
+  \draw[->] (out.south) -- (stop.north);
+  \draw[->] (test.west) -- ++(-1.0,0) |- (upd.west) node[pos=0.25, left] {否};
+\end{tikzpicture}

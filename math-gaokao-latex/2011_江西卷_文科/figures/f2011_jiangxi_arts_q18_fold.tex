@@ -1,0 +1,30 @@
+% 2011 年江西卷文科第 18 题：三角形沿 PD 翻折成棱锥 A'-PBCD。
+% 来源 PDF：普通高考/2011/2011江西文.pdf，SHA-256 cfb2f18956d0fea24770d3a18e2cc1f32d58b06a4c74b29f83515f64611b0b1f。
+% 原页：第 2 页第 1 栏，书页码 680。示意，p=PA。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=0.95]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (4,0);
+  \coordinate (P) at (0,2.2);
+  \coordinate (D) at (1.8,2.2);
+  \coordinate (A) at (0,4.0);
+  \coordinate (Ap) at (0.9,3.1);
+  \coordinate (E) at ($(Ap)!0.5!(C)$);
+  % 底面 PBCD
+  \draw[thick] (P)--(B)--(C)--(D)--cycle;
+  \draw[dashed] (A)--(P);
+  \draw[dashed] (A)--(D);
+  \draw[dashed] (P)--(D);
+  % 折起后的 A'
+  \draw[thick] (Ap)--(P);
+  \draw[thick] (Ap)--(D);
+  \draw[thick] (Ap)--(B);
+  \draw[thick] (Ap)--(C);
+  \draw (D)--(E);
+  \fill (E) circle (1.3pt) node[right] {$E$};
+  \node[left] at (Ap) {$A'$};
+  \node[left] at (A) {$A$};
+  \node[left] at (P) {$P$};
+  \node[below] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[above] at (D) {$D$};
+\end{tikzpicture}

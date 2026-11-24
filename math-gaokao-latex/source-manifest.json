@@ -3836,6 +3836,14 @@
         "gk-2011-jiangxi-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b23",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-jiangxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3845,7 +3853,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0697f188-ff24-45e6-8a26-8bb0d0bcbff0",
+  "last_transaction_id": "4a52cff2-374b-411d-b34d-baf87b93fc14",
   "papers": [
     {
       "blocked_from": null,
@@ -45251,9 +45259,82 @@
       "title": "2011 年·江西卷·理科",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_江西卷_文科/figures/f2011_jiangxi_arts_q07_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_江西卷_文科/figures/f2011_jiangxi_arts_q09_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_江西卷_文科/figures/f2011_jiangxi_arts_q10_cam.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_江西卷_文科/figures/f2011_jiangxi_arts_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_江西卷_文科/figures/f2011_jiangxi_arts_q18_fold.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_jiangxi_arts",
+        "id": "gk-2011-jiangxi-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 679、680。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。江西卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。1 B；2 D；3 C；4 A；5 B；6 B；7 D；8 C；9 D；10 B；11 −6；12 48；13 6；14 −8；15 [0,+∞)；16 (1) 1/10、(2) 7/10；17 (1) 1/3、(2) √3/2；18 (1) 2√3/3、(2) 证明；19 (1) y²=8x、(2) 2；20 (1) f(x)=x³/3+3x²+2x、(2) (m,n)=(2,3) 或 (3,5)；21 (1) 0<a≤1/3、(2) 不存在。原页共 5 幅图：第 7 题频数分布、第 9 题截角长方体与左视选项、第 10 题凸轮与轨迹选项、第 13 题程序框图、第 18 题折叠三角形；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江西卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "江西文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-jiangxi-arts",
+      "production_state": "complete",
+      "project_dir": "2011_江西卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_江西文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_江西文_含解析.md",
+        "questions": "2011/2011_数学真题_江西文_试题.md",
+        "solution_body": "2011/2011_数学真题_江西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-45b3e0589eaddd2fd21d19856f413c2a1a4cb91a48f1886574acac4cbc0dea6a"
+      ],
+      "title": "2011 年·江西卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 10761,
+  "revision": 10766,
   "schema_version": 1,
   "sources": [
     {
@@ -57274,8 +57355,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9f49975f303e07d7c6b203b1f6a3e5fb7b807a0b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-jiangxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011江西文.pdf",
       "regions": [],
       "source_id": "src-45b3e0589eaddd2fd21d19856f413c2a1a4cb91a48f1886574acac4cbc0dea6a",
