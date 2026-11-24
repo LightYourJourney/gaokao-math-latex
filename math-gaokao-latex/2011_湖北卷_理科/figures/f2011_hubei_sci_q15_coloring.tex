@@ -1,0 +1,56 @@
+% 2011 年湖北卷理科第 15 题：n=1,2,3,4 时黑色正方形互不相邻的着色方案。
+% 来源 PDF：普通高考/2011/2011湖北理.pdf，SHA-256 ba721f03ae90f88887c5cde27ae98dbea165d33c73e5ba45b4e4f56b0638b075。
+% 原页：第 1 页第 2 栏下部，书页码 667。黑格用实心表示。
+\begin{tikzpicture}[font=\small, scale=0.42]
+  \newcommand{\row}[3]{% #1=n, #2=y, #3=pattern string
+    \node[left] at (-0.3,#2) {$n=#1$};
+    \foreach \c [count=\i from 0] in {#3}{
+      \ifnum\c=1
+        \fill (\i,#2) rectangle ++(1,1);
+      \else
+        \draw (\i,#2) rectangle ++(1,1);
+      \fi
+    }
+  }
+  \foreach \pat [count=\j from 0] in {0,1}{
+    \begin{scope}[xshift=\j*2.0cm]
+      \foreach \c [count=\i from 0] in \pat {
+        \ifnum\c=1 \fill (\i,0) rectangle ++(1,1); \else \draw (\i,0) rectangle ++(1,1); \fi
+      }
+    \end{scope}
+  }
+  \node[left] at (-0.3,0) {$n=1$};
+  % n=2
+  \begin{scope}[yshift=-2.0cm]
+    \foreach \pat [count=\j from 0] in {00,10,01}{
+      \begin{scope}[xshift=\j*2.6cm]
+        \foreach \c [count=\i from 0] in \pat {
+          \ifnum\c=1 \fill (\i,0) rectangle ++(1,1); \else \draw (\i,0) rectangle ++(1,1); \fi
+        }
+      \end{scope}
+    }
+    \node[left] at (-0.3,0) {$n=2$};
+  \end{scope}
+  % n=3
+  \begin{scope}[yshift=-4.0cm]
+    \foreach \pat [count=\j from 0] in {000,100,010,001,101}{
+      \begin{scope}[xshift=\j*3.4cm]
+        \foreach \c [count=\i from 0] in \pat {
+          \ifnum\c=1 \fill (\i,0) rectangle ++(1,1); \else \draw (\i,0) rectangle ++(1,1); \fi
+        }
+      \end{scope}
+    }
+    \node[left] at (-0.3,0) {$n=3$};
+  \end{scope}
+  % n=4
+  \begin{scope}[yshift=-6.0cm]
+    \foreach \pat [count=\j from 0] in {0000,1000,0100,0010,0001,1010,1001,0101}{
+      \begin{scope}[xshift=\j*4.6cm]
+        \foreach \c [count=\i from 0] in \pat {
+          \ifnum\c=1 \fill (\i,0) rectangle ++(1,1); \else \draw (\i,0) rectangle ++(1,1); \fi
+        }
+      \end{scope}
+    }
+    \node[left] at (-0.3,0) {$n=4$};
+  \end{scope}
+\end{tikzpicture}
