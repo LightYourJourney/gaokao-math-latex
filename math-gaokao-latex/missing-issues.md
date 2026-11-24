@@ -25635,3 +25635,22 @@
   "type": "source-mismatch"
 }
 ```
+
+## ISSUE-1524
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "6843ae5ae6444dc086779d9cca55b10220b74e957f8bc80f9b02ad1a266dc39d",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2010-shanghai-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
