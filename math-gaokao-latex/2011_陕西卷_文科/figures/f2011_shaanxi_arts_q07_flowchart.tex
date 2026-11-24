@@ -1,0 +1,21 @@
+% 2011 年陕西卷文科第 7 题：评分程序框图。
+% 来源 PDF：普通高考/2011/2011陕西文.pdf，SHA-256 ae7984faa1d48b19525f0991a1795d8ea34b7ac65d9c067f4862c59ae112880e。
+% 原页：第 1 页第 2 栏上部，书页码 695。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, node distance=5mm]
+  \node[draw, rounded corners=0.1cm, minimum width=1.3cm, minimum height=0.45cm] (start) {开始};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=2.7cm, minimum height=0.5cm, below=of start] (inp) {输入 $x_1$，$x_2$，$x_3$};
+  \node[draw, diamond, aspect=3.0, minimum width=3.6cm, minimum height=1.0cm, below=of inp] (d) {$|x_1-x_2|<|x_2-x_3|$};
+  \node[draw, minimum width=1.9cm, minimum height=0.75cm, below left=8mm and 6mm of d] (p1) {$p=\dfrac{x_1+x_2}2$};
+  \node[draw, minimum width=1.9cm, minimum height=0.75cm, below right=8mm and 6mm of d] (p2) {$p=\dfrac{x_2+x_3}2$};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.8cm, minimum height=0.5cm, below=24mm of d] (out) {输出 $p$};
+  \node[draw, rounded corners=0.1cm, minimum width=1.3cm, minimum height=0.45cm, below=of out] (stop) {结束};
+  \draw[->] (start)--(inp);
+  \draw[->] (inp)--(d);
+  \draw[->] (d.west) -| node[pos=0.25, above] {是} (p1);
+  \draw[->] (d.east) -| node[pos=0.25, above] {否} (p2);
+  \draw[->] (p1.south) |- (out.west);
+  \draw[->] (p2.south) |- (out.east);
+  \draw[->] (out)--(stop);
+\end{tikzpicture}
