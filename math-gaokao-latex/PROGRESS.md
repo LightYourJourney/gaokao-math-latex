@@ -9,7 +9,7 @@
 - 已回修并 `FINALIZED`（5 卷，页数均不变，`validate-receipts --require-final` 全 OK）：`gk-2008-fujian-science`（b19，14 行）、`gk-2008-fujian-arts`（b18，12 行）、`gk-2010-hubei-science`（b94，9 行）、`gk-2007-chongqing-science`（b24，10 行）、`gk-2007-regular-sichuan-science`（b04，15 行）。
 - 页数变化、已回退到改动前并重新 `FINALIZED`（内容未变，列入整卷重审）：`gk-2009-chongqing-science`（b73，解析版 23→22）、`gk-2010-liaoning-science`（b98，印刷版 25→24）、`gk-2008-anhui-arts`（b07，5/22/7/16→4/20/6/16）、`gk-2007-regular-sichuan-arts`（b40，7/28/9/22→6/27/8/22）。
 - 审计复跑：629 卷中仍有 **133 卷**含独立分式选项（确定风险 **118 卷**、低风险 15 卷）；累计已回修 **20 卷**，待办 **113 卷**（另有 7 卷需整卷重审：安徽文、四川理、四川文、2009 重庆理、2010 辽宁理、2008 安徽文、2007 四川文）。
-- 全库：manifest revision 10979，complete 509、blocked 118、未绑定 149；627 卷报告待刷新（停在 626）。
+- 全库：manifest revision 10979，complete 509、blocked 118、未绑定 149；627 卷全量报告已刷新并提交（`998967be`）。
 
 ### 2011 重庆卷（文科）：phase7-b35 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-chongqing-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-15a0dbea009642347db7851de16d099cf7097447b8f52d59a75d0b8cd3832d8b`，固定件 SHA-256 `0ddbe738e4414213612fb6f62ec0c5cd252d039abf560bae1f31610558f93a70`（511,430 bytes），2 页 A3 横向，印面页码 653、654。
