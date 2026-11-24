@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 江苏卷：phase7-b21 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
+- 对象：`gk-2011-jiangsu`，**23 个题号**（填空 1—14、解答 15—20、附加题 21—23；第 21 题四选二）；固定来源 `src-acff04c14a14e02dd254e45b888565adb0615d96caa48a1b8a0ae01461498796`，固定件 SHA-256 `71763ef5d0c2b5800c12515e6b3addb77e585b2460fd11c1013fcec6f050ece9`（520,044 bytes），2 页 A3 横向，印面页码 675、676。
+- 来源核对：文字层只作定位，题面、伪代码、图象、包装盒、四棱锥、椭圆、两圆与正四棱柱均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 结构（按原页）：填空题 1—14、解答题 15—20、附加题 21—23。
+- 答案（独立推导，等级 D，非官方）：1 $\{-1,2\}$；2 $\left(-\dfrac12,+\infty\right)$；3 $1$；4 $3$；5 $\dfrac13$；6 $\dfrac{16}5$；7 $\dfrac49$；8 $4$；9 $\dfrac{\sqrt6}2$；10 $\dfrac54$；11 $-\dfrac34$；12 $\dfrac{\mathrm e+\mathrm e^{-1}}2$；13 $\sqrt[3]{3}$；14 $[1,2+\sqrt2]$；15 (1) $\dfrac\pi3$、(2) $\dfrac13$；16 (1)(2) 证明；17 (1) $x=15$、(2) $x=10$，高与底面边长之比 $\dfrac14$；18 (1) $k=\dfrac{\sqrt2}2$、(2) $d=\dfrac{2\sqrt2}3$、(3) 证明；19 (1) $b\geqslant2$、(2) $\dfrac13$；20 (1) $a_5=8$、(2) $a_n=2n-1$；21 A 证明 $AB:AC=r_1:r_2$、B $\boldsymbol\alpha=\begin{bmatrix}-1\\2\end{bmatrix}$、C $x-2y-4=0$、D $\left(-2,\dfrac43\right)$；22 (1) $AM=\dfrac{\sqrt{51}}5$、(2) $CM=\dfrac12$；23 (1) $A_n=n-3$、(2) $3\mid n$ 时 $B_n=\dfrac{n(n-3)}6$，否则 $\dfrac{(n-1)(n-2)}6$。
+- 手工转录说明：子代理配额耗尽，本卷由主代理按 600 dpi 原页完成四份 Markdown，并新建 7 张 TikZ 图稿（伪代码、图象、四棱锥、包装盒、椭圆、两圆、正四棱柱），全部经独立 xelatex 编译。
+- 解析器兼容：解析正文小问标题统一为 `#### (k)`；答案要点第 21 题按「四选二」写成单条 `**答案**：A …；B …；C …；D …`，与 2010 江苏卷口径一致。
+- 验收：四版 5/23/7/19 页（共 54 页），四 log 全 0；review 54 页八类检查 **371 pass + 61 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b21.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `e4899eec-6ffd-4bd9-9ef5-4a95c6b5a8f7`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **613 卷 / 775 来源 / 459 批次**，complete 495、blocked 118，未绑定来源 **163**；manifest revision 10754。
+- 修改文件：`2011/2011_数学真题_江苏_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_江苏卷/`（questions/answers/answers_short、四版入口、7 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b21.md`、`PROGRESS.md`。
+- 下一步：继续 2011 江西文理、浙江文理、湖北文理等未绑定来源。
+
 ### 2011 山东卷（理科）：phase7-b17 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-shandong-science`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-9ce415d8fdba67a569c43048a13f617cddb5667ce5bfce8effe5162e5610f6b2`，固定件 SHA-256 `d0f409fd3fa82b12c210d587c8412d4c446946a201f87d124e2fc17c5a50db16`（528,072 bytes），2 页 A3 横向，印面页码 689、690。
 - 来源核对：文字层只作定位，题面、选项、四联图象、视图标注、程序框图、多面体与容器均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。

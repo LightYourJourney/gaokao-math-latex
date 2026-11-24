@@ -1,0 +1,31 @@
+% 2011 年江苏卷第 16 题：四棱锥 P-ABCD。
+% 来源 PDF：普通高考/2011/2011江苏.pdf，SHA-256 71763ef5d0c2b5800c12515e6b3addb77e585b2460fd11c1013fcec6f050ece9。
+% 原页：第 1 页第 2 栏下部，书页码 675。
+% 拓扑：P 在平面 ABCD 上方；E 为 AP 中点、F 为 AD 中点；AD=AB、∠BAD=60°。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=0.95]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3.0,0.35);
+  \coordinate (D) at (1.35,1.35);
+  \coordinate (C) at (4.35,1.70);
+  \coordinate (P) at (2.1,4.0);
+  \coordinate (E) at ($(A)!0.5!(P)$);
+  \coordinate (F) at ($(A)!0.5!(D)$);
+  % 底面
+  \draw (A)--(B)--(C)--(D)--cycle;
+  % 侧棱（可见）
+  \draw (P)--(B);
+  \draw (P)--(C);
+  \draw (P)--(D);
+  \draw (P)--(A);
+  % 辅助线与中点
+  \draw (A)--(C);
+  \draw (B)--(D);
+  \draw (E)--(F);
+  \fill (E) circle (1.4pt) node[above left] {$E$};
+  \fill (F) circle (1.4pt) node[left] {$F$};
+  \node[above] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+\end{tikzpicture}

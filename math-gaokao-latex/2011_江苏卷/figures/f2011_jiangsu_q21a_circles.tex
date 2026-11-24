@@ -1,0 +1,18 @@
+% 2011 年江苏卷附加题 21A：两圆内切于点 A，圆 O1 的弦 AB 交圆 O2 于 C。
+% 来源 PDF：普通高考/2011/2011江苏.pdf，SHA-256 71763ef5d0c2b5800c12515e6b3addb77e585b2460fd11c1013fcec6f050ece9。
+% 原页：第 2 页第 2 栏，书页码 676。r1:r2 示意取 2.2:1.3。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=0.9]
+  \coordinate (O1) at (0,0);
+  \coordinate (O2) at (0.9,0);
+  \coordinate (A) at (2.2,0);
+  \coordinate (B) at (-1.1,1.905);
+  \draw[thick] (O1) circle (2.2);
+  \draw[thick] (O2) circle (1.3);
+  \draw (A)--(B);
+  \fill (O1) circle (1.2pt) node[below] {$O_1$};
+  \fill (O2) circle (1.2pt) node[below] {$O_2$};
+  \fill (A) circle (1.2pt) node[right] {$A$};
+  \fill (B) circle (1.2pt) node[above left] {$B$};
+  \coordinate (C) at ($(A)!0.56!(B)$);
+  \fill (C) circle (1.2pt) node[below right] {$C$};
+\end{tikzpicture}

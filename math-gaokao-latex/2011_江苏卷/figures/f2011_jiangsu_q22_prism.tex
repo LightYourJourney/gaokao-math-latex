@@ -1,0 +1,35 @@
+% 2011 年江苏卷附加题 22：正四棱柱 ABCD-A1B1C1D1，N 为 BC 中点，M 在 CC1 上。
+% 来源 PDF：普通高考/2011/2011江苏.pdf，SHA-256 71763ef5d0c2b5800c12515e6b3addb77e585b2460fd11c1013fcec6f050ece9。
+% 原页：第 2 页第 3 栏，书页码 676。AA1=2，AB=1，示意不按比例。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=0.95]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.0,0.15);
+  \coordinate (C) at (2.8,1.05);
+  \coordinate (D) at (0.8,0.9);
+  \coordinate (A1) at (0.35,2.5);
+  \coordinate (B1) at (2.35,2.65);
+  \coordinate (C1) at (3.15,3.55);
+  \coordinate (D1) at (1.15,3.4);
+  \coordinate (N) at ($(B)!0.5!(C)$);
+  \coordinate (M) at ($(C)!0.45!(C1)$);
+  \draw[thick] (A)--(B)--(C)--(D)--cycle;
+  \draw[thick] (A)--(A1) (B)--(B1) (C)--(C1) (D)--(D1);
+  \draw[thick] (A1)--(B1)--(C1)--(D1)--cycle;
+  \draw[dashed] (A1)--(D);
+  \draw[dashed] (D)--(D1);
+  \draw[dashed] (A1)--(D1);
+  \draw (A1)--(N);
+  \draw (D)--(N);
+  \draw (D)--(M);
+  \draw (N)--(M);
+  \fill (N) circle (1.2pt) node[below right] {$N$};
+  \fill (M) circle (1.2pt) node[right] {$M$};
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[above] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+\end{tikzpicture}
