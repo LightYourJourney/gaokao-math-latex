@@ -3876,6 +3876,14 @@
         "gk-2011-zhejiang-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b28",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-hunan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3885,7 +3893,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a292f963-7921-4712-8a94-edcaed0c885d",
+  "last_transaction_id": "44ee8225-a318-41c6-9807-f81d8dfd5e1b",
   "papers": [
     {
       "blocked_from": null,
@@ -45644,9 +45652,90 @@
       "title": "2011 年·浙江卷·文科",
       "track": "arts",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_理科/figures/f2011_hunan_sci_q03_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_理科/figures/f2011_hunan_sci_q11_semicircle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_理科/figures/f2011_hunan_sci_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_理科/figures/f2011_hunan_sci_q15_square.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_理科/figures/f2011_hunan_sci_q19_cone.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_理科/figures/f2011_hunan_sci_q20_rain.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_理科/figures/f2011_hunan_sci_q21_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_hunan_science",
+        "id": "gk-2011-hunan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 671、672。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖南卷题号：选择 1—8、填空 9—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。1 D；2 A；3 A；4 C；5 C；6 D；7 A；8 D；9 2；10 9；11 2√3/3；12 25；13 2/3；14 −1/4；15 2/π；1/4；16 (1) 2、(2) 1093；17 (1) C=π/4、(2) 最大值 2，A=π/3、B=5π/12；18 (1) 3/10、(2) P(X=2)=1/4、P(X=3)=3/4，E(X)=11/4；19 (1) 证明、(2) √10/5；20 (1) y=5(3|v−c|+10)/v、(2) 0<c≤10/3 时 v=10，10/3<c≤5 时 v=c；21 (1) C1:x²/4+y²=1、C2:y=x²−1，(2) ① 证明、② 存在 k=±3/2；22 (1) 2 个零点、(2) 证明，M=max{a,2}。原页共 7 幅图：第 3 题三视图、第 11 题半圆、第 13 题程序框图、第 15 题圆内接正方形、第 19 题圆锥、第 20 题雨中移动、第 21 题椭圆与抛物线；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            9,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "湖南理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-hunan-science",
+      "production_state": "complete",
+      "project_dir": "2011_湖南卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_湖南理_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_湖南理_含解析.md",
+        "questions": "2011/2011_数学真题_湖南理_试题.md",
+        "solution_body": "2011/2011_数学真题_湖南理_解析正文.md"
+      },
+      "source_ids": [
+        "src-6af683a659a85cea48244daba364c2395d4887eaf0bf91731f229c43ad841024"
+      ],
+      "title": "2011 年·湖南卷·理科",
+      "track": "science",
+      "year": 2011
     }
   ],
-  "revision": 10786,
+  "revision": 10791,
   "schema_version": 1,
   "sources": [
     {
@@ -57835,8 +57924,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d418a5b13a62d9b18a257e54268f99c1f01b6c46",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-hunan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011湖南理.pdf",
       "regions": [],
       "source_id": "src-6af683a659a85cea48244daba364c2395d4887eaf0bf91731f229c43ad841024",

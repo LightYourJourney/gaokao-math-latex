@@ -1,0 +1,20 @@
+% 2011 年湖南卷理科第 13 题：程序框图。
+% 来源 PDF：普通高考/2011/2011湖南理.pdf，SHA-256 09b67f1db8e6a280165cf8431211a968163c0d0f262a50068dd607607a9ec578。
+% 原页：第 1 页第 3 栏上部，书页码 671。
+\begin{tikzpicture}[>=stealth, semithick, font=\small]
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (start) at (0,0) {开始};
+  \node[draw, minimum width=3.2cm, minimum height=0.55cm] (in) at (0,-1.2) {输入 $x_1,x_2,x_3,x$};
+  \node[draw, minimum width=2.6cm, minimum height=0.5cm] (init) at (0,-2.4) {$i=1,\ S=0$};
+  \node[draw, minimum width=3.2cm, minimum height=0.55cm] (add) at (0,-3.7) {$S=S+(x_i-x)^2$};
+  \node[draw, diamond, aspect=1.7, minimum width=1.4cm, minimum height=0.9cm] (test) at (0,-5.1) {$i<3$};
+  \node[draw, minimum width=1.6cm, minimum height=0.5cm] (inc) at (2.8,-3.7) {$i=i+1$};
+  \node[draw, minimum width=2.2cm, minimum height=0.5cm] (div) at (0,-6.4) {$S=\dfrac1iS$};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.6cm, minimum height=0.55cm] (out) at (0,-7.6) {输出 $S$};
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (stop) at (0,-8.7) {结束};
+  \draw[->] (start)--(in); \draw[->] (in)--(init); \draw[->] (init)--(add); \draw[->] (add)--(test);
+  \draw[->] (test.east) -| (inc.north) node[pos=0.25, above] {是};
+  \draw[->] (inc.south) |- (add.east);
+  \draw[->] (test.south)--(div.north) node[midway, right] {否};
+  \draw[->] (div)--(out); \draw[->] (out)--(stop);
+\end{tikzpicture}
