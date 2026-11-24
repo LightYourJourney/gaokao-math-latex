@@ -1,0 +1,35 @@
+% 2011 年天津卷文科第 17 题：四棱锥 P-ABCD，底面 ABCD 为平行四边形，
+% O 为 AC 中点，PO⊥底面，M 为 PD 中点。
+% 来源 PDF：普通高考/2011/2011天津文.pdf，第 2 页（印面 708）第 1 栏。
+% 重绘依据：原图为斜二测式透视，D 在左后、A 在左前、B 在右前、C 在右后；
+%   P 在 O 正上方；可见棱 PA、PB、PC、PD、AB、BC 画实线，被遮挡的 AD、CD、AC
+%   与辅助线 OM 画虚线。
+\begin{tikzpicture}[scale=0.95, semithick,
+  every node/.style={inner sep=1.5pt}]
+  \coordinate (A) at (0.30,0.20);
+  \coordinate (B) at (3.30,0.20);
+  \coordinate (C) at (4.10,1.35);
+  \coordinate (D) at (1.10,1.35);
+  \coordinate (O) at (2.20,0.78);
+  \coordinate (P) at (2.20,3.70);
+  \coordinate (M) at ($(P)!0.5!(D)$);
+  % 底面被遮挡的边与对角线
+  \draw[dashed] (A) -- (D) -- (C);
+  \draw[dashed] (A) -- (C);
+  % 可见棱
+  \draw (A) -- (B) -- (C);
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  % 辅助线 OM（中位线，图中虚线）
+  \draw[dashed] (O) -- (M);
+  % 标注
+  \node[left] at ([xshift=-1pt]A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[above] at (P) {$P$};
+  \node[left] at ([xshift=1pt]M) {$M$};
+  \node[below] at (O) {$O$};
+\end{tikzpicture}

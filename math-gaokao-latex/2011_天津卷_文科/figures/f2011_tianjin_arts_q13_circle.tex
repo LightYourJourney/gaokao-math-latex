@@ -1,0 +1,29 @@
+% 2011 年天津卷文科第 13 题：圆中两弦 AB 与 CD 相交于 F，E 在 AB 延长线上，CE 与圆相切。
+% 来源 PDF：普通高考/2011/2011天津文.pdf，第 1 页（印面 707）第 2 栏。
+% 重绘依据：原图圆心约在 (0,0)，A、B 在圆上且 AB 近水平，E 在 B 的右侧圆外，
+%   D 在圆上左上方，C 在圆上右下方，CD 过 F；CE 为切线，C 为切点。
+\begin{tikzpicture}[scale=1.0, semithick, every node/.style={inner sep=1.5pt}]
+  \coordinate (O) at (0,0);
+  \draw (O) circle (2.0);
+  % 弦 AB（近水平，略向右上倾斜）
+  \coordinate (A) at (-160:2.0); % 左下
+  \coordinate (B) at (-15:2.0);  % 右下
+  \draw (A) -- (B);
+  % E 在 AB 延长线上
+  \coordinate (E) at (2.55,-0.28);
+  \draw (B) -- (E);
+  % 弦 CD 过 F（F 为 AB 与 CD 交点）
+  \coordinate (F) at ($(A)!0.62!(B)$);
+  \coordinate (D) at (135:2.0);
+  \coordinate (C) at (-58:2.0);
+  \draw (D) -- (C);
+  % 切线 CE
+  \draw (C) -- (E);
+  % 标注
+  \node[left]  at (A) {$A$};
+  \node[above right] at (B) {$B$};
+  \node[right] at (E) {$E$};
+  \node[above left] at (D) {$D$};
+  \node[below right] at (C) {$C$};
+  \node[above] at (F) {$F$};
+\end{tikzpicture}

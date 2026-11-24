@@ -1,0 +1,26 @@
+% 2011 年天津卷文科第 3 题：程序框图（循环：|x|>3 时执行 x=|x-3| 再回判断）
+% 来源 PDF：普通高考/2011/2011天津文.pdf，第 1 页（印面 707）第 1 栏。
+% 重绘依据：原图为「开始 → 输入 x → 判断 |x|>3?」，是分支向下执行 x=|x-3| 并回到判断，
+%   否分支向右再向下汇入 y=2^x，随后「输出 y」与「结束」。
+\begin{tikzpicture}[scale=0.72, semithick, >=Stealth,
+  block/.style={draw, minimum width=3.2cm, minimum height=0.6cm, align=center},
+  dec/.style={draw, diamond, aspect=3.0, inner sep=1pt, align=center},
+  arr/.style={->}]
+  \node (start) [draw, rounded corners=6pt, minimum width=1.5cm, minimum height=0.5cm] {开始};
+  \node (in)    [block, below=0.35cm of start] {输入 $x$};
+  \node (dec)   [dec, below=0.5cm of in] {$|x|>3$?};
+  \node (op)    [block, below=0.55cm of dec] {$x=|x-3|$};
+  \node (pow)   [block, below=1.0cm of op] {$y=2^x$};
+  \node (out)   [draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+                 minimum width=3.0cm, minimum height=0.6cm, below=0.45cm of pow] {输出 $y$};
+  \node (end)   [draw, rounded corners=6pt, minimum width=1.5cm, minimum height=0.5cm,
+                 below=0.4cm of out] {结束};
+  \draw[arr] (start) -- (in);
+  \draw[arr] (in) -- (dec);
+  \draw[arr] (dec) -- node[right] {是} (op);
+  \draw[arr] (op.west) -- ++(-1.6,0) |- (dec.west);
+  \draw[arr] (dec.east) -- node[above] {否} ++(1.9,0) |- (pow.east);
+  \draw[arr] (op) -- (pow);
+  \draw[arr] (pow) -- (out);
+  \draw[arr] (out) -- (end);
+\end{tikzpicture}

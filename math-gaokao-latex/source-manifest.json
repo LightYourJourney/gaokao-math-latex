@@ -3964,6 +3964,14 @@
         "gk-2011-shanghai-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b40",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-tianjin-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3973,7 +3981,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "07b0281f-0998-487c-9482-ae667ca5c760",
+  "last_transaction_id": "374e66cb-747d-4f04-9751-6277e3cba3f2",
   "papers": [
     {
       "blocked_from": null,
@@ -46537,9 +46545,78 @@
       "title": "2011 年·上海卷·理科",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_天津卷_文科/figures/f2011_tianjin_arts_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_天津卷_文科/figures/f2011_tianjin_arts_q10_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_天津卷_文科/figures/f2011_tianjin_arts_q13_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_天津卷_文科/figures/f2011_tianjin_arts_q17_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_tianjin_arts",
+        "id": "gk-2011-tianjin-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 707、708。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。天津卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题。答案由本库独立推导（等级 D，非官方）。原页 4 幅图：第 3 题程序框图、第 10 题三视图、第 13 题圆与相交弦、第 17 题四棱锥，均由 TikZ 重绘；其余各题原页无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "天津文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-tianjin-arts",
+      "production_state": "complete",
+      "project_dir": "2011_天津卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_天津文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_天津文_含解析.md",
+        "questions": "2011/2011_数学真题_天津文_试题.md",
+        "solution_body": "2011/2011_数学真题_天津文_解析正文.md"
+      },
+      "source_ids": [
+        "src-543535d5538c02dbea32397ac27b1cf94a3863d8a757e985ba8aca49dda1857c"
+      ],
+      "title": "2011 年·天津卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 11414,
+  "revision": 11436,
   "schema_version": 1,
   "sources": [
     {
@@ -58296,8 +58373,8 @@
       "exam_type": "regular",
       "git_blob_oid": "94b43c74a7bf15c27c68ade71866f65b6ac7ecc1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-tianjin-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011天津文.pdf",
       "regions": [],
       "source_id": "src-543535d5538c02dbea32397ac27b1cf94a3863d8a757e985ba8aca49dda1857c",
