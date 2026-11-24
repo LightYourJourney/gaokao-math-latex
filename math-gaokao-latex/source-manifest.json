@@ -3924,6 +3924,14 @@
         "gk-2011-liaoning-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b34",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-chongqing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3933,7 +3941,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "6127c50b-cc51-4959-b4c9-75ce97a03f81",
+  "last_transaction_id": "8c121214-3a02-4609-a294-70ba45aea540",
   "papers": [
     {
       "blocked_from": null,
@@ -46138,9 +46146,70 @@
       "title": "2011 年·辽宁卷·文科",
       "track": "arts",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_重庆卷_理科/figures/f2011_chongqing_sci_q19_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_重庆卷_理科/figures/f2011_chongqing_sci_q20_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_chongqing_science",
+        "id": "gk-2011-chongqing-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 651、652。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。重庆卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。1 C；2 A；3 D；4 B；5 D；6 A；7 C；8 B；9 C；10 D；11 74；12 √3；13 11/32；14 −√14/2；15 √6−1；16 最大值 2、最小值 √2；17 (1) 8/27、(2) P(1)=1/27、P(2)=14/27、P(3)=4/9，Eξ=65/27；18 (1) 6x+2y−1=0、(2) 极小 −3、极大 15e⁻³；19 (1) 4/5、(2) √3/6；20 (1) x²/4+y²/2=1、(2) 存在，F₁(−√10,0)、F₂(√10,0)，定值 4√5；21 (1) S₂=−2、a₃=2/3、(2) 证明。原页共 2 幅图：第 19 题四面体、第 20 题椭圆；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "重庆卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "重庆理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-chongqing-science",
+      "production_state": "complete",
+      "project_dir": "2011_重庆卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_重庆理_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_重庆理_含解析.md",
+        "questions": "2011/2011_数学真题_重庆理_试题.md",
+        "solution_body": "2011/2011_数学真题_重庆理_解析正文.md"
+      },
+      "source_ids": [
+        "src-ad1e6fe368a04ae39f39e7f764ddb18d3c3dff2fe4a3e1534560ffb1b653e80b"
+      ],
+      "title": "2011 年·重庆卷·理科",
+      "track": "science",
+      "year": 2011
     }
   ],
-  "revision": 10854,
+  "revision": 10861,
   "schema_version": 1,
   "sources": [
     {
@@ -58473,8 +58542,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9ee67abfae9cf277a267f7b0aa9e035bf3680566",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-chongqing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011重庆理.pdf",
       "regions": [],
       "source_id": "src-ad1e6fe368a04ae39f39e7f764ddb18d3c3dff2fe4a3e1534560ffb1b653e80b",
