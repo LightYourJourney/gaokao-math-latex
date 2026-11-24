@@ -11,6 +11,14 @@
 - 审计复跑：629 卷中仍有 **133 卷**含独立分式选项（确定风险 **118 卷**、低风险 15 卷）；累计已回修 **20 卷**，待办 **113 卷**（另有 7 卷需整卷重审：安徽文、四川理、四川文、2009 重庆理、2010 辽宁理、2008 安徽文、2007 四川文）。
 - 全库：manifest revision 10979，complete 509、blocked 118、未绑定 149；627 卷全量报告已刷新并提交（`998967be`）。
 
+### 选项行距回修第五批：12 批实验只 1 卷页数不变，改为「清单化 + 重审优先」（2026-11-24；`in_progress`）
+- 实验：对 12 个批次（1997—2008）执行改 `\frac` + 重建，**仅 `gk-2008-chongqing-arts`（phase6-b22，18 行）四版页数不变并成功沿用回执**；其余 11 卷均出现解析版或印刷版 ±1 页，按硬条件整批回退并重新 `FINALIZED`（内容未变）。其中 `gk-2008-anhui-science` 另做单卷验证，四版 PDF 哈希全部改变（选项所在页面重排），证明「只重审变化版」不可行，必须四版逐页重审。
+- 结论：旧卷（1997—2008）行距压缩较紧，改 `\frac` 引起分页变化的概率约 11/12；单卷完整重审约 50—60 页，无法靠批量脚本摊销。回修必须与逐页审查绑定，不能再以「页数不变」为主要路径。
+- 新增只读投影：`math-gaokao-latex/tools/backlog_option_spacing.py` 生成 `reports/option-spacing-backlog.md`，逐卷列出批次、连续段长度、分式选项数、题号、生产状态与处置（整卷重审 / 改后视页数定）。当前：**113 卷待办**（complete 99、blocked 14），其中 7 卷明确需整卷重审。
+- 审计复跑：630 卷中含独立分式选项 **113 卷**（确定风险 98、低风险 15）；累计已回修 **23 卷**。
+- 质量口径：在 backlog 清零前，不能宣称全部 complete 卷达到「可直接打印」；报告与 README 仍以 manifest 状态为准，缺陷范围以 `reports/option-spacing-audit.*` 与 `reports/option-spacing-backlog.md` 为准。
+- 全库：manifest revision 11300+，complete 510、blocked 118、未绑定 148；628 卷报告已是最新。
+
 ### 选项行距回修第四批：跨年代 19 卷修复、多卷批次整批回退（2026-11-24；`in_progress`）
 - 批处理工具修正：`refresh_prov.py` 改为按卷读取各自题面（此前同批次多卷共用一份题面，导致哈希串卷）；`fix_option_spacing.py` 新增 `batch:` 模式，批次内所有卷同时转换、重建、沿用回执，避免多卷批次只填半批；新增 `carry_review_batch.py` 与 `revert_papers.py`。
 - 已回修并 `FINALIZED`（19 卷，页数均不变、四 log 全 0、`validate-receipts --require-final` 全 OK）：`gk-1985-regular-shanghai-science`、`gk-1986-regular-shanghai-arts/-science`、`gk-1988-regular-national-arts`、`gk-1988-regular-shanghai`、`gk-2002-regular-national-old-arts/-science`、`gk-2007-jiangxi-arts/-science`、`gk-2007-liaoning-arts/-science`、`gk-2007-newcurriculum-science`、`gk-2007-regular-anhui-arts`、`gk-2007-regular-guangdong-arts`、`gk-2007-regular-shandong-arts`、`gk-2007-regular-tianjin-arts`、`gk-2007-shaanxi-arts`。
