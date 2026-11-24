@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 江西卷（理科）：phase7-b22 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
+- 对象：`gk-2011-jiangxi-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21；第 15 题二选一）；固定来源 `src-98ea68d2292bec8b2ec415deb162bd1d902578b59d1f0c62a8dd88d9279f8716`，固定件 SHA-256 `9fa84ea67ec469ea2a8bb4a06f9d79b6c5a94e8b08a52d2045e30daabf8d1582`（512,824 bytes），2 页 A3 横向，印面页码 677、678。
+- 来源核对：文字层只作定位，题面、选项、滚动圆四选项、程序框图与四面体均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—15、解答题 16—21。
+- 答案（独立推导，等级 D，非官方）：1 D（题干问 $\bar z$，$z=2-\mathrm i$，故 $\bar z=2+\mathrm i$）；2 B；3 A；4 C；5 A；6 C；7 D；8 C；9 B；10 A；11 $\dfrac\pi3$；12 $\dfrac{13}{16}$；13 $10$；14 $\dfrac{x^2}5+\dfrac{y^2}4=1$；15 A $(x-2)^2+(y-1)^2=5$、B $5$；16 (1) $P(X=k)=\dfrac{\mathrm C_4^k\mathrm C_4^{4-k}}{\mathrm C_8^4}$、(2) $2280$ 元；17 (1) $\dfrac34$、(2) $\sqrt7+1$；18 (1) $a_n=(2\pm\sqrt2)^{n-1}$、(2) $0<a\leqslant\dfrac13$；19 (1) $a>-\dfrac19$、(2) $\dfrac{10}3$；20 (1) $\dfrac{\sqrt{30}}5$、(2) $-\dfrac14$；21 (1) 作法见解析、(2) $\dfrac{5\sqrt5}3$。
+- 复核修正：第 1 题原页问 $\bar z$（不是 $z$），初稿误按 $z$ 记为 C，已按 600 dpi 原页改为 D；第 20(2) 由 $C=\lambda A+B$ 在双曲线上展开得 $2\lambda Q=-1$、$Q=2$，故 $\lambda=-\dfrac14$，已改正初稿的 $-4$。
+- 手工转录说明：子代理配额耗尽，本卷由主代理按 600 dpi 原页完成四份 Markdown，并新建 3 张 TikZ 图稿（滚动圆四选项、程序框图、四面体），全部经独立 xelatex 编译。
+- 验收：四版 6/21/8/17 页（共 52 页），四 log 全 0（初版解析版 16.0pt Overfull 已用行间公式拆开消除）；review 52 页八类检查 **349 pass + 67 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b22.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `8c08d1b6-1c07-4ea7-993f-ca3faeb7f061`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **614 卷 / 775 来源 / 460 批次**，complete 496、blocked 118，未绑定来源 **162**；manifest revision 10761。
+- 修改文件：`2011/2011_数学真题_江西理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_江西卷_理科/`（questions/answers/answers_short、四版入口、3 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b22.md`、`PROGRESS.md`。
+- 下一步：继续 2011 江西文、浙江文理、湖北文理等未绑定来源。
+
 ### 2011 江苏卷：phase7-b21 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-jiangsu`，**23 个题号**（填空 1—14、解答 15—20、附加题 21—23；第 21 题四选二）；固定来源 `src-acff04c14a14e02dd254e45b888565adb0615d96caa48a1b8a0ae01461498796`，固定件 SHA-256 `71763ef5d0c2b5800c12515e6b3addb77e585b2460fd11c1013fcec6f050ece9`（520,044 bytes），2 页 A3 横向，印面页码 675、676。
 - 来源核对：文字层只作定位，题面、伪代码、图象、包装盒、四棱锥、椭圆、两圆与正四棱柱均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。

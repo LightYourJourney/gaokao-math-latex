@@ -3828,6 +3828,14 @@
         "gk-2011-jiangsu"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b22",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-jiangxi-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3837,7 +3845,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "80dbcb52-335d-4d99-8853-c22c43d1e5a7",
+  "last_transaction_id": "0697f188-ff24-45e6-8a26-8bb0d0bcbff0",
   "papers": [
     {
       "blocked_from": null,
@@ -45178,9 +45186,74 @@
       "title": "2011 年·江苏卷",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_江西卷_理科/figures/f2011_jiangxi_sci_q10_rolling.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_江西卷_理科/figures/f2011_jiangxi_sci_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_江西卷_理科/figures/f2011_jiangxi_sci_q21_tetra.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_jiangxi_science",
+        "id": "gk-2011-jiangxi-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 677、678。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。江西卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题；第 15 题为二选一（A 极坐标、B 不等式）。答案由本库独立推导（等级 D，非官方）。1 D（题目问 z̄，z=2−i）；2 B；3 A；4 C；5 A；6 C；7 D；8 C；9 B；10 A；11 π/3；12 13/16；13 10；14 x²/5+y²/4=1；15 A (x−2)²+(y−1)²=5、B 5；16 (1) P(X=k)=C(4,k)²/70、(2) 2280 元；17 (1) 3/4、(2) √7+1；18 (1) aₙ=(2±√2)ⁿ⁻¹、(2) 0<a≤1/3；19 (1) a>−1/9、(2) 10/3；20 (1) √30/5、(2) −1/4；21 (1) 作法见解析、(2) 5√5/3。原页共 3 幅图：第 10 题滚动圆与四选项轨迹、第 13 题程序框图、第 21 题四面体；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江西卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "江西理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-jiangxi-science",
+      "production_state": "complete",
+      "project_dir": "2011_江西卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_江西理_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_江西理_含解析.md",
+        "questions": "2011/2011_数学真题_江西理_试题.md",
+        "solution_body": "2011/2011_数学真题_江西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-98ea68d2292bec8b2ec415deb162bd1d902578b59d1f0c62a8dd88d9279f8716"
+      ],
+      "title": "2011 年·江西卷·理科",
+      "track": "science",
+      "year": 2011
     }
   ],
-  "revision": 10754,
+  "revision": 10761,
   "schema_version": 1,
   "sources": [
     {
@@ -57225,8 +57298,8 @@
       "exam_type": "regular",
       "git_blob_oid": "bc0eba4b630c79c8d010bd63e35929dc2237d1be",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-jiangxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011江西理.pdf",
       "regions": [],
       "source_id": "src-98ea68d2292bec8b2ec415deb162bd1d902578b59d1f0c62a8dd88d9279f8716",

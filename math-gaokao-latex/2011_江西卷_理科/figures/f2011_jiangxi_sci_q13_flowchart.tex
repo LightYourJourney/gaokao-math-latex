@@ -1,0 +1,20 @@
+% 2011 年江西卷理科第 13 题：程序框图。
+% 来源 PDF：普通高考/2011/2011江西理.pdf，SHA-256 9fa84ea67ec469ea2a8bb4a06f9d79b6c5a94e8b08a52d2045e30daabf8d1582。
+% 原页：第 1 页第 2 栏中部，书页码 677。
+\begin{tikzpicture}[>=stealth, semithick, font=\small]
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (start) at (0,0) {开始};
+  \node[draw, minimum width=2.6cm, minimum height=0.55cm] (init) at (0,-1.1) {$s=0,\ n=1$};
+  \node[draw, minimum width=3.4cm, minimum height=0.6cm] (upd) at (0,-2.35) {$s=s+(-1)^n+n$};
+  \node[draw, diamond, aspect=1.7, minimum width=1.6cm, minimum height=0.9cm] (test) at (0,-3.75) {$s>9$};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.6cm, minimum height=0.55cm] (out) at (2.8,-3.75) {输出 $s$};
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (stop) at (2.8,-5.0) {结束};
+  \node[draw, minimum width=1.8cm, minimum height=0.55cm] (inc) at (2.8,-2.35) {$n=n+1$};
+  \draw[->] (start.south) -- (init.north);
+  \draw[->] (init.south) -- (upd.north);
+  \draw[->] (upd.south) -- (test.north);
+  \draw[->] (test.east) -- (out.west) node[midway, above] {是};
+  \draw[->] (out.south) -- (stop.north);
+  \draw[->] (test.south) -- ++(0,-0.6) -| (inc.south) node[pos=0.25, below] {否};
+  \draw[->] (inc.north) -- (inc.north |- upd.south) -- (upd.south);
+\end{tikzpicture}
