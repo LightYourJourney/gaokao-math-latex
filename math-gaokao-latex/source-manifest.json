@@ -3916,6 +3916,14 @@
         "gk-2011-liaoning-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b33",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-liaoning-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3925,7 +3933,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7155723f-cace-4bf1-815f-8744db30efca",
+  "last_transaction_id": "02deed4b-37b4-40a5-9007-f2053d1dd037",
   "papers": [
     {
       "blocked_from": null,
@@ -46053,9 +46061,86 @@
       "title": "2011 年·辽宁卷·理科",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_辽宁卷_文科/figures/f2011_liaoning_arts_q08_topview.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_辽宁卷_文科/figures/f2011_liaoning_arts_q09_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_辽宁卷_文科/figures/f2011_liaoning_arts_q12_tan.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_辽宁卷_文科/figures/f2011_liaoning_arts_q18_square.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_辽宁卷_文科/figures/f2011_liaoning_arts_q21_ellipses.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_辽宁卷_文科/figures/f2011_liaoning_arts_q22a_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_liaoning_arts",
+        "id": "gk-2011-liaoning-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 683、684。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。辽宁卷题号：选择 1—12、填空 13—16、解答 17—22，共 22 题；第 22 题三选一（A 圆、B 极坐标与参数方程、C 不等式）。答案由本库独立推导（等级 D，非官方）。1 D；2 A；3 D；4 A；5 B；6 A；7 C；8 B；9 C；10 C；11 B；12 B；13 (x−2)²+y²=10；14 0.254；15 −1；16 a≤2ln2−2；17 (1) b/a=√2、(2) B=π/4；18 (1) 证明 PQ⊥平面 DCQ、(2) 体积比 1；19 (1) 1/6、(2) 甲 400、57.25，乙 412、56，种乙；20 (1) a=−1、b=3、(2) 证明；21 (1) 3/4、(2) √2/2<e<1 时存在；22 (1) A 证明、B a=3,b=1、C 证明，(2) A 证明、B 2/5、C [5−√3,6]。原页共 6 幅图：第 8 题俯视图、第 9 题程序框图、第 12 题正切图象、第 18 题正方形与 P、Q、第 21 题两椭圆、第 22A 题圆；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "辽宁文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-liaoning-arts",
+      "production_state": "complete",
+      "project_dir": "2011_辽宁卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_辽宁文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_辽宁文_含解析.md",
+        "questions": "2011/2011_数学真题_辽宁文_试题.md",
+        "solution_body": "2011/2011_数学真题_辽宁文_解析正文.md"
+      },
+      "source_ids": [
+        "src-1436750c89ad6f477651d8ce1bf6767d22bc5adea46142756635875e018909b8"
+      ],
+      "title": "2011 年·辽宁卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 10823,
+  "revision": 10831,
   "schema_version": 1,
   "sources": [
     {
@@ -58316,8 +58401,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6e5f9957910f1875fedf83fc7783b5b300737ab4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-liaoning-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011辽宁文.pdf",
       "regions": [],
       "source_id": "src-1436750c89ad6f477651d8ce1bf6767d22bc5adea46142756635875e018909b8",
