@@ -9,8 +9,8 @@
 
 - 标题：2011 年·浙江卷·文科
 - 项目目录：`2011_浙江卷_文科`
-- 构建：`succeeded`（attempt `91aea34c-bf95-45ba-ab88-9bbd06e2a3ac`）
-- 审查：`passed`（2026-11-24T13:15:38+08:00）
+- 构建：`succeeded`（attempt `d0de9b27-d63f-4b44-a2ed-bf8ddb83724f`）
+- 审查：`passed`（2026-11-24T15:02:02+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 6；解析版 21；简答版 8；印刷版 17
 - 警告豁免：0

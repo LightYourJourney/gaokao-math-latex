@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 选项行距回修第二批：2011 年 11 卷改 `\frac` 并沿用回执；安徽文、四川文因分页变化回退（2026-11-24；`in_progress`）
+- 工具：新增工作脚本 `math-gaokao-latex/.work/fix_option_spacing.py`，按卷执行「选项行 `\dfrac`→`\frac` → 重生成 → 重算 provenance 哈希 → 重建 → 比较 build/review 页数 → 页数不变则 prepare+沿用回执+finalize，页数变化则 git 回退并整卷待重审」。`carry_review.py` 的硬条件是四版页数逐版相等，缺页/缺检查项一律拒绝。
+- 已回修并重新 `FINALIZED`（11 卷，均页数不变、四 log 全 0、`validate-receipts --require-final` 全 OK）：
+  `gk-2011-guangdong-science`（b19）、`gk-2011-zhejiang-science`（b26）、`gk-2011-anhui-science`（b15）、`gk-2011-beijing-science`（b10）、`gk-2011-shandong-science`（b17）、`gk-2011-hunan-science`（b28）、`gk-2011-hunan-arts`（b29）、`gk-2011-guangdong-arts`（b20）、`gk-2011-shandong-arts`（b18）、`gk-2011-zhejiang-arts`（b27）、`gk-2011-hubei-arts`（b25）。
+- 抽查渲染：广东理第 3 页第 6 题四个分式选项、湖北文第 1 页第 2/3 题分式选项均小字号分行、无重叠；页眉/页脚与题号连续。
+- 回退样例（页数变化，不能沿用旧回执）：`gk-2011-anhui-arts`（b16）印刷版 21→20、`gk-2011-sichuan-arts`（b14）7/34/9/26→6/33/8/26。两卷已 `git checkout` 还原、重建并重新 `FINALIZED`（内容未变），列入整卷重审队列。
+- 审计复跑：628 卷中仍有 **137 卷**含独立分式选项（确定风险 **122 卷**、低风险 15 卷），已回修累计 **15 卷**（含前批 4 卷），待办 **122 卷**（其中安徽文、四川理、四川文三卷需整卷重审）。
+- 全库：manifest revision 10919，complete 508、blocked 118、未绑定 150；626 卷报告尚未刷新（停在 625）。
+
 ### 2011 重庆卷（理科）：phase7-b34 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-chongqing-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21，无选做题）；固定来源 `src-ad1e6fe368a04ae39f39e7f764ddb18d3c3dff2fe4a3e1534560ffb1b653e80b`，固定件 SHA-256 `15c5e4dfbc23f3b3e1c37b279db7aea1a8e3db05ea86087e2346208274bc7ef7`（509,208 bytes），2 页 A3 横向，印面页码 651、652。
 - 来源核对：文字层只作定位，题面、选项、四面体与椭圆图均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
