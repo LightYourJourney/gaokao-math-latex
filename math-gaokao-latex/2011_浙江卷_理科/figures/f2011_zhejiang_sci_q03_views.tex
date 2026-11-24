@@ -1,0 +1,43 @@
+% 2011 年浙江卷理科第 3 题：三视图与四个直观图选项。
+% 来源 PDF：普通高考/2011/2011浙江理.pdf，SHA-256 0239778f574bc3ce6d7aca5024aa6333f80d131abaf699f79c46472394f8cd65。
+% 原页：第 1 页第 1 栏，书页码 709。示意图。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=0.9]
+  % 三视图
+  \draw[thick] (0,0)--(0,1.6)--(0.9,1.6)--(0.9,0.9)--(1.6,0.9)--(1.6,0)--cycle;
+  \node[below] at (0.8,-0.1) {正视图};
+  \draw[thick] (2.4,0) rectangle (3.8,1.6);
+  \draw[dashed] (2.4,0.9)--(3.8,0.9);
+  \node[below] at (3.1,-0.1) {侧视图};
+  \draw[thick] (0.2,-2.4) rectangle (1.8,-0.8);
+  \draw[thick] (0.2,-0.8)--(1.8,-2.4);
+  \node[below] at (1.0,-2.5) {俯视图};
+  % 选项
+  \begin{scope}[xshift=4.2cm, yshift=-2.4cm, scale=0.55]
+    \draw[thick] (0,0)--(2,0)--(2,2)--(0,2)--cycle;
+    \draw[thick] (0,2)--(0.6,2.5)--(2.6,2.5)--(2,2);
+    \draw[thick] (2,0)--(2.6,0.5)--(2.6,2.5);
+    \draw[thick] (0.4,1.2)--(2,1.2)--(2,2);
+    \node[below] at (1,-0.3) {(A)};
+  \end{scope}
+  \begin{scope}[xshift=7.4cm, yshift=-2.4cm, scale=0.55]
+    \draw[thick] (0,0)--(2,0)--(2,2)--(0,2)--cycle;
+    \draw[thick] (0,2)--(0.6,2.5)--(2.6,2.5)--(2,2);
+    \draw[thick] (2,0)--(2.6,0.5)--(2.6,2.5);
+    \draw[thick] (0.5,2)--(1.0,1.2)--(1.5,2);
+    \node[below] at (1,-0.3) {(B)};
+  \end{scope}
+  \begin{scope}[xshift=10.6cm, yshift=-2.4cm, scale=0.55]
+    \draw[thick] (0,0)--(2,0)--(2,2)--(1.2,2)--(1.2,1.2)--(0,1.2)--cycle;
+    \draw[thick] (0,1.2)--(0.6,1.7)--(2.6,1.7)--(2,2);
+    \draw[thick] (2,0)--(2.6,0.5)--(2.6,1.7);
+    \draw[thick] (1.2,2)--(1.2,1.2)--(0,1.2);
+    \node[below] at (1,-0.6) {(C)};
+  \end{scope}
+  \begin{scope}[xshift=13.8cm, yshift=-2.4cm, scale=0.55]
+    \draw[thick] (0,0)--(2,0)--(2,2)--(0,2)--cycle;
+    \draw[thick] (0,2)--(0.6,2.5)--(2.6,2.5)--(2,2);
+    \draw[thick] (2,0)--(2.6,0.5)--(2.6,2.5);
+    \draw[thick] (0.6,0.5) rectangle (1.4,1.8);
+    \node[below] at (1,-0.3) {(D)};
+  \end{scope}
+\end{tikzpicture}

@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 浙江卷（理科）：phase7-b26 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
+- 对象：`gk-2011-zhejiang-science`，**22 个题号**（选择 1—10、填空 11—17、解答 18—22）；固定来源 `src-98fe82ea78e7744188147de76e380b7d908b8a178d8f7c8ec86fe3ee5cae4f0f`，固定件 SHA-256 `0239778f574bc3ce6d7aca5024aa6333f80d131abaf699f79c46472394f8cd65`（608,964 bytes），2 页 A3 横向，印面页码 709、710。
+- 来源核对：文字层只作定位，题面、选项、三视图四选项、程序框图、三棱锥与抛物线均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—17、解答题 18—22。
+- 答案（独立推导，等级 D，非官方）：1 B；2 B；3 C；4 D；5 B；6 C；7 A；8 C；9 B；10 D；11 $0$；12 $5$；13 $2$；14 $\left[\dfrac\pi6,\dfrac{5\pi}6\right]$；15 $\dfrac53$；16 $\dfrac{2\sqrt{10}}5$；17 $(0,\pm1)$；18 (1) $(a,c)=\left(1,\dfrac14\right)$ 或 $\left(\dfrac14,1\right)$、(2) $\left(\dfrac{\sqrt6}2,\sqrt2\right)$；19 (1) $a_n=na$、$S_n=\dfrac{an(n+1)}2$、(2) $A_n<B_n$；20 (1) 证明、(2) 存在，$AM=3$；21 (1) $\dfrac{17}4$、(2) $y=4\pm\dfrac{3\sqrt{115}}{115}x$；22 (1) $a=\mathrm e$、(2) $\left[3\mathrm e-\dfrac{2\mathrm e}{\sqrt{1+\ln3}},3\mathrm e\right]$。
+- 第 8 题关键读法：椭圆将直径 $AB$ 三等分，即椭圆截得的弦为中间三分之一，故弦端点到圆心距离为 $a/3$，而直线上点 $(x,2x)$ 到圆心距离为 $\sqrt5|x|$，得 $x^2=a^2/45$；与椭圆方程联立得 $b^2/(b^2+4a^2)=1/45$，即 $a^2=11b^2$，结合 $a^2-b^2=5$ 得 $b^2=1/2$、$a^2=11/2$，选 C。
+- 手工转录说明：子代理配额耗尽，本卷由主代理按 600 dpi 原页完成四份 Markdown，并新建 4 张 TikZ 图稿（三视图四选项、程序框图、三棱锥、抛物线与圆），均独立 xelatex 编译通过。
+- 验收：四版 5/21/7/17 页（共 50 页），四 log 全 0；review 50 页八类检查 **338 pass + 62 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b26.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `70772691-f80a-48fd-9d7b-10092d5ba1f5`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **618 卷 / 775 来源 / 464 批次**，complete 500、blocked 118，未绑定来源 **158**；manifest revision 10781。
+- 修改文件：`2011/2011_数学真题_浙江理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_浙江卷_理科/`（questions/answers/answers_short、四版入口、4 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b26.md`、`PROGRESS.md`。
+- 下一步：继续 2011 浙江文、湖南文理、福建文理等未绑定来源。
+
 ### 2011 湖北卷（文科）：phase7-b25 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-hubei-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-6f6e194abddb56676646e70761dd450e520909513ec18f2ea857e9b58ee98df4`，固定件 SHA-256 `97bda477ec8baea4f3f31a9b6013a77e9a4bcd14f462013754d52c02ff5d1770`（510,850 bytes），2 页 A3 横向，印面页码 669、670。
 - 来源核对：文字层只作定位，题面、选项、频率分布直方图与正三棱柱均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。

@@ -3860,6 +3860,14 @@
         "gk-2011-hubei-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b26",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-zhejiang-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3869,7 +3877,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "2eb4ea02-d456-4cb4-b8d3-5fc5867794e2",
+  "last_transaction_id": "235b1023-60e8-4627-b899-fd1919a695ea",
   "papers": [
     {
       "blocked_from": null,
@@ -45478,9 +45486,78 @@
       "title": "2011 年·湖北卷·文科",
       "track": "arts",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_浙江卷_理科/figures/f2011_zhejiang_sci_q03_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_浙江卷_理科/figures/f2011_zhejiang_sci_q12_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_浙江卷_理科/figures/f2011_zhejiang_sci_q20_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_浙江卷_理科/figures/f2011_zhejiang_sci_q21_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_zhejiang_science",
+        "id": "gk-2011-zhejiang-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 709、710。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。浙江卷题号：选择 1—10、填空 11—17、解答 18—22，共 22 题。答案由本库独立推导（等级 D，非官方）。1 B；2 B；3 C；4 D；5 B；6 C；7 A；8 C；9 B；10 D；11 0；12 5；13 2；14 [π/6,5π/6]；15 5/3；16 2√10/5；17 (0,±1)；18 (1) (a,c)=(1,1/4) 或 (1/4,1)、(2) (√6/2,√2)；19 (1) aₙ=na、Sₙ=an(n+1)/2、(2) Aₙ<Bₙ；20 (1) 证明、(2) 存在，AM=3；21 (1) 17/4、(2) y=4±(3√115/115)x；22 (1) a=e、(2) [3e−2e/√(1+ln3),3e]。原页共 4 幅图：第 3 题三视图与四选项、第 12 题程序框图、第 20 题三棱锥、第 21 题抛物线与圆；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "浙江卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "浙江理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-zhejiang-science",
+      "production_state": "complete",
+      "project_dir": "2011_浙江卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_浙江理_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_浙江理_含解析.md",
+        "questions": "2011/2011_数学真题_浙江理_试题.md",
+        "solution_body": "2011/2011_数学真题_浙江理_解析正文.md"
+      },
+      "source_ids": [
+        "src-98fe82ea78e7744188147de76e380b7d908b8a178d8f7c8ec86fe3ee5cae4f0f"
+      ],
+      "title": "2011 年·浙江卷·理科",
+      "track": "science",
+      "year": 2011
     }
   ],
-  "revision": 10776,
+  "revision": 10781,
   "schema_version": 1,
   "sources": [
     {
@@ -57573,8 +57650,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0f1bb212c27a673e6c8b015370f6128d760de4f1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-zhejiang-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011浙江理.pdf",
       "regions": [],
       "source_id": "src-98fe82ea78e7744188147de76e380b7d908b8a178d8f7c8ec86fe3ee5cae4f0f",
