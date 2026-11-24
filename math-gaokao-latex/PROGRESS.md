@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 选项行距回修第三批：跨年 5 卷修复、4 卷回退；补上旧批次 provenance 还原（2026-11-24；`in_progress`）
+- 工具增强：`fix_option_spacing.py` 现可在旧批次工作目录缺失时，从 `项目/provenance.json` 还原 question-review / answer-solve / answer-review 三角色回执（保留原证据与页号，只改题面/答案摘要），再走 import → build → prepare → 沿用回执 → finalize；同时修正了回退路径（项目目录需带 `math-gaokao-latex/` 前缀）与 `carry_review` 的豁免按版本过滤（此前把解析版的 page-16 豁免复制到试题版导致 finalize 报越界）。
+- 已回修并 `FINALIZED`（5 卷，页数均不变，`validate-receipts --require-final` 全 OK）：`gk-2008-fujian-science`（b19，14 行）、`gk-2008-fujian-arts`（b18，12 行）、`gk-2010-hubei-science`（b94，9 行）、`gk-2007-chongqing-science`（b24，10 行）、`gk-2007-regular-sichuan-science`（b04，15 行）。
+- 页数变化、已回退到改动前并重新 `FINALIZED`（内容未变，列入整卷重审）：`gk-2009-chongqing-science`（b73，解析版 23→22）、`gk-2010-liaoning-science`（b98，印刷版 25→24）、`gk-2008-anhui-arts`（b07，5/22/7/16→4/20/6/16）、`gk-2007-regular-sichuan-arts`（b40，7/28/9/22→6/27/8/22）。
+- 审计复跑：629 卷中仍有 **133 卷**含独立分式选项（确定风险 **118 卷**、低风险 15 卷）；累计已回修 **20 卷**，待办 **113 卷**（另有 7 卷需整卷重审：安徽文、四川理、四川文、2009 重庆理、2010 辽宁理、2008 安徽文、2007 四川文）。
+- 全库：manifest revision 10979，complete 509、blocked 118、未绑定 149；627 卷报告待刷新（停在 626）。
+
 ### 2011 重庆卷（文科）：phase7-b35 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-chongqing-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-15a0dbea009642347db7851de16d099cf7097447b8f52d59a75d0b8cd3832d8b`，固定件 SHA-256 `0ddbe738e4414213612fb6f62ec0c5cd252d039abf560bae1f31610558f93a70`（511,430 bytes），2 页 A3 横向，印面页码 653、654。
 - 来源核对：文字层只作定位，题面、选项、四面体与椭圆图均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
