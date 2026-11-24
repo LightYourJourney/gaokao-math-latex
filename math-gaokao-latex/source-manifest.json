@@ -3884,6 +3884,14 @@
         "gk-2011-hunan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b29",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-hunan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3893,7 +3901,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "44ee8225-a318-41c6-9807-f81d8dfd5e1b",
+  "last_transaction_id": "0daa8d98-059c-41ee-a887-e53dc1489f18",
   "papers": [
     {
       "blocked_from": null,
@@ -45733,9 +45741,74 @@
       "title": "2011 年·湖南卷·理科",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_文科/figures/f2011_hunan_arts_q04_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_文科/figures/f2011_hunan_arts_q11_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖南卷_文科/figures/f2011_hunan_arts_q19_cone.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_hunan_arts",
+        "id": "gk-2011-hunan-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 673、674。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖南卷题号：选择 1—8、填空 9—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。1 B；2 C；3 A；4 C；5 A；6 C；7 B；8 B；9 2；10 40；11 15/4；12 6；13 (−4,−2)；14 3；15 (1) 5、(2) 1/6；16 (1) 1、(2) 16；17 (1) C=π/4、(2) 最大值 2，A=π/3、B=5π/12；18 (1) 频率 1/20,3/20,4/20,7/20,3/20,2/20、(2) 3/10；19 (1) 证明、(2) √2/12；20 (1) a₁=120、2≤n≤6 时 aₙ=130−10n、n≥7 时 aₙ=70(3/4)ⁿ⁻⁶、(2) 证明；21 (1) y²=4x（x≥0）或 y=0（x<0）、(2) 最小值 0；22 (1) a≤2 递增，a>2 时在 (0,x₁)、(x₂,+∞) 递增、(x₁,x₂) 递减，(2) 不存在。原页共 3 幅图：第 4 题三视图、第 11 题程序框图、第 19 题圆锥；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            9,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "湖南文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-hunan-arts",
+      "production_state": "complete",
+      "project_dir": "2011_湖南卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_湖南文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_湖南文_含解析.md",
+        "questions": "2011/2011_数学真题_湖南文_试题.md",
+        "solution_body": "2011/2011_数学真题_湖南文_解析正文.md"
+      },
+      "source_ids": [
+        "src-8e6942d025574f96dbba7da314a5ddcfe1976fdd3b1856d1c2525fe453eab851"
+      ],
+      "title": "2011 年·湖南卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 10791,
+  "revision": 10799,
   "schema_version": 1,
   "sources": [
     {
@@ -57900,8 +57973,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f759ffdecf605dc3362b865a46f3c75a68bf38af",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-hunan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011湖南文.pdf",
       "regions": [],
       "source_id": "src-8e6942d025574f96dbba7da314a5ddcfe1976fdd3b1856d1c2525fe453eab851",

@@ -1,0 +1,20 @@
+% 2011 年湖南卷文科第 11 题：程序框图（求四个数的平均数）。
+% 来源 PDF：普通高考/2011/2011湖南文.pdf，SHA-256 0982cbf095a3c71ebb0e1c16297a96391db09ef14484f81a1130924443ea395d。
+% 原页：第 1 页第 2 栏中部，书页码 673。
+\begin{tikzpicture}[>=stealth, semithick, font=\small]
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (start) at (0,0) {开始};
+  \node[draw, minimum width=3.4cm, minimum height=0.55cm] (in) at (0,-1.2) {输入 $x_1,x_2,x_3,x_4$};
+  \node[draw, minimum width=2.4cm, minimum height=0.5cm] (init) at (0,-2.4) {$i=1,\ x=0$};
+  \node[draw, minimum width=2.6cm, minimum height=0.55cm] (add) at (0,-3.7) {$x=x+x_i$};
+  \node[draw, minimum width=1.6cm, minimum height=0.5cm] (inc) at (2.9,-3.7) {$i=i+1$};
+  \node[draw, diamond, aspect=1.7, minimum width=1.4cm, minimum height=0.9cm] (test) at (0,-5.1) {$i<4$};
+  \node[draw, minimum width=2.0cm, minimum height=0.5cm] (div) at (0,-6.4) {$x=\dfrac x4$};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.6cm, minimum height=0.55cm] (out) at (0,-7.6) {输出 $x$};
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (stop) at (0,-8.7) {结束};
+  \draw[->] (start)--(in); \draw[->] (in)--(init); \draw[->] (init)--(add); \draw[->] (add)--(test);
+  \draw[->] (test.east) -| (inc.north) node[pos=0.25, above] {是};
+  \draw[->] (inc.south) |- (add.east);
+  \draw[->] (test.south)--(div.north) node[midway, right] {否};
+  \draw[->] (div)--(out); \draw[->] (out)--(stop);
+\end{tikzpicture}

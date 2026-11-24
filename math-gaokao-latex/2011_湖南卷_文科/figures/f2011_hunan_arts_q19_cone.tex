@@ -1,0 +1,23 @@
+% 2011 年湖南卷文科第 19 题：圆锥 PO，C 在弧 AB 上且 ∠CAB=30°，D 为 AC 中点。
+% 来源 PDF：普通高考/2011/2011湖南文.pdf，SHA-256 0982cbf095a3c71ebb0e1c16297a96391db09ef14484f81a1130924443ea395d。
+% 原页：第 2 页第 1 栏下部，书页码 674。示意。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=1.0]
+  \draw[thick] (0,3.2)--(-2,0);
+  \draw[thick] (0,3.2)--(2,0);
+  \draw[thick] (-2,0) arc (180:360:2 and 0.6);
+  \draw[dashed] (2,0) arc (0:180:2 and 0.6);
+  \draw[dashed] (0,3.2)--(0,0);
+  \coordinate (A) at (-2,0);
+  \coordinate (B) at (2,0);
+  \coordinate (C) at (1,0.866);
+  \coordinate (D) at (-0.5,0.433);
+  \draw[thick] (0,3.2)--(C);
+  \draw (A)--(C);
+  \draw (0,3.2)--(A); \draw (0,3.2)--(B);
+  \fill (A) circle (1.1pt) node[left] {$A$};
+  \fill (B) circle (1.1pt) node[right] {$B$};
+  \fill (C) circle (1.1pt) node[right] {$C$};
+  \fill (D) circle (1.1pt) node[below left] {$D$};
+  \fill (0,0) circle (1.1pt) node[below] {$O$};
+  \node[above] at (0,3.2) {$P$};
+\end{tikzpicture}
