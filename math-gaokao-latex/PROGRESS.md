@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 选项行距回修第六批：4 卷回修、1998 全国理页数变化回退（2026-11-24；`in_progress`）
+- 已回修并重新 `FINALIZED`（3 卷，页数不变、四 log 全 0、`validate-receipts --require-final` 全 OK）：`gk-1986-regular-guangdong-arts`（b58，13 行，早前已改未提交，本次一并封账）、`gk-2001-regular-shanghai-arts`（b82，6 行）、`gk-2001-regular-shanghai-science`（b83，6 行）。
+- 页数变化、已整批回退并重新 `FINALIZED`（内容未变，列入整卷重审）：`gk-1998-regular-national-science`（b71，12 行，解析版 29→28）。
+- 全库：manifest revision 11341，complete 511、blocked 118、未绑定 147；629 卷报告已提交（`08958e05`）。
+- 累计已回修 **26 卷**；整卷重审队列增至 **8 卷**（安徽文、四川理、四川文、2009 重庆理、2010 辽宁理、2008 安徽文、2007 四川文、1998 全国理）。
+
 ### 选项行距回修第三批：跨年 5 卷修复、4 卷回退；补上旧批次 provenance 还原（2026-11-24；`in_progress`）
 - 工具增强：`fix_option_spacing.py` 现可在旧批次工作目录缺失时，从 `项目/provenance.json` 还原 question-review / answer-solve / answer-review 三角色回执（保留原证据与页号，只改题面/答案摘要），再走 import → build → prepare → 沿用回执 → finalize；同时修正了回退路径（项目目录需带 `math-gaokao-latex/` 前缀）与 `carry_review` 的豁免按版本过滤（此前把解析版的 page-16 豁免复制到试题版导致 finalize 报越界）。
 - 已回修并 `FINALIZED`（5 卷，页数均不变，`validate-receipts --require-final` 全 OK）：`gk-2008-fujian-science`（b19，14 行）、`gk-2008-fujian-arts`（b18，12 行）、`gk-2010-hubei-science`（b94，9 行）、`gk-2007-chongqing-science`（b24，10 行）、`gk-2007-regular-sichuan-science`（b04，15 行）。
