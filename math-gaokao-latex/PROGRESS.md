@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 重庆卷（文科）：phase7-b35 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
+- 对象：`gk-2011-chongqing-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-15a0dbea009642347db7851de16d099cf7097447b8f52d59a75d0b8cd3832d8b`，固定件 SHA-256 `0ddbe738e4414213612fb6f62ec0c5cd252d039abf560bae1f31610558f93a70`（511,430 bytes），2 页 A3 横向，印面页码 653、654。
+- 来源核对：文字层只作定位，题面、选项、四面体与椭圆图均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 答案（独立推导，等级 D，非官方）：1 D；2 A；3 A；4 C；5 D；6 B；7 C；8 D；9 B；10 A；11 $240$；12 $\\dfrac43$；13 $y=2x$；14 $\\dfrac7{30}$；15 $2-\\log_23$；16 (1) $a_n=2^n$、(2) $S_n=2^{n+1}+n^2-2$；17 (1) $\\dfrac{16}{81}$、(2) $\\dfrac49$；18 (1) $\\pi$、(2) $\\dfrac{3\\sqrt3}2$；19 (1) $a=3$、$b=-12$、(2) 极大 $21$、极小 $-6$；20 (1) $\\dfrac{\\sqrt5}8$、(2) $\\dfrac{2\\sqrt{15}}7$；21 (1) $\\dfrac{x^2}4+\\dfrac{y^2}2=1$、(2) 存在 $F(\\sqrt{10},0)$，比值 $\\dfrac{\\sqrt2}2$。
+- 复核要点：第 9 题由左准线与渐近线交点得 $A,B$，左焦点在圆内化为 $b<a$，故 $1<e<\\sqrt2$；第 10 题高为 $\\sqrt2$、球半径 $1$，球心 $z=\\pm\\frac{\\sqrt2}2$，仅 $c=\\frac{\\sqrt2}2$ 可行，得 $x^2+y^2=\\frac12$、$OS=\\frac{\\sqrt{10}}2$；第 15 题令 $x=2^a,y=2^b,z=2^c$，由 $x+y=xy$ 得 $xy\\geqslant4$，$z=1+\\frac1{xy-1}\\leqslant\\frac43$；第 20 题取 $A(0,0,0)$、$C(2,0,0)$、$D(\\frac74,\\frac{\\sqrt{15}}4,0)$、$B(\\frac32,0,\\frac{\\sqrt3}2)$，体积 $\\frac{\\sqrt5}8$，二面角正切 $\\frac{2\\sqrt{15}}7$；第 21(2) 题 $P$ 在 $\\frac{x^2}{20}+\\frac{y^2}{10}=1$ 上，右准线恰为 $x=2\\sqrt{10}$。
+- 版式说明：选项全部用行内 $$\\frac$$；椭圆图复用重庆理同构版本并重写来源头，$N$ 点标注在曲线外侧。
+- 手工转录说明：子代理配额耗尽，本卷由主代理按 600 dpi 原页完成四份 Markdown，2 张 TikZ 图稿独立编译通过。
+- 验收：四版 4/19/6/14 页（共 43 页），四 log 全 0；review 43 页八类检查 **283 pass + 61 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b35.md`；build attempt `9b4f3f44-ed87-4491-bab0-c527c3c15550`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **627 卷 / 775 来源 / 473 批次**，complete 509、blocked 118，未绑定来源 **149**；manifest revision 10924。626 卷全量报告已提交（`951c491c`），本卷待下一里程碑刷新。
+- 选项行距审计仍为 137 卷待修（累计回修 15 卷），下一步继续批量回修。
+
 ### 选项行距回修第二批：2011 年 11 卷改 `\frac` 并沿用回执；安徽文、四川文因分页变化回退（2026-11-24；`in_progress`）
 - 工具：新增工作脚本 `math-gaokao-latex/.work/fix_option_spacing.py`，按卷执行「选项行 `\dfrac`→`\frac` → 重生成 → 重算 provenance 哈希 → 重建 → 比较 build/review 页数 → 页数不变则 prepare+沿用回执+finalize，页数变化则 git 回退并整卷待重审」。`carry_review.py` 的硬条件是四版页数逐版相等，缺页/缺检查项一律拒绝。
 - 已回修并重新 `FINALIZED`（11 卷，均页数不变、四 log 全 0、`validate-receipts --require-final` 全 OK）：
