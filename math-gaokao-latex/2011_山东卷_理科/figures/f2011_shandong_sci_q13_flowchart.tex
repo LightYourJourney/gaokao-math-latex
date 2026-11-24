@@ -1,0 +1,33 @@
+% 2011 年山东卷理科第 13 题：程序框图。
+% 来源 PDF：普通高考/2011/2011山东理.pdf，SHA-256 d0f409fd3fa82b12c210d587c8412d4c446946a201f87d124e2fc17c5a50db16。
+% 原页：第 1 页（A3 三栏）第 2 栏下部，书页码 689。
+% 重绘依据：照原页——自上而下「开始」→ 平行四边形「输入非负整数 l, m, n」→
+%   菱形「l^2+m^2+n^2=0?」：「是」向左下到矩形「y=105」，「否」向下到矩形「y=70l+21m+15n」；
+%   再由菱形「y>105?」判断：「是」向右到矩形「y=y-105」并回折上行，汇入「y>105?」上方的竖线；
+%   「否」向下经平行四边形「输出 y」到「结束」。y=105 支路的连线向右汇入「输出 y」上方的竖线。
+\begin{tikzpicture}[>=stealth, semithick, font=\small]
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (start) at (0,0) {开始};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=3.5cm, minimum height=0.55cm] (input) at (0,-1.15) {输入非负整数 $l$，$m$，$n$};
+  \node[draw, diamond, aspect=1.7, minimum width=3.0cm, minimum height=0.95cm] (test1) at (0,-2.55) {$l^2+m^2+n^2=0$};
+  \node[draw, minimum width=1.5cm, minimum height=0.55cm] (y105) at (-3.5,-4.15) {$y=105$};
+  \node[draw, minimum width=3.4cm, minimum height=0.55cm] (yval) at (0,-4.15) {$y=70l+21m+15n$};
+  \node[draw, diamond, aspect=1.7, minimum width=3.0cm, minimum height=0.95cm] (test2) at (0,-5.85) {$y>105$};
+  \node[draw, minimum width=2.2cm, minimum height=0.55cm] (dec) at (4.0,-5.85) {$y=y-105$};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.8cm, minimum height=0.55cm] (out) at (0,-7.3) {输出 $y$};
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (stop) at (0,-8.4) {结束};
+  % 主干
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (test1.north);
+  \draw[->] (test1.east) -| (yval.north) node[pos=0.25, right] {否};
+  \draw[->] (yval.south) -- (test2.north);
+  \draw[->] (test2.south) -- (out.north) node[midway, right] {否};
+  \draw[->] (out.south) -- (stop.north);
+  % 「是」支路：左侧 y=105，向下汇入「输出 y」上方的竖线
+  \draw[->] (test1.west) -| (y105.north) node[pos=0.25, above] {是};
+  \draw (y105.south) -- (y105.south |- out.north) -- (out.north);
+  % 回环：y=y-105 向左汇入「y>105?」上方竖线
+  \draw[->] (test2.east) -- (dec.west) node[midway, above] {是};
+  \draw (dec.north) -- (4.0,-4.75) -- (0,-4.75);
+\end{tikzpicture}

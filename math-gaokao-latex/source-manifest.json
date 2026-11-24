@@ -3812,6 +3812,14 @@
         "gk-2011-guangdong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b17",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-shandong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3821,7 +3829,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "71f74a94-df6f-4330-8428-da710f3dc4a1",
+  "last_transaction_id": "05801f95-3136-4cf9-9cc9-b8a2882d38e7",
   "papers": [
     {
       "blocked_from": null,
@@ -45008,9 +45016,82 @@
       "title": "2011 年·广东卷·文科",
       "track": "arts",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_山东卷_理科/figures/f2011_shandong_sci_q09_options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_山东卷_理科/figures/f2011_shandong_sci_q11_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_山东卷_理科/figures/f2011_shandong_sci_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_山东卷_理科/figures/f2011_shandong_sci_q19_polyhedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_山东卷_理科/figures/f2011_shandong_sci_q21_container.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_shandong_science",
+        "id": "gk-2011-shandong-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 689、690。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。山东卷题号：选择 1—12、填空 13—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。选择 1A 2D 3D 4D 5B 6C 7B 8A 9C 10B 11A 12D；13 68；14 4；15 x/((2ⁿ−1)x+2ⁿ)；16 2；17 (1) 2、(2) √15/4；18 (1) 0.55、(2) P(ξ=0)=0.1、P(ξ=1)=0.35、P(ξ=2)=0.4、P(ξ=3)=0.15，Eξ=1.6；19 (1) 证明、(2) 60°；20 (1) aₙ=2·3ⁿ⁻¹、(2) n 偶时 Sₙ=3ⁿ−1+(n/2)ln3，n 奇时 Sₙ=3ⁿ−1−ln2−((n−1)/2)ln3；21 (1) y=160π/r+4π(c−2)r²（0<r≤2）、(2) 3<c≤4.5 时 r=2，c>4.5 时 r=∛(20/(c−2))；22 (1) 证明 x₁²+x₂²=3、y₁²+y₂²=2、(2) 最大值 5/2、(3) 不存在。原页共 5 幅图：第 9 题四选项图象、第 11 题两矩形与视图标注、第 13 题程序框图、第 19 题多面体、第 21 题容器；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "山东理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-shandong-science",
+      "production_state": "complete",
+      "project_dir": "2011_山东卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_山东理_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_山东理_含解析.md",
+        "questions": "2011/2011_数学真题_山东理_试题.md",
+        "solution_body": "2011/2011_数学真题_山东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-9ce415d8fdba67a569c43048a13f617cddb5667ce5bfce8effe5162e5610f6b2"
+      ],
+      "title": "2011 年·山东卷·理科",
+      "track": "science",
+      "year": 2011
     }
   ],
-  "revision": 10744,
+  "revision": 10749,
   "schema_version": 1,
   "sources": [
     {
@@ -56887,8 +56968,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a6f71dc93e151bd93a2a29a60a42bf00b2085013",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-shandong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011山东理.pdf",
       "regions": [],
       "source_id": "src-9ce415d8fdba67a569c43048a13f617cddb5667ce5bfce8effe5162e5610f6b2",
