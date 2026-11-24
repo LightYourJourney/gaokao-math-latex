@@ -1,0 +1,13 @@
+% 2011 年浙江卷文科第 13 题：样本频率分布直方图。
+% 来源 PDF：普通高考/2011/2011浙江文.pdf，SHA-256 36931500dfd850579d93f0a685f0ccea25065c84c09db5157c451093d53b56f0。
+% 原页：第 1 页第 2 栏下部，书页码 711。组距 10；<60 分组高为 0.002,0.006,0.012。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, x=0.9cm, y=22cm]
+  \draw[->] (0,0)--(10,0) node[right] {成绩/分};
+  \draw[->] (0,0)--(0,0.032) node[above] {$\dfrac{\text{频率}}{\text{组距}}$};
+  \foreach \x/\h in {3/0.002,4/0.006,5/0.012,6/0.024,7/0.028}{
+    \draw (\x-0.5,0) rectangle (\x+0.5,\h);
+  }
+  \foreach \x in {3,4,5,6,7} \node[below] at (\x,0) {$\x0$};
+  \foreach \y in {0.002,0.006,0.012,0.024,0.028} \node[left] at (0,\y) {\y};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 浙江卷（文科）：phase7-b27 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
+- 对象：`gk-2011-zhejiang-arts`，**22 个题号**（选择 1—10、填空 11—17、解答 18—22）；固定来源 `src-eb39ec6c4fb7e7f31bc1f0ad8da3a86e82d1adb155b6da6670a61218348ec2c2`，固定件 SHA-256 `36931500dfd850579d93f0a685f0ccea25065c84c09db5157c451093d53b56f0`（636,999 bytes），2 页 A3 横向，印面页码 711、712。
+- 来源核对：文字层只作定位，题面、选项、三视图四选项、四函数图象、频率分布直方图、程序框图、三角函数图象、三棱锥与抛物线均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—17、解答题 18—22。
+- 答案（独立推导，等级 D，非官方）：1 C；2 C；3 A；4 B；5 D；6 D；7 B；8 D；9 C；10 D；11 $-1$；12 $1$；13 $600$；14 $5$；15 $\left[\dfrac\pi6,\dfrac{5\pi}6\right]$；16 $\dfrac{2\sqrt3}3$；17 $3$；18 (1) $T=6$、$\varphi=\dfrac\pi6$、(2) $A=\sqrt3$；19 (1) $a_n=na$、(2) $\dfrac1{a_2}+\dfrac1{a_{2^2}}+\cdots+\dfrac1{a_{2^n}}<\dfrac1{a_1}$；20 (1) 证明、(2) $90^\circ$；21 (1) 增 $(0,a)$、减 $(a,+\infty)$、(2) $[\mathrm e,\mathrm e^2+1]$；22 (1) $\dfrac{11}4$、(2) 存在，$P\left(\pm2^{3/4},2\sqrt2\right)$。
+- 复核要点：第 9 题与理科同题，椭圆截得弦为 $AB$ 的中间三分之一，得 $b^2=\dfrac12$；第 10 题由 $x=-1$ 为 $f(x)\mathrm e^x$ 的极值点得 $c=a$，故开口向下时 $y$ 截距必为负，（D）不可能；第 13 题 $<60$ 分频率为 $10(0.002+0.006+0.012)=0.20$，人数 $3000\times0.20=600$；第 19 题和的下标为 $2,2^2,\dots,2^n$，故和为 $\dfrac1a(1-2^{-n})<\dfrac1a$；第 21(2) 分 $a\leqslant1$、$1<a\leqslant\mathrm e$、$a>\mathrm e$ 讨论，得 $[\mathrm e,\mathrm e^2+1]$；第 22(2) 设 $P(t,t^2)$，由 $AB$ 中点在切线上化得 $(t^2+3)(t^4-8)=0$，故 $t^2=2\sqrt2$。
+- 手工转录说明：子代理配额耗尽，本卷由主代理按 600 dpi 原页完成四份 Markdown，并新建 7 张 TikZ 图稿（三视图四选项、四图象、直方图、程序框图、三角函数图象、三棱锥、抛物线与圆），均独立 xelatex 编译通过。
+- 验收：四版 6/21/8/17 页（共 52 页），四 log 全 0；review 52 页八类检查 **363 pass + 53 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b27.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `91aea34c-bf95-45ba-ab88-9bbd06e2a3ac`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **619 卷 / 775 来源 / 465 批次**，complete 501、blocked 118，未绑定来源 **157**；manifest revision 10786。
+- 修改文件：`2011/2011_数学真题_浙江文_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_浙江卷_文科/`（questions/answers/answers_short、四版入口、7 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b27.md`、`PROGRESS.md`。
+- 下一步：继续 2011 湖南文理、福建文理、辽宁文理等未绑定来源。
+
 ### 2011 浙江卷（理科）：phase7-b26 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-zhejiang-science`，**22 个题号**（选择 1—10、填空 11—17、解答 18—22）；固定来源 `src-98fe82ea78e7744188147de76e380b7d908b8a178d8f7c8ec86fe3ee5cae4f0f`，固定件 SHA-256 `0239778f574bc3ce6d7aca5024aa6333f80d131abaf699f79c46472394f8cd65`（608,964 bytes），2 页 A3 横向，印面页码 709、710。
 - 来源核对：文字层只作定位，题面、选项、三视图四选项、程序框图、三棱锥与抛物线均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。

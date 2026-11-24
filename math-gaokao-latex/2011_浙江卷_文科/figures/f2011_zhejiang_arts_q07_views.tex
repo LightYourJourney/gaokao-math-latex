@@ -1,0 +1,39 @@
+% 2011 年浙江卷文科第 7 题：三视图与四个直观图选项。
+% 来源 PDF：普通高考/2011/2011浙江文.pdf，SHA-256 36931500dfd850579d93f0a685f0ccea25065c84c09db5157c451093d53b56f0。
+% 原页：第 1 页第 1 栏，书页码 711。示意图。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=0.85]
+  \draw[thick] (0,0) rectangle (1.6,1.6);
+  \draw[thick] (0,0.8)--(1.6,0.8);
+  \node[below] at (0.8,-0.1) {正视图};
+  \draw[thick] (2.4,0)--(2.4,1.6)--(3.3,1.6)--(3.8,0.9)--(3.8,0)--cycle;
+  \node[below] at (3.1,-0.1) {侧视图};
+  \draw[thick] (0.2,-2.4) rectangle (1.8,-0.8);
+  \draw[thick] (0.2,-1.6)--(1.8,-1.6);
+  \node[below] at (1.0,-2.5) {俯视图};
+  % 选项
+  \begin{scope}[xshift=4.2cm, yshift=-2.4cm, scale=0.5]
+    \draw[thick] (0,0)--(2,0)--(2,1.2)--(0,1.2)--cycle;
+    \draw[thick] (0,1.2)--(0.5,2.4)--(2.6,1.5)--(2,1.2);
+    \draw[thick] (2,0)--(2.6,0.3)--(2.6,1.5);
+    \node[below] at (1,-0.4) {(A)};
+  \end{scope}
+  \begin{scope}[xshift=7.4cm, yshift=-2.4cm, scale=0.5]
+    \draw[thick] (0,0)--(2,0)--(2,1.2)--(0,1.2)--cycle;
+    \draw[thick] (0,1.2)--(2,2.0)--(2.6,1.5)--(2,1.2);
+    \draw[thick] (2,0)--(2.6,0.3)--(2.6,1.5);
+    \node[below] at (1,-0.4) {(B)};
+  \end{scope}
+  \begin{scope}[xshift=10.6cm, yshift=-2.4cm, scale=0.5]
+    \draw[thick] (0,0)--(2,0)--(2,1.2)--(0,1.2)--cycle;
+    \draw[thick] (0.2,1.2)--(1.0,2.4)--(1.8,1.2);
+    \draw[thick] (2,0)--(2.6,0.3)--(2.6,1.5)--(2,1.2);
+    \node[below] at (1,-0.4) {(C)};
+  \end{scope}
+  \begin{scope}[xshift=13.8cm, yshift=-2.4cm, scale=0.5]
+    \draw[thick] (0,0)--(2,0)--(2,1.2)--(0,1.2)--cycle;
+    \draw[thick] (0,1.2)--(2,1.2)--(2,2.0)--(0,2.0)--cycle;
+    \draw[thick] (2,0)--(2.6,0.3)--(2.6,2.3)--(2,2.0);
+    \draw[thick] (0,2.0)--(0.6,2.3)--(2.6,2.3);
+    \node[below] at (1,-0.4) {(D)};
+  \end{scope}
+\end{tikzpicture}

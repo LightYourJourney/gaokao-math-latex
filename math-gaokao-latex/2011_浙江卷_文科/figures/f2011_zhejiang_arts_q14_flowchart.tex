@@ -1,0 +1,22 @@
+% 2011 年浙江卷理科第 12 题：程序框图。
+% 来源 PDF：普通高考/2011/2011浙江理.pdf，SHA-256 0239778f574bc3ce6d7aca5024aa6333f80d131abaf699f79c46472394f8cd65。
+% 原页：第 1 页第 2 栏中部，书页码 709。
+\begin{tikzpicture}[>=stealth, semithick, font=\small]
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (start) at (0,0) {开始};
+  \node[draw, minimum width=1.4cm, minimum height=0.5cm] (k2) at (0,-1.1) {$k=2$};
+  \node[draw, minimum width=1.8cm, minimum height=0.5cm] (inc) at (0,-2.2) {$k=k+1$};
+  \node[draw, minimum width=1.8cm, minimum height=0.5cm] (a) at (0,-3.3) {$a=4^k$};
+  \node[draw, minimum width=1.8cm, minimum height=0.5cm] (b) at (0,-4.4) {$b=k^4$};
+  \node[draw, diamond, aspect=1.7, minimum width=1.6cm, minimum height=0.9cm] (test) at (0,-5.8) {$a>b$};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.6cm, minimum height=0.55cm] (out) at (0,-7.2) {输出 $k$};
+  \node[draw, rounded corners=0.12cm, minimum width=1.2cm, minimum height=0.5cm] (stop) at (0,-8.4) {结束};
+  \draw[->] (start.south)--(k2.north);
+  \draw[->] (k2.south)--(inc.north);
+  \draw[->] (inc.south)--(a.north);
+  \draw[->] (a.south)--(b.north);
+  \draw[->] (b.south)--(test.north);
+  \draw[->] (test.south)--(out.north) node[midway, right] {是};
+  \draw[->] (out.south)--(stop.north);
+  \draw[->] (test.east) -- ++(1.4,0) |- (inc.east) node[pos=0.25, right] {否};
+\end{tikzpicture}
