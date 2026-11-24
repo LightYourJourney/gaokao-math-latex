@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 辽宁卷（理科）：phase7-b32 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
+- 对象：`gk-2011-liaoning-science`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22；第 22 题三选一）；固定来源 `src-51140830085fa26e75fa58f8bb24a3a9bb835fc7e8e88d61489bb96871d56fbd`，固定件 SHA-256 `1fe81a3887c7782547f2dc987a468a7092be184781a1190af911ebb93a28e88e`（610,386 bytes），2 页 A3 横向，印面页码 681、682。
+- 来源核对：文字层只作定位，题面、选项、程序框图、四棱锥、正切图象、正方形、两椭圆与圆均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—12、填空题 13—16、解答题 17—22。
+- 答案（独立推导，等级 D，非官方）：1 B；2 A；3 C；4 D；5 B；6 C；7 A；8 D；9 D；10 B；11 B；12 C；13 $2$；14 $0.254$；15 $2\\sqrt3$；16 $\\sqrt3$；17 (1) $a_n=2-n$、(2) $\\dfrac{n}{2^{n-1}}$；18 (1) 证明、(2) $-\\dfrac{\\sqrt{15}}5$；19 (1) $P(X=0)=\\frac1{70}$、$P(X=1)=\\frac8{35}$、$P(X=2)=\\frac{18}{35}$、$P(X=3)=\\frac8{35}$、$P(X=4)=\\frac1{70}$，$EX=2$，(2) 甲 $400$、$57.25$，乙 $412$、$56$，种乙；20 (1) $\\dfrac34$、(2) $\\dfrac{\\sqrt2}2<e<1$ 时存在，$t=-\\dfrac{a(1-e^2)}{e^2}$；21 (1) $a\\leqslant0$ 递增，$a>0$ 增 $\\left(0,\\frac1a\\right)$ 减 $\\left(\\frac1a,+\\infty\\right)$、(2)(3) 证明；22 (1) A 证明、B $a=3,b=1$、C 证明，(2) A 证明、B $\\dfrac25$、C $[5-\\sqrt3,6]$。
+- 复核要点：第 8 题建系取 $D(0,0,0)$、$S(0,0,1)$，$AB$ 与 $SC$ 夹角 $45^\\circ$ 而 $DC$ 与 $SA$ 夹角 $90^\\circ$，故（D）错误；第 12 题由 $SC$ 为直径得 $\\angle SAC=\\angle SBC=90^\\circ$，取 $SA=SB=2\\sqrt3$、$AB=\\sqrt3$ 算得 $V=\\sqrt3$；第 16 题由图得相邻渐近线 $x=-\\frac{3\\pi}8$、$x=\\frac\\pi8$，周期 $\\frac\\pi2$、$\\omega=2$、$\\varphi=\\frac\\pi4$、$A=1$，故 $f\\left(\\frac\\pi{24}\\right)=\\sqrt3$；第 18(2) 题取 $D(0,0,0)$、$PA$ 方向为 $z$ 轴，两半平面法向量夹角余弦 $\\frac{\\sqrt{15}}5$，按半平面取向取负；第 20(2) 题由 $BO\\parallel AN$ 得 $t=\\frac{ab}{b-B}=-\\frac{a(1-e^2)}{e^2}$，$|t|<a$ 等价于 $e>\\frac{\\sqrt2}2$；第 21(3) 题由 (2) 得 $f\\left(\\frac2a-x_1\\right)>f(x_2)$，结合 $f$ 在 $\\left(\\frac1a,+\\infty\\right)$ 递减得 $x_0>\\frac1a$。
+- 版式说明：第 19 题「附」中的样本方差公式拆为 `aligned` 两行，第 7 题二倍角推导拆为四行，消除 2—3 pt 的 Overfull；第 16 题正切图象重绘后刻度 $\\frac\\pi8$、$\\frac{3\\pi}8$ 与曲线、渐近线互不遮挡。
+- 手工转录说明：子代理配额耗尽，本卷由主代理按 600 dpi 原页完成四份 Markdown，并新建 7 张 TikZ 图稿（程序框图、四棱锥、俯视图、正切图象、正方形与 $P$、$Q$、两椭圆、圆），均独立 xelatex 编译通过。
+- 验收：四版 7/26/9/20 页（共 62 页），四 log 全 0；review 62 页八类检查 **422 pass + 74 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b32.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `f8ac3a7c-8613-4976-a1ec-2bf3b071c19e`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **624 卷 / 775 来源 / 470 批次**，complete 506、blocked 118，未绑定来源 **152**；manifest revision 10823。
+- 修改文件：`2011/2011_数学真题_辽宁理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_辽宁卷_理科/`（questions/answers/answers_short、四版入口、7 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b32.md`、`PROGRESS.md`。
+- 下一步：继续 2011 辽宁文、重庆文理、陕西文理、上海理等未绑定来源。
+
 ### 2011 福建卷（文科）：phase7-b31 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-fujian-arts`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-1dc27e88b6d393fa9737e7e6d382e6b6dafa5c946ee45c4970c698a4069eeaec`，固定件 SHA-256 `e649bdc736a215d4e41e02c6a7945953aca84a87a23e6a903596d61025cdf322`（512,367 bytes），2 页 A3 横向，印面页码 661、662。
 - 来源核对：文字层只作定位，题面、选项、程序框图、矩形、正方体、抛物线与四棱锥均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。

@@ -1,0 +1,26 @@
+% 2011 年辽宁卷理科第 6 题：程序框图。
+% 来源 PDF：普通高考/2011/2011辽宁理.pdf，SHA-256 1fe81a3887c7782547f2dc987a468a7092be184781a1190af911ebb93a28e88e。
+% 原页：第 1 页第 1 栏下部，书页码 681。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, node distance=6mm]
+  \node[draw, rounded corners=0.12cm, minimum width=1.5cm, minimum height=0.5cm] (start) {开始};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.8cm, minimum height=0.55cm, below=of start] (in) {输入 $n$};
+  \node[draw, minimum width=3.6cm, minimum height=0.55cm, below=of in] (init)
+        {$s=0$，$t=1$，$k=1$，$p=1$};
+  \node[draw, diamond, aspect=2.1, minimum width=2.0cm, minimum height=0.95cm, below=of init] (test) {$k<n$};
+  \node[draw, minimum width=1.8cm, minimum height=0.5cm, below=of test] (p) {$p=s+t$};
+  \node[draw, minimum width=2.2cm, minimum height=0.5cm, below=of p] (st) {$s=t$，$t=p$};
+  \node[draw, minimum width=1.8cm, minimum height=0.5cm, below=of st] (k) {$k=k+1$};
+  \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.8cm, minimum height=0.55cm, below=of k] (out) {输出 $p$};
+  \node[draw, rounded corners=0.12cm, minimum width=1.5cm, minimum height=0.5cm, below=of out] (stop) {结束};
+  \draw[->] (start)--(in);
+  \draw[->] (in)--(init);
+  \draw[->] (init)--(test);
+  \draw[->] (test)--node[right] {是} (p);
+  \draw[->] (p)--(st);
+  \draw[->] (st)--(k);
+  \draw[->] (k.west) -- ++(-1.4,0) |- (test.west);
+  \draw[->] (test.east) -- ++(1.6,0) node[pos=0.4, above] {否} |- (out.east);
+  \draw[->] (out)--(stop);
+\end{tikzpicture}
