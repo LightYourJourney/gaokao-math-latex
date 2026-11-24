@@ -11,6 +11,13 @@
 - 审计复跑：629 卷中仍有 **133 卷**含独立分式选项（确定风险 **118 卷**、低风险 15 卷）；累计已回修 **20 卷**，待办 **113 卷**（另有 7 卷需整卷重审：安徽文、四川理、四川文、2009 重庆理、2010 辽宁理、2008 安徽文、2007 四川文）。
 - 全库：manifest revision 10979，complete 509、blocked 118、未绑定 149；627 卷全量报告已刷新并提交（`998967be`）。
 
+### 选项行距回修第四批：跨年代 19 卷修复、多卷批次整批回退（2026-11-24；`in_progress`）
+- 批处理工具修正：`refresh_prov.py` 改为按卷读取各自题面（此前同批次多卷共用一份题面，导致哈希串卷）；`fix_option_spacing.py` 新增 `batch:` 模式，批次内所有卷同时转换、重建、沿用回执，避免多卷批次只填半批；新增 `carry_review_batch.py` 与 `revert_papers.py`。
+- 已回修并 `FINALIZED`（19 卷，页数均不变、四 log 全 0、`validate-receipts --require-final` 全 OK）：`gk-1985-regular-shanghai-science`、`gk-1986-regular-shanghai-arts/-science`、`gk-1988-regular-national-arts`、`gk-1988-regular-shanghai`、`gk-2002-regular-national-old-arts/-science`、`gk-2007-jiangxi-arts/-science`、`gk-2007-liaoning-arts/-science`、`gk-2007-newcurriculum-science`、`gk-2007-regular-anhui-arts`、`gk-2007-regular-guangdong-arts`、`gk-2007-regular-shandong-arts`、`gk-2007-regular-tianjin-arts`、`gk-2007-shaanxi-arts`。
+- 整批回退（页数变化，不沿用旧回执）：`phase2-b89`（2002 上海文 解析 20→19）、`phase2-b90`（2002 全国新课程理 5/22/7/18→4/21/6/18）、`phase2-b92`（2003 全国新课程文 5/20/7/16→4/18/6/16、旧课程文 印刷 16→15）；另 `gk-2007-chongqing-arts`、`gk-2007-hunan-arts` 单卷回退。以上均还原改动、重建并重新 `FINALIZED`。
+- 审计复跑：630 卷中仍有 **114 卷**含独立分式选项（确定风险 **99 卷**、低风险 15 卷）；累计已回修 **22 卷**，待办 **92 卷**，另有 7 卷需整卷重审（安徽文、四川理、四川文、2009 重庆理、2010 辽宁理、2008 安徽文、2007 四川文）。
+- 全库：manifest revision 11219+，complete 510、blocked 118、未绑定 148；628 卷报告待刷新（停在 627）。
+
 ### 2011 陕西卷（理科）：phase7-b36 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-shaanxi-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21；第 15 题三选一）；固定来源 `src-716dd8257cfb6baace44a20731ca1b531cfa19a82d31185a46661a6dbc41bae5`，固定件 SHA-256 `04dab6de0e3ee6223a1cbc126f7f83ae354d2b31201a14db1f31c8477d8a3bed`（574,032 bytes），2 页 A3 横向，印面页码 693、694。
 - 来源核对：文字层只作定位；第 3 题四个图象、第 5 题三视图、第 8 题框图、第 9 题散点与回归直线、第 15B 题四边形、第 16 题折叠图、第 17 题圆、第 19 题指数曲线点列、第 20 题路径图均按 600 dpi 逐栏核对。原页未印分值、无答案页，全部记「原页未标」，不补。
