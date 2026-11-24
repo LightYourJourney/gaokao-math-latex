@@ -1,0 +1,13 @@
+% 2011 年湖北卷文科第 5 题：容量 200 的样本频率分布直方图。
+% 来源 PDF：普通高考/2011/2011湖北文.pdf，SHA-256 97bda477ec8baea4f3f31a9b6013a77e9a4bcd14f462013754d52c02ff5d1770。
+% 原页：第 1 页第 1 栏中部，书页码 669。各组距为 2。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, x=0.62cm, y=3.2cm]
+  \draw[->] (0,0) -- (13,0) node[right] {样本数据};
+  \draw[->] (0,0) -- (0,0.22) node[above] {$\dfrac{\text{频率}}{\text{组距}}$};
+  \foreach \x/\h in {1/0.02,3/0.02,5/0.05,7/0.15,9/0.19,11/0.09}{
+    \draw (\x-1,0) rectangle (\x+1,\h);
+  }
+  \foreach \x in {0,2,4,6,8,10,12} \node[below] at (\x,0) {\x};
+  \foreach \y in {0.02,0.05,0.15,0.19} \node[left] at (0,\y) {\y};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

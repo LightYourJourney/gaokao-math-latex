@@ -3852,6 +3852,14 @@
         "gk-2011-hubei-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b25",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-hubei-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3861,7 +3869,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "6b0b4356-dcd1-4779-9c07-dee82ed14177",
+  "last_transaction_id": "2eb4ea02-d456-4cb4-b8d3-5fc5867794e2",
   "papers": [
     {
       "blocked_from": null,
@@ -45409,9 +45417,70 @@
       "title": "2011 年·湖北卷·理科",
       "track": "science",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖北卷_文科/figures/f2011_hubei_arts_q05_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_湖北卷_文科/figures/f2011_hubei_arts_q18_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_hubei_arts",
+        "id": "gk-2011-hubei-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 669、670。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖北卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。1 A；2 C；3 D；4 C；5 B；6 A；7 D；8 B；9 B；10 C；11 20；12 17；13 28/145；14 1 或 17/7；15 6；10000；16 (1) 5、(2) 11/16；17 (1) bₙ=5·2ⁿ⁻³、(2) 证明；18 (1) 证明、(2) 45°；19 (1) v(x)=60（0≤x≤20）、(200−x)/3（20<x≤200），(2) x=100 时最大约 3333 辆/小时；20 (1) a=−2、b=5、l:y=x−2、(2) (−1/4,0)；21 (1) x²−y²/m=a²，m>0 双曲线、−1<m<0 椭圆、m=−1 圆、m<−1 椭圆，(2) 存在条件 [(1−√5)/2,0)∪(0,(1+√5)/2]，m<0 时 tan∠=2、m>0 时 −2。原页共 2 幅图：第 5 题频率分布直方图、第 18 题正三棱柱；其余各题原页无图，未补绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖北卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖北文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-hubei-arts",
+      "production_state": "complete",
+      "project_dir": "2011_湖北卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_湖北文_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_湖北文_含解析.md",
+        "questions": "2011/2011_数学真题_湖北文_试题.md",
+        "solution_body": "2011/2011_数学真题_湖北文_解析正文.md"
+      },
+      "source_ids": [
+        "src-6f6e194abddb56676646e70761dd450e520909513ec18f2ea857e9b58ee98df4"
+      ],
+      "title": "2011 年·湖北卷·文科",
+      "track": "arts",
+      "year": 2011
     }
   ],
-  "revision": 10771,
+  "revision": 10776,
   "schema_version": 1,
   "sources": [
     {
@@ -57528,8 +57597,8 @@
       "exam_type": "regular",
       "git_blob_oid": "389b00e74f5870b883bac16154f4182fe6bbc4ed",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-hubei-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011湖北文.pdf",
       "regions": [],
       "source_id": "src-6f6e194abddb56676646e70761dd450e520909513ec18f2ea857e9b58ee98df4",

@@ -1,0 +1,27 @@
+% 2011 年湖北卷文科第 18 题：正三棱柱 ABC-A1B1C1，E 在 AA1、F 在 BB1。
+% 来源 PDF：普通高考/2011/2011湖北文.pdf，SHA-256 97bda477ec8baea4f3f31a9b6013a77e9a4bcd14f462013754d52c02ff5d1770。
+% 原页：第 1 页第 3 栏中部，书页码 669。底面边长 2，侧棱 3√2。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=0.95]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3.0,0);
+  \coordinate (C) at (1.5,1.0);
+  \coordinate (A1) at (0,3.0);
+  \coordinate (B1) at (3.0,3.0);
+  \coordinate (C1) at (1.5,4.0);
+  \coordinate (E) at ($(A)!0.667!(A1)$);
+  \coordinate (F) at ($(B)!0.333!(B1)$);
+  \draw[thick] (A)--(B)--(C)--cycle;
+  \draw[thick] (A1)--(B1)--(C1)--cycle;
+  \draw[thick] (A)--(A1) (B)--(B1) (C)--(C1);
+  \draw (C)--(F);
+  \draw (C1)--(E);
+  \draw (E)--(F);
+  \fill (E) circle (1.2pt) node[left] {$E$};
+  \fill (F) circle (1.2pt) node[right] {$F$};
+  \node[left] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[above] at (C1) {$C_1$};
+\end{tikzpicture}
