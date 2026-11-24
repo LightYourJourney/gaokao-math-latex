@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 广东卷（文科）：phase7-b20 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
+- 对象：`gk-2011-guangdong-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-035327ae29b318d6b68aee76d84e9ed3ae50c5aaa0ef967f203cc03d6fc8aa8d`，固定件 SHA-256 `b42cd0aaa193fefb6dcb39d1ae186d536a83fafbd4a64975deafbea5613d98ce`（514,459 bytes），2 页 A3 横向。
+- 来源核对：文字层只作定位，题面、选项、三视图、梯形、圆柱切割体均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—10、填空题 11—15、解答题 16—21。
+- 答案（独立推导，等级 D，非官方）：1A 2C 3B 4C 5D 6B 7D 8A 9C 10B；11 $2$；12 $-9$；13 $0.5$；$0.53$；14 $\left(1,\dfrac{2\sqrt5}5\right)$；15 $7:5$；16 (1) $-1$、(2) $\dfrac{63}{65}$；17 (1) $x_6=90$、$s=7$、(2) $\dfrac25$；18 (1)(2) 证明；19 见下；20 (1) $a_n=\dfrac{nb^n}{b^{n-1}+b^{n-2}+\cdots+b+1}$、(2) 证明；21 (1) $y^2=4(x+1)$、(2) 最小值 $3$，此时 $H\left(-\dfrac34,-1\right)$、(3) $k\neq0$。
+- 第 19 题结论：记 $x_{1,2}=\dfrac{1\mp\sqrt{(1-3a)/(1-a)}}{2a}$，$0<a<\dfrac13$ 时 $f$ 在 $(0,x_1)$、$(x_2,+\infty)$ 上递增、在 $(x_1,x_2)$ 上递减；$\dfrac13\leqslant a\leqslant1$ 时在 $(0,+\infty)$ 上递增；$a>1$ 时记 $x_3=\dfrac{1+\sqrt{(3a-1)/(a-1)}}{2a}$，在 $(0,x_3)$ 上递增、在 $(x_3,+\infty)$ 上递减。
+- 版式修正：第 17 题「一人取自 $\{70,72,70,72\}$」的不可断长公式造成 1168 badness 的 Underfull；第 19 题最终答案过长造成 10000 badness 的 Underfull。已把第 17 题改写为文字分述、第 19 题答案先定义 $x_{1,2},x_3$ 再分段叙述，两处均消除。
+- 图稿 3 张（Q9 三视图、Q15 梯形、Q18 圆柱切割体），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 验收：四版 5/29/7/23 页（共 64 页），四 log 全 0；review 64 页八类检查 **418 pass + 94 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b20.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `4c0acc3e-2564-4234-b1c8-e6441941a113`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **611 卷 / 775 来源 / 457 批次**，complete 493、blocked 118，未绑定来源 **165**；manifest revision 10744。
+- 修改文件：`2011/2011_数学真题_广东文_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_广东卷_文科/`（questions/answers/answers_short、四版入口、3 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b20.md`、`PROGRESS.md`。
+- 下一步：继续 2011 山东理、江苏、江西文理等未绑定来源。
+
 ### 2011 广东卷（理科）：phase7-b19 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-guangdong-science`，**21 个题号**（选择 1—8、填空 9—14、解答 15—21）；固定来源 `src-3c3a06ff823a97001f57a28bf1dfcde509098c6bf30587ef1a9e96d190571989`，固定件 SHA-256 `676f6eb7aaa62d199da64d67e0951301d980eb1e4d82193579afc4a4637ac874`（517,718 bytes），2 页 A3 横向。
 - 来源核对：文字层只作定位，题面、选项、三视图、圆与切线割线、四棱锥均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
