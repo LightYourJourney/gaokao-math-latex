@@ -4,11 +4,11 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**624**；生产状态：blocked 118，complete 506
-- 批次总数：**470**；manifest 状态：closed 373，closed_with_blockers 97
-- 正式复核门禁：FINALIZED 470
-- 已编译版本：2496/2496；构建回执状态：succeeded 624
-- review 回执状态：passed 624
+- 试卷总数：**625**；生产状态：blocked 118，complete 507
+- 批次总数：**471**；manifest 状态：closed 374，closed_with_blockers 97
+- 正式复核门禁：FINALIZED 471
+- 已编译版本：2500/2500；构建回执状态：succeeded 625
+- review 回执状态：passed 625
 - 问题总账：1523 条，未解决问题：362，阻塞完成 261。
 - 回执日志警告汇总（包含待复核回执）：Overfull 37，Underfull 131，豁免记录 168。
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
