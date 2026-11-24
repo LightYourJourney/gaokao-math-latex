@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 广东卷（理科）：phase7-b19 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
+- 对象：`gk-2011-guangdong-science`，**21 个题号**（选择 1—8、填空 9—14、解答 15—21）；固定来源 `src-3c3a06ff823a97001f57a28bf1dfcde509098c6bf30587ef1a9e96d190571989`，固定件 SHA-256 `676f6eb7aaa62d199da64d67e0951301d980eb1e4d82193579afc4a4637ac874`（517,718 bytes），2 页 A3 横向。
+- 来源核对：文字层只作定位，题面、选项、三视图、圆与切线割线、四棱锥均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
+- 结构（按原页）：选择题 1—8、填空题 9—14、解答题 15—21。
+- 答案（独立推导，等级 D，非官方）：1B 2C 3D 4A 5C 6D 7B 8A；9 $[1,+\infty)$；10 $84$；11 $10$；12 $2$；13 $185$；14 $\left(1,\dfrac{2\sqrt5}5\right)$；15 $\sqrt{35}$；16 (1) $\sqrt2$、(2) $\dfrac{16}{65}$；17 (1) $35$ 件、(2) 约 $14$ 件、(3) $P(\xi=0)=\dfrac3{10}$、$P(\xi=1)=\dfrac35$、$P(\xi=2)=\dfrac1{10}$，$E\xi=\dfrac45$；18 (1) 证明、(2) $-\dfrac{\sqrt{21}}7$；19 (1) $\dfrac{x^2}4-y^2=1$、(2) 最大值 $2$，此时 $P\left(\dfrac{6\sqrt5}5,-\dfrac{2\sqrt5}5\right)$；20 (1) $b\neq2$ 时 $a_n=\dfrac{nb^n(b-2)}{b^n-2^n}$，$b=2$ 时 $a_n=2$、(2) 证明；21 (1)(2) 证明、(3) $\varphi_{\min}=1$、$\varphi_{\max}=\dfrac54$。
+- 解析器兼容：第 10 题答案行后紧接行间公式，被 `parse_answer_points` 判为「引子未写完」；已把阐释公式改为另起「**解析**」段，答案行仍在段末。解析版/印刷版各 1 处 109.5pt/11.6pt Overfull 已用 `aligned` 两行拆开。
+- 图稿 3 张（Q7 三视图、Q15 圆与切线割线、Q18 四棱锥），全部 TikZ 矢量重绘，`expected_occurrences` 均为 2；其余各题原页无图，未补绘。
+- 验收：四版 6/31/8/23 页（共 68 页），四 log 全 0；review 68 页八类检查 **445 pass + 99 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b19.md`，批次结论 `closed`，内容候选 `eligible_complete`；build attempt `d1b819b7-5fda-499c-a092-7daff4006aed`）。
+- 全量门禁：provenance / solution_sources / validate-receipts 与三套生成器 `--check` 均通过。
+- 全库（本卷封账后）：manifest **610 卷 / 775 来源 / 456 批次**，complete 492、blocked 118，未绑定来源 **166**；manifest revision 10736。
+- 修改文件：`2011/2011_数学真题_广东理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_广东卷_理科/`（questions/answers/answers_short、四版入口、3 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b19.md`、`PROGRESS.md`。
+- 下一步：继续 2011 广东文、山东理、江苏等未绑定来源。
+
 ### 2011 山东卷（文科）：phase7-b18 新卷转录、四版构建与视觉审查收口（2026-11-24；`closed`）
 - 对象：`gk-2011-shandong-arts`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-2e0686ad7a7f4956d47a8fcbb37d4bf2429708dad881a4623df2fb1b758a1820`，固定件 SHA-256 `bf61cf7bb39a3ccfc57735cd2a7ab34387cbfa6bc86a5e7f8246e13292b0e023`（528,078 bytes），2 页 A3 横向，印面页码 691、692。
 - 来源核对：文字层只作定位，题面、选项、四联图象、三视图、程序框图、四棱台、容器与椭圆均按 600 dpi 逐栏核对；原页未印分值、无答案页，全部记「原页未标」，不补。
