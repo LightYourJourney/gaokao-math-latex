@@ -3956,6 +3956,14 @@
         "gk-2011-shaanxi-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b39",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-shanghai-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3965,7 +3973,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ea049a77-6479-43d1-ac6d-361ad4ed5b86",
+  "last_transaction_id": "07b0281f-0998-487c-9482-ae667ca5c760",
   "papers": [
     {
       "blocked_from": null,
@@ -46472,9 +46480,66 @@
       "title": "2011 年·陕西卷·文科",
       "track": "arts",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_上海卷_理科/figures/f2011_shanghai_science_q21_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_shanghai_science",
+        "id": "gk-2011-shanghai-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 697、698。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。上海卷题号：填空 1—14、选择 15—18、解答 19—23，共 23 题；第 23 题第 (3) 问三选一，原卷按选做序号给分。答案由本库独立推导（等级 D，非官方）。原页仅第 21 题有正四棱柱图，已由 TikZ 重绘；其余各题原页无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-shanghai-science",
+      "production_state": "complete",
+      "project_dir": "2011_上海卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_上海理_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_上海理_含解析.md",
+        "questions": "2011/2011_数学真题_上海理_试题.md",
+        "solution_body": "2011/2011_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-025913295c044d73132b9d5418421b850456651d4e015df990b389c59986242f"
+      ],
+      "title": "2011 年·上海卷·理科",
+      "track": "science",
+      "year": 2011
     }
   ],
-  "revision": 11393,
+  "revision": 11414,
   "schema_version": 1,
   "sources": [
     {
@@ -58063,8 +58128,8 @@
       "exam_type": "regular",
       "git_blob_oid": "230461134f0a061eba84acddb0fd33ebd3a87c1f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011上海理.pdf",
       "regions": [],
       "source_id": "src-025913295c044d73132b9d5418421b850456651d4e015df990b389c59986242f",

@@ -4,6 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2011 上海卷（理科）：phase7-b39 新卷转录、四版构建与视觉审查收口（2026-11-25；`closed`）
+- 对象：`gk-2011-shanghai-science`，**23 个题号**（填空 1—14、选择 15—18、解答 19—23；第 23 题 (3) 三选一）；固定来源 `src-025913295c044d73132b9d5418421b850456651d4e015df990b389c59986242f`，固定件 SHA-256 `8df24bf6b5b3f36098e83b3cbf0c587fabde692336e3ae55c9bcda6d01f9dc27`（506,964 bytes），2 页 A3 横向，印面页码 697、698。
+- 来源核对：文字层只作定位；题面、选项、第 9 题概率分布表与第 21 题正四棱柱图均按 300 dpi 分栏渲染逐栏核对。原页未印分值、无答案页，全部记「原页未标」，不补。
+- 答案（独立推导，等级 D，非官方）：1 $\dfrac1x+2$；2 $(0,1)$；3 $16$；4 $(-\infty,0)\cup[1/2,+\infty)$；5 $\arctan\frac12$；6 $\sqrt6$；7 $\frac{\sqrt3\pi}3$；8 $\frac{2+\sqrt3}4$；9 $2$；10 $6$；11 $\frac{15}2$；12 $0.985$；13 $[-16,12]$；14 $\sqrt3$；15 D；16 A；17 B；18 D；19 $z_2=4+2\mathrm i$；20 (1) 递增/递减分情形、(2) 分段对数不等式；21 (1) 证明、(2) 高 $2$；22 (1) $9,11,12,13$、(2) 证明、(3) 四段通项；23 (1) $\sqrt5$、(2) $4+\pi$、(3) 三组集合。
+- 复核要点：第 5 题两直线为 $2x+y=2$ 与 $x=1$，夹角 $\arctan\frac12$；第 8 题用积化和差取 $\frac{2+\sqrt3}4$；第 13 题由 $f(x+1)=f(x)+1$ 把 $[3,4]$ 的 $[-2,5]$ 平移得 $[-16,12]$；第 14 题为向 $|OP|=2$ 的二分逼近，极限 $\sqrt3$；第 21 题建系得 $\tan\beta=\sqrt2h=\sqrt2\tan\alpha$，距离条件解出 $h=2$；第 22 题合并数列每四项一组；第 23(3) 第三象限整块等距，另有三段曲线/射线。
+- 版式修正：选项一律行内 `\frac`；第 23(3) 的集合并式改为 `aligned` 两行，消除 155.9pt Overfull；试题末加 `\clearpage`（转换器原样透传），使印刷版「参考答案与详细解析」整页起排（印刷版 14→15 页），消除页末孤立标题。
+- 验收：四版 3/17/5/15 页（共 40 页），四 log 全 0；review 40 页八类检查 **285 pass + 35 not_applicable、0 fail、0 豁免**；`finalize-batch` 返回 `FINALIZED`（报告 `math-gaokao-latex/reports/phase7-b39.md`）。
+- 全量门禁：provenance / validate-receipts `--require-final` 均 OK；`check-all` 475 批次 FINALIZED（本轮改动前基线）。
+- 全库（本卷封账后）：manifest **630 卷 / 775 来源 / 476 批次**，complete 512、blocked 118，未绑定来源 **146**；manifest revision 11414。
+- 修改文件：`2011/2011_数学真题_上海理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/2011_上海卷_理科/`（questions/answers/answers_short、四版入口、1 张图稿、provenance.json、receipts）、`source-manifest.json`、`index.json`、`reports/phase7-b39.md`、`PROGRESS.md`。
+- 下一步：2011 仍余上海春季卷、天津文两卷未绑定；选项行距 backlog 仍 110 卷（本轮批量扫描在旧卷上多数因分页变化回退）。
+
 ### 选项行距回修第六批：4 卷回修、1998 全国理页数变化回退（2026-11-24；`in_progress`）
 - 已回修并重新 `FINALIZED`（3 卷，页数不变、四 log 全 0、`validate-receipts --require-final` 全 OK）：`gk-1986-regular-guangdong-arts`（b58，13 行，早前已改未提交，本次一并封账）、`gk-2001-regular-shanghai-arts`（b82，6 行）、`gk-2001-regular-shanghai-science`（b83，6 行）。
 - 页数变化、已整批回退并重新 `FINALIZED`（内容未变，列入整卷重审）：`gk-1998-regular-national-science`（b71，12 行，解析版 29→28）。
