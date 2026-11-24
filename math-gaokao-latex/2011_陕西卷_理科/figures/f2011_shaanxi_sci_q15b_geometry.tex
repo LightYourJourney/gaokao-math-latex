@@ -1,0 +1,19 @@
+% 2011 年陕西卷理科第 15B 题：四边形 ABCD 与 AD、BC 的交点 E。
+% 来源 PDF：普通高考/2011/2011陕西理.pdf，SHA-256 04dab6de0e3ee6223a1cbc126f7f83ae354d2b31201a14db1f31c8477d8a3bed。
+% 原页：第 1 页第 3 栏中部，书页码 693。
+\begin{tikzpicture}[>=stealth, semithick, font=\small, scale=1.0]
+  \coordinate (D) at (0,0);
+  \coordinate (C) at (4,0);
+  \coordinate (A) at (4,3);
+  \coordinate (B) at (1.2,4.2);
+  \coordinate (E) at (2.667,2.0);
+  \draw[thick] (C)--(D)--(A)--(B)--(C);
+  \draw[thick] (A)--(C);
+  \draw (B)--(E)--(C);
+  \draw (A)--(E)--(D);
+  \fill (A) circle (1.1pt) node[right] {$A$};
+  \fill (B) circle (1.1pt) node[above] {$B$};
+  \fill (C) circle (1.1pt) node[below right] {$C$};
+  \fill (D) circle (1.1pt) node[below left] {$D$};
+  \fill (E) circle (1.1pt) node[below left] {$E$};
+\end{tikzpicture}

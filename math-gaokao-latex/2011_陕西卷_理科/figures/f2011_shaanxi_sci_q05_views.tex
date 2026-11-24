@@ -1,0 +1,24 @@
+% 2011 年陕西卷理科第 5 题：正方体挖去圆锥的三视图。
+% 来源 PDF：普通高考/2011/2011陕西理.pdf，SHA-256 04dab6de0e3ee6223a1cbc126f7f83ae354d2b31201a14db1f31c8477d8a3bed。
+% 原页：第 1 页第 1 栏下部，书页码 693。外形 2×2×2，俯视图内切圆半径 1。
+\begin{tikzpicture}[semithick, font=\small, scale=0.85]
+  % 主视图
+  \draw[thick] (0,0) rectangle (2,2);
+  \draw[dashed] (0,2)--(1,0.35)--(2,2);
+  \node at (1,-0.42) {主视图};
+  \draw[<->] (0,2.42)--(2,2.42) node[midway, above] {$2$};
+  % 主视图宽度标注
+  % 左视图
+  \begin{scope}[xshift=3.6cm]
+    \draw[thick] (0,0) rectangle (2,2);
+    \draw[dashed] (0,2)--(1,0.35)--(2,2);
+    \node at (1,-0.42) {左视图};
+    \draw[<->] (2.4,0)--(2.4,2) node[midway, right] {$2$};
+  \end{scope}
+  % 俯视图
+  \begin{scope}[yshift=-3.6cm]
+    \draw[thick] (0,0) rectangle (2,2);
+    \draw[thick] (1,1) circle (1);
+    \node at (1,-0.42) {俯视图};
+  \end{scope}
+\end{tikzpicture}

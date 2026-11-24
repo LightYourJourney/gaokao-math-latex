@@ -1,0 +1,15 @@
+% 2011 年陕西卷理科第 20 题：A 地到火车站的两条路径 L1、L2。
+% 来源 PDF：普通高考/2011/2011陕西理.pdf，SHA-256 04dab6de0e3ee6223a1cbc126f7f83ae354d2b31201a14db1f31c8477d8a3bed。
+% 原页：第 2 页第 2 栏下部，书页码 694。示意。
+\begin{tikzpicture}[semithick, font=\small, scale=1.0]
+  \coordinate (A) at (0,0);
+  \coordinate (S) at (5.2,0);
+  \draw[thick] (A) .. controls (1.7,1.15) and (3.4,0.85) .. (S);
+  \draw[thick] (A) .. controls (1.7,-1.15) and (3.4,-0.85) .. (S);
+  \node[below left] at (A) {$A$};
+  \node[right] at (S) {火车站};
+  \fill (A) circle (1.2pt);
+  \fill (S) circle (1.2pt);
+  \node[above] at (2.55,0.98) {$L_1$};
+  \node[below] at (2.55,-0.98) {$L_2$};
+\end{tikzpicture}
