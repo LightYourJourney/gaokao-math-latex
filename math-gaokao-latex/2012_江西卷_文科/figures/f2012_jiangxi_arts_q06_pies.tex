@@ -1,0 +1,37 @@
+% 2012 年江西卷文科第 6 题：总开支饼图（图 1）与食品开支柱图（图 2）。
+% 来源 PDF：普通高考/2012/2012江西文.pdf，第 1 页（印面 749）左栏。
+% 图 1 标注：食品 30%、储蓄 20%、娱乐 10%、日常 10%、通讯 5%、其他 5%，
+% 其余 20% 在原图中未标注，按原样留白，不补文字。
+\begin{tikzpicture}[semithick, font=\small]
+  % ---------- 图 1 饼图 ----------
+  \begin{scope}
+    \coordinate (O) at (0,0);
+    \def\R{1.1}
+    \fill[gray!12] (O) -- (90:\R) arc (90:-18:\R) -- cycle;
+    \fill[gray!25] (O) -- (-18:\R) arc (-18:-90:\R) -- cycle;
+    \fill[gray!12] (O) -- (-90:\R) arc (-90:-126:\R) -- cycle;
+    \fill[gray!25] (O) -- (-126:\R) arc (-126:-162:\R) -- cycle;
+    \fill[gray!12] (O) -- (-162:\R) arc (-162:-180:\R) -- cycle;
+    \fill[gray!25] (O) -- (162:\R) arc (162:144:\R) -- cycle;
+    \draw (O) circle (\R);
+    \foreach \a in {90,-18,-90,-126,-162,-180,162,144} \draw (O) -- (\a:\R);
+    \node[above right] at (36:1.62) {食品 $30\%$};
+    \node[right] at (-54:1.62) {储蓄 $20\%$};
+    \node[below left] at (-112:1.62) {娱乐 $10\%$};
+    \node[below right] at (-150:1.62) {日常 $10\%$};
+    \node[left] at (185:1.55) {通讯 $5\%$};
+    \node[above left] at (150:1.55) {其他 $5\%$};
+    \node[below] at (0,-2.35) {图 1};
+  \end{scope}
+  % ---------- 图 2 柱状图 ----------
+  \begin{scope}[shift={(6.6,-0.3)}]
+    \draw[->] (0,0) -- (6.2,0) node[below] {元};
+    \draw[->] (0,0) -- (0,4.3);
+    \foreach \y/\t in {1/40,2/80,3/120} \draw (0,\y) -- (-0.1,\y) node[left] {\t};
+    \foreach \x/\h/\lab in {1/30/鸡蛋, 2/40/牛奶, 3/100/肉类, 4/80/蔬菜, 5/50/其他} {
+      \draw (\x-0.3,0) rectangle (\x+0.3,\h/40);
+      \node[above] at (\x,\h/40+0.12) {\lab};
+    }
+    \node[below] at (3,-0.8) {图 2};
+  \end{scope}
+\end{tikzpicture}

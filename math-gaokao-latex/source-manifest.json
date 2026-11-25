@@ -4068,6 +4068,14 @@
         "gk-2012-chongqing-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b53",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-jiangxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4077,7 +4085,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "8f5f38e3-acb2-4d79-ba45-930aaa21a1f2",
+  "last_transaction_id": "17f3e3d1-46e3-4db0-8467-75776232dd87",
   "papers": [
     {
       "blocked_from": null,
@@ -47545,9 +47553,91 @@
       "title": "2012 年·重庆卷·文科",
       "track": "arts",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_江西卷_文科/figures/f2012_jiangxi_arts_q06_pies.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_江西卷_文科/figures/f2012_jiangxi_arts_q07_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_江西卷_文科/figures/f2012_jiangxi_arts_q10_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_江西卷_文科/figures/f2012_jiangxi_arts_q15_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_江西卷_文科/figures/f2012_jiangxi_arts_q18_axes.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_江西卷_文科/figures/f2012_jiangxi_arts_q19_fold.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_jiangxi_arts",
+        "id": "gk-2012-jiangxi-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 749、750。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。江西卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页 6 幅图：第 6 题饼图与柱图、第 7 题三视图、第 10 题几何图形与四个 S(t) 图象、第 15 题程序框图、第 18 题空间直角坐标系、第 19 题梯形与折叠体，均由 TikZ 重绘；第 6 题饼图中原图未标注的 20% 扇区按原样留白。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江西卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "江西文科"
+      },
+      "issue_ids": [
+        "ISSUE-1525",
+        "ISSUE-1526",
+        "ISSUE-1527",
+        "ISSUE-1528"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-jiangxi-arts",
+      "production_state": "complete",
+      "project_dir": "2012_江西卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_江西文_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_江西文_含解析.md",
+        "questions": "2012/2012_数学真题_江西文_试题.md",
+        "solution_body": "2012/2012_数学真题_江西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-8e20da0ec356a9ad9d4433315448be1501910564be15e7823711067bd8728148"
+      ],
+      "title": "2012 年·江西卷·文科",
+      "track": "arts",
+      "year": 2012
     }
   ],
-  "revision": 11710,
+  "revision": 11724,
   "schema_version": 1,
   "sources": [
     {
@@ -60408,8 +60498,8 @@
       "exam_type": "regular",
       "git_blob_oid": "fb292e33f3f3a68df1881b4e328702c141b4cb65",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-jiangxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012江西文.pdf",
       "regions": [],
       "source_id": "src-8e20da0ec356a9ad9d4433315448be1501910564be15e7823711067bd8728148",

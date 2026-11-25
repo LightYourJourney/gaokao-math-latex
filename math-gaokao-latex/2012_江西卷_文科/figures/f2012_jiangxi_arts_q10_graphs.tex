@@ -1,0 +1,51 @@
+% 2012 年江西卷文科第 10 题：几何图形与 S(t) 的四个图象选项。
+% 来源 PDF：普通高考/2012/2012江西文.pdf，第 1 页（印面 749）右栏。
+% 几何：O(0,0)，A(2,0)，B 在 30° 方向且 OB=1，圆弧以 A 为圆心、AB≈1.24 为半径交 OA 延长线于 C。
+% 正确图象 (B)：0≤t≤1 为抛物线，之后为直线（斜率更大），到 C 后水平。
+\begin{tikzpicture}[scale=0.8, semithick, >=Stealth, font=\small]
+  % ---------- 几何图形 ----------
+  \begin{scope}
+    \draw (0,0) node[below left] {$O$} -- (2,0) node[below] {$A$};
+    \draw (0.866,0.5) node[above left] {$B$} -- (2,0);
+    \draw (0,0) -- (0.866,0.5);
+    \draw[thick] (0.866,0.5) arc[start angle=156.2, end angle=0, radius=1.239];
+    \draw (2,0) -- (3.24,0) node[below] {$C$};
+    \node[above] at (2.0,1.4) {$D$};
+    \fill (0.866,0.5) circle (1.5pt);
+    \fill (2,0) circle (1.5pt);
+    \node[below] at (1.6,-1.35) {};
+  \end{scope}
+  % ---------- (A) ----------
+  \begin{scope}[shift={(0.2,-3.9)}]
+    \draw[->] (0,0) -- (3.2,0);
+    \draw[->] (0,0) -- (0,2.4);
+    \draw[smooth] (0,0) .. controls (0.6,0.05) and (1.2,0.9) .. (1.9,2.0) .. controls (2.2,2.25) and (2.5,2.3) .. (3.0,2.3);
+    \node[below left] at (0,0) {$O$};
+    \node at (1.6,-0.55) {(A)};
+  \end{scope}
+  % ---------- (B) ----------
+  \begin{scope}[shift={(4.3,-3.9)}]
+    \draw[->] (0,0) -- (3.2,0);
+    \draw[->] (0,0) -- (0,2.4);
+    \draw[smooth, domain=0:1] plot (\x, {0.5*\x*\x});
+    \draw (1,0.5) -- (2.2,2.05) -- (3.0,2.05);
+    \node[below left] at (0,0) {$O$};
+    \node at (1.6,-0.55) {(B)};
+  \end{scope}
+  % ---------- (C) ----------
+  \begin{scope}[shift={(0.2,-7.1)}]
+    \draw[->] (0,0) -- (3.2,0);
+    \draw[->] (0,0) -- (0,2.4);
+    \draw[smooth] (0.3,0.05) .. controls (0.9,0.1) and (1.2,1.9) .. (1.9,2.25) .. controls (2.3,2.35) and (2.6,2.3) .. (3.0,2.3);
+    \node[below left] at (0,0) {$O$};
+    \node at (1.6,-0.55) {(C)};
+  \end{scope}
+  % ---------- (D) ----------
+  \begin{scope}[shift={(4.3,-7.1)}]
+    \draw[->] (0,0) -- (3.2,0);
+    \draw[->] (0,0) -- (0,2.4);
+    \draw (0.9,0) -- (0.9,2.2) -- (2.2,2.2);
+    \node[below left] at (0,0) {$O$};
+    \node at (1.6,-0.55) {(D)};
+  \end{scope}
+\end{tikzpicture}

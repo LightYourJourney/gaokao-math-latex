@@ -1,0 +1,32 @@
+% 2012 年江西卷文科第 15 题：输出 T 的程序框图。
+% 来源 PDF：普通高考/2012/2012江西文.pdf，第 1 页（印面 749）右栏。
+% 流程：T=0,k=1 → sin(kπ/2)>sin((k-1)π/2)? 是 a=1，否 a=0 → T=T+a → k=k+1 → k<6? 是回到判断。
+\begin{tikzpicture}[semithick, >=Stealth,
+  block/.style={draw, minimum width=3.0cm, minimum height=0.62cm, align=center},
+  dec/.style={draw, diamond, aspect=2.4, inner sep=1pt, align=center},
+  term/.style={draw, rounded corners=6pt, minimum width=1.5cm, minimum height=0.52cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.2cm, minimum height=0.58cm},
+  arr/.style={->}]
+  \node (start) [term] at (0,8.6) {开始};
+  \node (init)  [block] at (0,7.7) {$T=0,\ k=1$};
+  \node (sin)   [block] at (0,6.2) {$\sin\dfrac{k\pi}2>\sin\dfrac{(k-1)\pi}2$?};
+  \node (yes)   [block, right=1.5cm of sin] {$a=1$};
+  \node (no)    [block, left=1.5cm of sin] {$a=0$};
+  \node (add)   [block, below=3.2cm of sin] {$T=T+a$};
+  \node (inc)   [block, below=0.55cm of add] {$k=k+1$};
+  \node (dec2)  [dec, below=0.7cm of inc] {$k<6$?};
+  \node (out)   [io, below=0.75cm of dec2] {输出 $T$};
+  \node (end)   [term, below=0.5cm of out] {结束};
+  \draw[arr] (start) -- (init);
+  \draw[arr] (init) -- (sin);
+  \draw[arr] (sin) -- node[above] {是} (yes);
+  \draw[arr] (sin) -- node[above] {否} (no);
+  \draw[arr] (yes.south) |- ($(add.east)+(0.0,0)$);
+  \draw[arr] (no.south) |- ($(add.west)+(0.0,0)$);
+  \draw[arr] (add) -- (inc);
+  \draw[arr] (inc) -- (dec2);
+  \draw[arr] (dec2) -- node[right] {否} (out);
+  \draw[arr] (dec2.east) -- node[above] {是} ++(2.4,0) |- (sin.east);
+  \draw[arr] (out) -- (end);
+\end{tikzpicture}

@@ -1,0 +1,16 @@
+% 2012 年江西卷文科第 18 题：空间直角坐标系中的六个点 A1,A2,B1,B2,C1,C2。
+% 来源 PDF：普通高考/2012/2012江西文.pdf，第 2 页（印面 750）第 1 栏。
+% 投影：x 向左下、y 向右、z 向上。
+\begin{tikzpicture}[semithick, >=Stealth, font=\small]
+  \coordinate (O) at (0,0);
+  \draw[->] (0,0) -- (-2.0,-1.0) node[below] {$x$};
+  \draw[->] (0,0) -- (2.6,0) node[right] {$y$};
+  \draw[->] (0,0) -- (0,2.6) node[above] {$z$};
+  \fill (-1.0,-0.5) circle (1.8pt) node[below left] {$A_1$};
+  \fill (-2.0,-1.0) circle (1.8pt) node[left] {$A_2$};
+  \fill (1.0,0) circle (1.8pt) node[below] {$B_1$};
+  \fill (2.0,0) circle (1.8pt) node[below] {$B_2$};
+  \fill (0,1.0) circle (1.8pt) node[left] {$C_1$};
+  \fill (0,2.0) circle (1.8pt) node[left] {$C_2$};
+  \fill (0,0) circle (1.8pt) node[below left] {$O$};
+\end{tikzpicture}
