@@ -14,6 +14,11 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 待录入卷的读图阻塞点（2026-11-25；`needs-review`）
+- `2012 天津文` 第 10 题三视图：正视图为 3×2 矩形上方一段斜线与顶边，侧视图为 4 宽、总高 3（y=2 处有横线），俯视图 3×4 且在 x=1、x=2 有两条分界。两种还原都能部分吻合：①三角形截面（底 2、高 1）→ 体积 28；②直角梯形截面（平行边 2 与 1、高 1）→ 体积 30。俯视图的两条线支持②，但正视图斜坡止点位置支持①，600 dpi 下仍不能唯一判定，**暂不落笔**。
+- `2012 广东文` 第 10 题：定义 $\alpha\circ\beta=\dfrac{\alpha\cdot\beta}{\beta\cdot\beta}$，已知 $a\circ b$、$b\circ a\in\{\frac n2\}$ 且夹角 $\theta\in(\frac\pi4,\frac\pi2)$，可推出两者同为 $\frac12$、$\cos\theta=\frac12$，但 $a\cdot b=\frac12|a|^2$ 仍依赖模长；题面扫描未见「单位向量」等约束，答案不唯一，**暂不落笔**。
+- 处理口径：以上两点按「不猜、不补条件」处理；下一步优先向固定源核对更清晰文本，或改用同卷其他无歧义来源；确认前不登记为 complete。
+
 ### 选项行距回修第九批：10 卷回退 + 2008 四川文 14 条改行内分式（页数不变，2026-11-25；`closed`）
 - 扫描 10 卷（2007 湖北文/理、湖南文、江苏、新课标文、山东理、天津理、陕西理，2008 安徽理、重庆理）：改 `\dfrac→\frac` 后四版页数均变化，按硬条件全部回退并重新 `FINALIZED`；逐卷 `validate-receipts --require-final` 均 `OK：1 卷`。
 - `gk-2008-sichuan-arts`（phase6-b30）：**14 条**选项行改为行内 `\frac`，重生成 `questions/answers/answers_short`、从 `provenance.json` 还原三角色回执并重算哈希、重建四版，页数保持 **4/16/6/14**，沿用原逐页回执并重新 `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`。
