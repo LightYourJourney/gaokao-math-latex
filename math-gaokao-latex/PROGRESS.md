@@ -14,6 +14,14 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 全国大纲卷（理科）：phase7-b63 转录（子代理起草、主代理复核）与四版封账（2026-11-26；`closed`）
+- 对象：`gk-2013-regular-national-outline-science`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-5acaadb53dba01809c318d53bc6aeb0f9efc9a0519e1677bf7060a12fdacc794`，2 页 A3，印面 795、796（广西使用）。
+- 答案（等级 D）：1 B；2 A；3 B；4 B；5 A；6 C；7 D；8 B；9 D；10 A；11 D；12 C；13 $2\sqrt2$；14 $480$；15 $\left[\frac12,4\right]$；16 $16\pi$；17 $a_n=2n-1$ 或 $a_n=3$；18 (1) $B=\frac{2\pi}3$、(2) $C=\frac{\pi}{12}$ 或 $\frac\pi4$；19 (1) 证明、(2) $\theta=\arccos\left(-\frac{\sqrt6}3\right)=\pi-\arccos\frac{\sqrt6}3\approx144.7^\circ$；20 (1) $\frac14$、(2) $P(X=0)=\frac18$、$P(X=1)=\frac58$、$P(X=2)=\frac14$、$E(X)=\frac98$；21 (1) $a=1$、$b=2\sqrt2$、(2) 证明；22 (1) $\lambda_{\min}=\frac12$、(2) 证明。
+- 主代理复核：第 1 题 $M=\{5,6,7,8\}$；第 2 题 $(1+\sqrt3\mathrm i)^3=-8$；第 8 题用 $k_{PA_1}k_{PA_2}=-\frac34$ 得 $\left[\frac38,\frac34\right]$；第 9 题 $g(x)=\frac1{x^2}-2x$ 在 $(\frac12,+\infty)$ 递减、$g<3$，故 $a\geqslant3$；第 15 题过 $(-1,0)$ 的直线与可行域有公共点，斜率范围 $\left[\frac12,4\right]$；第 19(2) 取 $u=\frac{\overrightarrow{PD}}{|\overrightarrow{PD}|}$，投影得 $\cos\theta=-\frac{\sqrt6}3$，二面角为钝角 $144.7^\circ$；第 20 题枚举 $2^3=8$ 条等可能裁判序列，得分布列与 $E(X)=\frac98$；第 17 题讨论 $a_2=0$ 的零数列（等比定义不成立）后保留两解；第 22(2) 用 $\lambda=\frac12$ 的 $\ln(1+x)<\frac{x(2+x)}{2(1+x)}$ 取 $x=\frac1{k-1}$ 求和，并以 $n=1,2,5,10,50,100,1000,10000$ 数值复核不等式成立。
+- 验收：四版 4/28/6/22 页（共 60 页），四 log 全 0（Overfull、missing characters 均 0）；review 60 页 **pass 420 + not_applicable 60、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；1 条图稿引用命中。
+- 图稿：1 张 TikZ（第 19 题四棱锥）。
+- 全库：manifest **654 卷 / 775 来源 / 500 批次**，complete 536、blocked 118，未绑定 **122**；revision 11785。
+
 ### 2013 全国大纲卷（文科）：phase7-b62 转录（子代理起草、主代理复核）与四版封账（2026-11-26；`closed`）
 - 对象：`gk-2013-regular-national-outline-arts`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-f5dc75ad861766f98277c9e06289793ccb99f90df55179c74249c5b601bfce95`，2 页 A3，印面 797、798（广西使用）。
 - 答案（等级 D）：1 B；2 A；3 B；4 D；5 C；6 A；7 C；8 C；9 B（$\omega=4$）；10 D（$a=-6$）；11 A（$\frac23$）；12 D（$k=2$）；13 $-1$；14 $60$；15 $0$；16 $16\pi$；17 (1) $a_n=\frac{n+1}2$、(2) $S_n=\frac{2n}{n+1}$；18 (1) $B=\frac{2\pi}3$、(2) $C=\frac{\pi}{12}$ 或 $\frac\pi4$；19 (1) 证明、(2) $1$；20 (1) $\frac14$、(2) $\frac58$；21 (1) 在 $(-\infty,\sqrt2-1)$、$(\sqrt2+1,+\infty)$ 递增，在 $(\sqrt2-1,\sqrt2+1)$ 递减、(2) $\left[-\frac54,+\infty\right)$；22 (1) $a=1$、$b=2\sqrt2$、(2) 证明。
