@@ -1,0 +1,13 @@
+% 2012 年上海卷理科第 10 题：极坐标系中过 M(2,0)、与极轴成 π/6 的直线 l。
+% 来源 PDF：普通高考/2012/2012上海理.pdf，第 1 页（印面 767）第 1 栏。
+% 重绘依据：原图为极坐标示意图：O 在左、极轴向右，M 在极轴上距 O 为 2，直线 l 过 M 且与极轴夹角 α。
+\begin{tikzpicture}[scale=1.0, semithick, >=Stealth]
+  \draw[->] (-0.6,0) -- (3.4,0) node[right] {$x$};
+  \node[below left] at (0,0) {$O$};
+  \fill (2,0) circle (1.5pt) node[below] {$M$};
+  % 过 M、倾斜角 30° 的直线
+  \draw (-0.35,-0.35*0.577) -- (3.1,1.1*0.577);
+  \draw (2.55,0) arc[start angle=0, end angle=30, radius=0.55];
+  \node at (2.95,0.22) {$\alpha$};
+  \node[right] at (3.05,0.72) {$l$};
+\end{tikzpicture}

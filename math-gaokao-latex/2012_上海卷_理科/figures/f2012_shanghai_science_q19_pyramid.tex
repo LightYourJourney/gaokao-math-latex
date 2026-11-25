@@ -1,0 +1,26 @@
+% 2012 年上海卷理科第 19 题：四棱锥 P-ABCD，PA⊥底面 ABCD，E 为 PC 中点。
+% 来源 PDF：普通高考/2012/2012上海理.pdf，第 1 页（印面 767）第 3 栏。
+% 重绘依据：原图为斜二测式透视：A、B 在前，C、D 在后，P 在 A 的正上方；E 在 PC 上；
+%   实线 PA、PB、PC、PD、AB、BC，虚线 AD、CD、AC 与 AE。
+\begin{tikzpicture}[scale=0.95, semithick, every node/.style={inner sep=1.5pt}]
+  \coordinate (A) at (0.2,0.4);
+  \coordinate (B) at (3.0,0.0);
+  \coordinate (C) at (4.0,1.5);
+  \coordinate (D) at (1.2,1.9);
+  \coordinate (P) at (0.2,3.8);
+  \coordinate (E) at ($(P)!0.5!(C)$);
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  \draw (A) -- (B) -- (C);
+  \draw[dashed] (A) -- (D) -- (C);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (A) -- (E);
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[above] at (P) {$P$};
+  \node[right] at ([xshift=2pt]E) {$E$};
+\end{tikzpicture}
