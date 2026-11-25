@@ -1,0 +1,50 @@
+% 2012 年安徽卷理科第 18 题：平面展开图（图 1）与折叠后的空间图形（图 2）。
+% 来源 PDF：普通高考/2012/2012安徽理.pdf，第 2 页（印面 714）第 1 栏。
+% 图 1：矩形 BB1C1C（BC=2、BB1=4），上接等腰直角三角形 ABC，下接等腰三角形 A1B1C1。
+% 图 2：A、A1 分别折到矩形所在平面的两侧，A、A1 到对应折线的距离为 1 与 2。
+\begin{tikzpicture}[semithick, font=\small]
+  % ---------- 图 1 ----------
+  \begin{scope}
+    \coordinate (B) at (0,4);
+    \coordinate (C) at (2,4);
+    \coordinate (B1) at (0,0);
+    \coordinate (C1) at (2,0);
+    \coordinate (A) at (1,5);
+    \coordinate (A1) at (1,-2);
+    \draw (B) -- (C) -- (C1) -- (B1) -- cycle;
+    \draw (A) -- (B) -- (C) -- cycle;
+    \draw (A1) -- (B1) -- (C1) -- cycle;
+    \node[above] at (A) {$A$};
+    \node[left] at (B) {$B$};
+    \node[right] at (C) {$C$};
+    \node[left] at (B1) {$B_1$};
+    \node[right] at (C1) {$C_1$};
+    \node[below] at (A1) {$A_1$};
+    \node[below] at (1,-2.7) {图 1};
+  \end{scope}
+  % ---------- 图 2 ----------
+  \begin{scope}[shift={(7.4,0)}]
+    \coordinate (C) at (1.4,4.6);
+    \coordinate (B) at (2.5,4.0);
+    \coordinate (A) at (0.3,3.6);
+    \coordinate (C1) at (1.2,0.9);
+    \coordinate (B1) at (2.3,0.5);
+    \coordinate (A1) at (4.4,0.7);
+    \draw (A) -- (C) -- (B) -- cycle;
+    \draw (C) -- (C1);
+    \draw (B) -- (B1);
+    \draw (B1) -- (C1);
+    \draw (A) -- (A1);
+    \draw (A1) -- (B);
+    \draw (A1) -- (C);
+    \draw (A1) -- (B1);
+    \draw[dashed] (C1) -- (A1);
+    \node[above] at (C) {$C$};
+    \node[right] at (B) {$B$};
+    \node[left] at (A) {$A$};
+    \node[left] at (C1) {$C_1$};
+    \node[below] at (B1) {$B_1$};
+    \node[right] at (A1) {$A_1$};
+    \node[below] at (2.2,-0.1) {图 2};
+  \end{scope}
+\end{tikzpicture}

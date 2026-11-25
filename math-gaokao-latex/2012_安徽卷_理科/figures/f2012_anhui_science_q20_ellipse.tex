@@ -1,0 +1,26 @@
+% 2012 年安徽卷理科第 20 题：椭圆焦点 F1、F2，P 在 x=-c 与椭圆的上半部分交点，Q 为垂线与 x=a^2/c 的交点。
+% 来源 PDF：普通高考/2012/2012安徽理.pdf，第 2 页（印面 714）第 2 栏。
+% 按 (1) 的结果 a=2、c=1、b=√3 作图：P(-1,1.5)，Q(4,4)，F2(1,0)。
+\begin{tikzpicture}[scale=0.95, semithick, >=Stealth, font=\small]
+  \draw (0,0) ellipse (2 and 1.732);
+  \draw[->] (-3.2,0) -- (4.9,0) node[right] {$x$};
+  \draw[->] (0,-2.1) -- (0,4.6) node[above] {$y$};
+  \coordinate (O) at (0,0);
+  \coordinate (F1) at (-1,0);
+  \coordinate (F2) at (1,0);
+  \coordinate (P) at (-1,1.5);
+  \coordinate (Q) at (4,4);
+  \draw (P) -- (F2);
+  \draw (F2) -- (Q);
+  \draw[dashed] (Q) -- (4,0);
+  \draw[dashed] (P) -- (-1,0);
+  \fill (F1) circle (1.8pt);
+  \fill (F2) circle (1.8pt);
+  \fill (P) circle (1.8pt);
+  \fill (Q) circle (1.8pt);
+  \node[above right] at (P) {$P$};
+  \node[right] at (Q) {$Q$};
+  \node[below left] at (F1) {$F_1$};
+  \node[below right] at (F2) {$F_2$};
+  \node[below left] at (O) {$O$};
+\end{tikzpicture}

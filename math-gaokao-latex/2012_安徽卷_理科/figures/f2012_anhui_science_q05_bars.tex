@@ -1,0 +1,27 @@
+% 2012 年安徽卷理科第 5 题：甲、乙两人各射靶 5 次的成绩条形统计图。
+% 来源 PDF：普通高考/2012/2012安徽理.pdf，第 1 页（印面 713）左栏。
+% 甲：4,5,6,7,8 各 1 次；乙：5 环 3 次、6 环 1 次、9 环 1 次。
+\begin{tikzpicture}[scale=0.62, semithick, font=\small]
+  % ---------- 甲 ----------
+  \begin{scope}
+    \draw[->] (0,0) -- (8.4,0) node[below] {环数};
+    \draw[->] (0,0) -- (0,4.2) node[left] {频数};
+    \foreach \y in {1,2,3} \draw (0,\y) -- (-0.12,\y) node[left] {\y};
+    \foreach \x/\s in {1/4,2/5,3/6,4/7,5/8} {
+      \draw (\x-0.42,0) rectangle (\x+0.42,1);
+      \draw (\x,-0.12) -- (\x,-0.12) node[below] {\s};
+    }
+    \node at (2.5,-1.55) {（甲）};
+  \end{scope}
+  % ---------- 乙 ----------
+  \begin{scope}[shift={(11.2,0)}]
+    \draw[->] (0,0) -- (8.4,0) node[below] {环数};
+    \draw[->] (0,0) -- (0,4.2) node[left] {频数};
+    \foreach \y in {1,2,3} \draw (0,\y) -- (-0.12,\y) node[left] {\y};
+    \foreach \x/\s/\h in {1/4/0,2/5/3,3/6/1,4/7/0,5/8/0,6/9/1} {
+      \ifnum\h>0 \draw (\x-0.42,0) rectangle (\x+0.42,\h); \fi
+      \draw (\x,-0.12) -- (\x,-0.12) node[below] {\s};
+    }
+    \node at (3.0,-1.55) {（乙）};
+  \end{scope}
+\end{tikzpicture}

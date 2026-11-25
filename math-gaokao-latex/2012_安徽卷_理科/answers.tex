@@ -1,0 +1,598 @@
+% answers.tex —— 2012 年·安徽卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2012/2012_数学真题_安徽理_试题.md + 2012/2012_数学真题_安徽理_解析正文.md + 2012/2012_数学真题_安徽理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+复数 $z$ 满足 $(z-\mathrm i)(2-\mathrm i)=5$，则 $z=$\mbox{（　　）}
+
+（A）$-2-2\mathrm i$；（B）$-2+2\mathrm i$；（C）$2-2\mathrm i$；（D）$2+2\mathrm i$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由 $(z-\mathrm i)(2-\mathrm i)=5$ 得
+\nopagebreak[4]
+\[z-\mathrm i=\frac5{2-\mathrm i}=\frac{5(2+\mathrm i)}5=2+\mathrm i,\]
+故 $z=2+2\mathrm i$。选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+下列函数中，不满足 $f(2x)=2f(x)$ 的是\mbox{（　　）}
+
+（A）$f(x)=|x|$；（B）$f(x)=x-|x|$；（C）$f(x)=x+1$；（D）$f(x)=-x$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+（A）$f(2x)=|2x|=2|x|=2f(x)$；（B）$f(2x)=2x-|2x|=2(x-|x|)=2f(x)$；（C）$f(2x)=2x+1$，而 $2f(x)=2x+2$，不相等；（D）$f(2x)=-2x=2f(x)$。选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+如图所示，程序框图（算法流程图）的输出结果是\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2012_anhui_science_q03_flowchart}\end{center}
+\nopagebreak[4]
+（A）$3$；（B）$4$；（C）$5$；（D）$8$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+初始 $x=1$，$y=1$。循环体为 $x=2x$，$y=y+1$，再判断 $x\leqslant4$：
+\nopagebreak[4]
+\[(x,y)=(2,2)\to(4,3)\to(8,4),\]
+当 $x=8$ 时判断不成立，输出 $y=4$。选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+公比为 $\sqrt[3]{2}$ 的等比数列 $\{a_n\}$ 的各项都是正数，且 $a_3a_{11}=16$，则 $\log_2a_{16}=$\mbox{（　　）}
+
+（A）$4$；（B）$5$；（C）$6$；（D）$7$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设首项为 $a_1$，公比 $q=\sqrt[3]2$，则 $q^{12}=2^4=16$，
+\nopagebreak[4]
+\[a_3a_{11}=a_1^2q^{12}=16a_1^2=16,\]
+\Needspace{5\baselineskip}
+故 $a_1=1$。于是 $a_{16}=q^{15}=2^5=32$，
+\nopagebreak[4]
+\[\log_2a_{16}=5.\]
+选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+甲、乙两人在一次射击比赛中各射靶 $5$ 次，两人成绩的条形统计图如图所示，则\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2012_anhui_science_q05_bars}\end{center}
+\nopagebreak[4]
+（A）甲的成绩的平均数小于乙的成绩的平均数；（B）甲的成绩的中位数等于乙的成绩的中位数；（C）甲的成绩的方差小于乙的成绩的方差；（D）甲的成绩的极差小于乙的成绩的极差。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+由条形图，甲的成绩为 $4,5,6,7,8$，乙的成绩为 $5,5,5,6,9$。
+
+甲：平均数 $6$，中位数 $6$，方差 $\dfrac{4+1+0+1+4}5=2$，极差 $4$。
+乙：平均数 $6$，中位数 $5$，方差 $\dfrac{1+1+1+0+9}5=\dfrac{12}5=2.4$，极差 $4$。
+
+故只有“甲的方差小于乙的方差”正确。选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+设平面 $\alpha$ 与平面 $\beta$ 相交于直线 $m$，直线 $a$ 在平面 $\alpha$ 内，直线 $b$ 在平面 $\beta$ 内，且 $b\perp m$，则“$\alpha\perp\beta$”是“$a\perp b$”的\mbox{（　　）}
+
+（A）充分不必要条件；（B）必要不充分条件；（C）充分必要条件；（D）既不充分也不必要条件。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+若 $\alpha\perp\beta$，则 $\beta$ 内垂直于交线 $m$ 的直线 $b$ 垂直于 $\alpha$，从而 $b\perp a$，充分性成立。
+
+反之，取 $a=m$，则对任意在 $\beta$ 内且垂直于 $m$ 的 $b$ 都有 $a\perp b$，但两平面不一定垂直，必要性不成立。选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+$\left(x^2+2\right)\left(\dfrac1{x^2}-1\right)^5$ 的展开式的常数项是\mbox{（　　）}
+
+（A）$-3$；（B）$-2$；（C）$2$；（D）$3$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\nopagebreak[4]
+\[\left(\frac1{x^2}-1\right)^5=\sum_{k=0}^5\mathrm C_5^k\left(\frac1{x^2}\right)^{5-k}(-1)^k=\sum_{k=0}^5\mathrm C_5^k(-1)^kx^{2k-10}.\]
+\Needspace{5\baselineskip}
+乘 $x^2$ 后指数为 $2k-8$，令其为 $0$ 得 $k=4$，系数 $\mathrm C_5^4=5$；常数项 $2$ 与 $x^{-2}$ 项（$k=5$，系数 $-1$）相乘得 $-2$。故常数项为
+\nopagebreak[4]
+\[5-2=3.\]
+选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+在平面直角坐标系中，点 $O(0,0)$，$P(6,8)$，将向量 $\overrightarrow{OP}$ 绕点 $O$ 按逆时针方向旋转 $\dfrac{3\pi}4$ 后得向量 $\overrightarrow{OQ}$，则点 $Q$ 的坐标是\mbox{（　　）}
+
+（A）$\left(-7\sqrt2,-\sqrt2\right)$；（B）$\left(-7\sqrt2,\sqrt2\right)$；（C）$\left(-4\sqrt6,-2\right)$；（D）$\left(-4\sqrt6,2\right)$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+$|OP|=10$，设 $OP$ 与 $x$ 轴正方向夹角为 $\theta$，则 $\cos\theta=\dfrac35$，$\sin\theta=\dfrac45$。旋转 $\dfrac{3\pi}4$ 后
+\nopagebreak[4]
+\[\cos\left(\theta+\frac{3\pi}4\right)=\frac35\cdot\left(-\frac{\sqrt2}2\right)-\frac45\cdot\frac{\sqrt2}2=-\frac{7\sqrt2}{10},\]
+\nopagebreak[4]
+\[\sin\left(\theta+\frac{3\pi}4\right)=\frac45\cdot\left(-\frac{\sqrt2}2\right)+\frac35\cdot\frac{\sqrt2}2=-\frac{\sqrt2}{10}.\]
+故 $Q=10\left(-\dfrac{7\sqrt2}{10},-\dfrac{\sqrt2}{10}\right)=\left(-7\sqrt2,-\sqrt2\right)$。选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+过抛物线 $y^2=4x$ 的焦点 $F$ 的直线交该抛物线于 $A$，$B$ 两点，$O$ 为坐标原点。若 $|AF|=3$，则 $\triangle AOB$ 的面积为\mbox{（　　）}
+
+（A）$\dfrac{\sqrt2}2$；（B）$\sqrt2$；（C）$\dfrac{3\sqrt2}2$；（D）$2\sqrt2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由 $|AF|=x_A+1=3$ 得 $x_A=2$，$y_A=2\sqrt2$。设 $B(x_B,y_B)$，由过焦点的弦
+\nopagebreak[4]
+\[\frac1{|AF|}+\frac1{|BF|}=1\]
+得 $|BF|=\dfrac32$，故 $x_B=\dfrac12$，$|y_B|=\sqrt2$。
+
+\Needspace{5\baselineskip}
+$\triangle AOB$ 以 $OF=1$ 为底、$|y_A-y_B|$ 为高：
+\nopagebreak[4]
+\[S=\frac12\times1\times(2\sqrt2+\sqrt2)=\frac{3\sqrt2}2.\]
+选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+$6$ 位同学在毕业聚会活动中进行纪念品的交换，任意两位同学之间最多交换一次，进行交换的两位同学互赠一份纪念品。已知 $6$ 位同学之间共进行了 $13$ 次交换，则收到 $4$ 份纪念品的同学人数为\mbox{（　　）}
+
+（A）$1$ 或 $3$；（B）$1$ 或 $4$；（C）$2$ 或 $3$；（D）$2$ 或 $4$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+把 $6$ 位同学看作 $6$ 个顶点，交换一次连一条边，共 $13$ 条边，各点度数之和为 $26$。补图有 $\mathrm C_6^2-13=2$ 条边。
+
+补图两条边不相邻时，度数为 $1,1,1,1,0,0$，对应原图度数为 $4,4,4,4,5,5$，收到 $4$ 份纪念品的有 $4$ 人；补图两条边相邻时，度数为 $2,1,1,0,0,0$，对应原图为 $3,4,4,5,5,5$，收到 $4$ 份的有 $2$ 人。故为 $2$ 或 $4$。选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+若 $x$，$y$ 满足约束条件 $\begin{cases}x\geqslant0,\\x+2y\geqslant3,\\2x+y\leqslant3,\end{cases}$ 则 $x-y$ 的取值范围是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由约束得 $0\leqslant x\leqslant1$，$\dfrac{3-x}2\leqslant y\leqslant3-2x$。顶点为 $(0,\frac32)$，$(0,3)$，$(1,1)$。$z=x-y$ 在这些点取值 $-\dfrac32$，$-3$，$0$，故
+\nopagebreak[4]
+\[x-y\in[-3,0].\]
+
+\gkanswer{答案：$[-3,0]$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+某几何体的三视图如图所示，该几何体的表面积是\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2012_anhui_science_q12_views}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+该几何体是高为 $4$ 的直棱柱，底面为直角梯形（上底 $5$、下底 $2$、高 $4$）。底面积
+\nopagebreak[4]
+\[S_{\text{\text{底}}}=\frac{(5+2)\times4}2=14.\]
+\Needspace{5\baselineskip}
+梯形周长 $5+2+4+\sqrt{3^2+4^2}=16$，侧面积 $16\times4=64$。故表面积
+\nopagebreak[4]
+\[S=2\times14+64=92.\]
+
+\gkanswer{答案：$92$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+在极坐标系中，圆 $\rho=4\sin\theta$ 的圆心到直线 $\theta=\dfrac\pi6$（$\rho\in\mathbf R$）的距离是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+$\rho=4\sin\theta$ 化为 $x^2+y^2=4y$，圆心 $(0,2)$。直线 $\theta=\dfrac\pi6$ 即 $x-\sqrt3y=0$。距离
+\nopagebreak[4]
+\[d=\frac{|0-2\sqrt3|}{\sqrt{1+3}}=\sqrt3.\]
+
+\gkanswer{答案：$\sqrt3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+若平面向量 $\boldsymbol a$，$\boldsymbol b$ 满足 $|2\boldsymbol a-\boldsymbol b|\leqslant3$，则 $\boldsymbol a\cdot\boldsymbol b$ 的最小值是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由 $|2\boldsymbol a-\boldsymbol b|\leqslant3$ 得
+\nopagebreak[4]
+\[4|\boldsymbol a|^2+|\boldsymbol b|^2-4\boldsymbol a\cdot\boldsymbol b\leqslant9.\]
+\Needspace{5\baselineskip}
+又 $4|\boldsymbol a|^2+|\boldsymbol b|^2\geqslant4|\boldsymbol a||\boldsymbol b|\geqslant-4\boldsymbol a\cdot\boldsymbol b$，故
+\nopagebreak[4]
+\[9\geqslant-8\boldsymbol a\cdot\boldsymbol b,\]
+即 $\boldsymbol a\cdot\boldsymbol b\geqslant-\dfrac98$（当 $\boldsymbol b=-2\boldsymbol a$、$|\boldsymbol a|=\dfrac34$ 时取等）。
+
+\gkanswer{答案：$-\dfrac98$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+设 $\triangle ABC$ 的内角 $A$，$B$，$C$ 所对边的长分别为 $a$，$b$，$c$，则下列命题正确的是\gkblank{}。（写出所有正确命题的编号）
+
+① 若 $ab>c^2$，则 $C<\dfrac\pi3$；
+
+② 若 $a+b>2c$，则 $C<\dfrac\pi3$；
+
+③ 若 $a^3+b^3=c^3$，则 $C<\dfrac\pi2$；
+
+④ 若 $(a+b)c<2ab$，则 $C>\dfrac\pi2$；
+
+⑤ 若 $(a^2+b^2)c^2<2a^2b^2$，则 $C>\dfrac\pi2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+① 由 $c^2<a b$ 及余弦定理
+\nopagebreak[4]
+\[2ab\cos C=a^2+b^2-c^2>a^2+b^2-ab\geqslant ab,\]
+故 $\cos C>\dfrac12$，$C<\dfrac\pi3$，正确。
+
+\Needspace{5\baselineskip}
+② 由 $c<\dfrac{a+b}2$ 得
+\nopagebreak[4]
+\[4c^2<(a+b)^2\ \Rightarrow\ 4(a^2+b^2-2ab\cos C)<a^2+2ab+b^2,\]
+即 $8ab\cos C>3a^2+3b^2-2ab\geqslant4ab$，故 $\cos C>\dfrac12$，正确。
+
+\Needspace{5\baselineskip}
+③ 若 $C\geqslant\dfrac\pi2$，则 $c^2\geqslant a^2+b^2$，从而
+\nopagebreak[4]
+\[c^3\geqslant(a^2+b^2)^{3/2}>a^3+b^3,\]
+与 $a^3+b^3=c^3$ 矛盾，故 $C<\dfrac\pi2$，正确。
+
+④ 取 $a=b=1$，$c=\dfrac12$，满足 $(a+b)c=1<2=2ab$，但 $C<\dfrac\pi3$，错误。
+
+⑤ 取 $a=b=1$，$c=\dfrac12$，满足 $(a^2+b^2)c^2=\dfrac12<2=2a^2b^2$，但 $C<\dfrac\pi3$，错误。
+
+故填 ①②③。
+
+\gkanswer{答案：①②③。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=\dfrac{\sqrt2}2\cos\left(2x+\dfrac\pi4\right)+\sin^2x$。
+
+（1） 求 $f(x)$ 的最小正周期；
+
+（2） 设函数 $g(x)$ 对任意 $x\in\mathbf R$，有 $g\left(x+\dfrac\pi2\right)=g(x)$，且当 $x\in\left[0,\dfrac\pi2\right]$ 时，$g(x)=-\dfrac12f(x)$。求 $g(x)$ 在区间 $[-\pi,0]$ 上的解析式。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）}
+\nopagebreak[4]
+\[f(x)=\frac{\sqrt2}2\left(\frac{\sqrt2}2\cos2x-\frac{\sqrt2}2\sin2x\right)+\frac{1-\cos2x}2=\frac12-\frac12\sin2x,\]
+故最小正周期 $T=\pi$。
+
+\textbf{（2）} 由 $g\left(x+\dfrac\pi2\right)=g(x)$ 知 $g$ 以 $\dfrac\pi2$ 为周期。
+
+\Needspace{5\baselineskip}
+当 $x\in\left[-\pi,-\dfrac\pi2\right]$ 时，$x+\pi\in\left[0,\dfrac\pi2\right]$，故
+\nopagebreak[4]
+\[g(x)=g(x+\pi)=-\frac12f(x+\pi)=-\frac14+\frac14\sin2x.\]
+\Needspace{5\baselineskip}
+当 $x\in\left(-\dfrac\pi2,0\right]$ 时，$x+\dfrac\pi2\in\left(0,\dfrac\pi2\right]$，故
+\nopagebreak[4]
+\[g(x)=g\left(x+\frac\pi2\right)=-\frac12f\left(x+\frac\pi2\right)=-\frac14-\frac14\sin2x.\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[g(x)=\begin{cases}-\dfrac14+\dfrac14\sin2x,&x\in\left[-\pi,-\dfrac\pi2\right],\\[6pt]-\dfrac14-\dfrac14\sin2x,&x\in\left(-\dfrac\pi2,0\right].\end{cases}\]
+
+\gkanswer{答案（1）：$T=\pi$。}
+
+\gkanswer{答案（2）：$g(x)=\begin{cases}-\dfrac14+\dfrac14\sin2x,&x\in\left[-\pi,-\dfrac\pi2\right],\\[6pt]-\dfrac14-\dfrac14\sin2x,&x\in\left(-\dfrac\pi2,0\right].\end{cases}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+某单位招聘面试，每次从试题库中随机调用一道试题。若调用的是 A 类型试题，则使用后该试题回库，并增补一道 A 类型试题和一道 B 类型试题入库，此次调题工作结束；若调用的是 B 类型试题，则使用后该试题回库，此次调题工作结束。试题库中现共有 $n+m$ 道试题，其中有 $n$ 道 A 类型试题和 $m$ 道 B 类型试题。以 $X$ 表示两次调题工作完成后，试题库中 A 类试题的数量。
+
+（1） 求 $X=n+2$ 的概率；
+
+（2） 设 $m=n$，求 $X$ 的分布列和均值（数学期望）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} $X=n+2$ 表示两次都调用 A 类试题：
+\nopagebreak[4]
+\[P(X=n+2)=\frac n{n+m}\cdot\frac{n+1}{n+m+2}=\frac{n(n+1)}{(n+m)(n+m+2)}.\]
+
+\textbf{（2）} 当 $m=n$ 时，第一次调用 A、B 的概率都是 $\dfrac12$。
+
+若第一次为 A，则库中变为 $n+1$ 道 A、$n+1$ 道 B，第二次为 A 的概率为 $\dfrac12$；
+若第一次为 B，则库中变为 $n$ 道 A、$n+1$ 道 B，第二次为 A 的概率为 $\dfrac{n}{2n+1}$。
+
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[P(X=n+2)=\frac12\cdot\frac12=\frac14,\]
+\nopagebreak[4]
+\[P(X=n)=\frac12\cdot\frac{n+1}{2n+1}=\frac{n+1}{2(2n+1)},\]
+\nopagebreak[4]
+\[P(X=n+1)=1-\frac14-\frac{n+1}{2(2n+1)}=\frac14+\frac{n}{2(2n+1)}.\]
+分布列为
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+$X$ & $n$ & $n+1$ & $n+2$ \\
+\midrule
+$P$ & $\dfrac{n+1}{2(2n+1)}$ & $\dfrac14+\dfrac{n}{2(2n+1)}$ & $\dfrac14$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\nopagebreak[4]
+\[EX=n+\frac14+\frac{n}{2(2n+1)}+2\times\frac14=n+\frac34+\frac{n}{4n+2}.\]
+
+\gkanswer{答案（1）：$\dfrac{n(n+1)}{(n+m)(n+m+2)}$。}
+
+\gkanswer{答案（2）：$P(X=n+2)=\dfrac14$，$P(X=n+1)=\dfrac14+\dfrac{n}{2(2n+1)}$，$P(X=n)=\dfrac{n+1}{2(2n+1)}$；$EX=n+\dfrac34+\dfrac{n}{4n+2}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+平面图形 $ABB_1A_1C_1C$ 如图 1 所示，其中 $BB_1C_1C$ 是矩形，$BC=2$，$BB_1=4$，$AB=AC=\sqrt2$，$A_1B_1=A_1C_1=\sqrt5$。现将该平面图形分别沿 $BC$ 和 $B_1C_1$ 折叠，使 $\triangle ABC$ 与 $\triangle A_1B_1C_1$ 所在平面都与平面 $BB_1C_1C$ 垂直，再分别连接 $A_1A$，$A_1B$，$A_1C$，得到如图 2 所示的空间图形，对此空间图形解答下列问题。
+
+（1） 证明：$AA_1\perp BC$；
+
+（2） 求 $AA_1$ 的长；
+
+（3） 求二面角 $A-BC-A_1$ 的余弦值。
+\nopagebreak[4]
+\begin{center}\input{figures/f2012_anhui_science_q18_fold}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+取 $B(0,0,0)$，$C(2,0,0)$，$B_1(0,4,0)$，$C_1(2,4,0)$。由 $AB=AC=\sqrt2$，$BC=2$ 知 $\angle BAC=90^\circ$，$A$ 到 $BC$ 的距离为 $1$；折叠后 $A(1,0,1)$。同理 $A_1$ 到 $B_1C_1$ 的距离为 $\sqrt{5-1}=2$，折叠到另一侧，$A_1(1,4,-2)$。
+
+\Needspace{5\baselineskip}
+\textbf{（1）} $\overrightarrow{AA_1}=(0,4,-3)$，$\overrightarrow{BC}=(2,0,0)$，故
+\nopagebreak[4]
+\[\overrightarrow{AA_1}\cdot\overrightarrow{BC}=0,\]
+即 $AA_1\perp BC$。
+
+\Needspace{5\baselineskip}
+\textbf{（2）}
+\nopagebreak[4]
+\[AA_1=\sqrt{0^2+4^2+(-3)^2}=5.\]
+
+\Needspace{5\baselineskip}
+\textbf{（3）} 平面 $ABC$ 即 $y=0$，法向量 $\boldsymbol n_1=(0,1,0)$。平面 $A_1BC$ 的法向量
+\nopagebreak[4]
+\[\boldsymbol n_2=\overrightarrow{BC}\times\overrightarrow{BA_1}=(2,0,0)\times(1,4,-2)=(0,4,8),\]
+\Needspace{5\baselineskip}
+取 $(0,1,2)$。设二面角为 $\theta$，则
+\nopagebreak[4]
+\[\cos\theta=\frac{\boldsymbol n_1\cdot\boldsymbol n_2}{|\boldsymbol n_1||\boldsymbol n_2|}=\frac1{\sqrt5}=\frac{\sqrt5}5,\]
+\Needspace{5\baselineskip}
+结合图形（两半平面分居 $BC$ 两侧）取负值，故
+\nopagebreak[4]
+\[\cos\theta=-\frac{\sqrt5}5.\]
+
+\gkanswer{答案（1）：证明见解析。}
+
+\gkanswer{答案（2）：$5$。}
+
+\gkanswer{答案（3）：$-\dfrac{\sqrt5}5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=a\mathrm e^x+\dfrac1{a\mathrm e^x}+b$（$a>0$）。
+
+（1） 求 $f(x)$ 在 $[0,+\infty)$ 内的最小值；
+
+（2） 设曲线 $y=f(x)$ 在点 $(2,f(2))$ 处的切线方程为 $y=\dfrac32x$，求 $a$，$b$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 令 $t=a\mathrm e^x$。当 $x\geqslant0$ 时 $t\geqslant a$，且
+\nopagebreak[4]
+\[f(x)=t+\frac1t+b,\]
+其中 $t+\dfrac1t\geqslant2$，等号在 $t=1$ 时成立。
+
+若 $0<a\leqslant1$，则 $t=1$ 可取到，最小值为 $2+b$；
+若 $a>1$，则 $t\geqslant a>1$，$t+\dfrac1t$ 在 $[a,+\infty)$ 上递增，最小值为 $a+\dfrac1a+b$。
+
+\Needspace{5\baselineskip}
+\textbf{（2）} $f'(x)=a\mathrm e^x-\dfrac1{a\mathrm e^x}$。由切线斜率为 $\dfrac32$ 得
+\nopagebreak[4]
+\[a\mathrm e^2-\frac1{a\mathrm e^2}=\frac32.\]
+\Needspace{5\baselineskip}
+令 $u=a\mathrm e^2$，则 $2u^2-3u-2=0$，解得 $u=2$（$u>0$），故 $a=\dfrac2{\mathrm e^2}$。又
+\nopagebreak[4]
+\[f(2)=u+\frac1u+b=\frac52+b\]
+在切线 $y=\dfrac32x$ 上，故 $\dfrac52+b=3$，得 $b=\dfrac12$。
+
+\gkanswer{答案（1）：当 $0<a\leqslant1$ 时为 $2+b$；当 $a>1$ 时为 $a+\dfrac1a+b$。}
+
+\gkanswer{答案（2）：$a=\dfrac2{\mathrm e^2}$，$b=\dfrac12$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+如图，点 $F_1(-c,0)$，$F_2(c,0)$ 分别是椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的左、右焦点，过点 $F_1$ 作 $x$ 轴的垂线交椭圆 $C$ 的上半部分于点 $P$，过点 $F_2$ 作直线 $PF_2$ 的垂线交直线 $x=\dfrac{a^2}c$ 于点 $Q$。
+
+（1） 如果点 $Q$ 的坐标是 $(4,4)$，求此时椭圆 $C$ 的方程；
+
+（2） 证明：直线 $PQ$ 与椭圆 $C$ 只有一个交点。
+\nopagebreak[4]
+\begin{center}\input{figures/f2012_anhui_science_q20_ellipse}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} $P$ 在 $x=-c$ 上，代入椭圆得 $y_P=\dfrac{b^2}a$。直线 $PF_2$ 的斜率为
+\nopagebreak[4]
+\[\frac{0-\frac{b^2}a}{c-(-c)}=-\frac{b^2}{2ac},\]
+\Needspace{5\baselineskip}
+故过 $F_2$ 且垂直于 $PF_2$ 的直线斜率为 $\dfrac{2ac}{b^2}$。令 $x=\dfrac{a^2}c$ 得
+\nopagebreak[4]
+\[y_Q=\frac{2ac}{b^2}\left(\frac{a^2}c-c\right)=\frac{2ac}{b^2}\cdot\frac{b^2}c=2a.\]
+\Needspace{5\baselineskip}
+由 $Q(4,4)$ 得 $\dfrac{a^2}c=4$，$2a=4$，故 $a=2$，$c=1$，$b^2=3$，椭圆为
+\nopagebreak[4]
+\[\frac{x^2}4+\frac{y^2}3=1.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 由（1）知 $P\left(-c,\dfrac{b^2}a\right)$，$Q\left(\dfrac{a^2}c,2a\right)$。直线 $PQ$ 的斜率
+\nopagebreak[4]
+\[k_{PQ}=\frac{2a-\frac{b^2}a}{\frac{a^2}c+c}=\frac{\frac{2a^2-b^2}a}{\frac{a^2+c^2}c}=\frac{c(a^2+c^2)}{a(a^2+c^2)}=\frac ca.\]
+而椭圆在 $P$ 处的切线斜率为 $-\dfrac{b^2x_P}{a^2y_P}=-\dfrac{b^2(-c)}{a^2\cdot\frac{b^2}a}=\dfrac ca$，故 $PQ$ 就是椭圆在 $P$ 处的切线，与椭圆只有一个交点。
+
+\gkanswer{答案（1）：$\dfrac{x^2}4+\dfrac{y^2}3=1$。}
+
+\gkanswer{答案（2）：证明见解析。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+数列 $\{x_n\}$ 满足 $x_1=0$，$x_{n+1}=-x_n^2+x_n+c$（$n\in\mathbf N^*$）。
+
+（1） 证明：$\{x_n\}$ 是递减数列的充分必要条件是 $c<0$；
+
+（2） 求 $c$ 的取值范围，使 $\{x_n\}$ 是递增数列。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\textbf{（1）} $x_{n+1}-x_n=c-x_n^2$。
+
+若 $c<0$，则 $c-x_n^2<0$，故 $\{x_n\}$ 递减。
+若 $\{x_n\}$ 递减，则 $x_2-x_1=c<0$（$x_1=0$），故 $c<0$。
+所以 $\{x_n\}$ 递减的充要条件是 $c<0$。
+
+\textbf{（2）} 记 $h(x)=c+x-x^2$，则 $x_{n+1}=h(x_n)$，且 $x_{n+1}-x_n=c-x_n^2$。
+
+\Needspace{5\baselineskip}
+若 $0<c\leqslant\dfrac14$，则 $\sqrt c\leqslant\dfrac12$，$h$ 在 $\left[0,\sqrt c\right]$ 上递增（$h'(x)=1-2x\geqslant0$），且 $h\left(\sqrt c\right)=\sqrt c$。由 $x_1=0<\sqrt c$ 归纳：若 $0\leqslant x_n<\sqrt c$，则
+\nopagebreak[4]
+\[x_{n+1}-x_n=c-x_n^2>0,\qquad x_{n+1}=h(x_n)<h\left(\sqrt c\right)=\sqrt c,\]
+故 $\{x_n\}$ 递增。
+
+\Needspace{5\baselineskip}
+反之，若 $\{x_n\}$ 递增，则 $x_2-x_1=c>0$，且对一切 $n$ 有 $c>x_n^2$，即 $x_n<\sqrt c$。递增有上界的数列收敛，设 $x_n\to L$，则 $L=c+L-L^2$ 且 $L\leqslant\sqrt c$，故 $L=\sqrt c$。又 $h'(x)=1-2x$，若 $c>\dfrac14$，则 $h'\left(\sqrt c\right)=1-2\sqrt c<0$，当 $x$ 充分接近 $\sqrt c$ 且 $x<\sqrt c$ 时
+\nopagebreak[4]
+\[h(x)=\sqrt c+h'\left(\sqrt c\right)(x-\sqrt c)+O\left((x-\sqrt c)^2\right)>\sqrt c,\]
+与 $x_{n+1}<\sqrt c$ 矛盾。故必须 $c\leqslant\dfrac14$。
+
+\Needspace{5\baselineskip}
+综上，$c$ 的取值范围是
+\nopagebreak[4]
+\[\left(0,\frac14\right].\]
+
+\gkanswer{答案（1）：证明见解析。}
+
+\gkanswer{答案（2）：$0<c\leqslant\dfrac14$。}
+
+\end{answer}

@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 安徽卷（理科）：phase7-b50 新卷转录、四版封账（2026-11-25；`closed`）
+- 对象：`gk-2012-anhui-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-347ce4c320f7d27eaa4e298cecb9691dd5e103e3bb46c45017dafacd81a2ac93`，2 页 A3 横向，印面 713、714。
+- 答案（独立推导，等级 D）：1 D；2 C；3 B；4 B；5 C；6 A；7 D；8 A；9 C；10 D；11 $[-3,0]$；12 $92$；13 $\sqrt3$；14 $-\frac98$；15 ①②③；16 (1) $T=\pi$、(2) 分段式；17 (1) $\frac{n(n+1)}{(n+m)(n+m+2)}$、(2) $P(X=n+2)=\frac14$、$P(X=n+1)=\frac14+\frac{n}{2(2n+1)}$、$P(X=n)=\frac{n+1}{2(2n+1)}$、$EX=n+\frac34+\frac{n}{4n+2}$；18 (1) 证明、(2) $5$、(3) $-\frac{\sqrt5}5$；19 (1) $0<a\leqslant1$ 时 $2+b$、$a>1$ 时 $a+\frac1a+b$，(2) $a=\frac2{\mathrm e^2}$、$b=\frac12$；20 (1) $\frac{x^2}4+\frac{y^2}3=1$、(2) 证明；21 (1) 证明、(2) $\left(0,\frac14\right]$。
+- 复核要点：第 9 题由 $|AF|=x_A+1=3$ 得 $A(2,2\sqrt2)$，配合 $|BF|=\frac32$ 得面积 $\frac{3\sqrt2}2$；第 10 题把交换关系看作 6 点 13 边图，补图 2 条边分“不相邻/相邻”两种，得 4 人或 2 人收 4 份；第 18 题取 $B(0,0,0)$、$C(2,0,0)$、$B_1(0,4,0)$、$A(1,0,1)$、$A_1(1,4,-2)$，得 $AA_1=5$、二面角余弦 $-\frac{\sqrt5}5$；第 21(2) 用 $h'(\sqrt c)=1-2\sqrt c$ 判必要、用 $h$ 在 $[0,\sqrt c]$ 上递增判充分，得 $(0,\frac14]$（数值验证 $c=0.25$ 递增、$c=0.26$ 第 5 步即回落）。
+- 图稿：5 张 TikZ（程序框图、两人成绩条形图、三视图、展开图与折叠图、椭圆与 P、Q）。
+- 文案修正：第 20(1) 初稿 `\ frac` 多空格、第 21(2) 的展开式符号与必要性论述重写；均已改后重生成。
+- 验收：四版 5/21/7/17 页（共 50 页），四 log 全 0；review 50 页 **373 pass + 27 not_applicable、0 fail、0 豁免**；`finalize-batch` → `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库（本卷封账后）：manifest **641 卷 / 775 来源 / 487 批次**，complete 523、blocked 118，未绑定 **135**；revision 11685。
+
 ### 2012 安徽卷（文科）：phase7-b49 新卷转录、四版封账（2026-11-25；`closed`）
 - 对象：`gk-2012-anhui-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-1ea93bba098a490962b31cf20b637d3c61394b2b7b05b3e9add3d3377bfa7a95`，2 页 A3 横向，印面 715、716。
 - 答案（独立推导，等级 D）：1 B；2 D；3 D；4 C；5 A；6 B；7 C；8 A；9 C；10 B；11 $\sqrt2$；12 $56$；13 $-6$；14 $\frac32$；15 ②④⑤；16 (1) $A=\frac\pi3$、(2) $\frac{\sqrt7}2$；17 (1) $2+b$、(2) $a=2,b=-1$；18 (1) 补表 5/0.10、8/0.16、25/0.50、10/0.20、2/0.04，(2) $0.70$，(3) $1980$ 件；19 (1) 证明、(2) $3\sqrt2$；20 (1) $\frac12$、(2) $a=10,b=5\sqrt3$；21 (1) $x_n=2n\pi-\frac{2\pi}3$、(2) $\sin S_n=(-1)^n\sin\frac{n\pi}3$。
