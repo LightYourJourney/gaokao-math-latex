@@ -3972,6 +3972,14 @@
         "gk-2011-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b41",
+      "issues": [],
+      "paper_ids": [
+        "gk-2011-spring-shanghai"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3981,7 +3989,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "374e66cb-747d-4f04-9751-6277e3cba3f2",
+  "last_transaction_id": "aa551470-916e-4edc-a943-b7d866113b7e",
   "papers": [
     {
       "blocked_from": null,
@@ -46614,9 +46622,77 @@
       "title": "2011 年·天津卷·文科",
       "track": "arts",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2011_上海春季卷/figures/f2011_shanghai_spring_q11_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_上海春季卷/figures/f2011_shanghai_spring_q13_polyhedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2011_上海春季卷/figures/f2011_shanghai_spring_q20_cone.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2011_gaokao_spring_shanghai",
+        "id": "gk-2011-spring-shanghai",
+        "note": "固定源为 4 页扫描件（原刊《数学教学》2011 年第 2 期第 2-32—2-35 页），含试卷与参考答案；印面为刊物页码 2-32—2-35。春季上海卷不分文理：填空 1—14（每题 4 分）、选择 15—18（每题 5 分）、解答 19—23（12+14+14+16+18 分），共 23 题、满分 150 分。答案按所附参考答案整理并复算（等级 C）。原页 3 幅图：第 11 题程序框图、第 13 题立方八面体、第 20 题蛋筒冰淇淋，均由 TikZ 重绘；其余各题原页无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          2,
+          4
+        ],
+        "paper": "上海春季卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "不分文理",
+        "variant": "上海春季"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2011-spring-shanghai",
+      "production_state": "complete",
+      "project_dir": "2011_上海春季卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2011/2011_数学真题_上海春季_答案要点.md",
+        "combined_rendered": "2011/2011_数学真题_上海春季_含解析.md",
+        "questions": "2011/2011_数学真题_上海春季_试题.md",
+        "solution_body": "2011/2011_数学真题_上海春季_解析正文.md"
+      },
+      "source_ids": [
+        "src-739cc4e65b2bb5a6525c537af5d9c5b1c73544f8acd05795bcc9aae09d92ee66"
+      ],
+      "title": "2011 年·上海春季卷",
+      "track": "none",
+      "year": 2011
     }
   ],
-  "revision": 11436,
+  "revision": 11441,
   "schema_version": 1,
   "sources": [
     {
@@ -47233,8 +47309,8 @@
       "exam_type": "spring",
       "git_blob_oid": "4f6b032cadb547462c8e01b6e8865ec56cda9f3c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2011-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2011春季上海.pdf",
       "regions": [],
       "source_id": "src-739cc4e65b2bb5a6525c537af5d9c5b1c73544f8acd05795bcc9aae09d92ee66",
