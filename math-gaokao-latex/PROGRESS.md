@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 天津卷（文科）：phase7-b44 新卷转录、四版封账（2026-11-25；`closed`）
+- 对象：`gk-2012-tianjin-arts`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-f4a0d343c242183e0f399e2d02223e23340aa47a8e29de428155cf272ba2fee1`，固定件 SHA-256 `1afb8253b64b28fbd1518a156fd3227faddf805c5c0a76b4e7302208cb68573b`（512,302 bytes），2 页 A3 横向，印面 777、778。
+- 第 10 题三视图：600 dpi 复核后确认俯视图 x=1、x=2 两条分界对应「斜坡起点、平顶起点」，上层为直角梯形截面柱体（下底 2、上底 1、高 1、纵深 4），体积 $3\times4\times2+\frac{(2+1)\times1}{2}\times4=30$；判读依据已写入卷注。
+- 答案（独立推导，等级 D）：1 C；2 B；3 C；4 A；5 A；6 B；7 D；8 B；9 $-3$；10 $30$；11 $a=1,b=2$；12 $3$；13 $\frac43$；14 $(0,1)$；15 (1) 小学 3、中学 2、大学 1、(2) 15 种、$\frac15$；16 (1) $\sin C=\frac{\sqrt7}4$、$b=1$、(2) $\frac{\sqrt{21}-3}8$；17 (1) $2$、(2) 证明、(3) $\frac{\sqrt{39}}{13}$；18 (1) $a_n=3n-1$、$b_n=2^n$、(2) 证明；19 (1) $\frac{\sqrt6}4$、(2) $\pm\sqrt5$；20 (1) 增 $(-\infty,-1),(a,+\infty)$、减 $(-1,a)$、(2) $(0,\frac13)$、(3) $\frac43$。
+- 复核要点：第 13 题由 $CF\parallel BD$ 得 $\frac{AC}{AD}=\frac{AF}{AB}=\frac34$，结合相交弦 $FC=2$、切割线 $BD^2=DC\cdot DA$ 解出 $CD=\frac43$；第 19 题由 $P$ 坐标得 $\frac{a^2}{b^2}=\frac85$，$e=\frac{\sqrt6}4$，再与圆 $x^2+2ax+y^2=0$ 联立得 $x=-\frac a3$、斜率 $\pm\sqrt5$；第 20(2) 由 $f(-1)>0>f(0),f(-2)$ 得 $0<a<\frac13$。
+- 验收：四版 4/18/6/16 页（共 44 页），四 log 全 0；review 44 页 **331 pass + 21 not_applicable、0 fail、0 豁免**；`finalize-batch` → `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；图稿 4 条引用全部命中。
+- 全库（本卷封账后）：manifest **635 卷 / 775 来源 / 481 批次**，complete 517、blocked 118，未绑定 **141**；revision 11622。
+- 下一步：2012 余 29 个来源；累计再完成 4 卷后刷新 report.md/manifest.csv（里程碑制）。
+
 ### 2012 待录入卷的读图阻塞点（2026-11-25；`needs-review`）
 - `2012 天津文` 第 10 题三视图：正视图为 3×2 矩形上方一段斜线与顶边，侧视图为 4 宽、总高 3（y=2 处有横线），俯视图 3×4 且在 x=1、x=2 有两条分界。两种还原都能部分吻合：①三角形截面（底 2、高 1）→ 体积 28；②直角梯形截面（平行边 2 与 1、高 1）→ 体积 30。俯视图的两条线支持②，但正视图斜坡止点位置支持①，600 dpi 下仍不能唯一判定，**暂不落笔**。
 - `2012 广东文` 第 10 题：定义 $\alpha\circ\beta=\dfrac{\alpha\cdot\beta}{\beta\cdot\beta}$，已知 $a\circ b$、$b\circ a\in\{\frac n2\}$ 且夹角 $\theta\in(\frac\pi4,\frac\pi2)$，可推出两者同为 $\frac12$、$\cos\theta=\frac12$，但 $a\cdot b=\frac12|a|^2$ 仍依赖模长；题面扫描未见「单位向量」等约束，答案不唯一，**暂不落笔**。

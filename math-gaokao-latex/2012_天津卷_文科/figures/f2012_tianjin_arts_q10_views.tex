@@ -1,0 +1,36 @@
+% 2012 年天津卷文科第 10 题：三视图（单位：m）
+% 来源 PDF：普通高考/2012/2012天津文.pdf，第 1 页（印面 777）第 2 栏。
+% 重绘依据：正视图为 3×2 矩形，上方直角梯形（下底 2、上底 1、高 1）；
+%   侧视图为 4×3 矩形，y=2 处一条横线；俯视图 3×4，x=1、x=2 两条竖线。
+\begin{tikzpicture}[scale=0.72, semithick, every node/.style={font=\small}]
+  % ---------- 正视图 ----------
+  \begin{scope}[shift={(0,0)}]
+    \draw (0,0) rectangle (3,2);
+    \draw (1,2) -- (2,3) -- (3,3) -- (3,2);
+    \draw[<->] (0,-0.3) -- (3,-0.3) node[midway,below] {$3$};
+    \draw[<->] (3.45,0) -- (3.45,2) node[midway,right] {$2$};
+    \draw[<->] (3.45,2) -- (3.45,3) node[midway,right] {$1$};
+    \draw[densely dashed] (0,2) -- (1,2);
+    \node at (1.5,-1.0) {正视图};
+  \end{scope}
+  % ---------- 侧视图 ----------
+  \begin{scope}[shift={(5.6,0)}]
+    \draw (0,0) rectangle (4,3);
+    \draw (0,2) -- (4,2);
+    \draw[<->] (0,-0.3) -- (4,-0.3) node[midway,below] {$4$};
+    \draw[<->] (4.45,0) -- (4.45,2) node[midway,right] {$2$};
+    \draw[<->] (4.45,2) -- (4.45,3) node[midway,right] {$1$};
+    \node at (2,-1.0) {侧视图};
+  \end{scope}
+  % ---------- 俯视图 ----------
+  \begin{scope}[shift={(0,-5.2)}]
+    \draw (0,0) rectangle (3,4);
+    \draw (1,0) -- (1,4);
+    \draw (2,0) -- (2,4);
+    \draw[<->] (0,-0.3) -- (1,-0.3) node[midway,below] {$1$};
+    \draw[<->] (1,-0.3) -- (2,-0.3) node[midway,below] {$1$};
+    \draw[<->] (2,-0.3) -- (3,-0.3) node[midway,below] {$1$};
+    \draw[<->] (3.45,0) -- (3.45,4) node[midway,right] {$4$};
+    \node at (1.5,-1.0) {俯视图};
+  \end{scope}
+\end{tikzpicture}

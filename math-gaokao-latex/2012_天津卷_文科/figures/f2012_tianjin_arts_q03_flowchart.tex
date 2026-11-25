@@ -1,0 +1,23 @@
+% 2012 年天津卷文科第 3 题：程序框图（n=1,S=0；S=S+3^n-3^{n-1}；n=n+1；n>=4 输出 S）
+% 来源 PDF：普通高考/2012/2012天津文.pdf，第 1 页（印面 777）第 1 栏。
+\begin{tikzpicture}[scale=0.9, semithick, >=Stealth,
+  block/.style={draw, minimum width=3.4cm, minimum height=0.7cm, align=center},
+  dec/.style={draw, diamond, aspect=3.0, inner sep=1pt, align=center},
+  arr/.style={->}]
+  \node (start) [draw, rounded corners=6pt, minimum width=1.5cm, minimum height=0.55cm] {开始};
+  \node (init)  [block, below=0.5cm of start] {$n=1,\ S=0$};
+  \node (step)  [block, below=0.6cm of init] {$S=S+3^n-3^{n-1}$};
+  \node (inc)   [block, below=0.55cm of step] {$n=n+1$};
+  \node (dec)   [dec, below=0.7cm of inc] {$n\geqslant4$?};
+  \node (out)   [draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+                 minimum width=2.6cm, minimum height=0.65cm, below=0.8cm of dec] {输出 $S$};
+  \node (end)   [draw, rounded corners=6pt, minimum width=1.5cm, minimum height=0.55cm,
+                 below=0.5cm of out] {结束};
+  \draw[arr] (start) -- (init);
+  \draw[arr] (init) -- (step);
+  \draw[arr] (step) -- (inc);
+  \draw[arr] (inc) -- (dec);
+  \draw[arr] (dec) -- node[right] {是} (out);
+  \draw[arr] (out) -- (end);
+  \draw[arr] (dec.east) -- node[above] {否} ++(1.7,0) |- (init.east);
+\end{tikzpicture}
