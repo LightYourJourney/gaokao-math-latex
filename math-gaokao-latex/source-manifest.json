@@ -4124,6 +4124,14 @@
         "gk-2013-chongqing-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b60",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-tianjin-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4133,7 +4141,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "6482734c-a1b6-4d21-af90-5d657ac105b3",
+  "last_transaction_id": "bd069874-3b79-4196-88e7-42e5eb4bbc57",
   "papers": [
     {
       "blocked_from": null,
@@ -48129,9 +48137,74 @@
       "title": "2013 年·重庆卷·文科",
       "track": "arts",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_天津卷_文科/figures/f2013_tianjin_arts_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_天津卷_文科/figures/f2013_tianjin_arts_q13_trapezoid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_天津卷_文科/figures/f2013_tianjin_arts_q17_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_tianjin_arts",
+        "id": "gk-2013-tianjin-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 851、852。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。天津卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题。答案由本库独立推导（等级 D，非官方）。原页图：第 3 题程序框图、第 13 题圆内接梯形、第 17 题三棱柱，均以 TikZ 重绘共 3 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "天津文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-tianjin-arts",
+      "production_state": "complete",
+      "project_dir": "2013_天津卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_天津文_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_天津文_含解析.md",
+        "questions": "2013/2013_数学真题_天津文_试题.md",
+        "solution_body": "2013/2013_数学真题_天津文_解析正文.md"
+      },
+      "source_ids": [
+        "src-07dd15be0865968da0a4208f3fe6a6060c27d81ba2c595c507c82dc27d66e94e"
+      ],
+      "title": "2013 年·天津卷·文科",
+      "track": "arts",
+      "year": 2013
     }
   ],
-  "revision": 11757,
+  "revision": 11764,
   "schema_version": 1,
   "sources": [
     {
@@ -61568,8 +61641,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9caa5783b79a2b51b1cf892622796a95047707f2",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-tianjin-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013天津文.pdf",
       "regions": [],
       "source_id": "src-07dd15be0865968da0a4208f3fe6a6060c27d81ba2c595c507c82dc27d66e94e",

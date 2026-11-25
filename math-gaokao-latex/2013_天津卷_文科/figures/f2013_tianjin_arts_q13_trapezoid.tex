@@ -1,0 +1,31 @@
+% 2013 天津卷文科第 13 题：圆内接梯形 ABCD（AB∥DC），AE 为过 A 的切线，
+% 与 CB 的延长线交于 E。坐标按 AB=AD=5、BE=4 精确计算：
+% A(3.75,-3.307)、B(7.5,0)、C(4.6875,4.134)、D(0,0)、E(9.75,-3.307)，
+% 外接圆圆心 (3.75,0.4727)、半径 3.7797（A 为圆的最低点，故切线水平）。
+\begin{tikzpicture}[font=\footnotesize, line width=0.5pt, scale=0.62,
+  dot/.style={circle, fill=black, inner sep=1.1pt}]
+  \coordinate (D) at (0,0);
+  \coordinate (B) at (7.5,0);
+  \coordinate (C) at (4.6875,4.1338);
+  \coordinate (A) at (3.75,-3.3072);
+  \coordinate (E) at (9.75,-3.3072);
+  \coordinate (O) at (3.75,0.4727);
+  \draw (O) circle (3.7797);
+  % 梯形四边
+  \draw (C) -- (D);
+  \draw (D) -- (A);
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  % 对角线
+  \draw (D) -- (B);
+  % CB 的延长线过 B 到 E，AE 为切线
+  \draw (C) -- (E);
+  \draw (A) -- ($(A)!-0.13!(E)$);
+  \draw (A) -- (E);
+  \foreach \p in {A,B,C,D,E} \node[dot] at (\p) {};
+  \node[above left=-1pt] at (C) {$C$};
+  \node[left=-1pt] at (D) {$D$};
+  \node[above right=-1pt] at (B) {$B$};
+  \node[below] at (A) {$A$};
+  \node[right] at (E) {$E$};
+\end{tikzpicture}

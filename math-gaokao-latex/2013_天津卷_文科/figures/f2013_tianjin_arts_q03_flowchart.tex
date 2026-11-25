@@ -1,0 +1,26 @@
+% 2013 天津卷文科第 3 题：输出 n 的值的程序框图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.45pt,
+  node distance=4.6mm,
+  term/.style={draw, rounded corners=5pt, minimum height=1.9em, inner xsep=9pt},
+  io/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+             minimum height=1.9em, inner xsep=8pt},
+  box/.style={draw, minimum height=1.9em, inner xsep=7pt},
+  dec/.style={draw, diamond, aspect=2.9, inner sep=1pt}]
+  \node[term] (start) {开始};
+  \node[box, below=5mm of start] (init) {$n=1$，$S=0$};
+  \node[box, below=7mm of init] (acc) {$S=S+(-1)^n\cdot n$};
+  \node[dec, below=6mm of acc] (test) {$S\geqslant2$?};
+  \node[box, right=12mm of test] (inc) {$n=n+1$};
+  \node[io, below=9mm of test] (output) {输出 $n$};
+  \node[term, below=5mm of output] (end) {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (acc);
+  \draw[->] (acc) -- (test);
+  \draw[->] (test) -- node[right] {是} (output);
+  \draw[->] (test.east) -- node[above] {否} (inc.west);
+  \draw[->] (output) -- (end);
+  % 否分支：n=n+1 后绕回累加框上方，再向下进入累加框
+  \coordinate (top) at ($(acc.north)+(0,6mm)$);
+  \coordinate (back) at ($(acc.north)+(1.15,0)$);
+  \draw[->] (inc.north) -- (inc.north |- top) -- (back |- top) -- (back);
+\end{tikzpicture}

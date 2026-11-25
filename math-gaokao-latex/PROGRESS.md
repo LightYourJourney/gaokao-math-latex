@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 天津卷（文科）：phase7-b60 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
+- 对象：`gk-2013-tianjin-arts`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-07dd15be0865968da0a4208f3fe6a6060c27d81ba2c595c507c82dc27d66e94e`，2 页 A3，印面 851、852（第 1—17 题在 851 面，18—20 题在 852 面）。
+- 答案（等级 D）：1 D；2 A（$-7$）；3 D（$n=4$）；4 A；5 C（$a=2$）；6 B（$-\frac{\sqrt2}2$）；7 C（$\left[\frac12,2\right]$）；8 A；9 $5-5\mathrm i$；10 $\sqrt3$；11 $x^2-\frac{y^2}3=1$；12 $\frac12$；13 $\frac{15}2$；14 $\frac34$（$a=-2,b=4$）；15 (1) $\frac35$、(2) ① 15 种、② $\frac25$；16 $b=\sqrt6$、$\sin\left(2B-\frac\pi3\right)=\frac{4\sqrt5+\sqrt3}{18}$；17 ①②证明、③ $\frac{\sqrt5}5$；18 (1) $\frac{x^2}3+\frac{y^2}2=1$、(2) $k=\pm\sqrt2$；19 (1) $a_n=\frac32\left(-\frac12\right)^{n-1}$、(2) 证明；20 ①②证明。
+- 主代理复核：第 3 题按原页“先累加、后判断、再自增”逐轮得 $S=-1,1,-2,2$，第 4 轮判真输出 $n=4$；第 13 题 $CE=CB+BE=9$、$EA=6$、$\cos\angle ABE=\frac18$、$AC=BD=\frac{15}2$；第 15 题 $S$ 值表 $4,4,6,3,4,5,4,5,3,5$，一等品 6 件、$P(B)=\frac{\mathrm C_4^2}{\mathrm C_6^2}=\frac25$；第 16 题 $a=3c$、$b=\sqrt6$；第 17 题坐标法 $\sin\theta=\frac{\sqrt5}5$；第 18 题 $k=\pm\sqrt2$；第 19 题 $q=-\frac12$ 与 $S_n+\frac1{S_n}\leqslant\frac{13}6$ 分奇偶讨论；第 20 题按 $x_3<0<x_1,x_2$ 与韦达定理完成 $x_1+x_2+x_3>-\frac13$。
+- 排版修复：初次构建解析版有 4 条 Overfull（49.2/32.3/17.7/40.8 pt），均为过长行间公式；把第 2、14、16、18 题的四处推导改为 `aligned` 分行后重建，Overfull 归零，解析版由 22 页变为 23 页。
+- 图稿：3 张 TikZ（程序框图、圆内接梯形与切线、三棱柱）。
+- 验收：四版 4/23/6/17 页（共 50 页），四 log 全 0（Overfull、missing characters 均 0）；review 50 页 **pass 356 + not_applicable 44、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；3 条图稿引用全部命中。
+- 全库：manifest **651 卷 / 775 来源 / 497 批次**，complete 533、blocked 118，未绑定 **125**；revision 11764。
+
 ### 2013 重庆卷（文科）：phase7-b59 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
 - 对象：`gk-2013-chongqing-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-1371ac4b33540b2550fe183dd1dbfc7800757643a1d845378d0c8c501b8fe9c5`，2 页 A3，印面 793、794（第 1—18 题在第 793 面，19—21 题在 794 面）。
 - 答案（等级 D）：1 D；2 A；3 C；4 B；5 C；6 B；7 A；8 D（$240$）；9 C；10 A（$\left(\frac{2\sqrt3}3,2\right]$）；11 $\sqrt5$；12 $\frac72$；13 $\frac23$；14 $4$；15 $\left[0,\frac\pi6\right]\cup\left[\frac{5\pi}6,\pi\right]$；16 $a_n=3^{n-1}$、$S_n=\frac{3^n-1}2$、$T_{20}=1010$；17 $\hat y=0.3x-0.4$、正相关、$1.7$ 千元；18 $A=\frac{5\pi}6$、最大值 $\frac{9-\sqrt3}4$（$B=C=\frac\pi{12}$）；19 (1) 证明、(2) $\frac74$；20 $V(r)=\frac\pi5(300r-4r^3)$、定义域 $(0,5\sqrt3)$、$r=5,h=8$、$V_{\max}=200\pi$；21 (1) $\frac{x^2}{16}+\frac{y^2}8=1$、(2) $S_{\max}=2\sqrt2$、圆 $(x\mp\sqrt2)^2+y^2=6$。
