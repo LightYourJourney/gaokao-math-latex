@@ -1,0 +1,31 @@
+% 2013 重庆卷文科第 21 题：椭圆与内切圆 Q。
+% 椭圆 x^2/16+y^2/8=1，图中按 1:2 缩小绘制（半长轴 2，半短轴 sqrt2）。
+\begin{tikzpicture}[font=\small, line width=0.45pt, >=Stealth, scale=1]
+  \def\aa{2}
+  \def\bb{1.41421}
+  \def\cc{1.41421}
+  \def\yy{1}
+  % 椭圆
+  \draw (0,0) ellipse ({\aa} and {\bb});
+  % 坐标轴
+  \draw[->] (-2.85,0) -- (2.95,0) node[below] {$x$};
+  \draw[->] (0,-1.95) -- (0,2.05) node[right] {$y$};
+  \node[below left] at (0,0) {$O$};
+  % 过左焦点 F1 的垂线，交椭圆于 A、A'
+  \draw (-\cc,-1.16) -- (-\cc,1.16);
+  \fill (-\cc,0) circle (0.6pt);
+  \node[below right] at (-\cc,0) {$F_1$};
+  \node[above left] at (-\cc,\yy) {$A$};
+  \node[below left] at (-\cc,-\yy) {$A'$};
+  % 过 P、P' 的弦
+  \draw (\cc,-1.16) -- (\cc,1.16);
+  \node[above left] at (\cc,\yy) {$P$};
+  \node[below left] at (\cc,-\yy) {$P'$};
+  % 圆 Q：圆心 (sqrt2/2,0)，半径 sqrt6/2
+  \draw (0.70711,0) circle (1.22474);
+  \fill (0.70711,0) circle (0.9pt);
+  \node[below left] at (0.70711,0) {$Q$};
+  % 半径 QP、QP'
+  \draw (0.70711,0) -- (\cc,\yy);
+  \draw (0.70711,0) -- (\cc,-\yy);
+\end{tikzpicture}

@@ -14,6 +14,14 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 重庆卷（文科）：phase7-b59 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
+- 对象：`gk-2013-chongqing-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-1371ac4b33540b2550fe183dd1dbfc7800757643a1d845378d0c8c501b8fe9c5`，2 页 A3，印面 793、794（第 1—18 题在第 793 面，19—21 题在 794 面）。
+- 答案（等级 D）：1 D；2 A；3 C；4 B；5 C；6 B；7 A；8 D（$240$）；9 C；10 A（$\left(\frac{2\sqrt3}3,2\right]$）；11 $\sqrt5$；12 $\frac72$；13 $\frac23$；14 $4$；15 $\left[0,\frac\pi6\right]\cup\left[\frac{5\pi}6,\pi\right]$；16 $a_n=3^{n-1}$、$S_n=\frac{3^n-1}2$、$T_{20}=1010$；17 $\hat y=0.3x-0.4$、正相关、$1.7$ 千元；18 $A=\frac{5\pi}6$、最大值 $\frac{9-\sqrt3}4$（$B=C=\frac\pi{12}$）；19 (1) 证明、(2) $\frac74$；20 $V(r)=\frac\pi5(300r-4r^3)$、定义域 $(0,5\sqrt3)$、$r=5,h=8$、$V_{\max}=200\pi$；21 (1) $\frac{x^2}{16}+\frac{y^2}8=1$、(2) $S_{\max}=2\sqrt2$、圆 $(x\mp\sqrt2)^2+y^2=6$。
+- 主代理复核：第 5 题 300 dpi 确认决定框为严格 `s>15?`、“否”先 `k=k+1` 再回累加框，$s$ 依次 $1,2,6,15,31$，$s=15$ 仍继续，输出 $k=5$；第 8 题俯视图左列 $3,2,3$、侧视图梯形上底 $2$ 下底 $8$ 高 $4$，侧面积 $200$ + 两底 $40$ = $240$；第 10 题独立推导得等弦长 $\Leftrightarrow|k_1|=|k_2|$、夹角 $60^\circ$ 给出 $|k|=1/\sqrt3$ 或 $\sqrt3$，恰一对 $\Leftrightarrow 1/\sqrt3<b/a\leqslant\sqrt3$，即 $e\in(2\sqrt3/3,2]$；第 15、18、19、20、21 题均独立复算一致。
+- 图稿：5 张 TikZ（程序框图、茎叶图、三视图、四棱锥、椭圆与内切圆）。
+- 验收：四版 4/24/6/18 页（共 52 页），四 log 全 0（Overfull、missing characters 均 0）；review 52 页 **pass 381 + not_applicable 35、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库：manifest **650 卷 / 775 来源 / 496 批次**，complete 532、blocked 118，未绑定 **126**；revision 11757。
+
 ### 2013 四川卷（文科）：phase7-b58 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
 - 对象：`gk-2013-sichuan-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-8540628fdb08169c194aa1c10d3ba5a32f19cab5f24368f24f4a7a29f4f055b0`，2 页 A3，印面 847、848。
 - 答案（等级 D）：1 B；2 D；3 B；4 C；5 D；6 A（$\omega=2,\varphi=-\frac\pi3$）；7 A；8 C（$24$）；9 C（$\frac{\sqrt2}2$）；10 A（$[1,\mathrm e]$）；11 $1$；12 $2$；13 $36$；14 $\sqrt3$；15 $(2,4)$；16 $a_1=1$、$q=3$、$S_n=\frac{3^n-1}2$；17 (1) $\frac45$、(2) $\frac{\sqrt2}2$；18 (1) $\frac12,\frac13,\frac16$、(2) 甲 $\frac{1027}{2100},\frac{376}{2100},\frac{697}{2100}$、乙 $\frac{1051}{2100},\frac{696}{2100},\frac{353}{2100}$，乙更符合；19 (1) 过 $P$ 作 $BC$ 的平行线、(2) $\frac{\sqrt3}6$；20 (1) $k<-\sqrt3$ 或 $k>\sqrt3$、(2) $n=\frac{\sqrt{15m^2+180}}5$（$-\sqrt3<m<\sqrt3$，$m\neq0$）；21 (1) 减 $(-\infty,-1)$、增 $(-1,0)$ 与 $(0,+\infty)$、(2) 证明 $x_2-x_1\geqslant1$、(3) $a>-1-\ln2$。

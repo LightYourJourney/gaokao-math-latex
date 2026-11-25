@@ -1,0 +1,26 @@
+% 2013 重庆卷文科第 5 题：输出 k 的值的程序框图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.45pt,
+  node distance=4.8mm,
+  term/.style={draw, rounded corners=5pt, minimum height=1.8em, inner xsep=8pt},
+  io/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+             minimum height=1.8em, inner xsep=7pt},
+  box/.style={draw, minimum height=1.8em, inner xsep=6pt},
+  dec/.style={draw, diamond, aspect=2.6, inner sep=1pt}]
+  \node[term] (start) {开始};
+  \node[box, below=5mm of start] (init) {$k=1$，$s=1$};
+  \node[box, below=8mm of init] (acc) {$s=s+(k-1)^2$};
+  \node[dec, below=6mm of acc] (test) {$s>15$?};
+  \node[box, right=11mm of test] (inc) {$k=k+1$};
+  \node[io, below=10mm of test] (output) {输出 $k$};
+  \node[term, below=5mm of output] (end) {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (acc);
+  \draw[->] (acc) -- (test);
+  \draw[->] (test) -- node[right] {是} (output);
+  \draw[->] (test) -- node[above] {否} (inc);
+  \draw[->] (output) -- (end);
+  % 否分支回到累加框上方
+  \coordinate (loop) at ($(acc.north)+(0.55,0.40)$);
+  \coordinate (loopt) at ($(acc.north)+(0.55,0)$);
+  \draw[->] (inc.north) -- (inc.north |- loop) -- (loop) -- (loopt);
+\end{tikzpicture}

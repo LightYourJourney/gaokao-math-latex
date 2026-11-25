@@ -1,0 +1,30 @@
+% 2013 重庆卷文科第 19 题：四棱锥 P-ABCD，PA 垂直于底面，
+% F 在棱 PC 上且 PF=7FC。
+\begin{tikzpicture}[font=\small, line width=0.45pt, scale=1]
+  \coordinate (P) at (-0.15,3.40);
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (1.60,-1.50);
+  \coordinate (C) at (4.10,-0.70);
+  \coordinate (D) at (3.20,1.40);
+  \coordinate (F) at ($(P)!0.875!(C)$);
+  % 可见棱
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  \draw (D) -- (A);
+  % 不可见棱
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (B) -- (D);
+  \draw[dashed] (B) -- (F);
+  % 顶点标注
+  \node[above left] at (P) {$P$};
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[left] at (F) {$F$};
+\end{tikzpicture}
