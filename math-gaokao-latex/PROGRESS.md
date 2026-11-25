@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 安徽卷（理科）：phase7-b67 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2013-anhui-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-00370f4f4d0e3c4ed1a1335231a99f7dadbde42a62c0cc66055af087952bc223`，2 页 A3，印面 783、784。
+- 答案（等级 D）：1 A（$z=1+\mathrm i$）；2 D（$\frac{11}{12}$）；3 A；4 C；5 C；6 D；7 B；8 B（$\{2,3,4\}$）；9 D（$4\sqrt3$）；10 A（3 个）；11 $\frac12$；12 $\frac{2\pi}3$；13 $[1,+\infty)$；14 $a_n=\sqrt{3n-2}$；15 ①②③⑤；16 (1) $\omega=1$、(2) $[0,\frac\pi8]$ 增、$[\frac\pi8,\frac\pi2]$ 减；17 (1) $\frac{a}{1+a^2}$、(2) $\frac{1-k}{k^2-2k+2}$；18 (1) $\frac{8x^2}5+\frac{8y^2}3=1$、(2) $P$ 在定直线 $x+y=1$ 上；19 (1) 证明、(2) $17-12\sqrt2$；20 (1)(2) 证明；21 (1) $\frac{k(2n-k)}{n^2}$、(2) 令 $u_0=\frac{k(n-k)-1}{n+2}$：$u_0\notin\mathbf Z$ 时 $m=k+\lceil u_0\rceil$，$u_0\in\mathbf Z$ 时 $m=k+u_0$ 或 $k+u_0+1$。
+- **来源核对**：子代理按 PDF 纠正任务提示——第 1 题原式为 $z\cdot\bar z\,\mathrm i+2=2z$；第 10 题仅写 $f(x_1)=x_1$（无 $x_1<x_2$）；第 19 题为“母线与底面所成角 22.5°”。主代理 600 dpi 复核后确认以 PDF 为准。
+- 主代理复核：第 2 题逐轮 $s=\frac12,\frac34,\frac{11}{12}$；第 8 题 $\{2,3,4\}$；第 9 题 $|\lambda|+|\mu|\leqslant1$ 区域为菱形，面积 $4\cdot\frac12\cdot2\cdot2\sin60^\circ=4\sqrt3$；第 13 题 $\vec{CA}\cdot\vec{CB}=0$ 得 $a\geqslant1$；第 14 题 $a_n^2=n$ 型差为 3；第 18 题 $2c=1\Rightarrow a^2=\frac58$，数值验证 $P$ 在 $x+y=1$；第 19 题 $d=\sqrt3h$、$\cos\angle COD=6\tan^222.5^\circ-1=17-12\sqrt2$；第 21 题对 $n=3..14$ 穷举分布，最值 $m$ 与闭式完全一致（0 处不符）。
+- 排版修复：第 19 题圆锥按原页改母线虚实线（$PA$、$PC$ 实线，$PB$、$PD$ 虚线）并补 $P$ 向椭圆的轮廓切线；重建后复查。
+- 图稿：5 张 TikZ（程序框图、函数图象、梯形、正方体、圆锥）。
+- 验收：四版 5/28/7/21 页（共 61 页），四 log 全 0（Overfull、missing characters 均 0）；review 61 页 **pass 443 + not_applicable 45、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库：manifest **658 卷 / 775 来源 / 504 批次**，complete 540、blocked 118，未绑定 **118**；revision 11837。
+
 ### 2013 重庆卷（理科）：phase7-b66 转录（子代理起草、主代理复核）与四版封账（2026-11-26；`closed`）
 - 对象：`gk-2013-chongqing-science`，**22 个题号**（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-69a68913d9d7d7118a7204332442f47a55cc66d28a0a63fb51f470988c3ba2c5`，2 页 A3，印面 791、792。
 - 答案（等级 D）：1 D；2 D；3 B（$\frac92$）；4 C（$x=5,y=8$）；5 C（$200$）；6 A；7 A（$5\sqrt2-4$）；8 B（$k\leqslant7$）；9 C（$\sqrt3$）；10 D（$\left(\frac{\sqrt7}2,\sqrt2\right]$）；11 $\sqrt5$；12 $64$；13 $590$；14 $5$；15 $16$；16 $a\leqslant8$；17 (1) $a=\frac12$、(2) 增区间 $(0,2)$、$(3,+\infty)$，减区间 $(2,3)$，极大 $\frac92+6\ln2$、极小 $2+6\ln3$；18 (1) $\frac{18}{35}$、(2) $P(200)=\frac1{105}$、$P(50)=\frac2{105}$、$P(10)=\frac4{35}$、$P(0)=\frac67$、$E(X)=4$；19 (1) $2\sqrt3$、(2) $\frac{3\sqrt7}8$；20 (1) $\frac{3\pi}4$、(2) $\tan\alpha=1$ 或 $4$；21 (1) $\frac{x^2}{16}+\frac{y^2}8=1$、(2) $\left(x\mp\frac{2\sqrt6}3\right)^2+y^2=\frac{16}3$；22 (1) $46$、(2) $14$。

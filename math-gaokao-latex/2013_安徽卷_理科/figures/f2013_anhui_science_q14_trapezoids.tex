@@ -1,0 +1,28 @@
+% 2013 年安徽卷理科第 14 题：角 O 两边上的点列 A_n、B_n 与面积相等的梯形。
+% 来源 PDF：普通高考/2013/2013安徽理.pdf，第 1 页（印面 783）右栏下部。
+% 所有 A_nB_n 相互平行；A_n、B_n 分别在角 O 的两条边上。
+\begin{tikzpicture}[semithick, font=\small]
+  \useasboundingbox (-3.0,-6.0) rectangle (3.0,0.4);
+  \coordinate (O) at (0,0);
+  \coordinate (A1) at (-1.15,-2.2);
+  \coordinate (B1) at (1.15,-2.2);
+  \coordinate (A2) at (-1.73,-3.3);
+  \coordinate (B2) at (1.73,-3.3);
+  \coordinate (A3) at (-2.19,-4.2);
+  \coordinate (B3) at (2.19,-4.2);
+  % 角的两边
+  \draw (O) -- (-2.75,-5.3);
+  \draw (O) -- (2.75,-5.3);
+  % 平行弦
+  \draw (A1) -- (B1);
+  \draw (A2) -- (B2);
+  \draw (A3) -- (B3);
+  % 标注
+  \node[above] at (O) {$O$};
+  \node[left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[left] at (A2) {$A_2$};
+  \node[right] at (B2) {$B_2$};
+  \node[left] at (A3) {$A_3$};
+  \node[right] at (B3) {$B_3$};
+\end{tikzpicture}

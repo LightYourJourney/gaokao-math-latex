@@ -1,0 +1,17 @@
+% 2013 年安徽卷理科第 8 题：函数 y=f(x) 在闭区间 [a,b] 上的图象。
+% 来源 PDF：普通高考/2013/2013安徽理.pdf，第 1 页（印面 783）中栏。
+% 曲线自 (a,0) 陡升，经一个较高的极大值、一个正的极小值、一个较低的极大值，
+% 最后降回 (b,0)；除端点外全部位于 x 轴上方。
+\begin{tikzpicture}[semithick, >=Stealth, font=\small, x=0.95cm, y=0.95cm]
+  \draw[->] (-0.35,0) -- (7.3,0) node[below right] {$x$};
+  \draw[->] (0,-0.4) -- (0,3.3) node[right] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw[thick] (1,0)
+    .. controls (1.03,1.0) and (1.18,2.55) .. (1.62,2.60)
+    .. controls (2.0,2.64) and (2.55,1.35) .. (3.05,0.98)
+    .. controls (3.45,0.76) and (3.75,1.10) .. (4.15,1.28)
+    .. controls (4.45,1.40) and (4.62,1.25) .. (4.95,1.02)
+    .. controls (5.35,0.70) and (6.42,0.20) .. (6.45,0);
+  \draw (1,0) -- (1,-0.06) node[below] {$a$};
+  \draw (6.45,0) -- (6.45,-0.06) node[below] {$b$};
+\end{tikzpicture}

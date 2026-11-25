@@ -4180,6 +4180,14 @@
         "gk-2013-chongqing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b67",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-anhui-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4189,7 +4197,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0b945036-d122-44e3-a4b6-fe4a55eacc06",
+  "last_transaction_id": "2f4d8e0e-1831-4c31-a2aa-efc86de8185c",
   "papers": [
     {
       "blocked_from": null,
@@ -48648,9 +48656,82 @@
       "title": "2013 年·重庆卷·理科",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_安徽卷_理科/figures/f2013_anhui_science_q02_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_安徽卷_理科/figures/f2013_anhui_science_q08_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_安徽卷_理科/figures/f2013_anhui_science_q14_trapezoids.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_安徽卷_理科/figures/f2013_anhui_science_q15_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_安徽卷_理科/figures/f2013_anhui_science_q19_cone.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_anhui_science",
+        "id": "gk-2013-anhui-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 783、784（第 783 面为选择 1—10、填空 11—15、解答 16—17；第 784 面为解答 18—21）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。安徽卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 2 题程序框图、第 8 题函数图象、第 14 题梯形、第 15 题正方体、第 19 题圆锥，均以 TikZ 重绘共 5 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "安徽理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-anhui-science",
+      "production_state": "complete",
+      "project_dir": "2013_安徽卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_安徽理_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_安徽理_含解析.md",
+        "questions": "2013/2013_数学真题_安徽理_试题.md",
+        "solution_body": "2013/2013_数学真题_安徽理_解析正文.md"
+      },
+      "source_ids": [
+        "src-00370f4f4d0e3c4ed1a1335231a99f7dadbde42a62c0cc66055af087952bc223"
+      ],
+      "title": "2013 年·安徽卷·理科",
+      "track": "science",
+      "year": 2013
     }
   ],
-  "revision": 11824,
+  "revision": 11837,
   "schema_version": 1,
   "sources": [
     {
@@ -62159,8 +62240,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ad7da4be0d49403d02cfe684f09f0afbbe51d406",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-anhui-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013安徽理.pdf",
       "regions": [],
       "source_id": "src-00370f4f4d0e3c4ed1a1335231a99f7dadbde42a62c0cc66055af087952bc223",
