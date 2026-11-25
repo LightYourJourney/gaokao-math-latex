@@ -1,0 +1,36 @@
+% 2013 重庆卷理科第 21 题：椭圆与圆 Q。
+% 椭圆 x^2/16+y^2/8=1，图中按 3:4 缩放绘制（半长轴 3，半短轴、半焦距 3*sqrt2/2）。
+% A、A' 为过左焦点 F1 的垂线与椭圆的交点；P、P' 为另一条垂线与椭圆的交点；
+% 圆 Q 过 P、P' 且与椭圆在 P、P' 处相切，PQ⊥P'Q。
+\begin{tikzpicture}[font=\small, line width=0.45pt, >=Stealth, scale=1]
+  \def\aa{3}
+  \def\bb{2.12132}
+  \def\cc{2.12132}
+  \def\yy{1.5}
+  \def\px{2.44949}
+  \def\py{1.22474}
+  \def\qx{1.22474}
+  \def\rr{1.73205}
+  % 坐标轴
+  \draw[->] (-3.75,0) -- (4.05,0) node[below] {$x$};
+  \draw[->] (0,-2.65) -- (0,2.75) node[right] {$y$};
+  \node[below left] at (0,0) {$O$};
+  % 椭圆
+  \draw (0,0) ellipse ({\aa} and {\bb});
+  % 过左焦点 F1 的垂线
+  \draw (-\cc,-\yy) -- (-\cc,\yy);
+  \fill (-\cc,0) circle (0.6pt);
+  \node[below left] at (-\cc,0) {$F_1$};
+  \node[above left] at (-\cc,\yy) {$A$};
+  \node[below left] at (-\cc,-\yy) {$A'$};
+  % 过 P、P' 的垂线
+  \draw (\px,-\py) -- (\px,\py);
+  \node[above right] at (\px,\py) {$P$};
+  \node[below right] at (\px,-\py) {$P'$};
+  % 圆 Q
+  \draw (\qx,0) circle ({\rr});
+  \fill (\qx,0) circle (0.7pt);
+  \node[below] at (\qx,0) {$Q$};
+  \draw (\qx,0) -- (\px,\py);
+  \draw (\qx,0) -- (\px,-\py);
+\end{tikzpicture}

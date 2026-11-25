@@ -1,0 +1,26 @@
+% 2013 重庆卷理科第 8 题：程序框图。
+% k=2，s=1；循环体 s=s·log_k(k+1)，k=k+1；判断框为“是”时返回循环，为“否”时输出 s。
+\begin{tikzpicture}[font=\small, >=Stealth, line width=0.5pt,
+    block/.style={draw, rectangle, minimum width=2.8cm, minimum height=0.8cm, inner sep=3pt},
+    wide/.style={draw, rectangle, minimum width=5.7cm, minimum height=0.95cm, inner sep=3pt},
+    term/.style={draw, rectangle, rounded corners=4pt, minimum width=1.7cm, minimum height=0.75cm, inner sep=3pt},
+    io/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+      minimum width=2.6cm, minimum height=0.85cm, inner sep=3pt},
+    dec/.style={draw, diamond, aspect=2.6, minimum width=4.6cm, minimum height=1.9cm, inner sep=1pt}]
+  \node[term] (start) at (0,9.3) {开始};
+  \node[wide] (init) at (0,7.8) {$k=2$,\ $s=1$};
+  \node[wide] (loop) at (0,6.1) {$s=s\cdot\log_k(k+1)$};
+  \node[block] (inc) at (0,4.35) {$k=k+1$};
+  \node[dec] (test) at (0,2.5) {};
+  \node[io] (out) at (0,0.75) {输出 $s$};
+  \node[term] (stop) at (0,-0.6) {结束};
+
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (loop);
+  \draw[->] (loop) -- (inc);
+  \draw[->] (inc) -- (test);
+  \draw[->] (test) -- node[left, pos=0.45] {否} (out);
+  \draw[->] (out) -- (stop);
+  % 是：回到循环体上方
+  \draw[->] (test.east) -- (4.3,2.5) -- (4.3,6.95) -- node[above, pos=0.75] {是} (0,6.95);
+\end{tikzpicture}

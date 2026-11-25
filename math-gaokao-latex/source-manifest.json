@@ -4172,6 +4172,14 @@
         "gk-2013-shanghai-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b66",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-chongqing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4181,7 +4189,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "aab14d52-970b-4380-8060-af1307a9249d",
+  "last_transaction_id": "0b945036-d122-44e3-a4b6-fe4a55eacc06",
   "papers": [
     {
       "blocked_from": null,
@@ -48563,9 +48571,86 @@
       "title": "2013 年·上海卷·文科",
       "track": "arts",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_重庆卷_理科/figures/f2013_chongqing_science_q04_stem_leaf.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_重庆卷_理科/figures/f2013_chongqing_science_q05_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_重庆卷_理科/figures/f2013_chongqing_science_q08_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_重庆卷_理科/figures/f2013_chongqing_science_q14_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_重庆卷_理科/figures/f2013_chongqing_science_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_重庆卷_理科/figures/f2013_chongqing_science_q21_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_chongqing_science",
+        "id": "gk-2013-chongqing-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 791、792（第 791 面为选择 1—10、填空 11—16、解答 17—18；第 792 面为解答 19—22）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。重庆卷题号：选择 1—10、填空 11—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 4 题茎叶图、第 5 题三视图、第 8 题程序框图、第 14 题圆与切线、第 19 题四棱锥、第 21 题椭圆与圆，均以 TikZ 重绘共 6 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "重庆卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "重庆理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-chongqing-science",
+      "production_state": "complete",
+      "project_dir": "2013_重庆卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_重庆理_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_重庆理_含解析.md",
+        "questions": "2013/2013_数学真题_重庆理_试题.md",
+        "solution_body": "2013/2013_数学真题_重庆理_解析正文.md"
+      },
+      "source_ids": [
+        "src-69a68913d9d7d7118a7204332442f47a55cc66d28a0a63fb51f470988c3ba2c5"
+      ],
+      "title": "2013 年·重庆卷·理科",
+      "track": "science",
+      "year": 2013
     }
   ],
-  "revision": 11808,
+  "revision": 11824,
   "schema_version": 1,
   "sources": [
     {
@@ -62626,8 +62711,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b688767865baf92af6015bcb47803070dbc703c8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-chongqing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013重庆理.pdf",
       "regions": [],
       "source_id": "src-69a68913d9d7d7118a7204332442f47a55cc66d28a0a63fb51f470988c3ba2c5",

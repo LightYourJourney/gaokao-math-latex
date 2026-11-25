@@ -1,0 +1,24 @@
+% 2013 重庆卷理科第 4 题：甲、乙两组各 5 名学生听力成绩的茎叶图。
+% 茎（十位）为中间的 0、1、2；甲组叶在左、乙组叶在右。
+% 甲组数据 9，1x，12，27，24；乙组数据 9，15，1y，18，24。
+\begin{tikzpicture}[font=\small, line width=0.45pt, x=0.62cm, y=0.72cm]
+  % 表头
+  \node[anchor=east] at (-0.85,3.95) {甲组};
+  \node[anchor=west] at (0.85,3.95) {乙组};
+  \draw (-2.35,3.55) -- (3.45,3.55);
+  % 茎列的两条竖线
+  \draw (-0.55,3.55) -- (-0.55,0.55);
+  \draw (0.55,3.55) -- (0.55,0.55);
+  % 三行：茎 0、1、2
+  \node at (0,3.0) {0};
+  \node at (0,2.15) {1};
+  \node at (0,1.3) {2};
+  % 甲组叶
+  \node[anchor=east] at (-0.85,3.0) {9};
+  \node[anchor=east] at (-0.85,2.15) {$x$\ \ 2};
+  \node[anchor=east] at (-0.85,1.3) {7\ \ 4};
+  % 乙组叶
+  \node[anchor=west] at (0.85,3.0) {9};
+  \node[anchor=west] at (0.85,2.15) {5\ \ $y$\ \ 8};
+  \node[anchor=west] at (0.85,1.3) {4};
+\end{tikzpicture}
