@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 辽宁卷（理科）：phase7-b69 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2013-liaoning-science`，**24 个题号**（选择 1—12、填空 13—16、解答 17—21、选做 22—24）；固定来源 `src-c721d84bd59096c71801710b73dcd263b55a9b23d7e253b21c98c8f790cdbb8a`，2 页 A3，印面 821、822。
+- 答案（等级 D）：1 B；2 D；3 A；4 D；5 B（50）；6 A；7 B（5）；8 A（$\frac5{11}$）；9 C；10 C（$\frac{13}2$）；11 B（$-16$）；12 D；13 $16\pi-16$；14 $63$；15 $\frac57$；16 $10$；17 (1) $\frac\pi6$、(2) $\frac32$；18 (1) 证明、(2) $\frac{\sqrt6}4$；19 (1) $\frac56$、(2) $P(X=0)=\frac4{125}$、$P(X=1)=\frac{28}{125}$、$P(X=2)=\frac{57}{125}$、$P(X=3)=\frac{36}{125}$、$E(X)=2$；20 (1) $p=2$、(2) $y=\frac34x^2$；21 (1) 证明、(2) $a\leqslant-3$；22 证明；23 (1) $\left(4,\frac\pi2\right)$、$\left(2\sqrt2,\frac\pi4\right)$、(2) $a=-1$、$b=2$；24 (1) $(-\infty,1]\cup[5,+\infty)$、(2) $a=3$。
+- **来源核对**：子代理按 PDF 纠正任务提示多处——第 1 题 $z=1/(\mathrm i-1)$；第 5 题为“低于 60 分 15 人求总人数”；第 11 题 $A$ 为 $H_1$ 最小值、$B$ 为 $H_2$ 最大值；第 14 题求 $S_6$；第 15 题过原点的直线；第 19(2) 乙类答对概率 $\frac45$；第 22 题 $CD$ 切圆于 $E$。主代理 600 dpi 复核后确认。
+- 主代理复核：第 5 题 $(0.005+0.010)\times20=0.3$，$n=15/0.3=50$；第 7 题 $n-\frac{5k}2=0\Rightarrow n=5$；第 10 题 $R^2=(\frac52)^2+6^2=\frac{169}4$；第 15 题 $t^2-16t+64=0\Rightarrow BF=8$、$2a=14$、$c=5$、$e=\frac57$；第 16 题 $M^2-14M+33\leqslant0$ 得 $M\leqslant10$，样本 $\{4,6,7,8,10\}$；第 18 题坐标法 $\cos=\frac{\sqrt6}4$；第 20 题 $N$ 轨迹 $y=\frac34x^2$；第 21 题 $a\leqslant-3$；第 24 题 $a=3$。
+- 排版修复：第 5 题题面措辞微调（消除解析版 1 条 Underfull），意义不变；重建后四版 log 全 0。
+- 图稿：6 张 TikZ（频率分布直方图、程序框图、三视图、圆与平面、抛物线、圆与切线）。
+- 验收：四版 6/39/9/29 页（共 83 页），四 log 全 0（Overfull、missing characters 均 0）；review 83 页 **pass 609 + not_applicable 55、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；6 条图稿引用全部命中。
+- 全库：manifest **660 卷 / 775 来源 / 506 批次**，complete 542、blocked 118，未绑定 **116**；revision 11850。
+
 ### 2013 广东卷（理科）：phase7-b68 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2013-guangdong-science`，**21 个题号**（选择 1—8、填空 9—15（14、15 为选做，按原卷分别编号并全部收录）、解答 16—21）；固定来源 `src-70c2c4a1999081a95ef9aa9cc6b9bb414d047dd49ffffa75f55faf16dd6e99c4`，2 页 A3，印面 803、804。
 - 答案（等级 D）：1 D；2 C；3 C（$(4,-2)$）；4 A（$\frac32$）；5 B（$\frac{14}3$）；6 D；7 B（$\frac{x^2}4-\frac{y^2}5=1$）；8 B；9 $\{x\mid-2<x<1\}$；10 $-1$；11 $7$；12 $20$；13 $6$；14 $\rho(\cos\theta+\sin\theta)=2$；15 $2\sqrt3$；16 (1) $1$、(2) $\frac{17}{25}$；17 (1) $22$、(2) $4$ 名、(3) $\frac{16}{33}$；18 (1) 证明、(2) $\frac{\sqrt{15}}5$；19 (1) $a_2=4$、(2) $a_n=n^2$、(3) 证明；20 (1) $x^2=4y$、(2) $x_0x-2y-2x_0+4=0$、(3) $\frac92$；21 (1) 增区间 $(-\infty,0)$、$(\ln2,+\infty)$，减区间 $(0,\ln2)$、(2) $M=(k-1)\mathrm e^k-k^3$。
