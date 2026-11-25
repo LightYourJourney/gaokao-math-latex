@@ -1,0 +1,29 @@
+% 2013 年广东卷理科第 11 题：输出 s 的程序框图。
+% 来源 PDF：普通高考/2013/2013广东理.pdf，第 1 页（印面 803）中栏。
+% 流程：开始 → 输入 n → i=1,s=1 → i≤n? 是：s=s+(i−1)，i=i+1，回到判断；
+% 否：输出 s → 结束。原卷循环体为 s=s+(i−1)，非平方。
+\begin{tikzpicture}[semithick, >=Stealth, font=\small,
+  block/.style={draw, minimum width=3.1cm, minimum height=0.62cm, align=center},
+  dec/.style={draw, diamond, aspect=2.6, inner sep=1pt, align=center},
+  term/.style={draw, rounded corners=6pt, minimum width=1.4cm, minimum height=0.52cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.4cm, minimum height=0.62cm},
+  arr/.style={->}]
+  \useasboundingbox (-2.9,-6.2) rectangle (5.0,0.6);
+  \node (start) [term] at (0,0) {开始};
+  \node (input) [io]   at (0,-1.05) {输入 $n$};
+  \node (init)  [block] at (0,-2.1) {$i=1,\ s=1$};
+  \node (dec)   [dec]  at (0,-3.35) {$i\le n$?};
+  \node (body)  [block] at (0,-4.75) {$s=s+(i-1)$};
+  \node (inc)   [block] at (0,-5.85) {$i=i+1$};
+  \node (out)   [io]   at (3.55,-3.35) {输出 $s$};
+  \node (end)   [term] at (3.55,-4.75) {结束};
+  \draw[arr] (start) -- (input);
+  \draw[arr] (input) -- (init);
+  \draw[arr] (init) -- (dec);
+  \draw[arr] (dec) -- node[left, xshift=-1pt] {是} (body);
+  \draw[arr] (body) -- (inc);
+  \draw[arr] (dec.east) -- node[above] {否} (out.west);
+  \draw[arr] (out) -- (end);
+  \draw[arr] (inc.west) -- (-2.2,-5.85) -- (-2.2,-2.55) -- (0,-2.55);
+\end{tikzpicture}

@@ -1,0 +1,50 @@
+% 2013 年广东卷理科第 18 题：等腰直角三角形 ABC 沿 DE 折起得四棱锥 A'-BCDE。
+% 来源 PDF：普通高考/2013/2013广东理.pdf，第 2 页（印面 804）左栏上部。
+% 图①：A 在下，BC 在上，O 为 BC 中点，D、E 分别在 AC、AB 上且 DE∥BC。
+% 图②：折起后的四棱锥，A' 在 O 的正上方。
+\begin{tikzpicture}[semithick, font=\small, scale=0.75, transform shape]
+  \useasboundingbox (-4.2,-4.4) rectangle (10.8,3.5);
+  % 图①
+  \begin{scope}[xshift=0cm]
+    \coordinate (Af) at (0,-3.0);
+    \coordinate (Bf) at (3,0);
+    \coordinate (Cf) at (-3,0);
+    \coordinate (Of) at (0,0);
+    \coordinate (Df) at (-2,-1);
+    \coordinate (Ef) at (2,-1);
+    \draw (Cf) -- (Bf) -- (Af) -- cycle;
+    \draw (Df) -- (Ef);
+    \fill (Of) circle[radius=1.5pt];
+    \node[above] at (Cf) {$C$};
+    \node[above] at (Bf) {$B$};
+    \node[below] at (Af) {$A$};
+    \node[above] at (Of) {$O$};
+    \node[left] at (Df) {$D$};
+    \node[right] at (Ef) {$E$};
+    \node at (0,-3.7) {图\,\textcircled{\scriptsize 1}};
+  \end{scope}
+  % 图②
+  \begin{scope}[xshift=6.7cm, yshift=-0.15cm]
+    \coordinate (C2) at (-2.6,0.35);
+    \coordinate (B2) at (2.6,0.35);
+    \coordinate (D2) at (-2.0,-1.1);
+    \coordinate (E2) at (2.0,-1.1);
+    \coordinate (O2) at (0,0.35);
+    \coordinate (Ap) at (0,2.55);
+    \draw (C2) -- (D2) -- (E2) -- (B2);
+    \draw[dashed] (C2) -- (B2);
+    \draw (Ap) -- (C2);
+    \draw (Ap) -- (D2);
+    \draw (Ap) -- (E2);
+    \draw (Ap) -- (B2);
+    \draw[dashed] (Ap) -- (O2);
+    \fill (O2) circle[radius=1.5pt];
+    \node[above left] at (C2) {$C$};
+    \node[above right] at (B2) {$B$};
+    \node[below left] at (D2) {$D$};
+    \node[below right] at (E2) {$E$};
+    \node[below] at (O2) {$O$};
+    \node[above] at (Ap) {$A'$};
+    \node at (0,-1.85) {图\,\textcircled{\scriptsize 2}};
+  \end{scope}
+\end{tikzpicture}

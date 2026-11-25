@@ -1,0 +1,29 @@
+% 2013 年广东卷理科第 5 题：四棱台的三视图。
+% 来源 PDF：普通高考/2013/2013广东理.pdf，第 1 页（印面 803）左栏。
+% 正视图、侧视图均为上底 1、下底 2、高 2 的直角梯形；俯视图为边长 2 的正方形，
+% 上底面投影为左上角边长 1 的正方形。
+\begin{tikzpicture}[semithick, font=\small, >=Stealth]
+  \useasboundingbox (-1.0,-6.05) rectangle (6.4,2.9);
+  % 正视图
+  \draw (0,0) -- (2,0) -- (1,2) -- (0,2) -- cycle;
+  \draw[<->] (0,2.42) -- (1,2.42) node[midway,above] {$1$};
+  \draw[<->] (0,-0.42) -- (2,-0.42) node[midway,below] {$2$};
+  \draw[<->] (-0.42,0) -- (-0.42,2) node[midway,left] {$2$};
+  \draw (0,2.42) -- (0,2.05);
+  \draw (1,2.42) -- (1,2.05);
+  \node at (1,-1.05) {正视图};
+  % 侧视图
+  \begin{scope}[xshift=3.55cm]
+    \draw (0,0) -- (2,0) -- (1,2) -- (0,2) -- cycle;
+    \node at (1,-1.05) {侧视图};
+  \end{scope}
+  % 俯视图
+  \begin{scope}[yshift=-6.0cm]
+    \draw (0,0) rectangle (2,2);
+    \draw (0,1) -- (1,1) -- (1,2);
+    \draw (1,1) -- (2,0);
+    \draw[<->] (-0.42,1) -- (-0.42,2) node[midway,left] {$1$};
+    \draw[<->] (-0.42,0) -- (-0.42,1) node[midway,left] {$1$};
+    \node at (1,-0.55) {俯视图};
+  \end{scope}
+\end{tikzpicture}
