@@ -1,0 +1,37 @@
+% 2013 湖北卷文科第 22 题：共焦轴的两椭圆与过原点的直线 l。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.5pt, scale=1.0]
+  \def\a{4}
+  \def\m{2.4}
+  \def\n{1.4}
+  % 椭圆
+  \draw[thick] (0,0) ellipse ({\a} and {\m});
+  \draw[thick] (0,0) ellipse ({\a} and {\n});
+  % 坐标轴
+  \draw[->] (-4.8,0) -- (4.9,0) node[below right] {$x$};
+  \draw[->] (0,-3.0) -- (0,3.1) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  % 四个交点（直线 y=0.75x）
+  \coordinate (A) at (2.499,1.874);
+  \coordinate (B) at (1.692,1.269);
+  \coordinate (C) at (-1.692,-1.269);
+  \coordinate (D) at (-2.499,-1.874);
+  \coordinate (M) at (-\a,0);
+  \coordinate (N) at (\a,0);
+  % 直线 l
+  \draw[thick] (-4.7,-3.525) -- (4.7,3.525);
+  % 两个三角形 BDM 与 ABN 的边
+  \draw (M) -- (B);
+  \draw (B) -- (N);
+  \draw (A) -- (N);
+  \draw (M) -- (D);
+  \draw (A) -- (B);
+  % 交点与端点
+  \fill (A) circle (1.6pt) (B) circle (1.6pt) (C) circle (1.6pt) (D) circle (1.6pt);
+  \fill (M) circle (1.6pt) (N) circle (1.6pt);
+  \node[fill=white, inner sep=1pt, above left] at (A) {$A$};
+  \node[fill=white, inner sep=1pt, above left] at (B) {$B$};
+  \node[fill=white, inner sep=1pt, above left] at (C) {$C$};
+  \node[fill=white, inner sep=1pt, below right] at (D) {$D$};
+  \node[fill=white, inner sep=1pt, above left] at (M) {$M$};
+  \node[fill=white, inner sep=1pt, above right] at (N) {$N$};
+\end{tikzpicture}

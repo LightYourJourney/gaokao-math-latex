@@ -4084,6 +4084,14 @@
         "gk-2013-guangdong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b55",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-hubei-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4093,7 +4101,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "70126f3a-d942-446c-a628-0880966b2dcb",
+  "last_transaction_id": "964912d0-3ef8-4bbe-812e-97808823cf9a",
   "papers": [
     {
       "blocked_from": null,
@@ -47716,9 +47724,82 @@
       "title": "2013 年·广东卷·文科",
       "track": "arts",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_文科/figures/f2013_hubei_arts_q05_distance_time.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_文科/figures/f2013_hubei_arts_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_文科/figures/f2013_hubei_arts_q17_lattice.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_文科/figures/f2013_hubei_arts_q20_section.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_文科/figures/f2013_hubei_arts_q22_ellipses.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_hubei_arts",
+        "id": "gk-2013-hubei-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 809、810。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖北卷题号：选择 1—10、填空 11—17、解答 18—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 5 题四个距离—时间图象、第 13 题程序框图、第 17 题格点图、第 20 题矿层剖面、第 22 题椭圆与交点，均以 TikZ 重绘共 5 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖北卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖北文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-hubei-arts",
+      "production_state": "complete",
+      "project_dir": "2013_湖北卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_湖北文_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_湖北文_含解析.md",
+        "questions": "2013/2013_数学真题_湖北文_试题.md",
+        "solution_body": "2013/2013_数学真题_湖北文_解析正文.md"
+      },
+      "source_ids": [
+        "src-b467070840434ac9cf2f721982aef36fd3f2b64be8273ac87f070260a8cda7df"
+      ],
+      "title": "2013 年·湖北卷·文科",
+      "track": "arts",
+      "year": 2013
     }
   ],
-  "revision": 11732,
+  "revision": 11737,
   "schema_version": 1,
   "sources": [
     {
@@ -61563,8 +61644,8 @@
       "exam_type": "regular",
       "git_blob_oid": "caf4ef5746ccd8ee6523c8efc82e6900821aad25",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-hubei-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013湖北文.pdf",
       "regions": [],
       "source_id": "src-b467070840434ac9cf2f721982aef36fd3f2b64be8273ac87f070260a8cda7df",

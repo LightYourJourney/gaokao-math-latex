@@ -1,0 +1,60 @@
+% 2013 湖北卷文科第 20 题：矿层多面体 A1B1C1-A2B2C2 与中截面 DEFG。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.5pt, scale=0.9]
+  % 地面三角形 ABC（在水平面内）
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+  \coordinate (C) at (4.0,-1.30);
+  % 矿层顶面三角形 A1B1C1
+  \coordinate (A1) at (0,-1.70);
+  \coordinate (B1) at (6,-1.90);
+  \coordinate (C1) at (4.0,-3.00);
+  % 矿层底面三角形 A2B2C2
+  \coordinate (A2) at (0,-2.60);
+  \coordinate (B2) at (6,-3.50);
+  \coordinate (C2) at (4.0,-5.00);
+  % 中点 M, N 与中截面顶点
+  \coordinate (M) at (3,0);
+  \coordinate (N) at (2,-0.65);
+  \coordinate (D) at (3,-1.80);
+  \coordinate (E) at (3,-3.05);
+  \coordinate (G) at (2,-2.35);
+  \coordinate (F) at (2,-3.80);
+
+  % 地面与钻探竖线
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (A1) -- (A2);
+  \draw (B) -- (B1) -- (B2);
+  \draw (C) -- (C1) -- (C2);
+  % 顶面、底面的边（背面用虚线）
+  \draw[dashed] (A1) -- (B1);
+  \draw (B1) -- (C1);
+  \draw[dashed] (C1) -- (A1);
+  \draw[dashed] (A2) -- (B2);
+  \draw (B2) -- (C2);
+  \draw[dashed] (C2) -- (A2);
+
+  % 中截面 DEFG
+  \fill[gray!18] (D) -- (E) -- (F) -- (G) -- cycle;
+  \draw[very thick] (D) -- (E) -- (F) -- (G) -- cycle;
+  % 截面所在平面与 M, N 的连线（辅助虚线）
+  \draw[dashed] (M) -- (D);
+  \draw[dashed] (N) -- (G);
+  \draw[dashed] (M) -- (N);
+
+  % 标注
+  \node[above left] at (A) {$A$};
+  \node[above right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[left] at (A2) {$A_2$};
+  \node[right] at (B2) {$B_2$};
+  \node[below] at (C2) {$C_2$};
+  \node[above] at (M) {$M$};
+  \node[left] at (N) {$N$};
+  \node[right] at ($(D)+(0.30,-0.26)$) {$D$};
+  \node[right] at ($(E)+(0.22,-0.10)$) {$E$};
+  \node[left] at (F) {$F$};
+  \node[left] at (G) {$G$};
+\end{tikzpicture}

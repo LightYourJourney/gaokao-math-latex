@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 湖北卷（文科）：phase7-b55 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
+- 对象：`gk-2013-hubei-arts`，**22 个题号**（选择 1—10、填空 11—17、解答 18—22）；固定来源 `src-b467070840434ac9cf2f721982aef36fd3f2b64be8273ac87f070260a8cda7df`，2 页 A3，印面 809、810。
+- 流程：四份 MD 与 5 张图由子代理 `ses_ded3f9f8bffe5uPDkMyEAcvDrw` 起草；主代理复核后注册、构建、审查。
+- 答案（等级 D）：1 B；2 D；3 A；4 D；5 C；6 B；7 A；8 D；9 C；10 B；11 $-2+3\mathrm i$；12 (1) $7$、(2) $2$；13 $4$；14 $4$；15 $3$；16 $3$；17 (1) $S=3,N=1,L=6$、(2) $79$；18 (1) $\frac\pi3$、(2) $\frac57$；19 (1) $a_n=3(-2)^{n-1}$、(2) $\{n\mid n=2k+1,\ k\ge5\}$；20 (1) 证明、(2) $V_{\text{估}}<V$；21 (1) 单调性、(2) ① 成等比且 $f(b/a)\le f(\sqrt{b/a})$、② $x$ 的范围分段；22 (1) $\lambda=1+\sqrt2$、(2) $\lambda>1+\sqrt2$ 时存在，否则不存在。
+- 主代理复核：① 第 19 题印面条件经 300 dpi 确认是 **$S_4,S_2,S_3$ 成等差数列**（文字层易误读为 $S_1$），按此得 $q=-2$、$a_1=3$；② 独立验算第 12 题总体标准差 $2$、第 13 题循环到 $i=4$、第 16 题降雨量 $3$ 寸、第 17 题 Pick 定理 $S=N+\frac L2-1$ 与 $S=79$、第 18(2) $\sin B\sin C=\frac57$；③ 第 21(2) 的三值次序 $f(1),f(\sqrt{b/a}),f(b/a)$ 恰为 $\frac{a+b}2,G,H$，故成等比。
+- 图稿：5 张 TikZ（四幅距离—时间图象、程序框图、格点图、矿层剖面、椭圆与交点）。
+- 验收：四版 6/30/8/22 页（共 66 页），四 log 全 0；review 66 页 **pass 489 + not_applicable 39、0 fail**；`finalize-batch` → `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库：manifest **646 卷 / 775 来源 / 492 批次**，complete 528、blocked 118，未绑定 **130**；revision 11737。已触发 646 卷报告刷新。
+
 ### 2013 广东卷（文科）：phase7-b54 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
 - 对象：`gk-2013-guangdong-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-a924f83ea3a73070fdcce39fae693cf4fabc265b89d6c991835236a36f51b170`，2 页 A3，印面 805、806。
 - 流程：按目标中「委派 Subagents 处理互不重叠批次」的约定，四份 MD 与 5 张图由子代理 `ses_ded52e641ffe1LuaHAMpzffj7E` 起草；主代理逐项复核后再注册、构建与审查。

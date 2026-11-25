@@ -1,0 +1,37 @@
+% 2013 湖北卷文科第 5 题：四个“距学校的距离—时间”图象。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.5pt]
+  % (A)：距离从 0 开始增大，先匀速，后短暂平缓，再加速上升
+  \begin{scope}[shift={(0,0)}]
+    \draw[->] (0,0) -- (0,2.05) node[above] {距学校的距离};
+    \draw[->] (0,0) -- (3.6,0) node[below right] {时间};
+    \node[below left] at (0,0) {$O$};
+    \draw[thick] (0,0) -- (1.25,0.58) -- (2.05,0.66)
+      .. controls (2.45,0.68) and (2.70,0.95) .. (2.98,1.58);
+    \node at (1.8,-0.55) {（A）};
+  \end{scope}
+  % (B)：先较快下降，短暂变缓，再匀速下降
+  \begin{scope}[shift={(5.75,0)}]
+    \draw[->] (0,0) -- (0,2.05) node[above] {距学校的距离};
+    \draw[->] (0,0) -- (3.6,0) node[below right] {时间};
+    \node[below left] at (0,0) {$O$};
+    \draw[thick] (0,1.58) -- (1.55,1.08) -- (2.10,1.02) -- (3.25,0.16);
+    \node at (1.8,-0.55) {（B）};
+  \end{scope}
+  % (C)：匀速下降，中途停留（水平），再加速下降
+  \begin{scope}[shift={(0,-3.75)}]
+    \draw[->] (0,0) -- (0,2.05) node[above] {距学校的距离};
+    \draw[->] (0,0) -- (3.6,0) node[below right] {时间};
+    \node[below left] at (0,0) {$O$};
+    \draw[thick] (0,1.60) -- (1.20,1.10) -- (2.05,1.08)
+      .. controls (2.42,1.06) and (2.62,0.72) .. (2.95,0.05);
+    \node at (1.8,-0.55) {（C）};
+  \end{scope}
+  % (D)：匀速下降，随后直接加速下降（无停留）
+  \begin{scope}[shift={(5.75,-3.75)}]
+    \draw[->] (0,0) -- (0,2.05) node[above] {距学校的距离};
+    \draw[->] (0,0) -- (3.6,0) node[below right] {时间};
+    \node[below left] at (0,0) {$O$};
+    \draw[thick] (0,1.60) -- (1.85,0.92) -- (2.85,0.05);
+    \node at (1.8,-0.55) {（D）};
+  \end{scope}
+\end{tikzpicture}

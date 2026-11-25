@@ -1,0 +1,29 @@
+% 2013 湖北卷文科第 13 题：程序框图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.45pt,
+  node distance=4.2mm,
+  box/.style={draw, minimum height=1.7em, inner xsep=5pt},
+  term/.style={draw, rounded corners=5pt, minimum height=1.7em, inner xsep=8pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.7em, inner xsep=5pt},
+  dec/.style={draw, diamond, aspect=2.1, inner sep=1pt}]
+  \node[term] (start) {开始};
+  \node[io, below=5mm of start] (input) {输入 $m$};
+  \node[box, below=5mm of input] (init) {$A=1$，$B=1$，$i=0$};
+  \node[box, below=6mm of init] (inc) {$i=i+1$};
+  \node[box, below=4.5mm of inc] (am) {$A=A\times m$};
+  \node[box, below=4.5mm of am] (bi) {$B=B\times i$};
+  \node[dec, below=6mm of bi] (cond) {$A<B?$};
+  \node[io, below=7mm of cond] (output) {输出 $i$};
+  \node[term, below=5mm of output] (end) {结束};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (init);
+  \draw[->] (init) -- (inc);
+  \draw[->] (inc) -- (am);
+  \draw[->] (am) -- (bi);
+  \draw[->] (bi) -- (cond);
+  \draw[->] (cond) -- node[right] {是} (output);
+  \draw[->] (output) -- (end);
+  % “否”分支：从判断框右侧引出，向上回到 i=i+1 之前的入口
+  \draw[->] (cond.east) -- node[above] {否} ++(1.15,0)
+    |- ($(inc.north)!0.5!(init.south)$);
+\end{tikzpicture}
