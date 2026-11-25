@@ -4156,6 +4156,14 @@
         "gk-2013-regular-national-outline-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b64",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-tianjin-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4165,7 +4173,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "67afa269-a950-48fe-93b4-bcb6b075dad9",
+  "last_transaction_id": "0563158a-89c9-4b60-9fae-46e20a2bdf2d",
   "papers": [
     {
       "blocked_from": null,
@@ -48417,9 +48425,74 @@
       "title": "2013 年·全国大纲卷·理科",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_天津卷_理科/figures/f2013_tianjin_science_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_天津卷_理科/figures/f2013_tianjin_science_q13_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_天津卷_理科/figures/f2013_tianjin_science_q17_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_tianjin_science",
+        "id": "gk-2013-tianjin-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 849、850（第 849 面为选择 1—8、填空 9—14、解答 15—17；第 850 面为解答 18—20）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。天津卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题。答案由本库独立推导（等级 D，非官方）。原页图：第 3 题程序框图、第 13 题圆内接三角形、第 17 题四棱柱，均以 TikZ 重绘共 3 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "天津理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-tianjin-science",
+      "production_state": "complete",
+      "project_dir": "2013_天津卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_天津理_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_天津理_含解析.md",
+        "questions": "2013/2013_数学真题_天津理_试题.md",
+        "solution_body": "2013/2013_数学真题_天津理_解析正文.md"
+      },
+      "source_ids": [
+        "src-182a9d903a39a6d639fa726cf5a365f1bc688407e81389dd505000059a5eaa9c"
+      ],
+      "title": "2013 年·天津卷·理科",
+      "track": "science",
+      "year": 2013
     }
   ],
-  "revision": 11785,
+  "revision": 11797,
   "schema_version": 1,
   "sources": [
     {
@@ -61880,8 +61953,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9cd3217ea1fef5aa347a4686e9b432816306cd00",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-tianjin-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013天津理.pdf",
       "regions": [],
       "source_id": "src-182a9d903a39a6d639fa726cf5a365f1bc688407e81389dd505000059a5eaa9c",

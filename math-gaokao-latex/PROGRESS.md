@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 天津卷（理科）：phase7-b64 转录（子代理起草、主代理复核）与四版封账（2026-11-26；`closed`）
+- 对象：`gk-2013-tianjin-science`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-182a9d903a39a6d639fa726cf5a365f1bc688407e81389dd505000059a5eaa9c`，2 页 A3，印面 849、850。
+- 答案（等级 D）：1 D；2 A（$-7$）；3 B（$73$）；4 C（①③）；5 C（$p=2$）；6 C（$\frac{3\sqrt{10}}{10}$）；7 B（2 个零点）；8 A（$\left(\frac{1-\sqrt5}2,0\right)$）；9 $1+2\mathrm i$；10 $15$；11 $2\sqrt3$；12 $\frac12$；13 $\frac83$；14 $-2$（最小值 $\frac34$）；15 (1) $\pi$、(2) 最大值 $2\sqrt2$、最小值 $-2$；16 (1) $\frac67$、(2) $P(X=1)=\frac1{35}$、$P(X=2)=\frac4{35}$、$P(X=3)=\frac27$、$P(X=4)=\frac47$、$E(X)=\frac{17}5$；17 (1) 证明、(2) $\frac{\sqrt{21}}7$、(3) $\sqrt2$；18 (1) $\frac{x^2}3+\frac{y^2}2=1$、(2) $k=\pm\sqrt2$；19 (1) $a_n=\frac{3(-1)^{n-1}}{2^n}$、(2) 最大项 $\frac56$、最小项 $-\frac7{12}$；20 (1) 减区间 $\left(0,e^{-1/2}\right)$、增区间 $\left(e^{-1/2},+\infty\right)$、(2)(3) 证明。
+- **来源核对**：子代理按固定源 PDF 指出任务提示中的题号清单与实际 PDF 不符（提示混入了其他卷题目），主代理逐页复核后确认 PDF 为准：第 4 题三命题、第 7 题零点、第 8 题解集包含、第 13 题圆与切线、第 16 题卡片、第 17 题四棱柱，均已按 PDF 转录；第 3 题判据为 $S\geqslant50$，第 17(3) 正弦值为 $\frac{\sqrt2}6$，第 20(3) 为 $t>e^2$，均以 600 dpi 原页确认。
+- 主代理复核：第 8 题对 $a\in(-0.618,0)$ 逐点数值验证 $[-\frac12,\frac12]\subseteq A$，区间外均失败；第 13 题用坐标构造（$EB=4$、$ED=9$、$AB=AC=4$、$AD=BC=6$）复算 $CF=\frac83$；第 14 题 $a=-2$ 时最小值 $\frac34$；第 17(3) 由 $\sin\varphi=\frac{t}{\sqrt{3t^2+2t+1}}=\frac{\sqrt2}6$ 得 $t=\frac13$、$AM=\sqrt2$；第 18(2) 对 $k=\pm\sqrt2$ 代入得 $\overrightarrow{AC}\cdot\overrightarrow{DB}+\overrightarrow{AD}\cdot\overrightarrow{CB}=8$；第 19 题 $q=\frac12$ 是递减数列舍去、$q=-\frac12$，$T_n$ 奇偶项分别求最值；第 20(3) 数值验证 $t=e^4,e^5,e^{10}$ 的比值 0.4317、0.4247、0.4274。
+- 排版修复三处：①第 3 题程序框图缩至 0.8（原高度 10.2cm 使选项被挤到下一页，形成半题截断）；②第 17 题四棱柱补原页的 $B_1E$ 虚线辅助线；③二、填空题与三、解答题加 `part-needspace 0.4`，试题版 5→4 页、解析版 32→31 页、简答版 7→6 页、印刷版 24→23 页。
+- 图稿：3 张 TikZ（程序框图、圆内接三角形与切线、四棱柱）。
+- 验收：四版 4/31/6/23 页（共 64 页），四 log 全 0（Overfull、missing characters 均 0）；review 64 页 **pass 460 + not_applicable 52、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；3 条图稿引用全部命中。
+- 全库：manifest **655 卷 / 775 来源 / 501 批次**，complete 537、blocked 118，未绑定 **121**；revision 11797。
+
 ### 2013 全国大纲卷（理科）：phase7-b63 转录（子代理起草、主代理复核）与四版封账（2026-11-26；`closed`）
 - 对象：`gk-2013-regular-national-outline-science`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-5acaadb53dba01809c318d53bc6aeb0f9efc9a0519e1677bf7060a12fdacc794`，2 页 A3，印面 795、796（广西使用）。
 - 答案（等级 D）：1 B；2 A；3 B；4 B；5 A；6 C；7 D；8 B；9 D；10 A；11 D；12 C；13 $2\sqrt2$；14 $480$；15 $\left[\frac12,4\right]$；16 $16\pi$；17 $a_n=2n-1$ 或 $a_n=3$；18 (1) $B=\frac{2\pi}3$、(2) $C=\frac{\pi}{12}$ 或 $\frac\pi4$；19 (1) 证明、(2) $\theta=\arccos\left(-\frac{\sqrt6}3\right)=\pi-\arccos\frac{\sqrt6}3\approx144.7^\circ$；20 (1) $\frac14$、(2) $P(X=0)=\frac18$、$P(X=1)=\frac58$、$P(X=2)=\frac14$、$E(X)=\frac98$；21 (1) $a=1$、$b=2\sqrt2$、(2) 证明；22 (1) $\lambda_{\min}=\frac12$、(2) 证明。
