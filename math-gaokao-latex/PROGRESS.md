@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 全国大纲卷（文科）：phase7-b62 转录（子代理起草、主代理复核）与四版封账（2026-11-26；`closed`）
+- 对象：`gk-2013-regular-national-outline-arts`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-f5dc75ad861766f98277c9e06289793ccb99f90df55179c74249c5b601bfce95`，2 页 A3，印面 797、798（广西使用）。
+- 答案（等级 D）：1 B；2 A；3 B；4 D；5 C；6 A；7 C；8 C；9 B（$\omega=4$）；10 D（$a=-6$）；11 A（$\frac23$）；12 D（$k=2$）；13 $-1$；14 $60$；15 $0$；16 $16\pi$；17 (1) $a_n=\frac{n+1}2$、(2) $S_n=\frac{2n}{n+1}$；18 (1) $B=\frac{2\pi}3$、(2) $C=\frac{\pi}{12}$ 或 $\frac\pi4$；19 (1) 证明、(2) $1$；20 (1) $\frac14$、(2) $\frac58$；21 (1) 在 $(-\infty,\sqrt2-1)$、$(\sqrt2+1,+\infty)$ 递增，在 $(\sqrt2-1,\sqrt2+1)$ 递减、(2) $\left[-\frac54,+\infty\right)$；22 (1) $a=1$、$b=2\sqrt2$、(2) 证明。
+- 主代理复核：第 9 题按 600 dpi 原页确认最高点 $x_0$、最低点 $x_0+\frac\pi4$，半周期 $\frac\pi4$ 得 $\omega=4$；第 11 题建系得 $\sin\theta=\frac23$；第 16 题 $OM=\frac{OK}{\sin60^\circ}=\sqrt3$、$OM=\frac{\sqrt3R}2$ 得 $R=2$、$S=16\pi$；第 19 题建系 $A(0,0,0)$、$B(2,0,0)$、$D(0,2,0)$、$C(2,4,0)$、$P(1,1,\sqrt2)$，$\overrightarrow{PB}\cdot\overrightarrow{CD}=0$、$d=1$；第 20 题逐局递推得 $P(J_4=\text{甲})=\frac14$、$P(\text{乙恰 1 次})=\frac58$；第 21 题 $h(x)$ 在 $[2,+\infty)$ 递增得 $a\geqslant-\frac54$；第 22 题 $a^2=1$、$b^2=8$，焦半径与韦达定理给出 $|AB|^2=16=|AF_2||BF_2|$。
+- 排版修复两处：①第 9 题曲线右端原止于 $x=1.87$（悬在 x 轴上方），改为零点 $1.8208$，与原页一致；②删去题面中多余的「## 数学」二级标题（与其余各卷体例一致，封面上已有版本行）。
+- 图稿：2 张 TikZ（正弦图象、四棱锥）。
+- 验收：四版 4/25/6/19 页（共 54 页），四 log 全 0（Overfull、missing characters 均 0）；review 54 页 **pass 384 + not_applicable 48、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；2 条图稿引用全部命中。
+- 全库：manifest **653 卷 / 775 来源 / 499 批次**，complete 535、blocked 118，未绑定 **123**；revision 11780。
+
 ### 2013 安徽卷（文科）：phase7-b61 转录（子代理起草、主代理复核）与四版封账（2026-11-26；`closed`）
 - 对象：`gk-2013-anhui-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-ec2d54f46a831ccde5038c60bd7954e5bb39df5d051fe5fdc2d909be8a138420`，2 页 A3，印面 785、786。
 - 答案（等级 D）：1 D；2 A；3 C（$\frac{11}{12}$）；4 B；5 D；6 C（弦长 $4$）；7 A（$-6$）；8 B（$\{2,3,4\}$）；9 B（$\frac{2\pi}3$）；10 A（$3$ 个）；11 $(0,1]$；12 $\frac73$；13 $-\frac13$；14 $-\frac{x(x+1)}2$；15 ①②③⑤；16 (1) 最小值 $-\sqrt3$、$x\in\{2k\pi-\frac{2\pi}3\}$、(2) 左移 $\frac\pi6$ 后纵坐标伸长为 $\sqrt3$ 倍；17 (1) $600$ 人、及格率 $\frac56$、(2) $\overline{x}_1-\overline{x}_2=0.5$；18 (1) 证明、(2) $\frac{\sqrt2}6$；19 (1) $a_n=n+1$、(2) $S_n=n^2+3n+1-2^{-n}$；20 (1) $\frac{a}{1+a^2}$、(2) $\frac{1-k}{k^2-2k+2}$；21 (1) $\frac{x^2}8+\frac{y^2}4=1$、(2) 一定有唯一公共点，$QG$ 即 $Q$ 处切线。

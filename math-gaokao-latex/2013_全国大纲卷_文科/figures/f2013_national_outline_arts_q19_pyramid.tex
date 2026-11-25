@@ -1,0 +1,24 @@
+% 2013 年全国大纲卷文科第 19 题：四棱锥 P-ABCD。
+% 来源 PDF：普通高考/2013/2013大纲文(广西).pdf，第 1 页（印面 797）右栏。
+% 底面为直角梯形，AD∥BC，∠ABC=∠BAD=90°；CD、DA、PD 被遮挡。
+\begin{tikzpicture}[semithick, font=\small]
+  \coordinate (C) at (0.6,0.9);
+  \coordinate (B) at (8.2,0.9);
+  \coordinate (A) at (9.4,2.6);
+  \coordinate (D) at (5.4,2.6);
+  \coordinate (P) at (6.0,6.2);
+  % 可见棱
+  \draw (P) -- (C);
+  \draw (P) -- (B);
+  \draw (P) -- (A);
+  \draw (C) -- (B) -- (A);
+  % 被遮挡的棱
+  \draw[dashed] (P) -- (D);
+  \draw[dashed] (C) -- (D) -- (A);
+  % 标注
+  \node[above] at (P) {$P$};
+  \node[right] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below left] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+\end{tikzpicture}
