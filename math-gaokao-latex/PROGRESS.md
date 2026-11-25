@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 北京卷（理科）：phase7-b70 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2013-beijing-science`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-c3a411de5f32fa4a17eb4b4aa93249f7368721f1082b29d59c8b535de0d09299`，2 页 A3，印面 787、788。
+- 答案（等级 D）：1 B；2 D（$3-4\mathrm i$）；3 A；4 C（$\frac{13}{21}$）；5 D（$\mathrm e^{-x-1}$）；6 B（$y=\pm\sqrt2x$）；7 C（$\frac83$）；8 C（$\left(-\infty,-\frac23\right)$）；9 $1$；10 $q=2$、$S_n=2^{n+1}-2$；11 $PD=\frac95$、$AB=4$；12 $96$；13 $4$；14 $\frac{2\sqrt5}5$；15 (1) $\frac{\sqrt6}3$、(2) $5$；16 (1) $\frac2{13}$、(2) $P(X=0)=\frac5{13}$、$P(X=1)=\frac4{13}$、$P(X=2)=\frac4{13}$、$E(X)=\frac{12}{13}$、(3) 从 5 日开始；17 (1) 证明、(2) $\frac{16}{25}$、(3) $\frac9{25}$；18 (1) $y=x-1$、(2) 证明；19 (1) $\sqrt3$、(2) 不可能；20 (1) $1,1,3,3$、(2)(3) 证明。
+- 主代理复核：第 4 题逐轮 $S=\frac23,\frac{13}{21}$；第 8 题存在性 $\Leftrightarrow -m>\max\{2m+2,\frac43\}\Rightarrow m<-\frac23$；第 11 题切割线 $PD=\frac95$、$AB=4$；第 12 题 $4\times4\times3!=96$；第 13 题 $\boldsymbol a=(-1,1)$、$\boldsymbol b=(6,2)$、$\boldsymbol c=(-1,-3)$，$\lambda=-2,\mu=-\frac12$；第 14 题 $d^2=5t^2-8t+4$ 最小 $\frac{2\sqrt5}5$；第 15 题 $\cos A=\frac{\sqrt6}3$、$c=5$；第 16 题 14 个 AQI 值逐个复核，重度污染 2/13、分布 5/13,4/13,4/13、$E=\frac{12}{13}$、第 5—7 日方差 5600 最大；第 17 题坐标法得 $\cos=\frac{16}{25}$、$BD/BC_1=\frac9{25}$；第 19 题菱形面积 $\sqrt3$、第二问“不可能”；第 20 题 $d_1..d_4=1,1,3,3$ 及充要条件证明。
+- 排版修复：二、填空题与三、解答题加 `part-needspace 0.3`，填空接排到第 2 页（总页数仍为 5/32/7/23）。
+- 图稿：6 张 TikZ（程序框图、圆与切线、向量网格、正方体、AQI 趋势图、三棱柱）。
+- 验收：四版 5/32/7/23 页（共 67 页），四 log 全 0（Overfull、missing characters 均 0）；review 67 页 **pass 492 + not_applicable 44、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；6 条图稿引用全部命中。
+- 全库：manifest **661 卷 / 775 来源 / 507 批次**，complete 543、blocked 118，未绑定 **115**；revision 11858。
+
 ### 2013 辽宁卷（理科）：phase7-b69 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2013-liaoning-science`，**24 个题号**（选择 1—12、填空 13—16、解答 17—21、选做 22—24）；固定来源 `src-c721d84bd59096c71801710b73dcd263b55a9b23d7e253b21c98c8f790cdbb8a`，2 页 A3，印面 821、822。
 - 答案（等级 D）：1 B；2 D；3 A；4 D；5 B（50）；6 A；7 B（5）；8 A（$\frac5{11}$）；9 C；10 C（$\frac{13}2$）；11 B（$-16$）；12 D；13 $16\pi-16$；14 $63$；15 $\frac57$；16 $10$；17 (1) $\frac\pi6$、(2) $\frac32$；18 (1) 证明、(2) $\frac{\sqrt6}4$；19 (1) $\frac56$、(2) $P(X=0)=\frac4{125}$、$P(X=1)=\frac{28}{125}$、$P(X=2)=\frac{57}{125}$、$P(X=3)=\frac{36}{125}$、$E(X)=2$；20 (1) $p=2$、(2) $y=\frac34x^2$；21 (1) 证明、(2) $a\leqslant-3$；22 证明；23 (1) $\left(4,\frac\pi2\right)$、$\left(2\sqrt2,\frac\pi4\right)$、(2) $a=-1$、$b=2$；24 (1) $(-\infty,1]\cup[5,+\infty)$、(2) $a=3$。
