@@ -1,0 +1,17 @@
+% 2013 四川卷文科第 6 题：$f(x)=2\sin(\omega x+\varphi)$ 的部分图象。
+\begin{tikzpicture}[font=\footnotesize, line width=0.45pt, >=Stealth,
+  x=2.15cm, y=0.86cm]
+  \draw[->] (-0.42,0) -- (3.85,0) node[below] {$x$};
+  \draw[->] (0,-2.62) -- (0,2.72) node[right] {$y$};
+  \node[below left] at (0,0) {$O$};
+  % 峰值与谷值的辅助虚线
+  \draw[dashed] (0,2) -- ({5*pi/12},2) -- ({5*pi/12},0);
+  \draw[dashed] (0,-2) -- ({11*pi/12},-2) -- ({11*pi/12},0);
+  % 图象
+  \draw[domain=0:3.52, samples=240, smooth]
+    plot (\x, {2*sin(deg(2*\x-pi/3))});
+  \node[left] at (0,2) {$2$};
+  \node[left] at (0,-2) {$-2$};
+  \node[below] at ({5*pi/12},-0.12) {$\dfrac{5\pi}{12}$};
+  \node[above left] at ({11*pi/12},0.10) {$\dfrac{11\pi}{12}$};
+\end{tikzpicture}

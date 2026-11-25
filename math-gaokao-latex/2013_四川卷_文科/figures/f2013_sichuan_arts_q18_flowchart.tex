@@ -1,0 +1,28 @@
+% 2013 四川卷文科第 18 题：输出 y 的值的程序框图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.45pt,
+  node distance=4.6mm,
+  term/.style={draw, rounded corners=5pt, minimum height=1.8em, inner xsep=8pt},
+  io/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+             minimum height=1.8em, inner xsep=7pt},
+  box/.style={draw, minimum height=1.8em, inner xsep=6pt},
+  dec/.style={draw, diamond, aspect=2.4, inner sep=1pt}]
+  \node[term] (start) {开始};
+  \node[io, below=5mm of start] (input) {输入 $x$};
+  \node[dec, below=6mm of input] (even) {$x$ 为偶数?};
+  \node[box, right=9mm of even] (y1) {$y=1$};
+  \node[dec, below=9mm of even] (div) {$x$ 能被 3 整除?};
+  \node[box, left=9mm of div] (y2) {$y=2$};
+  \node[box, below=6mm of div] (y3) {$y=3$};
+  \node[io, below=15mm of y3] (output) {输出 $y$};
+  \node[term, below=5mm of output] (end) {结束};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (even);
+  \draw[->] (even) -- node[above] {否} (y1);
+  \draw[->] (even) -- node[right] {是} (div);
+  \draw[->] (div) -- node[above] {否} (y2);
+  \draw[->] (div) -- node[right] {是} (y3);
+  \draw[->] (y1.south) |- (output.east);
+  \draw[->] (y2.south) |- (output.west);
+  \draw[->] (y3) -- (output);
+  \draw[->] (output) -- (end);
+\end{tikzpicture}

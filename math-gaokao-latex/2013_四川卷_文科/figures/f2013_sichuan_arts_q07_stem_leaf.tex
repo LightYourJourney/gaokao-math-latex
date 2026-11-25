@@ -1,0 +1,23 @@
+% 2013 四川卷文科第 7 题：20 个班中有网上购物经历人数的茎叶图。
+\begin{tikzpicture}[font=\small, line width=0.45pt, x=1cm, y=1cm]
+  % 茎叶图的分隔线
+  \draw (-0.55,0.52) -- (5.00,0.52);
+  \draw (0.24,0.52) -- (0.24,-2.62);
+  % 茎
+  \foreach \s/\y in {0/0, 1/-0.78, 2/-1.56, 3/-2.34} {
+    \node[anchor=east] at (-0.06,\y) {$\s$};
+  }
+  % 叶（自左向右按原图由大到小排列）
+  \foreach \v [count=\i from 1] in {7,3} {
+    \node at ({0.60+(\i-1)*0.60},0) {$\v$};
+  }
+  \foreach \v [count=\i from 1] in {7,6,4,4,3,0} {
+    \node at ({0.60+(\i-1)*0.60},-0.78) {$\v$};
+  }
+  \foreach \v [count=\i from 1] in {7,5,5,4,3,2,0} {
+    \node at ({0.60+(\i-1)*0.60},-1.56) {$\v$};
+  }
+  \foreach \v [count=\i from 1] in {8,5,4,3,0} {
+    \node at ({0.60+(\i-1)*0.60},-2.34) {$\v$};
+  }
+\end{tikzpicture}

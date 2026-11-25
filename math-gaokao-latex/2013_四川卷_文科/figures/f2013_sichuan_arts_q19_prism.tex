@@ -1,0 +1,37 @@
+% 2013 四川卷文科第 19 题：三棱柱 ABC-A1B1C1，D、D1 分别为 BC、B1C1 的中点，P 在 AD 上。
+\begin{tikzpicture}[font=\footnotesize, line width=0.45pt, scale=1]
+  \coordinate (C)  at (0.80,3.40);
+  \coordinate (A)  at (2.60,2.00);
+  \coordinate (B)  at (5.60,2.00);
+  \coordinate (C1) at (0.80,1.60);
+  \coordinate (A1) at (2.60,0.20);
+  \coordinate (B1) at (5.60,0.20);
+  \coordinate (D)  at (3.20,2.70);
+  \coordinate (D1) at (3.20,0.90);
+  \coordinate (P)  at (2.87,2.315);
+  % 顶面三角形
+  \draw (A) -- (B) -- (C) -- cycle;
+  % 可见的侧棱与底面棱
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (A1) -- (B1);
+  % 平面 A1BC 的辅助线
+  \draw (A1) -- (C);
+  \draw (A1) -- (B);
+  % 被遮挡的棱
+  \draw[dashed] (C1) -- (A1);
+  \draw[dashed] (C1) -- (B1);
+  \draw[dashed] (D)  -- (D1);
+  % 点与标注
+  \fill (P) circle (1.4pt);
+  \node[above left]  at (C)  {$C$};
+  \node[below left]  at (2.48,1.86) {$A$};
+  \node[right]       at (B)  {$B$};
+  \node[left=3pt]    at (C1) {$C_1$};
+  \node[below left]  at (A1) {$A_1$};
+  \node[below right=1pt] at (B1) {$B_1$};
+  \node[above left]  at (D)  {$D$};
+  \node[right]       at ($(D1)+(0.10,0)$) {$D_1$};
+  \node[left]        at (P)  {$P$};
+\end{tikzpicture}

@@ -1,0 +1,41 @@
+% 2013 四川卷文科第 7 题：四个频率分布直方图选项 (A)—(D)。
+% 组距 5 时 频率/组距 = 频数/100：(A) 频数 1,1,4,2,4,3,3,2（正确），
+% (B) 1,2,3,3,5,2,3,1；(C)(D) 误用组距 10。
+\newcommand{\freqpanel}[5]{%
+  \begin{scope}[shift={#1}, x=0.142cm, y=58cm]
+    \draw[->] (0,0) -- (44,0) node[above left, inner sep=3pt] {\small 人数};
+    \draw[->] (0,0) -- (0,{#2*1.36});
+    \node[above, inner sep=1pt] at (0,{#2*1.42})
+      {$\dfrac{\text{频率}}{\text{组距}}$};
+    % 纵轴刻度
+    \foreach \v in {#4} {
+      \draw (-0.9,\v) -- (0,\v);
+      \node[left, inner sep=1.5pt] at (-1.0,\v) {\v};
+    }
+    % 横轴刻度
+    \foreach \t in {#3} {
+      \draw (\t,-0.0016) -- (\t,0.0016);
+      \node[below, inner sep=1.5pt] at (\t,-0.0019) {\t};
+    }
+    % 柱形
+    \foreach \h [count=\i from 1] in {#5} {
+      \draw ({(\i-1)*\barw},0) rectangle ({\i*\barw},\h);
+    }
+  \end{scope}%
+}
+\begin{tikzpicture}[font=\scriptsize, line width=0.45pt, >=Stealth]
+  \def\barw{5}
+  \freqpanel{(0,0)}{0.04}{0,5,...,40}{0.01,0.02,0.03,0.04}
+    {0.01,0.01,0.04,0.02,0.04,0.03,0.03,0.02}
+  \node at (-0.55,-1.15) {(A)};
+  \freqpanel{(7.4,0)}{0.05}{0,5,...,40}{0.01,0.02,0.03,0.04,0.05}
+    {0.01,0.02,0.03,0.03,0.05,0.02,0.03,0.01}
+  \node at (6.85,-1.15) {(B)};
+  \def\barw{10}
+  \freqpanel{(0,-5.6)}{0.04}{0,10,20,30,40}{0.01,0.02,0.03,0.04}
+    {0.01,0.03,0.035,0.025}
+  \node at (-0.55,-6.75) {(C)};
+  \freqpanel{(7.4,-5.6)}{0.04}{0,10,20,30,40}{0.01,0.02,0.03,0.04}
+    {0.015,0.03,0.035,0.02}
+  \node at (6.85,-6.75) {(D)};
+\end{tikzpicture}
