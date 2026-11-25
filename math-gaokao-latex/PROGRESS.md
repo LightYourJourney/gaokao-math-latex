@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 安徽卷（文科）：phase7-b49 新卷转录、四版封账（2026-11-25；`closed`）
+- 对象：`gk-2012-anhui-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-1ea93bba098a490962b31cf20b637d3c61394b2b7b05b3e9add3d3377bfa7a95`，2 页 A3 横向，印面 715、716。
+- 答案（独立推导，等级 D）：1 B；2 D；3 D；4 C；5 A；6 B；7 C；8 A；9 C；10 B；11 $\sqrt2$；12 $56$；13 $-6$；14 $\frac32$；15 ②④⑤；16 (1) $A=\frac\pi3$、(2) $\frac{\sqrt7}2$；17 (1) $2+b$、(2) $a=2,b=-1$；18 (1) 补表 5/0.10、8/0.16、25/0.50、10/0.20、2/0.04，(2) $0.70$，(3) $1980$ 件；19 (1) 证明、(2) $3\sqrt2$；20 (1) $\frac12$、(2) $a=10,b=5\sqrt3$；21 (1) $x_n=2n\pi-\frac{2\pi}3$、(2) $\sin S_n=(-1)^n\sin\frac{n\pi}3$。
+- 复核要点：第 8 题可行域为 $0\leqslant x\leqslant1$、$\frac{3-x}2\leqslant y\leqslant3-2x$，$z$ 在 $(0,3)$ 取最小值 $-3$（不是 $(-\frac32)$）；第 12 题按「高 4 的直棱柱、底面直角梯形上底 5 下底 2 高 4」得 $V=56$；第 15 题③的三角之和恒为 $180^\circ$，故判错，正确项为 ②④⑤；第 20(2) 由 $e=\frac12$ 取 $a=2c,b=\sqrt3c$，算得 $|AB|=\frac{16c}5$、$F_1$ 到 $AB$ 距离 $\sqrt3c$，面积 $\frac{8\sqrt3c^2}5=40\sqrt3$ 得 $c=5$。
+- 图稿：4 张 TikZ（程序框图、直棱柱三视图、长方体、椭圆与焦点）；第 12 题三视图按 0.70 缩放并下移俯视图，使「5」标注不被「正（主）视图」覆盖。
+- 版式修正：① 第 12 题解析原只剩「解析」二字孤悬页底，缩小图幅后解析回到同页；② 印刷版第 1—2 页曾把第 10 题题干与选项拆开，按 `question-needspace: 0.2`（指令独占一行、置于选项之后）令整题同页。
+- 验收：四版 4/19/6/15 页（共 44 页），四 log 全 0；review 44 页 **320 pass + 32 not_applicable、0 fail、0 豁免**；`finalize-batch` → `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；4 条图稿引用全部命中。
+- 全库（本卷封账后）：manifest **640 卷 / 775 来源 / 486 批次**，complete 522、blocked 118，未绑定 **136**；revision 11680。第 640 卷里程碑已触发，`report.py render/check` 已启动。
+
 ### 2012 北京卷（理科）：phase7-b48 新卷转录、四版封账（2026-11-25；`closed`）
 - 对象：`gk-2012-beijing-science`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-afdc63cf45f98bbc58fb48e5af8b5cb25fb3385728eb0b4d01446bc0cd1c019c`，2 页 A3 横向，印面 717、718。
 - 答案（独立推导，等级 D）：1 D；2 D；3 B；4 C；5 A；6 B；7 B；8 C；9 $2$；10 $a_2=1$、$S_n=\frac{n(n+1)}4$；11 $4$；12 $\sqrt3$；13 $1$；$1$；14 $(-4,-2)$；15 (1) $x\neq k\pi$、$T=\pi$、(2) $[-\frac\pi8+k\pi,k\pi)\cup(k\pi,\frac{3\pi}8+k\pi]$；16 (1) 证明、(2) $45^\circ$、(3) 不存在；17 (1) $\frac23$、(2) $\frac3{10}$、(3) $600,0,0$、$s^2=80000$；18 (1) $a=b=3$、(2) 增区间 $(-\infty,-\frac a2)$、$(-\frac a6,+\infty)$，减区间 $(-\frac a2,-\frac a6)$，最大值 $a-\frac{a^2}4$（$0<a<2$）、$1$（$a\geqslant2$）；19 (1) $(\frac72,5)$、(2) 证明；20 (1) $0.7$、(2) $1$、(3) $\frac{2t+1}{t+2}$。

@@ -1,0 +1,22 @@
+% 2012 年安徽卷文科第 20 题：椭圆两焦点 F1、F2，A 为顶点，B 为直线 AF2 与椭圆的另一交点。
+% 来源 PDF：普通高考/2012/2012安徽文.pdf，第 2 页（印面 716）第 2 栏。
+% 按 e=1/2 取 a=10、b=5√3≈8.66、c=5，B=(8,-3√3) 的实际比例作图。
+\begin{tikzpicture}[scale=0.34, semithick, >=Stealth, font=\small]
+  \draw (0,0) ellipse (10 and 8.66);
+  \draw[->] (-11.5,0) -- (11.5,0) node[right] {$x$};
+  \draw[->] (0,-9.6) -- (0,9.6) node[above] {$y$};
+  \coordinate (A) at (0,8.66);
+  \coordinate (F1) at (-5,0);
+  \coordinate (F2) at (5,0);
+  \coordinate (B) at (8,-5.196);
+  \draw (A) -- (F1);
+  \draw (A) -- (B);
+  \draw (F1) -- (B);
+  \fill (F1) circle (2.2pt);
+  \fill (F2) circle (2.2pt);
+  \node[above right] at (A) {$A$};
+  \node[below left] at (F1) {$F_1$};
+  \node[below right] at (F2) {$F_2$};
+  \node[below right] at (B) {$B$};
+  \node[below right] at (0,-0.6) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+% 2012 年安徽卷文科第 6 题：输出 y 的程序框图。
+% 来源 PDF：普通高考/2012/2012安徽文.pdf，第 1 页（印面 715）左栏。
+% 流程：开始 → x=1,y=1 → x≤4? 是：x=2x，y=y+1，回到判断；否：输出 y → 结束。
+\begin{tikzpicture}[semithick, >=Stealth,
+  block/.style={draw, minimum width=3.2cm, minimum height=0.62cm, align=center},
+  dec/.style={draw, diamond, aspect=2.6, inner sep=1pt, align=center},
+  term/.style={draw, rounded corners=6pt, minimum width=1.5cm, minimum height=0.52cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.2cm, minimum height=0.58cm},
+  arr/.style={->}]
+  \node (start) [term] at (0,6.6) {开始};
+  \node (init)  [block] at (0,5.7) {$x=1,\ y=1$};
+  \node (dec)   [dec]  at (0,4.35) {$x\leqslant4$?};
+  \node (body)  [block] at (3.7,4.35) {$x=2x,\ y=y+1$};
+  \node (out)   [io]   at (0,2.95) {输出 $y$};
+  \node (end)   [term] at (0,1.95) {结束};
+  \draw[arr] (start) -- (init);
+  \draw[arr] (init) -- (dec);
+  \draw[arr] (dec) -- node[above] {是} (body);
+  \draw[arr] (body.north) -- (3.7,5.0) -- (0,5.0);
+  \draw[arr] (dec) -- node[right] {否} (out);
+  \draw[arr] (out) -- (end);
+\end{tikzpicture}
