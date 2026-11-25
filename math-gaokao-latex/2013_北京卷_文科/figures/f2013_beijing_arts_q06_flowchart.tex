@@ -1,0 +1,29 @@
+% 2013 年北京卷文科第 6 题：程序框图。
+% 来源 PDF：普通高考/2013/2013北京文.pdf，第 1 页（印面 789）左栏。
+% 流程：开始 → i=0,S=1 → S=(S^2+1)/(2S+1) → i=i+1 → i≥2?
+%       是：输出 S → 结束；否：向右引出后回到 S 赋值框上方。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.45pt,
+  term/.style={draw, rounded corners=6pt, minimum height=1.8em, inner xsep=9pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.8em, inner xsep=6pt},
+  box/.style={draw, minimum height=1.9em, inner xsep=6pt},
+  dec/.style={draw, diamond, aspect=2.4, inner sep=1pt}]
+  \node[term] (start) at (0,0) {开始};
+  \node[box] (init) at (0,-1.05) {$i=0$，$S=1$};
+  \node[box] (assign) at (0,-2.35) {$S=\dfrac{S^2+1}{2S+1}$};
+  \node[box] (inc) at (0,-3.70) {$i=i+1$};
+  \node[dec] (cond) at (0,-5.05) {$i\geqslant2$};
+  \node[io] (out) at (0,-6.40) {输出 $S$};
+  \node[term] (end) at (0,-7.50) {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (assign);
+  \draw[->] (assign) -- (inc);
+  \draw[->] (inc) -- (cond);
+  \draw[->] (cond) -- node[right] {是} (out);
+  \draw[->] (out) -- (end);
+  % 循环支路：从判断框右侧引出，上行后折回 S 赋值框顶边
+  \coordinate (r1) at ($(cond.east)+(2.3,0)$);
+  \coordinate (up) at ($(assign.north)+(0,0.45)$);
+  \draw (cond.east) -- node[above] {否} (r1) -- (r1 |- up) -- (0.55,0 |- up);
+  \draw[->] (0.55,0 |- up) -- (0.55,0 |- assign.north);
+\end{tikzpicture}

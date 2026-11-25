@@ -4212,6 +4212,14 @@
         "gk-2013-beijing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b71",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-beijing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4221,7 +4229,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "df6f5379-c7e6-4c27-8272-c7eabb988692",
+  "last_transaction_id": "e44c927d-a5c0-4e66-a4d2-b7927441897d",
   "papers": [
     {
       "blocked_from": null,
@@ -48984,9 +48992,82 @@
       "title": "2013 年·北京卷·理科",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_北京卷_文科/figures/f2013_beijing_arts_q06_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_北京卷_文科/figures/f2013_beijing_arts_q08_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_北京卷_文科/figures/f2013_beijing_arts_q10_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_北京卷_文科/figures/f2013_beijing_arts_q16_aqi_chart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_北京卷_文科/figures/f2013_beijing_arts_q17_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_beijing_arts",
+        "id": "gk-2013-beijing-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 789、790（第 789 面为选择 1—8、填空 9—14、解答 15—16；第 790 面为解答 17—20）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。北京卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题。答案由本库独立推导（等级 D，非官方）。原页图：第 6 题程序框图、第 8 题正方体、第 10 题三视图、第 16 题空气质量指数趋势图、第 17 题四棱锥，均以 TikZ 重绘共 5 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-beijing-arts",
+      "production_state": "complete",
+      "project_dir": "2013_北京卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_北京文_含解析.md",
+        "questions": "2013/2013_数学真题_北京文_试题.md",
+        "solution_body": "2013/2013_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-ea0639d7bd38df23ca79fbc8afe0b3901cd889e24db7c361dceaf10d861acfb5"
+      ],
+      "title": "2013 年·北京卷·文科",
+      "track": "arts",
+      "year": 2013
     }
   ],
-  "revision": 11858,
+  "revision": 11869,
   "schema_version": 1,
   "sources": [
     {
@@ -62279,8 +62360,8 @@
       "exam_type": "regular",
       "git_blob_oid": "274a03501e2d6ae5e758d0b223cf20411be8680a",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013北京文.pdf",
       "regions": [],
       "source_id": "src-ea0639d7bd38df23ca79fbc8afe0b3901cd889e24db7c361dceaf10d861acfb5",

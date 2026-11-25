@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 北京卷（文科）：phase7-b71 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2013-beijing-arts`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-ea0639d7bd38df23ca79fbc8afe0b3901cd889e24db7c361dceaf10d861acfb5`，2 页 A3，印面 789、790。
+- 答案（等级 D）：1 B；2 D；3 C；4 A；5 B（$\frac59$）；6 C（$\frac{13}{21}$）；7 C（$m>1$）；8 B（4 个）；9 $p=2$、准线 $x=-1$；10 $3$；11 $q=2$、$S_n=2^{n+1}-2$；12 $\frac{2\sqrt5}5$；13 $(-\infty,2)$；14 $3$；15 (1) $T=\frac\pi2$、最大值 $\frac{\sqrt2}2$、(2) $\frac{9\pi}{16}$；16 (1) $\frac6{13}$、(2) $\frac4{13}$、(3) 从 5 日开始；17 三问证明；18 (1) $a=0,b=1$、(2) $b>1$；19 (1) $2\sqrt3$、(2) 证明；20 (1) $d_1=2,d_2=3,d_3=6$、(2)(3) 证明。
+- **来源核对**：子代理按 PDF 纠正任务提示——第 13 题为 $\log_{\frac12}x$（$x\ge1$）与 $2^x$（$x<1$），值域 $(-\infty,2)$；第 20(3) 为 $d_1,d_2,\cdots,d_{n-1}$（非奇数下标）。主代理 600 dpi 复核后确认。
+- 主代理复核：第 6 题两轮 $\frac{13}{21}$；第 8 题距离平方 $\{\frac13,\frac23,1,\frac43\}$ 共 4 个；第 10 题底面 $3\times3$、高 1、$V=3$；第 12 题 $\frac{2\sqrt5}5$；第 15 题 $f=\frac{\sqrt2}2\sin(4x+\frac\pi4)$、$\alpha=\frac{9\pi}{16}$；第 16 题 14 个 AQI 值逐个复核，$\frac6{13}$、$\frac4{13}$、第 5—7 日方差 5600；第 18 题 $f'=x(2+\cos x)$、$a=0,b=1$、$b>1$；第 19 题 $AC=2\sqrt3$；第 20 题 $d$ 单调推 $a_2<\cdots<a_{n-1}$、$B_i\equiv a_n$。
+- 排版修复：清除题面中重复的 `part-needspace` 指令（子代理已写入 0.3，主代理误加第二行导致生成器报“必须紧跟标题”，已去重并重建）。
+- 图稿：5 张 TikZ（程序框图、正方体、三视图、AQI 趋势图、四棱锥）。
+- 验收：四版 5/25/7/19 页（共 56 页），四 log 全 0（Overfull、missing characters 均 0）；review 56 页 **pass 409 + not_applicable 39、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库：manifest **662 卷 / 775 来源 / 508 批次**，complete 544、blocked 118，未绑定 **114**；revision 11869。
+
 ### 2013 北京卷（理科）：phase7-b70 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2013-beijing-science`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-c3a411de5f32fa4a17eb4b4aa93249f7368721f1082b29d59c8b535de0d09299`，2 页 A3，印面 787、788。
 - 答案（等级 D）：1 B；2 D（$3-4\mathrm i$）；3 A；4 C（$\frac{13}{21}$）；5 D（$\mathrm e^{-x-1}$）；6 B（$y=\pm\sqrt2x$）；7 C（$\frac83$）；8 C（$\left(-\infty,-\frac23\right)$）；9 $1$；10 $q=2$、$S_n=2^{n+1}-2$；11 $PD=\frac95$、$AB=4$；12 $96$；13 $4$；14 $\frac{2\sqrt5}5$；15 (1) $\frac{\sqrt6}3$、(2) $5$；16 (1) $\frac2{13}$、(2) $P(X=0)=\frac5{13}$、$P(X=1)=\frac4{13}$、$P(X=2)=\frac4{13}$、$E(X)=\frac{12}{13}$、(3) 从 5 日开始；17 (1) 证明、(2) $\frac{16}{25}$、(3) $\frac9{25}$；18 (1) $y=x-1$、(2) 证明；19 (1) $\sqrt3$、(2) 不可能；20 (1) $1,1,3,3$、(2)(3) 证明。

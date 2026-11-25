@@ -1,0 +1,41 @@
+% 2013 年北京卷文科第 16 题：3 月 1 日至 14 日空气质量指数趋势图。
+% 来源 PDF：普通高考/2013/2013北京文.pdf，第 1 页（印面 789）右栏（与理科第 16 题同一张图）。
+% 14 个数据点（600 dpi 原页逐个核对）：86，25，57，143，220，160，40，
+% 217，160，121，158，86，79，37。
+\begin{tikzpicture}[font=\scriptsize, >=Stealth, line width=0.45pt,
+  x=0.79cm, y=0.026cm]
+  % 坐标轴
+  \draw[->] (0,0) -- (14.7,0);
+  \node[below right] at (14.7,0) {日期};
+  \draw[->] (0,0) -- (0,285) node[above] {空气质量指数};
+  % 纵轴刻度与虚线
+  \foreach \y in {50,100,150,200,250} {
+    \draw (0,\y) -- (-0.12,\y) node[left] {\y};
+    \draw[dashed, gray!55] (0,\y) -- (14.55,\y);
+  }
+  \node[below left] at (0,0) {$0$};
+  % 横轴日期
+  \foreach \i in {1,...,14} \node[below, font=\tiny] at (\i,0) {\i 日};
+  % 数据折线与数据点
+  \foreach \i/\v in {1/86,2/25,3/57,4/143,5/220,6/160,7/40,
+                     8/217,9/160,10/121,11/158,12/86,13/79,14/37}
+    \fill (\i,\v) circle (1.2pt);
+  \draw (1,86) -- (2,25) -- (3,57) -- (4,143) -- (5,220) -- (6,160)
+        -- (7,40) -- (8,217) -- (9,160) -- (10,121) -- (11,158)
+        -- (12,86) -- (13,79) -- (14,37);
+  % 数值标注：标注放在折线的空档一侧，避免压线
+  \node[above left] at (1,86) {86};
+  \node[below right] at (2,25) {25};
+  \node[above left] at (3,57) {57};
+  \node[above left] at (3.95,150) {143};
+  \node[above] at (5,220) {220};
+  \node[above right] at (6,160) {160};
+  \node[below] at (7,40) {40};
+  \node[above right] at (8,217) {217};
+  \node[above right] at (9,160) {160};
+  \node[below] at (10,121) {121};
+  \node[above] at (11,158) {158};
+  \node[below left] at (12,86) {86};
+  \node[right] at (13,79) {79};
+  \node[above right] at (14,37) {37};
+\end{tikzpicture}
