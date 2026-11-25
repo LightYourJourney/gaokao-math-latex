@@ -4004,6 +4004,14 @@
         "gk-2012-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b45",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-shaanxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4013,7 +4021,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "31370abb-3422-4bd3-b2b9-08d606593155",
+  "last_transaction_id": "a5bd86d4-ef71-42dd-a286-1710d27537b9",
   "papers": [
     {
       "blocked_from": null,
@@ -46913,9 +46921,86 @@
       "title": "2012 年·天津卷·文科",
       "track": "arts",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_文科/figures/f2012_shaanxi_arts_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_文科/figures/f2012_shaanxi_arts_q08_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_文科/figures/f2012_shaanxi_arts_q14_bridge.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_文科/figures/f2012_shaanxi_arts_q15b_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_文科/figures/f2012_shaanxi_arts_q18_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_文科/figures/f2012_shaanxi_arts_q19_histograms.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_shaanxi_arts",
+        "id": "gk-2012-shaanxi-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 765、766。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。陕西卷题号：选择 1—10、填空 11—15（第 15 题三选一）、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页 6 幅图：第 5 题程序框图、第 8 题正方体与左视图选项、第 14 题拱桥、第 15B 题圆、第 18 题直三棱柱、第 19 题两个频率分布直方图，均由 TikZ 重绘；其余各题原页无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "陕西文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-shaanxi-arts",
+      "production_state": "complete",
+      "project_dir": "2012_陕西卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_陕西文_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_陕西文_含解析.md",
+        "questions": "2012/2012_数学真题_陕西文_试题.md",
+        "solution_body": "2012/2012_数学真题_陕西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-8ac08b7b0cf4de132edaa3bdcda1415792e56eb55d7294d9a422ecbc9fa7ec0d"
+      ],
+      "title": "2012 年·陕西卷·文科",
+      "track": "arts",
+      "year": 2012
     }
   ],
-  "revision": 11622,
+  "revision": 11630,
   "schema_version": 1,
   "sources": [
     {
@@ -60112,8 +60197,8 @@
       "exam_type": "regular",
       "git_blob_oid": "99e403a5466e752a4f790d65ae86babb3efd30e5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-shaanxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012陕西文.pdf",
       "regions": [],
       "source_id": "src-8ac08b7b0cf4de132edaa3bdcda1415792e56eb55d7294d9a422ecbc9fa7ec0d",
