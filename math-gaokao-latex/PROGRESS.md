@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 广东卷（文科）：phase7-b54 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
+- 对象：`gk-2013-guangdong-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-a924f83ea3a73070fdcce39fae693cf4fabc265b89d6c991835236a36f51b170`，2 页 A3，印面 805、806。
+- 流程：按目标中「委派 Subagents 处理互不重叠批次」的约定，四份 MD 与 5 张图由子代理 `ses_ded52e641ffe1LuaHAMpzffj7E` 起草；主代理逐项复核后再注册、构建与审查。
+- 答案（等级 D）：1 A；2 C；3 D；4 C；5 C；6 B；7 A；8 B；9 D；10 B；11 $15$；12 $\frac12$；13 $5$；14 $x=1+\cos\theta,\ y=\sin\theta$；15 $\frac{\sqrt{21}}2$；16 (1) $1$、(2) $-\frac15$；17 (1) $0.4$、(2) $1$ 个、(3) $\frac12$；18 (1)(2) 证明、(3) $\frac{\sqrt3}{324}$；19 (1) 证明、(2) $a_n=2n-1$、(3) 证明；20 (1) $x^2=4y$、(2) $x_0x-2y-2y_0=0$、(3) $\frac92$；21 (1) 增区间 $\mathbf R$、(2) $m=k$、$M=-2k^3-k$。
+- 主代理复核要点：① 第 9 题选项 (B) 的分母确为 $\sqrt3$（300 dpi 复核），与 (D) 的 $y^2/3$ 不重复；② 第 18(3) 独立取 $B'=(0,0,-\frac12)$、$D'=(0,\frac{\sqrt3}6,-\frac13)$，行列式算得 $V=\frac{\sqrt3}{324}$，与子代理一致；③ 第 21(2) 用 $f(x)-k=(x-k)(x^2+1)$ 与 $f(x)+2k^3+k=(x+k)[(x-k)^2+k^2+1]$ 验证 $m=f(k)$、$M=f(-k)$，并用 $k=-1,-2$ 数值复核；④ 第 6 题俯视图尺寸为量图所得（1×1 等腰直角三角形），答案 $\frac13$ 与选项互洽，已在 `index_metadata.note` 记明。
+- 构建修正：解析版第 19(3) 的望远镜求和整行超宽 7.1pt，拆成两行行间公式后 Overfull 归零。
+- 验收：四版 5/22/7/17 页（共 51 页），四 log 全 0；review 51 页 **375 pass + 33 not_applicable、0 fail**；`finalize-batch` → `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库（本卷封账后）：manifest **645 卷 / 775 来源 / 491 批次**，complete 527、blocked 118，未绑定 **131**；revision 11732。距离报告刷新（646 卷）还差 1 卷。
+
 ### 2012 江西卷（文科）：phase7-b53 新卷转录、四版封账（2026-11-25；`closed`）
 - 对象：`gk-2012-jiangxi-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-8e20da0ec356a9ad9d4433315448be1501910564be15e7823711067bd8728148`，2 页 A3 横向，印面 749、750。
 - 答案（独立推导，等级 D）：1 A；2 C；3 D；4 B；5 B；6 C；7 D；8 B；9 C；10 B；11 $(-3,2)\cup(3,+\infty)$；12 $\sqrt5$；13 $11$；14 $(\sqrt2,\sqrt2)$；15 $3$；16 (1) $\frac13$、(2) $(b,c)=(2,3)$ 或 $(3,2)$；17 (1) $a_n=2^n$、(2) $T_n=(n-1)2^{n+1}+2$；18 (1) $\frac1{10}$、(2) $\frac35$；19 (1) 证明、(2) $16$；20 (1) $x^2=4y$、(2) 面积比 $2$；21 (1) $[0,1]$、(2) 最大值 $2a\mathrm e^{\frac{1-a}{2a}}$（$a=0$ 时 $\mathrm e$），最小值分段 $1+a$ 与 $(1-a)\mathrm e$，分界 $a=\frac{\mathrm e-1}{\mathrm e+1}$。

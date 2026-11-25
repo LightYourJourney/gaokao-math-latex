@@ -1,0 +1,23 @@
+% 2013 广东卷文科第 18 题图①：等边三角形 ABC 中的折痕（AF 与 DE 交于 G）。
+\begin{tikzpicture}[font=\small, >=Stealth, line width=0.4pt]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (3,0);
+  \coordinate (A) at (1.5,2.5981);
+  \coordinate (F) at (1.5,0);
+  \coordinate (D) at (0.5,0.8660);
+  \coordinate (E) at (2.5,0.8660);
+  \coordinate (G) at (1.5,0.8660);
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (F);
+  \draw (D) -- (E);
+  \fill (G) circle (1.1pt);
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[below] at (F) {$F$};
+  \node[left] at (D) {$D$};
+  \node[right] at (E) {$E$};
+  \node[above left] at (G) {$G$};
+  \node (lbl) at (1.5,-0.85) {图};
+  \node[circle, draw, inner sep=0.4pt, font=\scriptsize, right=1pt of lbl] {1};
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+% 2013 广东卷文科第 5 题：程序框图（输入 n，累加 s=s+(i-1)）。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.4pt,
+  node distance=3.2mm,
+  box/.style={draw, minimum height=1.65em, inner xsep=6pt},
+  term/.style={draw, rounded corners=6pt, minimum height=1.65em, inner xsep=9pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.65em, inner xsep=4pt},
+  dec/.style={draw, diamond, aspect=2.5, inner sep=1.2pt}]
+  \node[term] (start) {开始};
+  \node[io, below=5mm of start] (input) {输入 $n$};
+  \node[box, below=5mm of input] (init) {$i=1$，$s=1$};
+  \node[dec, below=6mm of init] (cond) {$i\leqslant n$};
+  \node[box, below=8mm of cond] (acc) {$s=s+(i-1)$};
+  \node[box, below=5mm of acc] (inc) {$i=i+1$};
+  \node[io, right=13mm of cond] (output) {输出 $s$};
+  \node[term, below=6mm of output] (end) {结束};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (init);
+  \draw[->] (init) -- (cond);
+  \draw[->] (cond) -- node[right] {是} (acc);
+  \draw[->] (acc) -- (inc);
+  \draw[->] (inc.west) -- ++(-1.15,0) |- (cond.west);
+  \draw[->] (cond.east) -- node[above] {否} (output.west);
+  \draw[->] (output) -- (end);
+\end{tikzpicture}

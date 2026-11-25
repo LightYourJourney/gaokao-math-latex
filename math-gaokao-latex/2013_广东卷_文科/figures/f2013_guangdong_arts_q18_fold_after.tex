@@ -1,0 +1,30 @@
+% 2013 广东卷文科第 18 题图②：折叠后的三棱锥 A-BCF（D、E、G 为折痕上的点）。
+\begin{tikzpicture}[font=\small, >=Stealth, line width=0.4pt]
+  \coordinate (A) at (1.55,3.60);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (3.40,0.55);
+  \coordinate (F) at (1.45,0.75);
+  \coordinate (D) at (0.5167,1.20);
+  \coordinate (E) at (2.7833,1.5667);
+  \coordinate (G) at (1.4833,1.70);
+  % 被遮挡的棱与辅助线
+  \draw[dashed] (A) -- (F);
+  \draw[dashed] (F) -- (B);
+  \draw[dashed] (F) -- (C);
+  \draw[dashed] (G) -- (D);
+  \draw[dashed] (G) -- (E);
+  % 可见的棱
+  \draw (A) -- (B) -- (C) -- (A);
+  \draw (D) -- (E);
+  \fill (F) circle (1.1pt);
+  \fill (G) circle (1.1pt);
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below] at (F) {$F$};
+  \node[left] at (D) {$D$};
+  \node[right] at (E) {$E$};
+  \node[above left] at (G) {$G$};
+  \node (lbl) at (1.55,-0.75) {图};
+  \node[circle, draw, inner sep=0.4pt, font=\scriptsize, right=1pt of lbl] {2};
+\end{tikzpicture}

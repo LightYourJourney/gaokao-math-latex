@@ -1,0 +1,17 @@
+% 2013 广东卷文科第 15 题：矩形 ABCD，AB=sqrt3，BC=3，BE 垂直 AC 于 E。
+\begin{tikzpicture}[font=\small, >=Stealth, line width=0.4pt]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (0,2.2517);
+  \coordinate (C) at (3.9,2.2517);
+  \coordinate (D) at (3.9,0);
+  \coordinate (E) at (0.975,0.5629);
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw (A) -- (C);
+  \draw (B) -- (E);
+  \draw (E) -- (D);
+  \node[below left] at (A) {$A$};
+  \node[above left] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[below right] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+\end{tikzpicture}
