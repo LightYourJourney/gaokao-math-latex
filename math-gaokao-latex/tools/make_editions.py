@@ -85,6 +85,7 @@ class BodySection:
     heading_size: str
     gap: str             # 居中标题与 \input 之间的留白
     source: str          # \input 的文件名，即输入矩阵成员
+    heading_needspace: str = "8\\baselineskip"  # 标题前的保留量
 
 
 _QUESTIONS = BodySection(
@@ -106,6 +107,8 @@ _COMPACT_SOLUTIONS = BodySection(
     lead="\\par\\bigskip\\hrule\\bigskip\n", bookmark="参考答案与详细解析",
     anchor="sec:s", heading="参考答案与详细解析", heading_size="large",
     gap="\\smallskip", source="answers",
+    # 印刷版不分页起新章，标题须与首个解析题块（0.5 体高）同页，否则标题孤悬页尾。
+    heading_needspace="0.55\\textheight",
 )
 _BODY_SECTIONS: Mapping[str, Tuple[BodySection, ...]] = {
     "试题版": (_QUESTIONS,),
@@ -174,7 +177,7 @@ def render_body(edition: str) -> str:
             # 章标题后必须紧跟正文：预留 8 基线，避免「参考答案与详细解析」这类
             # 光杆标题孤悬页尾。8 基线要覆盖标题块（约 3 行）+ 首答案的环境
             # Needspace（2）+ 解析题头 Needspace（3），否则首答案仍被推到下一页。
-            parts.append("\\Needspace{8\\baselineskip}\n")
+            parts.append("\\Needspace{%s}\n" % section.heading_needspace)
             parts.append(
                 "\\begin{center}{\\%s\\bfseries %s}\\end{center}\n"
                 % (section.heading_size, section.heading)

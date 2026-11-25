@@ -4020,6 +4020,22 @@
         "gk-2012-beijing-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b47",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-tianjin-science"
+      ],
+      "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b48",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-beijing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4029,7 +4045,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5c5eb778-f632-4a0a-932b-fa740f9e67a7",
+  "last_transaction_id": "ab9d604e-1bf9-4f38-9ebd-4645ed09f428",
   "papers": [
     {
       "blocked_from": null,
@@ -47075,9 +47091,151 @@
       "title": "2012 年·北京卷·文科",
       "track": "arts",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_天津卷_理科/figures/f2012_tianjin_science_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_天津卷_理科/figures/f2012_tianjin_science_q10_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_天津卷_理科/figures/f2012_tianjin_science_q13_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_天津卷_理科/figures/f2012_tianjin_science_q17_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_tianjin_science",
+        "id": "gk-2012-tianjin-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 775、776。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。天津卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题。答案由本库独立推导（等级 D，非官方）。原页 4 幅图：第 3 题程序框图、第 10 题两球与长方体的三视图、第 13 题圆与切线、第 17 题四棱锥，均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "天津理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-tianjin-science",
+      "production_state": "complete",
+      "project_dir": "2012_天津卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_天津理_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_天津理_含解析.md",
+        "questions": "2012/2012_数学真题_天津理_试题.md",
+        "solution_body": "2012/2012_数学真题_天津理_解析正文.md"
+      },
+      "source_ids": [
+        "src-9057887fdf6a10c2d968c152d49bac5b199ae89f5076c0b76bea5fa855f4f056"
+      ],
+      "title": "2012 年·天津卷·理科",
+      "track": "science",
+      "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_北京卷_理科/figures/f2012_beijing_science_q04_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_北京卷_理科/figures/f2012_beijing_science_q05_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_北京卷_理科/figures/f2012_beijing_science_q07_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_北京卷_理科/figures/f2012_beijing_science_q08_scatter.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_北京卷_理科/figures/f2012_beijing_science_q16_fold.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_beijing_science",
+        "id": "gk-2012-beijing-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 717、718。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。北京卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题。答案由本库独立推导（等级 D，非官方）。原页 5 幅图：第 4 题程序框图、第 5 题直角三角形与半圆、第 7 题三视图、第 8 题散点图、第 16 题折叠前后的两个位置，均由 TikZ 重绘；第 17、20 题的数表以表格排版。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "北京理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-beijing-science",
+      "production_state": "complete",
+      "project_dir": "2012_北京卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_北京理_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_北京理_含解析.md",
+        "questions": "2012/2012_数学真题_北京理_试题.md",
+        "solution_body": "2012/2012_数学真题_北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-afdc63cf45f98bbc58fb48e5af8b5cb25fb3385728eb0b4d01446bc0cd1c019c"
+      ],
+      "title": "2012 年·北京卷·理科",
+      "track": "science",
+      "year": 2012
     }
   ],
-  "revision": 11639,
+  "revision": 11663,
   "schema_version": 1,
   "sources": [
     {
@@ -59554,8 +59712,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5a7fd9250a7d3c79c2b69206e008ec2d64b5b5ab",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012北京理.pdf",
       "regions": [],
       "source_id": "src-afdc63cf45f98bbc58fb48e5af8b5cb25fb3385728eb0b4d01446bc0cd1c019c",
@@ -59698,8 +59856,8 @@
       "exam_type": "regular",
       "git_blob_oid": "fced99c4db94fbb4fa956416dbc5206aa3836948",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-tianjin-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012天津理.pdf",
       "regions": [],
       "source_id": "src-9057887fdf6a10c2d968c152d49bac5b199ae89f5076c0b76bea5fa855f4f056",

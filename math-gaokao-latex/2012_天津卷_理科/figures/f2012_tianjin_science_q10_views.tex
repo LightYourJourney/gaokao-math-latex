@@ -1,0 +1,39 @@
+% 2012 年天津卷理科第 10 题：两个球与一个长方体的三视图（单位：m）。
+% 来源 PDF：普通高考/2012/2012天津理.pdf，第 1 页（印面 775）右栏。
+% 球半径 3/2；长方体长 6、宽 3、高 1，置于两球上方。
+\begin{tikzpicture}[scale=0.72, semithick,
+  dim/.style={<->, >=Stealth, thin},
+  lab/.style={font=\small}]
+  % ---------- 正视图 ----------
+  \begin{scope}
+    \draw (0,3) rectangle (6,4);
+    \draw (1.5,1.5) circle (1.5);
+    \draw (4.5,1.5) circle (1.5);
+    \draw[->] (1.5,1.5) -- ++(1.06,1.06);
+    \node at (2.30,1.92) {$\frac32$};
+    \draw[->] (4.5,1.5) -- ++(1.06,1.06);
+    \node at (5.30,1.92) {$\frac32$};
+    \draw[dim] (0,4.45) -- (6,4.45);
+    \node[above] at (3,4.45) {6};
+    \draw[dim] (6.5,3) -- (6.5,4);
+    \node[right] at (6.5,3.5) {1};
+    \node[below] at (3,-0.55) {正视图};
+  \end{scope}
+  % ---------- 侧视图 ----------
+  \begin{scope}[shift={(10.0,0)}]
+    \draw (0,3) rectangle (3,4);
+    \draw (1.5,1.5) circle (1.5);
+    \draw[dim] (0,4.45) -- (3,4.45);
+    \node[above] at (1.5,4.45) {3};
+    \node[below] at (1.5,-0.55) {侧视图};
+  \end{scope}
+  % ---------- 俯视图 ----------
+  \begin{scope}[shift={(0.8,-4.7)}]
+    \draw (0,0) rectangle (6,3);
+    \draw[dashed] (1.5,1.5) circle (1.5);
+    \draw[dashed] (4.5,1.5) circle (1.5);
+    \draw[dim] (6.55,0) -- (6.55,3);
+    \node[right] at (6.55,1.5) {3};
+    \node[below] at (3,-0.55) {俯视图};
+  \end{scope}
+\end{tikzpicture}

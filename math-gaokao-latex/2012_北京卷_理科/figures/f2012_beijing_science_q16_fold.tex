@@ -1,0 +1,45 @@
+% 2012 年北京卷理科第 16 题：Rt△ABC（BC=3，AC=6）沿 DE（DE∥BC，DE=2）折起。
+% 来源 PDF：普通高考/2012/2012北京理.pdf，第 1 页（印面 717）右栏。
+% 图 1：D、E 分别在 AC、AB 上，DE=2；图 2：A 到 A1，A1C⊥CD，M 为 A1D 中点。
+\begin{tikzpicture}[scale=0.78, semithick, font=\small]
+  % ---------- 图 1 ----------
+  \begin{scope}
+    \coordinate (A) at (0,6);
+    \coordinate (C) at (0,0);
+    \coordinate (B) at (3,0);
+    \coordinate (D) at (0,2);
+    \coordinate (E) at (2,2);
+    \draw (A) -- (C) -- (B) -- cycle;
+    \draw (D) -- (E);
+    \node[above left] at (A) {$A$};
+    \node[below left] at (C) {$C$};
+    \node[below right] at (B) {$B$};
+    \node[left] at (D) {$D$};
+    \node[above] at (E) {$E$};
+    \node[below] at (1.5,-0.55) {图 1};
+  \end{scope}
+  % ---------- 图 2 ----------
+  \begin{scope}[shift={(6.2,0)}]
+    \coordinate (A1) at (0,4.9);
+    \coordinate (C2) at (0.1,0.1);
+    \coordinate (B2) at (3.8,0.1);
+    \coordinate (D2) at (1.6,1.7);
+    \coordinate (E2) at (3.3,2.0);
+    \coordinate (M2) at (0.8,3.3);
+    \draw (A1) -- (C2) -- (B2);
+    \draw (A1) -- (D2);
+    \draw (A1) -- (E2);
+    \draw (A1) -- (B2);
+    \draw (E2) -- (B2);
+    \draw[dashed] (C2) -- (D2);
+    \draw[dashed] (D2) -- (E2);
+    \fill (M2) circle (1.6pt);
+    \node[above left] at (A1) {$A_1$};
+    \node[below left] at (C2) {$C$};
+    \node[below right] at (B2) {$B$};
+    \node[below left] at (D2) {$D$};
+    \node[right] at (E2) {$E$};
+    \node[left] at (M2) {$M$};
+    \node[below] at (1.9,-0.55) {图 2};
+  \end{scope}
+\end{tikzpicture}
