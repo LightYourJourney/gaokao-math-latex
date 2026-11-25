@@ -14,6 +14,12 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 选项行距回修第九批：10 卷回退 + 2008 四川文 14 条改行内分式（页数不变，2026-11-25；`closed`）
+- 扫描 10 卷（2007 湖北文/理、湖南文、江苏、新课标文、山东理、天津理、陕西理，2008 安徽理、重庆理）：改 `\dfrac→\frac` 后四版页数均变化，按硬条件全部回退并重新 `FINALIZED`；逐卷 `validate-receipts --require-final` 均 `OK：1 卷`。
+- `gk-2008-sichuan-arts`（phase6-b30）：**14 条**选项行改为行内 `\frac`，重生成 `questions/answers/answers_short`、从 `provenance.json` 还原三角色回执并重算哈希、重建四版，页数保持 **4/16/6/14**，沿用原逐页回执并重新 `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`。
+- 审计与 backlog 复跑：待办 **104 卷**（complete 90、blocked 14），较上批 105/91 各降 1。
+- 经验：第三批 10 卷零命中，进一步说明旧卷改分式几乎必然改分页；有效的回修路径是「改后若页数不变则沿用回执（如本卷），否则整卷重审」，而不是批量扫描。
+
 ### 2012 上海卷（理科）：phase7-b43 新卷转录、四版封账（2026-11-25；`closed`）
 - 对象：`gk-2012-shanghai-science`，**23 个题号**（填空 1—14、选择 15—18、解答 19—23）；固定来源 `src-e6eecaac79dd0e7b3070e4118d094883da10aaed9b2088ffcaf78e343a3cdeb6`，固定件 SHA-256 `3e355bd98c90c06bd9a2b62bca3d1e6c3e965caaae5b0fd13d3cee2392b4ace9`（508,230 bytes），2 页 A3 横向，印面页码 767、768。
 - 来源核对：文字层只作定位；题面、选项、第 10 题极坐标图、第 14 题四面体、第 19 题四棱锥与第 21 题抛物线均按 300—400 dpi 分栏渲染核对。原页未印分值、无答案页。
