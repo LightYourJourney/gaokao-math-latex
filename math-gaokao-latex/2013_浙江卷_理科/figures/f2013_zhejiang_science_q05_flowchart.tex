@@ -1,0 +1,50 @@
+% ============================================================
+% f2013_zhejiang_science_q05_flowchart.tex
+% 2013 浙江卷（理科）第 5 题 程序框图（TikZ 矢量重绘）
+% 逻辑：S=1,k=1 → 判断 k>a?
+%       是 → 输出 S → 结束；否 → S=S+1/(k(k+1)) → k=k+1 → 回到判断
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm, scale=0.80, transform shape,
+  every node/.style={font=\small, inner sep=1pt},
+  box/.style={draw, line width=0.6pt, minimum height=0.85cm, align=center},
+  arr/.style={-{Stealth[length=2.4mm,width=1.8mm]}, line width=0.6pt},
+]
+
+  % ---------- 主干箭头 ----------
+  \draw[arr] (0,10.65) -- (0,10.30);
+  \draw[arr] (0,9.50) -- (0,8.85);
+  \draw[arr] (0,7.15) -- (0,6.25);
+  \draw[arr] (0,5.05) -- (0,4.33);
+  \draw[arr] (0,2.20) -- (0,1.45);
+
+  % ---------- 「是」支：菱形右顶点 → 右 → 下 → 输出 S ----------
+  \draw[arr] (2.50,8.00) -- (4.70,8.00) -- (4.70,2.60) -- (1.72,2.60);
+
+  % ---------- 回代：k=k+1 左侧 → 左 → 上 → 汇入主干 ----------
+  \draw[arr] (-1.30,3.90) -- (-3.60,3.90) -- (-3.60,9.10) -- (0,9.10);
+
+  % ---------- 节点 ----------
+  \node[box, rounded corners=5pt, minimum width=2.20cm] at (0,11.00) {开始};
+  \node[box, minimum width=3.40cm] at (0,9.90) {$S=1$，$k=1$};
+
+  \draw[line width=0.6pt]
+    (0,8.85) -- (2.50,8.00) -- (0,7.15) -- (-2.50,8.00) -- cycle;
+  \node at (0,8.00) {$k>a$?};
+
+  \node[box, minimum width=5.40cm] at (0,5.65)
+    {$S=S+\dfrac1{k(k+1)}$};
+
+  \node[box, minimum width=2.60cm] at (0,3.90) {$k=k+1$};
+
+  \draw[line width=0.6pt]
+    (-1.70,3.00) -- (1.70,3.00) -- (1.70,2.20) -- (-1.70,2.20) -- cycle;
+  \node at (0,2.60) {输出 $S$};
+
+  \node[box, rounded corners=5pt, minimum width=2.00cm] at (0,1.10) {结束};
+
+  % ---------- 分支标注 ----------
+  \node at (2.95,8.26) {是};
+  \node at (0.46,6.72) {否};
+
+\end{tikzpicture}

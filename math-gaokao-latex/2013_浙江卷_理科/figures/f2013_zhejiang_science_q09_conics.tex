@@ -1,0 +1,46 @@
+% ============================================================
+% f2013_zhejiang_science_q09_conics.tex
+% 2013 浙江卷（理科）第 9 题 椭圆与双曲线的公共焦点（TikZ 矢量重绘）
+% 椭圆 C1: x^2/4 + y^2 = 1；双曲线 C2: x^2/2 - y^2 = 1；
+% 公共焦点 F1(-sqrt3,0)、F2(sqrt3,0)；
+% A(-2sqrt6/3, sqrt3/3) 在第二象限，B 为其关于原点的对称点（第四象限）；
+% 四边形 AF1BF2 为矩形。
+% ============================================================
+\begin{tikzpicture}[
+  x=1.20cm, y=1.20cm,
+  every node/.style={font=\footnotesize, inner sep=1pt},
+  s/.style={line width=0.6pt},
+  t/.style={line width=0.45pt},
+]
+
+  % ---------- 坐标轴 ----------
+  \draw[-{Stealth[length=2.0mm,width=1.6mm]}, line width=0.5pt]
+    (-2.62,0) -- (2.62,0) node[below right] {$x$};
+  \draw[-{Stealth[length=2.0mm,width=1.6mm]}, line width=0.5pt]
+    (0,-1.58) -- (0,1.62) node[above left] {$y$};
+
+  % ---------- 椭圆 C1 ----------
+  \draw[s] plot[domain=0:360, samples=240]
+    ({2*cos(\x)}, {sin(\x)});
+
+  % ---------- 双曲线 C2 两支 ----------
+  \draw[s] plot[domain=-1.20:1.20, samples=120]
+    ({1.4142136*cosh(\x)}, {sinh(\x)});
+  \draw[s] plot[domain=-1.20:1.20, samples=120]
+    ({-1.4142136*cosh(\x)}, {sinh(\x)});
+
+  % ---------- 矩形 AF1BF2 的四边 ----------
+  \coordinate (A) at (-1.63299,0.57735);
+  \coordinate (B) at (1.63299,-0.57735);
+  \coordinate (F1) at (-1.73205,0);
+  \coordinate (F2) at (1.73205,0);
+  \draw[t] (A) -- (F1) -- (B) -- (F2) -- cycle;
+
+  % ---------- 标签 ----------
+  \node at ($(A)+(0.32,0.30)$) {$A$};
+  \node at ($(B)+(0.16,-0.30)$) {$B$};
+  \node at ($(F1)+(0.30,-0.36)$) {$F_1$};
+  \node at ($(F2)+(0.06,0.28)$) {$F_2$};
+  \node at (-0.16,-0.20) {$O$};
+
+\end{tikzpicture}

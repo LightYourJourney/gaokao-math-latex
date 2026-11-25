@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 浙江卷（理科）：phase7-b72 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2013-zhejiang-science`，**22 个题号**（选择 1—10、填空 11—17、解答 18—22）；固定来源 `src-2f29d4f772bc1657881145a726d38af083116519d037eafe04fe12877820d6b8`，2 页 A3，印面 853、854。
+- 答案（等级 D）：1 B；2 C（$(-\infty,1]$）；3 D；4 B；5 A（$a=4$）；6 C（$-\frac34$）；7 D（$AC=BC$）；8 C；9 D（$\frac{\sqrt6}2$）；10 A；11 $-10$；12 $24$；13 $2$；14 $480$；15 $\pm1$；16 $\frac{\sqrt6}3$；17 $2$；18 (1) $d=4,a_n=4n+6$ 或 $d=-1,a_n=11-n$、(2) $n\le11$ 时 $\frac{n(21-n)}2$、$n\ge12$ 时 $\frac{n^2-21n+220}2$；19 (1) $\frac14,\frac13,\frac5{18},\frac19,\frac1{36}$、(2) $a:b:c=3:2:1$；20 (1) 证明、(2) $60^\circ$；21 (1) $\frac{x^2}4+y^2=1$、(2) $y=\pm\frac{\sqrt{10}}2x-1$；22 (1) $y=(3a-3)x+4-3a$、(2) $a\le0$ 时 $3-3a$，$0<a\le\frac34$ 时 $1+2(1-a)^{3/2}$，$a>\frac34$ 时 $3a-1$。
+- **来源核对**：子代理按 PDF 纠正任务提示——第 19 题 $E\eta=\frac53$、$D\eta=\frac59$（非 3 与 9/5）；第 10 题通用平面记 $\pi$；第 3 题为 $\lg$ 型四式。主代理复核确认。
+- **第 15 题存疑说明**：按原页 $y^2=4x$、$P(-1,0)$、$|FQ|=2$ 严格解得 $k=\pm1$，此时直线与抛物线相切（$A$ 与 $B$ 重合）；答案取 $\pm1$，解析中如实注明该退化情形，未虚构“两个相异交点”。
+- 主代理复核：第 5 题 $S=2-\frac1{m+1}=\frac95\Rightarrow m=4$；第 6 题 $3t^2-8t-3=0\Rightarrow\tan2\alpha=-\frac34$；第 9 题 $a_2^2=2$、$e=\frac{\sqrt6}2$；第 11 题 $k=3$、$A=-10$；第 12 题 $30-6=24$；第 13 题 $4k+4=12\Rightarrow k=2$；第 14 题 $40\times2!\times3!=480$；第 16 题 $\frac{\sqrt6}3$；第 17 题 $\frac{|x|}{|b|}\le2$；第 18 题 $d^2-3d-4=0$；第 19 题 $E\eta^2=\frac{10}3$、$D\eta=\frac59$ 反解 $a:b:c=3:2:1$；第 20 题 $\overrightarrow{PQ}$ 竖坐标为 0、$\angle BDC=60^\circ$；第 21 题 $P$ 为顶点 $b=1$、$2a=4$，面积最大 $l_1:y=\pm\frac{\sqrt{10}}2x-1$；第 22 题分段最值三支。
+- 图稿：5 张 TikZ（程序框图、椭圆与双曲线、三视图、四面体、椭圆与圆）。
+- 验收：四版 5/31/7/22 页（共 65 页），四 log 全 0（Overfull、missing characters 均 0）；review 65 页 **pass 475 + not_applicable 45、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库：manifest **663 卷 / 775 来源 / 509 批次**，complete 545、blocked 118，未绑定 **113**；revision 11883。
+
 ### 2013 北京卷（文科）：phase7-b71 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2013-beijing-arts`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-ea0639d7bd38df23ca79fbc8afe0b3901cd889e24db7c361dceaf10d861acfb5`，2 页 A3，印面 789、790。
 - 答案（等级 D）：1 B；2 D；3 C；4 A；5 B（$\frac59$）；6 C（$\frac{13}{21}$）；7 C（$m>1$）；8 B（4 个）；9 $p=2$、准线 $x=-1$；10 $3$；11 $q=2$、$S_n=2^{n+1}-2$；12 $\frac{2\sqrt5}5$；13 $(-\infty,2)$；14 $3$；15 (1) $T=\frac\pi2$、最大值 $\frac{\sqrt2}2$、(2) $\frac{9\pi}{16}$；16 (1) $\frac6{13}$、(2) $\frac4{13}$、(3) 从 5 日开始；17 三问证明；18 (1) $a=0,b=1$、(2) $b>1$；19 (1) $2\sqrt3$、(2) 证明；20 (1) $d_1=2,d_2=3,d_3=6$、(2)(3) 证明。

@@ -1,0 +1,51 @@
+% ============================================================
+% f2013_zhejiang_science_q20_tetrahedron.tex
+% 2013 浙江卷（理科）第 20 题 四面体 A-BCD（TikZ 矢量重绘）
+% 题设：AD⊥平面 BCD，BC⊥CD，AD=2，BD=2√2；
+%       M 为 AD 中点，P 为 BM 中点，Q 在 AC 上且 AQ=3QC。
+% 实线：可见棱 AB、AC、AD、BC、CD 及辅助线 CM；
+% 虚线：被遮挡的 BD、BM（过 P）、PQ。
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  every node/.style={font=\small, inner sep=1pt},
+  s/.style={line width=0.6pt},
+  d/.style={line width=0.6pt, dash pattern=on 3.0pt off 2.4pt},
+]
+
+  \coordinate (A) at (5.70,6.20);
+  \coordinate (B) at (0.20,1.60);
+  \coordinate (C) at (3.50,0.15);
+  \coordinate (D) at (5.90,1.90);
+
+  % ---------- 实线 ----------
+  \draw[s] (A) -- (B);          % AB
+  \draw[s] (A) -- (C);          % AC（过 Q）
+  \draw[s] (A) -- (D);          % AD（过 M）
+  \draw[s] (B) -- (C);          % BC
+  \draw[s] (C) -- (D);          % CD
+
+  % ---------- 辅助线与虚线 ----------
+  \draw[s] (C) -- ($(A)!0.5!(D)$);  % CM（面 ACD 内的辅助线）
+  \draw[d] (B) -- (D);              % BD（被遮挡）
+  \draw[d] (B) -- ($(A)!0.5!(D)$);  % BM（过 P）
+
+  % ---------- 点 ----------
+  \coordinate (M) at ($(A)!0.5!(D)$);
+  \coordinate (P) at ($(B)!0.5!(M)$);
+  \coordinate (Q) at ($(A)!0.75!(C)$);
+  \fill (M) circle [radius=0.035];
+  \fill (P) circle [radius=0.035];
+  \fill (Q) circle [radius=0.035];
+  \draw[d] (P) -- (Q);              % PQ（体内线段）
+
+  % ---------- 标签 ----------
+  \node[above] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[right] at (M) {$M$};
+  \node[above left] at (P) {$P$};
+  \node at ($(Q)+(0.26,-0.30)$) {$Q$};
+
+\end{tikzpicture}

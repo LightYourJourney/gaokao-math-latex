@@ -4220,6 +4220,14 @@
         "gk-2013-beijing-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b72",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-zhejiang-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4229,7 +4237,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e44c927d-a5c0-4e66-a4d2-b7927441897d",
+  "last_transaction_id": "5af0036e-3f63-4ee1-ac7f-00d0ec344e7d",
   "papers": [
     {
       "blocked_from": null,
@@ -49065,9 +49073,82 @@
       "title": "2013 年·北京卷·文科",
       "track": "arts",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_浙江卷_理科/figures/f2013_zhejiang_science_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_浙江卷_理科/figures/f2013_zhejiang_science_q09_conics.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_浙江卷_理科/figures/f2013_zhejiang_science_q12_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_浙江卷_理科/figures/f2013_zhejiang_science_q20_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_浙江卷_理科/figures/f2013_zhejiang_science_q21_ellipse_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_zhejiang_science",
+        "id": "gk-2013-zhejiang-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 853、854（第 853 面为选择 1—10、填空 11—17、解答 18—19；第 854 面为解答 20—22）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。浙江卷题号：选择 1—10、填空 11—17、解答 18—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 5 题程序框图、第 9 题椭圆与双曲线、第 12 题三视图、第 20 题四面体、第 21 题椭圆与圆，均以 TikZ 重绘共 5 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "浙江卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "浙江理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-zhejiang-science",
+      "production_state": "complete",
+      "project_dir": "2013_浙江卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_浙江理_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_浙江理_含解析.md",
+        "questions": "2013/2013_数学真题_浙江理_试题.md",
+        "solution_body": "2013/2013_数学真题_浙江理_解析正文.md"
+      },
+      "source_ids": [
+        "src-2f29d4f772bc1657881145a726d38af083116519d037eafe04fe12877820d6b8"
+      ],
+      "title": "2013 年·浙江卷·理科",
+      "track": "science",
+      "year": 2013
     }
   ],
-  "revision": 11869,
+  "revision": 11883,
   "schema_version": 1,
   "sources": [
     {
@@ -62888,8 +62969,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e82d3a0012ca2f3506a32fe0207d867eda3f1d45",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-zhejiang-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013浙江理.pdf",
       "regions": [],
       "source_id": "src-2f29d4f772bc1657881145a726d38af083116519d037eafe04fe12877820d6b8",

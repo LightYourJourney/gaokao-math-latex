@@ -1,0 +1,53 @@
+% ============================================================
+% f2013_zhejiang_science_q21_ellipse_circle.tex
+% 2013 浙江卷（理科）第 21 题 椭圆与圆（TikZ 矢量重绘）
+% 圆 C2: x^2+y^2=4；椭圆 C1: x^2/4+y^2=1；P(0,-1) 为 C1 的下顶点。
+% l1: y=(sqrt10/2)x-1，交圆于 B(1.4819,1.3431)、A(-0.5784,-1.9145)；
+% l2 过 P 且与 l1 垂直，交椭圆于另一点 D(-1.9460,0.2308)。
+% 图中画出三角形 ABD 的三边与两条直线 l1、l2。
+% ============================================================
+\begin{tikzpicture}[
+  x=1.25cm, y=1.25cm,
+  every node/.style={font=\footnotesize, inner sep=1pt},
+  s/.style={line width=0.6pt},
+  t/.style={line width=0.45pt},
+]
+
+  % ---------- 坐标轴 ----------
+  \draw[-{Stealth[length=2.0mm,width=1.6mm]}, line width=0.5pt]
+    (-2.62,0) -- (2.72,0) node[below right] {$x$};
+  \draw[-{Stealth[length=2.0mm,width=1.6mm]}, line width=0.5pt]
+    (0,-2.28) -- (0,2.42) node[above left] {$y$};
+
+  % ---------- 圆 C2 与椭圆 C1 ----------
+  \draw[s] (0,0) circle [radius=2];
+  \draw[s] plot[domain=0:360, samples=240]
+    ({2*cos(\x)}, {sin(\x)});
+
+  % ---------- 关键点 ----------
+  \coordinate (P)  at (0,-1);
+  \coordinate (A)  at (-0.57840,-1.91454);
+  \coordinate (B)  at (1.48191,1.34310);
+  \coordinate (D)  at (-1.94599,0.23077);
+
+  % ---------- 直线 l1（过 P，斜率 √10/2）与 l2（过 P，与之垂直） ----------
+  \coordinate (E1) at ($(B)!-0.22!(A)$);
+  \coordinate (E2) at ($(P)!-0.80!(D)$);
+  \draw[t] ($(A)!-0.10!(B)$) -- (E1);
+  \draw[t] ($(D)!-0.24!(P)$) -- (E2);
+
+  % ---------- 三角形 ABD ----------
+  \draw[t] (A) -- (B);
+  \draw[t] (D) -- (A);
+  \draw[t] (D) -- (B);
+
+  % ---------- 标签 ----------
+  \node at ($(A)+(-0.18,-0.30)$) {$A$};
+  \node at ($(B)+(0.22,0.06)$) {$B$};
+  \node at ($(D)+(-0.16,0.20)$) {$D$};
+  \node at (-0.16,-0.22) {$O$};
+  \node at (0.06,-1.42) {$P$};
+  \node[above right] at (E1) {$l_1$};
+  \node[below right] at (E2) {$l_2$};
+
+\end{tikzpicture}
