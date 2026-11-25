@@ -4228,6 +4228,14 @@
         "gk-2013-zhejiang-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b73",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-shaanxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4237,7 +4245,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5af0036e-3f63-4ee1-ac7f-00d0ec344e7d",
+  "last_transaction_id": "36d2c4c4-3136-414e-98a2-ca6a8d83988f",
   "papers": [
     {
       "blocked_from": null,
@@ -49146,9 +49154,82 @@
       "title": "2013 年·浙江卷·理科",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_文科/figures/f2013_shaanxi_arts_q05_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_文科/figures/f2013_shaanxi_arts_q12_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_文科/figures/f2013_shaanxi_arts_q14_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_文科/figures/f2013_shaanxi_arts_q16_geometry.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_文科/figures/f2013_shaanxi_arts_q20_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_shaanxi_arts",
+        "id": "gk-2013-shaanxi-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 839、840（第 839 面为选择 1—10、填空 11—17、解答 18—19；第 840 面为解答 20—23）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。陕西卷题号：选择 1—10、填空 11—17（15、16、17 为选做，按原卷分别编号并全部收录）、解答 18—23，共 23 题。答案由本库独立推导（等级 D，非官方）。原页图：第 5 题频率分布直方图、第 12 题三视图、第 14 题内接矩形、第 16 题圆与平行线、第 17 题参数方程、第 20 题四棱柱，均以 TikZ 重绘共 5 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            23
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "陕西文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-shaanxi-arts",
+      "production_state": "complete",
+      "project_dir": "2013_陕西卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_陕西文_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_陕西文_含解析.md",
+        "questions": "2013/2013_数学真题_陕西文_试题.md",
+        "solution_body": "2013/2013_数学真题_陕西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-0280f6cd9b2a917b13f5dfe624b31889979c27d5d40886e9de5a0213423c7557"
+      ],
+      "title": "2013 年·陕西卷·文科",
+      "track": "arts",
+      "year": 2013
     }
   ],
-  "revision": 11883,
+  "revision": 11891,
   "schema_version": 1,
   "sources": [
     {
@@ -63233,8 +63314,8 @@
       "exam_type": "regular",
       "git_blob_oid": "33170c7d0bf811fe2e0058d3b3c4ebc551213b63",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-shaanxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013陕西文.pdf",
       "regions": [],
       "source_id": "src-0280f6cd9b2a917b13f5dfe624b31889979c27d5d40886e9de5a0213423c7557",
