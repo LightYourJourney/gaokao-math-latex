@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 安徽卷（文科）：phase7-b61 转录（子代理起草、主代理复核）与四版封账（2026-11-26；`closed`）
+- 对象：`gk-2013-anhui-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-ec2d54f46a831ccde5038c60bd7954e5bb39df5d051fe5fdc2d909be8a138420`，2 页 A3，印面 785、786。
+- 答案（等级 D）：1 D；2 A；3 C（$\frac{11}{12}$）；4 B；5 D；6 C（弦长 $4$）；7 A（$-6$）；8 B（$\{2,3,4\}$）；9 B（$\frac{2\pi}3$）；10 A（$3$ 个）；11 $(0,1]$；12 $\frac73$；13 $-\frac13$；14 $-\frac{x(x+1)}2$；15 ①②③⑤；16 (1) 最小值 $-\sqrt3$、$x\in\{2k\pi-\frac{2\pi}3\}$、(2) 左移 $\frac\pi6$ 后纵坐标伸长为 $\sqrt3$ 倍；17 (1) $600$ 人、及格率 $\frac56$、(2) $\overline{x}_1-\overline{x}_2=0.5$；18 (1) 证明、(2) $\frac{\sqrt2}6$；19 (1) $a_n=n+1$、(2) $S_n=n^2+3n+1-2^{-n}$；20 (1) $\frac{a}{1+a^2}$、(2) $\frac{1-k}{k^2-2k+2}$；21 (1) $\frac{x^2}8+\frac{y^2}4=1$、(2) 一定有唯一公共点，$QG$ 即 $Q$ 处切线。
+- 主代理复核：第 15 题按原卷 600 dpi 逐条坐标计算——$0<CQ<\frac12$ 为四边形、$CQ=\frac12$ 为等腰梯形、$CQ=\frac34$ 时 $C_1R=\frac13$、$\frac34<CQ<1$ 实为五边形（④错）、$CQ=1$ 面积 $\frac{\sqrt6}2$，故 ①②③⑤；第 17 题茎叶图 30+30 个数据逐位核对，甲 $\sum=2084$、乙 $\sum=2069$，均值差 $\frac{15}{30}=0.5$，及格 25 人；第 19 题按原页为 $b_n=2\left(a_n+\frac1{2^{a_n}}\right)$、只求 $S_n$（原卷无“证明 $S_n<1$”，子代理未编造）；第 20 题端点对称性 $f(a)=f(1/a)$ 据此取 $a=1-k$；第 21 题 $a^2=8,b^2=4$、$k_{QG}=k_Q$ 证切线。
+- 排版修复两处：①第 18 题四棱锥补 $EB$（实线）与 $EC$（虚线）、删去原页没有的 $AD$ 与 $ED$，与原卷一致；②第 15 题 ①—⑤ 五条命题原为图后首段无缩进、其后四段有缩进，改为五段统一 `\noindent`，四版均按新源重建（重跑 generate/short/provenance/editions/build）。
+- 图稿：5 张 TikZ（程序框图、函数图象、正方体、甲乙茎叶图、四棱锥）。
+- 验收：四版 5/25/7/19 页（共 56 页），四 log 全 0（Overfull、missing characters 均 0）；review 56 页 **pass 410 + not_applicable 38、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库：manifest **652 卷 / 775 来源 / 498 批次**，complete 534、blocked 118，未绑定 **124**；revision 11772。
+
 ### 2013 天津卷（文科）：phase7-b60 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
 - 对象：`gk-2013-tianjin-arts`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-07dd15be0865968da0a4208f3fe6a6060c27d81ba2c595c507c82dc27d66e94e`，2 页 A3，印面 851、852（第 1—17 题在 851 面，18—20 题在 852 面）。
 - 答案（等级 D）：1 D；2 A（$-7$）；3 D（$n=4$）；4 A；5 C（$a=2$）；6 B（$-\frac{\sqrt2}2$）；7 C（$\left[\frac12,2\right]$）；8 A；9 $5-5\mathrm i$；10 $\sqrt3$；11 $x^2-\frac{y^2}3=1$；12 $\frac12$；13 $\frac{15}2$；14 $\frac34$（$a=-2,b=4$）；15 (1) $\frac35$、(2) ① 15 种、② $\frac25$；16 $b=\sqrt6$、$\sin\left(2B-\frac\pi3\right)=\frac{4\sqrt5+\sqrt3}{18}$；17 ①②证明、③ $\frac{\sqrt5}5$；18 (1) $\frac{x^2}3+\frac{y^2}2=1$、(2) $k=\pm\sqrt2$；19 (1) $a_n=\frac32\left(-\frac12\right)^{n-1}$、(2) 证明；20 ①②证明。

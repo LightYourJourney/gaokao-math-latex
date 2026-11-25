@@ -1,0 +1,849 @@
+% answers.tex —— 2013 年·安徽卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2013/2013_数学真题_安徽文_试题.md + 2013/2013_数学真题_安徽文_解析正文.md + 2013/2013_数学真题_安徽文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+设 $\mathrm i$ 是虚数单位，若复数 $a-\dfrac{10}{3-\mathrm i}$（$a\in\mathbf R$）是纯虚数，则 $a$ 的值为\mbox{（　　）}
+
+（A）$-3$；（B）$-1$；（C）$1$；（D）$3$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+先化简分式：
+\nopagebreak[4]
+\[\frac{10}{3-\mathrm i}=\frac{10(3+\mathrm i)}{(3-\mathrm i)(3+\mathrm i)}=\frac{10(3+\mathrm i)}{10}=3+\mathrm i.\]
+\Needspace{5\baselineskip}
+于是 $a-\dfrac{10}{3-\mathrm i}=a-3-\mathrm i$。它为纯虚数，当且仅当实部为零、虚部不为零，即
+\nopagebreak[4]
+\[a-3=0\Longrightarrow a=3.\]
+（此时虚部为 $-1\neq0$，符合要求。）选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+已知 $A=\{x\mid x+1>0\}$，$B=\{-2,-1,0,1\}$，则 $\complement_{\mathbf R}A\cap B=$\mbox{（　　）}
+
+（A）$\{-2,-1\}$；（B）$\{-2\}$；（C）$\{-1,0,1\}$；（D）$\{0,1\}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由 $x+1>0$ 得 $A=(-1,+\infty)$，故
+\nopagebreak[4]
+\[\complement_{\mathbf R}A=(-\infty,-1].\]
+\Needspace{5\baselineskip}
+在 $B=\{-2,-1,0,1\}$ 中取值不超过 $-1$ 的只有 $-2$ 和 $-1$，所以
+\nopagebreak[4]
+\[\complement_{\mathbf R}A\cap B=\{-2,-1\}.\]
+选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+如图所示，程序框图（算法流程图）的输出结果是\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_anhui_arts_q03_flowchart}\end{center}
+\nopagebreak[4]
+（A）$\dfrac34$；（B）$\dfrac16$；（C）$\dfrac{11}{12}$；（D）$\dfrac{25}{24}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+框图先赋初值 $s=0$，$n=2$，随后判断 $n<8$：成立则执行 $s=s+\dfrac1n$、$n=n+2$ 并返回判断；不成立则输出 $s$。逐轮计算：
+\nopagebreak[4]
+\[\begin{aligned}
+n=2:\quad &2<8\ \text{\text{成立}},\quad s=0+\tfrac12=\tfrac12,\quad n=4;\\
+n=4:\quad &4<8\ \text{\text{成立}},\quad s=\tfrac12+\tfrac14=\tfrac34,\quad n=6;\\
+n=6:\quad &6<8\ \text{\text{成立}},\quad s=\tfrac34+\tfrac16=\tfrac{11}{12},\quad n=8;\\
+n=8:\quad &8<8\ \text{\text{不成立}},\quad \text{\text{输出}}\ s=\tfrac{11}{12}.
+\end{aligned}\]
+故输出 $s=\dfrac{11}{12}$。选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+“$(2x-1)x=0$”是“$x=0$”的\mbox{（　　）}
+
+（A）充分不必要条件；（B）必要不充分条件；（C）充分必要条件；（D）既不充分也不必要条件。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+方程 $(2x-1)x=0$ 等价于 $x=\dfrac12$ 或 $x=0$。
+若 $x=0$，则方程成立，故“$x=0$”推出“$(2x-1)x=0$”，是必要条件；
+但取 $x=\dfrac12$，方程成立而 $x\neq0$，故“$(2x-1)x=0$”推不出“$x=0$”，不是充分条件。
+因此“$(2x-1)x=0$”是“$x=0$”的必要不充分条件。选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+若某公司从五位大学毕业生甲、乙、丙、丁、戊中录用三人，这五人被录用的机会均等，则甲或乙被录用的概率为\mbox{（　　）}
+
+（A）$\dfrac23$；（B）$\dfrac25$；（C）$\dfrac35$；（D）$\dfrac9{10}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+从五人中录用三人共有 $\mathrm C_5^3=10$ 种等可能结果。“甲或乙被录用”的对立事件是“甲、乙都未被录用”，即录用的三人全在丙、丁、戊中，只有 $\mathrm C_3^3=1$ 种结果。故所求概率
+\nopagebreak[4]
+\[P=1-\frac{\mathrm C_3^3}{\mathrm C_5^3}=1-\frac1{10}=\frac9{10}.\]
+选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+直线 $x+2y-5+\sqrt5=0$ 被圆 $x^2+y^2-2x-4y=0$ 截得的弦长为\mbox{（　　）}
+
+（A）$1$；（B）$2$；（C）$4$；（D）$4\sqrt6$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+圆 $x^2+y^2-2x-4y=0$ 配方得
+\nopagebreak[4]
+\[(x-1)^2+(y-2)^2=5,\]
+\Needspace{5\baselineskip}
+圆心为 $(1,2)$，半径 $r=\sqrt5$。圆心到直线 $x+2y-5+\sqrt5=0$ 的距离
+\nopagebreak[4]
+\[d=\frac{|1+2\times2-5+\sqrt5|}{\sqrt{1^2+2^2}}=\frac{\sqrt5}{\sqrt5}=1.\]
+\Needspace{5\baselineskip}
+故弦长
+\nopagebreak[4]
+\[2\sqrt{r^2-d^2}=2\sqrt{5-1}=4.\]
+选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+设 $S_n$ 为等差数列 $\{a_n\}$ 的前 $n$ 项和，$S_8=4a_3$，$a_7=-2$，则 $a_9=$\mbox{（　　）}
+
+（A）$-6$；（B）$-4$；（C）$-2$；（D）$2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设公差为 $d$。由 $S_8=4a_3$ 得
+\nopagebreak[4]
+\[8a_1+\frac{8\times7}2d=4(a_1+2d)\Longrightarrow 8a_1+28d=4a_1+8d,\]
+\Needspace{5\baselineskip}
+即 $4a_1+20d=0$，故 $a_1=-5d$。又
+\nopagebreak[4]
+\[a_7=a_1+6d=d=-2,\]
+\Needspace{5\baselineskip}
+所以 $d=-2$，$a_1=10$。于是
+\nopagebreak[4]
+\[a_9=a_1+8d=10-16=-6.\]
+选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+函数 $y=f(x)$ 的图象如图所示，在区间 $[a,b]$ 上可找到 $n$（$n\geqslant2$）个不同的数 $x_1$，$x_2$，$\cdots$，$x_n$，使得 $\dfrac{f(x_1)}{x_1}=\dfrac{f(x_2)}{x_2}=\cdots=\dfrac{f(x_n)}{x_n}$，则 $n$ 的取值范围为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_anhui_arts_q08_graph}\end{center}
+\nopagebreak[4]
+（A）$\{2,3\}$；（B）$\{2,3,4\}$；（C）$\{3,4\}$；（D）$\{3,4,5\}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+在 $[a,b]$ 上 $x>0$，故条件等价于：过原点、斜率为 $k$ 的直线 $y=kx$ 与曲线 $y=f(x)$ 在 $[a,b]$ 上有 $n$ 个不同的交点，其中
+\nopagebreak[4]
+\[k=\frac{f(x_1)}{x_1}=\cdots=\frac{f(x_n)}{x_n}.\]
+\Needspace{5\baselineskip}
+记 $g(x)=\dfrac{f(x)}x$（$x\in[a,b]$），则 $g$ 连续，且由 $f(a)=f(b)=0$、$f(x)>0$（$a<x<b$）知
+\nopagebreak[4]
+\[g(a)=g(b)=0,\qquad g(x)>0\ (a<x<b).\]
+条件即方程 $g(x)=k$ 在 $[a,b]$ 上的不同实根个数为 $n$。由图象，曲线自 $a$ 陡升，经一个极大值、一个极小值、再经一个较低的极大值后降到 $b$，共有四段单调弧。过原点与曲线相切的直线至多三条，故 $g$ 至多有三个极值点（两个极大、一个极小），水平直线 $y=k$ 与 $y=g(x)$ 的图象至多有 $4$ 个交点，即 $n\leqslant4$。
+
+再看各值能否取到。设 $g$ 的两个极大值为 $A$，$C$（$A$ 在左、$C$ 在右），极小值为 $B$，则 $B<A$，$B<C$。水平直线 $y=k$（$k>0$）与 $y=g(x)$ 的图象交点个数为：
+
+\begin{itemize}
+\item $0<k<B$：每侧各一个，共 $2$ 个；
+\item $k=B$ 或 $k=C$：一处相切，另有两侧各一个，共 $3$ 个；
+\item $B<k<\min\{A,C\}$：四段弧上各有一个，共 $4$ 个。
+\end{itemize}
+
+又 $k=0$ 时方程即 $f(x)=0$，只有 $x=a$，$x=b$ 两个解；而 $k<0$ 无解（$f(x)>0$ 于 $(a,b)$）。故 $n$ 可取 $2$，$3$，$4$，即 $n$ 的取值范围为 $\{2,3,4\}$。选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+设 $\triangle ABC$ 的内角 $A$，$B$，$C$ 所对边的长分别为 $a$，$b$，$c$，若 $b+c=2a$，$3\sin A=5\sin B$，则角 $C=$\mbox{（　　）}
+
+（A）$\dfrac\pi3$；（B）$\dfrac{2\pi}3$；（C）$\dfrac{3\pi}4$；（D）$\dfrac{5\pi}6$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由正弦定理，$3\sin A=5\sin B$ 化为 $3a=5b$，故 $b=\dfrac35a$。再由 $b+c=2a$ 得
+\nopagebreak[4]
+\[c=2a-\frac35a=\frac75a.\]
+\Needspace{5\baselineskip}
+由余弦定理
+\nopagebreak[4]
+\[\cos C=\frac{a^2+b^2-c^2}{2ab}
+=\frac{a^2+\frac9{25}a^2-\frac{49}{25}a^2}{2\cdot a\cdot\frac35a}
+=\frac{-\frac{15}{25}}{\frac65}=-\frac12.\]
+又 $0<C<\pi$，故 $C=\dfrac{2\pi}3$。选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=x^3+ax^2+bx+c$ 有两个极值点 $x_1$，$x_2$，若 $f(x_1)=x_1<x_2$，则关于 $x$ 的方程 $3(f(x))^2+2af(x)+b=0$ 的不同实根个数为\mbox{（　　）}
+
+（A）$3$；（B）$4$；（C）$5$；（D）$6$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+求导得
+\nopagebreak[4]
+\[f'(x)=3x^2+2ax+b=3(x-x_1)(x-x_2),\qquad x_1<x_2.\]
+\Needspace{5\baselineskip}
+于是 $3t^2+2at+b=0$ 的两根正是 $x_1$，$x_2$。令 $t=f(x)$，原方程化为
+\nopagebreak[4]
+\[f(x)=x_1\quad\text{\text{或}}\quad f(x)=x_2.\]
+\Needspace{5\baselineskip}
+又 $f'$ 在 $(-\infty,x_1)$ 上为正、在 $(x_1,x_2)$ 上为负、在 $(x_2,+\infty)$ 上为正，故 $x_1$ 是极大值点，$x_2$ 是极小值点，从而
+\nopagebreak[4]
+\[f(x_1)>f(x_2).\]
+结合 $f(x_1)=x_1<x_2$ 得 $f(x_2)<x_1<x_2$。
+
+\Needspace{5\baselineskip}
+先解 $f(x)=x_1$。因 $f(x_1)=x_1$ 且 $f'(x_1)=0$，$x_1$ 是 $f(x)-x_1$ 的二重根，可设
+\nopagebreak[4]
+\[f(x)-x_1=(x-x_1)^2(x-r).\]
+若 $r=x_1$，则 $f'(x)=3(x-x_1)^2$ 只有一个零点，与 $x_1\neq x_2$ 矛盾，故 $r\neq x_1$。于是 $f(x)=x_1$ 有 $2$ 个不同实根 $x_1$，$r$。
+
+\Needspace{5\baselineskip}
+再解 $f(x)=x_2$。记 $g(x)=f(x)-x_2$，则
+\nopagebreak[4]
+\[g(x_1)=x_1-x_2<0,\qquad g(x_2)=f(x_2)-x_2<0.\]
+在 $(-\infty,x_1)$ 上 $g$ 单调递增且 $g(x_1)<0$，无零点；在 $(x_1,x_2)$ 上 $g$ 单调递减且两端均为负，无零点；在 $(x_2,+\infty)$ 上 $g$ 单调递增，从负值增至 $+\infty$，恰有一个零点。
+故 $f(x)=x_2$ 有 $1$ 个实根。
+
+\Needspace{5\baselineskip}
+两类根互不相同（$f(x)=x_1$ 的根满足 $f$ 值等于 $x_1$，而 $f(x)=x_2$ 的根满足 $f$ 值等于 $x_2\neq x_1$），所以原方程共有
+\nopagebreak[4]
+\[2+1=3\]
+个不同实根。选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+函数 $y=\ln\left(1+\dfrac1x\right)+\sqrt{1-x^2}$ 的定义域为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+需同时满足
+\nopagebreak[4]
+\[\begin{cases}1+\dfrac1x>0,\\[2pt] 1-x^2\geqslant0.\end{cases}\]
+\Needspace{5\baselineskip}
+第一式即 $\dfrac{x+1}x>0$，解得 $x<-1$ 或 $x>0$；第二式解得 $-1\leqslant x\leqslant1$。取交集：
+\nopagebreak[4]
+\[x\in(0,1].\]
+故定义域为 $(0,1]$。
+
+\gkanswer{答案：$(0,1]$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+若非负变量 $x$，$y$ 满足约束条件 $\begin{cases}x-y\geqslant-1,\\ x+2y\leqslant4,\end{cases}$ 则 $x+y$ 的最大值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+可行域由 $x\geqslant0$，$y\geqslant0$，$x-y\geqslant-1$，$x+2y\leqslant4$ 围成。边界两两求交：
+\nopagebreak[4]
+\[(0,0),\qquad (0,2)\quad(x=0\ \text{\text{与}}\ x+2y=4),\]
+\nopagebreak[4]
+\[\left(\frac23,\frac53\right)\quad(x-y=-1\ \text{\text{与}}\ x+2y=4).\]
+\Needspace{5\baselineskip}
+三点均满足全部约束，故可行域是以它们为顶点的三角形（含边界）。$z=x+y$ 为线性函数，最值在顶点取得：
+\nopagebreak[4]
+\[z(0,0)=0,\qquad z(0,2)=2,\qquad z\left(\frac23,\frac53\right)=\frac73.\]
+故 $x+y$ 的最大值为 $\dfrac73$。
+
+\gkanswer{答案：$\dfrac73$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+若非零向量 $\boldsymbol a$，$\boldsymbol b$ 满足 $|\boldsymbol a|=3|\boldsymbol b|=|\boldsymbol a+2\boldsymbol b|$，则 $\boldsymbol a$ 与 $\boldsymbol b$ 夹角的余弦值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设 $|\boldsymbol b|=t$，则 $|\boldsymbol a|=3t$。由 $|\boldsymbol a+2\boldsymbol b|=|\boldsymbol a|$ 两边平方：
+\nopagebreak[4]
+\[|\boldsymbol a|^2+4\boldsymbol a\cdot\boldsymbol b+4|\boldsymbol b|^2=|\boldsymbol a|^2,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[4\boldsymbol a\cdot\boldsymbol b+4t^2=0\Longrightarrow \boldsymbol a\cdot\boldsymbol b=-t^2.\]
+\Needspace{5\baselineskip}
+设夹角为 $\theta$，则
+\nopagebreak[4]
+\[\cos\theta=\frac{\boldsymbol a\cdot\boldsymbol b}{|\boldsymbol a||\boldsymbol b|}
+=\frac{-t^2}{3t\cdot t}=-\frac13.\]
+故夹角的余弦值为 $-\dfrac13$。
+
+\gkanswer{答案：$-\dfrac13$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+定义在 $\mathbf R$ 上的函数 $f(x)$ 满足 $f(x+1)=2f(x)$。若当 $0\leqslant x\leqslant1$ 时，$f(x)=x(1-x)$，则当 $-1\leqslant x\leqslant0$ 时，$f(x)=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+当 $-1\leqslant x\leqslant0$ 时，$0\leqslant x+1\leqslant1$，故
+\nopagebreak[4]
+\[f(x+1)=(x+1)\bigl(1-(x+1)\bigr)=(x+1)(-x)=-x(x+1).\]
+\Needspace{5\baselineskip}
+由 $f(x+1)=2f(x)$ 得
+\nopagebreak[4]
+\[f(x)=\frac12f(x+1)=-\frac{x(x+1)}2.\]
+故 $f(x)=-\dfrac{x(x+1)}2$。
+
+\gkanswer{答案：$-\dfrac{x(x+1)}2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+如图，正方体 $ABCD\text{-}A_1B_1C_1D_1$ 的棱长为 $1$，$P$ 为 $BC$ 中点，$Q$ 为线段 $CC_1$ 上的动点，过 $A$、$P$、$Q$ 的平面截该正方体所得的截面记为 $S$，则下列命题正确的是\gkblank{}。（写出所有正确命题的编号）
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_anhui_arts_q15_cube}\end{center}
+\nopagebreak[4]
+\noindent ① 当 $0<CQ<\dfrac12$ 时，$S$ 为四边形；
+
+\noindent ② 当 $CQ=\dfrac12$ 时，$S$ 为等腰梯形；
+
+\noindent ③ 当 $CQ=\dfrac34$ 时，$S$ 与 $C_1D_1$ 交点 $R$ 满足 $C_1R=\dfrac13$；
+
+\noindent ④ 当 $\dfrac34<CQ<1$ 时，$S$ 为六边形；
+
+\noindent ⑤ 当 $CQ=1$ 时，$S$ 的面积为 $\dfrac{\sqrt6}2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+建立空间直角坐标系：
+\nopagebreak[4]
+\[A(0,0,0),\ B(1,0,0),\ C(1,1,0),\ D(0,1,0),\]
+\nopagebreak[4]
+\[A_1(0,0,1),\ B_1(1,0,1),\ C_1(1,1,1),\ D_1(0,1,1).\]
+\Needspace{5\baselineskip}
+则 $P\left(1,\dfrac12,0\right)$。设 $CQ=t$（$0<t\leqslant1$），则
+\nopagebreak[4]
+\[Q(1,1,t).\]
+\Needspace{5\baselineskip}
+先求截面所在平面。由
+\nopagebreak[4]
+\[\overrightarrow{AP}=\left(1,\frac12,0\right),\qquad \overrightarrow{AQ}=(1,1,t),\]
+\Needspace{5\baselineskip}
+得法向量
+\nopagebreak[4]
+\[\boldsymbol n=\overrightarrow{AP}\times\overrightarrow{AQ}
+=\left(\frac t2,\,-t,\,\frac12\right),\]
+\Needspace{5\baselineskip}
+与 $(t,-2t,1)$ 平行，故平面 $APQ$ 的方程为
+\nopagebreak[4]
+\[z=t(2y-x).\]
+\Needspace{5\baselineskip}
+截面 $S$ 由 $0\leqslant x\leqslant1$，$0\leqslant y\leqslant1$ 及
+\nopagebreak[4]
+\[0\leqslant 2y-x\leqslant\frac1t\]
+确定（后一式即 $0\leqslant z\leqslant1$），再按 $z=t(2y-x)$ 回到空间。
+
+分情形确定 $S$ 的顶点。
+
+\Needspace{5\baselineskip}
+当 $0<t<\dfrac12$ 时，$\dfrac1t>2$，而正方形内 $2y-x\leqslant2$，故上界不起作用，底面投影为
+\nopagebreak[4]
+\[(0,0),\ \left(1,\tfrac12\right),\ (1,1),\ (0,1),\]
+\Needspace{5\baselineskip}
+对应
+\nopagebreak[4]
+\[A,\ P,\ Q,\ E\left(0,1,2t\right),\]
+其中 $E$ 在棱 $DD_1$ 上（$2t<1$）。此时 $S$ 为四边形。
+
+\Needspace{5\baselineskip}
+当 $t=\dfrac12$ 时，上式为 $E\left(0,1,1\right)=D_1$，故
+\nopagebreak[4]
+\[S:\ A,\ P,\ Q,\ D_1.\]
+\Needspace{5\baselineskip}
+其中
+\nopagebreak[4]
+\[\overrightarrow{PQ}=\left(0,\tfrac12,\tfrac12\right),\quad
+\overrightarrow{AD_1}=(0,1,1),\]
+\Needspace{5\baselineskip}
+二者平行；且
+\nopagebreak[4]
+\[|AP|=\sqrt{1+\tfrac14}=\frac{\sqrt5}2,\qquad
+|QD_1|=\sqrt{1+0+\tfrac14}=\frac{\sqrt5}2,\]
+两腰相等，故 $S$ 为等腰梯形。
+
+\Needspace{5\baselineskip}
+当 $\dfrac12<t<1$ 时，直线 $2y-x=\dfrac1t$ 与上边 $y=1$ 交于 $x=2-\dfrac1t\in(0,1)$，与左边 $x=0$ 交于 $y=\dfrac1{2t}\in\left(\dfrac12,1\right)$。底面投影的顶点为
+\nopagebreak[4]
+\[(0,0),\quad \left(1,\tfrac12\right),\quad (1,1),\]
+\nopagebreak[4]
+\[\left(2-\tfrac1t,1\right),\quad \left(0,\tfrac1{2t}\right),\]
+\Needspace{5\baselineskip}
+对应
+\nopagebreak[4]
+\[A,\quad P,\quad Q,\quad R\left(2-\tfrac1t,1,1\right),\quad T\left(0,\tfrac1{2t},1\right),\]
+其中 $R$ 在 $C_1D_1$ 上，$T$ 在 $A_1D_1$ 上。此时 $S$ 为五边形。
+
+\Needspace{5\baselineskip}
+当 $t=\dfrac34$ 时，$R\left(\dfrac23,1,1\right)$。因 $C_1(1,1,1)$，故
+\nopagebreak[4]
+\[C_1R=1-\frac23=\frac13.\]
+
+\Needspace{5\baselineskip}
+当 $t=1$ 时，$R=C_1$，$T\left(0,\tfrac12,1\right)$ 为 $A_1D_1$ 的中点，$S$ 为四边形 $APC_1T$，且
+\nopagebreak[4]
+\[\overrightarrow{AP}=\left(1,\tfrac12,0\right)=\overrightarrow{TC_1},\qquad
+\overrightarrow{AT}=\left(0,\tfrac12,1\right)=\overrightarrow{PC_1},\]
+\Needspace{5\baselineskip}
+故 $S$ 为平行四边形，其面积
+\nopagebreak[4]
+\[S_{\text{\text{截}}}=\left|\overrightarrow{AP}\times\overrightarrow{PC_1}\right|
+=\left|\left(\tfrac12,-1,\tfrac12\right)\right|
+=\sqrt{\tfrac14+1+\tfrac14}=\frac{\sqrt6}2.\]
+
+最后逐条判断：
+① $0<CQ<\dfrac12$ 时 $S$ 为四边形，正确；
+② $CQ=\dfrac12$ 时 $S$ 为等腰梯形，正确；
+③ $CQ=\dfrac34$ 时 $C_1R=\dfrac13$，正确；
+④ $\dfrac34<CQ<1$ 时 $S$ 为五边形而非六边形，错误；
+⑤ $CQ=1$ 时 $S$ 的面积为 $\dfrac{\sqrt6}2$，正确。
+
+故正确的是 ①②③⑤。
+
+\gkanswer{答案：①②③⑤。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=\sin x+\sin\left(x+\dfrac\pi3\right)$。
+
+（1） 求 $f(x)$ 的最小值，并求使 $f(x)$ 取得最小值的 $x$ 的集合；
+
+（2） 不画图，说明函数 $y=f(x)$ 的图象可由 $y=\sin x$ 的图象经过怎样的变化得到。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 用和差化积（或展开后合并）：
+\nopagebreak[4]
+\[\begin{aligned}
+f(x)&=\sin x+\sin\left(x+\frac\pi3\right)\\
+&=\sin x+\frac12\sin x+\frac{\sqrt3}2\cos x\\
+&=\frac32\sin x+\frac{\sqrt3}2\cos x\\
+&=\sqrt3\sin\left(x+\frac\pi6\right).
+\end{aligned}\]
+\Needspace{5\baselineskip}
+因为 $\sin\left(x+\dfrac\pi6\right)$ 的最小值为 $-1$，所以 $f(x)$ 的最小值为 $-\sqrt3$，此时
+\nopagebreak[4]
+\[x+\frac\pi6=2k\pi-\frac\pi2\ (k\in\mathbf Z),\]
+\Needspace{5\baselineskip}
+即 $x=2k\pi-\dfrac{2\pi}3$。故使 $f(x)$ 取得最小值的 $x$ 的集合为
+\nopagebreak[4]
+\[\left\{x\ \middle|\ x=2k\pi-\frac{2\pi}3,\ k\in\mathbf Z\right\}.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 先把 $y=\sin x$ 的图象向左平移 $\dfrac\pi6$ 个单位，得
+\nopagebreak[4]
+\[y=\sin\left(x+\frac\pi6\right);\]
+\Needspace{5\baselineskip}
+再把所得图象上各点的横坐标不变、纵坐标伸长为原来的 $\sqrt3$ 倍，得
+\nopagebreak[4]
+\[y=\sqrt3\sin\left(x+\frac\pi6\right)=f(x).\]
+（也可先纵向伸长 $\sqrt3$ 倍再左移 $\dfrac\pi6$ 个单位，结果相同。）
+
+\gkanswer{答案（1）：最小值为 $-\sqrt3$，此时 $x$ 的集合为 $\left\{x\ \middle|\ x=2k\pi-\dfrac{2\pi}3,\ k\in\mathbf Z\right\}$。}
+
+\gkanswer{答案（2）：将 $y=\sin x$ 的图象向左平移 $\dfrac\pi6$ 个单位，再把所得图象上各点的纵坐标伸长为原来的 $\sqrt3$ 倍（横坐标不变），即得 $y=f(x)$ 的图象。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+为调查甲、乙两校高三年级学生某次联考数学成绩情况，用简单随机抽样，从这两校中各抽取 $30$ 名高三年级学生，以他们的数学成绩（百分制）作为样本，样本数据的茎叶图如图：
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_anhui_arts_q17_stemleaf}\end{center}
+\nopagebreak[4]
+（1） 若甲校高三年级每位学生被抽取的概率为 $0.05$，求甲校高三年级学生总人数，并估计甲校高三年级这次联考数学成绩的及格率（$60$ 分及 $60$ 分以上为及格）；
+
+（2） 设甲、乙两校高三年级学生这次联考数学平均成绩分别为 $\overline{x}_1$，$\overline{x}_2$，估计 $\overline{x}_1-\overline{x}_2$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+按茎叶图逐位读出数据（每组 $30$ 个）。
+甲校：$47$；$52$，$53$，$53$，$55$；$60$，$60$，$61$，$63$，$63$，$63$，$64$，$65$，$65$；$70$，$70$，$71$，$71$，$72$，$72$，$76$，$76$，$78$；$82$，$84$，$84$，$85$，$87$；$90$，$92$。
+乙校：$45$；$53$，$53$，$58$；$60$，$60$，$60$，$61$，$61$，$62$，$62$，$63$，$63$，$65$；$70$，$70$，$72$，$72$，$72$，$73$，$73$，$76$，$76$，$79$；$81$，$81$，$85$，$85$，$88$；$90$。
+
+\Needspace{5\baselineskip}
+\textbf{（1）} 设甲校高三年级学生总数为 $N$。由简单随机抽样，每位学生被抽取的概率为 $\dfrac{30}{N}=0.05$，故
+\nopagebreak[4]
+\[N=\frac{30}{0.05}=600.\]
+\Needspace{5\baselineskip}
+甲校样本中 $60$ 分及以上的有 $9+9+5+2=25$ 人，故及格率估计为
+\nopagebreak[4]
+\[\frac{25}{30}=\frac56\approx83.3\%.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 分别求样本平均数。甲校数据和
+\nopagebreak[4]
+\[\begin{aligned}
+&47+(52+53+53+55)+(60+60+61+63\times3+64+65\times2)\\
+&+(70\times2+71\times2+72\times2+76\times2+78)\\
+&+(82+84\times2+85+87)+(90+92)\\
+&=47+213+564+656+422+182=2084,
+\end{aligned}\]
+\Needspace{5\baselineskip}
+故 $\overline{x}_1=\dfrac{2084}{30}$。乙校数据和
+\nopagebreak[4]
+\[\begin{aligned}
+&45+(53+53+58)+(60\times3+61\times2+62\times2+63\times2+65)\\
+&+(70\times2+72\times3+73\times2+76\times2+79)\\
+&+(81\times2+85\times2+88)+90\\
+&=45+164+617+733+420+90=2069,
+\end{aligned}\]
+\Needspace{5\baselineskip}
+故 $\overline{x}_2=\dfrac{2069}{30}$。于是
+\nopagebreak[4]
+\[\overline{x}_1-\overline{x}_2=\frac{2084-2069}{30}=\frac{15}{30}=0.5.\]
+即估计 $\overline{x}_1-\overline{x}_2$ 的值为 $0.5$。
+
+\gkanswer{答案（1）：甲校高三年级学生总人数为 $600$，及格率估计为 $\dfrac56$。}
+
+\gkanswer{答案（2）：$\overline{x}_1-\overline{x}_2=0.5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，四棱锥 $P\text{-}ABCD$ 的底面 $ABCD$ 是边长为 $2$ 的菱形，$\angle BAD=60^\circ$。已知 $PB=PD=\sqrt2$，$PA=\sqrt6$。
+
+（1） 证明：$PC\perp BD$；
+
+（2） 若 $E$ 为 $PA$ 的中点，求三棱锥 $P\text{-}BCE$ 的体积。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_anhui_arts_q18_pyramid}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\textbf{（1）} 设 $O$ 为 $BD$ 的中点。因 $ABCD$ 是菱形，两条对角线互相垂直平分，故 $O\in AC$ 且 $AC\perp BD$。
+又 $PB=PD$，$O$ 为 $BD$ 中点，故 $PO\perp BD$。
+\Needspace{5\baselineskip}
+$PO$ 与 $AC$ 是平面 $PAC$ 内两条相交直线（交于 $O$），于是
+\nopagebreak[4]
+\[BD\perp\text{\text{平面}}\ PAC\Longrightarrow BD\perp PC.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 建立空间直角坐标系：取 $A$ 为原点，$AB$ 为 $x$ 轴，底面内垂直于 $AB$ 的方向为 $y$ 轴，过 $A$ 垂直于底面的方向为 $z$ 轴。由 $AB=AD=2$，$\angle BAD=60^\circ$ 得
+\nopagebreak[4]
+\[A(0,0,0),\quad B(2,0,0),\quad D(1,\sqrt3,0),\quad C(3,\sqrt3,0).\]
+\Needspace{5\baselineskip}
+设 $P(x,y,z)$。由 $PA=\sqrt6$，$PB=PD=\sqrt2$：
+\nopagebreak[4]
+\[x^2+y^2+z^2=6,\]
+\nopagebreak[4]
+\[(x-2)^2+y^2+z^2=2\Longrightarrow -4x+4=-4\Longrightarrow x=2,\]
+\nopagebreak[4]
+\[(x-1)^2+(y-\sqrt3)^2+z^2=2.\]
+\Needspace{5\baselineskip}
+以 $x=2$，$y^2+z^2=2$ 代入第三式：
+\nopagebreak[4]
+\[1+y^2-2\sqrt3y+3+z^2=2\Longrightarrow 2-2\sqrt3y=-2\Longrightarrow y=\frac{2\sqrt3}3,\]
+\nopagebreak[4]
+\[z^2=2-\frac43=\frac23\Longrightarrow z=\frac{\sqrt6}3.\]
+\Needspace{5\baselineskip}
+（$z$ 取正、负不影响体积。）故
+\nopagebreak[4]
+\[P\left(2,\frac{2\sqrt3}3,\frac{\sqrt6}3\right),\qquad
+E\left(1,\frac{\sqrt3}3,\frac{\sqrt6}6\right).\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\overrightarrow{PB}=\left(0,-\frac{2\sqrt3}3,-\frac{\sqrt6}3\right),\quad
+\overrightarrow{PC}=\left(1,\frac{\sqrt3}3,-\frac{\sqrt6}3\right),\]
+\nopagebreak[4]
+\[\overrightarrow{PE}=\left(-1,-\frac{\sqrt3}3,-\frac{\sqrt6}6\right).\]
+\Needspace{5\baselineskip}
+三棱锥体积
+\nopagebreak[4]
+\[V=\frac16\left|\overrightarrow{PB}\cdot\left(\overrightarrow{PC}\times\overrightarrow{PE}\right)\right|.\]
+\Needspace{5\baselineskip}
+计算混合积：
+\nopagebreak[4]
+\[\overrightarrow{PC}\times\overrightarrow{PE}
+=\left(-\frac{\sqrt2}2,\ \frac{\sqrt6}2,\ 0\right),\]
+\nopagebreak[4]
+\[\overrightarrow{PB}\cdot\left(\overrightarrow{PC}\times\overrightarrow{PE}\right)
+=0-\frac{2\sqrt3}3\cdot\frac{\sqrt6}2+0=-\sqrt2.\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[V=\frac{\sqrt2}6.\]
+
+\gkanswer{答案（1）：证明见解析。}
+
+\gkanswer{答案（2）：$\dfrac{\sqrt2}6$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+设数列 $\{a_n\}$ 满足 $a_1=2$，$a_2+a_4=8$，且对任意 $n\in\mathbf N^*$，函数 $f(x)=(a_n-a_{n+1}+a_{n+2})x+a_{n+1}\cos x-a_{n+2}\sin x$ 满足 $f'\left(\dfrac\pi2\right)=0$。
+
+（1） 求数列 $\{a_n\}$ 的通项公式；
+
+（2） 若 $b_n=2\left(a_n+\dfrac1{2^{a_n}}\right)$，求数列 $\{b_n\}$ 的前 $n$ 项和 $S_n$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 求导：
+\nopagebreak[4]
+\[f'(x)=(a_n-a_{n+1}+a_{n+2})-a_{n+1}\sin x-a_{n+2}\cos x.\]
+\Needspace{5\baselineskip}
+代入 $x=\dfrac\pi2$（此时 $\sin\dfrac\pi2=1$，$\cos\dfrac\pi2=0$）：
+\nopagebreak[4]
+\[f'\left(\frac\pi2\right)=a_n-a_{n+1}+a_{n+2}-a_{n+1}=a_n-2a_{n+1}+a_{n+2}=0.\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[2a_{n+1}=a_n+a_{n+2}\quad(n\in\mathbf N^*),\]
+\Needspace{5\baselineskip}
+故 $\{a_n\}$ 是等差数列。设公差为 $d$，由 $a_2+a_4=8$ 得
+\nopagebreak[4]
+\[2a_3=8\Longrightarrow a_3=4,\]
+\Needspace{5\baselineskip}
+又 $a_1=2$，故 $d=\dfrac{a_3-a_1}2=1$，从而
+\nopagebreak[4]
+\[a_n=2+(n-1)\cdot1=n+1\quad(n\in\mathbf N^*).\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 由（1）得 $a_n=n+1$，故
+\nopagebreak[4]
+\[b_n=2\left(n+1+\frac1{2^{n+1}}\right)=2(n+1)+\frac1{2^n}.\]
+\Needspace{5\baselineskip}
+前 $n$ 项和
+\nopagebreak[4]
+\[\begin{aligned}
+S_n&=\sum_{k=1}^{n}2(k+1)+\sum_{k=1}^{n}\frac1{2^k}\\
+&=2\cdot\frac{n(n+3)}2+\frac{\frac12\left(1-\frac1{2^n}\right)}{1-\frac12}\\
+&=n^2+3n+1-\frac1{2^n}.
+\end{aligned}\]
+故 $S_n=n^2+3n+1-\dfrac1{2^n}$。
+
+\gkanswer{答案（1）：$a_n=n+1$（$n\in\mathbf N^*$）。}
+
+\gkanswer{答案（2）：$S_n=n^2+3n+1-\dfrac1{2^n}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=ax-(1+a^2)x^2$，其中 $a>0$，区间 $I=\{x\mid f(x)>0\}$。
+
+（1） 求 $I$ 的长度（注：区间 $(\alpha,\beta)$ 的长度定义为 $\beta-\alpha$）；
+
+（2） 给定常数 $k\in(0,1)$，当 $1-k\leqslant a\leqslant1+k$ 时，求 $I$ 长度的最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 因式分解：
+\nopagebreak[4]
+\[f(x)=x\left(a-(1+a^2)x\right).\]
+\Needspace{5\baselineskip}
+由 $a>0$ 知 $1+a^2>0$，故 $f(x)>0$ 等价于
+\nopagebreak[4]
+\[0<x<\frac a{1+a^2}.\]
+\Needspace{5\baselineskip}
+即 $I=\left(0,\dfrac a{1+a^2}\right)$，其长度
+\nopagebreak[4]
+\[L(a)=\frac a{1+a^2}.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 求导：
+\nopagebreak[4]
+\[L'(a)=\frac{(1+a^2)-a\cdot2a}{(1+a^2)^2}=\frac{1-a^2}{(1+a^2)^2}.\]
+\Needspace{5\baselineskip}
+故 $L$ 在 $(0,1)$ 上递增、在 $(1,+\infty)$ 上递减。因 $k\in(0,1)$，区间 $[1-k,1+k]$ 含 $a=1$，所以 $L$ 在 $[1-k,1+k]$ 上的最小值在端点处取得。比较两端：
+\nopagebreak[4]
+\[\begin{aligned}
+&L(1-k)-L(1+k)\\
+&=\frac{1-k}{1+(1-k)^2}-\frac{1+k}{1+(1+k)^2}\\
+&=\frac{(1-k)(2+2k+k^2)-(1+k)(2-2k+k^2)}
+{\left[1+(1-k)^2\right]\left[1+(1+k)^2\right]}\\
+&=\frac{(2-k^2-k^3)-(2-k^2+k^3)}
+{\left[1+(1-k)^2\right]\left[1+(1+k)^2\right]}\\
+&=\frac{-2k^3}{\left[1+(1-k)^2\right]\left[1+(1+k)^2\right]}<0.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+故 $L(1-k)<L(1+k)$，最小值在 $a=1-k$ 处取得，为
+\nopagebreak[4]
+\[L_{\min}=\frac{1-k}{1+(1-k)^2}=\frac{1-k}{k^2-2k+2}.\]
+
+\gkanswer{答案（1）：$I$ 的长度为 $\dfrac a{1+a^2}$。}
+
+\gkanswer{答案（2）：最小值为 $\dfrac{1-k}{k^2-2k+2}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的焦距为 $4$，且过点 $P(\sqrt2,\sqrt3)$。
+
+（1） 求椭圆 $C$ 的方程；
+
+（2） 设 $Q(x_0,y_0)$（$x_0y_0\neq0$）为椭圆 $C$ 上一点，过点 $Q$ 作 $x$ 轴的垂线，垂足为 $E$。取点 $A(0,2\sqrt2)$，连接 $AE$。过点 $A$ 作 $AE$ 的垂线交 $x$ 轴于点 $D$。点 $G$ 是点 $D$ 关于 $y$ 轴的对称点，作直线 $QG$，问这样作出的直线 $QG$ 是否与椭圆 $C$ 一定有唯一的公共点？并说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 由焦距 $2c=4$ 得 $c=2$，故
+\nopagebreak[4]
+\[a^2=b^2+4.\]
+\Needspace{5\baselineskip}
+椭圆过 $P(\sqrt2,\sqrt3)$，代入得
+\nopagebreak[4]
+\[\frac2{a^2}+\frac3{b^2}=1.\]
+\Needspace{5\baselineskip}
+以 $a^2=b^2+4$ 代入：
+\nopagebreak[4]
+\[2b^2+3(b^2+4)=b^2(b^2+4)\Longrightarrow b^4-b^2-12=0.\]
+\Needspace{5\baselineskip}
+解得 $b^2=4$（$b^2=-3$ 舍去），从而 $a^2=8$。椭圆方程为
+\nopagebreak[4]
+\[\frac{x^2}8+\frac{y^2}4=1.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 由（1），$Q(x_0,y_0)$ 满足
+\nopagebreak[4]
+\[\frac{x_0^2}8+\frac{y_0^2}4=1\Longrightarrow x_0^2+2y_0^2=8.\]
+因 $x_0y_0\neq0$，以下各式分母均不为零。
+
+\Needspace{5\baselineskip}
+垂足 $E(x_0,0)$，$A(0,2\sqrt2)$，故 $AE$ 的斜率为
+\nopagebreak[4]
+\[k_{AE}=\frac{0-2\sqrt2}{x_0-0}=-\frac{2\sqrt2}{x_0}.\]
+\Needspace{5\baselineskip}
+过 $A$ 且垂直于 $AE$ 的直线斜率为 $\dfrac{x_0}{2\sqrt2}$，其方程为
+\nopagebreak[4]
+\[y-2\sqrt2=\frac{x_0}{2\sqrt2}x.\]
+\Needspace{5\baselineskip}
+令 $y=0$ 得 $x=-\dfrac8{x_0}$，故
+\nopagebreak[4]
+\[D\left(-\frac8{x_0},0\right),\qquad G\left(\frac8{x_0},0\right).\]
+\Needspace{5\baselineskip}
+直线 $QG$ 的斜率
+\nopagebreak[4]
+\[k_{QG}=\frac{0-y_0}{\frac8{x_0}-x_0}
+=\frac{-x_0y_0}{8-x_0^2}.\]
+\Needspace{5\baselineskip}
+由 $x_0^2+2y_0^2=8$ 得 $8-x_0^2=2y_0^2$，故
+\nopagebreak[4]
+\[k_{QG}=\frac{-x_0y_0}{2y_0^2}=-\frac{x_0}{2y_0}.\]
+
+\Needspace{5\baselineskip}
+另一方面，椭圆 $\dfrac{x^2}8+\dfrac{y^2}4=1$ 在 $Q$ 处的切线斜率为
+\nopagebreak[4]
+\[k_{\text{\text{切}}}=-\frac{b^2x_0}{a^2y_0}=-\frac{4x_0}{8y_0}=-\frac{x_0}{2y_0}.\]
+故 $k_{QG}=k_{\text{\text{切}}}$，即直线 $QG$ 就是椭圆在 $Q$ 处的切线。
+
+因为 $Q$ 在椭圆上，切线 $QG$ 与椭圆恰有一个公共点 $Q$（切点，重根计为一个点）。所以这样作出的直线 $QG$ 一定与椭圆 $C$ 有唯一的公共点。
+
+\gkanswer{答案（1）：$\dfrac{x^2}8+\dfrac{y^2}4=1$。}
+
+\gkanswer{答案（2）：一定有唯一的公共点，$QG$ 是椭圆在 $Q$ 处的切线，证明见解析。}
+
+\end{answer}
