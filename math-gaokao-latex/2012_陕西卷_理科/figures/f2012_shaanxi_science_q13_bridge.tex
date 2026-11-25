@@ -1,0 +1,14 @@
+% 2012 年陕西卷理科第 14 题：抛物线形拱桥，水面宽 4 米时拱顶离水面 2 米。
+% 来源 PDF：普通高考/2012/2012陕西理.pdf，第 1 页（印面 765）第 3 栏。
+\begin{tikzpicture}[scale=0.8, semithick]
+  % 拱桥外形（抛物线 y = 2 - x^2/2 的拱顶向上）
+  \draw[thick, domain=-2.6:2.6, samples=80] plot (\x, {2-(\x*\x)/2});
+  % 两侧桥体
+  \fill[pattern=north east lines] (-2.6,0) -- (-2.6,-1.2) -- (2.6,-1.2) -- (2.6,0) -- cycle;
+  \draw (-2.6,0) -- (-2.6,-1.2) -- (2.6,-1.2) -- (2.6,0);
+  % 水面
+  \draw[thick] (-2.6,-0.0) -- (2.6,-0.0);
+  % 水位标注
+  \draw[<->] (-3.0,0) -- (-3.0,2) node[midway,left] {$2\ \mathrm m$};
+  \draw[<->] (-2,-1.5) -- (2,-1.5) node[midway,below] {$4\ \mathrm m$};
+\end{tikzpicture}

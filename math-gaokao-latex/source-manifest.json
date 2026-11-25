@@ -4052,6 +4052,14 @@
         "gk-2012-anhui-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b51",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-shaanxi-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4061,7 +4069,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c74e4fd9-58ba-4bf9-a093-c5ed0c1fd8c4",
+  "last_transaction_id": "95191366-d6fe-428a-a3c9-e74d511102c1",
   "papers": [
     {
       "blocked_from": null,
@@ -47391,9 +47399,82 @@
       "title": "2012 年·安徽卷·理科",
       "track": "science",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_理科/figures/f2012_shaanxi_science_q05_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_理科/figures/f2012_shaanxi_science_q10_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_理科/figures/f2012_shaanxi_science_q13_bridge.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_理科/figures/f2012_shaanxi_science_q15b_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_陕西卷_理科/figures/f2012_shaanxi_science_q18_projection.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_shaanxi_science",
+        "id": "gk-2012-shaanxi-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 763、764。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。陕西卷题号：选择 1—10、填空 11—15（第 15 题三选一）、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页 5 幅图：第 5 题空间直角坐标系中的直三棱柱、第 10 题估计 π 的程序框图、第 13 题拱桥、第 15B 题圆、第 18 题线面投影，均由 TikZ 重绘；第 6 题茎叶图与第 20 题频率表以表格排版。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "陕西理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-shaanxi-science",
+      "production_state": "complete",
+      "project_dir": "2012_陕西卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_陕西理_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_陕西理_含解析.md",
+        "questions": "2012/2012_数学真题_陕西理_试题.md",
+        "solution_body": "2012/2012_数学真题_陕西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-b6ade673f48053958cb2e47b6a3c4063a053e174dd258d5b7d6b385576316c39"
+      ],
+      "title": "2012 年·陕西卷·理科",
+      "track": "science",
+      "year": 2012
     }
   ],
-  "revision": 11685,
+  "revision": 11699,
   "schema_version": 1,
   "sources": [
     {
@@ -60614,8 +60695,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c9b8590716166e66c7feadc261fa9ee3ff19b14b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-shaanxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012陕西理.pdf",
       "regions": [],
       "source_id": "src-b6ade673f48053958cb2e47b6a3c4063a053e174dd258d5b7d6b385576316c39",

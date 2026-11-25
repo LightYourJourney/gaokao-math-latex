@@ -1,0 +1,32 @@
+% 2012 年陕西卷理科第 5 题：空间直角坐标系中的直三棱柱 ABC-A1B1C1。
+% 来源 PDF：普通高考/2012/2012陕西理.pdf，第 1 页（印面 763）第 1 栏。
+% 取 C(0,0,0)，A 沿 x 轴、B 沿 z 轴、C1 沿 y 轴；按原图取向作斜投影：
+% x → (-0.8,-0.6)，y → (1.0,0.15)，z → (0,1)。
+\begin{tikzpicture}[semithick, >=Stealth, font=\small]
+  \coordinate (C)  at (0,0);
+  \coordinate (A)  at (-1.6,-1.2);
+  \coordinate (B)  at (0,1.4);
+  \coordinate (C1) at (2.0,0.30);
+  \coordinate (A1) at (0.4,-0.90);
+  \coordinate (B1) at (2.0,1.70);
+  % 坐标轴
+  \draw[->] (0,0) -- (-2.0,-1.5) node[below] {$x$};
+  \draw[->] (0,0) -- (0,1.9) node[left] {$z$};
+  \draw[->] (0,0) -- (2.5,0.38) node[right] {$y$};
+  % 棱柱
+  \draw (C) -- (A) -- (B) -- cycle;
+  \draw (A) -- (A1);
+  \draw (C) -- (C1);
+  \draw (B) -- (B1);
+  \draw (A1) -- (B1);
+  \draw (C1) -- (A1);
+  \draw[dashed] (B1) -- (C1);
+  \draw[dashed] (B) -- (C1);
+  \draw (A) -- (B1);
+  \node[below right] at (C) {$C$};
+  \node[left] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[below right] at (C1) {$C_1$};
+  \node[right] at (A1) {$A_1$};
+  \node[above right] at (B1) {$B_1$};
+\end{tikzpicture}

@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 陕西卷（理科）：phase7-b51 新卷转录、四版封账（2026-11-25；`closed`）
+- 对象：`gk-2012-shaanxi-science`，**21 个题号**（选择 1—10、填空 11—15（第 15 题三选一）、解答 16—21）；固定来源 `src-b6ade673f48053958cb2e47b6a3c4063a053e174dd258d5b7d6b385576316c39`，2 页 A3 横向，印面 763、764。
+- 答案（独立推导，等级 D）：1 C；2 D；3 B；4 A；5 A；6 B；7 D；8 C；9 C；10 D；11 第五个不等式 $<\frac95$；12 $1$；13 $2\sqrt6$；14 $2$；15 A $[-2,4]$、B $5$、C $\sqrt3$；16 (1) $f=2\sin(2x-\frac\pi6)+1$、(2) $\frac\pi3$；17 (1) $q=-2$、(2) 证明；18 (1) 证明、(2) 逆命题真；19 (1) $\frac{x^2}4+\frac{y^2}{16}=1$、(2) $y=\pm x$；20 (1) $0.22$、(2) $P(X{=}0)=0.5$、$P(X{=}1)=0.49$、$P(X{=}2)=0.01$、$EX=0.51$；21 (1) 证明、(2) $[-2,2]$、(3) 递增。
+- 复核要点：第 5 题取 $C(0,0,0),A(2,0,0),B(0,0,1),C_1(0,2,0)$ 得 $\cos=\frac{\sqrt5}5$；第 6 题按茎叶表算出 $\overline x_甲=\frac{345}{16}<\frac{457}{16}=\overline x_乙$、$m_甲=20<29=m_乙$；第 8 题按 $3/4/5$ 局计 $2+6+12=20$；第 14 题封闭区域为 $(-\frac12,0),(1,0),(0,-1)$ 三角形，$z_{\max}=2$；第 20(2) 逐情形得 $E X=0.51$。
+- 图稿：5 张 TikZ（直三棱柱与坐标系、估计 π 的程序框图、拱桥、圆、线面投影）；第 6 题茎叶图与第 20 题频率表用表格排版。
+- 版式修正：第 10 题题目与框图原在解析版跨页拆开，先加 `question-needspace: 0.5`、再把框图 `scale=0.86, transform shape`，四版均将题目、框图、选项保持同页（解析版 20→19 页）。
+- 验收：四版 5/19/7/14 页（共 45 页），四 log 全 0；review 45 页 **332 pass + 28 not_applicable、0 fail、0 豁免**；`finalize-batch` → `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库（本卷封账后）：manifest **642 卷 / 775 来源 / 488 批次**，complete 524、blocked 118，未绑定 **134**；revision 11699。距离报告刷新（643 卷）还差 1 卷。
+
 ### 2012 安徽卷（理科）：phase7-b50 新卷转录、四版封账（2026-11-25；`closed`）
 - 对象：`gk-2012-anhui-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-347ce4c320f7d27eaa4e298cecb9691dd5e103e3bb46c45017dafacd81a2ac93`，2 页 A3 横向，印面 713、714。
 - 答案（独立推导，等级 D）：1 D；2 C；3 B；4 B；5 C；6 A；7 D；8 A；9 C；10 D；11 $[-3,0]$；12 $92$；13 $\sqrt3$；14 $-\frac98$；15 ①②③；16 (1) $T=\pi$、(2) 分段式；17 (1) $\frac{n(n+1)}{(n+m)(n+m+2)}$、(2) $P(X=n+2)=\frac14$、$P(X=n+1)=\frac14+\frac{n}{2(2n+1)}$、$P(X=n)=\frac{n+1}{2(2n+1)}$、$EX=n+\frac34+\frac{n}{4n+2}$；18 (1) 证明、(2) $5$、(3) $-\frac{\sqrt5}5$；19 (1) $0<a\leqslant1$ 时 $2+b$、$a>1$ 时 $a+\frac1a+b$，(2) $a=\frac2{\mathrm e^2}$、$b=\frac12$；20 (1) $\frac{x^2}4+\frac{y^2}3=1$、(2) 证明；21 (1) 证明、(2) $\left(0,\frac14\right]$。
