@@ -1,0 +1,26 @@
+% 2013 辽宁卷文科第 8 题：程序框图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.45pt,
+  node distance=5mm,
+  term/.style={draw, rounded corners=6pt, minimum height=1.8em, inner xsep=9pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.8em, inner xsep=6pt},
+  box/.style={draw, minimum height=1.9em, inner xsep=6pt},
+  dec/.style={draw, diamond, aspect=2.2, inner sep=1pt}]
+  \node[term] (start) {开始};
+  \node[io, below=5mm of start] (input) {输入 $n$};
+  \node[box, below=5mm of input] (init) {$S=0$，$i=2$};
+  \node[dec, below=6mm of init] (cond) {$i\leqslant n$};
+  \node[box, below=7mm of cond] (acc) {$S=S+\dfrac{1}{i^2-1}$};
+  \node[box, below=5mm of acc] (inc) {$i=i+2$};
+  \node[io, right=15mm of cond] (output) {输出 $S$};
+  \node[term, below=6mm of output] (end) {结束};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (init);
+  \draw[->] (init) -- (cond);
+  \draw[->] (cond) -- node[right] {是} (acc);
+  \draw[->] (acc) -- (inc);
+  \draw[->] (cond) -- node[above] {否} (output);
+  \draw[->] (output) -- (end);
+  % 循环支路：从 i=i+2 左侧引出，向上回到判断框入口
+  \draw[->] (inc.west) -- ++(-1.45,0) |- (cond.west);
+\end{tikzpicture}

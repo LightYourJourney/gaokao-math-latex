@@ -4092,6 +4092,14 @@
         "gk-2013-hubei-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b56",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-liaoning-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4101,7 +4109,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "964912d0-3ef8-4bbe-812e-97808823cf9a",
+  "last_transaction_id": "aa93d3d7-ebf8-44e0-b5c3-36c49b11f2cc",
   "papers": [
     {
       "blocked_from": null,
@@ -47797,9 +47805,86 @@
       "title": "2013 年·湖北卷·文科",
       "track": "arts",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_辽宁卷_文科/figures/f2013_liaoning_arts_q05_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_辽宁卷_文科/figures/f2013_liaoning_arts_q08_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_辽宁卷_文科/figures/f2013_liaoning_arts_q13_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_辽宁卷_文科/figures/f2013_liaoning_arts_q18_line_plane.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_辽宁卷_文科/figures/f2013_liaoning_arts_q20_parabolas.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_辽宁卷_文科/figures/f2013_liaoning_arts_q22_circle_tangent.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_liaoning_arts",
+        "id": "gk-2013-liaoning-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 823、824。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。辽宁卷题号：选择 1—12、填空 13—16、解答 17—21，另有选做题 22、23、24（三选一，按原卷分别编号），共 24 题。答案由本库独立推导（等级 D，非官方）。原页图：第 5 题频率分布直方图、第 8 题程序框图、第 13 题三视图、第 18 题圆锥与母线、第 20 题抛物线、第 22 题两圆割线，均以 TikZ 重绘共 6 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            24
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "辽宁文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-liaoning-arts",
+      "production_state": "complete",
+      "project_dir": "2013_辽宁卷_文科",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_辽宁文_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_辽宁文_含解析.md",
+        "questions": "2013/2013_数学真题_辽宁文_试题.md",
+        "solution_body": "2013/2013_数学真题_辽宁文_解析正文.md"
+      },
+      "source_ids": [
+        "src-0d0d3bec0b6103e8b8c1edbc5c730136cb0ee01cdb43dd7e1df1e0341d4f856b"
+      ],
+      "title": "2013 年·辽宁卷·文科",
+      "track": "arts",
+      "year": 2013
     }
   ],
-  "revision": 11737,
+  "revision": 11742,
   "schema_version": 1,
   "sources": [
     {
@@ -61788,8 +61873,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9121bfc894ed549fc65f6b9b9602c2cb439a4d16",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-liaoning-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013辽宁文.pdf",
       "regions": [],
       "source_id": "src-0d0d3bec0b6103e8b8c1edbc5c730136cb0ee01cdb43dd7e1df1e0341d4f856b",

@@ -1,0 +1,20 @@
+% 2013 辽宁卷文科第 5 题：成绩频率分布直方图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.5pt,
+  x=1.15cm, y=160cm]
+  % 坐标轴：横轴以 20 分为一个单位
+  \draw[->] (0,0) -- (5.75,0) node[right, yshift=-2pt] {成绩/分};
+  \draw[->] (0,0) -- (0,0.0238);
+  \node at (0,0.0295) {$\dfrac{\text{频率}}{\text{组距}}$};
+  % 横轴刻度
+  \foreach \x/\lab in {0/0,1/20,2/40,3/60,4/80,5/100}
+    \draw (\x,0) -- (\x,-0.0006) node[below] {$\lab$};
+  % 纵轴刻度与虚线
+  \foreach \y/\lab in {0.005/0.005,0.010/0.010,0.015/0.015,0.020/0.020} {
+    \draw (0,\y) -- (-0.08,\y) node[left] {$\lab$};
+    \draw[dashed] (0,\y) -- (5.05,\y);
+  }
+  % 四个矩形：高度依次为 0.005、0.010、0.020、0.015
+  \foreach \i/\h in {1/0.005,2/0.010,3/0.020,4/0.015} {
+    \draw[fill=white] (\i-1,0) rectangle (\i,\h);
+  }
+\end{tikzpicture}

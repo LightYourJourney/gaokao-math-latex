@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 辽宁卷（文科）：phase7-b56 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
+- 对象：`gk-2013-liaoning-arts`，**24 个题号**（选择 1—12、填空 13—16、解答 17—21，选做 22/23/24）；固定来源 `src-0d0d3bec0b6103e8b8c1edbc5c730136cb0ee01cdb43dd7e1df1e0341d4f856b`，2 页 A3，印面 823、824。
+- 答案（等级 D）：1 B；2 B；3 A；4 D；5 B；6 A；7 D；8 A；9 C；10 C；11 B；12 B；13 $16\pi-16$；14 $63$；15 $44$；16 $10$；17 (1) $\frac\pi6$、(2) $\frac32$；18 证明；19 (1) $\frac25$、(2) $\frac8{15}$；20 (1) $p=2$、(2) $y=\frac34x^2$；21 (1) 证明、(2) $a\leqslant-2$；22 证明；23 (1) $(4,\frac\pi2)$、$(2\sqrt2,\frac\pi4)$、(2) $a=-1,b=2$；24 (1) $(-\infty,1]\cup[5,+\infty)$、(2) $a=3$。
+- 主代理复核：第 20 题由切线方程 $t^2-2x_0t+4y_0=0$ 得中点 $N(x_0,\frac34x_0^2)$，与子代理答案一致；第 23 题独立解 $x+y=4$ 与 $x^2+y^2=4y$ 得两点 $(4,\frac\pi2),(2\sqrt2,\frac\pi4)$ 及 $a=-1,b=2$；第 24 题分段解得 $a=3$；第 15 题按“A 为右焦点、$|PQ|=16$”得周长 $44$。
+- 图稿：6 张 TikZ（直方图、程序框图、三视图、圆锥母线、两抛物线、圆与切线）。
+- 警告豁免：解析版第 5 题四个短选项造成 1 条 Underfull hbox（badness 2073，行 114--116，answers.tex），经第 8 页 110 dpi 复核无截字/溢出，记 1 条豁免（source_file、pdf_page、visual_result=pass、理由齐全），`finalize-batch` 逐项匹配通过。
+- 验收：四版 5/29/7/22 页（共 63 页），Overfull 与 missing characters 均为 0；review 63 页 **pass 470 + not_applicable 34、0 fail、1 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；6 条图稿引用全部命中。
+- 全库：manifest **647 卷 / 775 来源 / 493 批次**，complete 529、blocked 118，未绑定 **129**；revision 11742。
+
 ### 2013 湖北卷（文科）：phase7-b55 转录（子代理起草、主代理复核）与四版封账（2026-11-25；`closed`）
 - 对象：`gk-2013-hubei-arts`，**22 个题号**（选择 1—10、填空 11—17、解答 18—22）；固定来源 `src-b467070840434ac9cf2f721982aef36fd3f2b64be8273ac87f070260a8cda7df`，2 页 A3，印面 809、810。
 - 流程：四份 MD 与 5 张图由子代理 `ses_ded3f9f8bffe5uPDkMyEAcvDrw` 起草；主代理复核后注册、构建、审查。

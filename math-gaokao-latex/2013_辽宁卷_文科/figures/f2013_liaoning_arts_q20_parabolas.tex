@@ -1,0 +1,20 @@
+% 2013 辽宁卷文科第 20 题：抛物线 C1、C2 与过 M 的两条切线。
+\begin{tikzpicture}[font=\footnotesize, line width=0.5pt, >=Stealth, scale=1.15]
+  % 坐标轴
+  \draw[->] (-3.3,0) -- (3.5,0) node[below] {$x$};
+  \draw[->] (0,-2.8) -- (0,2.9) node[right] {$y$};
+  \node[below right] at (0,0) {$O$};
+  % C1: x^2=4y, 即 y=x^2/4
+  \draw[domain=-3.15:3.15, smooth, samples=120] plot (\x,{\x*\x/4});
+  % C2: x^2=-4y, 即 y=-x^2/4
+  \draw[domain=-3.15:3.15, smooth, samples=120] plot (\x,{-\x*\x/4});
+  % M(-1,-0.25) 在 C2 上；两条切线的切点
+  \coordinate (M) at (-1,-0.25);
+  \coordinate (A) at (-2.4142,1.4572);
+  \coordinate (B) at (0.4142,0.0429);
+  \draw ($(M)!-0.25!(A)$) -- ($(M)!1.22!(A)$);
+  \draw ($(M)!-0.25!(B)$) -- ($(M)!1.55!(B)$);
+  \fill (M) circle (1.4pt) node[below right] {$M$};
+  \node[above] at (A) {$A$};
+  \node[above right] at (B) {$B$};
+\end{tikzpicture}
