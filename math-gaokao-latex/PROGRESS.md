@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 上海卷（理科）：phase7-b74 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2013-shanghai-science`，**23 个题号**（填空 1—14、选择 15—18、解答 19—23）；固定来源 `src-a154b76fb2f503ca22798aa2f741aa59cca0ae20de495426a2923f7af3526e39`，2 页 A3，印面 841、842。
+- 答案（等级 D）：1 $\frac13$；2 $-2$；3 $0$；4 $\arccos\left(-\frac13\right)$；5 $-2$；6 $\log_3 4$；7 $\frac{1+\sqrt5}2$；8 $\frac{13}{18}$；9 $\frac{4\sqrt6}3$；10 $30d^2$；11 $\frac23$；12 $\left(-\infty,-\frac87\right]$；13 $2\pi^2+16\pi$；14 $2$；15 B；16 B；17 A（18 个）；18 D（$m<0,M<0$）；19 $\frac23$；20 (1) $[3,10]$、(2) $x=6$ 千克/小时、最大利润 $457500$ 元；21 (1) $\left(0,\frac34\right]$、(2) $\frac{43\pi}3$；22 (1) $x=-\sqrt3$、(2)(3) 证明；23 (1) $a_2=2,a_3=c+10$、(2) 证明、(3) $a_1\geqslant-c$ 或 $a_1=-c-8$。
+- **来源核对**：子代理按 PDF 纠正任务提示——第 10 题为 $x_1,\dots,x_{19}$（19 项）；第 11 题为 $\sin2x+\sin2y=\frac23$；第 12 条为 $x\geqslant0$（含 0）；第 17 题为 $a_{ij}=a_i a_j+a_i+a_j$；第 19 题无小问分栏；第 18 题按三元子集（互异）理解。
+- 主代理复核：第 6 题 $t^2-2t-8=0$；第 9 题 $C(1,1)$、$b^2=\frac43$；第 10 题 $\frac{19^2-1}{12}=30$；第 12 题 $f(0)=0$ 给 $a\le-1$、$6|a|\ge a+8$ 给 $a\le-\frac87$；第 13 题 $\int 4\pi\sqrt{1-y^2}=2\pi^2$、$\int8\pi=16\pi$；第 17 题 $2^{i+j}-1$ 共 18 值；第 19 题法向量 $(1,-2,2)$、$d=\frac23$；第 20 题 $x=6$、$457500$；第 21 题 $\omega\le\frac34$、29 个间隔 15 个 $\frac{2\pi}3$ 与 14 个 $\frac\pi3$ 得 $\frac{43\pi}3$；第 22 题与上海文第 23 题同源；第 23 题分段讨论与等差检验。
+- 图稿：3 张 TikZ（旋转体截面、长方体、双曲线与折线）。
+- 验收：四版 4/30/6/21 页（共 61 页），四 log 全 0（Overfull、missing characters 均 0）；review 61 页 **pass 440 + not_applicable 48、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；3 条图稿引用全部命中。
+- 全库：manifest **665 卷 / 775 来源 / 511 批次**，complete 547、blocked 118，未绑定 **111**；revision 11896。
+
 ### 2013 陕西卷（文科）：phase7-b73 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2013-shaanxi-arts`，**23 个题号**（选择 1—10、填空 11—17（15/16/17 为选做，按原卷分别编号并全部收录）、解答 18—23）；固定来源 `src-0280f6cd9b2a917b13f5dfe624b31889979c27d5d40886e9de5a0213423c7557`，2 页 A3，印面 839、840。
 - 答案（等级 D）：1 B；2 C（$\pm\sqrt2$）；3 B；4 C（31）；5 D（0.45）；6 C；7 A（$-6$）；8 B；9 A；10 D；11 $\frac54$；12 $3\pi$；13 $(n+1)(n+2)\cdots(n+n)=2^n\cdot1\cdot3\cdots(2n-1)$；14 $20$；15 $\mathbf R$；16 $\sqrt6$；17 $(1,0)$；18 (1) $T=\pi$、(2) 最大值 $1$、最小值 $-\frac12$；19 (1) $S_n=\frac{n(a_1+a_n)}2$、(2) 是等比数列 $a_n=q^{n-1}$；20 (1) 证明、(2) 体积 $1$；21 (1) $3,6,9,9,3$、(2) $\frac29$；22 (1) $\frac{x^2}4+\frac{y^2}3=1$、(2) $k=\pm\frac32$；23 (1) $y=x-1$、(2) 唯一公共点 $(0,1)$、(3) $f\left(\frac{a+b}2\right)<\frac{f(b)-f(a)}{b-a}$。

@@ -1,0 +1,34 @@
+% ============================================================
+% f2013_shanghai_science_q22_hyperbola.tex
+% 2013 上海卷（理科）第 22 题 双曲线 C1 与折线 C2（TikZ 矢量重绘）
+% 曲线：C1: x^2/2 - y^2 = 1（两支，顶点在 (±sqrt2, 0)）；
+%       C2: |y| = |x| + 1（两条折线，顶点分别在 (0,1)、(0,-1)，四臂斜率 ±1）。
+% 坐标轴等比例，便于看出 C1 渐近线 y = ±x/sqrt2 与 C2 四臂的方向差别。
+% ============================================================
+\begin{tikzpicture}[
+  x=1.1cm, y=1.1cm,
+  every node/.style={font=\small, inner sep=1pt},
+  line/.style={line width=0.6pt},
+  axis/.style={line width=0.5pt, -{Stealth[length=2.2mm,width=1.6mm]}},
+]
+
+  % 坐标轴
+  \draw[axis] (-3.25,0) -- (3.45,0);
+  \draw[axis] (0,-2.85) -- (0,3.05);
+
+  % C1 的左右两支：x = ±sqrt(2(1+t^2)), y = t
+  \draw[line, domain=-2.03:2.03, samples=120, smooth, variable=\t]
+    plot ({sqrt(2*(1+\t*\t))}, {\t});
+  \draw[line, domain=-2.03:2.03, samples=120, smooth, variable=\t]
+    plot ({-sqrt(2*(1+\t*\t))}, {\t});
+
+  % C2 的两条折线：|y| = |x| + 1
+  \draw[line] (-1.92,2.92) -- (0,1) -- (1.92,2.92);
+  \draw[line] (-1.92,-2.92) -- (0,-1) -- (1.92,-2.92);
+
+  % 原点与轴标签
+  \node at (-0.34,-0.38) {$O$};
+  \node at (3.62,-0.24) {$x$};
+  \node at (-0.26,3.22) {$y$};
+
+\end{tikzpicture}
