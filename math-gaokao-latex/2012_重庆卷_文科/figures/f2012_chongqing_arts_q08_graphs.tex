@@ -1,0 +1,36 @@
+% 2012 年重庆卷文科第 8 题：y=xf'(x) 的四个图象选项。
+% 来源 PDF：普通高考/2012/2012重庆文.pdf，第 1 页（印面 723）第 2 栏。
+% 选项 (B) 为零点 x=-2 与 x=0、在 (-2,0) 内为负、两侧为正的图象，即正确答案。
+\begin{tikzpicture}[scale=0.78, semithick, >=Stealth, font=\small]
+  \foreach \dx/\dy/\lab in {0/0/{(A)}, 5.4/0/{(B)}, 0/-5.2/{(C)}, 5.4/-5.2/{(D)}} {
+    \begin{scope}[shift={(\dx,\dy)}]
+      \clip (-2.3,-1.9) rectangle (2.3,1.9);
+      \draw[->] (-2.4,0) -- (2.4,0) node[right] {$x$};
+      \draw[->] (0,-2.0) -- (0,2.0) node[above] {$y$};
+      \node[below left] at (0,0) {\scriptsize $O$};
+    \end{scope}
+    \node[below] at (\dx,\dy-2.35) {\lab};
+  }
+  % (A)
+  \begin{scope}[shift={(0,0)}]
+    \clip (-2.3,-1.9) rectangle (2.3,1.9);
+    \draw[smooth, domain=-2.3:1.2] plot (\x, {-0.6*\x*(\x+2.4)});
+  \end{scope}
+  % (B)
+  \begin{scope}[shift={(5.4,0)}]
+    \clip (-2.3,-1.9) rectangle (2.3,1.9);
+    \draw[smooth, domain=-2.3:1.4] plot (\x, {0.55*\x*(\x+2)});
+    \node[below] at (-2,-0.05) {\scriptsize $-2$};
+  \end{scope}
+  % (C)
+  \begin{scope}[shift={(0,-5.2)}]
+    \clip (-2.3,-1.9) rectangle (2.3,1.9);
+    \draw[smooth, domain=-2.3:2.0] plot (\x, {0.8*\x});
+  \end{scope}
+  % (D)
+  \begin{scope}[shift={(5.4,-5.2)}]
+    \clip (-2.3,-1.9) rectangle (2.3,1.9);
+    \draw[smooth, domain=-2.3:1.4] plot (\x, {-0.55*\x*(\x+2)});
+    \node[below] at (-2,-0.05) {\scriptsize $-2$};
+  \end{scope}
+\end{tikzpicture}

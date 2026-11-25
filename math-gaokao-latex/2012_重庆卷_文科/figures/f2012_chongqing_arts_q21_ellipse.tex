@@ -1,0 +1,25 @@
+% 2012 年重庆卷文科第 21 题：椭圆上顶点 A、焦点 F1、F2 与 OF 中点 B1、B2。
+% 来源 PDF：普通高考/2012/2012重庆文.pdf，第 2 页（印面 724）第 3 栏。
+% 按 (1) 的结果 a=2√5、b=2、c=4 作图：A(0,2)，B1(-2,0)，B2(2,0)。
+\begin{tikzpicture}[scale=0.62, semithick, >=Stealth, font=\small]
+  \draw (0,0) ellipse (4.472 and 2);
+  \draw[->] (-5.6,0) -- (5.8,0) node[right] {$x$};
+  \draw[->] (0,-3.0) -- (0,3.2) node[above] {$y$};
+  \coordinate (A) at (0,2);
+  \coordinate (F1) at (-4,0);
+  \coordinate (F2) at (4,0);
+  \coordinate (B1) at (-2,0);
+  \coordinate (B2) at (2,0);
+  \fill (A) circle (2.4pt);
+  \fill (F1) circle (2.4pt);
+  \fill (F2) circle (2.4pt);
+  \fill (B1) circle (2.4pt);
+  \fill (B2) circle (2.4pt);
+  \node[above] at (A) {$A$};
+  \node[below left] at (F1) {$F_1$};
+  \node[below right] at (F2) {$F_2$};
+  \node[below left] at (B1) {$B_1$};
+  \node[below right] at (B2) {$B_2$};
+  \node[below left] at (0,0) {$O$};
+  \draw (A) -- (B1) -- (B2) -- cycle;
+\end{tikzpicture}

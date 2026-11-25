@@ -14,6 +14,14 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 重庆卷（文科）：phase7-b52 新卷转录、四版封账（2026-11-25；`closed`）
+- 对象：`gk-2012-chongqing-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-e1582993027e54715f2ac842f2a1966f86038ea5999fa5666895d5adc99b10c5`，2 页 A3 横向，印面 723、724。
+- 答案（独立推导，等级 D）：1 A；2 C；3 D；4 A；5 C；6 B；7 B；8 B；9 A；10 D；11 $15$；12 $4$；13 $\frac{\sqrt{15}}4$；14 $\frac{3\sqrt2}4$；15 $\frac15$；16 (1) $a_n=2n$、(2) $k=2$；17 (1) $a=1,b=-12$、(2) 最小值 $3$；18 (1) $\frac{13}{27}$、(2) $\frac4{27}$；19 (1) $f=2\sin(2x+\frac\pi6)$、(2) $[1,\frac74)\cup(\frac74,\frac52]$；20 (1) $\sqrt5$、(2) $\frac13$；21 (1) $e=\frac{2\sqrt5}5$、$\frac{x^2}{20}+\frac{y^2}4=1$、(2) $\frac{16\sqrt{10}}9$。
+- 复核要点：第 8 题由 $f$ 在 $x=-2$ 取极小值推出 $xf'(x)$ 在 $(-2,0)$ 为负、两侧为正，故选 B；第 9 题 $A,D$ 同在以 $BC=\sqrt2$ 为直径的球面上，得 $a\in(0,\sqrt2)$；第 19(2) 用 $f(x+\frac\pi6)=2\cos2x$ 与 $6\cos^4x-\sin^2x-1=(3\cos^2x+2)\cos2x$ 约分，得 $g=\frac{7+3\cos2x}4$（$\cos2x\neq0$）；第 20(2) 由 $AB_1\perp A_1C$ 得高 $2\sqrt2$、夹角余弦 $\frac13$；第 21(2) 由 $PB_2\perp QB_2$ 化出 $64k^2-16=0$，面积 $\frac{16\sqrt{10}}9$。
+- 图稿：3 张 TikZ（四个图象选项、直三棱柱、椭圆）；第 8 题按 $y=-0.6x(x+2.4)$、$0.55x(x+2)$、$0.8x$、$-0.55x(x+2)$ 作四个带裁切框的面板，避免图线越界。
+- 验收：四版 4/18/6/13 页（共 41 页），四 log 全 0；review 41 页 **293 pass + 35 not_applicable、0 fail、0 豁免**；`finalize-batch` → `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；3 条图稿引用全部命中。
+- 全库（本卷封账后）：manifest **643 卷 / 775 来源 / 489 批次**，complete 525、blocked 118，未绑定 **133**；revision 11710。已触发 643 卷报告刷新（render + check + manifest_csv）。
+
 ### 2012 陕西卷（理科）：phase7-b51 新卷转录、四版封账（2026-11-25；`closed`）
 - 对象：`gk-2012-shaanxi-science`，**21 个题号**（选择 1—10、填空 11—15（第 15 题三选一）、解答 16—21）；固定来源 `src-b6ade673f48053958cb2e47b6a3c4063a053e174dd258d5b7d6b385576316c39`，2 页 A3 横向，印面 763、764。
 - 答案（独立推导，等级 D）：1 C；2 D；3 B；4 A；5 A；6 B；7 D；8 C；9 C；10 D；11 第五个不等式 $<\frac95$；12 $1$；13 $2\sqrt6$；14 $2$；15 A $[-2,4]$、B $5$、C $\sqrt3$；16 (1) $f=2\sin(2x-\frac\pi6)+1$、(2) $\frac\pi3$；17 (1) $q=-2$、(2) 证明；18 (1) 证明、(2) 逆命题真；19 (1) $\frac{x^2}4+\frac{y^2}{16}=1$、(2) $y=\pm x$；20 (1) $0.22$、(2) $P(X{=}0)=0.5$、$P(X{=}1)=0.49$、$P(X{=}2)=0.01$、$EX=0.51$；21 (1) 证明、(2) $[-2,2]$、(3) 递增。

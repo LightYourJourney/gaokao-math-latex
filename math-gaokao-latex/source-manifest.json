@@ -4060,6 +4060,14 @@
         "gk-2012-shaanxi-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b52",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-chongqing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4069,7 +4077,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "95191366-d6fe-428a-a3c9-e74d511102c1",
+  "last_transaction_id": "8f5f38e3-acb2-4d79-ba45-930aaa21a1f2",
   "papers": [
     {
       "blocked_from": null,
@@ -47472,9 +47480,74 @@
       "title": "2012 年·陕西卷·理科",
       "track": "science",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_重庆卷_文科/figures/f2012_chongqing_arts_q08_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_重庆卷_文科/figures/f2012_chongqing_arts_q20_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_重庆卷_文科/figures/f2012_chongqing_arts_q21_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_chongqing_arts",
+        "id": "gk-2012-chongqing-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 723、724。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。重庆卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页 3 幅图：第 8 题四个函数图象选项、第 20 题直三棱柱、第 21 题椭圆与焦点，均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "重庆卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "重庆文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-chongqing-arts",
+      "production_state": "complete",
+      "project_dir": "2012_重庆卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_重庆文_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_重庆文_含解析.md",
+        "questions": "2012/2012_数学真题_重庆文_试题.md",
+        "solution_body": "2012/2012_数学真题_重庆文_解析正文.md"
+      },
+      "source_ids": [
+        "src-e1582993027e54715f2ac842f2a1966f86038ea5999fa5666895d5adc99b10c5"
+      ],
+      "title": "2012 年·重庆卷·文科",
+      "track": "arts",
+      "year": 2012
     }
   ],
-  "revision": 11699,
+  "revision": 11710,
   "schema_version": 1,
   "sources": [
     {
@@ -60623,8 +60696,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0fb3c248d78545e2fa119c1e9e4aa6e938321307",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-chongqing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012重庆文.pdf",
       "regions": [],
       "source_id": "src-e1582993027e54715f2ac842f2a1966f86038ea5999fa5666895d5adc99b10c5",
