@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 选项行距回修第八批：1989 上海卷 3 条选项改行内分式（页数不变，2026-11-25；`closed`）
+- `gk-1989-regular-shanghai`（phase4-b01）：3 条选项行的 `\dfrac` 改为 `\frac`，重生成、重算哈希、重建四版，四版页数不变，沿用原逐页回执并重新 `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`。
+- 审计复跑后 backlog 仍为 105 卷：本卷审计残项是第 7 题 (D) 的 `\begin{cases}` 内分式（单条低风险），不属于本批“同题连续 ≥2 条”的确定风险，已在审计报告中保留。
+- 全库：manifest revision 11457，complete 515、blocked 118；633 卷报告与 `manifest.csv` 已刷新（`report.md` 试卷总数 633、FINALIZED 479）。
+
+### Blocked 卷逐卷复核：118 卷解除条件清单落地（2026-11-25；`closed`）
+- 新增只读投影 `math-gaokao-latex/reports/blocked-triage.md`：逐卷列出 `blocked_from`、问题类型、解除条件与本地源探测（上游 PDF 是否存在、页数、前两页文字层字符数）。
+- 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
+- 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
+
 ### 2012 上海卷（文科）：phase7-b42 新卷转录、四版封账（2026-11-25；`closed`）
 - 对象：`gk-2012-shanghai-arts`，**23 个题号**（填空 1—14、选择 15—18、解答 19—23）；固定来源 `src-cd1af294bc5d836ee713ef6519331bf4fadf0612d74acf546e4e400562c8012b`，固定件 SHA-256 `ab336885e444a7e2c83b5ebaafda34b0ace6f479517d9f1af9d74f9e892ccbf0`（512,377 bytes），2 页 A3 横向，印面页码 769、770。
 - 来源核对：文字层只作定位；题面、选项、第 19 题三棱锥与第 21 题抛物线路径均按 300 dpi 分栏渲染逐栏核对。原页未印分值、无答案页，全部记「原页未标」，不补。
