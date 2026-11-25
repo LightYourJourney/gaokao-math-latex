@@ -14,6 +14,12 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 选项行距回修第十批：2008 浙江文 9 条改行内分式、分页变化后整卷重审（2026-11-25；`closed`）
+- `gk-2008-zhejiang-arts`（phase6-b13）：9 条选项行 `\dfrac→\frac`，重生成三份共享文件、从 `provenance.json` 还原三角色回执并重算哈希、重建四版。印刷版页数 15→14（其余 4/17/6 不变），**不满足沿用条件**，按硬条件四版逐页重审（4/17/6/14 共 41 页）后重新 `FINALIZED`。
+- 重审记录：试题版 4 页、解析版 17 页、简答版 6 页、印刷版 14 页，逐页八类检查全部 pass 或 not_applicable；`validate-receipts --require-final` = `OK：1 卷`。
+- 审计/backlog 复跑：待办 **104 → 103 卷**（complete 90 → 89），这是首例「改后分页变化→整卷重审→封账」完成的回修卷。
+- 全库：manifest revision 11631；complete 518、blocked 118；未绑定 140。
+
 ### 2012 陕西卷（文科）：phase7-b45 新卷转录、四版封账（2026-11-25；`closed`）
 - 对象：`gk-2012-shaanxi-arts`，**21 个题号**（选择 1—10、填空 11—15（第 15 题三选一）、解答 16—21）；固定来源 `src-8ac08b7b0cf4de132edaa3bdcda1415792e56eb55d7294d9a422ecbc9fa7ec0d`，固定件 SHA-256 `bf4df8039190dfe11b673e834bcd998d29c1bfd47cb8b2d8ad63b2de0c41af21`（508,603 bytes），2 页 A3 横向，印面 765、766。
 - 答案（独立推导，等级 D）：1 C；2 D；3 A；4 B；5 D；6 A；7 C；8 A；9 D；10 A；11 $4$；12 第五个不等式 $<9/5$；13 $2$；14 $2\sqrt6$；15 A $[-2,4]$、B $5$、C $\sqrt3$；16 (1) $S_n=\frac23[1-(-\frac12)^n]$、(2) 证明；17 (1) $f=2\sin(2x-\frac\pi6)+1$、(2) $\alpha=\frac\pi3$；18 (1) 证明、(2) $\frac23$；19 (1) $0.25$、(2) $\frac{15}{29}$；20 (1) $\frac{x^2}4+\frac{y^2}{16}=1$、(2) $y=\pm x$；21 (1) 证明、(2) 最小 $-4$、最大 $-2$、(3) $b\in[-2,2]$。
