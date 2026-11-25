@@ -4100,6 +4100,14 @@
         "gk-2013-liaoning-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b57",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-hunan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4109,7 +4117,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "aa93d3d7-ebf8-44e0-b5c3-36c49b11f2cc",
+  "last_transaction_id": "f8030b85-903d-44e4-acdb-7c4b3021c2f8",
   "papers": [
     {
       "blocked_from": null,
@@ -47882,9 +47890,74 @@
       "title": "2013 年·辽宁卷·文科",
       "track": "arts",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖南卷_文科/figures/f2013_hunan_arts_q12_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖南卷_文科/figures/f2013_hunan_arts_q17_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖南卷_文科/figures/f2013_hunan_arts_q18_lattice_triangle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_hunan_arts",
+        "id": "gk-2013-hunan-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 813、814。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖南卷题号：选择 1—9、填空 10—15、解答 16—21，共 21 题（第 10 题在“二、填空题”标题之下，无选项，按原页归入填空）。答案由本库独立推导（等级 D，非官方）。原页 3 幅图：第 12 题程序框图、第 17 题直棱柱、第 18 题格点地块，均以 TikZ 重绘共 3 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            10,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            9
+          ]
+        },
+        "track": "文科",
+        "variant": "湖南文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-hunan-arts",
+      "production_state": "complete",
+      "project_dir": "2013_湖南卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_湖南文_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_湖南文_含解析.md",
+        "questions": "2013/2013_数学真题_湖南文_试题.md",
+        "solution_body": "2013/2013_数学真题_湖南文_解析正文.md"
+      },
+      "source_ids": [
+        "src-a3d1cad50982f20e0e632a408984a20aef443dc43aa02730c7fb1e728a65ba19"
+      ],
+      "title": "2013 年·湖南卷·文科",
+      "track": "arts",
+      "year": 2013
     }
   ],
-  "revision": 11742,
+  "revision": 11747,
   "schema_version": 1,
   "sources": [
     {
@@ -61777,8 +61850,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9d8311d234d04198833de0970fe9bd0b711ccb41",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-hunan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013湖南文.pdf",
       "regions": [],
       "source_id": "src-a3d1cad50982f20e0e632a408984a20aef443dc43aa02730c7fb1e728a65ba19",

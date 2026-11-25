@@ -1,0 +1,22 @@
+% 2013 湖南卷文科第 12 题：程序框图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.45pt,
+  node distance=4.6mm,
+  box/.style={draw, minimum height=1.7em, inner xsep=6pt},
+  term/.style={draw, rounded corners=5pt, minimum height=1.7em, inner xsep=8pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.7em, inner xsep=6pt},
+  dec/.style={draw, diamond, aspect=2.2, inner sep=1pt}]
+  \node[term] (start) {开始};
+  \node[io, below=5mm of start] (input) {输入 $a$，$b$};
+  \node[dec, below=5.5mm of input] (cond) {$a>8$?};
+  \node[io, right=10mm of cond] (output) {输出 $a$};
+  \node[term, below=5mm of output] (end) {结束};
+  \node[box, below=6mm of cond] (add) {$a=a+b$};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (cond);
+  \draw[->] (cond) -- node[above] {是} (output);
+  \draw[->] (output) -- (end);
+  \draw[->] (cond) -- node[right] {否} (add);
+  % 否分支回到判断框之前
+  \draw[->] (add.west) -- ++(-1.5,0) |- (cond.west);
+\end{tikzpicture}
