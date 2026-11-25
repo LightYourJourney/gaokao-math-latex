@@ -3980,6 +3980,14 @@
         "gk-2011-spring-shanghai"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b42",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-shanghai-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3989,7 +3997,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "aa551470-916e-4edc-a943-b7d866113b7e",
+  "last_transaction_id": "be80edb0-25b7-4693-b49c-6b29069cbe46",
   "papers": [
     {
       "blocked_from": null,
@@ -46690,9 +46698,70 @@
       "title": "2011 年·上海春季卷",
       "track": "none",
       "year": 2011
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_上海卷_文科/figures/f2012_shanghai_arts_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_上海卷_文科/figures/f2012_shanghai_arts_q21_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_shanghai_arts",
+        "id": "gk-2012-shanghai-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 769、770。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。上海卷题号：填空 1—14、选择 15—18、解答 19—23，共 23 题。答案由本库独立推导（等级 D，非官方）。原页 2 幅图：第 19 题三棱锥、第 21 题抛物线路径，均由 TikZ 重绘；其余各题原页无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-shanghai-arts",
+      "production_state": "complete",
+      "project_dir": "2012_上海卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_上海文_含解析.md",
+        "questions": "2012/2012_数学真题_上海文_试题.md",
+        "solution_body": "2012/2012_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-cd1af294bc5d836ee713ef6519331bf4fadf0612d74acf546e4e400562c8012b"
+      ],
+      "title": "2012 年·上海卷·文科",
+      "track": "arts",
+      "year": 2012
     }
   ],
-  "revision": 11441,
+  "revision": 11453,
   "schema_version": 1,
   "sources": [
     {
@@ -59097,8 +59166,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ab43cac8e21e4a221ecbe3ffd487b0f3ed7bc1c6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012上海文.pdf",
       "regions": [],
       "source_id": "src-cd1af294bc5d836ee713ef6519331bf4fadf0612d74acf546e4e400562c8012b",
