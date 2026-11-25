@@ -1,0 +1,580 @@
+% answers.tex —— 2012 年·北京卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2012/2012_数学真题_北京文_试题.md + 2012/2012_数学真题_北京文_解析正文.md + 2012/2012_数学真题_北京文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 $A=\{x\in\mathbf R\mid3x+2>0\}$，$B=\{x\in\mathbf R\mid(x+1)(x-3)>0\}$，则 $A\cap B=$\mbox{（　　）}
+
+（A）$(-\infty,-1)$；（B）$\left(-1,-\dfrac23\right)$；（C）$\left(-\dfrac23,3\right)$；（D）$(3,+\infty)$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由 $3x+2>0$ 得 $A=\left(-\dfrac23,+\infty\right)$；由 $(x+1)(x-3)>0$ 得 $B=(-\infty,-1)\cup(3,+\infty)$。故
+\nopagebreak[4]
+\[A\cap B=(3,+\infty).\]
+选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+在复平面内，复数 $\dfrac{10\mathrm i}{3+\mathrm i}$ 对应的点的坐标为\mbox{（　　）}
+
+（A）$(1,3)$；（B）$(3,1)$；（C）$(-1,3)$；（D）$(3,-1)$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\nopagebreak[4]
+\[\frac{10\mathrm i}{3+\mathrm i}=\frac{10\mathrm i(3-\mathrm i)}{(3+\mathrm i)(3-\mathrm i)}=\frac{30\mathrm i+10}{10}=1+3\mathrm i,\]
+对应点为 $(1,3)$。选 A。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+设不等式组 $\begin{cases}0\leqslant x\leqslant2,\\0\leqslant y\leqslant2\end{cases}$ 表示的平面区域为 $D$。在区域 $D$ 内随机取一个点，则此点到坐标原点的距离大于 $2$ 的概率是\mbox{（　　）}
+
+（A）$\dfrac\pi4$；（B）$\dfrac{\pi-2}2$；（C）$\dfrac\pi6$；（D）$\dfrac{4-\pi}4$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+区域 $D$ 是边长为 $2$ 的正方形，面积为 $4$。到原点距离不大于 $2$ 的部分是以原点为圆心、半径 $2$ 的四分之一圆，面积为 $\pi$。故所求概率为
+\nopagebreak[4]
+\[\frac{4-\pi}4.\]
+选 D。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+执行如图所示的程序框图，输出的 $S$ 值为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2012_beijing_arts_q04_flowchart}\end{center}
+\nopagebreak[4]
+（A）$2$；（B）$4$；（C）$8$；（D）$16$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+初始 $k=0$，$S=1$。每次先算 $S=S\cdot2^k$，再令 $k=k+1$，然后判断 $k<3$：
+\nopagebreak[4]
+\[k=0:\ S=1,\ k=1;\qquad k=1:\ S=2,\ k=2;\qquad k=2:\ S=8,\ k=3.\]
+此时 $k<3$ 不成立，输出 $S=8$。选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+函数 $f(x)=x^{\frac12}-\left(\dfrac12\right)^x$ 的零点个数为\mbox{（　　）}
+
+（A）$0$；（B）$1$；（C）$2$；（D）$3$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+$f(x)=x^{\frac12}-\left(\dfrac12\right)^x$ 在 $[0,+\infty)$ 上单调递增（$x^{\frac12}$ 递增，$\left(\dfrac12\right)^x$ 递减）。又
+\nopagebreak[4]
+\[f(0)=-1<0,\qquad f(1)=\frac12>0,\]
+故在 $(0,1)$ 内恰有一个零点，共 $1$ 个。选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+已知 $\{a_n\}$ 为等比数列，下面结论中正确的是\mbox{（　　）}
+
+（A）$a_1+a_3\geqslant2a_2$；（B）$a_1^2+a_3^2\geqslant2a_2^2$；（C）若 $a_1=a_3$，则 $a_1=a_2$；（D）若 $a_3>a_1$，则 $a_4>a_2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+设公比为 $q$，则 $a_2=a_1q$，$a_3=a_1q^2$。
+（A）$a_1+a_3-2a_2=a_1(1-q)^2$，当 $a_1<0$ 时为负，错误；
+（B）$a_1^2+a_3^2-2a_2^2=a_1^2(1-q^2)^2\geqslant0$，正确；
+（C）$a_1=a_3$ 得 $q^2=1$，若 $q=-1$ 则 $a_2=-a_1$，错误；
+（D）$a_3>a_1$ 即 $a_1(q^2-1)>0$，而 $a_4-a_2=a_1q(q^2-1)$ 的符号还取决于 $q$，错误。
+选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+某三棱锥的三视图如图所示，该三棱锥的表面积是\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2012_beijing_arts_q07_views}\end{center}
+\nopagebreak[4]
+（A）$28+6\sqrt5$；（B）$30+6\sqrt5$；（C）$56+12\sqrt5$；（D）$60+12\sqrt5$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+由正视图知底面一边长为 $5$、棱锥高为 $4$，顶点在底面上的投影距该边左端 $2$；由侧视图知底面另一边长为 $4$，投影落在底面的前边上；由俯视图知底面是直角边为 $5$、$4$ 的直角三角形。设底面顶点 $A(0,0,0)$，$B(5,0,0)$，$C(5,4,0)$，顶点 $P(2,0,4)$。
+
+底面 $ABC$ 的面积 $\dfrac12\cdot5\cdot4=10$；侧面 $PAB$ 中 $AB=5$，$P$ 到 $AB$ 的距离为 $4$，面积 $10$；侧面 $PBC$ 中 $PB=(3,0,-4)$，$BC=(0,4,0)$，$PB\cdot BC=0$，故 $PB\perp BC$，$PB=5$，面积 $\dfrac12\cdot5\cdot4=10$。
+
+\Needspace{5\baselineskip}
+侧面 $PAC$ 中 $\overrightarrow{AC}=(5,4,0)$，$\overrightarrow{AP}=(2,0,4)$，故
+\nopagebreak[4]
+\[S_{\triangle PAC}=\frac12\left|\overrightarrow{AC}\times\overrightarrow{AP}\right|=\frac12\sqrt{16^2+20^2+8^2}=\frac12\sqrt{720}=6\sqrt5.\]
+\Needspace{5\baselineskip}
+所以表面积
+\nopagebreak[4]
+\[S=10+10+10+6\sqrt5=30+6\sqrt5.\]
+选 B。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+某棵果树前 $n$ 年的总产量 $S_n$ 与 $n$ 之间的关系如图所示。从目前记录的结果看，前 $m$ 年的年平均产量最高，$m$ 的值为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2012_beijing_arts_q08_scatter}\end{center}
+\nopagebreak[4]
+（A）$5$；（B）$7$；（C）$9$；（D）$11$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+前 $m$ 年的年平均产量为 $\dfrac{S_m}m$，即点 $(m,S_m)$ 与原点连线的斜率。图中共有 $n=1,2,\cdots,9$ 九个样本点，逐点比较可知连线斜率随 $n$ 增大而增大，在第 $9$ 个点处最大，故 $m=9$。选 C。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+直线 $y=x$ 被圆 $x^2+(y-2)^2=4$ 截得的弦长为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+圆心为 $(0,2)$，半径 $2$。圆心到直线 $x-y=0$ 的距离
+\nopagebreak[4]
+\[d=\frac{|0-2|}{\sqrt2}=\sqrt2,\]
+故弦长为 $2\sqrt{4-2}=2\sqrt2$。
+
+\gkanswer{答案：$2\sqrt2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知 $\{a_n\}$ 为等差数列，$S_n$ 为其前 $n$ 项和，若 $a_1=\dfrac12$，$S_2=a_3$，则 $a_2=$\gkblank{}；$S_n=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设公差为 $d$，则 $a_2=\dfrac12+d$，$a_3=\dfrac12+2d$。由 $S_2=a_3$ 得
+\nopagebreak[4]
+\[\frac12+\left(\frac12+d\right)=\frac12+2d,\]
+\Needspace{5\baselineskip}
+解得 $d=\dfrac12$，故 $a_2=1$。于是
+\nopagebreak[4]
+\[S_n=\frac n2+\frac{n(n-1)}2\cdot\frac12=\frac{n(n+1)}4.\]
+
+\gkanswer{答案：$a_2=1$；$S_n=\dfrac{n(n+1)}4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，若 $a=3$，$b=\sqrt3$，$\angle A=\dfrac\pi3$，则 $\angle C$ 的大小为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由正弦定理 $\sin B=\dfrac{b\sin A}{a}=\dfrac{\sqrt3\cdot\frac{\sqrt3}2}{3}=\dfrac12$。因为 $b<a$，所以 $B<A=\dfrac\pi3$，只能 $B=\dfrac\pi6$。故
+\nopagebreak[4]
+\[C=\pi-\frac\pi3-\frac\pi6=\frac\pi2.\]
+
+\gkanswer{答案：$\dfrac\pi2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=\lg x$。若 $f(ab)=1$，则 $f(a^2)+f(b^2)=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由 $f(ab)=1$ 得 $\lg(ab)=1$，即 $ab=10$。于是
+\nopagebreak[4]
+\[f(a^2)+f(b^2)=\lg a^2+\lg b^2=2\lg(ab)=2.\]
+
+\gkanswer{答案：$2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知正方形 $ABCD$ 的边长为 $1$，点 $E$ 是 $AB$ 边上的动点，则 $\overrightarrow{DE}\cdot\overrightarrow{CB}$ 的值为\gkblank{}；$\overrightarrow{DE}\cdot\overrightarrow{DC}$ 的最大值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+取 $A(0,0)$，$B(1,0)$，$C(1,1)$，$D(0,1)$，设 $E(t,0)$，$0\leqslant t\leqslant1$。则
+\nopagebreak[4]
+\[\overrightarrow{DE}=(t,-1),\qquad \overrightarrow{CB}=(0,-1),\qquad \overrightarrow{DC}=(1,0).\]
+故 $\overrightarrow{DE}\cdot\overrightarrow{CB}=1$，$\overrightarrow{DE}\cdot\overrightarrow{DC}=t$，最大值为 $1$。
+
+\gkanswer{答案：$1$；$1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+已知 $f(x)=m(x-2m)(x+m+3)$，$g(x)=2^x-2$。若 $\forall x\in\mathbf R$，$f(x)<0$ 或 $g(x)<0$，则 $m$ 的取值范围是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+$g(x)<0$ 等价于 $x<1$，故条件等价于：对任意 $x\geqslant1$，都有 $f(x)<0$。
+
+若 $m>0$，抛物线开口向上，$x\to+\infty$ 时 $f(x)\to+\infty$，不满足；若 $m=0$，$f(x)\equiv0$，不满足。故 $m<0$。
+
+\Needspace{5\baselineskip}
+此时 $f(x)$ 开口向下，设两根为 $2m<0$ 与 $-(m+3)$，则 $f(x)<0$ 的解集是两根之外的区间。由于要求整个 $[1,+\infty)$ 都落在解集内，只需较大的根小于 $1$。由 $2m<0<1$，只需
+\nopagebreak[4]
+\[-(m+3)<1,\]
+\Needspace{5\baselineskip}
+即 $m>-4$。所以
+\nopagebreak[4]
+\[m\in(-4,0).\]
+
+\gkanswer{答案：$(-4,0)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=\dfrac{(\sin x-\cos x)\sin2x}{\sin x}$。
+
+（1） 求 $f(x)$ 的定义域及最小正周期；
+
+（2） 求 $f(x)$ 的单调递减区间。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 由 $\sin x\neq0$ 得定义域
+\nopagebreak[4]
+\[\{x\mid x\neq k\pi,\ k\in\mathbf Z\}.\]
+\Needspace{5\baselineskip}
+在该定义域上
+\nopagebreak[4]
+\[f(x)=\frac{(\sin x-\cos x)\cdot2\sin x\cos x}{\sin x}=2\cos x(\sin x-\cos x)=\sin2x-\cos2x-1,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[f(x)=\sqrt2\sin\left(2x-\frac\pi4\right)-1,\]
+故最小正周期 $T=\dfrac{2\pi}2=\pi$。
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 由 $2x-\dfrac\pi4\in\left[\dfrac\pi2+2k\pi,\dfrac{3\pi}2+2k\pi\right]$ 得
+\nopagebreak[4]
+\[x\in\left[\frac{3\pi}8+k\pi,\ \frac{7\pi}8+k\pi\right]\quad(k\in\mathbf Z),\]
+且这些区间内不含 $x=k\pi$，故单调递减区间为 $\left[\dfrac{3\pi}8+k\pi,\dfrac{7\pi}8+k\pi\right]$（$k\in\mathbf Z$）。
+
+\gkanswer{答案（1）：定义域 $\{x\mid x\neq k\pi,\ k\in\mathbf Z\}$，最小正周期 $T=\pi$。}
+
+\gkanswer{答案（2）：$\left[\dfrac{3\pi}8+k\pi,\ \dfrac{7\pi}8+k\pi\right]$（$k\in\mathbf Z$）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+如图 1，在 $\mathrm{Rt}\triangle ABC$ 中，$\angle C=90^\circ$，$D$，$E$ 分别是 $AC$，$AB$ 的中点，点 $F$ 为线段 $CD$ 上的一点，将 $\triangle ADE$ 沿 $DE$ 折起到 $\triangle A_1DE$ 的位置，使 $A_1F\perp CD$，如图 2。
+
+（1） 求证：$DE\parallel$ 平面 $A_1CB$；
+
+（2） 求证：$A_1F\perp BE$；
+
+（3） 线段 $A_1B$ 上是否存在点 $Q$，使 $A_1C\perp$ 平面 $DEQ$？说明理由。
+\nopagebreak[4]
+\begin{center}\input{figures/f2012_beijing_arts_q16_fold}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 因为 $D$，$E$ 分别是 $AC$，$AB$ 的中点，所以 $DE\parallel BC$。又 $DE\not\subset$ 平面 $A_1CB$，$BC\subset$ 平面 $A_1CB$，故
+\nopagebreak[4]
+\[DE\parallel\text{\text{平面} }A_1CB.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 折叠前 $\angle C=90^\circ$，故 $BC\perp AC$，即 $BC\perp CD$；又 $DE\parallel BC$，故 $DE\perp AC$，即 $AD\perp DE$。折叠后 $A_1D\perp DE$ 保持不变，而 $BC\parallel DE$，故 $BC\perp A_1D$。于是
+\nopagebreak[4]
+\[BC\perp CD,\quad BC\perp A_1D,\quad CD\cap A_1D=D,\]
+所以 $BC\perp$ 平面 $A_1DC$，从而 $BC\perp A_1F$。又已知 $A_1F\perp CD$，且 $BC\cap CD=C$，所以 $A_1F\perp$ 平面 $BCD$。因为 $BE\subset$ 平面 $BCD$，故 $A_1F\perp BE$。
+
+\textbf{（3）} 存在，$Q$ 为 $A_1B$ 的中点。
+
+\Needspace{5\baselineskip}
+因为 $D$ 是 $A_1C$ 的中点，$Q$ 是 $A_1B$ 的中点，所以 $DQ\parallel CB$。由（2）知 $BC\perp$ 平面 $A_1DC$，而 $A_1C\subset$ 平面 $A_1DC$，故 $BC\perp A_1C$，从而 $DQ\perp A_1C$。又 $DE\parallel BC$，故 $DE\perp A_1C$。于是
+\nopagebreak[4]
+\[A_1C\perp DQ,\quad A_1C\perp DE,\quad DQ\cap DE=D,\]
+所以 $A_1C\perp$ 平面 $DEQ$。
+
+\gkanswer{答案（1）：证明见解析。}
+
+\gkanswer{答案（2）：证明见解析。}
+
+\gkanswer{答案（3）：存在，$Q$ 为 $A_1B$ 的中点。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+近年来，某市为促进生活垃圾的分类处理，将生活垃圾分为厨余垃圾、可回收物和其他垃圾三类，并分别设置了相应的垃圾箱。为调查居民生活垃圾分类投放情况，现随机抽取了该市三类垃圾箱中总计 $1000$ 吨生活垃圾，数据统计如下（单位：吨）：
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+垃圾类别 & “厨余垃圾”箱 & “可回收物”箱 & “其他垃圾”箱 \\
+\midrule
+厨余垃圾 & $400$ & $100$ & $100$ \\
+可回收物 & $30$ & $240$ & $30$ \\
+其他垃圾 & $20$ & $20$ & $60$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+（1） 试估计厨余垃圾投放正确的概率；
+
+（2） 试估计生活垃圾投放错误的概率；
+
+（3） 假设厨余垃圾在“厨余垃圾”箱、“可回收物”箱、“其他垃圾”箱的投放量分别为 $a$，$b$，$c$，其中 $a>0$，$a+b+c=600$。当数据 $a$，$b$，$c$ 的方差 $s^2$ 最大时，写出 $a$，$b$，$c$ 的值（结论不要求证明），并求此时 $s^2$ 的值。
+
+（注：$s^2=\dfrac1n\left[(x_1-\overline x)^2+(x_2-\overline x)^2+\cdots+(x_n-\overline x)^2\right]$，其中 $\overline x$ 为数据 $x_1$，$x_2$，$\cdots$，$x_n$ 的平均数）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 厨余垃圾共 $400+100+100=600$ 吨，其中投放正确的为 $400$ 吨，故估计概率为
+\nopagebreak[4]
+\[\frac{400}{600}=\frac23.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 投放错误的总量为 $100+100+30+30+20+20=300$ 吨，故估计概率为
+\nopagebreak[4]
+\[\frac{300}{1000}=\frac3{10}.\]
+
+\Needspace{5\baselineskip}
+\textbf{（3）} 由 $a+b+c=600$ 知 $\overline x=200$，于是
+\nopagebreak[4]
+\[s^2=\frac13\left[(a-200)^2+(b-200)^2+(c-200)^2\right].\]
+\Needspace{5\baselineskip}
+当 $a,b,c$ 中一个取 $600$、另两个取 $0$ 时方差最大，且 $a>0$，故
+\nopagebreak[4]
+\[a=600,\qquad b=0,\qquad c=0,\]
+\Needspace{5\baselineskip}
+此时
+\nopagebreak[4]
+\[s^2=\frac13\left(400^2+200^2+200^2\right)=\frac{240000}3=80000.\]
+
+\gkanswer{答案（1）：$\dfrac23$。}
+
+\gkanswer{答案（2）：$\dfrac3{10}$。}
+
+\gkanswer{答案（3）：$a=600$，$b=0$，$c=0$；$s^2=80000$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=ax^2+1$（$a>0$），$g(x)=x^3+bx$。
+
+（1） 若曲线 $y=f(x)$ 与曲线 $y=g(x)$ 在它们的交点 $(1,c)$ 处具有公共切线，求 $a$，$b$ 的值；
+
+（2） 当 $a=3$，$b=-9$ 时，若函数 $f(x)+g(x)$ 在区间 $[k,2]$ 上的最大值为 $28$，求 $k$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 由交点为 $(1,c)$ 得 $f(1)=a+1=c$，$g(1)=1+b=c$，故 $a=b$。又两曲线在该点有公共切线，故
+\nopagebreak[4]
+\[f'(1)=2a,\qquad g'(1)=3+b=3+a,\]
+由 $2a=3+a$ 得 $a=3$，从而 $b=3$。
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 当 $a=3$，$b=-9$ 时，
+\nopagebreak[4]
+\[h(x)=f(x)+g(x)=x^3+3x^2-9x+1,\]
+\nopagebreak[4]
+\[h'(x)=3x^2+6x-9=3(x+3)(x-1).\]
+\Needspace{5\baselineskip}
+故 $h(x)$ 在 $(-\infty,-3)$ 上递增，在 $(-3,1)$ 上递减，在 $(1,+\infty)$ 上递增，且
+\nopagebreak[4]
+\[h(-3)=28,\qquad h(2)=3.\]
+\Needspace{5\baselineskip}
+要使 $h(x)$ 在 $[k,2]$ 上的最大值为 $28$，必须且只需 $-3\in[k,2]$，即 $k\leqslant-3$；此时 $h(k)\leqslant h(-3)=28$。故
+\nopagebreak[4]
+\[k\leqslant-3.\]
+
+\gkanswer{答案（1）：$a=3$，$b=3$。}
+
+\gkanswer{答案（2）：$k\leqslant-3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的一个顶点为 $A(2,0)$，离心率为 $\dfrac{\sqrt2}2$，直线 $y=k(x-1)$ 与椭圆 $C$ 交于不同的两点 $M$，$N$。
+
+（1） 求椭圆 $C$ 的方程；
+
+（2） 当 $\triangle AMN$ 的面积为 $\dfrac{\sqrt{10}}3$ 时，求 $k$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 由顶点 $A(2,0)$ 得 $a=2$，由 $e=\dfrac ca=\dfrac{\sqrt2}2$ 得 $c=\sqrt2$，故 $b^2=a^2-c^2=2$，椭圆方程为
+\nopagebreak[4]
+\[\frac{x^2}4+\frac{y^2}2=1.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 将 $y=k(x-1)$ 代入椭圆方程，得
+\nopagebreak[4]
+\[(1+2k^2)x^2-4k^2x+2k^2-4=0.\]
+\Needspace{5\baselineskip}
+设 $M(x_1,y_1)$，$N(x_2,y_2)$，则
+\nopagebreak[4]
+\[x_1+x_2=\frac{4k^2}{1+2k^2},\qquad x_1x_2=\frac{2k^2-4}{1+2k^2},\]
+\nopagebreak[4]
+\[|x_1-x_2|=\frac{\sqrt{24k^2+16}}{1+2k^2}.\]
+\Needspace{5\baselineskip}
+点 $A(2,0)$ 到直线 $kx-y-k=0$ 的距离为 $\dfrac{|k|}{\sqrt{1+k^2}}$，故
+\nopagebreak[4]
+\[S_{\triangle AMN}=\frac12\sqrt{1+k^2}\,|x_1-x_2|\cdot\frac{|k|}{\sqrt{1+k^2}}=\frac{|k|\sqrt{24k^2+16}}{2(1+2k^2)}.\]
+\Needspace{5\baselineskip}
+由 $S=\dfrac{\sqrt{10}}3$ 得
+\nopagebreak[4]
+\[9k^2(24k^2+16)=40(1+2k^2)^2,\]
+\Needspace{5\baselineskip}
+整理得 $7k^4-2k^2-5=0$，即 $(k^2-1)(7k^2+5)=0$，故 $k^2=1$，
+\nopagebreak[4]
+\[k=\pm1.\]
+
+\gkanswer{答案（1）：$\dfrac{x^2}4+\dfrac{y^2}2=1$。}
+
+\gkanswer{答案（2）：$k=\pm1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设 $A$ 是如下形式的 $2$ 行 $3$ 列的数表，
+
+\nopagebreak[4]
+\[\begin{array}{|c|c|c|}\hline a & b & c\\ \hline d & e & f\\ \hline\end{array}\]
+
+满足性质 $P$：$a$，$b$，$c$，$d$，$e$，$f\in[-1,1]$，且 $a+b+c+d+e+f=0$。
+
+记 $r_i(A)$ 为 $A$ 的第 $i$ 行各数之和（$i=1,2$），$c_j(A)$ 为 $A$ 的第 $j$ 列各数之和（$j=1,2,3$）；记 $k(A)$ 为 $|r_1(A)|$，$|r_2(A)|$，$|c_1(A)|$，$|c_2(A)|$，$|c_3(A)|$ 中的最小值。
+
+\Needspace{5\baselineskip}
+（1） 对如下数表 $A$，求 $k(A)$ 的值；
+
+\nopagebreak[4]
+\[\begin{array}{|c|c|c|}\hline 1 & 1 & -0.8\\ \hline 0.1 & -0.3 & -1\\ \hline\end{array}\]
+
+\Needspace{5\baselineskip}
+（2） 设数表 $A$ 形如
+
+\nopagebreak[4]
+\[\begin{array}{|c|c|c|}\hline 1 & 1 & -1-2d\\ \hline d & d & -1\\ \hline\end{array}\]
+
+其中 $-1\leqslant d\leqslant0$。求 $k(A)$ 的最大值；
+
+（3） 对所有满足性质 $P$ 的 $2$ 行 $3$ 列的数表 $A$，求 $k(A)$ 的最大值。
+
+\clearpage
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} $r_1(A)=1+1-0.8=1.2$，$r_2(A)=0.1-0.3-1=-1.2$，$c_1(A)=1.1$，$c_2(A)=0.7$，$c_3(A)=-1.8$。故
+\nopagebreak[4]
+\[k(A)=\min\{1.2,\,1.2,\,1.1,\,0.7,\,1.8\}=0.7.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 此时
+\nopagebreak[4]
+\[r_1(A)=1-2d,\quad r_2(A)=2d-1,\quad c_1(A)=c_2(A)=1+d,\quad c_3(A)=-2-2d.\]
+\Needspace{5\baselineskip}
+当 $-1\leqslant d\leqslant0$ 时，$|1-2d|=1-2d$，$|1+d|=1+d$，$|c_3|=2+2d$，且
+\nopagebreak[4]
+\[1+d\leqslant2+2d,\qquad 1+d\leqslant1-2d,\]
+故 $k(A)=1+d$，最大值为 $1$（在 $d=0$ 时取得）。
+
+\Needspace{5\baselineskip}
+\textbf{（3）} 对任意满足性质 $P$ 的数表，三列和满足
+\nopagebreak[4]
+\[c_1(A)+c_2(A)+c_3(A)=0.\]
+\Needspace{5\baselineskip}
+若 $|c_1|$，$|c_2|$，$|c_3|$ 都大于 $1$，则其中必有一个与另两个异号，且其绝对值等于另两个绝对值之和，大于 $2$；但每列只有两个数且均在 $[-1,1]$ 内，列和的绝对值不超过 $2$，矛盾。故 $|c_1|$，$|c_2|$，$|c_3|$ 中至少有一个不超过 $1$，从而
+\nopagebreak[4]
+\[k(A)\leqslant1.\]
+由（2）知 $k(A)=1$ 可以达到，故 $k(A)$ 的最大值为 $1$。
+
+\gkanswer{答案（1）：$0.7$。}
+
+\gkanswer{答案（2）：$1$。}
+
+\gkanswer{答案（3）：$1$。}
+
+\end{answer}

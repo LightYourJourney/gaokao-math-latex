@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 北京卷（文科）：phase7-b46 新卷转录、四版封账（2026-11-25；`closed`）
+- 对象：`gk-2012-beijing-arts`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-36d69f5b2207524b8bea6520945b7c2fcb50ea960949047055d68be066c94b52`，2 页 A3 横向，印面 719、720。
+- 答案（独立推导，等级 D）：1 D；2 A；3 D；4 C；5 B；6 B；7 B；8 C；9 $2\sqrt2$；10 $a_2=1$、$S_n=\frac{n(n+1)}4$；11 $\frac\pi2$；12 $2$；13 $1$；$1$；14 $(-4,0)$；15 (1) 定义域 $x\neq k\pi$、$T=\pi$、(2) $[\frac{3\pi}8+k\pi,\frac{7\pi}8+k\pi]$；16 (1)(2) 证明、(3) 存在且 $Q$ 为 $A_1B$ 中点；17 (1) $\frac23$、(2) $\frac3{10}$、(3) $a=600,b=c=0$、$s^2=80000$；18 (1) $a=b=3$、(2) $k\leqslant-3$；19 (1) $\frac{x^2}4+\frac{y^2}2=1$、(2) $k=\pm1$；20 (1) $0.7$、(2) $1$、(3) $1$。
+- 读图结论（本轮解除的阻塞）：第 8 题散点图在 150 dpi 下高 $n$ 段被裁切，改用 **400 dpi 重渲染 + 连通域取点**，确认共 9 个样本点（$n=1,\cdots,9$），各点与原点连线斜率 0.05、0.05、0.29、0.47、0.63、0.65、0.86、0.88、0.89 单调增大，最大值在 $n=9$，故 $m=9$、选 C。第 7 题三视图按「底面直角边 5、4，顶点投影在 5 的边上距左端 2、高 4」重建，表面积 $30+6\sqrt5$，选 B（与四个选项吻合）。
+- 图稿：4 张 TikZ（程序框图、三视图、散点图、折叠前后两位置），独立编译通过；第 17、20 题的数表用 tabular/array 排版。
+- 验收：四版 5/20/7/16 页（共 48 页），四 log 全 0（errors、Overfull、missing characters 均 0）；review 48 页 **355 pass + 29 not_applicable、0 fail、0 豁免**；`finalize-batch` → `FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；4 条图稿引用全部命中。
+- 全库（本卷封账后）：manifest **637 卷 / 775 来源 / 483 批次**，complete 519、blocked 118，未绑定 **139**；revision 11639。
+- 里程碑：自 `report.md` 上次刷新（634 卷）已新增 3 卷（天津文、陕西文、北京文），本轮触发 `report.py render --all` + `check --all` 与 `manifest_csv --write`。
+
 ### 选项行距回修第十批：2008 浙江文 9 条改行内分式、分页变化后整卷重审（2026-11-25；`closed`）
 - `gk-2008-zhejiang-arts`（phase6-b13）：9 条选项行 `\dfrac→\frac`，重生成三份共享文件、从 `provenance.json` 还原三角色回执并重算哈希、重建四版。印刷版页数 15→14（其余 4/17/6 不变），**不满足沿用条件**，按硬条件四版逐页重审（4/17/6/14 共 41 页）后重新 `FINALIZED`。
 - 重审记录：试题版 4 页、解析版 17 页、简答版 6 页、印刷版 14 页，逐页八类检查全部 pass 或 not_applicable；`validate-receipts --require-final` = `OK：1 卷`。

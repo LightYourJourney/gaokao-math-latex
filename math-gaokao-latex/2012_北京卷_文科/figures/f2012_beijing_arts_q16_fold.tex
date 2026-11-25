@@ -1,0 +1,49 @@
+% 2012 年北京卷文科第 16 题：Rt△ABC 沿中位线 DE 折起前后的两个位置（图 1、图 2）。
+% 来源 PDF：普通高考/2012/2012北京文.pdf，第 1 页（印面 719）右栏。
+% 图 1：∠C=90°，D、E 为 AC、AB 中点，F 在线段 CD 上；图 2：折叠后 A 到 A1，A1F⊥CD。
+\begin{tikzpicture}[scale=0.8, semithick, font=\small]
+  % ---------- 图 1 ----------
+  \begin{scope}
+    \coordinate (C) at (0,0);
+    \coordinate (B) at (4.2,0);
+    \coordinate (A) at (0,5.0);
+    \coordinate (D) at (0,2.5);
+    \coordinate (E) at (2.1,2.5);
+    \coordinate (F) at (0,1.2);
+    \draw (A) -- (C) -- (B) -- cycle;
+    \draw (D) -- (E);
+    \fill (F) circle (1.9pt);
+    \node[above left] at (A) {$A$};
+    \node[below left] at (C) {$C$};
+    \node[below right] at (B) {$B$};
+    \node[left] at (D) {$D$};
+    \node[above] at (E) {$E$};
+    \node[left] at (F) {$F$};
+    \node[below] at (2.1,-0.55) {图 1};
+  \end{scope}
+  % ---------- 图 2 ----------
+  \begin{scope}[shift={(7.4,0)}]
+    \coordinate (C2) at (0,0);
+    \coordinate (B2) at (4.4,0);
+    \coordinate (A1) at (0.55,4.7);
+    \coordinate (D2) at (2.15,2.05);
+    \coordinate (E2) at (3.95,2.05);
+    \coordinate (F2) at (1.15,1.10);
+    \draw (C2) -- (B2);
+    \draw (C2) -- (A1);
+    \draw (A1) -- (E2);
+    \draw (E2) -- (B2);
+    \draw (A1) -- (B2);
+    \draw[dashed] (A1) -- (D2);
+    \draw[dashed] (D2) -- (E2);
+    \draw[dashed] (C2) -- (D2);
+    \draw[dashed] (A1) -- (F2);
+    \node[above left] at (A1) {$A_1$};
+    \node[below left] at (C2) {$C$};
+    \node[below right] at (B2) {$B$};
+    \node[above left] at (D2) {$D$};
+    \node[right] at (E2) {$E$};
+    \node[below] at (F2) {$F$};
+    \node[below] at (2.2,-0.55) {图 2};
+  \end{scope}
+\end{tikzpicture}

@@ -4012,6 +4012,14 @@
         "gk-2012-shaanxi-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b46",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-beijing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4021,7 +4029,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5be2ace6-00fe-4d40-b04b-2d8d65c21d93",
+  "last_transaction_id": "5c5eb778-f632-4a0a-932b-fa740f9e67a7",
   "papers": [
     {
       "blocked_from": null,
@@ -46998,9 +47006,78 @@
       "title": "2012 年·陕西卷·文科",
       "track": "arts",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_北京卷_文科/figures/f2012_beijing_arts_q04_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_北京卷_文科/figures/f2012_beijing_arts_q07_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_北京卷_文科/figures/f2012_beijing_arts_q08_scatter.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_北京卷_文科/figures/f2012_beijing_arts_q16_fold.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_beijing_arts",
+        "id": "gk-2012-beijing-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 719、720。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。北京卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题。答案由本库独立推导（等级 D，非官方）。原页 4 幅图：第 4 题程序框图、第 7 题三视图、第 8 题散点图、第 16 题折叠前后的两个位置，均由 TikZ 重绘；第 17、20 题的数表以表格排版。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-beijing-arts",
+      "production_state": "complete",
+      "project_dir": "2012_北京卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_北京文_含解析.md",
+        "questions": "2012/2012_数学真题_北京文_试题.md",
+        "solution_body": "2012/2012_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-36d69f5b2207524b8bea6520945b7c2fcb50ea960949047055d68be066c94b52"
+      ],
+      "title": "2012 年·北京卷·文科",
+      "track": "arts",
+      "year": 2012
     }
   ],
-  "revision": 11634,
+  "revision": 11639,
   "schema_version": 1,
   "sources": [
     {
@@ -59453,8 +59530,8 @@
       "exam_type": "regular",
       "git_blob_oid": "005366b0d110d4baab0a5d5ad2f665f229a82ae5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012北京文.pdf",
       "regions": [],
       "source_id": "src-36d69f5b2207524b8bea6520945b7c2fcb50ea960949047055d68be066c94b52",
