@@ -3988,6 +3988,14 @@
         "gk-2012-shanghai-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b43",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-shanghai-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3997,7 +4005,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0b326146-cd62-4f66-8bad-7f4094913983",
+  "last_transaction_id": "4df7a5e4-2731-45e1-8050-17390811b506",
   "papers": [
     {
       "blocked_from": null,
@@ -46759,9 +46767,78 @@
       "title": "2012 年·上海卷·文科",
       "track": "arts",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_上海卷_理科/figures/f2012_shanghai_science_q10_polar.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_上海卷_理科/figures/f2012_shanghai_science_q14_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_上海卷_理科/figures/f2012_shanghai_science_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_上海卷_理科/figures/f2012_shanghai_science_q21_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_shanghai_science",
+        "id": "gk-2012-shanghai-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 767、768。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。上海卷题号：填空 1—14、选择 15—18、解答 19—23，共 23 题。答案由本库独立推导（等级 D，非官方）。原页 4 幅图：第 10 题极坐标示意、第 14 题四面体、第 19 题四棱锥、第 21 题抛物线路径，均由 TikZ 重绘；其余各题原页无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-shanghai-science",
+      "production_state": "complete",
+      "project_dir": "2012_上海卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_上海理_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_上海理_含解析.md",
+        "questions": "2012/2012_数学真题_上海理_试题.md",
+        "solution_body": "2012/2012_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-e6eecaac79dd0e7b3070e4118d094883da10aaed9b2088ffcaf78e343a3cdeb6"
+      ],
+      "title": "2012 年·上海卷·理科",
+      "track": "science",
+      "year": 2012
     }
   ],
-  "revision": 11535,
+  "revision": 11543,
   "schema_version": 1,
   "sources": [
     {
@@ -59190,8 +59267,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9061dcffe17043f71764b98d3eba155e7743bd9a",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012上海理.pdf",
       "regions": [],
       "source_id": "src-e6eecaac79dd0e7b3070e4118d094883da10aaed9b2088ffcaf78e343a3cdeb6",

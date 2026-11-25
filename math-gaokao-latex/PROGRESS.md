@@ -14,6 +14,21 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 上海卷（理科）：phase7-b43 新卷转录、四版封账（2026-11-25；`closed`）
+- 对象：`gk-2012-shanghai-science`，**23 个题号**（填空 1—14、选择 15—18、解答 19—23）；固定来源 `src-e6eecaac79dd0e7b3070e4118d094883da10aaed9b2088ffcaf78e343a3cdeb6`，固定件 SHA-256 `3e355bd98c90c06bd9a2b62bca3d1e6c3e965caaae5b0fd13d3cee2392b4ace9`（508,230 bytes），2 页 A3 横向，印面页码 767、768。
+- 来源核对：文字层只作定位；题面、选项、第 10 题极坐标图、第 14 题四面体、第 19 题四棱锥与第 21 题抛物线均按 300—400 dpi 分栏渲染核对。原页未印分值、无答案页。
+- 答案（独立推导，等级 D）：1 $1-2\mathrm i$；2 $(\frac12,3)$；3 $[-\frac52,-\frac32]$；4 $\arctan2$；5 $-160$；6 $\frac87$；7 $(-\infty,1]$；8 $\frac{\sqrt3\pi}3$；9 $-1$；10 $1/\cos(\theta+\frac\pi3)$；11 $\frac23$；12 $[2,5]$；13 $\frac54$；14 $\frac{2c}3\sqrt{a^2-1-c^2}$；15 B；16 C；17 A；18 D；19 (1) $2\sqrt3$、(2) $\frac\pi4$；20 (1) $(-\frac23,\frac13)$、(2) $g^{-1}(x)=3-10^x$；21 (1) $P(3.5,3)$、约 30.8 海里/时、北偏东 $\arctan\frac7{30}$、(2) 25；22 (1) $\frac{\sqrt2}8$、(2) 证明、(3) 定值 $\frac{\sqrt3}3$；23 (1) $x=4$、(2) 证明、(3) $x_k=q^{k-1}$。
+- 复核要点：第 3 题行列式 $=-2-\frac12\sin2x$；第 13 题由 $B(\frac12,5)$ 得分段函数并积分得 $\frac54$；第 14 题先由两条件之差证 $p=0$，再取 $r_1=r_2=\sqrt{a^2-1}$ 得 $V_{\max}=\frac{2c}3\sqrt{a^2-1-c^2}$；第 17 题 $\xi_2$ 为 $\xi_1$ 的循环相邻平均，故方差严格更小；第 18 题逐项计算 100 个部分和均为正；第 22(3) 由 $\frac1{|OM|^2}+\frac1{|ON|^2}=3$ 得距离定值；第 23 题用「$(-1,-1)$ 强制 $1\in X$」与比率封闭性导出通项。
+- 版式修正：试题末的 `\clearpage` 会让解析版最后一题解析整页后移（出现半空页）；改为 `\Needspace{9\baselineskip}` 后解析版 20→19 页、印刷版 17→15 页，且第 23 题解析与答案框紧接题面。
+- 验收：四版 4/19/6/15 页（共 44 页），四 log 全 0；review 44 页 **329 pass + 23 not_applicable、0 fail、0 豁免**；`finalize-batch` → `FINALIZED`；`validate-receipts --require-final` → `OK：1 卷`。
+- 全库（本卷封账后）：manifest **634 卷 / 775 来源 / 480 批次**，complete 516、blocked 118，未绑定 **142**；revision 11543。
+- 下一步：2012 余 30 个来源，继续按批次转录（天津文、北京文等原图已渲染）。
+
+### 选项行距扫描第二批：6 卷因分页变化整批回退并重新封账（2026-11-25；`closed`）
+- 扫描对象：`gk-2002-regular-national-new-science`（b90）、`gk-2002-regular-shanghai-arts/-science`（b89）、`gk-2003-regular-national-new-arts/-science`（b92）、`gk-2007-chongqing-arts`（b23）。
+- 结果：6 卷改 `\dfrac→\frac` 后四版页数均变化，按硬条件整批回退到改动前并重建、重新 `FINALIZED`；逐卷 `validate-receipts --require-final` 均 `OK：1 卷`。累计回修仍为 27 卷（含 1989 上海）。
+- 说明：旧卷行距压缩紧，改分式几乎必然改分页；本批验证了「页数不变才可沿用回执」的边界仍然成立，后续回修只做页数不变者，其余进整卷重审队列。
+
 ### 2012 上海卷（文科）：phase7-b42 新卷转录、四版封账（2026-11-25；`closed`）
 - 对象：`gk-2012-shanghai-arts`，**23 个题号**（填空 1—14、选择 15—18、解答 19—23）；固定来源 `src-cd1af294bc5d836ee713ef6519331bf4fadf0612d74acf546e4e400562c8012b`，固定件 SHA-256 `ab336885e444a7e2c83b5ebaafda34b0ace6f479517d9f1af9d74f9e892ccbf0`（512,377 bytes），2 页 A3 横向，印面页码 769、770。
 - 来源核对：文字层只作定位；题面、选项、第 19 题三棱锥与第 21 题抛物线路径均按 300 dpi 分栏渲染逐栏核对。原页未印分值、无答案页，全部记「原页未标」，不补。

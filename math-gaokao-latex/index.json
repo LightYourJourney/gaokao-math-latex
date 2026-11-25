@@ -24930,6 +24930,47 @@
       "track": "文科",
       "variant": "上海文科",
       "year": 2012
+    },
+    {
+      "base": "gk_2012_gaokao_shanghai_science",
+      "dir": "2012_上海卷_理科",
+      "figures": [
+        "f2012_shanghai_science_q10_polar.tex",
+        "f2012_shanghai_science_q14_tetrahedron.tex",
+        "f2012_shanghai_science_q19_pyramid.tex",
+        "f2012_shanghai_science_q21_parabola.tex"
+      ],
+      "id": "gk-2012-shanghai-science",
+      "legacy_ids": [],
+      "note": "固定源为 2 页 A3 横向排印，印面页码 767、768。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。上海卷题号：填空 1—14、选择 15—18、解答 19—23，共 23 题。答案由本库独立推导（等级 D，非官方）。原页 4 幅图：第 10 题极坐标示意、第 14 题四面体、第 19 题四棱锥、第 21 题抛物线路径，均由 TikZ 重绘；其余各题原页无图。",
+      "paper": "上海卷",
+      "paper_id": "gk-2012-shanghai-science",
+      "pdf_pages": {
+        "questions": [
+          1,
+          2
+        ],
+        "solutions": null
+      },
+      "questions": 23,
+      "structure": {
+        "填空题": [
+          1,
+          14
+        ],
+        "解答题": [
+          19,
+          23
+        ],
+        "选择题": [
+          15,
+          18
+        ]
+      },
+      "title": "2012 年·上海卷·理科",
+      "track": "理科",
+      "variant": "上海理科",
+      "year": 2012
     }
   ],
   "source_pdf": "../math-gaokao-2017-2026/main.pdf",
