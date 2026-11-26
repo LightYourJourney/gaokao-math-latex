@@ -1,0 +1,22 @@
+% ============================================================
+% f2012_fujian_arts_q16_fig2.tex
+% 2012 福建卷（文科）第 16 题 图 2：图 1 的最优设计方案
+% 连接 AB（费用 4）与 AC（费用 6），总费用 10
+% 来源 PDF：普通高考/2012/2012福建文.pdf，印面 731 第 2 栏下部。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm]
+  \coordinate (A) at (1.55,1.65);
+  \coordinate (B) at (0.10,0.85);
+  \coordinate (C) at (3.40,1.00);
+
+  \draw (A) -- (B);
+  \draw (A) -- (C);
+
+  \fill (A) circle (1.4pt) node[above] {$A$};
+  \fill (B) circle (1.4pt) node[below left] {$B$};
+  \fill (C) circle (1.4pt) node[right] {$C$};
+
+  \node at (0.62,1.40) {$4$};
+  \node at (2.55,1.45) {$6$};
+  \node at (1.60,-0.35) {图 2};
+\end{tikzpicture}

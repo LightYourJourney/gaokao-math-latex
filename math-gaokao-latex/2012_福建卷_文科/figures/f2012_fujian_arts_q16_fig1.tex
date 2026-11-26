@@ -1,0 +1,24 @@
+% ============================================================
+% f2012_fujian_arts_q16_fig1.tex
+% 2012 福建卷（文科）第 16 题 图 1：三城市线路图
+% A、B、C 三城市，AB=4，AC=6，BC=8（数据为道路铺设费用）
+% 来源 PDF：普通高考/2012/2012福建文.pdf，印面 731 第 2 栏下部。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm]
+  \coordinate (A) at (1.45,1.60);
+  \coordinate (B) at (0.05,1.05);
+  \coordinate (C) at (3.15,0.85);
+
+  \draw (A) -- (B);
+  \draw (A) -- (C);
+  \draw (B) -- (C);
+
+  \fill (A) circle (1.4pt) node[above] {$A$};
+  \fill (B) circle (1.4pt) node[below left] {$B$};
+  \fill (C) circle (1.4pt) node[right] {$C$};
+
+  \node at (0.62,1.50) {$4$};
+  \node at (2.40,1.42) {$6$};
+  \node at (1.55,0.78) {$8$};
+  \node at (1.55,-0.55) {图 1};
+\end{tikzpicture}

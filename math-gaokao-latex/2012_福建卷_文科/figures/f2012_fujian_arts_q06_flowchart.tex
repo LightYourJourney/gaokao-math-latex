@@ -1,0 +1,40 @@
+% ============================================================
+% f2012_fujian_arts_q06_flowchart.tex
+% 2012 福建卷（文科）第 6 题 程序框图（TikZ 矢量重绘）
+% 开始 → k=1,s=1 → 判断 k<4
+%   是：s=2s-k → k=k+1 → 回到判断
+%   否：输出 s → 结束
+% 来源 PDF：普通高考/2012/2012福建文.pdf，印面 731 第 1 栏。
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth,
+  every node/.style={inner sep=3pt},
+  proc/.style={rectangle, draw, minimum width=2.7cm, minimum height=0.6cm},
+  io/.style={trapezium, draw, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.5cm, minimum height=0.62cm, trapezium stretches=true},
+  dec/.style={diamond, draw, aspect=2.3, minimum width=2.2cm, minimum height=0.95cm},
+  term/.style={rectangle, rounded corners=8pt, draw, minimum width=1.7cm, minimum height=0.56cm}
+]
+
+  \node[term] (start) at (0,0) {开始};
+  \node[proc] (init)  at (0,-1.25) {$k=1$，$s=1$};
+  \node[dec]  (judge) at (0,-2.95) {$k<4$?};
+
+  \node[proc] (sbox)  at (3.05,-2.35) {$s=2s-k$};
+  \node[proc] (kbox)  at (3.05,-1.45) {$k=k+1$};
+
+  \node[io]   (out)   at (0,-4.55) {输出 $s$};
+  \node[term] (end)   at (0,-5.65) {结束};
+
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (judge);
+  \draw[->] (judge.east) -- (3.05,-2.95) -- (sbox.south);
+  \draw[->] (sbox.north) -- (kbox.south);
+  \draw[->] (kbox.north) -- (3.05,-0.92) -- (0,-0.92);
+  \draw[->] (judge.south) -- (out.north);
+  \draw[->] (out) -- (end);
+
+  \node at (1.62,-2.74) {是};
+  \node at (0.38,-3.72) {否};
+
+\end{tikzpicture}

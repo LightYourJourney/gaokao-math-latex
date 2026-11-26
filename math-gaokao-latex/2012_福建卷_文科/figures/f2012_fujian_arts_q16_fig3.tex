@@ -1,0 +1,52 @@
+% ============================================================
+% f2012_fujian_arts_q16_fig3.tex
+% 2012 福建卷（文科）第 16 题 图 3：七城市道路线路图
+% 边权：AB=9，AF=3，AE=2，BF=7，BC=5，FG=1，FE=3，
+%       GC=3，GD=2，GE=6，CD=6，DE=6
+% 来源 PDF：普通高考/2012/2012福建文.pdf，印面 731 第 2 栏下部。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm]
+  \coordinate (A) at (0.00,2.55);
+  \coordinate (B) at (1.85,3.35);
+  \coordinate (C) at (4.35,2.35);
+  \coordinate (D) at (3.65,0.55);
+  \coordinate (E) at (0.65,0.00);
+  \coordinate (F) at (1.55,1.85);
+  \coordinate (G) at (2.75,1.55);
+
+  \draw (A) -- (B);
+  \draw (A) -- (F);
+  \draw (A) -- (E);
+  \draw (B) -- (F);
+  \draw (B) -- (C);
+  \draw (F) -- (G);
+  \draw (F) -- (E);
+  \draw (G) -- (C);
+  \draw (G) -- (D);
+  \draw (G) -- (E);
+  \draw (C) -- (D);
+  \draw (D) -- (E);
+
+  \fill (A) circle (1.3pt) node[left] {$A$};
+  \fill (B) circle (1.3pt) node[above] {$B$};
+  \fill (C) circle (1.3pt) node[right] {$C$};
+  \fill (D) circle (1.3pt) node[right] {$D$};
+  \fill (E) circle (1.3pt) node[below left] {$E$};
+  \fill (F) circle (1.3pt) node[below left] {$F$};
+  \fill (G) circle (1.3pt) node[right] {$G$};
+
+  \node at (0.88,3.16) {$9$};
+  \node at (0.55,2.18) {$3$};
+  \node at (0.18,1.25) {$2$};
+  \node at (1.90,2.55) {$7$};
+  \node at (3.30,3.02) {$5$};
+  \node at (2.16,1.84) {$1$};
+  \node at (0.92,1.02) {$3$};
+  \node at (3.50,2.14) {$3$};
+  \node at (3.42,1.02) {$2$};
+  \node at (1.58,0.64) {$6$};
+  \node at (4.18,1.42) {$6$};
+  \node at (2.18,-0.02) {$6$};
+
+  \node at (2.20,-0.75) {图 3};
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+% ============================================================
+% f2012_fujian_arts_q21_parabola.tex
+% 2012 福建卷（文科）第 21 题 抛物线 E: x^2=2py (p>0)
+% 等边三角形 OAB 的三个顶点均在抛物线上，A、B 关于 y 轴对称
+% 来源 PDF：普通高考/2012/2012福建文.pdf，印面 732 第 1 栏中部。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm]
+  \draw[->] (-3.0,0) -- (3.0,0) node[right] {$x$};
+  \draw[->] (0,-1.0) -- (0,3.0) node[above] {$y$};
+
+  \draw[thick, domain=-2.75:2.75, samples=100] plot (\x,{\x*\x/4});
+
+  \coordinate (A) at (-2.40,1.44);
+  \coordinate (B) at (2.40,1.44);
+  \draw (A) -- (B);
+
+  \fill (A) circle (1.2pt) node[left] {$A$};
+  \fill (B) circle (1.2pt) node[right] {$B$};
+  \fill (0,0) circle (1.2pt) node[below] {$O$};
+\end{tikzpicture}
