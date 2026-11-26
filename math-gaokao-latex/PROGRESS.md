@@ -14,6 +14,12 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2014 四川卷（文科）：第 17(2) 原题可得两个合法答案，判定 needs-review，未注册
+- 固定源 `2014四川文.pdf`（SHA-256 `1f766d6c5e0ab0e991be1c5f8af90f9eea7c49b9a4e16e31336de89355745e94`，2 页 A3，印面 921、922），题号选择 1—10、填空 11—15、解答 16—21。
+- 第 17(2) 原页为 $f(\alpha/3)=\frac45\cos(\alpha+\frac\pi4)\cos2\alpha$。令 $u=\cos\alpha-\sin\alpha$、$v=\cos\alpha+\sin\alpha$，题设化为 $v=\frac45u^2v$：$v=0$ 得 $\alpha=\frac{3\pi}4$、$u=-\sqrt2$；$u^2=\frac54$ 得 $u=-\frac{\sqrt5}2$（$\alpha\approx97.2^\circ$ 或 $172.8^\circ$，均为第二象限角），回代原式成立。原题未排除任一支，源内无官方答案页。
+- 按「不猜、存疑标 needs-review」处理：四份 MD 与 4 幅图稿已移至 `math-gaokao-latex/.work/phase8-b06/rejected/`，并附 `REASON.md`；未写入 manifest，不计入卷数。
+- 待权威答案页或勘误版确认唯一答案后再按 phase8-b06 全流程重做；若权威答案为 $-\sqrt2$，解析须补注另一支被排除的理由。
+
 ### 2014 重庆卷（理科）：phase8-b05 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2014-chongqing-science`，**22 个题号**（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-4579f6742aa10042fac59450774d94f17abc6eb8fc179f5d638638ec71bade2b`，2 页 A3，印面 865、866（865 面为 1—18，866 面为 19—22）。
 - 答案（等级 D）：1 A；2 D；3 A；4 C；5 C；6 D；7 B；8 B（$e=\frac53$）；9 B（$120$）；10 A；11 $\{7,9\}$；12 $-\frac14$；13 $4\pm\sqrt{15}$；14 $4$；15 $\sqrt5$；16 $\left[-1,\frac12\right]$；17 (1) $\omega=2,\varphi=-\frac\pi6$、(2) $\frac{\sqrt3+\sqrt{15}}8$；18 (1) $\frac5{84}$、(2) $P(X{=}1)=\frac{17}{42},P(X{=}2)=\frac{43}{84},P(X{=}3)=\frac1{12},E(X)=\frac{47}{28}$；19 (1) $\frac{\sqrt3}2$、(2) $\frac{\sqrt{10}}5$；20 (1) $a=b=1$、(2) 在 $\mathbf R$ 上递增、(3) $c>4$；21 (1) $\frac{x^2}2+y^2=1$、(2) $\frac{4\sqrt2}3$；22 (1) $a_2=2,a_3=1+\sqrt2,a_n=1+\sqrt{n-1}$、(2) 存在，$c=\frac14$。
