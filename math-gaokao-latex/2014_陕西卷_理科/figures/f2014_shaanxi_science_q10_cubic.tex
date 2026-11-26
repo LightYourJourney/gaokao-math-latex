@@ -1,0 +1,37 @@
+% ============================================================
+% f2014_shaanxi_science_q10_cubic.tex
+% 2014 陕西卷（理科）第 10 题：三次函数下降轨迹
+% 来源 PDF：普通高考/2014/2014陕西理.pdf
+% 原页：第 1 页（A3），印面 911，第 10 题题干下方
+% 曲线 y=x^3/125-3x/5 在 x=-5 处高 2、在 x=5 处低 -2，
+% 两端切线水平；虚线为高度与水平距离的辅助线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=0.90cm, y=1.00cm]
+  % 坐标轴
+  \draw[->] (-6.4,0) -- (6.6,0) node[right] {$x$};
+  \draw[->] (0,-3.1) -- (0,3.15) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \node[below left, fill=white, inner sep=1pt] at (-5,0) {$-5$};
+  \node[below right, fill=white, inner sep=1pt] at (5,0) {$5$};
+  \node[above left, fill=white, inner sep=1pt] at (0,2) {$2$};
+  \node[below left, fill=white, inner sep=1pt] at (0,-2) {$-2$};
+
+  % 辅助虚线
+  \draw[dashed] (-5,2) -- (0,2);
+  \draw[dashed] (-5,2) -- (-5,0);
+  \draw[dashed] (5,-2) -- (0,-2);
+  \draw[dashed] (5,-2) -- (5,0);
+
+  % 下降轨迹
+  \draw[thick, dashed, domain=-5:5, samples=120]
+    plot (\x,{(\x)^3/125-3*(\x)/5});
+
+  % 起点箭头
+  \draw[->, thick] (-5.55,2.02) -- (-5.12,2.02);
+
+  % 着陆点与地面跑道
+  \fill (5,-2) circle (1.2pt);
+  \node[below right] at (5,-2) {$A$};
+  \draw (-5.9,-2) -- (6.25,-2);
+  \node[below] at (3.45,-2.10) {地面跑道};
+\end{tikzpicture}

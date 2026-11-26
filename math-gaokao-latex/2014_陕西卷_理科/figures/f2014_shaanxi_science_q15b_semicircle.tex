@@ -1,0 +1,28 @@
+% ============================================================
+% f2014_shaanxi_science_q15b_semicircle.tex
+% 2014 陕西卷（理科）第 15 题【B】：以 BC 为直径的半圆
+% 来源 PDF：普通高考/2014/2014陕西理.pdf
+% 原页：第 1 页（A3），印面 911，第 15 题【B】题干下方
+% 图中 BC=6，E、F 在半圆上，AC=2AE；取 b=5、c=(5+√69)/2，
+% 使 BC=6 且 ∠A=60°，EF=3。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=0.72cm, y=0.72cm]
+  \coordinate (B) at (-3,0);
+  \coordinate (C) at (3,0);
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (1.606,4.802);
+  \coordinate (E) at (-0.125,2.997);
+  \coordinate (F) at (2.533,1.607);
+
+  % 半圆与三角形
+  \draw[domain=0:180, samples=120] plot ({3*cos(\x)},{3*sin(\x)});
+  \draw (B) -- (A) -- (C) -- cycle;
+  \draw (E) -- (F);
+
+  % 点与标签
+  \fill (B) circle (1.1pt) node[below left] {$B$};
+  \fill (C) circle (1.1pt) node[below right] {$C$};
+  \fill (A) circle (1.1pt) node[above] {$A$};
+  \fill (E) circle (1.1pt) node[above left] {$E$};
+  \fill (F) circle (1.1pt) node[above right] {$F$};
+\end{tikzpicture}

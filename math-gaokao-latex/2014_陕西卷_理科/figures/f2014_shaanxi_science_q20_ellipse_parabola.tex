@@ -1,0 +1,33 @@
+% ============================================================
+% f2014_shaanxi_science_q20_ellipse_parabola.tex
+% 2014 陕西卷（理科）第 20 题：上半椭圆与抛物线拼接曲线
+% 来源 PDF：普通高考/2014/2014陕西理.pdf
+% 原页：第 2 页（A3），印面 912，第 20 题题干右侧
+% C1: y^2/4+x^2=1 (y≥0)；C2: y=1-x^2 (y≤0)；
+% A(-1,0), B(1,0)，P(7/25,48/25)，Q(5/3,-16/9)，直线 PQ 过 B。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1.35cm, y=1.35cm]
+  \draw[->] (-2.45,0) -- (2.55,0) node[right] {$x$};
+  \draw[->] (0,-2.2) -- (0,2.75) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 上半椭圆 C1
+  \draw[domain=-1:1, samples=120]
+    plot (\x,{2*sqrt(1-(\x)*(\x))});
+  % 抛物线 C2 的 y≤0 两支
+  \draw[domain=1:1.75, samples=60] plot (\x,{1-(\x)*(\x)});
+  \draw[domain=-1.75:-1, samples=60] plot (\x,{1-(\x)*(\x)});
+
+  % 过 B 的直线
+  \coordinate (B) at (1,0);
+  \coordinate (P) at (0.28,1.92);
+  \coordinate (Q) at (1.6667,-1.7778);
+  \draw (P) -- (Q);
+  \draw ($(P)!-0.22!(Q)$) -- (P);
+  \draw (Q) -- ($(P)!1.10!(Q)$);
+
+  \fill (B) circle (1.1pt) node[above right] {$B$};
+  \fill (-1,0) circle (1.1pt) node[above left] {$A$};
+  \fill (P) circle (1.1pt) node[right] {$P$};
+  \fill (Q) circle (1.1pt) node[right] {$Q$};
+\end{tikzpicture}

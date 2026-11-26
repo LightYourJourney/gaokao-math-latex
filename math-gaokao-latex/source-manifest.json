@@ -4348,6 +4348,14 @@
         "gk-2014-regular-national-outline-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b89",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-shaanxi-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4357,7 +4365,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d24a1163-cd6d-4c3f-b2fa-886fbc73ccba",
+  "last_transaction_id": "3716dcf4-9d96-4746-a4f5-bea7ee7815fe",
   "papers": [
     {
       "blocked_from": null,
@@ -50376,9 +50384,82 @@
       "title": "2014 年·全国大纲卷·理科（广西）",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_理科/figures/f2014_shaanxi_science_q04_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_理科/figures/f2014_shaanxi_science_q10_cubic.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_理科/figures/f2014_shaanxi_science_q15b_semicircle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_理科/figures/f2014_shaanxi_science_q17_tetrahedron_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_理科/figures/f2014_shaanxi_science_q20_ellipse_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_shaanxi_science",
+        "id": "gk-2014-shaanxi-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 911、912。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。陕西卷题号：选择 1—10、填空 11—15（第 15 题 A/B/C 三选一）、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 4 题程序框图、第 10 题三次函数图象、第 15B 题半圆、第 17 题四面体及三视图、第 20 题椭圆与抛物线；共 5 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "陕西理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-shaanxi-science",
+      "production_state": "complete",
+      "project_dir": "2014_陕西卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_陕西理_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_陕西理_含解析.md",
+        "questions": "2014/2014_数学真题_陕西理_试题.md",
+        "solution_body": "2014/2014_数学真题_陕西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-2621a20b55201affebf5287377479741dd34181d555a69c0649c1a355400d472"
+      ],
+      "title": "2014 年·陕西卷·理科",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 11981,
+  "revision": 11989,
   "schema_version": 1,
   "sources": [
     {
@@ -65375,8 +65456,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9272042bb5a012f7dcf89e078052eee215081dd5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-shaanxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014陕西理.pdf",
       "regions": [],
       "source_id": "src-2621a20b55201affebf5287377479741dd34181d555a69c0649c1a355400d472",
