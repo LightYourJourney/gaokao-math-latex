@@ -1,0 +1,44 @@
+% ============================================================
+% f2012_jiangsu_q07_cuboid.tex
+% 2012 江苏卷第 7 题 长方体 ABCD-A1B1C1D1 与四棱锥 A-BB1D1D
+% AB=AD=3 cm，AA1=2 cm（TikZ 矢量重绘）
+% ============================================================
+\begin{tikzpicture}[x=1cm, y=1cm, line width=0.6pt, font=\footnotesize]
+
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (3.0,0);
+  \coordinate (C)  at (4.2,1.15);
+  \coordinate (D)  at (1.2,1.15);
+  \coordinate (A1) at (0,1.85);
+  \coordinate (B1) at (3.0,1.85);
+  \coordinate (C1) at (4.2,3.00);
+  \coordinate (D1) at (1.2,3.00);
+
+  % ---------- 长方体的棱 ----------
+  \draw (A) -- (B) -- (C);
+  \draw[dashed] (C) -- (D) -- (A);
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw[dashed] (D) -- (D1);
+  \draw (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+
+  % ---------- 四棱锥 A-BB1D1D ----------
+  \draw (B) -- (B1);
+  \draw (B1) -- (D1);
+  \draw[dashed] (D1) -- (D);
+  \draw[dashed] (D) -- (B);
+  \draw (A) -- (B1);
+  \draw[dashed] (A) -- (D1);
+
+  % ---------- 标注 ----------
+  \node[below left]  at (A)  {$A$};
+  \node[below]       at (B)  {$B$};
+  \node[right]       at (C)  {$C$};
+  \node at ($(D)+(-0.34,0.24)$) {$D$};
+  \node[left]        at (A1) {$A_1$};
+  \node[right]       at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above]       at (D1) {$D_1$};
+
+\end{tikzpicture}

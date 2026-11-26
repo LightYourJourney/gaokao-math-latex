@@ -1,0 +1,31 @@
+% ============================================================
+% f2012_jiangsu_q09_rectangle.tex
+% 2012 江苏卷第 9 题 矩形 ABCD，E 为 BC 中点，F 在边 CD 上
+% AB=√2，BC=2；图中标出向量 AB、AF、AE（TikZ 矢量重绘）
+% ============================================================
+\begin{tikzpicture}[x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth]
+
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.20,0);
+  \coordinate (C) at (2.20,3.10);
+  \coordinate (D) at (0,3.10);
+  \coordinate (E) at (2.20,1.55);
+  \coordinate (F) at (1.556,3.10);
+
+  % ---------- 矩形 ----------
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+
+  % ---------- 向量 ----------
+  \draw[->] (A) -- (B);
+  \draw[->] (A) -- (F);
+  \draw[->] (A) -- (E);
+
+  % ---------- 标注 ----------
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right]       at (C) {$C$};
+  \node[left]        at (D) {$D$};
+  \node[right]       at (E) {$E$};
+  \node[above]       at (F) {$F$};
+
+\end{tikzpicture}

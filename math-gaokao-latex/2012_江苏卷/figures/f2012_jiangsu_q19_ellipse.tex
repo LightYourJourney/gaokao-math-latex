@@ -1,0 +1,36 @@
+% ============================================================
+% f2012_jiangsu_q19_ellipse.tex
+% 2012 江苏卷第 19 题 椭圆 x^2/2+y^2=1 与点 A、B、P
+% AF1∥BF2，AF2 与 BF1 交于 P（TikZ 矢量重绘，示意图，非按比例）
+% ============================================================
+\begin{tikzpicture}[x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth]
+
+  \coordinate (O)  at (0,0);
+  \coordinate (F1) at (-2,0);
+  \coordinate (F2) at (2,0);
+  \coordinate (A)  at (-0.801,1.918);
+  \coordinate (B)  at (2.545,0.872);
+  \coordinate (P)  at (1.124,0.600);
+
+  % ---------- 坐标轴与椭圆 ----------
+  \draw[->] (-3.9,0) -- (4.2,0) node[below] {$x$};
+  \draw[->] (0,-2.4) -- (0,2.7) node[left] {$y$};
+  \draw (0,0) ellipse (2.828 and 2);
+
+  % ---------- 题设线段 ----------
+  \draw (A) -- (F1);
+  \draw (B) -- (F2);
+  \draw (A) -- (F2);
+  \draw (B) -- (F1);
+
+  % ---------- 点与标注 ----------
+  \fill (O) circle (1.1pt);
+  \fill (P) circle (1.1pt);
+  \node[below left]  at (O)  {$O$};
+  \node[below]       at (F1) {$F_1$};
+  \node[below]       at (F2) {$F_2$};
+  \node[above left]  at (A)  {$A$};
+  \node[above right] at (B)  {$B$};
+  \node[above]       at (P)  {$P$};
+
+\end{tikzpicture}

@@ -1,0 +1,42 @@
+% ============================================================
+% f2012_jiangsu_q16_prism.tex
+% 2012 江苏卷第 16 题 直三棱柱 ABC-A1B1C1（A1B1=A1C1）
+% D 在棱 BC 上，E 在棱 CC1 上，F 为 B1C1 的中点（TikZ 矢量重绘）
+% ============================================================
+\begin{tikzpicture}[x=1cm, y=1cm, line width=0.6pt, font=\footnotesize]
+
+  \coordinate (A)  at (0,0.60);
+  \coordinate (B)  at (1.60,-0.50);
+  \coordinate (C)  at (3.20,0.90);
+  \coordinate (A1) at (0,3.60);
+  \coordinate (B1) at (1.60,2.50);
+  \coordinate (C1) at (3.20,3.90);
+  \coordinate (D)  at (2.56,0.34);
+  \coordinate (E)  at (3.20,1.90);
+  \coordinate (F)  at (2.40,3.20);
+
+  % ---------- 三棱柱的棱 ----------
+  \draw (A) -- (B) -- (C);
+  \draw[dashed] (C) -- (A);
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (A1) -- (B1) -- (C1) -- cycle;
+
+  % ---------- 题设线段 ----------
+  \draw[dashed] (A) -- (D);
+  \draw (D) -- (E);
+  \draw (A1) -- (F);
+
+  % ---------- 标注 ----------
+  \node[below left]  at (A)  {$A$};
+  \node[below]       at (B)  {$B$};
+  \node[right]       at (C)  {$C$};
+  \node[left]        at (A1) {$A_1$};
+  \node[left]        at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node at ($(D)+(-0.42,-0.10)$) {$D$};
+  \node[right]       at (E)  {$E$};
+  \node[above]       at (F)  {$F$};
+
+\end{tikzpicture}

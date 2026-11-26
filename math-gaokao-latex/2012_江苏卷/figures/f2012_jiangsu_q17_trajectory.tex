@@ -1,0 +1,16 @@
+% ============================================================
+% f2012_jiangsu_q17_trajectory.tex
+% 2012 江苏卷第 17 题 炮弹抛物线轨迹（TikZ 矢量重绘）
+% y=kx-(1/20)(1+k^2)x^2，图中画出一条典型轨迹
+% ============================================================
+\begin{tikzpicture}[x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth]
+
+  % ---------- 坐标轴 ----------
+  \draw[->] (-0.3,0) -- (9.6,0) node[below] {$x$（千米）};
+  \draw[->] (0,-0.3) -- (0,3.2) node[left] {$y$（千米）};
+  \node[below left] at (0,0) {$O$};
+
+  % ---------- 轨迹 ----------
+  \draw[domain=0:8, smooth, samples=140] plot (\x,{0.1375*\x*(8-\x)});
+
+\end{tikzpicture}
