@@ -4388,6 +4388,14 @@
         "gk-2014-beijing-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b94",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-shanghai-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4397,7 +4405,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "81518210-080f-499e-8dcd-1c3b19143345",
+  "last_transaction_id": "297daada-11c8-45cc-ab7f-9167fb76e059",
   "papers": [
     {
       "blocked_from": null,
@@ -50769,9 +50777,78 @@
       "title": "2014 年·北京卷·文科",
       "track": "arts",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_上海卷_文科/figures/f2014_shanghai_arts_q07_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_上海卷_文科/figures/f2014_shanghai_arts_q17_square.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_上海卷_文科/figures/f2014_shanghai_arts_q19_net.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_上海卷_文科/figures/f2014_shanghai_arts_q21_billboard.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_shanghai_arts",
+        "id": "gk-2014-shanghai-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 917、918。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。上海卷题号：填空 1—14、选择 15—18、解答 19—23，共 23 题。答案由本库独立推导（等级 D，非官方）。原页图：第 7 题三视图、第 17 题正方形拼图、第 19 题展开图、第 21 题广告牌；共 4 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-shanghai-arts",
+      "production_state": "complete",
+      "project_dir": "2014_上海卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_上海文_含解析.md",
+        "questions": "2014/2014_数学真题_上海文_试题.md",
+        "solution_body": "2014/2014_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-aae38df419db8cf85c275f327190bfebf053c976299840490c8a3e4ddea392e0"
+      ],
+      "title": "2014 年·上海卷·文科",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 12016,
+  "revision": 12021,
   "schema_version": 1,
   "sources": [
     {
@@ -64904,8 +64981,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d2278e2c8c13e816bb77337f686ba5f22aefe8e8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014上海文.pdf",
       "regions": [],
       "source_id": "src-aae38df419db8cf85c275f327190bfebf053c976299840490c8a3e4ddea392e0",

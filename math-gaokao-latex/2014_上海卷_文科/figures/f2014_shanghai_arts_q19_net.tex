@@ -1,0 +1,32 @@
+% ============================================================
+% f2014_shanghai_arts_q19_net.tex
+% 2014 上海卷（文科）第 19 题：正三棱锥 P-ABC 的表面展开图
+% 来源 PDF：普通高考/2014/2014上海文.pdf
+% 原页：第 1 页（A3），印面 917，解答题第 19 题题干下方（中栏下部）
+% 展开图为三角形 P1P2P3：A、C 分别为 P1P3、P3P2 的中点，
+% B 为 P1P2 的中点；△ABC 为底面（实线），大三角形三边为
+% 展开图外边界（虚线）。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.65pt, font=\small, scale=0.8,
+  line cap=round, line join=round]
+  \coordinate (P1) at (0,0);
+  \coordinate (P2) at (4,0);
+  \coordinate (P3) at (2,3.4641);
+  \coordinate (A)  at (1,1.73205);
+  \coordinate (B)  at (2,0);
+  \coordinate (C)  at (3,1.73205);
+
+  % 展开图外边界（虚线）
+  \draw[dashed] (P1) -- (P2) -- (P3) -- cycle;
+
+  % 底面三角形（折痕，实线）
+  \draw (A) -- (B) -- (C) -- cycle;
+
+  % 顶点标注
+  \fill (P1) circle (0.85pt) node[below left=-1pt] {$P_1$};
+  \fill (P2) circle (0.85pt) node[below right=-1pt] {$P_2$};
+  \fill (P3) circle (0.85pt) node[above=-1pt] {$P_3$};
+  \fill (A) circle (0.85pt) node[above left=-1pt] {$A$};
+  \fill (B) circle (0.85pt) node[below=-1pt] {$B$};
+  \fill (C) circle (0.85pt) node[above right=-1pt] {$C$};
+\end{tikzpicture}
