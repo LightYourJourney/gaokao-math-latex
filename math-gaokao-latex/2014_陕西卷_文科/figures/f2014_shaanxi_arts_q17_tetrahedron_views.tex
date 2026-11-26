@@ -1,0 +1,65 @@
+% ============================================================
+% f2014_shaanxi_arts_q17_tetrahedron_views.tex
+% 2014 陕西卷（文科）第 17 题：四面体 ABCD 及其三视图
+% 来源 PDF：普通高考/2014/2014陕西文.pdf
+% 原页：第 1 页（A3），印面 913，第 17 题题干下方
+% 由三视图得 DA⊥DB、DA⊥DC、DB⊥DC，且 DA=1、DB=DC=2；
+% 原页俯视图只标出纵向尺寸 2，横向尺寸由主视图的 2 得出。
+% 左图为立体示意图（平行投影，不按比例）；右图为三视图。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  line cap=round, line join=round]
+  % ---------- 立体示意图 ----------
+  \begin{scope}[scale=1.28]
+  \coordinate (A) at (0.10,2.40);
+  \coordinate (B) at (-1.50,0.35);
+  \coordinate (C) at (2.60,0.75);
+  \coordinate (D) at (0.05,0.95);
+  \coordinate (E) at (-0.70,1.375); % AB 中点
+  \coordinate (F) at (-0.725,0.65); % BD 中点
+  \coordinate (G) at (1.325,0.85);  % DC 中点
+  \coordinate (H) at (1.35,1.575);  % CA 中点
+
+  % 可见棱
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (E) -- (H);
+  % 不可见棱与截面边
+  \draw[dashed] (A) -- (D) -- (B);
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (E) -- (F) -- (G) -- (H);
+
+  \fill (A) circle (1.1pt) node[above] {$A$};
+  \fill (B) circle (1.1pt) node[below left] {$B$};
+  \fill (C) circle (1.1pt) node[right] {$C$};
+  \fill (D) circle (1.1pt) node[below] {$D$};
+  \fill (E) circle (1.1pt) node[left] {$E$};
+  \fill (F) circle (1.1pt) node[below left] {$F$};
+  \fill (G) circle (1.1pt) node[below] {$G$};
+  \fill (H) circle (1.1pt) node[above right] {$H$};
+  \end{scope}
+
+  % ---------- 三视图 ----------
+  % 主视图：横向 2，纵向 1
+  \begin{scope}[shift={(5.05,0.25)}]
+    \draw (0,1) -- (0,0) -- (2,0) -- cycle;
+    \draw[<->] (-0.42,0) -- (-0.42,1);
+    \node[left] at (-0.42,0.5) {$1$};
+    \draw[<->] (0,-0.42) -- (2,-0.42);
+    \node[below] at (1,-0.42) {$2$};
+    \node[below] at (1,-0.85) {主视图};
+  \end{scope}
+
+  % 左视图：原页不标尺寸
+  \begin{scope}[shift={(7.85,0.25)}]
+    \draw (0,1) -- (0,0) -- (2,0) -- cycle;
+    \node[below] at (1,-0.45) {左视图};
+  \end{scope}
+
+  % 俯视图：纵向 2，横向由主视图给出
+  \begin{scope}[shift={(5.05,-4.20)}]
+    \draw (0,0) -- (0,2) -- (2,2) -- cycle;
+    \draw[<->] (-0.42,0) -- (-0.42,2);
+    \node[left] at (-0.42,1) {$2$};
+    \node[below] at (1,-0.45) {俯视图};
+  \end{scope}
+\end{tikzpicture}

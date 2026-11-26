@@ -4404,6 +4404,14 @@
         "gk-2014-beijing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b96",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-shaanxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4413,7 +4421,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ca5ac3e8-2c3b-4103-8013-b8f600f2eef0",
+  "last_transaction_id": "56b56d2b-8518-42ad-a297-8f1cba4d1d97",
   "papers": [
     {
       "blocked_from": null,
@@ -50919,9 +50927,82 @@
       "title": "2014 年·北京卷·理科",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_文科/figures/f2014_shaanxi_arts_q04_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_文科/figures/f2014_shaanxi_arts_q10_cubic.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_文科/figures/f2014_shaanxi_arts_q15b_semicircle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_文科/figures/f2014_shaanxi_arts_q17_tetrahedron_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_陕西卷_文科/figures/f2014_shaanxi_arts_q20_ellipse_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_shaanxi_arts",
+        "id": "gk-2014-shaanxi-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 913、914。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。陕西卷题号：选择 1—10、填空 11—15（15 为 A/B/C 三选一）、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 4 题程序框图、第 10 题三次函数图象、第 15B 题半圆、第 17 题四面体三视图、第 20 题椭圆与圆；共 5 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "陕西文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-shaanxi-arts",
+      "production_state": "complete",
+      "project_dir": "2014_陕西卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_陕西文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_陕西文_含解析.md",
+        "questions": "2014/2014_数学真题_陕西文_试题.md",
+        "solution_body": "2014/2014_数学真题_陕西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-420f92bab7281711a0d8b34cd5c18bcc93511a82f1066bed436c69d5ae158c68"
+      ],
+      "title": "2014 年·陕西卷·文科",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 12026,
+  "revision": 12031,
   "schema_version": 1,
   "sources": [
     {
@@ -65894,8 +65975,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a28195a9920987cd2a74e4f4a79be692ccc6c034",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-shaanxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014陕西文.pdf",
       "regions": [],
       "source_id": "src-420f92bab7281711a0d8b34cd5c18bcc93511a82f1066bed436c69d5ae158c68",

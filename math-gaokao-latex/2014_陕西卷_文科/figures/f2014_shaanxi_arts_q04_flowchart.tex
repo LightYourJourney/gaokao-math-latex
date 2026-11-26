@@ -1,0 +1,36 @@
+% ============================================================
+% f2014_shaanxi_arts_q04_flowchart.tex
+% 2014 陕西卷（文科）第 4 题：程序框图
+% 来源 PDF：普通高考/2014/2014陕西文.pdf
+% 原页：第 1 页（A3），印面 913，第 4 题题干下方
+% 按原图重绘；判断框内为“$i>N$”，否分支回到“$a_i=2*S$”。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  every node/.style={inner sep=2pt},
+  term/.style={draw, rounded corners=2pt, minimum width=2.35cm,
+    minimum height=0.62cm, align=center},
+  proc/.style={draw, minimum width=2.75cm, minimum height=0.62cm, align=center},
+  dec/.style={draw, diamond, aspect=1.9, minimum width=2.35cm,
+    minimum height=0.95cm, align=center}]
+  \node[term] (start) at (0,0) {开始};
+  \node[proc] (input) at (0,-0.95) {输入 $N$};
+  \node[proc] (init) at (0,-1.9) {$S=1,\ i=1$};
+  \node[proc] (body) at (0,-2.85) {$a_i=2*S$};
+  \node[proc] (setS) at (0,-3.8) {$S=a_i$};
+  \node[proc] (inc) at (0,-4.75) {$i=i+1$};
+  \node[dec] (test) at (0,-5.95) {$i>N$};
+  \node[proc, minimum width=3.55cm] (out) at (0,-7.1) {输出 $a_1,a_2,\cdots,a_N$};
+  \node[term] (end) at (0,-8.05) {结束};
+
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (init);
+  \draw[->] (init) -- (body);
+  \draw[->] (body) -- (setS);
+  \draw[->] (setS) -- (inc);
+  \draw[->] (inc) -- (test);
+  \draw[->] (test) -- node[right] {是} (out);
+  \draw[->] (out) -- (end);
+  % “否”分支：从判断框左侧绕回循环体
+  \draw[->] (test.west) -- ++(-1.55,0) |- (body.west);
+  \node at (-1.05,-5.72) {否};
+\end{tikzpicture}

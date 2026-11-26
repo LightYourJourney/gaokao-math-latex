@@ -1,0 +1,37 @@
+% ============================================================
+% f2014_shaanxi_arts_q20_ellipse_circle.tex
+% 2014 陕西卷（文科）第 20 题：椭圆与以 F1F2 为直径的圆
+% 来源 PDF：普通高考/2014/2014陕西文.pdf
+% 原页：第 2 页（A3），印面 914，第 20 题题干右侧
+% 椭圆 x^2/4+y^2/3=1，圆 x^2+y^2=1；
+% 直线 l: y=-x/2+√3/3 与椭圆交于 A、B，与圆交于 C、D。
+% A(-1.370,1.262)，B(1.947,-0.396)，C(-0.535,0.845)，D(0.997,0.079)。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1.55cm, y=1.55cm]
+  % 坐标轴
+  \draw[->] (-2.85,0) -- (2.95,0) node[right] {$x$};
+  \draw[->] (0,-2.35) -- (0,2.55) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 椭圆与圆
+  \draw[domain=0:360, samples=180]
+    plot ({2*cos(\x)},{1.732*sin(\x)});
+  \draw (0,0) circle (1);
+  \fill (-1,0) circle (1.1pt);
+  \node[below left] at (-1.03,0) {$F_1$};
+  \fill (1,0) circle (1.1pt);
+  \node[below right] at (1.03,0) {$F_2$};
+
+  % 直线 l
+  \draw (-2.15,1.652) -- (2.55,-0.698);
+
+  % 交点
+  \coordinate (A) at (-1.370,1.262);
+  \coordinate (B) at (1.947,-0.396);
+  \coordinate (C) at (-0.535,0.845);
+  \coordinate (D) at (0.997,0.079);
+  \fill (A) circle (1.2pt) node[above left] {$A$};
+  \fill (B) circle (1.2pt) node[below right] {$B$};
+  \fill (C) circle (1.2pt) node[above left] {$C$};
+  \fill (D) circle (1.2pt) node[above right] {$D$};
+\end{tikzpicture}
