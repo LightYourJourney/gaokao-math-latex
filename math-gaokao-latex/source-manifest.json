@@ -4372,6 +4372,14 @@
         "gk-2014-tianjin-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b92",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-shanghai-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4381,7 +4389,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "b7bce189-6b0c-425a-8531-05624b5a6523",
+  "last_transaction_id": "78e5ca16-6bab-448b-8839-ff2264054b3a",
   "papers": [
     {
       "blocked_from": null,
@@ -50611,9 +50619,74 @@
       "title": "2014 年·天津卷·理科",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_上海卷_理科/figures/f2014_shanghai_science_q16_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_上海卷_理科/figures/f2014_shanghai_science_q19_net.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_上海卷_理科/figures/f2014_shanghai_science_q21_billboard.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_shanghai_science",
+        "id": "gk-2014-shanghai-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 915、916。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。上海卷题号：填空 1—14、选择 15—18、解答 19—23，共 23 题。答案由本库独立推导（等级 D，非官方）。原页图：第 16 题正四棱柱、第 19 题正三棱锥展开图、第 21 题广告牌；第 17 题原页无图。共 3 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-shanghai-science",
+      "production_state": "complete",
+      "project_dir": "2014_上海卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_上海理_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_上海理_含解析.md",
+        "questions": "2014/2014_数学真题_上海理_试题.md",
+        "solution_body": "2014/2014_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-0c227cb599880f016ae157e01fd4d5ec0a1e442676090b59af58177aca41dc85"
+      ],
+      "title": "2014 年·上海卷·理科",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 11999,
+  "revision": 12008,
   "schema_version": 1,
   "sources": [
     {
@@ -64770,8 +64843,8 @@
       "exam_type": "regular",
       "git_blob_oid": "dee4f9c3428e438481a942627b31549c0825574b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014上海理.pdf",
       "regions": [],
       "source_id": "src-0c227cb599880f016ae157e01fd4d5ec0a1e442676090b59af58177aca41dc85",

@@ -1,0 +1,34 @@
+% ============================================================
+% f2014_shanghai_science_q21_billboard.tex
+% 2014 上海卷（理科）第 21 题：广告牌 CD 的仰角示意图
+% 来源 PDF：普通高考/2014/2014上海理.pdf
+% 原页：第 2 页（A3），印面 916，第 21 题题干下方（左栏）
+% A、C、B 在同一水平线上，AC=35 米、CB=80 米，D 为广告牌顶端；
+% 图中 CD 为铅垂方向（第 (1) 问的情形），α、β 分别为从 A、B
+% 看 D 的仰角。示意图按 AC:CB:CD≈35:80:28 的比例绘制。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.65pt, font=\small, scale=1.0,
+  line cap=round, line join=round]
+  \coordinate (A) at (0,0);
+  \coordinate (C) at (3.50,0);
+  \coordinate (B) at (11.50,0);
+  \coordinate (D) at (3.50,2.80);
+
+  % 水平线与广告牌
+  \draw (A) -- (B);
+  \draw (D) -- (C);
+  \draw (A) -- (D);
+  \draw (B) -- (D);
+
+  % 仰角 α、β 的角标
+  \draw (1.00,0) arc (0:38.66:1.00);
+  \draw ([shift=(160.71:1.00)]B) arc (160.71:180:1.00);
+
+  % 顶点标注
+  \fill (A) circle (0.85pt) node[below left=-1pt] {$A$};
+  \fill (C) circle (0.85pt) node[below=-1pt] {$C$};
+  \fill (B) circle (0.85pt) node[below right=-1pt] {$B$};
+  \fill (D) circle (0.85pt) node[above=-1pt] {$D$};
+  \node at (1.50,0.45) {$\alpha$};
+  \node at (10.30,0.62) {$\beta$};
+\end{tikzpicture}

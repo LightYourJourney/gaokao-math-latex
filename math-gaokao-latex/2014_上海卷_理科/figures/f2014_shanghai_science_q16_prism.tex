@@ -1,0 +1,66 @@
+% ============================================================
+% f2014_shanghai_science_q16_prism.tex
+% 2014 上海卷（理科）第 16 题：四个棱长为 1 的正方体排成的正四棱柱
+% 来源 PDF：普通高考/2014/2014上海理.pdf
+% 原页：第 1 页（A3），印面 915，第 16 题题干右侧
+% 底面 2×2、高 1；AB 为一条侧棱（A 在下、B 在上），
+% 上底面除 B 外的八个格点为 P1—P8：
+%   P1、P2 在左边（自 B 起），P3、P6 在前边，P4 为面心，
+%   P5、P8 在后边，P7 在右边。
+% 可见棱与上底面网格线为实线，被遮挡的棱与内部竖棱为虚线。
+% 平行投影：前边方向取 1 单位 =（1.025,-0.15），竖直方向取 1 单位 =（0,-0.95）。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.65pt, font=\small, scale=1.1,
+  line cap=round, line join=round]
+  \coordinate (B) at (0,2.30);
+  % 上底面九个格点
+  \coordinate (P1) at ($(B)+(0.55,0.55)$);
+  \coordinate (P2) at ($(B)+(1.10,1.10)$);
+  \coordinate (P3) at ($(B)+(2.05,-0.30)$);
+  \coordinate (P4) at ($(B)+(2.60,0.25)$);
+  \coordinate (P5) at ($(B)+(3.15,0.80)$);
+  \coordinate (P6) at ($(B)+(4.10,-0.60)$);
+  \coordinate (P7) at ($(B)+(4.65,-0.05)$);
+  \coordinate (P8) at ($(B)+(5.20,0.50)$);
+  % 下底面九个格点（竖直下移 0.95）
+  \coordinate (A)   at ($(B)+(0,-0.95)$);
+  \coordinate (P1b) at ($(P1)+(0,-0.95)$);
+  \coordinate (P2b) at ($(P2)+(0,-0.95)$);
+  \coordinate (P3b) at ($(P3)+(0,-0.95)$);
+  \coordinate (P4b) at ($(P4)+(0,-0.95)$);
+  \coordinate (P5b) at ($(P5)+(0,-0.95)$);
+  \coordinate (P6b) at ($(P6)+(0,-0.95)$);
+  \coordinate (P7b) at ($(P7)+(0,-0.95)$);
+  \coordinate (P8b) at ($(P8)+(0,-0.95)$);
+
+  % 可见的外轮廓、可见棱与前、右底边
+  \draw (A) -- (B) -- (P2) -- (P8) -- (P8b) -- (P6b) -- (A);
+  \draw (B) -- (P6) -- (P8);
+  \draw (P6) -- (P6b);
+  \draw (P3) -- (P3b);
+  \draw (P7) -- (P7b);
+
+  % 上底面 2×2 网格线（过面心 P4）
+  \draw (P3) -- (P5);
+  \draw (P1) -- (P7);
+
+  % 被遮挡的棱：后左竖棱、底面后边与左边、三条背面/内部竖棱
+  \draw[dashed] (P2) -- (P2b);
+  \draw[dashed] (P2b) -- (P8b);
+  \draw[dashed] (P2b) -- (A);
+  \draw[dashed] (P1) -- (P1b);
+  \draw[dashed] (P4) -- (P4b);
+  \draw[dashed] (P5) -- (P5b);
+
+  % 顶点标注
+  \fill (A) circle (0.85pt) node[below left=-1pt] {$A$};
+  \fill (B) circle (0.85pt) node[left=-1pt] {$B$};
+  \fill (P1) circle (0.85pt) node[left=-2pt] {$P_1$};
+  \fill (P2) circle (0.85pt) node[above left=-1pt] {$P_2$};
+  \fill (P3) circle (0.85pt) node[below left=-2pt] {$P_3$};
+  \fill (P4) circle (0.85pt) node[above left=-2pt] {$P_4$};
+  \fill (P5) circle (0.85pt) node[above=-1pt] {$P_5$};
+  \fill (P6) circle (0.85pt) node[below left=-2pt] {$P_6$};
+  \fill (P7) circle (0.85pt) node[right=-1pt] {$P_7$};
+  \fill (P8) circle (0.85pt) node[above right=-1pt] {$P_8$};
+\end{tikzpicture}
