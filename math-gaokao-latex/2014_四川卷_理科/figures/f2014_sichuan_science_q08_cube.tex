@@ -1,0 +1,52 @@
+% ============================================================
+% f2014_sichuan_science_q08_cube.tex
+% 2014 四川卷（理科）第 8 题：正方体中的线面角
+% 来源 PDF：普通高考/2014/2014四川理.pdf
+% 原页：第 1 页（A3 横排）中栏上部，印面 919，第 8 题题干上方
+% 说明：正方体 ABCD-A1B1C1D1，O 为 BD 中点（实心点）；图中画出
+%       截面三角形 A1BD（A1B 为实线，A1D、BD 为虚线）。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (2,0);
+  \coordinate (C)  at (2.86,0.60);
+  \coordinate (D)  at (0.86,0.60);
+  \coordinate (A1) at (0,2);
+  \coordinate (B1) at (2,2);
+  \coordinate (C1) at (2.86,2.60);
+  \coordinate (D1) at (0.86,2.60);
+  \coordinate (O)  at ($(B)!0.5!(D)$);
+
+  % 可见棱
+  \draw (A) -- (B) -- (C) -- (C1) -- (D1) -- (A1) -- cycle;
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (B1) -- (C1);
+  \draw (A1) -- (B1);
+
+  % 不可见棱
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (D) -- (D1);
+
+  % 截面三角形 A1BD
+  \draw (A1) -- (B);
+  \draw[dashed] (A1) -- (D);
+  \draw[dashed] (B) -- (D);
+
+  % 点 O
+  \fill (O) circle (1.6pt);
+  \node at ($(O)+(-0.24,-0.15)$) {$O$};
+
+  % 顶点标注
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left=1pt, yshift=2pt] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[above=1pt] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[above left] at (D1) {$D_1$};
+\end{tikzpicture}

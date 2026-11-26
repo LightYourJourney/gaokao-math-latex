@@ -1,0 +1,67 @@
+% ============================================================
+% f2014_sichuan_science_q18_tetrahedron.tex
+% 2014 四川卷（理科）第 18 题：三棱锥及其侧视图、俯视图
+% 来源 PDF：普通高考/2014/2014四川理.pdf
+% 原页：第 2 页（A3 横排）左栏上部，印面 920，第 18 题题干下方
+% 说明：左侧为三棱锥 A-BCD 的直观图（M、N 分别为 AD、AB 中点，
+%       P 为 BC 中点）；中间为侧视图（等腰三角形，腰 2、底 2，高
+%       线为虚线）；右侧为俯视图（直立边 2 被中点分为 1+1，两腰
+%       均为 2，并连出中点与右顶点）。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  % ---- 左：三棱锥直观图 ----
+  \coordinate (A) at (0,4.20);
+  \coordinate (B) at (-0.58,1.09);
+  \coordinate (C) at (3.07,1.63);
+  \coordinate (D) at (0.74,2.37);
+  \coordinate (N) at ($(A)!0.5!(B)$);
+  \coordinate (M) at ($(A)!0.5!(D)$);
+  \coordinate (P) at ($(B)!0.5!(C)$);
+
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (C);
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (D) -- (B);
+  \draw[dashed] (N) -- (M);
+  \draw (N) -- (P);
+
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[left] at (N) {$N$};
+  \node[above right] at (M) {$M$};
+  \node[below] at (P) {$P$};
+
+  % ---- 中：侧视图 ----
+  \begin{scope}[shift={(5.60,0.90)}]
+    \coordinate (S1) at (0,0);
+    \coordinate (S2) at (2,0);
+    \coordinate (S3) at (1,1.732);
+    \draw (S1) -- (S2) -- (S3) -- cycle;
+    \draw[dashed] (S3) -- (1,0);
+    \node[below] at (0.50,-0.14) {$1$};
+    \node[below] at (1.50,-0.14) {$1$};
+    \node[left] at (0.36,0.92) {$2$};
+    \node[right] at (1.64,0.92) {$2$};
+    \node[below] at (1,-0.55) {侧视图};
+  \end{scope}
+
+  % ---- 右：俯视图 ----
+  \begin{scope}[shift={(8.80,1.70)}]
+    \coordinate (T1) at (0,1);
+    \coordinate (T2) at (0,-1);
+    \coordinate (T3) at (1.732,0);
+    \draw (T1) -- (T2) -- (T3) -- cycle;
+    \draw (0,0) -- (T3);
+    \node[left] at (0,0.52) {$1$};
+    \node[left] at (0,-0.52) {$1$};
+    \node[above left] at (0.86,0.72) {$2$};
+    \node[below left] at (0.86,-0.72) {$2$};
+    \node[below] at (0.87,-1.35) {俯视图};
+  \end{scope}
+
+\end{tikzpicture}

@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2014 四川卷（理科）：phase8-b13 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2014-sichuan-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-93841a2388bfb20a7c2a22d14ae9bae8d5cc20976a6fc51c2e0819b1a8c7292d`，2 页 A3，印面 919、920（919 面为 1—17，920 面为 18—21）。
+- 答案（等级 D）：1 A；2 C（$15$）；3 A；4 D；5 C（$2$）；6 B（$216$）；7 D（$m=2$）；8 B（$\left[\frac{\sqrt6}3,1\right]$）；9 A（①②③）；10 B（$3$）；11 $-2\mathrm i$；12 $1$；13 $60\ \mathrm m$；14 $5$；15 ①③④；16 (1) $\left[-\frac\pi4+\frac{2k\pi}3,\frac\pi{12}+\frac{2k\pi}3\right]$、(2) $-\sqrt2$ 或 $-\frac{\sqrt5}2$；17 (1) $X=-200,10,20,100$ 对应 $\frac18,\frac38,\frac38,\frac18$、(2) $\frac{511}{512}$、(3) $E(X)=-\frac54$；18 (1) 证明、(2) $\frac{\sqrt{10}}5$；19 (1) $S_n=n^2-3n$、(2) $T_n=2-\frac{n+2}{2^n}$；20 (1) $\frac{x^2}6+\frac{y^2}2=1$、(2) $T(-3,\pm1)$；21 (1) 分段最小值、(2) $a\in(\mathrm e-2,1)$。
+- **来源核对**：第 2 题为 $x(1+x)^6$（故 $x^3$ 系数 $\mathrm C_6^2=15$）；第 8 题线面角为 $OP$ 与平面 $A_1BD$；第 21(2) 原页为「求 $a$ 的取值范围」；第 5 题判断框为菱形；第 14 题为 $|PA|\cdot|PB|$ 最大值；第 17(3) 为「分析分数减少的原因」。
+- **第 16(2) 两支解**：与四川文第 17(2) 同题，$v=\frac45u^2v$ 给 $v=0$（$u=-\sqrt2$）与 $u^2=\frac54$（$u=-\frac{\sqrt5}2$），两支均为第二象限且回代成立，解析与答案要点并列并注明「原题未排除任一支」。
+- 主代理复核：第 6 题 $120+96=216$；第 8 题坐标法 $O\left(\frac12,\frac12,0\right)$、$P(1,1,t)$、法向量 $(1,1,1)$；第 10 题 $y_1y_2=-2$、$S=\frac98y_1-\frac2{y_1}\geqslant3$；第 13 题 $BC=46(\sqrt3-\cot67^\circ)\approx60$；第 14 题 $|PA|\cdot|PB|\leqslant\frac{|AB|^2}2=5$；第 17 题 $E=\frac{-200+30+60+100}8=-\frac54$；第 18 题 $P$ 为 $BC$ 中点、$\cos=\frac{\sqrt{10}}5$；第 19 题 $d=2$、$a_n=2n-4$，$a_2=2$、$d=1$、$T_n=2-\frac{n+2}{2^n}$；第 20 题 $a^2=3b^2$、$b^2=2$，$T(-3,\pm1)$；第 21 题 $g_{\min}$ 三段、罗尔定理与介值定理得 $a\in(\mathrm e-2,1)$。
+- 图稿：4 张 TikZ（程序框图、正方体、气球测河宽、三棱锥与三视图）；第 20、21 题原页无图，未补绘。
+- 验收：四版 5/32/7/25 页（共 69 页），四 log 全 0；review 69 页 **pass 504 + not_applicable 48、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；4 条图稿引用全部命中。
+- 全库：manifest **701 卷 / 775 来源 / 547 批次**，complete 583、blocked 118，未绑定 **75**；revision 12140。
+
 ### 2014 湖南卷（理科）：phase8-b12 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2014-hunan-science`，**22 个题号**（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-c5dad538407c08582f4937f735d9b21067b6047a76b0173f88fa9baaab550e50`，2 页 A3，印面 885、886（885 面为 1—18，886 面为 19—22）。
 - 答案（等级 D）：1 B（$z=\frac12-\frac12\mathrm i$）；2 D；3 C；4 A（$-20$）；5 C（②③）；6 D（$[-3,6]$）；7 B（$2$）；8 D（$\sqrt{(1+p)(1+q)}-1$）；9 A（$x=\frac{5\pi}6$）；10 B（$(-\infty,\sqrt{\mathrm e})$）；11 $\rho(\cos\theta-\sin\theta)=1$；12 $\frac32$；13 $-3$；14 $-2$；15 $1+\sqrt2$；16 $\sqrt7+1$；17 (1) $\frac{13}{15}$、(2) $E(X)=140$；18 (1) $\frac{2\sqrt7}7$、(2) $BC=3$；19 (1) 证明、(2) $\frac{2\sqrt{57}}{19}$；20 (1) $p=\frac13$、(2) $a_n=\frac43+\frac{(-1)^n}{3\cdot2^{n-1}}$；21 (1) $C_1:\frac{x^2}2+y^2=1$、$C_2:\frac{x^2}2-y^2=1$、(2) 面积最小值 $2$；22 (1) 单调性、(2) $a\in\left(\frac12,1\right)$。

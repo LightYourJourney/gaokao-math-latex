@@ -4524,6 +4524,14 @@
         "gk-2014-hunan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b13",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-sichuan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4533,7 +4541,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "2acd37df-9bac-4c0c-940e-b30e8b632aca",
+  "last_transaction_id": "492fb3d8-1dac-45e2-94c9-82321b40c41d",
   "papers": [
     {
       "blocked_from": null,
@@ -52142,9 +52150,78 @@
       "title": "2014 年·湖南卷·理科",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_四川卷_理科/figures/f2014_sichuan_science_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_四川卷_理科/figures/f2014_sichuan_science_q08_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_四川卷_理科/figures/f2014_sichuan_science_q13_river_width.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_四川卷_理科/figures/f2014_sichuan_science_q18_tetrahedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_sichuan_science",
+        "id": "gk-2014-sichuan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 919、920（919 面为选择 1—10、填空 11—15、解答 16—17；920 面为 18—21）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。四川卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 5 题程序框图、第 8 题正方体、第 13 题气球测河宽、第 18 题三棱锥及侧视/俯视图；第 20、21 题原页无图。共 4 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "四川理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-sichuan-science",
+      "production_state": "complete",
+      "project_dir": "2014_四川卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_四川理_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_四川理_含解析.md",
+        "questions": "2014/2014_数学真题_四川理_试题.md",
+        "solution_body": "2014/2014_数学真题_四川理_解析正文.md"
+      },
+      "source_ids": [
+        "src-93841a2388bfb20a7c2a22d14ae9bae8d5cc20976a6fc51c2e0819b1a8c7292d"
+      ],
+      "title": "2014 年·四川卷·理科",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 12135,
+  "revision": 12140,
   "schema_version": 1,
   "sources": [
     {
@@ -66397,8 +66474,8 @@
       "exam_type": "regular",
       "git_blob_oid": "066ae3db92929f4892ffb486be1399472196f670",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-sichuan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014四川理.pdf",
       "regions": [],
       "source_id": "src-93841a2388bfb20a7c2a22d14ae9bae8d5cc20976a6fc51c2e0819b1a8c7292d",
