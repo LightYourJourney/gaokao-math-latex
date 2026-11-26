@@ -4396,6 +4396,14 @@
         "gk-2014-shanghai-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b95",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-beijing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4405,7 +4413,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "297daada-11c8-45cc-ab7f-9167fb76e059",
+  "last_transaction_id": "ca5ac3e8-2c3b-4103-8013-b8f600f2eef0",
   "papers": [
     {
       "blocked_from": null,
@@ -50846,9 +50854,74 @@
       "title": "2014 年·上海卷·文科",
       "track": "arts",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_北京卷_理科/figures/f2014_beijing_science_q04_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_北京卷_理科/figures/f2014_beijing_science_q15_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_北京卷_理科/figures/f2014_beijing_science_q17_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_beijing_science",
+        "id": "gk-2014-beijing-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 861、862。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。北京卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题。答案由本库独立推导（等级 D，非官方）。原页图：第 4 题程序框图、第 15 题三角形、第 17 题五棱锥；第 19 题原页无图。共 3 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "北京理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-beijing-science",
+      "production_state": "complete",
+      "project_dir": "2014_北京卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_北京理_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_北京理_含解析.md",
+        "questions": "2014/2014_数学真题_北京理_试题.md",
+        "solution_body": "2014/2014_数学真题_北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-2e8600a0ea85d247ca84d68e9fb2bcdbaabc75c1828dc5f1575da569d3b98a90"
+      ],
+      "title": "2014 年·北京卷·理科",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 12021,
+  "revision": 12026,
   "schema_version": 1,
   "sources": [
     {
@@ -65053,8 +65126,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f7c505654c85ac0bd9404fddcfe278125d01f5cd",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014北京理.pdf",
       "regions": [],
       "source_id": "src-2e8600a0ea85d247ca84d68e9fb2bcdbaabc75c1828dc5f1575da569d3b98a90",
