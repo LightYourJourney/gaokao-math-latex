@@ -1,0 +1,55 @@
+% ============================================================
+% f2014_anhui_science_q20_prism.tex
+% 2014 安徽卷（理科）第 20 题：四棱柱与截面
+% 来源 PDF：普通高考/2014/2014安徽理.pdf
+% 原页：第 2 页（A3 横排）中栏中部，印面 858，第 20 题题干下方
+% 说明：四棱柱 ABCD-A_1B_1C_1D_1，A_1A⊥底面，AD∥BC 且 AD=2BC。
+%       平面 α 过 A_1,C,D，交 BB_1 于 Q；截面为四边形 A_1QCD。
+%       被遮挡的 AD、DA_1 画虚线，其余轮廓与 A_1Q、QC、CD 画实线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.25cm, y=1.25cm, line cap=round, line join=round]
+
+  % 顶点
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (0.35,-0.35);
+  \coordinate (C)  at (1.55,-0.35);
+  \coordinate (D)  at (2.40,0);
+  \coordinate (A1) at (0,2.40);
+  \coordinate (B1) at (0.35,2.05);
+  \coordinate (C1) at (1.55,2.05);
+  \coordinate (D1) at (2.40,2.40);
+  \coordinate (Q)  at (0.35,1.025);
+
+  % 截面淡色填充
+  \fill[gray!12] (A1) -- (Q) -- (C) -- (D) -- cycle;
+
+  % 被遮挡的棱与截面边
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (D) -- (A1);
+
+  % 底面
+  \draw (A) -- (B) -- (C) -- (D);
+  % 四条侧棱
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (D) -- (D1);
+  % 上底面
+  \draw (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+  % 截面在可见面上的边
+  \draw (A1) -- (Q) -- (C);
+
+  % 顶点与截面标签
+  \node[left]  at (A)  {$A$};
+  \node[below] at (B)  {$B$};
+  \node[below] at (C)  {$C$};
+  \node[right] at (D)  {$D$};
+  \node[left]  at (A1) {$A_1$};
+  \node[above right, inner sep=2pt] at (B1) {$B_1$};
+  \node[below left, inner sep=2pt] at (C1) {$C_1$};
+  \node[right] at (D1) {$D_1$};
+  \node[left=2pt] at (Q)  {$Q$};
+  \node at (1.12,0.78) {$\alpha$};
+
+\end{tikzpicture}

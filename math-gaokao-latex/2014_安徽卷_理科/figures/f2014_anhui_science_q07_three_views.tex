@@ -1,0 +1,74 @@
+% ============================================================
+% f2014_anhui_science_q07_three_views.tex
+% 2014 安徽卷（理科）第 7 题：三视图
+% 来源 PDF：普通高考/2014/2014安徽理.pdf
+% 原页：第 1 页（A3 横排）中栏上部，印面 857，第 7 题题干上方
+% 说明：三个视图都是边长 2 的正方形（边标注 1 与 1）。
+%       正视图：实线 (0,1)-(1,0)，虚线 (1,2)-(2,1)；
+%       侧视图：虚线 (0,1)-(1,2)，实线 (1,0)-(2,1)；
+%       俯视图：实线 (1,2)-(2,1)，虚线 (0,1)-(1,0)。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.55cm, y=1.55cm, line cap=round, line join=round,
+  ext/.style={line width=0.4pt},
+  dim/.style={<->, line width=0.45pt}]
+
+  % ---------- 正（主）视图 ----------
+  \draw[ext] (0,0) -- (2,0) -- (2,2) -- (0,2) -- cycle;
+  \draw (0,1) -- (1,0);
+  \draw[dashed] (1,2) -- (2,1);
+  % 上方 1 + 1
+  \draw[ext] (0,2) -- (0,2.55);
+  \draw[ext] (1,2) -- (1,2.30);
+  \draw[ext] (2,2) -- (2,2.55);
+  \draw[dim] (0,2.42) -- (0.92,2.42) node[midway,above,inner sep=1pt] {$1$};
+  \draw[dim] (1.08,2.42) -- (2,2.42) node[midway,above,inner sep=1pt] {$1$};
+  % 左侧 1 + 1
+  \draw[ext] (0,2) -- (-0.55,2);
+  \draw[ext] (0,1) -- (-0.30,1);
+  \draw[ext] (0,0) -- (-0.55,0);
+  \draw[dim] (-0.42,1.08) -- (-0.42,2) node[midway,left,inner sep=1pt] {$1$};
+  \draw[dim] (-0.42,0) -- (-0.42,0.92) node[midway,left,inner sep=1pt] {$1$};
+  \node at (1,-0.62) {正（主）视图};
+
+  % ---------- 侧（左）视图 ----------
+  \begin{scope}[xshift=4.75cm]
+    \draw[ext] (0,0) -- (2,0) -- (2,2) -- (0,2) -- cycle;
+    \draw[dashed] (0,1) -- (1,2);
+    \draw (1,0) -- (2,1);
+    % 上方 1 + 1
+    \draw[ext] (0,2) -- (0,2.55);
+    \draw[ext] (1,2) -- (1,2.30);
+    \draw[ext] (2,2) -- (2,2.55);
+    \draw[dim] (0,2.42) -- (0.92,2.42) node[midway,above,inner sep=1pt] {$1$};
+    \draw[dim] (1.08,2.42) -- (2,2.42) node[midway,above,inner sep=1pt] {$1$};
+    % 左侧 1 + 1
+    \draw[ext] (0,2) -- (-0.55,2);
+    \draw[ext] (0,1) -- (-0.30,1);
+    \draw[ext] (0,0) -- (-0.55,0);
+    \draw[dim] (-0.42,1.08) -- (-0.42,2) node[midway,left,inner sep=1pt] {$1$};
+    \draw[dim] (-0.42,0) -- (-0.42,0.92) node[midway,left,inner sep=1pt] {$1$};
+    \node at (1,-0.62) {侧（左）视图};
+  \end{scope}
+
+  % ---------- 俯视图 ----------
+  \begin{scope}[yshift=-5.15cm]
+    \draw[ext] (0,0) -- (2,0) -- (2,2) -- (0,2) -- cycle;
+    \draw (1,2) -- (2,1);
+    \draw[dashed] (0,1) -- (1,0);
+    % 下方 1 + 1
+    \draw[ext] (0,0) -- (0,-0.55);
+    \draw[ext] (1,0) -- (1,-0.30);
+    \draw[ext] (2,0) -- (2,-0.55);
+    \draw[dim] (0,-0.42) -- (0.92,-0.42) node[midway,below,inner sep=1pt] {$1$};
+    \draw[dim] (1.08,-0.42) -- (2,-0.42) node[midway,below,inner sep=1pt] {$1$};
+    % 左侧 1 + 1
+    \draw[ext] (0,2) -- (-0.55,2);
+    \draw[ext] (0,1) -- (-0.30,1);
+    \draw[ext] (0,0) -- (-0.55,0);
+    \draw[dim] (-0.42,1.08) -- (-0.42,2) node[midway,left,inner sep=1pt] {$1$};
+    \draw[dim] (-0.42,0) -- (-0.42,0.92) node[midway,left,inner sep=1pt] {$1$};
+    \node at (1,-0.98) {俯视图};
+  \end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,48 @@
+% ============================================================
+% f2014_anhui_science_q19_parabolas.tex
+% 2014 安徽卷（理科）第 19 题：两条抛物线
+% 来源 PDF：普通高考/2014/2014安徽理.pdf
+% 原页：第 2 页（A3 横排）左栏下部，印面 858，第 19 题题干下方
+% 说明：E_1: y^2=2p_1x，E_2: y^2=2p_2x（图中 p_2>p_1）。
+%       l_1 与 E_1,E_2 交于 A_1,A_2；l_2 与 E_1,E_2 交于 B_1,B_2。
+%       图中另画出 A_1B_1 与 A_2B_2 两条弦。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.45cm, y=1.10cm, line cap=round, line join=round]
+
+  % 坐标轴
+  \draw[->] (-0.45,0) -- (3.15,0) node[right] {$x$};
+  \draw[->] (0,-3.55) -- (0,3.75) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 抛物线（上、下两支）
+  \draw[domain=0:2.55, samples=120, smooth, variable=\t]
+    plot ({\t},{sqrt(2*\t)});
+  \draw[domain=0:2.55, samples=120, smooth, variable=\t]
+    plot ({\t},{-sqrt(2*\t)});
+  \draw[domain=0:2.55, samples=120, smooth, variable=\t]
+    plot ({\t},{sqrt(4*\t)});
+  \draw[domain=0:2.55, samples=120, smooth, variable=\t]
+    plot ({\t},{-sqrt(4*\t)});
+
+  % 两条过原点的直线
+  \draw (-0.28,-0.56) -- (1.05,2.10);
+  \draw (-0.32,0.48) -- (2.05,-3.08);
+
+  % A1B1、A2B2
+  \draw[line width=0.5pt] (0.5,1) -- (0.8889,-1.3333);
+  \draw[line width=0.5pt] (1,2) -- (1.7778,-2.6667);
+
+  % 交点
+  \fill (0.5,1) circle (1.4pt) node[below right, inner sep=2pt] {$A_1$};
+  \fill (1,2) circle (1.4pt) node[above left, inner sep=3pt] {$A_2$};
+  \fill (0.8889,-1.3333) circle (1.4pt) node at (1.10,-1.22) {$B_1$};
+  \fill (1.7778,-2.6667) circle (1.4pt) node[below left, inner sep=3pt] {$B_2$};
+
+  % 曲线与直线标签
+  \node[right] at (2.55,2.23) {$E_1$};
+  \node[right] at (2.55,3.16) {$E_2$};
+  \node[left] at (-0.34,-0.70) {$l_1$};
+  \node[left] at (-0.40,0.62) {$l_2$};
+
+\end{tikzpicture}

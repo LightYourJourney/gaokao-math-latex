@@ -1,0 +1,37 @@
+% ============================================================
+% f2014_anhui_science_q13_point_plot.tex
+% 2014 安徽卷（理科）第 13 题：点 A_i(i,a_i) 的坐标图
+% 来源 PDF：普通高考/2014/2014安徽理.pdf
+% 原页：第 1 页（A3 横排）中栏下部，印面 857，第 13 题题干右侧
+% 说明：A_0=(0,1)，A_1=(1,3)，A_2=(2,4)；虚线为向两坐标轴的投影。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.15cm, y=1.15cm, line cap=round, line join=round]
+
+  % 坐标轴
+  \draw[->] (-0.45,0) -- (3.35,0) node[right] {$x$};
+  \draw[->] (0,-0.45) -- (0,4.85) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 刻度
+  \foreach \x in {1,2} {
+    \draw (\x,0.06) -- (\x,-0.06);
+    \node[below] at (\x,-0.08) {$\x$};
+  }
+  \foreach \y/\lab in {1/1,3/3,4/4} {
+    \draw (0.06,\y) -- (-0.06,\y);
+    \node[left] at (-0.08,\y) {$\lab$};
+  }
+
+  % 投影虚线
+  \draw[dashed] (1,3) -- (1,0);
+  \draw[dashed] (2,4) -- (2,0);
+  \draw[dashed] (1,3) -- (0,3);
+  \draw[dashed] (2,4) -- (0,4);
+
+  % 点
+  \fill (0,1) circle (1.6pt) node[right, inner sep=2pt] {$A_0$};
+  \fill (1,3) circle (1.6pt) node[right, inner sep=2pt] {$A_1$};
+  \fill (2,4) circle (1.6pt) node[right, inner sep=2pt] {$A_2$};
+
+\end{tikzpicture}
