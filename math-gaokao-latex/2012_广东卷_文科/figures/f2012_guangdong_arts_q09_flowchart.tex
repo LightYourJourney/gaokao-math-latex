@@ -1,0 +1,39 @@
+% ============================================================
+% f2012_guangdong_arts_q09_flowchart.tex
+% 2012 广东卷（文科）第 9 题 程序框图（TikZ 矢量重绘）
+% 开始 → 输入 n → i=1, s=1 → 判断 i<n
+%   是：s=s×i → i=i+2 → 回到判断
+%   否：输出 s → 结束
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth,
+  every node/.style={inner sep=3pt},
+  proc/.style={rectangle, draw, minimum width=2.5cm, minimum height=0.62cm},
+  io/.style={trapezium, draw, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.7cm, minimum height=0.66cm, trapezium stretches=true},
+  dec/.style={diamond, draw, aspect=2.4, minimum width=2.5cm, minimum height=0.9cm},
+  term/.style={rectangle, rounded corners=8pt, draw, minimum width=1.9cm, minimum height=0.58cm}
+]
+
+  \node[term] (start) at (0,0) {开始};
+  \node[io]   (input) at (0,-1.30) {输入 $n$};
+  \node[proc] (init)  at (0,-2.60) {$i=1$，$s=1$};
+  \node[dec]  (judge) at (0,-4.15) {$i<n$};
+
+  \node[proc] (mul)   at (0,-5.65) {$s=s\times i$};
+  \node[proc] (inc)   at (0,-6.95) {$i=i+2$};
+
+  \node[io]   (out)   at (3.50,-5.65) {输出 $s$};
+  \node[term] (end)   at (3.50,-6.95) {结束};
+
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (init);
+  \draw[->] (init) -- (judge);
+  \draw[->] (judge) -- node[right] {是} (mul);
+  \draw[->] (mul) -- (inc);
+  \draw[->] (inc.west) -- (-2.20,-6.95) -- (-2.20,-4.15) -- (judge.west);
+  \draw[->] (judge.east) -- (3.50,-4.15) -- (out.north);
+  \node at (2.30,-3.95) {否};
+  \draw[->] (out) -- (end);
+
+\end{tikzpicture}

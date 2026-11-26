@@ -1,0 +1,42 @@
+% ============================================================
+% f2012_guangdong_arts_q15_circle.tex
+% 2012 广东卷（文科）第 15 题（几何证明选讲）圆与弦（TikZ 矢量重绘）
+% 圆 O 半径 1.8，B 在圆上，PB 切圆于 B，D 在弦 AC 上，∠PBA=∠DBA
+% AD=m，AC=n，结论 AB=√(mn)；按原页拓扑示意，不按比例
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth
+]
+
+  \coordinate (O) at (0,0);
+  \coordinate (B) at (-1.691,-0.616);
+  \coordinate (A) at (-0.466,1.739);
+  \coordinate (C) at (1.691,-0.616);
+  \coordinate (D) at (0.721,0.444);
+  \coordinate (P) at (-2.444,1.452);
+
+  % 圆
+  \draw (O) circle (1.8);
+
+  % 切线 PB（并向 B 外延长少许）
+  \draw (P) -- (B) -- ++(0.342,-0.940) coordinate (Bt);
+  % 弦 AC 与 D
+  \draw (A) -- (C);
+  % 三角形 ABC 的边
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  % BD
+  \draw (B) -- (D);
+
+  % 圆心
+  \fill (O) circle (0.035);
+
+  % 标注
+  \node[left] at (P) {$P$};
+  \node[above left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[below right] at (O) {$O$};
+
+\end{tikzpicture}

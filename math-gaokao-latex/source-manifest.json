@@ -4300,6 +4300,14 @@
         "gk-2012-jiangsu"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b82",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-guangdong-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4309,7 +4317,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "96b202be-89f2-4cd2-9444-5b8dafc01e22",
+  "last_transaction_id": "3899066b-b24b-4095-82a5-8a27964cf0b8",
   "papers": [
     {
       "blocked_from": null,
@@ -49906,9 +49914,82 @@
       "title": "2012 年·江苏卷",
       "track": "science",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_广东卷_文科/figures/f2012_guangdong_arts_q07_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_广东卷_文科/figures/f2012_guangdong_arts_q09_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_广东卷_文科/figures/f2012_guangdong_arts_q15_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_广东卷_文科/figures/f2012_guangdong_arts_q17_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_广东卷_文科/figures/f2012_guangdong_arts_q18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_guangdong_arts",
+        "id": "gk-2012-guangdong-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 735、736。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。广东卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 7 题三视图、第 9 题程序框图、第 15 题圆与弦、第 17 题频率分布直方图、第 18 题四棱锥，均以 TikZ 重绘共 5 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "广东文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-guangdong-arts",
+      "production_state": "complete",
+      "project_dir": "2012_广东卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_广东文_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_广东文_含解析.md",
+        "questions": "2012/2012_数学真题_广东文_试题.md",
+        "solution_body": "2012/2012_数学真题_广东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-9effc6fd9844086283b407b4cd58c02a265188825e0df9287c47efa53cd96b34"
+      ],
+      "title": "2012 年·广东卷·文科",
+      "track": "arts",
+      "year": 2012
     }
   ],
-  "revision": 11940,
+  "revision": 11948,
   "schema_version": 1,
   "sources": [
     {
@@ -62649,8 +62730,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ccd0f067280f1da1de69b9ee5ca0ac799a865e8e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-guangdong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012广东文.pdf",
       "regions": [],
       "source_id": "src-9effc6fd9844086283b407b4cd58c02a265188825e0df9287c47efa53cd96b34",
