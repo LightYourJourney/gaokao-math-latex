@@ -1,0 +1,35 @@
+% answers_short.tex —— 2013 年·福建卷·理科 · 简短答案速查
+% 由 tools/make_short_answers.py 自 answers.tex 的 \gksolhead/\gkanswer 提取，
+% 并与 2013/2013_数学真题_福建理_答案要点.md 逐题比对后生成，勿手改（改源 MD 后重跑）。
+
+\begin{gknotice}
+\textbf{使用说明}：本节只给最终答案便于快速核对，完整推导见解析版。答案为编写者独立推导，\textbf{非官方标准答案}。
+\end{gknotice}
+
+\gkpart{选择题}
+\begin{center}\begin{tabular}{ccccccccccc}
+\toprule
+题号 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\midrule
+答案 & D & A & C & B & B & A & C & D & C & D \\
+\bottomrule
+\end{tabular}\end{center}
+
+\gkpart{填空题}
+\begin{itemize}[leftmargin=2.6em]
+  \item[\textbf{11.}] $\dfrac23$。$3a-1>0\Longleftrightarrow a>\dfrac13$，故概率为 $1-\dfrac13=\dfrac23$。
+  \item[\textbf{12.}] $12\pi$。三视图均为边长 $2$ 的正方形内接于圆，还原为棱长 $2$ 的正方体内接于球，球半径 $R=\sqrt3$，表面积 $4\pi R^2=12\pi$。
+  \item[\textbf{13.}] $\sqrt3$。由 $AD\perp AC$ 得 $\cos\angle BAD=\sin\angle BAC=\dfrac{2\sqrt2}{3}$，在 $\triangle ABD$ 中用余弦定理得 $BD^2=18+9-24=3$。
+  \item[\textbf{14.}] $\sqrt3-1$。直线斜率 $\sqrt3$ 给出 $\angle MF_1F_2=60^\circ$，从而 $\angle MF_2F_1=30^\circ$，$\triangle MF_1F_2$ 为直角三角形，$MF_1=c$，$MF_2=\sqrt3c$，故 $2a=(1+\sqrt3)c$。
+  \item[\textbf{15.}] $\dfrac{3^{n+1}-2^{n+1}}{(n+1)2^{n+1}}$。由 $\dfrac{\mathrm C_n^k}{k+1}=\dfrac{\mathrm C_{n+1}^{k+1}}{n+1}$ 及二项式定理求和可得。
+\end{itemize}
+
+\gkpart{解答题}
+\begin{itemize}[leftmargin=2.6em]
+  \item[\textbf{16.}] (1) $\dfrac{11}{15}$。只有两人都中奖时 $X=5>3$，故 $P(X\leqslant3)=1-\dfrac23\times\dfrac25=\dfrac{11}{15}$；(2) 都选择方案甲。都选甲时累计得分期望为 $2\times\dfrac23\times2=\dfrac83$；都选乙时为 $2\times\dfrac25\times3=\dfrac{12}{5}$，且 $\dfrac83>\dfrac{12}{5}$
+  \item[\textbf{17.}] (1) $y=-x+2$。$f(1)=1$，$f'(1)=1-2=-1$，切线为 $y-1=-(x-1)$；(2) $a\leqslant0$ 时无极值；$a>0$ 时在 $x=a$ 处取极小值 $a-a\ln a$，无极大值。由 $f'(x)=\dfrac{x-a}{x}$ 讨论即得
+  \item[\textbf{18.}] (1) $E:y=\dfrac{x^2}{10}$。$P_i\left(i,\dfrac{i^2}{10}\right)$ 恒满足该方程；(2) $y=\dfrac32x+10$ 或 $y=-\dfrac32x+10$。设 $l:y=kx+10$，由面积比得交点横坐标绝对值之比 $4:1$，结合 $x_1x_2=-100$ 得 $x_1+x_2=\pm15$，故 $k=\pm\dfrac32$
+  \item[\textbf{19.}] (1) $CD\perp$ 平面 $ADD_1A_1$，见解析正文。由三边长可判 $AD\perp DC$，又 $AA_1\perp$ 底面，故 $CD$ 垂直于平面内两条相交直线 $AD$、$AA_1$；(2) $k=1$。平面 $AB_1C$ 的法向量可取 $(-4k,6k,12k^2)$，由 $\dfrac{6k}{\sqrt{13+36k^2}}=\dfrac67$ 解得 $k=1$；(3) 共有 $4$ 种不同的拼接方案；$f(k)=36k^2+36k$（$0<k\leqslant\dfrac5{18}$），$f(k)=72k^2+26k$（$k\geqslant\dfrac5{18}$）。四种方案的表面积分别为 $36k^2+36k$，$72k^2+28k$，$72k^2+28k$，$72k^2+26k$，比较即得
+  \item[\textbf{20.}] (1) $f(x)=\cos2x$，$g(x)=\sin x$。由周期 $\pi$ 得 $\omega=2$，由对称中心得 $\varphi=\dfrac\pi2$，再作伸缩与平移；(2) 存在，且 $x_0$ 的个数为 $1$。令 $t=\sin x_0\in\left(\dfrac12,\dfrac{\sqrt2}{2}\right)$，三种等差顺序中只有 $2f=g+fg$ 对应的方程在区间内有一个根；(3) $a=1$ 或 $a=-1$，$n=1342$。此时每个 $2\pi$ 周期内恰有 $3$ 个零点，$2013=3\times671$，故 $n=2\times671=1342$
+  \item[\textbf{21.}] (1) A：$a=1$，$b=-1$；B：$a=\sqrt2$，直线 $l:x+y=2$；C：$a=1$。分别由矩阵变换、极坐标代入和绝对值不等式解集条件得到；(2) A：$P(1,0)$；B：直线 $l$ 与圆 $C$ 相交于两个不同点；C：最小值为 $3$。A 由不动点条件与 $P\in l$ 解得；B 圆心到直线距离 $\dfrac{\sqrt2}{2}<1$；C 由三角不等式取等
+\end{itemize}

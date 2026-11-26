@@ -4276,6 +4276,14 @@
         "gk-2013-jiangsu"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b79",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-fujian-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4285,7 +4293,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "80f32b3a-eb65-4826-8d9e-213c793ac59d",
+  "last_transaction_id": "fc992136-8f94-4182-bd92-3fa91aa27bcf",
   "papers": [
     {
       "blocked_from": null,
@@ -49648,9 +49656,86 @@
       "title": "2013 年·江苏卷",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_福建卷_理科/figures/f2013_fujian_science_q04_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_福建卷_理科/figures/f2013_fujian_science_q06_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_福建卷_理科/figures/f2013_fujian_science_q12_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_福建卷_理科/figures/f2013_fujian_science_q13_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_福建卷_理科/figures/f2013_fujian_science_q18_parabola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_福建卷_理科/figures/f2013_fujian_science_q19_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_fujian_science",
+        "id": "gk-2013-fujian-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 799、800。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。福建卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题；第 21 题为三选二（A 矩阵、B 极坐标、C 绝对值不等式），三小问全部收录。答案由本库独立推导（等级 D，非官方）。原页图：第 4 题频率分布直方图、第 6 题程序框图、第 12 题球与三视图、第 13 题三角形 ABC、第 18 题正方形 OABC 与抛物线、第 19 题四棱柱 ABCD-A1B1C1D1，均以 TikZ 重绘共 6 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "福建理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-fujian-science",
+      "production_state": "complete",
+      "project_dir": "2013_福建卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_福建理_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_福建理_含解析.md",
+        "questions": "2013/2013_数学真题_福建理_试题.md",
+        "solution_body": "2013/2013_数学真题_福建理_解析正文.md"
+      },
+      "source_ids": [
+        "src-6e3c455267b7e09164c60bb02463852ee0416747ab3c98113885c600a3db2492"
+      ],
+      "title": "2013 年·福建卷·理科",
+      "track": "science",
+      "year": 2013
     }
   ],
-  "revision": 11922,
+  "revision": 11930,
   "schema_version": 1,
   "sources": [
     {
@@ -63615,8 +63700,8 @@
       "exam_type": "regular",
       "git_blob_oid": "42166b8127fb8b54a9fc08efc0e87fb2ad35279d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-fujian-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013福建理.pdf",
       "regions": [],
       "source_id": "src-6e3c455267b7e09164c60bb02463852ee0416747ab3c98113885c600a3db2492",

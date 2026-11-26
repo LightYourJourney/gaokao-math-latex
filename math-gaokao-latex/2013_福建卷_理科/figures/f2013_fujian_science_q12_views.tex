@@ -1,0 +1,25 @@
+% ============================================================
+% f2013_fujian_science_q12_views.tex
+% 2013 福建卷（理工类）第 12 题 三视图（TikZ 矢量重绘）
+% 正视图、侧视图、俯视图均为：圆内含正方形（虚线），边长 2
+% 正方体边长 2，外接球半径 sqrt(3)，表面积 12*pi
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth
+]
+
+  \foreach \dx/\lab in {0/正视图, 4.05/侧视图, 8.10/俯视图} {
+    \begin{scope}[xshift=\dx cm]
+      % 外接圆
+      \draw (0,0) circle (1.55);
+      % 正方形（虚线）
+      \draw[dashed] (-1,-1) rectangle (1,1);
+      % 边长标注
+      \draw[<->] (-1,-1.22) -- (1,-1.22);
+      \node[below] at (0,-1.24) {$2$};
+      % 视图名称
+      \node at (0,-2.05) {\lab};
+    \end{scope}
+  }
+
+\end{tikzpicture}

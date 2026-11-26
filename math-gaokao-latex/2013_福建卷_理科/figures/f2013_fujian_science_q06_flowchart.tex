@@ -1,0 +1,37 @@
+% ============================================================
+% f2013_fujian_science_q06_flowchart.tex
+% 2013 福建卷（理工类）第 6 题 程序框图（TikZ 矢量重绘）
+% S=0, i=1；输入 k；S=1+2S；i=i+1；i>k？否则回代，是则输出 S
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth,
+  every node/.style={inner sep=3pt},
+  proc/.style={rectangle, draw, minimum width=2.6cm, minimum height=0.62cm},
+  io/.style={trapezium, draw, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.8cm, minimum height=0.66cm},
+  dec/.style={diamond, draw, aspect=2.2, minimum width=2.8cm, minimum height=0.85cm},
+  term/.style={rectangle, rounded corners=8pt, draw, minimum width=2.0cm, minimum height=0.58cm}
+]
+
+  \node[term] (start) at (0,0) {开始};
+  \node[proc] (init)  at (0,-1.35) {$S=0,\ i=1$};
+  \node[io]   (input) at (0,-2.60) {输入 $k$};
+  \node[proc] (upd)   at (0,-3.85) {$S=1+2S$};
+  \node[proc] (inc)   at (0,-5.10) {$i=i+1$};
+  \node[dec]  (judge) at (0,-6.55) {$i>k$?};
+  \node[io]   (out)   at (0,-8.10) {输出 $S$};
+  \node[term] (end)   at (0,-9.35) {结束};
+
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (input);
+  \draw[->] (input) -- (upd);
+  \draw[->] (upd) -- (inc);
+  \draw[->] (inc) -- (judge);
+  \draw[->] (judge) -- node[right] {是} (out);
+  \draw[->] (out) -- (end);
+
+  % 否：回到 S=1+2S 之前
+  \draw[->] (judge.east) -- (2.60,-6.55) -- (2.60,-3.85) -- (upd.east);
+  \node[above] at (1.30,-6.45) {否};
+
+\end{tikzpicture}
