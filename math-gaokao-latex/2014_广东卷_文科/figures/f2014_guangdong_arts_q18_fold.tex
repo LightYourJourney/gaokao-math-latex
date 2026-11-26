@@ -1,0 +1,71 @@
+% ============================================================
+% f2014_guangdong_arts_q18_fold.tex
+% 2014 广东卷（文科）第 18 题：矩形 ABCD 中 PD⊥平面 ABCD，
+% AB=1，BC=PC=2，沿 EF（EF∥DC，E∈PD，F∈PC）折叠，P 落在
+% 线段 AD 上的 M 处，且 MF⊥CF。左为折叠前（图 1），右为折叠后（图 2）。
+% 来源 PDF：普通高考/2014/2014广东文.pdf
+% 原页：第 1 页（A3 横排）第 3 栏下部，印面 879，第 18 题题干下方
+% 说明：图 2 依原页保留折叠前 P 点及 P—E、P—F 两段（示意折痕两侧），
+% 并以虚线表示被遮挡的棱 MD、DC、DE、EC；三棱锥 M-CDE 的 ME、MC 为实线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  % ---------------- 图 1：折叠前 ----------------
+  \coordinate (A1) at (0,4.6);
+  \coordinate (B1) at (3.4,4.6);
+  \coordinate (C1) at (3.72,1.0);
+  \coordinate (D1) at (0.3,1.0);
+  \coordinate (P1) at (-1.0,-1.0);
+
+  \draw (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+  \draw (P1) -- (D1);
+  \draw (P1) -- (C1);
+
+  \fill (A1) circle (1.1pt) node[above left] {$A$};
+  \fill (B1) circle (1.1pt) node[above right] {$B$};
+  \fill (C1) circle (1.1pt) node[right] {$C$};
+  \fill (D1) circle (1.1pt) node[above left] {$D$};
+  \fill (P1) circle (1.1pt) node[below left] {$P$};
+  \node at (1.7,-1.35) {图 1};
+
+  % ---------------- 图 2：折叠后 ----------------
+  \coordinate (A2) at (6.2,4.6);
+  \coordinate (B2) at (9.6,4.6);
+  \coordinate (C2) at (9.92,1.0);
+  \coordinate (D2) at (6.5,1.0);
+  \coordinate (P2) at (5.2,-1.0);
+  \coordinate (M2) at (6.3164,3.2032);
+  \coordinate (E2) at (6.175,0.5);
+  \coordinate (F2) at (8.74,0.5);
+
+  % 矩形边框（DC 被折起部分遮挡）
+  \draw (A2) -- (B2) -- (C2);
+  \draw (A2) -- (M2);
+  \draw[dashed] (M2) -- (D2) -- (C2);
+
+  % 被遮挡的棱
+  \draw[dashed] (E2) -- (D2);
+  \draw[dashed] (E2) -- (C2);
+
+  % 折痕与折叠后的三角形 MEF
+  \draw (E2) -- (F2);
+  \draw (F2) -- (C2);
+  \draw (M2) -- (E2);
+  \draw (M2) -- (F2);
+  \draw (M2) -- (C2);
+
+  % 折叠前 P 的位置（示意）
+  \draw[line width=0.55pt] (P2) -- (E2);
+  \draw[line width=0.55pt] (P2) -- (F2);
+
+  \fill (A2) circle (1.1pt) node[above left] {$A$};
+  \fill (B2) circle (1.1pt) node[above right] {$B$};
+  \fill (C2) circle (1.1pt) node[right] {$C$};
+  \fill (D2) circle (1.1pt) node[above right, inner sep=2pt] {$D$};
+  \fill (M2) circle (1.1pt) node[left] {$M$};
+  \fill (E2) circle (1.1pt) node[left] {$E$};
+  \fill (F2) circle (1.1pt) node[below right] {$F$};
+  \fill (P2) circle (1.1pt) node[below left] {$P$};
+  \node at (7.9,-1.35) {图 2};
+\end{tikzpicture}

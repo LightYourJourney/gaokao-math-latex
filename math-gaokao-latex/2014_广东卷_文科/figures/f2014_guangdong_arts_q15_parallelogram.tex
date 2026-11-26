@@ -1,0 +1,30 @@
+% ============================================================
+% f2014_guangdong_arts_q15_parallelogram.tex
+% 2014 广东卷（文科）第 15 题：平行四边形 ABCD 中 E 在 AB 上，
+% EB=2AE，DE 与 AC 交于 F，求 △CDF 与 △AEF 的周长比。
+% 来源 PDF：普通高考/2014/2014广东文.pdf
+% 原页：第 1 页（A3 横排）第 2 栏，印面 879，第 15 题题干下方
+% 说明：AE:EB=1:2，故 AE=AB/3；图中 A、E、B 依次在底边上，
+% D 在 A 上方偏右，C 在 B 上方偏右，DE 近于竖直，AC 为对角线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  \coordinate (A) at (0,0);
+  \coordinate (E) at (2,0);
+  \coordinate (B) at (6,0);
+  \coordinate (D) at (1.6,3);
+  \coordinate (C) at (7.6,3);
+  \coordinate (F) at (1.9,0.75);
+
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw (D) -- (E);
+  \draw (A) -- (C);
+
+  \fill (A) circle (1.1pt) node[below left] {$A$};
+  \fill (E) circle (1.1pt) node[below] {$E$};
+  \fill (B) circle (1.1pt) node[below right] {$B$};
+  \fill (D) circle (1.1pt) node[above left] {$D$};
+  \fill (C) circle (1.1pt) node[above right] {$C$};
+  \fill (F) circle (1.1pt) node[right] {$F$};
+\end{tikzpicture}

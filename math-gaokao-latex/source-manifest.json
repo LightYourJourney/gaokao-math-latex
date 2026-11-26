@@ -4444,6 +4444,14 @@
         "gk-2012-liaoning-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b02",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-guangdong-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4453,7 +4461,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "cbc956e3-e25e-43b0-8d97-fb92813df0ab",
+  "last_transaction_id": "5f59a0f7-0a6f-4bb5-bba2-bb8dd5164a66",
   "papers": [
     {
       "blocked_from": null,
@@ -51360,9 +51368,70 @@
       "title": "2012 年·辽宁卷·理科",
       "track": "science",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_广东卷_文科/figures/f2014_guangdong_arts_q15_parallelogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_广东卷_文科/figures/f2014_guangdong_arts_q18_fold.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_guangdong_arts",
+        "id": "gk-2014-guangdong-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 879、880。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。广东卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 15 题平行四边形、第 18 题矩形折叠前后两图；第 20 题原页无图。共 2 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "广东文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-guangdong-arts",
+      "production_state": "complete",
+      "project_dir": "2014_广东卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_广东文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_广东文_含解析.md",
+        "questions": "2014/2014_数学真题_广东文_试题.md",
+        "solution_body": "2014/2014_数学真题_广东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-39e932d22ba81a43554894b9d0e5460843b4294f457a8a2dc8962618b75ba6e7"
+      ],
+      "title": "2014 年·广东卷·文科",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 12052,
+  "revision": 12057,
   "schema_version": 1,
   "sources": [
     {
@@ -65831,8 +65900,8 @@
       "exam_type": "regular",
       "git_blob_oid": "05c97173f7f75dc4a40a9e5447c8e7ec6267fc69",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-guangdong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014广东文.pdf",
       "regions": [],
       "source_id": "src-39e932d22ba81a43554894b9d0e5460843b4294f457a8a2dc8962618b75ba6e7",
