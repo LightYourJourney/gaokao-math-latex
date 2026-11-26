@@ -1,0 +1,47 @@
+% ============================================================
+% f2012_hubei_science_q14_hyperbola.tex
+% 2012 湖北卷（理科）第 14 题 双曲线与内切圆、菱形、矩形
+% 双曲线 x^2/a^2-y^2/b^2=1，顶点 A1、A2，虚轴端点 B1、B2，焦点 F1、F2；
+% 以 A1A2 为直径的圆（半径 a）内切于菱形 F1B1F2B2，切点 A、B、C、D 成矩形。
+% 图中取 a=1.6，e=(1+sqrt5)/2，b=a*sqrt(e^2-1)=2.035，c=ae=2.589。
+% 来源 PDF：普通高考/2012/2012湖北理.pdf（SHA-256 b84a88bc…07cc）
+% 原页：第 1 页（A3 横排）第 3 栏上部，印面 737，第 14 题题干下方
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm]
+  \def\a{1.6}
+  \def\b{2.035}
+  \def\c{2.589}
+  \def\xt{0.989}
+  \def\yt{1.258}
+
+  \draw[->] (-3.55,0) -- (3.75,0) node[right] {$x$};
+  \draw[->] (0,-3.35) -- (0,3.45) node[above] {$y$};
+
+  % 双曲线两支
+  \draw[thick, domain=-2.55:2.55, samples=120] plot ({1.6*sqrt(1+(\x*\x)/4.14103)},\x);
+  \draw[thick, domain=-2.55:2.55, samples=120] plot ({-1.6*sqrt(1+(\x*\x)/4.14103)},\x);
+
+  % 菱形
+  \draw (-\c,0) -- (0,\b) -- (\c,0) -- (0,-\b) -- cycle;
+
+  % 内切圆
+  \draw (\a,0) arc (0:360:\a);
+
+  % 矩形 ABCD
+  \draw (-\xt,\yt) -- (\xt,\yt) -- (\xt,-\yt) -- (-\xt,-\yt) -- cycle;
+
+  % 切点
+  \fill (\xt,\yt) circle (1.2pt) node[right] {$A$};
+  \fill (-\xt,\yt) circle (1.2pt) node[left] {$B$};
+  \fill (-\xt,-\yt) circle (1.2pt) node[left] {$C$};
+  \fill (\xt,-\yt) circle (1.2pt) node[right] {$D$};
+
+  % 顶点与焦点
+  \fill (-\a,0) circle (1.2pt) node[below left] {$A_1$};
+  \fill (\a,0) circle (1.2pt) node[below right] {$A_2$};
+  \fill (0,\b) circle (1.2pt) node[right] {$B_2$};
+  \fill (0,-\b) circle (1.2pt) node[right] {$B_1$};
+  \fill (-\c,0) circle (1.2pt) node[below left] {$F_1$};
+  \fill (\c,0) circle (1.2pt) node[below right] {$F_2$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

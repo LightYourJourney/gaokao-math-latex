@@ -1,0 +1,21 @@
+% ============================================================
+% f2012_hubei_science_q19_fig1.tex
+% 2012 湖北卷（理科）第 19 题 图 1（折起前的平面图）
+% B、D、C 共线，AD 垂直 BC，∠ACB=45°，BC=3（图中 BD=1，DC=AD=2）。
+% 来源 PDF：普通高考/2012/2012湖北理.pdf（SHA-256 b84a88bc…07cc）
+% 原页：第 2 页（A3 横排）第 1 栏下部，印面 738，第 19 题题干下方
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm]
+  \coordinate (B) at (0,0);
+  \coordinate (D) at (1,0);
+  \coordinate (C) at (3,0);
+  \coordinate (A) at (1,2);
+
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (D);
+
+  \fill (A) circle (1.2pt) node[above] {$A$};
+  \fill (B) circle (1.2pt) node[below left] {$B$};
+  \fill (C) circle (1.2pt) node[below right] {$C$};
+  \fill (D) circle (1.2pt) node[below] {$D$};
+\end{tikzpicture}

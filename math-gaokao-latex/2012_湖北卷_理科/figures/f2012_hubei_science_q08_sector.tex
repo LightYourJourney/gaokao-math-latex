@@ -1,0 +1,38 @@
+% ============================================================
+% f2012_hubei_science_q08_sector.tex
+% 2012 湖北卷（理科）第 8 题 直角扇形 OAB 内的两个半圆
+% 扇形圆心角 90°，OA 水平、OB 竖直；以 OA、OB 为直径各作一个半圆。
+% 阴影＝两半圆的公共部分（透镜形）＋扇形内两半圆之外的部分（月牙形）。
+% 来源 PDF：普通高考/2012/2012湖北理.pdf（SHA-256 b84a88bc…07cc）
+% 原页：第 1 页（A3 横排）第 2 栏上部，印面 737，第 8 题题干下方
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, scale=2.3]
+  \def\r{1}
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (\r,0);
+  \coordinate (B) at (0,\r);
+
+  % 扇形内先铺阴影，再用白色挖去两个半圆，最后补回公共部分
+  \begin{scope}
+    \clip (O) -- (A) arc (0:90:\r) -- cycle;
+    \fill[black!15] (O) -- (A) arc (0:90:\r) -- cycle;
+    \fill[white] (\r/2,0) circle (\r/2);
+    \fill[white] (0,\r/2) circle (\r/2);
+  \end{scope}
+  \begin{scope}
+    \clip (\r/2,0) circle (\r/2);
+    \clip (0,\r/2) circle (\r/2);
+    \fill[black!15] (-0.2,-0.2) rectangle (\r+0.2,\r+0.2);
+  \end{scope}
+
+  % 轮廓
+  \draw (O) -- (A);
+  \draw (O) -- (B);
+  \draw (A) arc (0:90:\r);
+  \draw (O) arc (180:0:\r/2);
+  \draw (B) arc (90:-90:\r/2);
+
+  \node[below left] at (O) {$O$};
+  \node[below] at (A) {$A$};
+  \node[left] at (B) {$B$};
+\end{tikzpicture}

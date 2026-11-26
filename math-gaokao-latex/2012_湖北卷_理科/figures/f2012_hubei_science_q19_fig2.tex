@@ -1,0 +1,38 @@
+% ============================================================
+% f2012_hubei_science_q19_fig2.tex
+% 2012 湖北卷（理科）第 19 题 图 2（沿 AD 折起后的三棱锥 A-BCD）
+% AD ⊥ 底面 BCD，∠BDC=90°；M 为 AC 中点，E 为 BC 中点；N 待定，原页未画出。
+% 采用固定斜投影：D=(1.00,1.05)、B=(0.10,0.90)、C=(2.60,0.95)、A=(1.00,3.75)，
+% 其中 E、M 由相应顶点直接取中点得到。
+% 来源 PDF：普通高考/2012/2012湖北理.pdf（SHA-256 b84a88bc…07cc）
+% 原页：第 2 页（A3 横排）第 1 栏下部，印面 738，第 19 题题干下方
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm]
+  \coordinate (A) at (1.00,3.75);
+  \coordinate (B) at (0.10,0.90);
+  \coordinate (C) at (2.60,0.95);
+  \coordinate (D) at (1.00,1.05);
+  \coordinate (E) at (1.35,0.925);
+  \coordinate (M) at (1.80,2.35);
+
+  % 可见棱
+  \draw (A) -- (B);
+  \draw (A) -- (C);
+  \draw (B) -- (C);
+  \draw (B) -- (M);
+
+  % 被遮棱
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (D) -- (B);
+  \draw[dashed] (D) -- (C);
+
+  % D 处直角标记（DA 与 DC 之间）
+  \draw (1.00,1.25) -- (1.20,1.2375) -- (1.20,1.0375);
+
+  \fill (A) circle (1.2pt) node[above] {$A$};
+  \fill (B) circle (1.2pt) node[below left] {$B$};
+  \fill (C) circle (1.2pt) node[right] {$C$};
+  \fill (D) circle (1.2pt) node[below left] {$D$};
+  \fill (E) circle (1.2pt) node[below right] {$E$};
+  \fill (M) circle (1.2pt) node[right] {$M$};
+\end{tikzpicture}

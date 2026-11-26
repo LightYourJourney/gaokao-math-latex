@@ -4324,6 +4324,14 @@
         "gk-2012-fujian-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b86",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-hubei-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4333,7 +4341,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "4e6dda8e-7103-413b-a1fd-fff61dc3375e",
+  "last_transaction_id": "518a56fe-719e-4e23-aede-c10a1d3c07a7",
   "papers": [
     {
       "blocked_from": null,
@@ -50153,9 +50161,94 @@
       "title": "2012 年·福建卷·文科",
       "track": "arts",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_湖北卷_理科/figures/f2012_hubei_science_q03_parabola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_湖北卷_理科/figures/f2012_hubei_science_q04_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_湖北卷_理科/figures/f2012_hubei_science_q08_sector.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_湖北卷_理科/figures/f2012_hubei_science_q12_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_湖北卷_理科/figures/f2012_hubei_science_q14_hyperbola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_湖北卷_理科/figures/f2012_hubei_science_q15_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_湖北卷_理科/figures/f2012_hubei_science_q19_fig1.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_湖北卷_理科/figures/f2012_hubei_science_q19_fig2.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_hubei_science",
+        "id": "gk-2012-hubei-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 737、738。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖北卷题号：选择 1—10、填空 11—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 3 题函数图象、第 4 题三视图、第 8 题扇形与两半圆、第 12 题程序框图、第 14 题双曲线与菱形、第 15 题角度图、第 19 题折起前后两图；第 21 题无图。共 8 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖北卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "湖北理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-hubei-science",
+      "production_state": "complete",
+      "project_dir": "2012_湖北卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_湖北理_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_湖北理_含解析.md",
+        "questions": "2012/2012_数学真题_湖北理_试题.md",
+        "solution_body": "2012/2012_数学真题_湖北理_解析正文.md"
+      },
+      "source_ids": [
+        "src-b74d3c7f3b50b161a840c8c9d9ffd4d93388b80ab57e5587da0572c902d9784a"
+      ],
+      "title": "2012 年·湖北卷·理科",
+      "track": "science",
+      "year": 2012
     }
   ],
-  "revision": 11961,
+  "revision": 11966,
   "schema_version": 1,
   "sources": [
     {
@@ -63136,8 +63229,8 @@
       "exam_type": "regular",
       "git_blob_oid": "292f9517b569adf8cdd9d6cf7ec159d47ec20eb9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-hubei-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012湖北理.pdf",
       "regions": [],
       "source_id": "src-b74d3c7f3b50b161a840c8c9d9ffd4d93388b80ab57e5587da0572c902d9784a",

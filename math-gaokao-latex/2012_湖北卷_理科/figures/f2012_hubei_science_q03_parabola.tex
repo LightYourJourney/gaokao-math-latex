@@ -1,0 +1,16 @@
+% ============================================================
+% f2012_hubei_science_q03_parabola.tex
+% 2012 湖北卷（理科）第 3 题 二次函数 y=f(x) 的图象
+% 图中抛物线开口向下，顶点 (0,1)，与 x 轴交于 (-1,0)、(1,0)
+% 来源 PDF：普通高考/2012/2012湖北理.pdf（SHA-256 b84a88bc…07cc）
+% 原页：第 1 页（A3 横排）第 1 栏，印面 737，第 3 题题干下方
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1.4cm, y=1.4cm]
+  \draw[->] (-2.3,0) -- (2.3,0) node[right] {$x$};
+  \draw[->] (0,-1.55) -- (0,1.95) node[above] {$y$};
+  \draw[thick, domain=-1.62:1.62, samples=120] plot (\x,{1-(\x)*(\x)});
+  \node[above left] at (0,1) {$1$};
+  \node at (-1.20,-0.20) {$-1$};
+  \node at (1.20,-0.20) {$1$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}
