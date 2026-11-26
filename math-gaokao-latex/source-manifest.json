@@ -4492,6 +4492,14 @@
         "gk-2014-anhui-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b09",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-shandong-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4501,7 +4509,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "2052bb52-7eb4-4f9d-a6c4-229c85db1f04",
+  "last_transaction_id": "d216b41c-b5c3-4209-b195-8e141ddbe11a",
   "papers": [
     {
       "blocked_from": null,
@@ -51818,9 +51826,78 @@
       "title": "2014 年·安徽卷·理科",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_山东卷_文科/figures/f2014_shandong_arts_q06_log.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_山东卷_文科/figures/f2014_shandong_arts_q08_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_山东卷_文科/figures/f2014_shandong_arts_q11_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_山东卷_文科/figures/f2014_shandong_arts_q18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_shandong_arts",
+        "id": "gk-2014-shandong-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 909、910（909 面为选择 1—10、填空 11—15、解答 16—17；910 面为 18—21）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。山东卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 6 题对数函数图象、第 8 题频率分布直方图、第 11 题程序框图、第 18 题四棱锥；第 21 题原页无图。共 4 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "山东文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-shandong-arts",
+      "production_state": "complete",
+      "project_dir": "2014_山东卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_山东文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_山东文_含解析.md",
+        "questions": "2014/2014_数学真题_山东文_试题.md",
+        "solution_body": "2014/2014_数学真题_山东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-a434e9c1c39a9d99f7da59686726a2c1d5e9d8a04659d9e5741c74ebcea55d8e"
+      ],
+      "title": "2014 年·山东卷·文科",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 12097,
+  "revision": 12111,
   "schema_version": 1,
   "sources": [
     {
@@ -66241,8 +66318,8 @@
       "exam_type": "regular",
       "git_blob_oid": "060ca4ddcee770e312c44c4239cbdbd728575a4c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-shandong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014山东文.pdf",
       "regions": [],
       "source_id": "src-a434e9c1c39a9d99f7da59686726a2c1d5e9d8a04659d9e5741c74ebcea55d8e",

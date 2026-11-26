@@ -1,0 +1,50 @@
+% ============================================================
+% f2014_shandong_arts_q18_pyramid.tex
+% 2014 山东卷（文科）第 18 题：四棱锥 P-ABCD
+% 来源 PDF：普通高考/2014/2014山东文.pdf
+% 原页：第 2 页（A3 横排）左栏，印面 910，第 18 题题干下方
+% 结构：AP⊥平面 PCD，AD∥BC，AB=BC=AD/2；
+%       E 为 AD 中点，F 为 PC 中点；连 BE、BF、EF，
+%       AD、AC 为不可见棱（虚线）。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  \coordinate (P) at (2.15,3.90);
+  \coordinate (A) at (0.35,1.55);
+  \coordinate (B) at (1.25,0.55);
+  \coordinate (C) at (3.55,1.05);
+  \coordinate (D) at (4.85,2.10);
+
+  % 中点
+  \coordinate (E) at (2.60,1.825);
+  \coordinate (F) at (2.85,2.475);
+
+  % 不可见棱
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (E) -- (F);
+
+  % 底面与侧棱
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+
+  % 辅助线
+  \draw (B) -- (E);
+  \draw (B) -- (F);
+
+  % 顶点标注
+  \node[above] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[below right] at (E) {$E$};
+  \node[above right] at (F) {$F$};
+
+\end{tikzpicture}
