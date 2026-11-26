@@ -1,0 +1,35 @@
+% ============================================================
+% f2014_tianjin_science_q06_circle.tex
+% 2014 天津卷（理科）第 6 题：圆内接三角形与切线
+% 来源 PDF：普通高考/2014/2014天津理.pdf
+% 原页：第 1 页（A3），印面 923，第 6 题题干下方
+% D 为 ∠BAC 平分线与圆的交点（弧 BC 中点），E=AD∩BC，
+% F 为过 B 的切线与 AD 延长线的交点。取 A=70°、B=210°、C=330°、D=270°。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  line cap=round, line join=round, scale=0.78]
+  % 圆（半径 2）
+  \draw[line width=0.7pt] (0,0) circle (2);
+  \coordinate (A) at (0.684,1.879);
+  \coordinate (B) at (-1.732,-1.000);
+  \coordinate (C) at (1.732,-1.000);
+  \coordinate (D) at (0,-2);
+  \coordinate (E) at (0.176,-1.000);
+  \coordinate (F) at (-0.270,-3.530);
+
+  % 三角形与内接弦
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (B) -- (D) -- (C);
+  % 角平分线 AD 及延长线到 F
+  \draw (A) -- (D);
+  \draw (D) -- (F);
+  % 过 B 的切线
+  \draw (B) -- (F);
+
+  \fill (A) circle (0.9pt) node[above right=-1pt] {$A$};
+  \fill (B) circle (0.9pt) node[left=-1pt] {$B$};
+  \fill (C) circle (0.9pt) node[right=-1pt] {$C$};
+  \fill (D) circle (0.9pt) node[below right=-1pt] {$D$};
+  \fill (E) circle (0.9pt) node[above left=-1pt] {$E$};
+  \fill (F) circle (0.9pt) node[below=-1pt] {$F$};
+\end{tikzpicture}

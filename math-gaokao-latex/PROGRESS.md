@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2014 天津卷（理科）：phase7-b91 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2014-tianjin-science`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-3b2d9fafaa3a469f98dd81d5542913cde79c591f77686474824e69b78073a90b`，2 页 A3，印面 923、924。
+- 答案（等级 D）：1 A（$1-\\mathrm i$）；2 B（$3$）；3 B（$105$）；4 D（$(-\\infty,-2)$）；5 A（$\\frac{x^2}5-\\frac{y^2}{20}=1$）；6 D（①②④）；7 C（充要）；8 C（$\\frac56$）；9 $60$；10 $\\frac{20\\pi}3$；11 $-\\frac12$；12 $-\\frac14$；13 $3$；14 $(0,1)\\cup(9,+\\infty)$；15 (1) $\\pi$、(2) 最大 $\\frac14$、最小 $-\\frac12$；16 (1) $\\frac{49}{60}$、(2) 分布列 $\\frac16,\\frac12,\\frac3{10},\\frac1{30}$，$E=\\frac65$；17 (1) 证明、(2) $\\frac{\\sqrt3}3$、(3) $\\frac{3\\sqrt{10}}{10}$；18 (1) $\\frac{\\sqrt2}2$、(2) $4\\pm\\sqrt{15}$；19 (1) $\\{0,\\dots,7\\}$、(2) 证明；20 (1) $(0,\\frac1{\\mathrm e})$、(2)(3) 证明。
+- **来源核对**：第 2 题 $z=x+2y$ 最小值；第 6 题为圆与切线、第 7 题为 $a|a|>b|b|$ 条件；第 14 题为 $|x^2+3x|-a|x-1|=0$ 四根；第 15 题第 (1) 问求周期、区间 $[-\\frac\\pi4,\\frac\\pi4]$；第 16 题第 (1) 问为三人不同学院概率；第 17(1) 证 $BE\\perp DC$；第 18(2) 求直线斜率；第 20 题为单调性命题。
+- 主代理复核：第 3 题 $S=3\\times5\\times7=105$；第 8 题 $\\lambda+\\mu=\\frac56$；第 11 题 $a_1=-\\frac12$；第 12 题 $\\cos A=-\\frac14$；第 13 题 $a=3$；第 14 题 $(0,1)\\cup(9,\\infty)$；第 15 题 $T=\\pi$、max $\\frac14$、min $-\\frac12$；第 16 题 $P=\\frac{49}{60}$、$E=\\frac65$；第 17 题 $\\sin\\theta=\\frac{\\sqrt3}3$、二面角余弦 $\\frac{3\\sqrt{10}}{10}$；第 18 题 $e=\\frac{\\sqrt2}2$、斜率 $4\\pm\\sqrt{15}$；第 19 题 $A=\\{0,\\dots,7\\}$；第 20 题 $a\\in(0,\\frac1{\\mathrm e})$。
+- 图稿：4 张 TikZ（程序框图、圆与切线、三视图、四棱锥）；其余各题原页无图。
+- 验收：四版 5/32/7/23 页（共 67 页），四 log 全 0（Overfull、missing characters 均 0）；review 67 页 **pass 489 + not_applicable 47、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；4 条图稿引用全部命中。
+- 全库：manifest **681 卷 / 775 来源 / 527 批次**，complete 563、blocked 118，未绑定 **95**；revision 11999。
+
 ### 2014 天津卷（文科）：phase7-b90 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2014-tianjin-arts`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-146f1da26ce9b33f690750704a5b5c06a9cb9bcfdf700edae6f636692ba14d7e`，2 页 A3，印面 925、926（第 925 面含 15、16 题题干）。
 - 答案（等级 D）：1 A（$1-\\mathrm i$）；2 B（$3$）；3 B；4 C（$a>c>b$）；5 D（$-\\frac12$）；6 A（$\\frac{x^2}5-\\frac{y^2}{20}=1$）；7 D（①②④）；8 C（$\\pi$）；9 $60$；10 $\\frac{20\\pi}3$；11 $-4$；12 $(-\\infty,0)$；13 $\\lambda=2$；14 $(1,2)$；15 15 种结果、$P(M)=\\frac25$；16 (1) $\\frac{\\sqrt6}4$、(2) $\\frac{\\sqrt{15}-\\sqrt3}8$；17 (1) 证明、(2)① 证明、② $\\frac{2\\sqrt{11}}{11}$；18 (1) $\\frac{\\sqrt2}2$、(2) $\\frac{x^2}6+\\frac{y^2}3=1$；19 (1) 减 $(-\\infty,0)$、$(\\frac1a,+\\infty)$，增 $(0,\\frac1a)$，极小 0、极大 $\\frac1{3a^2}$、(2) $[\\frac34,\\frac32]$；20 (1) $A=\\{0,1,\\dots,7\\}$、(2) 证明。
