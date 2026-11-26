@@ -4420,6 +4420,14 @@
         "gk-2014-jiangsu"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b98",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-liaoning-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4429,7 +4437,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e1fd24d2-5bcf-43a7-88cc-80d8e6845277",
+  "last_transaction_id": "832fd069-78d2-4862-9c06-1f7b3151dd86",
   "papers": [
     {
       "blocked_from": null,
@@ -51089,9 +51097,90 @@
       "title": "2014 年·江苏卷",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_辽宁卷_文科/figures/f2014_liaoning_arts_q06_semicircle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_辽宁卷_文科/figures/f2014_liaoning_arts_q07_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_辽宁卷_文科/figures/f2014_liaoning_arts_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_辽宁卷_文科/figures/f2014_liaoning_arts_q19_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_辽宁卷_文科/figures/f2014_liaoning_arts_q20_circle_tangent.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_辽宁卷_文科/figures/f2014_liaoning_arts_q22_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_liaoning_arts",
+        "id": "gk-2014-liaoning-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 897、898。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。辽宁卷题号：选择 1—12、填空 13—16、解答 17—21、选做 22—24（22 几何证明、23 极坐标、24 不等式，三选一，全部收录），共 24 题。答案由本库独立推导（等级 D，非官方）。原页图：第 6 题半圆、第 7 题三视图、第 13 题程序框图、第 19 题四面体、第 20 题圆与切线、第 22 题圆；共 6 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            24
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "辽宁文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-liaoning-arts",
+      "production_state": "complete",
+      "project_dir": "2014_辽宁卷_文科",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_辽宁文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_辽宁文_含解析.md",
+        "questions": "2014/2014_数学真题_辽宁文_试题.md",
+        "solution_body": "2014/2014_数学真题_辽宁文_解析正文.md"
+      },
+      "source_ids": [
+        "src-ace6afbc181231e3ddacc8791aee4aa5efa25403614cf6f6bf0a5ee98efa5a5f"
+      ],
+      "title": "2014 年·辽宁卷·文科",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 12036,
+  "revision": 12041,
   "schema_version": 1,
   "sources": [
     {
@@ -65968,8 +66057,8 @@
       "exam_type": "regular",
       "git_blob_oid": "4582ed67eec86742d072100eb8e552d0c26e4c4c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-liaoning-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014辽宁文.pdf",
       "regions": [],
       "source_id": "src-ace6afbc181231e3ddacc8791aee4aa5efa25403614cf6f6bf0a5ee98efa5a5f",

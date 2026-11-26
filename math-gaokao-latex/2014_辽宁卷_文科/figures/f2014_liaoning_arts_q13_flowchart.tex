@@ -1,0 +1,38 @@
+% ============================================================
+% f2014_liaoning_arts_q13_flowchart.tex
+% 2014 辽宁卷（文科）第 13 题：程序框图
+% 来源 PDF：普通高考/2014/2014辽宁文.pdf
+% 原页：第 1 页（A3），印面 897，第 13 题题干下方
+% 按原图重绘：循环体依次执行 i=i+1、S=S+i、T=T+S，
+% 判断框 $i\leqslant n$ 不成立时输出 T。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  every node/.style={inner sep=2pt},
+  term/.style={draw, rounded corners=3pt, minimum width=2.1cm,
+    minimum height=0.6cm, align=center},
+  proc/.style={draw, minimum width=2.4cm, minimum height=0.6cm, align=center},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.4cm, minimum height=0.6cm, align=center},
+  dec/.style={draw, diamond, aspect=2, minimum width=2.3cm,
+    minimum height=0.9cm, align=center}]
+  \node[term] (start) at (0,0) {开始};
+  \node[io] (input) at (0,-0.92) {输入 $n$};
+  \node[proc] (init) at (0,-1.86) {$i=0,\ S=0,\ T=0$};
+  \node[dec] (test) at (0,-3.02) {$i\leqslant n$};
+  \node[proc] (b1) at (0,-4.12) {$i=i+1$};
+  \node[proc] (b2) at (0,-5.02) {$S=S+i$};
+  \node[proc] (b3) at (0,-5.92) {$T=T+S$};
+  \node[io] (out) at (0,-7.12) {输出 $T$};
+  \node[term] (end) at (0,-8.04) {结束};
+
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (init);
+  \draw[->] (init) -- (test);
+  \draw[->] (test.south) -- node[left] {是} (b1.north);
+  \draw[->] (b1) -- (b2);
+  \draw[->] (b2) -- (b3);
+  % 循环体回到判断框左侧
+  \draw[->] (b3.west) -- ++(-1.95,0) |- (test.west);
+  % “否”分支绕到输出框
+  \draw[->] (test.east) -- node[above] {否} ++(1.95,0) |- (out.east);
+\end{tikzpicture}

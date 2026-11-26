@@ -1,0 +1,22 @@
+% ============================================================
+% f2014_liaoning_arts_q20_circle_tangent.tex
+% 2014 辽宁卷（文科）第 20 题：圆与第一象限内的切线
+% 来源 PDF：普通高考/2014/2014辽宁文.pdf
+% 原页：第 2 页（A3），印面 898，第 20 题题干下方
+% 圆 x^2+y^2=4 的切线与两坐标轴正半轴围成三角形，切点为 P。
+% 图中按面积最小的情形取 P(sqrt2,sqrt2)，切线 x+y=2sqrt2。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm,
+  every node/.style={inner sep=1.5pt}]
+  % 坐标轴
+  \draw[->] (-3.1,0) -- (3.9,0) node[right] {$x$};
+  \draw[->] (0,-3.1) -- (0,3.9) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 圆
+  \draw (0,0) circle (2);
+
+  % 切线与切点
+  \draw (2.828,0) -- (0,2.828);
+  \fill (1.414,1.414) circle (1.2pt) node[above right] {$P$};
+\end{tikzpicture}

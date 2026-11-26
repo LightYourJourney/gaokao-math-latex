@@ -1,0 +1,24 @@
+% ============================================================
+% f2014_liaoning_arts_q06_semicircle.tex
+% 2014 辽宁卷（文科）第 6 题：长方形 ABCD 与以 AB 为直径的半圆
+% 来源 PDF：普通高考/2014/2014辽宁文.pdf
+% 原页：第 1 页（A3），印面 897，第 6 题题干下方
+% 图中 AB=2，BC=1，半圆在 AB 上方且与 CD 相切。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2,0);
+  \coordinate (C) at (2,1);
+  \coordinate (D) at (0,1);
+
+  % 长方形与半圆
+  \fill[gray!25] (A) arc (180:0:1) -- cycle;
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw (A) arc (180:0:1);
+
+  % 顶点标签
+  \fill (A) circle (1.1pt) node[below left] {$A$};
+  \fill (B) circle (1.1pt) node[below right] {$B$};
+  \fill (C) circle (1.1pt) node[above right] {$C$};
+  \fill (D) circle (1.1pt) node[above left] {$D$};
+\end{tikzpicture}
