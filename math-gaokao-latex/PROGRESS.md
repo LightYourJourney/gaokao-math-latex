@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 广东卷（理科）：phase7-b83 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2012-guangdong-science`，**21 个题号**（选择 1—8、填空 9—15、解答 16—21）；固定来源 `src-679987406bc16047decee391c7447148bc88abff18d6fabbf91edbede960f9f0`，2 页 A3，印面 733、734。
+- 答案（等级 D）：1 D（$-6-5\\mathrm i$）；2 C（$\\{3,5,6\\}$）；3 A（$(-2,-4)$）；4 A；5 B（$11$）；6 C（$57\\pi$）；7 D（$\\frac19$）；8 C（$\\frac32$）；9 $\\left(-\\infty,-\\frac12\\right]$；10 $20$；11 $a_n=2n-1$；12 $y=2x+1$；13 $8$；14 $(1,1)$；15 $\\sqrt3$；16 (1) $\\omega=\\frac15$、(2) $-\\frac{13}{85}$；17 (1) $x=0.018$、(2) $E\\xi=\\frac12$；18 (1) 证明、(2) $3$；19 (1) $a_1=1$、(2) $a_n=3^n-2^n$、(3) 证明；20 (1) $\\frac{x^2}3+y^2=1$、(2) 存在四点、面积 $\\frac12$；21 (1) 五类 $D$、(2) 极值点分类。
+- **来源核对**：任务提示多处与 PDF 不符，均按 PDF 纠正——第 3 题为 $\\overrightarrow{BA},\\overrightarrow{CA}$ 求 $\\overrightarrow{BC}$；第 10 题求 $x^3$ 系数（20）；第 12 题为 $y=x^3-x+3$ 在 $(1,3)$ 的切线；第 19 题为 $2S_n=a_{n+1}-2^{n+1}+1$；第 20 题 $e=\\sqrt{\\frac23}$，且原页无椭圆图；第 21 题为 $a<1$（含 $a\\leqslant0$）。
+- 主代理复核：第 5 题 $z_{\\max}=11$；第 6 题 $45\\pi+12\\pi=57\\pi$；第 7 题 $5/45=\\frac19$；第 8 题 $a\\star b=\\frac32$；第 9 题 $(-\\infty,-\\frac12]$；第 10 题 $\\mathrm C_6^3=20$；第 11 题 $d=2$；第 12 题 $y'=2$；第 13 题 $s=8$；第 14 题 $y^2=x$ 与 $x^2+y^2=2$ 得 $(1,1)$；第 15 题 $PA=\\tan60^\\circ=\\sqrt3$；第 16 题 $\\sin\\alpha=\\frac35,\\cos\\beta=\\frac8{17}$ 得 $-\\frac{13}{85}$；第 17 题 $10(0.082+x)=1$、超几何 $E\\xi=2\\cdot\\frac3{12}=\\frac12$；第 18 题 $AB=2$、$\\cos\\varphi=\\frac1{\\sqrt{10}}$、$\\tan\\varphi=3$；第 19 题 $a_n=3^n-2^n$；第 20 题 $b^2=1,a^2=3$、$m^2+n^2=2$、面积 $\\frac12$；第 21 题 $\\Delta=3(3a-1)(a-3)$ 五类讨论。
+- 图稿：5 张 TikZ（三视图、程序框图、圆与弦、频率直方图、四棱锥）；第 20 题原页无图，未补绘。
+- 验收：四版 5/33/7/25 页（共 70 页），四 log 全 0（Overfull、missing characters 均 0）；review 70 页 **pass 515 + not_applicable 45、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库：manifest **674 卷 / 775 来源 / 520 批次**，complete 556、blocked 118，未绑定 **102**；revision 11953。
+
 ### 2012 广东卷（文科）：phase7-b82 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2012-guangdong-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-9effc6fd9844086283b407b4cd58c02a265188825e0df9287c47efa53cd96b34`，2 页 A3，印面 735、736。
 - 答案（等级 D）：1 D（$4-3\\mathrm i$）；2 A（$\\{2,4,6\\}$）；3 A（$(4,6)$）；4 D（$y=\\ln\\sqrt{x^2+1}$）；5 C（$-5$）；6 B（$2\\sqrt3$）；7 C（$30\\pi$）；8 B（$2\\sqrt3$）；9 C（$15$）；10 D（$\\frac12$）；11 $[-1,0)\\cup(0,+\\infty)$；12 $\\frac14$；13 $1,1,3,3$；14 $(2,1)$；15 $\\sqrt{mn}$；16 (1) $A=2$、(2) $-\\frac{13}{85}$；17 (1) $a=0.005$、(2) $73$、(3) $10$ 人；18 (1) 证明、(2) $\\frac{\\sqrt2}{12}$、(3) 证明；19 (1) $a_1=1$、(2) $a_n=3\\cdot2^{n-1}-2$；20 (1) $\\frac{x^2}2+y^2=1$、(2) $x\\pm\\sqrt2y+2=0$；21 (1) 分三段 $D$、(2) 极值点分段。

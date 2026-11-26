@@ -1,0 +1,28 @@
+% ============================================================
+% f2012_guangdong_science_q15_circle.tex
+% 2012 广东卷（理科）第 15 题 圆与切线（TikZ 矢量重绘）
+% 圆 O 半径 1；A、B、C 在圆上，∠ABC=30°；
+% 过 A 的切线与 OC 的延长线交于 P。图中 ∠AOC=60°，PA=√3。
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth
+]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (60:1.5);
+  \coordinate (C) at (0:1.5);
+  \coordinate (B) at (220:1.5);
+  \coordinate (P) at (3.0,0);
+
+  \draw (O) circle (1.5);
+  \draw (A) -- (B) -- (C);
+  \draw (O) -- (A);
+  \draw (O) -- (P);
+  \draw (A) -- (P);
+
+  \fill (O) circle (1.0pt);
+  \node[above left] at (O) {$O$};
+  \node[above right] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (P) {$P$};
+\end{tikzpicture}

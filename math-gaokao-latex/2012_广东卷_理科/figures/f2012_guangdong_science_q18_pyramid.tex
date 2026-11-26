@@ -1,0 +1,48 @@
+% ============================================================
+% f2012_guangdong_science_q18_pyramid.tex
+% 2012 广东卷（理科）第 18 题 四棱锥 P-ABCD（TikZ 矢量重绘）
+% 底面 ABCD 为矩形，PA⊥平面 ABCD，E 在线段 PC 上，PC⊥平面 BDE
+% 虚线为不可见棱：PA、AB、AD、AC、BD
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm, line width=0.6pt, font=\footnotesize, >=Stealth
+]
+  \coordinate (A) at (0,1.1);
+  \coordinate (B) at (-2.5,0.1);
+  \coordinate (C) at (2.1,0.1);
+  \coordinate (D) at (4.6,1.1);
+  \coordinate (P) at (-0.7,4.6);
+  \coordinate (E) at ($(P)!0.5556!(C)$);
+
+  % 不可见棱
+  \draw[dashed, line width=0.45pt] (P) -- (A);
+  \draw[dashed, line width=0.45pt] (A) -- (B);
+  \draw[dashed, line width=0.45pt] (A) -- (D);
+  \draw[dashed, line width=0.45pt] (A) -- (C);
+  \draw[dashed, line width=0.45pt] (B) -- (D);
+
+  % 可见棱
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  \draw (B) -- (E);
+  \draw (E) -- (D);
+
+  % 顶点与交点
+  \fill (A) circle (1.0pt);
+  \fill (B) circle (1.0pt);
+  \fill (C) circle (1.0pt);
+  \fill (D) circle (1.0pt);
+  \fill (P) circle (1.0pt);
+  \fill (E) circle (1.0pt);
+
+  \node[above] at (P) {$P$};
+  \node[below left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+
+\end{tikzpicture}
