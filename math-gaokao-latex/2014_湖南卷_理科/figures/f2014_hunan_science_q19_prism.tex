@@ -1,0 +1,55 @@
+% ============================================================
+% f2014_hunan_science_q19_prism.tex
+% 2014 湖南卷（理科）第 19 题：四棱柱 ABCD-A1B1C1D1
+% 来源 PDF：普通高考/2014/2014湖南理.pdf
+% 原页：第 2 页（A3 横排）左栏，印面 886，第 19 题题干下方
+% 结构：底面为菱形 ABCD（A 在后、B 在左、C 在前、D 在右），
+%       O、O1 分别为 AC∩BD 与 A1C1∩B1D1；侧棱垂直于底面。
+%       实线：顶面四边、三条可见侧棱、BC、CD；
+%       虚线：AA1、AB、AD、AC、BD、OO1、OB1、OC1。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+  \coordinate (A)  at (1.30,1.70);
+  \coordinate (B)  at (0.00,0.55);
+  \coordinate (C)  at (2.10,0.00);
+  \coordinate (D)  at (3.40,1.15);
+  \coordinate (A1) at (1.30,4.10);
+  \coordinate (B1) at (0.00,2.95);
+  \coordinate (C1) at (2.10,2.40);
+  \coordinate (D1) at (3.40,3.55);
+  \coordinate (O)  at (1.70,0.85);
+  \coordinate (O1) at (1.70,3.25);
+  % 顶面
+  \draw (A1) -- (B1);
+  \draw (B1) -- (C1);
+  \draw (C1) -- (D1);
+  \draw (D1) -- (A1);
+  % 可见侧棱
+  \draw (B1) -- (B);
+  \draw (C1) -- (C);
+  \draw (D1) -- (D);
+  % 底面可见边
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  % 底面与内部虚线
+  \draw[dashed] (A1) -- (A);
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (B) -- (D);
+  \draw[dashed] (O) -- (O1);
+  \draw[dashed] (O) -- (B1);
+  \draw[dashed] (O) -- (C1);
+  % 顶点标注
+  \node[above left,  inner sep=2pt] at (A1) {$A_1$};
+  \node[left,        inner sep=2pt] at (B1) {$B_1$};
+  \node[right,       inner sep=2pt] at (C1) {$C_1$};
+  \node[above right] at (D1) {$D_1$};
+  \node[inner sep=2pt] at (1.10,1.30) {$A$};
+  \node[below left,  inner sep=2pt] at (B)  {$B$};
+  \node[below,       inner sep=2pt] at (C)  {$C$};
+  \node[right,       inner sep=2pt] at (D)  {$D$};
+  \node[below,       inner sep=2pt] at (O)  {$O$};
+  \node[above,       inner sep=2pt] at (O1) {$O_1$};
+\end{tikzpicture}

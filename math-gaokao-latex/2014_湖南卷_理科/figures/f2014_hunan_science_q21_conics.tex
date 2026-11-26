@@ -1,0 +1,46 @@
+% ============================================================
+% f2014_hunan_science_q21_conics.tex
+% 2014 湖南卷（理科）第 21 题：椭圆 C1 与双曲线 C2
+% 来源 PDF：普通高考/2014/2014湖南理.pdf
+% 原页：第 2 页（A3 横排）中栏，印面 886，第 21 题题干下方
+% 结构：C1: x^2/2+y^2=1；C2: x^2/2-y^2=1；
+%       F1(-1,0)、F2(1,0)、F3(-√3,0)、F4(√3,0)；
+%       弦 AB 过 F1，M 为 AB 中点，直线 OM 与 C2 交于 P、Q，
+%       图中画出四边形 APBQ 的四边。取 AB 的斜率倒数为 m=1/2 作图。
+%       比例 1.7 cm/单位。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small,
+  x=1.7cm, y=1.7cm, line cap=round, line join=round]
+  % 坐标轴
+  \draw[->] (-2.30,0) -- (2.30,0) node[right] {$x$};
+  \draw[->] (0,-1.62) -- (0,1.62) node[above] {$y$};
+  % 椭圆 C1
+  \draw[domain=0:360, samples=240, smooth, variable=\t]
+    plot ({1.41421*cos(\t)}, {sin(\t)});
+  % 双曲线 C2 的左右两支
+  \draw[domain=-1.50:1.50, samples=120, smooth, variable=\t]
+    plot ({sqrt(2*(1+\t*\t))}, {\t});
+  \draw[domain=-1.50:1.50, samples=120, smooth, variable=\t]
+    plot ({-sqrt(2*(1+\t*\t))}, {\t});
+  % 弦 AB（过 F1）与直线 OM（即 PQ）
+  \draw (-0.5375,0.9250) -- (-1.2400,-0.4800);
+  \draw (-1.5120,0.3780) -- (1.5120,-0.3780);
+  % 四边形 APBQ 的四边
+  \draw (-0.5375,0.9250) -- (-1.5120,0.3780);
+  \draw (-1.5120,0.3780) -- (-1.2400,-0.4800);
+  \draw (-1.2400,-0.4800) -- (1.5120,-0.3780);
+  \draw (1.5120,-0.3780) -- (-0.5375,0.9250);
+  % 焦点
+  \fill (-1,0) circle (1.2pt) node[below right, inner sep=2pt] {$F_1$};
+  \fill (1,0) circle (1.2pt) node[above, inner sep=2pt] {$F_2$};
+  \fill (-1.73205,0) circle (1.2pt) node[below left, inner sep=2pt] {$F_3$};
+  \fill (1.73205,0) circle (1.2pt) node[above, inner sep=2pt] {$F_4$};
+  % 原点、中点与交点
+  \node[below left, inner sep=2pt] at (-0.03,-0.03) {$O$};
+  \fill (-0.8889,0.2222) circle (1.0pt);
+  \node[above right, fill=white, inner sep=1pt] at (-0.86,0.28) {$M$};
+  \node[above, fill=white, inner sep=1pt] at (-1.5120,0.44) {$P$};
+  \node[below right, fill=white, inner sep=1pt] at (1.50,-0.42) {$Q$};
+  \node[above left, fill=white, inner sep=1pt] at (-0.55,0.93) {$A$};
+  \node[below left, fill=white, inner sep=1pt] at (-1.26,-0.50) {$B$};
+\end{tikzpicture}

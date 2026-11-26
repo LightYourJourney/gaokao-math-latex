@@ -4516,6 +4516,14 @@
         "gk-2014-hunan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b12",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-hunan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4525,7 +4533,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e3f9537f-4594-4737-81a7-3725d48d7ae7",
+  "last_transaction_id": "2acd37df-9bac-4c0c-940e-b30e8b632aca",
   "papers": [
     {
       "blocked_from": null,
@@ -52053,9 +52061,90 @@
       "title": "2014 年·湖南卷·文科",
       "track": "arts",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_理科/figures/f2014_hunan_science_q06_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_理科/figures/f2014_hunan_science_q07_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_理科/figures/f2014_hunan_science_q12_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_理科/figures/f2014_hunan_science_q15_squares_parabola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_理科/figures/f2014_hunan_science_q18_quad.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_理科/figures/f2014_hunan_science_q19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_理科/figures/f2014_hunan_science_q21_conics.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_hunan_science",
+        "id": "gk-2014-hunan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 885、886（885 面为选择 1—10、填空 11—16、解答 17—18；886 面为 19—22）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖南卷题号：选择 1—10、填空 11—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 6 题程序框图、第 7 题三视图、第 12 题圆与弦、第 15 题正方形与抛物线、第 18 题平面四边形、第 19 题四棱柱、第 21 题椭圆与双曲线；第 20、22 题原页无图。共 7 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "湖南理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-hunan-science",
+      "production_state": "complete",
+      "project_dir": "2014_湖南卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_湖南理_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_湖南理_含解析.md",
+        "questions": "2014/2014_数学真题_湖南理_试题.md",
+        "solution_body": "2014/2014_数学真题_湖南理_解析正文.md"
+      },
+      "source_ids": [
+        "src-c5dad538407c08582f4937f735d9b21067b6047a76b0173f88fa9baaab550e50"
+      ],
+      "title": "2014 年·湖南卷·理科",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 12127,
+  "revision": 12135,
   "schema_version": 1,
   "sources": [
     {
@@ -66860,8 +66949,8 @@
       "exam_type": "regular",
       "git_blob_oid": "02109501e8f2b263e0c03e08518d969dbaccdbae",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-hunan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014湖南理.pdf",
       "regions": [],
       "source_id": "src-c5dad538407c08582f4937f735d9b21067b6047a76b0173f88fa9baaab550e50",

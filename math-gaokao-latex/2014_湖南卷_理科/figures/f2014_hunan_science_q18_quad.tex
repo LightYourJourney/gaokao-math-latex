@@ -1,0 +1,28 @@
+% ============================================================
+% f2014_hunan_science_q18_quad.tex
+% 2014 湖南卷（理科）第 18 题：平面四边形 ABCD 与对角线 AC
+% 来源 PDF：普通高考/2014/2014湖南理.pdf
+% 原页：第 1 页（A3 横排）第 3 栏下部，印面 885，第 18 题题干下方
+% 结构：按题设精确作图（比例 0.75 cm/单位）：
+%       A(0,0)，D(1,0)，C(2,-√3)，B(-0.616,-3.200)；
+%       即 AD=1，CD=2，AC=√7，∠BAD≈100.9°，BC=3。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+  \coordinate (A) at (1.00,2.55);
+  \coordinate (B) at (0.538,0.150);
+  \coordinate (C) at (2.500,1.251);
+  \coordinate (D) at (1.750,2.550);
+  % 四边形边界
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  \draw (D) -- (A);
+  % 对角线 AC
+  \draw (A) -- (C);
+  % 顶点标注
+  \node[above]       at (A) {$A$};
+  \node[below left]  at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+\end{tikzpicture}
