@@ -1,0 +1,40 @@
+% ============================================================
+% f2014_tianjin_arts_q11_flowchart.tex
+% 2014 天津卷（文科）第 11 题：程序框图
+% 来源 PDF：普通高考/2014/2014天津文.pdf
+% 原页：第 1 页（A3），印面 925，第 11 题题干下方
+% S=0,n=3；循环体 S=S+(-2)^n、n=n-1；n⩽1 成立则输出 S，否则返回循环体。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small, scale=0.85,
+  line cap=round, line join=round,
+  term/.style={draw, rectangle, rounded corners=2.2pt, minimum width=1.9cm,
+    minimum height=0.72cm, inner sep=2pt},
+  proc/.style={draw, rectangle, minimum width=3.9cm, minimum height=0.72cm,
+    inner sep=2pt},
+  io/.style={draw, trapezium, trapezium left angle=68, trapezium right angle=112,
+    minimum width=3.4cm, minimum height=0.78cm, inner sep=2pt},
+  dec/.style={draw, diamond, aspect=2.1, minimum width=4.2cm, minimum height=1.35cm,
+    inner sep=1pt}]
+  \node[term] (start) at (0,0) {开始};
+  \node[proc] (init) at (0,-1.45) {$S=0$，$n=3$};
+  \node[proc] (body) at (0,-2.95) {$S=S+(-2)^n$};
+  \node[proc] (dec2) at (0,-4.45) {$n=n-1$};
+  \node[dec]  (test) at (0,-6.25) {$n\leqslant 1$？};
+  \node[io]   (out)  at (0,-7.95) {输出 $S$};
+  \node[term] (end)  at (0,-9.30) {结束};
+
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (body);
+  \draw[->] (body) -- (dec2);
+  \draw[->] (dec2) -- (test);
+  \draw[->] (test) -- (out);
+  \draw[->] (out) -- (end);
+
+  % “是”标注：判断框下沿与输出框之间，箭头右侧
+  \node[right, inner sep=2pt] at (0.30,-7.15) {是};
+
+  % “否”：从判断框左顶点引出，左侧上升后折向循环体顶边
+  \draw[->] (test.west) -- (-3.05,-6.25) -- (-3.05,-2.30) -- (-1.15,-2.30)
+    -- (-1.15,-2.59);
+  \node[above, inner sep=2pt] at (-2.55,-6.25) {否};
+\end{tikzpicture}

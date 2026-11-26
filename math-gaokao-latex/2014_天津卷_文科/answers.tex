@@ -1,0 +1,1094 @@
+% answers.tex —— 2014 年·天津卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2014/2014_数学真题_天津文_试题.md + 2014/2014_数学真题_天津文_解析正文.md + 2014/2014_数学真题_天津文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+$i$ 是虚数单位，复数 $\dfrac{7+\mathrm i}{3+4\mathrm i}=$\mbox{（　　）}
+
+（A）$1-\mathrm i$；（B）$-1+\mathrm i$；（C）$\dfrac{17}{25}+\dfrac{31}{25}\mathrm i$；（D）$-\dfrac{17}{7}+\dfrac{25}{7}\mathrm i$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+分子、分母同乘分母的共轭复数 $3-4\mathrm i$：
+\nopagebreak[4]
+\[\begin{aligned}
+\frac{7+\mathrm i}{3+4\mathrm i}
+&=\frac{(7+\mathrm i)(3-4\mathrm i)}{(3+4\mathrm i)(3-4\mathrm i)}\\
+&=\frac{21-28\mathrm i+3\mathrm i-4\mathrm i^2}{3^2+4^2}\\
+&=\frac{25-25\mathrm i}{25}\\
+&=1-\mathrm i .
+\end{aligned}\]
+
+选 A。
+
+\gkanswer{答案：A。分子分母同乘 $3-4\mathrm i$，得 $\dfrac{25-25\mathrm i}{25}=1-\mathrm i$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设变量 $x$，$y$ 满足约束条件
+\nopagebreak[4]
+\[\begin{cases}
+x+y-2\geqslant 0,\\
+x-y-2\leqslant 0,\\
+y\geqslant 1,
+\end{cases}\]
+则目标函数 $z=x+2y$ 的最小值为\mbox{（　　）}
+
+（A）$2$；（B）$3$；（C）$4$；（D）$5$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 $x+y-2\geqslant 0$ 得 $x\geqslant 2-y$，由 $x-y-2\leqslant 0$ 得 $x\leqslant 2+y$。可行域内的点同时满足
+\nopagebreak[4]
+\[2-y\leqslant x\leqslant 2+y,\qquad y\geqslant 1,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[z=x+2y\geqslant (2-y)+2y=2+y\geqslant 3.\]
+当 $x=1$，$y=1$ 时，$x+y=2$、$x-y=0$ 均满足约束，且 $z=1+2=3$。所以 $z$ 的最小值为 $3$。
+
+选 B。
+
+\gkanswer{答案：B。由 $x\geqslant 2-y$ 得 $z=x+2y\geqslant 2+y\geqslant 3$，在点 $(1,1)$ 处取到 $3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+已知命题 $p$：$\forall x>0$，总有 $(x+1)\mathrm e^x>1$，则 $\neg p$ 为\mbox{（　　）}
+
+（A）$\exists x_0\leqslant 0$，使得 $(x_0+1)\mathrm e^{x_0}\leqslant 1$；（B）$\exists x_0>0$，使得 $(x_0+1)\mathrm e^{x_0}\leqslant 1$；（C）$\forall x>0$，总有 $(x+1)\mathrm e^x\leqslant 1$；（D）$\forall x\leqslant 0$，总有 $(x+1)\mathrm e^x\leqslant 1$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+全称命题的否定是特称命题：把全称量词 $\forall$ 换成存在量词 $\exists$，再否定结论。$p$ 的结论是 $(x+1)\mathrm e^x>1$，其否定为 $(x_0+1)\mathrm e^{x_0}\leqslant 1$；同时量词的适用范围仍是 $x_0>0$。于是
+\nopagebreak[4]
+\[\neg p:\ \exists x_0>0,\ \text{\text{使得}}\ (x_0+1)\mathrm e^{x_0}\leqslant 1.\]
+
+选 B。
+
+\gkanswer{答案：B。全称命题的否定为特称命题：$\exists x_0>0$，使 $(x_0+1)\mathrm e^{x_0}\leqslant 1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+设 $a=\log_2\pi$，$b=\log_{\frac12}\pi$，$c=\pi^{-2}$，则\mbox{（　　）}
+
+（A）$a>b>c$；（B）$b>a>c$；（C）$a>c>b$；（D）$c>b>a$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 $\pi>2$ 得
+\nopagebreak[4]
+\[a=\log_2\pi>\log_2 2=1.\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[b=\log_{\frac12}\pi=\frac{\log_2\pi}{\log_2\frac12}=-\log_2\pi<-1<0,\]
+\Needspace{5\baselineskip}
+而
+\nopagebreak[4]
+\[c=\pi^{-2}=\frac1{\pi^2},\qquad 0<c<\frac1{2^2}<1.\]
+所以 $a>1>c>0>b$，即 $a>c>b$。
+
+选 C。
+
+\gkanswer{答案：C。$a=\log_2\pi>1$，$c=\pi^{-2}\in(0,1)$，$b=-\log_2\pi<-1$，故 $a>c>b$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+设 $\{a_n\}$ 是首项为 $a_1$，公差为 $-1$ 的等差数列，$S_n$ 为其前 $n$ 项和，若 $S_1$，$S_2$，$S_4$ 成等比数列，则 $a_1=$\mbox{（　　）}
+
+（A）$2$；（B）$-2$；（C）$\dfrac12$；（D）$-\dfrac12$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+公差 $d=-1$，故
+\nopagebreak[4]
+\[S_1=a_1,\qquad S_2=a_1+(a_1-1)=2a_1-1,\qquad S_4=4a_1+\frac{4\times3}{2}\times(-1)=4a_1-6.\]
+\Needspace{5\baselineskip}
+由 $S_1$，$S_2$，$S_4$ 成等比数列得
+\nopagebreak[4]
+\[S_2^2=S_1S_4,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[(2a_1-1)^2=a_1(4a_1-6).\]
+\Needspace{5\baselineskip}
+展开：
+\nopagebreak[4]
+\[\begin{aligned}
+4a_1^2-4a_1+1&=4a_1^2-6a_1,\\
+2a_1&=-1,\\
+a_1&=-\frac12.
+\end{aligned}\]
+此时 $S_1=-\dfrac12$，$S_2=-2$，$S_4=-8$，公比为 $4$，确为等比数列。
+
+选 D。
+
+\gkanswer{答案：D。由 $S_2^2=S_1S_4$ 得 $(2a_1-1)^2=a_1(4a_1-6)$，解得 $a_1=-\dfrac12$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+已知双曲线 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$（$a>0$，$b>0$）的一条渐近线平行于直线 $l:y=2x+10$，双曲线的一个焦点在直线 $l$ 上，则双曲线的方程为\mbox{（　　）}
+
+（A）$\dfrac{x^2}{5}-\dfrac{y^2}{20}=1$；（B）$\dfrac{x^2}{20}-\dfrac{y^2}{5}=1$；（C）$\dfrac{3x^2}{25}-\dfrac{3y^2}{100}=1$；（D）$\dfrac{3x^2}{100}-\dfrac{3y^2}{25}=1$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+双曲线的渐近线为 $y=\pm\dfrac ba x$。它有一条渐近线与 $l:y=2x+10$ 平行，故
+\nopagebreak[4]
+\[\frac ba=2,\qquad b=2a.\]
+\Needspace{5\baselineskip}
+直线 $l$ 与 $x$ 轴的交点为 $(-5,0)$。双曲线的焦点在 $x$ 轴上，而 $l$ 与 $x$ 轴只有一个交点，故该焦点就是 $(-5,0)$，从而
+\nopagebreak[4]
+\[c=5.\]
+\Needspace{5\baselineskip}
+由 $c^2=a^2+b^2=a^2+4a^2=5a^2$ 得
+\nopagebreak[4]
+\[a^2=5,\qquad b^2=20.\]
+\Needspace{5\baselineskip}
+所求方程为
+\nopagebreak[4]
+\[\frac{x^2}{5}-\frac{y^2}{20}=1.\]
+
+选 A。
+
+\gkanswer{答案：A。由 $\dfrac ba=2$ 与焦点 $(-5,0)$ 得 $c=5$，$a^2=5$，$b^2=20$，即 $\dfrac{x^2}{5}-\dfrac{y^2}{20}=1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+如图，$\triangle ABC$ 是圆的内接三角形，$\angle BAC$ 的平分线交圆于点 $D$，交 $BC$ 于 $E$，过点 $B$ 的圆的切线与 $AD$ 的延长线交于点 $F$。在上述条件下，给出下列四个结论：① $BD$ 平分 $\angle CBF$；② $FB^2=FD\cdot FA$；③ $AE\cdot CE=BE\cdot DE$；④ $AF\cdot BD=AB\cdot BF$。则所有正确结论的序号是\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_tianjin_arts_q07_circle}\end{center}
+\nopagebreak[4]
+（A）①②；（B）③④；（C）①②③；（D）①②④。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+逐条判断。
+
+\Needspace{5\baselineskip}
+① 由弦切角定理，弦 $BC$ 与过 $B$ 的切线 $BF$ 所成的角满足
+\nopagebreak[4]
+\[\angle CBF=\angle BAC.\]
+\Needspace{5\baselineskip}
+$AD$ 平分 $\angle BAC$，故 $\angle BAC=2\angle DAC$。又 $\angle DBC$ 与 $\angle DAC$ 同对弧 $DC$，所以
+\nopagebreak[4]
+\[\angle DBC=\angle DAC=\frac12\angle BAC=\frac12\angle CBF.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\angle DBF=\angle CBF-\angle DBC=\frac12\angle CBF=\angle DBC,\]
+即 $BD$ 平分 $\angle CBF$。① 正确。
+
+\Needspace{5\baselineskip}
+② 对点 $F$ 用切割线定理：$FB$ 是切线，$FDA$ 是过 $F$ 的割线，故
+\nopagebreak[4]
+\[FB^2=FD\cdot FA.\]
+② 正确。
+
+\Needspace{5\baselineskip}
+③ 对圆内两条相交弦 $AD$ 与 $BC$（交于 $E$）用相交弦定理，得
+\nopagebreak[4]
+\[AE\cdot DE=BE\cdot CE.\]
+③ 写成 $AE\cdot CE=BE\cdot DE$，与上式不同，故 ③ 错误。
+
+\Needspace{5\baselineskip}
+④ 在 $\triangle ABF$ 与 $\triangle DBF$ 中，$\angle AFB$ 是公共角；由 ① 得 $\angle FBD=\angle DBC=\angle DAC=\angle FAB$。两组角对应相等，故
+\nopagebreak[4]
+\[\triangle ABF\backsim\triangle BDF,\]
+\Needspace{5\baselineskip}
+对应边成比例：
+\nopagebreak[4]
+\[\frac{AB}{BD}=\frac{AF}{BF},\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[AF\cdot BD=AB\cdot BF.\]
+④ 正确。
+
+综上，正确的是 ①②④。
+
+选 D。
+
+\gkanswer{答案：D。弦切角定理与同弧圆周角给出 ①，切割线定理给出 ②，$\triangle ABF\backsim\triangle BDF$ 给出 ④；③ 应为 $AE\cdot DE=BE\cdot CE$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=\sqrt3\sin\omega x+\cos\omega x$（$\omega>0$），$x\in\mathbf R$。在曲线 $y=f(x)$ 与直线 $y=1$ 的交点中，若相邻交点距离的最小值为 $\dfrac\pi3$，则 $f(x)$ 的最小正周期为\mbox{（　　）}
+
+（A）$\dfrac\pi2$；（B）$\dfrac{2\pi}{3}$；（C）$\pi$；（D）$2\pi$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+先化简：
+\nopagebreak[4]
+\[\begin{aligned}
+f(x)&=\sqrt3\sin\omega x+\cos\omega x\\
+&=2\left(\frac{\sqrt3}{2}\sin\omega x+\frac12\cos\omega x\right)\\
+&=2\sin\left(\omega x+\frac\pi6\right).
+\end{aligned}\]
+\Needspace{5\baselineskip}
+令 $f(x)=1$，即 $\sin\left(\omega x+\dfrac\pi6\right)=\dfrac12$，得
+\nopagebreak[4]
+\[\omega x+\frac\pi6=\frac\pi6+2k\pi\quad\text{\text{或}}\quad \omega x+\frac\pi6=\frac{5\pi}{6}+2k\pi,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[x=\frac{2k\pi}{\omega}\quad\text{\text{或}}\quad x=\frac{1}{\omega}\left(\frac{2\pi}{3}+2k\pi\right),\qquad k\in\mathbf Z.\]
+\Needspace{5\baselineskip}
+两类解在数轴上交替出现，相邻交点的距离只能是
+\nopagebreak[4]
+\[\frac{1}{\omega}\cdot\frac{2\pi}{3}\quad\text{\text{或}}\quad\frac{1}{\omega}\cdot\frac{4\pi}{3},\]
+\Needspace{5\baselineskip}
+最小值为 $\dfrac{2\pi}{3\omega}$。由题意
+\nopagebreak[4]
+\[\frac{2\pi}{3\omega}=\frac\pi3,\]
+\Needspace{5\baselineskip}
+解得 $\omega=2$。于是最小正周期
+\nopagebreak[4]
+\[T=\frac{2\pi}{\omega}=\pi.\]
+
+选 C。
+
+\gkanswer{答案：C。$f(x)=2\sin\left(\omega x+\dfrac\pi6\right)$，相邻交点最小距离 $\dfrac{2\pi}{3\omega}=\dfrac\pi3$，故 $\omega=2$，$T=\pi$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+某大学为了解在校本科生对参加某项社会实践活动的意向，拟采用分层抽样的方法，从该校四个年级的本科生中抽取一个容量为 $300$ 的样本进行调查。已知该校一年级、二年级、三年级、四年级的本科生人数之比为 $4:5:5:6$，则应从一年级本科生中抽取\gkblank{}名学生。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+四个年级人数之比为 $4:5:5:6$，总份数为
+\nopagebreak[4]
+\[4+5+5+6=20.\]
+\Needspace{5\baselineskip}
+样本容量 $300$，每份对应
+\nopagebreak[4]
+\[300\div 20=15\ (\text{\text{人}}).\]
+\Needspace{5\baselineskip}
+一年级占 $4$ 份，故应抽取
+\nopagebreak[4]
+\[4\times 15=60\ (\text{\text{人}}).\]
+
+\gkanswer{答案：$60$。总份数 $20$，每份 $15$ 人，一年级 $4$ 份即 $60$ 人。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知一个几何体的三视图如图所示（单位：m），则该几何体的体积为\gkblank{}$\mathrm m^3$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_tianjin_arts_q10_views}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+正视图与侧视图都是“上尖下方”的轮廓：下方矩形的宽为 $2$、高为 $4$，上方三角形的底为 $4$、高为 $2$；俯视图为两个同心圆，外圆半径为 $2$、内圆半径为 $1$（虚线表示被遮挡的轮廓）。由此还原几何体：下部是底面半径 $1$、高 $4$ 的圆柱，上部是底面半径 $2$、高 $2$ 的圆锥，二者同轴叠放。
+
+\Needspace{5\baselineskip}
+体积为
+\nopagebreak[4]
+\[\begin{aligned}
+V&=V_{\text{\text{圆柱}}}+V_{\text{\text{圆锥}}}\\
+&=\pi\cdot 1^2\cdot 4+\frac13\pi\cdot 2^2\cdot 2\\
+&=4\pi+\frac{8\pi}{3}\\
+&=\frac{20\pi}{3}\ \left(\mathrm m^3\right).
+\end{aligned}\]
+
+\gkanswer{答案：$\dfrac{20\pi}{3}$。几何体为半径 $1$、高 $4$ 的圆柱与半径 $2$、高 $2$ 的圆锥同轴叠放，$4\pi+\dfrac{8\pi}{3}=\dfrac{20\pi}{3}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+阅读如图的框图，运行相应的程序，输出 $S$ 的值为\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_tianjin_arts_q11_flowchart}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+初始 $S=0$，$n=3$。
+
+\Needspace{5\baselineskip}
+第一次循环：$n=3$，
+\nopagebreak[4]
+\[S=0+(-2)^3=-8,\qquad n=3-1=2,\]
+此时 $n=2>1$，判断“$n\leqslant 1$”不成立，继续循环。
+
+\Needspace{5\baselineskip}
+第二次循环：$n=2$，
+\nopagebreak[4]
+\[S=-8+(-2)^2=-8+4=-4,\qquad n=2-1=1,\]
+此时 $n=1\leqslant 1$，判断成立，退出循环并输出 $S=-4$。
+
+\gkanswer{答案：$-4$。依次得 $S=-8$（$n=3$）、$S=-4$（$n=2$），此时 $n=1\leqslant 1$，输出 $-4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+函数 $f(x)=\lg x^2$ 的单调递减区间是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由真数大于零得 $x^2>0$，即定义域为 $x\neq 0$。在定义域内
+\nopagebreak[4]
+\[f(x)=\lg x^2=2\lg|x|.\]
+\Needspace{5\baselineskip}
+当 $x<0$ 时 $|x|=-x$ 随 $x$ 增大而减小，$\lg|x|$ 随之减小；当 $x>0$ 时 $|x|=x$ 随 $x$ 增大而增大，$\lg|x|$ 随之增大。故 $f(x)$ 的单调递减区间为
+\nopagebreak[4]
+\[(-\infty,0).\]
+
+\gkanswer{答案：$(-\infty,0)$。$f(x)=2\lg|x|$ 在 $x<0$ 时随 $x$ 增大而减小，在 $x>0$ 时递增。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知菱形 $ABCD$ 的边长为 $2$，$\angle BAD=120^\circ$，点 $E$，$F$ 分别在边 $BC$，$DC$ 上，$\overrightarrow{BC}=3\overrightarrow{BE}$，$\overrightarrow{DC}=\lambda\overrightarrow{DF}$。若 $\overrightarrow{AE}\cdot\overrightarrow{AF}=1$，则 $\lambda$ 的值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+记 $\boldsymbol u=\overrightarrow{AB}$，$\boldsymbol v=\overrightarrow{AD}$，则
+\nopagebreak[4]
+\[|\boldsymbol u|=|\boldsymbol v|=2,\qquad \boldsymbol u\cdot\boldsymbol v=2\times 2\times\cos120^\circ=-2.\]
+\Needspace{5\baselineskip}
+由 $\overrightarrow{BC}=\overrightarrow{AD}=\boldsymbol v$ 及 $\overrightarrow{BC}=3\overrightarrow{BE}$ 得 $\overrightarrow{BE}=\dfrac13\boldsymbol v$，于是
+\nopagebreak[4]
+\[\overrightarrow{AE}=\overrightarrow{AB}+\overrightarrow{BE}=\boldsymbol u+\frac13\boldsymbol v.\]
+\Needspace{5\baselineskip}
+由 $\overrightarrow{DC}=\overrightarrow{AB}=\boldsymbol u$ 及 $\overrightarrow{DC}=\lambda\overrightarrow{DF}$ 得 $\overrightarrow{DF}=\dfrac1\lambda\boldsymbol u$，于是
+\nopagebreak[4]
+\[\overrightarrow{AF}=\overrightarrow{AD}+\overrightarrow{DF}=\boldsymbol v+\frac1\lambda\boldsymbol u.\]
+\Needspace{5\baselineskip}
+两式相乘：
+\nopagebreak[4]
+\[\begin{aligned}
+1=\overrightarrow{AE}\cdot\overrightarrow{AF}
+&=\left(\boldsymbol u+\frac13\boldsymbol v\right)\cdot\left(\boldsymbol v+\frac1\lambda\boldsymbol u\right)\\
+&=\boldsymbol u\cdot\boldsymbol v+\frac1\lambda\boldsymbol u^2+\frac13\boldsymbol v^2+\frac{1}{3\lambda}\boldsymbol u\cdot\boldsymbol v\\
+&=-2+\frac4\lambda+\frac43-\frac{2}{3\lambda}\\
+&=-\frac23+\frac{10}{3\lambda}.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+由 $-\dfrac23+\dfrac{10}{3\lambda}=1$ 得
+\nopagebreak[4]
+\[\frac{10}{3\lambda}=\frac53,\qquad \lambda=2.\]
+
+\gkanswer{答案：$2$。由 $\overrightarrow{AE}=\boldsymbol u+\dfrac13\boldsymbol v$、$\overrightarrow{AF}=\boldsymbol v+\dfrac1\lambda\boldsymbol u$ 及 $\boldsymbol u\cdot\boldsymbol v=-2$ 得 $-\dfrac23+\dfrac{10}{3\lambda}=1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知函数
+\nopagebreak[4]
+\[f(x)=\begin{cases}
+|x^2+5x+4|, & x\leqslant 0,\\
+2|x-2|, & x>0,
+\end{cases}\]
+若函数 $y=f(x)-a|x|$ 恰有 $4$ 个零点，则实数 $a$ 的取值范围为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$x=0$ 时 $f(0)=|4|=4\neq a|0|=0$，故 $0$ 不是零点。下面按 $x>0$、$x<0$ 两类讨论，并注意 $x>0$ 时 $|x|=x$，$x<0$ 时 $|x|=-x$。
+
+\textbf{（i）$x>0$ 时的零点。} 方程化为 $2|x-2|=ax$。
+
+若 $0<x<2$，则 $2(2-x)=ax$，即 $x=\dfrac{4}{a+2}$，它落在 $(0,2)$ 内当且仅当 $a>0$。
+
+若 $x>2$，则 $2(x-2)=ax$，即 $x=\dfrac{4}{2-a}$，它大于 $2$ 当且仅当 $0<a<2$。
+
+所以：$a\leqslant 0$ 时无正零点；$0<a<2$ 时有 $2$ 个正零点；$a=2$ 时只有 $x=1$ 一个正零点；$a>2$ 时只有 $x=\dfrac{4}{a+2}$ 一个正零点。
+
+\Needspace{5\baselineskip}
+\textbf{（ii）$x<0$ 时的零点。} 方程化为
+\nopagebreak[4]
+\[|x^2+5x+4|=-ax.\]
+右端 $-ax$ 与 $a$ 反号：$a<0$ 时右端为负，无解；$a=0$ 时化为 $|x^2+5x+4|=0$，得 $x=-1$，$x=-4$ 两个零点。
+
+下设 $a>0$。记 $g(x)=x^2+5x+4=(x+1)(x+4)$，则 $g$ 在 $(-\infty,-4)$ 与 $(-1,0)$ 上为正、在 $(-4,-1)$ 上为负。
+
+\Needspace{5\baselineskip}
+在 $(-\infty,-4)$ 与 $(-1,0)$ 上，方程即
+\nopagebreak[4]
+\[x^2+(5+a)x+4=0,\]
+\Needspace{5\baselineskip}
+其判别式 $(5+a)^2-16>0$，两根之积为 $4>0$、之和为 $-(5+a)<0$，故两根均为负，且 $x_1x_2=4$ 使 $x_1<-2<x_2$。又
+\nopagebreak[4]
+\[g(-4)=-4a<0,\qquad g(-1)=-a<0,\]
+说明该二次式在 $x=-4$、$x=-1$ 处为负、在两端为正，故恰有一根小于 $-4$、恰有一根落在 $(-1,0)$ 内。即这一部分对每个 $a>0$ 都贡献 $2$ 个零点。
+
+\Needspace{5\baselineskip}
+在 $(-4,-1)$ 上，方程即
+\nopagebreak[4]
+\[x^2+(5-a)x+4=0,\]
+判别式为 $(5-a)^2-16=(a-1)(a-9)$。于是：$0<a<1$ 时判别式为正，两根之积 $4>0$、之和 $a-5<0$，两根为负且位于 $(-4,-1)$ 内，贡献 $2$ 个零点；$a=1$ 时方程为 $(x+2)^2=0$，只贡献 $x=-2$ 一个零点；$1<a<9$ 时判别式为负，无零点；$a\geqslant 9$ 时两根之和 $a-5>0$，两根为正，也不在 $(-4,-1)$ 内，无零点。
+
+\textbf{（iii）合计。}
+
+当 $0<a<1$：负零点 $2+2=4$ 个，正零点 $2$ 个，共 $6$ 个。
+当 $a=1$：负零点 $2+1=3$ 个，正零点 $2$ 个，共 $5$ 个。
+当 $1<a<2$：负零点 $2$ 个，正零点 $2$ 个，共 $4$ 个。
+当 $a=2$：负零点 $2$ 个，正零点 $1$ 个，共 $3$ 个。
+当 $a>2$：负零点 $2$ 个，正零点 $1$ 个，共 $3$ 个。
+当 $a=0$：只有 $x=-1$，$-4$，$2$ 三个零点。
+当 $a<0$：无零点。
+
+\Needspace{5\baselineskip}
+故 $y=f(x)-a|x|$ 恰有 $4$ 个零点当且仅当
+\nopagebreak[4]
+\[1<a<2.\]
+
+\gkanswer{答案：$(1,2)$。$x>0$ 的零点数在 $0<a<2$ 时为 $2$、$a\geqslant 2$ 时为 $1$；$x<0$ 的零点数在 $0<a<1$ 时为 $4$、$a=1$ 时为 $3$、$a>1$ 时为 $2$。合计恰为 $4$ 当且仅当 $1<a<2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+某校夏令营有 $3$ 名男同学 $A$，$B$，$C$ 和 $3$ 名女同学 $X$，$Y$，$Z$，其年级情况如下表：
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+ & 一年级 & 二年级 & 三年级 \\
+\midrule
+男同学 & $A$ & $B$ & $C$ \\
+女同学 & $X$ & $Y$ & $Z$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+现从这 $6$ 名同学中随机选出 $2$ 人参加知识竞赛（每人被选到的可能性相同）。
+
+（1） 用表中字母列举出所有可能的结果；
+
+（2） 设 $M$ 为事件“选出的 $2$ 人来自不同年级且恰有 $1$ 名男同学和 $1$ 名女同学”，求事件 $M$ 发生的概率。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+从 $6$ 人中任取 $2$ 人，不计顺序，全部结果为
+\nopagebreak[4]
+\[AB,\ AC,\ AX,\ AY,\ AZ,\ BC,\ BX,\ BY,\ BZ,\ CX,\ CY,\ CZ,\ XY,\ XZ,\ YZ,\]
+\Needspace{5\baselineskip}
+共
+\nopagebreak[4]
+\[\mathrm C_6^2=15\]
+种，且每种结果出现的可能性相同。
+
+\gksubpart{（2）}
+
+由表格，$A$ 与 $X$ 为一年级，$B$ 与 $Y$ 为二年级，$C$ 与 $Z$ 为三年级。事件 $M$ 要求两人“来自不同年级”且“一男一女”，逐个检验（1）中的 $15$ 个结果：
+
+\Needspace{5\baselineskip}
+同年级的 $3$ 对 $AX$，$BY$，$CZ$ 不符合“不同年级”；同性的 $AB$，$AC$，$BC$，$XY$，$XZ$，$YZ$ 不符合“一男一女”。剩下
+\nopagebreak[4]
+\[AY,\ AZ,\ BX,\ BZ,\ CX,\ CY\]
+共 $6$ 个结果符合要求，也可以这样数：一男一女共 $3\times3=9$ 对，减去同年级的 $3$ 对，得 $9-3=6$ 对。
+
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[P(M)=\frac{6}{15}=\frac25.\]
+
+\gkanswer{答案（1）：$AB$，$AC$，$AX$，$AY$，$AZ$，$BC$，$BX$，$BY$，$BZ$，$CX$，$CY$，$CZ$，$XY$，$XZ$，$YZ$，共 $\mathrm C_6^2=15$ 种。}
+
+\gkanswer{答案（2）：$\dfrac25$。符合条件的结果为 $AY$，$AZ$，$BX$，$BZ$，$CX$，$CY$ 共 $6$ 种，$P(M)=\dfrac{6}{15}=\dfrac25$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，内角 $A$，$B$，$C$ 所对的边分别为 $a$，$b$，$c$，已知 $a-c=\dfrac{\sqrt6}{6}b$，$\sin B=\sqrt6\sin C$。
+
+（1） 求 $\cos A$ 的值；
+
+（2） 求 $\cos\left(2A-\dfrac\pi6\right)$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+由 $\sin B=\sqrt6\sin C$ 及正弦定理 $\dfrac{b}{\sin B}=\dfrac{c}{\sin C}$ 得
+\nopagebreak[4]
+\[b=\sqrt6\,c.\]
+\Needspace{5\baselineskip}
+代入 $a-c=\dfrac{\sqrt6}{6}b$：
+\nopagebreak[4]
+\[a-c=\frac{\sqrt6}{6}\cdot\sqrt6\,c=c,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[a=2c.\]
+\Needspace{5\baselineskip}
+由余弦定理
+\nopagebreak[4]
+\[\begin{aligned}
+\cos A&=\frac{b^2+c^2-a^2}{2bc}\\
+&=\frac{6c^2+c^2-4c^2}{2\cdot\sqrt6\,c\cdot c}\\
+&=\frac{3c^2}{2\sqrt6\,c^2}\\
+&=\frac{3}{2\sqrt6}=\frac{\sqrt6}{4}.
+\end{aligned}\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+由（1）
+\nopagebreak[4]
+\[\cos^2A=\frac{6}{16}=\frac38,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\cos2A=2\cos^2A-1=\frac34-1=-\frac14.\]
+\Needspace{5\baselineskip}
+因为 $A$ 是三角形内角，$\sin A>0$，所以
+\nopagebreak[4]
+\[\sin A=\sqrt{1-\cos^2A}=\sqrt{1-\frac38}=\frac{\sqrt{10}}{4},\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[\sin2A=2\sin A\cos A=2\cdot\frac{\sqrt{10}}{4}\cdot\frac{\sqrt6}{4}=\frac{\sqrt{60}}{8}=\frac{\sqrt{15}}{4}.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\begin{aligned}
+\cos\left(2A-\frac\pi6\right)
+&=\cos2A\cos\frac\pi6+\sin2A\sin\frac\pi6\\
+&=\left(-\frac14\right)\cdot\frac{\sqrt3}{2}+\frac{\sqrt{15}}{4}\cdot\frac12\\
+&=\frac{\sqrt{15}-\sqrt3}{8}.
+\end{aligned}\]
+
+\gkanswer{答案（1）：$\dfrac{\sqrt6}{4}$。由 $b=\sqrt6c$ 得 $a=2c$，再用余弦定理。}
+
+\gkanswer{答案（2）：$\dfrac{\sqrt{15}-\sqrt3}{8}$。由 $\cos2A=-\dfrac14$、$\sin2A=\dfrac{\sqrt{15}}{4}$ 及和角公式。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+如图，四棱锥 $P\text{-}ABCD$ 的底面 $ABCD$ 是平行四边形，$BA=BD=\sqrt2$，$AD=2$，$PA=PD=\sqrt5$，$E$，$F$ 分别是棱 $AD$，$PC$ 的中点。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_tianjin_arts_q17_pyramid}\end{center}
+\nopagebreak[4]
+（1） 证明：$EF\parallel$ 平面 $PAB$；
+
+（2） 若二面角 $P\text{-}AD\text{-}B$ 为 $60^\circ$，
+
+① 证明：平面 $PBC\perp$ 平面 $ABCD$；
+
+② 求直线 $EF$ 与平面 $PBC$ 所成角的正弦值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+设 $M$ 为 $PB$ 的中点。在 $\triangle PBC$ 中，$F$，$M$ 分别是 $PC$，$PB$ 的中点，故
+\nopagebreak[4]
+\[FM\parallel BC,\qquad FM=\frac12BC.\]
+\Needspace{5\baselineskip}
+底面 $ABCD$ 是平行四边形，故 $BC\parallel AD$ 且 $BC=AD$。又 $E$ 是 $AD$ 的中点，故
+\nopagebreak[4]
+\[AE=\frac12AD=\frac12BC=FM,\]
+\Needspace{5\baselineskip}
+且 $AE\parallel AD\parallel BC\parallel FM$。于是 $AEFM$ 是一组对边平行且相等的四边形，即平行四边形，所以
+\nopagebreak[4]
+\[EF\parallel AM.\]
+\Needspace{5\baselineskip}
+而 $AM\subset$ 平面 $PAB$，$EF\not\subset$ 平面 $PAB$，故
+\nopagebreak[4]
+\[EF\parallel\text{\text{平面} }PAB.\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+① 由 $BA=BD=\sqrt2$，$AD=2$ 得
+\nopagebreak[4]
+\[AB^2+BD^2=2+2=4=AD^2,\]
+故 $AB\perp BD$。
+
+\Needspace{5\baselineskip}
+取 $O$ 为 $AD$ 的中点。由 $PA=PD$ 得 $PO\perp AD$；由 $BA=BD$ 得 $BO\perp AD$。于是 $AD\perp$ 平面 $POB$，从而 $AD\perp PB$，且 $\angle POB$ 就是二面角 $P\text{-}AD\text{-}B$ 的平面角，即
+\nopagebreak[4]
+\[\angle POB=60^\circ.\]
+\Needspace{5\baselineskip}
+在直角三角形 $ABD$ 中，$O$ 是斜边 $AD$ 的中点，故
+\nopagebreak[4]
+\[BO=\frac12AD=1.\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[PO=\sqrt{PA^2-AO^2}=\sqrt{5-1}=2.\]
+\Needspace{5\baselineskip}
+由余弦定理
+\nopagebreak[4]
+\[\begin{aligned}
+PB^2&=PO^2+BO^2-2\cdot PO\cdot BO\cdot\cos60^\circ\\
+&=4+1-2\times2\times1\times\frac12=3,
+\end{aligned}\]
+\Needspace{5\baselineskip}
+故 $PB=\sqrt3$。于是
+\nopagebreak[4]
+\[PB^2+BO^2=3+1=4=PO^2,\]
+即 $PB\perp BO$。
+
+\Needspace{5\baselineskip}
+又 $AD\perp PB$，且 $AD$，$BO$ 是平面 $ABCD$ 内两条相交于 $O$ 的直线，所以
+\nopagebreak[4]
+\[PB\perp\text{\text{平面} }ABCD.\]
+\Needspace{5\baselineskip}
+而 $PB\subset$ 平面 $PBC$，故
+\nopagebreak[4]
+\[\text{\text{平面} }PBC\perp\text{\text{平面} }ABCD.\]
+
+\Needspace{5\baselineskip}
+② 以 $B$ 为原点，$\overrightarrow{BD}$ 的方向为 $x$ 轴正方向，$\overrightarrow{BA}$ 的方向为 $y$ 轴正方向，$\overrightarrow{BP}$ 的方向为 $z$ 轴正方向建立空间直角坐标系。由 $BD\perp BA$、$PB\perp$ 平面 $ABCD$，三轴两两垂直，且
+\nopagebreak[4]
+\[BD=BA=\sqrt2,\qquad PB=\sqrt3.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\begin{aligned}
+&B(0,0,0),\quad D(\sqrt2,0,0),\quad A(0,\sqrt2,0),\\
+&C(\sqrt2,-\sqrt2,0),\quad P(0,0,\sqrt3).
+\end{aligned}\]
+其中 $C$ 由 $\overrightarrow{BC}=\overrightarrow{AD}=(\sqrt2,-\sqrt2,0)$ 得到。
+
+\Needspace{5\baselineskip}
+$E$ 是 $AD$ 的中点，$F$ 是 $PC$ 的中点，故
+\nopagebreak[4]
+\[\begin{aligned}
+&E\left(\frac{\sqrt2}{2},\frac{\sqrt2}{2},0\right),\\
+&F\left(\frac{\sqrt2}{2},-\frac{\sqrt2}{2},\frac{\sqrt3}{2}\right).
+\end{aligned}\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\overrightarrow{EF}=\left(0,-\sqrt2,\frac{\sqrt3}{2}\right),\]
+\nopagebreak[4]
+\[\left|\overrightarrow{EF}\right|=\sqrt{0+2+\frac34}=\frac{\sqrt{11}}{2}.\]
+
+\Needspace{5\baselineskip}
+平面 $PBC$ 内有两个向量
+\nopagebreak[4]
+\[\overrightarrow{BP}=(0,0,\sqrt3),\qquad \overrightarrow{BC}=(\sqrt2,-\sqrt2,0).\]
+\Needspace{5\baselineskip}
+设平面 $PBC$ 的法向量为 $\boldsymbol n=(x,y,z)$，由
+\nopagebreak[4]
+\[\begin{cases}
+\boldsymbol n\cdot\overrightarrow{BP}=\sqrt3\,z=0,\\
+\boldsymbol n\cdot\overrightarrow{BC}=\sqrt2\,x-\sqrt2\,y=0
+\end{cases}\]
+\Needspace{5\baselineskip}
+可取
+\nopagebreak[4]
+\[\boldsymbol n=(1,1,0),\qquad |\boldsymbol n|=\sqrt2.\]
+\Needspace{5\baselineskip}
+设直线 $EF$ 与平面 $PBC$ 所成的角为 $\theta$，则
+\nopagebreak[4]
+\[\begin{aligned}
+\sin\theta&=\frac{\left|\overrightarrow{EF}\cdot\boldsymbol n\right|}{\left|\overrightarrow{EF}\right|\cdot|\boldsymbol n|}\\
+&=\frac{\left|0-\sqrt2+0\right|}{\dfrac{\sqrt{11}}{2}\cdot\sqrt2}\\
+&=\frac{2}{\sqrt{11}}=\frac{2\sqrt{11}}{11}.
+\end{aligned}\]
+故直线 $EF$ 与平面 $PBC$ 所成角的正弦值为 $\dfrac{2\sqrt{11}}{11}$。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：① 由 $AB\perp BD$、$PO\perp AD$、$BO\perp AD$ 得 $AD\perp$ 平面 $POB$，$\angle POB=60^\circ$，算得 $PB\perp BO$，从而 $PB\perp$ 平面 $ABCD$，故平面 $PBC\perp$ 平面 $ABCD$；② $\dfrac{2\sqrt{11}}{11}$。以 $B$ 为原点建系，$\overrightarrow{EF}=\left(0,-\sqrt2,\dfrac{\sqrt3}{2}\right)$，平面 $PBC$ 的法向量 $(1,1,0)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+设椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的左、右焦点分别为 $F_1$，$F_2$，右顶点为 $A$，上顶点为 $B$，已知 $|AB|=\dfrac{\sqrt3}{2}|F_1F_2|$。
+
+（1） 求椭圆的离心率；
+
+（2） 设 $P$ 为椭圆上异于其顶点的一点，以线段 $PB$ 为直径的圆经过点 $F_1$，经过点 $F_2$ 的直线 $l$ 与该圆相切于点 $M$，$|MF_2|=2\sqrt2$。求椭圆的方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+由题意 $A(a,0)$，$B(0,b)$，$F_1(-c,0)$，$F_2(c,0)$，故
+\nopagebreak[4]
+\[|AB|=\sqrt{a^2+b^2},\qquad |F_1F_2|=2c.\]
+\Needspace{5\baselineskip}
+由 $|AB|=\dfrac{\sqrt3}{2}|F_1F_2|$ 得
+\nopagebreak[4]
+\[\sqrt{a^2+b^2}=\sqrt3\,c,\]
+\Needspace{5\baselineskip}
+平方得
+\nopagebreak[4]
+\[a^2+b^2=3c^2.\]
+\Needspace{5\baselineskip}
+又 $b^2=a^2-c^2$，代入得
+\nopagebreak[4]
+\[2a^2-c^2=3c^2,\qquad a^2=2c^2.\]
+\Needspace{5\baselineskip}
+故离心率
+\nopagebreak[4]
+\[e=\frac ca=\frac{1}{\sqrt2}=\frac{\sqrt2}{2}.\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+由（1）$a^2=2c^2$，故
+\nopagebreak[4]
+\[b^2=a^2-c^2=c^2,\qquad b=c,\]
+\Needspace{5\baselineskip}
+椭圆为
+\nopagebreak[4]
+\[\frac{x^2}{2c^2}+\frac{y^2}{c^2}=1,\]
+且 $B(0,c)$，$F_1(-c,0)$。
+
+\Needspace{5\baselineskip}
+设 $P(x_0,y_0)$。以 $PB$ 为直径的圆经过 $F_1$，等价于
+\nopagebreak[4]
+\[\angle PF_1B=90^\circ,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[\overrightarrow{F_1P}\cdot\overrightarrow{F_1B}=0.\]
+\Needspace{5\baselineskip}
+而 $\overrightarrow{F_1P}=(x_0+c,\,y_0)$，$\overrightarrow{F_1B}=(c,\,c)$，故
+\nopagebreak[4]
+\[c(x_0+c)+cy_0=0,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[x_0+y_0=-c.\]
+\Needspace{5\baselineskip}
+又 $P$ 在椭圆上，故 $x_0^2+2y_0^2=2c^2$。把 $x_0=-c-y_0$ 代入：
+\nopagebreak[4]
+\[\begin{aligned}
+(c+y_0)^2+2y_0^2&=2c^2,\\
+3y_0^2+2cy_0-c^2&=0,\\
+(3y_0-c)(y_0+c)&=0,
+\end{aligned}\]
+故 $y_0=\dfrac c3$ 或 $y_0=-c$。
+
+\Needspace{5\baselineskip}
+若 $y_0=-c$，则 $x_0=0$，此时 $P(0,-c)$ 是椭圆的下顶点，与“$P$ 异于顶点”矛盾。故
+\nopagebreak[4]
+\[y_0=\frac c3,\qquad x_0=-c-\frac c3=-\frac{4c}{3},\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[P\left(-\frac{4c}{3},\frac c3\right).\]
+
+\Needspace{5\baselineskip}
+记以 $PB$ 为直径的圆的圆心为 $C'$，半径为 $r$。由中点坐标公式
+\nopagebreak[4]
+\[C'\left(-\frac{2c}{3},\frac{2c}{3}\right),\]
+\Needspace{5\baselineskip}
+且
+\nopagebreak[4]
+\[\begin{aligned}
+|PB|^2&=\left(\frac{4c}{3}\right)^2+\left(\frac c3-c\right)^2\\
+&=\frac{16c^2}{9}+\frac{4c^2}{9}=\frac{20c^2}{9},
+\end{aligned}\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[r=\frac{|PB|}{2}=\frac{\sqrt5\,c}{3}.\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[\begin{aligned}
+|C'F_2|^2&=\left(c+\frac{2c}{3}\right)^2+\left(0-\frac{2c}{3}\right)^2\\
+&=\frac{25c^2}{9}+\frac{4c^2}{9}=\frac{29c^2}{9}.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+因为 $F_2M$ 与圆相切于 $M$，故 $C'M\perp F_2M$，在直角三角形 $C'MF_2$ 中
+\nopagebreak[4]
+\[|C'F_2|^2=r^2+|MF_2|^2.\]
+\Needspace{5\baselineskip}
+代入得
+\nopagebreak[4]
+\[\frac{29c^2}{9}=\frac{5c^2}{9}+8,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[\frac{24c^2}{9}=8,\qquad c^2=3.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[a^2=2c^2=6,\qquad b^2=c^2=3,\]
+\Needspace{5\baselineskip}
+所求椭圆方程为
+\nopagebreak[4]
+\[\frac{x^2}{6}+\frac{y^2}{3}=1.\]
+
+\gkanswer{答案（1）：$\dfrac{\sqrt2}{2}$。由 $a^2+b^2=3c^2$ 与 $b^2=a^2-c^2$ 得 $a^2=2c^2$。}
+
+\gkanswer{答案（2）：$\dfrac{x^2}{6}+\dfrac{y^2}{3}=1$。由 $\overrightarrow{F_1P}\cdot\overrightarrow{F_1B}=0$ 得 $P\left(-\dfrac{4c}{3},\dfrac c3\right)$，再由 $|C'F_2|^2=r^2+|MF_2|^2$ 得 $c^2=3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=x^2-\dfrac23ax^3$（$a>0$），$x\in\mathbf R$。
+
+（1） 求 $f(x)$ 的单调区间和极值；
+
+（2） 若对于任意的 $x_1\in(2,+\infty)$，都存在 $x_2\in(1,+\infty)$，使得 $f(x_1)\cdot f(x_2)=1$，求 $a$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+求导：
+\nopagebreak[4]
+\[f'(x)=2x-2ax^2=2x(1-ax),\qquad a>0.\]
+令 $f'(x)=0$ 得 $x=0$ 或 $x=\dfrac1a$。列表讨论：
+
+\begin{itemize}
+\item 当 $x<0$ 时 $x<0$、$1-ax>0$，故 $f'(x)<0$，$f$ 递减；
+\item 当 $0<x<\dfrac1a$ 时 $x>0$、$1-ax>0$，故 $f'(x)>0$，$f$ 递增；
+\item 当 $x>\dfrac1a$ 时 $x>0$、$1-ax<0$，故 $f'(x)<0$，$f$ 递减。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+所以 $f(x)$ 的单调递减区间为
+\nopagebreak[4]
+\[(-\infty,0)\quad\text{\text{和}}\quad\left(\frac1a,+\infty\right),\]
+\Needspace{5\baselineskip}
+单调递增区间为
+\nopagebreak[4]
+\[\left(0,\frac1a\right).\]
+\Needspace{5\baselineskip}
+极小值为
+\nopagebreak[4]
+\[f(0)=0,\]
+\Needspace{5\baselineskip}
+极大值为
+\nopagebreak[4]
+\[\begin{aligned}
+f\left(\frac1a\right)&=\frac{1}{a^2}-\frac23a\cdot\frac{1}{a^3}\\
+&=\frac{1}{a^2}-\frac{2}{3a^2}=\frac{1}{3a^2}.
+\end{aligned}\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+题设条件等价于：对任意 $x_1>2$ 都有 $f(x_1)\neq 0$，并且
+\nopagebreak[4]
+\[\frac{1}{f(x_1)}\in f\big((1,+\infty)\big).\]
+
+\Needspace{5\baselineskip}
+\textbf{必要性：先证 $a\geqslant\dfrac34$。} 若 $a<\dfrac34$，则
+\nopagebreak[4]
+\[f(2)=4-\frac{16a}{3}>0,\]
+\Needspace{5\baselineskip}
+而当 $x\to+\infty$ 时
+\nopagebreak[4]
+\[f(x)=x^2\left(1-\frac23ax\right)\to-\infty .\]
+\Needspace{5\baselineskip}
+$f$ 在 $[2,+\infty)$ 上连续，故存在 $x_1>2$ 使 $f(x_1)=0$，此时 $\dfrac{1}{f(x_1)}$ 无意义，条件不成立。故必须
+\nopagebreak[4]
+\[a\geqslant\frac34.\]
+
+\Needspace{5\baselineskip}
+\textbf{再证 $a\leqslant\dfrac32$。} 当 $a\geqslant\dfrac34>\dfrac12$ 时 $\dfrac1a<2$，由（1）$f$ 在 $(2,+\infty)$ 上单调递减，且 $f(2)\leqslant 0$，故当 $x_1>2$ 时 $f(x_1)<0$，于是
+\nopagebreak[4]
+\[\frac{1}{f(x_1)}\in\left(\frac{1}{f(2)},\,0\right),\]
+其中 $f(2)=0$ 时应理解为 $\left(-\infty,0\right)$；总之该集合的上确界为 $0$，且 $0$ 不属于该集合。
+
+另一方面，由（1）求 $f$ 在 $(1,+\infty)$ 上的值域。
+
+\Needspace{5\baselineskip}
+若 $\dfrac34\leqslant a\leqslant 1$，则 $\dfrac1a\geqslant 1$，$f$ 在 $\left(1,\dfrac1a\right)$ 上递增、在 $\left(\dfrac1a,+\infty\right)$ 上递减，值域为
+\nopagebreak[4]
+\[\left(-\infty,\ \frac{1}{3a^2}\right].\]
+\Needspace{5\baselineskip}
+若 $a>1$，则 $\dfrac1a<1$，$f$ 在 $(1,+\infty)$ 上递减，值域为
+\nopagebreak[4]
+\[\left(-\infty,\ 1-\frac{2a}{3}\right].\]
+\Needspace{5\baselineskip}
+把值域统一记作 $(-\infty,M]$。要使 $\left(\dfrac{1}{f(2)},0\right)\subseteq(-\infty,M]$，必须且只须
+\nopagebreak[4]
+\[M\geqslant 0.\]
+当 $a>1$ 时 $M=1-\dfrac{2a}{3}$，由 $1-\dfrac{2a}{3}\geqslant 0$ 得 $a\leqslant\dfrac32$；当 $\dfrac34\leqslant a\leqslant 1$ 时 $M=\dfrac{1}{3a^2}>0$，自动满足。
+
+\Needspace{5\baselineskip}
+\textbf{充分性。} 当 $\dfrac34\leqslant a\leqslant\dfrac32$ 时，由上面的讨论，$f(x_1)<0$（$x_1>2$），且
+\nopagebreak[4]
+\[f\big((1,+\infty)\big)=(-\infty,M],\qquad M\geqslant 0,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\frac{1}{f(x_1)}\in(-\infty,0)\subseteq(-\infty,M].\]
+\Needspace{5\baselineskip}
+又 $f$ 在 $(1,+\infty)$ 上连续、值域为 $(-\infty,M]$，故存在 $x_2>1$ 使
+\nopagebreak[4]
+\[f(x_2)=\frac{1}{f(x_1)},\]
+即 $f(x_1)f(x_2)=1$。
+
+\Needspace{5\baselineskip}
+综上，$a$ 的取值范围为
+\nopagebreak[4]
+\[\left[\frac34,\frac32\right].\]
+
+\gkanswer{答案（1）：递减区间 $(-\infty,0)$ 与 $\left(\dfrac1a,+\infty\right)$，递增区间 $\left(0,\dfrac1a\right)$；极小值 $f(0)=0$，极大值 $f\left(\dfrac1a\right)=\dfrac{1}{3a^2}$。}
+
+\gkanswer{答案（2）：$\left[\dfrac34,\dfrac32\right]$。须 $f$ 在 $(2,+\infty)$ 上恒负，即 $a\geqslant\dfrac34$；又 $f$ 在 $(1,+\infty)$ 上值域的上端须不小于 $0$，即 $a\leqslant\dfrac32$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+已知 $q$ 和 $n$ 均为给定的大于 $1$ 的自然数。设集合 $M=\{0,1,2,\cdots,q-1\}$，集合 $A=\{x\mid x=x_1+x_2q+\cdots+x_nq^{n-1},\ x_i\in M,\ i=1,2,\cdots,n\}$。
+
+（1） 当 $q=2$，$n=3$ 时，用列举法表示集合 $A$；
+
+（2） 设 $s$，$t\in A$，$s=a_1+a_2q+\cdots+a_nq^{n-1}$，$t=b_1+b_2q+\cdots+b_nq^{n-1}$，其中 $a_i$，$b_i\in M$，$i=1,2,\cdots,n$。证明：若 $a_n<b_n$，则 $s<t$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+当 $q=2$，$n=3$ 时，$M=\{0,1\}$，
+\nopagebreak[4]
+\[x=x_1+2x_2+4x_3,\qquad x_1,x_2,x_3\in\{0,1\}.\]
+\Needspace{5\baselineskip}
+三个系数各有 $2$ 种取法，共 $2^3=8$ 个 $x$，逐一列举：
+\nopagebreak[4]
+\[x_1+2x_2+4x_3\in\{0,\ 1,\ 2,\ 3,\ 4,\ 5,\ 6,\ 7\}.\]
+\Needspace{5\baselineskip}
+（这 $8$ 个数互不相同：若两组系数给出同一个 $x$，作差得
+\nopagebreak[4]
+\[\sum_{i=1}^{3}(x_i-x_i')2^{i-1}=0,\]
+\Needspace{5\baselineskip}
+其中 $x_i-x_i'\in\{-1,0,1\}$；取使 $x_i\neq x_i'$ 的最大下标 $i$，则左边被 $2^{i-1}$ 整除而不被 $2^{i}$ 整除，不可能为 $0$。）故
+\nopagebreak[4]
+\[A=\{0,1,2,3,4,5,6,7\}.\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+计算 $t$ 与 $s$ 的差：
+\nopagebreak[4]
+\[\begin{aligned}
+t-s&=\sum_{i=1}^{n}\left(b_i-a_i\right)q^{i-1}\\
+&=\left(b_n-a_n\right)q^{n-1}+\sum_{i=1}^{n-1}\left(b_i-a_i\right)q^{i-1}.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+由 $a_n<b_n$ 及 $a_n,b_n\in M=\{0,1,\cdots,q-1\}$ 得
+\nopagebreak[4]
+\[b_n-a_n\geqslant 1.\]
+\Needspace{5\baselineskip}
+又对每个 $i$ 有 $b_i-a_i\geqslant -(q-1)$，故
+\nopagebreak[4]
+\[\begin{aligned}
+t-s&\geqslant q^{n-1}-\sum_{i=1}^{n-1}(q-1)q^{i-1}\\
+&=q^{n-1}-(q-1)\cdot\frac{q^{n-1}-1}{q-1}\\
+&=q^{n-1}-\left(q^{n-1}-1\right)\\
+&=1>0.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+所以 $t>s$，即
+\nopagebreak[4]
+\[s<t.\]
+
+\gkanswer{答案（1）：$A=\{0,1,2,3,4,5,6,7\}$。$q=2$、$n=3$ 时 $x=x_1+2x_2+4x_3$，三系数各取 $0$ 或 $1$，共 $2^3=8$ 个互异值。}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}

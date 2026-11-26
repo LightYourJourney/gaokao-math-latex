@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2014 天津卷（文科）：phase7-b90 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2014-tianjin-arts`，**20 个题号**（选择 1—8、填空 9—14、解答 15—20）；固定来源 `src-146f1da26ce9b33f690750704a5b5c06a9cb9bcfdf700edae6f636692ba14d7e`，2 页 A3，印面 925、926（第 925 面含 15、16 题题干）。
+- 答案（等级 D）：1 A（$1-\\mathrm i$）；2 B（$3$）；3 B；4 C（$a>c>b$）；5 D（$-\\frac12$）；6 A（$\\frac{x^2}5-\\frac{y^2}{20}=1$）；7 D（①②④）；8 C（$\\pi$）；9 $60$；10 $\\frac{20\\pi}3$；11 $-4$；12 $(-\\infty,0)$；13 $\\lambda=2$；14 $(1,2)$；15 15 种结果、$P(M)=\\frac25$；16 (1) $\\frac{\\sqrt6}4$、(2) $\\frac{\\sqrt{15}-\\sqrt3}8$；17 (1) 证明、(2)① 证明、② $\\frac{2\\sqrt{11}}{11}$；18 (1) $\\frac{\\sqrt2}2$、(2) $\\frac{x^2}6+\\frac{y^2}3=1$；19 (1) 减 $(-\\infty,0)$、$(\\frac1a,+\\infty)$，增 $(0,\\frac1a)$，极小 0、极大 $\\frac1{3a^2}$、(2) $[\\frac34,\\frac32]$；20 (1) $A=\\{0,1,\\dots,7\\}$、(2) 证明。
+- **来源核对**：第 1 题为 $\\frac{7+\\mathrm i}{3+4\\mathrm i}$；第 14 题为分段函数 $f(x)=|x^2+5x+4|$（$x\\leqslant0$）、$2|x-2|$（$x>0$）与 $y=f(x)-a|x|$ 四零点；第 18 题原页无图；第 17 题图按题设重绘；第 7 题按位形重绘。
+- 主代理复核：第 5 题 $a_1=-\\frac12$；第 6 题 $c=5,a^2=5,b^2=20$；第 10 题 $4\\pi+\\frac{8\\pi}3=\\frac{20\\pi}3$；第 13 题 $\\lambda=2$；第 14 题 $(1,2)$；第 16 题 $\\cos A=\\frac{\\sqrt6}4$、$\\cos(2A-\\frac\\pi6)=\\frac{\\sqrt{15}-\\sqrt3}8$；第 17 题 $\\sin\\theta=\\frac{2\\sqrt{11}}{11}$；第 18 题 $e=\\frac{\\sqrt2}2$、$a^2=6,b^2=3$；第 19 题 $[\\frac34,\\frac32]$；第 20 题 $A=\\{0,\\dots,7\\}$ 且 $s<t$。
+- 图稿：4 张 TikZ（圆与切线、三视图、程序框图、四棱锥）；第 18 题原页无图，未补绘。
+- 验收：四版 5/30/7/22 页（共 64 页），四 log 全 0（Overfull、missing characters 均 0）；review 64 页 **pass 468 + not_applicable 44、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；4 条图稿引用全部命中。
+- 全库：manifest **680 卷 / 775 来源 / 526 批次**，complete 562、blocked 118，未绑定 **96**；revision 11994。
+
 ### 2014 陕西卷（理科）：phase7-b89 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2014-shaanxi-science`，**21 个题号**（选择 1—10、填空 11—15，其中第 15 题三选一 A/B/C、解答 16—21）；固定来源 `src-2621a20b55201affebf5287377479741dd34181d555a69c0649c1a355400d472`，2 页 A3，印面 911、912。
 - 答案（等级 D）：1 B（$[0,1)$）；2 B（$\\pi$）；3 C（$\\mathrm e$）；4 C（$a_n=2^n$）；5 D（$\\frac{4\\pi}3$）；6 C（$\\frac35$）；7 D（$3^x$）；8 B（假、假、真）；9 A（$1+a,4$）；10 A（$y=\\frac1{125}x^3-\\frac35x$）；11 $\\sqrt{10}$；12 $x^2+(y-1)^2=1$；13 $\\frac12$；14 $F+V-E=2$；15 A $\\sqrt5$、B $3$、C $1$；16 (1) 证明、(2) $\\frac12$；17 (1) 矩形、(2) $\\frac{\\sqrt{10}}5$；18 (1) $2\\sqrt2$、(2) $m-n=y-x$，最大 1；19 (1) 分布列、(2) $0.896$；20 (1) $a=2,b=1$、(2) $8x+3y-8=0$；21 (1) $g_n(x)=\\frac{x}{1+nx}$、(2) $a\\leqslant1$、(3) 证明。

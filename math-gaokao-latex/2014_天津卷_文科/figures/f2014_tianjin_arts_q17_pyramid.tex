@@ -1,0 +1,41 @@
+% ============================================================
+% f2014_tianjin_arts_q17_pyramid.tex
+% 2014 天津卷（文科）第 17 题：四棱锥 P-ABCD
+% 来源 PDF：普通高考/2014/2014天津文.pdf
+% 原页：第 2 页（A3），印面 926，第 17 题题干下方
+% 底面 ABCD 为平行四边形，E 为 AD 中点，F 为 PC 中点。
+% 由 BA=BD=√2、AD=2 得 AB⊥BD，PB⊥底面 ABCD，
+% 故 PB、BC、BD、EF 为不可见线（虚线）。立体示意图为平行投影，不按比例。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.65pt, font=\small, scale=1.15,
+  line cap=round, line join=round]
+  \coordinate (A) at (3.20,0);
+  \coordinate (D) at (1.60,0);
+  \coordinate (B) at (1.05,0.62);
+  \coordinate (C) at (-0.55,0.62);
+  \coordinate (P) at (1.15,2.50);
+  \coordinate (E) at (2.40,0);
+  \coordinate (F) at (0.30,1.56);
+
+  % 可见棱
+  \draw (P) -- (A);
+  \draw (P) -- (D);
+  \draw (P) -- (C);
+  \draw (A) -- (B);
+  \draw (A) -- (D);
+  \draw (D) -- (C);
+
+  % 不可见线
+  \draw[dashed] (P) -- (B);
+  \draw[dashed] (B) -- (C);
+  \draw[dashed] (B) -- (D);
+  \draw[dashed] (E) -- (F);
+
+  \fill (A) circle (0.85pt) node[below right=-1pt] {$A$};
+  \fill (B) circle (0.85pt) node[above left=-2pt] {$B$};
+  \fill (C) circle (0.85pt) node[left=-1pt] {$C$};
+  \fill (D) circle (0.85pt) node[below left=-1pt] {$D$};
+  \fill (P) circle (0.85pt) node[above=-1pt] {$P$};
+  \fill (E) circle (0.85pt) node[below=-1pt] {$E$};
+  \fill (F) circle (0.85pt) node[left=-1pt] {$F$};
+\end{tikzpicture}
