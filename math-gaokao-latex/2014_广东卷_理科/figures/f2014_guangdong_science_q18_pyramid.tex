@@ -1,0 +1,42 @@
+% ============================================================
+% f2014_guangdong_science_q18_pyramid.tex
+% 2014 广东卷（理科）第 18 题：四边形 ABCD 为正方形，
+% PD⊥平面 ABCD，∠DPC=30°，AF⊥PC 于 F，FE∥CD 交 PD 于 E。
+% 来源 PDF：普通高考/2014/2014广东理.pdf
+% 原页：第 1 页（A3 横排）第 3 栏下部，印面 877，第 18 题题干下方
+% 说明：底面 ABCD 画成平行四边形以示意正方形；PD 为自 D 向下的
+% 棱，E 在 PD 上，F 在 PC 上，EF∥CD；被底面遮挡的 AD、DC、DF
+% 用虚线，其余可见棱用实线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  \coordinate (A) at (0,3.4);
+  \coordinate (B) at (4.2,3.4);
+  \coordinate (C) at (5.2,0.9);
+  \coordinate (D) at (1.0,0.9);
+  \coordinate (P) at (-0.4,-1.8);
+  \coordinate (E) at (0.65,0.225);
+  \coordinate (F) at (3.8,0.225);
+
+  % 被遮挡的棱
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (D) -- (F);
+
+  % 可见的棱
+  \draw (A) -- (B) -- (C);
+  \draw (P) -- (E) -- (D);
+  \draw (P) -- (C);
+  \draw (E) -- (F);
+  \draw (A) -- (C);
+  \draw (A) -- (F);
+
+  \fill (A) circle (1.1pt) node[above left] {$A$};
+  \fill (B) circle (1.1pt) node[above right] {$B$};
+  \fill (C) circle (1.1pt) node[right] {$C$};
+  \fill (D) circle (1.1pt) node[above right, inner sep=2pt] {$D$};
+  \fill (P) circle (1.1pt) node[below left] {$P$};
+  \fill (E) circle (1.1pt) node[left] {$E$};
+  \fill (F) circle (1.1pt) node[below right] {$F$};
+\end{tikzpicture}

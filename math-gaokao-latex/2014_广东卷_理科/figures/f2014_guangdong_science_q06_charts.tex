@@ -1,0 +1,53 @@
+% ============================================================
+% f2014_guangdong_science_q06_charts.tex
+% 2014 广东卷（理科）第 6 题：某地区中小学生人数饼图（图 1）与
+% 各学段近视率柱状图（图 2）。
+% 来源 PDF：普通高考/2014/2014广东理.pdf
+% 原页：第 1 页（A3 横排）第 1 栏，印面 877，第 6 题题干下方
+% 说明：图 1 中 小学生 3500 名、初中生 4500 名、高中生 2000 名，
+% 三扇区圆心角依次为 126°、162°、72°；图 2 中 小学、初中、高中
+% 的近视率依次为 10%、30%、50%。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  % ---------------- 图 1：人数饼图 ----------------
+  \coordinate (O) at (0,0.9);
+  \draw (O) circle (2);
+  \draw (O) -- ++(90:2);
+  \draw (O) -- ++(216:2);
+  \draw (O) -- ++(18:2);
+
+  \node[align=center, font=\footnotesize] at (-0.998,1.409)
+    {小学生\\[1pt]$3500$ 名};
+  \node[align=center, font=\footnotesize] at (0.509,-0.098)
+    {初中生\\[1pt]$4500$ 名};
+  \node[align=center, font=\footnotesize] at (0.658,1.790)
+    {高中生\\[1pt]$2000$ 名};
+
+  \node at (0,-1.5) {图 1};
+
+  % ---------------- 图 2：近视率柱状图 ----------------
+  \coordinate (B0) at (7,0);
+  \draw[->] (B0) -- (11.9,0) node[below, inner sep=4pt] {年级};
+  \draw[->] (B0) -- (7,4.25) node[above] {近视率/$\%$};
+
+  % y 轴刻度与虚线
+  \foreach \y/\lab/\xend in {0.9/10/8.3, 2.4/30/9.5, 3.6/50/10.7} {
+    \draw (6.88,\y) -- (7.12,\y);
+    \node[left, font=\footnotesize] at (6.82,\y) {$\lab$};
+    \draw[dashed, line width=0.5pt] (7,\y) -- (\xend,\y);
+  }
+  \node[below left, font=\footnotesize, inner sep=3pt] at (7,0) {$O$};
+
+  % 三根柱子
+  \draw (7.6,0) rectangle (8.3,0.9);
+  \draw (8.8,0) rectangle (9.5,2.4);
+  \draw (10.0,0) rectangle (10.7,3.6);
+
+  \node[below, font=\footnotesize] at (7.95,-0.06) {小学};
+  \node[below, font=\footnotesize] at (9.15,-0.06) {初中};
+  \node[below, font=\footnotesize] at (10.35,-0.06) {高中};
+
+  \node at (9.15,-1.5) {图 2};
+\end{tikzpicture}

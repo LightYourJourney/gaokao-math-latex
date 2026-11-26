@@ -4452,6 +4452,14 @@
         "gk-2014-guangdong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b03",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-guangdong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4461,7 +4469,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5f59a0f7-0a6f-4bb5-bba2-bb8dd5164a66",
+  "last_transaction_id": "9ba0142c-36d0-4855-8355-c1122ffb211f",
   "papers": [
     {
       "blocked_from": null,
@@ -51429,9 +51437,74 @@
       "title": "2014 年·广东卷·文科",
       "track": "arts",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_广东卷_理科/figures/f2014_guangdong_science_q06_charts.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_广东卷_理科/figures/f2014_guangdong_science_q15_parallelogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_广东卷_理科/figures/f2014_guangdong_science_q18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_guangdong_science",
+        "id": "gk-2014-guangdong-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 877、878。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。广东卷题号：选择 1—8、填空 9—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 6 题人数饼图与近视率柱状图、第 15 题平行四边形、第 18 题三棱锥；第 17 题为画直方图的空网格，第 20 题原页无图。共 3 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            9,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "广东理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-guangdong-science",
+      "production_state": "complete",
+      "project_dir": "2014_广东卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_广东理_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_广东理_含解析.md",
+        "questions": "2014/2014_数学真题_广东理_试题.md",
+        "solution_body": "2014/2014_数学真题_广东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-cdf0aa415b6c4c38d93a0a8429443737f9e8d1d05dc460c1f749350d5550c738"
+      ],
+      "title": "2014 年·广东卷·理科",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 12057,
+  "revision": 12062,
   "schema_version": 1,
   "sources": [
     {
@@ -65924,8 +65997,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0e0dfc5a56ca47322edc8d429f53dde759f31fac",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-guangdong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014广东理.pdf",
       "regions": [],
       "source_id": "src-cdf0aa415b6c4c38d93a0a8429443737f9e8d1d05dc460c1f749350d5550c738",
