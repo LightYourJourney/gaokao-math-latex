@@ -1,0 +1,1230 @@
+% answers.tex —— 2013 年·陕西卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2013/2013_数学真题_陕西理_试题.md + 2013/2013_数学真题_陕西理_解析正文.md + 2013/2013_数学真题_陕西理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+设全集为 $\mathbf R$，函数 $f(x)=\sqrt{1-x^2}$ 的定义域为 $M$，则 $\complement_{\mathbf R}M$ 为\mbox{（　　）}
+
+（A）$[-1,1]$；（B）$(-1,1)$；（C）$(-\infty,-1]\cup[1,+\infty)$；（D）$(-\infty,-1)\cup(1,+\infty)$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+要使 $\sqrt{1-x^2}$ 有意义，必须且只需
+\nopagebreak[4]
+\[1-x^2\geqslant0\Longleftrightarrow x^2\leqslant1\Longleftrightarrow -1\leqslant x\leqslant1.\]
+\Needspace{5\baselineskip}
+故定义域
+\nopagebreak[4]
+\[M=[-1,1].\]
+\Needspace{5\baselineskip}
+在全集 $\mathbf R$ 中取补集：
+\nopagebreak[4]
+\[\complement_{\mathbf R}M=(-\infty,-1)\cup(1,+\infty).\]
+选 D。
+
+\gkanswer{答案：D。由 $1-x^2\geqslant0$ 得 $M=[-1,1]$，故 $\complement_{\mathbf R}M=(-\infty,-1)\cup(1,+\infty)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+根据下列算法语句，当输入 $x$ 为 $60$ 时，输出 $y$ 的值为\mbox{（　　）}
+
+\nopagebreak[4]
+\[\begin{array}{|l|}
+\hline
+\text{\text{输入} }x;\\
+\text{If }x\leqslant 50\text{ Then}\\
+\qquad y=0.5*x\\
+\text{Else}\\
+\qquad y=25+0.6*(x-50)\\
+\text{End If}\\
+\text{\text{输出} }y.\\
+\hline
+\end{array}\]
+
+（A）$25$；（B）$30$；（C）$31$；（D）$61$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+输入 $x=60$。因为 $60>50$，条件 $x\leqslant50$ 不成立，执行 Else 分支：
+\nopagebreak[4]
+\[y=25+0.6\times(60-50)=25+0.6\times10=25+6=31.\]
+选 C。
+
+\gkanswer{答案：C。$x=60>50$，执行 Else 分支，$y=25+0.6\times(60-50)=31$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+设 $\boldsymbol a$，$\boldsymbol b$ 为向量，则“$|\boldsymbol a\cdot\boldsymbol b|=|\boldsymbol a||\boldsymbol b|$”是“$\boldsymbol a\parallel\boldsymbol b$”的\mbox{（　　）}
+
+（A）充分不必要条件；（B）必要不充分条件；（C）充分必要条件；（D）既不充分也不必要条件。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设 $\boldsymbol a$，$\boldsymbol b$ 的夹角为 $\theta$，则
+\nopagebreak[4]
+\[|\boldsymbol a\cdot\boldsymbol b|=|\boldsymbol a||\boldsymbol b||\cos\theta|.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[|\boldsymbol a\cdot\boldsymbol b|=|\boldsymbol a||\boldsymbol b|
+\Longleftrightarrow |\cos\theta|=1
+\Longleftrightarrow \theta=0\text{ \text{或} }\pi.\]
+当 $\boldsymbol a$，$\boldsymbol b$ 中有零向量时，等式两边均为 $0$，而零向量与任意向量平行，结论仍成立。因此该等式与 $\boldsymbol a\parallel\boldsymbol b$ 互为充要条件。
+选 C。
+
+\gkanswer{答案：C。两边平方得 $(\boldsymbol a\cdot\boldsymbol b)^2=|\boldsymbol a|^2|\boldsymbol b|^2$，即 $\sin^2\langle\boldsymbol a,\boldsymbol b\rangle=0$，故两向量同向或反向（含零向量），与 $\boldsymbol a\parallel\boldsymbol b$ 等价。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+某单位有 $840$ 名职工，现采用系统抽样方法，抽取 $42$ 人做问卷调查，将 $840$ 人按 $1,2,\cdots,840$ 随机编号，则抽取的 $42$ 人中，编号落入区间 $[481,720]$ 的人数为\mbox{（　　）}
+
+（A）$11$；（B）$12$；（C）$13$；（D）$14$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+系统抽样的间隔为
+\nopagebreak[4]
+\[k=\frac{840}{42}=20.\]
+\Needspace{5\baselineskip}
+将 $840$ 人依次分为 $42$ 段，每段 $20$ 人，第 $i$ 段为
+\nopagebreak[4]
+\[[20(i-1)+1,\,20i],\qquad i=1,2,\cdots,42.\]
+\Needspace{5\baselineskip}
+区间 $[481,720]$ 覆盖第 $25$ 段至第 $36$ 段：
+\nopagebreak[4]
+\[481=20\times24+1,\qquad 720=20\times36,\]
+\Needspace{5\baselineskip}
+故抽取人数为
+\nopagebreak[4]
+\[36-25+1=12.\]
+选 B。
+
+\gkanswer{答案：B。抽样间隔为 $840\div42=20$，区间 $[481,720]$ 恰含 $240\div20=12$ 个编号段。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+如图，在矩形区域 $ABCD$ 的 $A$，$C$ 两点处各有一个通信基站，假设其信号覆盖范围分别是扇形区域 $ADE$ 和扇形区域 $CBF$（该矩形区域内无其他信号来源，基站工作正常）。若在该矩形区域内随机地选一地点，则该地点无信号的概率是\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_shaanxi_science_q05_sectors}\end{center}
+\nopagebreak[4]
+（A）$1-\dfrac{\pi}{4}$；（B）$\dfrac{\pi}{2}-1$；（C）$2-\dfrac{\pi}{2}$；（D）$\dfrac{\pi}{4}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+矩形 $ABCD$ 中 $AD=1$，$AB=2$，面积为
+\nopagebreak[4]
+\[S_{\text{\text{矩形}}}=1\times2=2.\]
+\Needspace{5\baselineskip}
+扇形 $ADE$ 以 $A$ 为圆心、半径 $AD=1$，圆心角为 $90^\circ$，面积为
+\nopagebreak[4]
+\[S_1=\frac14\pi\cdot1^2=\frac\pi4.\]
+\Needspace{5\baselineskip}
+扇形 $CBF$ 以 $C$ 为圆心、半径 $CB=1$，圆心角为 $90^\circ$，面积为
+\nopagebreak[4]
+\[S_2=\frac14\pi\cdot1^2=\frac\pi4.\]
+\Needspace{5\baselineskip}
+两个扇形分别位于直线 $x=1$ 的两侧，内部不相交，故有信号区域面积为
+\nopagebreak[4]
+\[S_1+S_2=\frac\pi2.\]
+\Needspace{5\baselineskip}
+随机选一点，该点无信号的概率为
+\nopagebreak[4]
+\[1-\frac{S_1+S_2}{S_{\text{\text{矩形}}}}
+=1-\frac{\pi/2}{2}
+=1-\frac\pi4.\]
+选 A。
+
+\gkanswer{答案：A。两扇形均为半径 $1$ 的四分之一圆，覆盖面积 $\dfrac\pi4+\dfrac\pi4=\dfrac\pi2$，矩形面积 $2$，故无信号概率为 $1-\dfrac{\pi/2}{2}=1-\dfrac\pi4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+设 $z_1$，$z_2$ 是复数，则下列命题中的假命题是\mbox{（　　）}
+
+（A）若 $|z_1-z_2|=0$，则 $z_1=z_2$；（B）若 $z_1=\bar z_2$，则 $\bar z_1=z_2$；（C）若 $|z_1|=|z_2|$，则 $z_1\cdot\bar z_1=z_2\cdot\bar z_2$；（D）若 $|z_1|=|z_2|$，则 $z_1^2=z_2^2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+设 $z_k=a_k+b_k\mathrm i$（$a_k,b_k\in\mathbf R$，$k=1,2$）。
+
+（A）$|z_1-z_2|=0$ 即 $z_1-z_2=0$，故 $z_1=z_2$，为真命题。
+
+（B）若 $z_1=\bar z_2$，两边取共轭得 $\bar z_1=z_2$，为真命题。
+
+\Needspace{5\baselineskip}
+（C）由 $z\bar z=|z|^2$，当 $|z_1|=|z_2|$ 时
+\nopagebreak[4]
+\[z_1\bar z_1=|z_1|^2=|z_2|^2=z_2\bar z_2,\]
+为真命题。
+
+\Needspace{5\baselineskip}
+（D）取 $z_1=1$，$z_2=\mathrm i$，则
+\nopagebreak[4]
+\[|z_1|=|z_2|=1,\qquad z_1^2=1,\qquad z_2^2=-1,\]
+故 $z_1^2\neq z_2^2$，（D）为假命题。
+选 D。
+
+\gkanswer{答案：D。取 $z_1=1$，$z_2=\mathrm i$，则 $|z_1|=|z_2|=1$，但 $z_1^2=1\neq-1=z_2^2$；其余三项均可由共轭与模的性质直接验证。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+设 $\triangle ABC$ 的内角 $A$，$B$，$C$ 所对的边分别为 $a$，$b$，$c$，若 $b\cos C+c\cos B=a\sin A$，则 $\triangle ABC$ 的形状为\mbox{（　　）}
+
+（A）锐角三角形；（B）直角三角形；（C）钝角三角形；（D）不确定。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由余弦定理，
+\nopagebreak[4]
+\[b\cos C=b\cdot\frac{a^2+b^2-c^2}{2ab}=\frac{a^2+b^2-c^2}{2a},\]
+\nopagebreak[4]
+\[c\cos B=c\cdot\frac{a^2+c^2-b^2}{2ac}=\frac{a^2+c^2-b^2}{2a}.\]
+\Needspace{5\baselineskip}
+两式相加得
+\nopagebreak[4]
+\[b\cos C+c\cos B=\frac{2a^2}{2a}=a.\]
+\Needspace{5\baselineskip}
+代入已知条件 $b\cos C+c\cos B=a\sin A$，得
+\nopagebreak[4]
+\[a=a\sin A.\]
+\Needspace{5\baselineskip}
+因为 $a>0$，所以
+\nopagebreak[4]
+\[\sin A=1,\qquad A=\frac\pi2.\]
+故 $\triangle ABC$ 为直角三角形。
+选 B。
+
+\gkanswer{答案：B。由投影公式 $b\cos C+c\cos B=a$，得 $a=a\sin A$，即 $\sin A=1$，$A=90^\circ$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设函数
+\nopagebreak[4]
+\[f(x)=\begin{cases}
+\left(x-\dfrac1x\right)^6,&x<0,\\[6pt]
+-\sqrt x,&x\geqslant0,
+\end{cases}\]
+则当 $x>0$ 时，$f[f(x)]$ 表达式的展开式中常数项为\mbox{（　　）}
+
+（A）$-20$；（B）$20$；（C）$-15$；（D）$15$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+当 $x>0$ 时，$f(x)=-\sqrt x<0$。因此
+\nopagebreak[4]
+\[f[f(x)]=f(-\sqrt x)
+=\left(-\sqrt x-\frac1{-\sqrt x}\right)^6
+=\left(\frac1{\sqrt x}-\sqrt x\right)^6.\]
+\Needspace{5\baselineskip}
+展开式的通项为
+\nopagebreak[4]
+\[\mathrm C_6^k\left(\frac1{\sqrt x}\right)^{6-k}(-\sqrt x)^k
+=\mathrm C_6^k(-1)^k x^{-3+k},\qquad k=0,1,\cdots,6.\]
+\Needspace{5\baselineskip}
+常数项对应 $-3+k=0$，即 $k=3$，故常数项为
+\nopagebreak[4]
+\[\mathrm C_6^3(-1)^3=20\times(-1)=-20.\]
+选 A。
+
+\gkanswer{答案：A。$x>0$ 时 $f(x)=-\sqrt x<0$，故 $f[f(x)]=\left(\dfrac1{\sqrt x}-\sqrt x\right)^6$，常数项为 $\mathrm C_6^3(-1)^3=-20$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+在如图所示的锐角三角形空地中，欲建一个面积不小于 $300\ \mathrm{m}^2$ 的内接矩形花园（阴影部分），则其边长 $x$（单位 m）的取值范围是\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_shaanxi_science_q09_triangle}\end{center}
+\nopagebreak[4]
+（A）$[15,20]$；（B）$[12,25]$；（C）$[10,30]$；（D）$[20,30]$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设内接矩形的高为 $y$，上边长为 $x$。矩形上边所在直线截三角形所得小三角形与原三角形相似，故
+\nopagebreak[4]
+\[\frac{x}{40}=\frac{40-y}{40}.\]
+\Needspace{5\baselineskip}
+解得
+\nopagebreak[4]
+\[y=40-x.\]
+\Needspace{5\baselineskip}
+矩形面积
+\nopagebreak[4]
+\[S=xy=x(40-x).\]
+\Needspace{5\baselineskip}
+由题意 $S\geqslant300$，即
+\nopagebreak[4]
+\[x(40-x)\geqslant300
+\Longleftrightarrow x^2-40x+300\leqslant0
+\Longleftrightarrow (x-10)(x-30)\leqslant0.\]
+\Needspace{5\baselineskip}
+因此
+\nopagebreak[4]
+\[10\leqslant x\leqslant30.\]
+结合 $0<x<40$，边长 $x$ 的取值范围为 $[10,30]$。
+选 C。
+
+\gkanswer{答案：C。设矩形高为 $y$，由相似比 $\dfrac{x}{40}=\dfrac{40-y}{40}$ 得 $y=40-x$，面积 $x(40-x)\geqslant300$，解得 $10\leqslant x\leqslant30$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+设 $[x]$ 表示不大于 $x$ 的最大整数，则对任意实数 $x$，$y$，有\mbox{（　　）}
+
+（A）$[-x]=-[x]$；（B）$[2x]=2[x]$；（C）$[x+y]\leqslant[x]+[y]$；（D）$[x-y]\leqslant[x]-[y]$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设
+\nopagebreak[4]
+\[x=m+\alpha,\qquad y=n+\beta,\]
+\Needspace{5\baselineskip}
+其中 $m,n\in\mathbf Z$，$0\leqslant\alpha,\beta<1$，则
+\nopagebreak[4]
+\[[x]=m,\qquad [y]=n.\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[x-y=(m-n)+(\alpha-\beta),\qquad -1<\alpha-\beta<1.\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[[x-y]=
+\begin{cases}
+m-n,&\alpha\geqslant\beta,\\
+m-n-1,&\alpha<\beta.
+\end{cases}\]
+\Needspace{5\baselineskip}
+无论哪种情形，都有
+\nopagebreak[4]
+\[[x-y]\leqslant m-n=[x]-[y].\]
+（D）恒成立。
+
+\Needspace{5\baselineskip}
+再否定其余三项。取 $x=\dfrac12$：
+\nopagebreak[4]
+\[[-x]=\left[-\frac12\right]=-1,\qquad -[x]=-\left[\frac12\right]=0,\]
+\Needspace{5\baselineskip}
+故（A）不成立；
+\nopagebreak[4]
+\[[2x]=[1]=1,\qquad 2[x]=2\left[\frac12\right]=0,\]
+\Needspace{5\baselineskip}
+故（B）不成立。取 $x=y=\dfrac12$：
+\nopagebreak[4]
+\[[x+y]=[1]=1,\qquad [x]+[y]=0+0=0,\]
+故（C）不成立。
+选 D。
+
+\gkanswer{答案：D。设 $x=m+\alpha$，$y=n+\beta$（$m,n\in\mathbf Z$，$0\leqslant\alpha,\beta<1$），则 $[x-y]=m-n$ 或 $m-n-1$，均不大于 $m-n=[x]-[y]$；取 $x=y=\dfrac12$ 可否定（A）（B）（C）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+双曲线 $\dfrac{x^2}{16}-\dfrac{y^2}{m}=1$ 的离心率为 $\dfrac54$，则 $m$ 等于\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+双曲线
+\nopagebreak[4]
+\[\frac{x^2}{16}-\frac{y^2}{m}=1\]
+\Needspace{5\baselineskip}
+中 $a^2=16$，$b^2=m$，故
+\nopagebreak[4]
+\[c^2=a^2+b^2=16+m.\]
+\Needspace{5\baselineskip}
+离心率
+\nopagebreak[4]
+\[e=\frac ca=\frac54.\]
+\Needspace{5\baselineskip}
+两边平方得
+\nopagebreak[4]
+\[\frac{16+m}{16}=\frac{25}{16},\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[16+m=25,\qquad m=9.\]
+答案：$9$。
+
+\gkanswer{答案：$9$。$a=4$，$e=\dfrac ca=\dfrac54$ 得 $c=5$，故 $b^2=c^2-a^2=9$，即 $m=9$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+某几何体的三视图如图所示，则其体积为\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_shaanxi_science_q12_views}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+由三视图还原几何体：
+
+\begin{itemize}
+\item 主视图是直角边长分别为 $1$ 和 $2$ 的直角三角形；
+\item 左视图是底边长为 $2$、高为 $2$ 的等腰三角形；
+\item 俯视图是半径为 $1$ 的半圆。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+因此该几何体是一个底面半径为 $1$、高为 $2$ 的半圆锥，即半径为 $1$、高为 $2$ 的圆锥沿过轴线的平面切去一半。圆锥体积为
+\nopagebreak[4]
+\[V_{\text{\text{锥}}}=\frac13\pi r^2h=\frac13\pi\cdot1^2\cdot2=\frac{2\pi}{3},\]
+\Needspace{5\baselineskip}
+故半圆锥体积
+\nopagebreak[4]
+\[V=\frac12V_{\text{\text{锥}}}=\frac\pi3.\]
+答案：$\dfrac{\pi}{3}$。
+
+\gkanswer{答案：$\dfrac{\pi}{3}$。三视图还原为底面半径 $1$、高 $2$ 的半圆锥，体积 $V=\dfrac13\cdot\dfrac{\pi}{2}\cdot2=\dfrac\pi3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+若点 $(x,y)$ 位于曲线 $y=|x-1|$ 与 $y=2$ 所围成的封闭区域，则 $2x-y$ 的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+封闭区域由
+\nopagebreak[4]
+\[y=|x-1|,\qquad y=2\]
+\Needspace{5\baselineskip}
+围成，即
+\nopagebreak[4]
+\[|x-1|\leqslant y\leqslant2.\]
+\Needspace{5\baselineskip}
+由 $|x-1|\leqslant2$ 得
+\nopagebreak[4]
+\[-1\leqslant x\leqslant3.\]
+\Needspace{5\baselineskip}
+因为 $y\leqslant2$，所以
+\nopagebreak[4]
+\[2x-y\geqslant2x-2.\]
+\Needspace{5\baselineskip}
+又 $x\geqslant-1$，故
+\nopagebreak[4]
+\[2x-y\geqslant2\times(-1)-2=-4.\]
+\Needspace{5\baselineskip}
+当 $x=-1$，$y=2$ 时，
+\nopagebreak[4]
+\[|x-1|=|-2|=2,\]
+\Needspace{5\baselineskip}
+点 $(-1,2)$ 位于区域内，且
+\nopagebreak[4]
+\[2x-y=2\times(-1)-2=-4.\]
+故最小值为 $-4$。
+答案：$-4$。
+
+\gkanswer{答案：$-4$。区域为 $|x-1|\leqslant y\leqslant2$，故 $x\geqslant-1$，$y\leqslant2$，从而 $2x-y\geqslant2(-1)-2=-4$，在 $(-1,2)$ 处取到。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+观察下列等式：
+\nopagebreak[4]
+\[\begin{aligned}
+1^2&=1,\\
+1^2-2^2&=-3,\\
+1^2-2^2+3^2&=6,\\
+1^2-2^2+3^2-4^2&=-10,\\
+&\cdots\cdots
+\end{aligned}\]
+照此规律，第 $n$ 个等式可为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+观察前四个等式，可归纳第 $n$ 个等式为
+\nopagebreak[4]
+\[1^2-2^2+3^2-\cdots+(-1)^{n+1}n^2=(-1)^{n+1}\frac{n(n+1)}2.\]
+下面用数学归纳法证明。
+
+当 $n=1$ 时，左边 $=1^2=1$，右边 $=(-1)^2\cdot\dfrac{1\cdot2}{2}=1$，成立。
+
+\Needspace{5\baselineskip}
+假设 $n=k$ 时成立，即
+\nopagebreak[4]
+\[1^2-2^2+\cdots+(-1)^{k+1}k^2=(-1)^{k+1}\frac{k(k+1)}2.\]
+\Needspace{5\baselineskip}
+当 $n=k+1$ 时，左边为
+\nopagebreak[4]
+\[(-1)^{k+1}\frac{k(k+1)}2+(-1)^{k+2}(k+1)^2.\]
+\Needspace{5\baselineskip}
+提取公因式 $(-1)^{k+2}(k+1)$：
+\nopagebreak[4]
+\[(-1)^{k+2}(k+1)\left[(k+1)-\frac k2\right]
+=(-1)^{k+2}(k+1)\cdot\frac{k+2}{2}
+=(-1)^{(k+1)+1}\frac{(k+1)(k+2)}2.\]
+故 $n=k+1$ 时也成立。
+
+\Needspace{5\baselineskip}
+因此第 $n$ 个等式为
+\nopagebreak[4]
+\[1^2-2^2+3^2-\cdots+(-1)^{n+1}n^2=(-1)^{n+1}\frac{n(n+1)}2.\]
+答案：$1^2-2^2+3^2-\cdots+(-1)^{n+1}n^2=(-1)^{n+1}\dfrac{n(n+1)}2$。
+
+\gkanswer{答案：$1^2-2^2+3^2-\cdots+(-1)^{n+1}n^2=(-1)^{n+1}\dfrac{n(n+1)}2$。左边为前 $n$ 个平方的交错和，按 $n$ 的奇偶归纳即得。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+已知 $a$，$b$，$m$，$n$ 均为正数，且 $a+b=1$，$mn=2$，则 $(am+bn)(bm+an)$ 的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+展开：
+\nopagebreak[4]
+\[(am+bn)(bm+an)
+=abm^2+a^2mn+b^2mn+abn^2
+=ab(m^2+n^2)+mn(a^2+b^2).\]
+\Needspace{5\baselineskip}
+由 $mn=2$ 及
+\nopagebreak[4]
+\[a^2+b^2=(a+b)^2-2ab=1-2ab,\]
+\Needspace{5\baselineskip}
+得
+\nopagebreak[4]
+\[(am+bn)(bm+an)
+=ab(m^2+n^2)+2(1-2ab)
+=ab(m^2+n^2-4)+2.\]
+\Needspace{5\baselineskip}
+由基本不等式
+\nopagebreak[4]
+\[m^2+n^2\geqslant2mn=4,\]
+\Needspace{5\baselineskip}
+且 $ab>0$，故
+\nopagebreak[4]
+\[ab(m^2+n^2-4)\geqslant0,\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[(am+bn)(bm+an)\geqslant2.\]
+当 $m=n=\sqrt2$ 时，$m^2+n^2=4$，上式取等号，最小值为 $2$。
+答案：$2$。
+
+\gkanswer{答案：$2$。展开得 $(am+bn)(bm+an)=ab(m^2+n^2)+2(a^2+b^2)=ab(m^2+n^2-4)+2\geqslant2$，当 $m=n=\sqrt2$ 时取等号。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+如图，弦 $AB$ 与 $CD$ 相交于 $\odot O$ 内一点 $E$，过 $E$ 作 $BC$ 的平行线与 $AD$ 的延长线相交于点 $P$。已知 $PD=2DA=2$，则 $PE=$\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_shaanxi_science_q16_geometry}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+在 $\triangle PAE$ 与 $\triangle PED$ 中，先证两组角对应相等。
+
+\Needspace{5\baselineskip}
+因为 $P$，$A$，$D$ 共线，所以
+\nopagebreak[4]
+\[\angle APE=\angle DPE.\]
+
+\Needspace{5\baselineskip}
+又 $P$，$A$，$D$ 共线，$E$ 在 $AB$ 上，故
+\nopagebreak[4]
+\[\angle PAE=\angle DAB.\]
+\Needspace{5\baselineskip}
+由于 $A$，$B$，$C$，$D$ 四点共圆，$\angle DAB$ 与 $\angle DCB$ 都对着弦 $DB$，所以
+\nopagebreak[4]
+\[\angle DAB=\angle DCB.\]
+\Needspace{5\baselineskip}
+因此
+\nopagebreak[4]
+\[\angle PAE=\angle DCB.\]
+
+\Needspace{5\baselineskip}
+另一方面，$PE\parallel BC$，且 $E$，$D$，$C$ 共线，故
+\nopagebreak[4]
+\[\angle PED=\angle BCD=\angle DCB.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\angle PAE=\angle PED.\]
+
+\Needspace{5\baselineskip}
+在 $\triangle PAE$ 与 $\triangle PED$ 中，
+\nopagebreak[4]
+\[\angle APE=\angle DPE,\qquad \angle PAE=\angle PED,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\triangle PAE\backsim\triangle PED.\]
+\Needspace{5\baselineskip}
+对应边成比例：
+\nopagebreak[4]
+\[\frac{PA}{PE}=\frac{PE}{PD}.\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[PE^2=PA\cdot PD.\]
+\Needspace{5\baselineskip}
+由 $PD=2DA=2$ 得 $PD=2$，$DA=1$，从而
+\nopagebreak[4]
+\[PA=PD+DA=3.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[PE^2=3\times2=6,\qquad PE=\sqrt6.\]
+答案：$\sqrt6$。
+
+\gkanswer{答案：$\sqrt6$。由 $PE\parallel BC$ 及 $A$，$B$，$C$，$D$ 共圆得 $\triangle PAE\backsim\triangle PED$，故 $PE^2=PA\cdot PD=3\times2=6$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+如图，以过原点的直线的倾斜角 $\theta$ 为参数，则圆 $x^2+y^2-x=0$ 的参数方程为\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_shaanxi_science_q17_circle}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+过原点且倾斜角为 $\theta$ 的直线方程为
+\nopagebreak[4]
+\[y=x\tan\theta.\]
+\Needspace{5\baselineskip}
+代入圆的方程 $x^2+y^2-x=0$：
+\nopagebreak[4]
+\[x^2+x^2\tan^2\theta-x=0,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[x\left[x(1+\tan^2\theta)-1\right]=0.\]
+\Needspace{5\baselineskip}
+一个交点是原点 $O$，另一个交点 $P$ 满足
+\nopagebreak[4]
+\[x=\frac1{1+\tan^2\theta}=\cos^2\theta.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[y=x\tan\theta=\cos^2\theta\cdot\frac{\sin\theta}{\cos\theta}
+=\sin\theta\cos\theta.\]
+\Needspace{5\baselineskip}
+当 $\theta=\dfrac\pi2$ 时，直线为 $y$ 轴，与圆相切于原点，公式给出 $(0,0)$，仍成立。因此参数方程为
+\nopagebreak[4]
+\[\begin{cases}
+x=\cos^2\theta,\\[4pt]
+y=\sin\theta\cos\theta,
+\end{cases}\]
+其中 $\theta$ 为参数，$0\leqslant\theta<\pi$。
+答案：$\begin{cases}x=\cos^2\theta,\\y=\sin\theta\cos\theta\end{cases}$（$\theta$ 为参数，$0\leqslant\theta<\pi$）。
+
+\gkanswer{答案：$\begin{cases}x=\cos^2\theta,\\ y=\sin\theta\cos\theta\end{cases}$（$\theta$ 为参数，$0\leqslant\theta<\pi$）。将 $y=x\tan\theta$ 代入 $x^2+y^2-x=0$，舍去原点得 $x=\cos^2\theta$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+已知向量 $\boldsymbol a=\left(\cos x,-\dfrac12\right)$，$\boldsymbol b=\left(\sqrt3\sin x,\cos2x\right)$，$x\in\mathbf R$，设函数 $f(x)=\boldsymbol a\cdot\boldsymbol b$。
+
+（1） 求 $f(x)$ 的最小正周期。
+
+（2） 求 $f(x)$ 在 $\left[0,\dfrac\pi2\right]$ 上的最大值和最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 由向量数量积的定义，
+\nopagebreak[4]
+\[f(x)=\boldsymbol a\cdot\boldsymbol b
+=\sqrt3\sin x\cos x-\frac12\cos2x.\]
+\Needspace{5\baselineskip}
+利用二倍角公式 $\sin2x=2\sin x\cos x$，得
+\nopagebreak[4]
+\[f(x)=\frac{\sqrt3}{2}\sin2x-\frac12\cos2x.\]
+\Needspace{5\baselineskip}
+再化为一个正弦函数：
+\nopagebreak[4]
+\[f(x)=\sin\left(2x-\frac\pi6\right).\]
+\Needspace{5\baselineskip}
+因此最小正周期
+\nopagebreak[4]
+\[T=\frac{2\pi}{2}=\pi.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 当 $x\in\left[0,\dfrac\pi2\right]$ 时，
+\nopagebreak[4]
+\[2x-\frac\pi6\in\left[-\frac\pi6,\frac{5\pi}6\right].\]
+\Needspace{5\baselineskip}
+正弦函数在 $\left[-\dfrac\pi6,\dfrac{5\pi}6\right]$ 上的最大值为 $1$，在 $2x-\dfrac\pi6=\dfrac\pi2$ 即 $x=\dfrac\pi3$ 时取得；最小值为
+\nopagebreak[4]
+\[\sin\left(-\frac\pi6\right)=-\frac12,\]
+\Needspace{5\baselineskip}
+在 $x=0$ 时取得。故
+\nopagebreak[4]
+\[f(x)_{\max}=1,\qquad f(x)_{\min}=-\frac12.\]
+
+\gkanswer{答案（1）：$T=\pi$。$f(x)=\sin\left(2x-\dfrac\pi6\right)$，故最小正周期为 $\pi$。}
+
+\gkanswer{答案（2）：最大值为 $1$，最小值为 $-\dfrac12$。在 $\left[0,\dfrac\pi2\right]$ 上 $2x-\dfrac\pi6\in\left[-\dfrac\pi6,\dfrac{5\pi}6\right]$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+设 $\{a_n\}$ 是公比为 $q$ 的等比数列。
+
+（1） 推导 $\{a_n\}$ 的前 $n$ 项和公式；
+
+（2） 设 $q\neq1$，证明数列 $\{a_n+1\}$ 不是等比数列。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 设等比数列的首项为 $a_1$，公比为 $q$，则
+\nopagebreak[4]
+\[a_n=a_1q^{n-1}.\]
+\Needspace{5\baselineskip}
+前 $n$ 项和
+\nopagebreak[4]
+\[S_n=a_1+a_1q+a_1q^2+\cdots+a_1q^{n-1}.\]
+
+\Needspace{5\baselineskip}
+当 $q=1$ 时，每一项都等于 $a_1$，故
+\nopagebreak[4]
+\[S_n=na_1.\]
+
+\Needspace{5\baselineskip}
+当 $q\neq1$ 时，两边乘以 $q$：
+\nopagebreak[4]
+\[qS_n=a_1q+a_1q^2+\cdots+a_1q^n.\]
+\Needspace{5\baselineskip}
+两式相减：
+\nopagebreak[4]
+\[(1-q)S_n=a_1-a_1q^n=a_1(1-q^n).\]
+\Needspace{5\baselineskip}
+因为 $q\neq1$，所以
+\nopagebreak[4]
+\[S_n=\frac{a_1(1-q^n)}{1-q}.\]
+
+\Needspace{5\baselineskip}
+综上，
+\nopagebreak[4]
+\[S_n=
+\begin{cases}
+na_1,&q=1,\\[6pt]
+\dfrac{a_1(1-q^n)}{1-q},&q\neq1.
+\end{cases}\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 用反证法。假设数列 $\{a_n+1\}$ 是等比数列，记
+\nopagebreak[4]
+\[b_n=a_n+1=a_1q^{n-1}+1.\]
+\Needspace{5\baselineskip}
+等比数列任意连续三项满足
+\nopagebreak[4]
+\[b_2^2=b_1b_3.\]
+\Needspace{5\baselineskip}
+代入得
+\nopagebreak[4]
+\[(a_1q+1)^2=(a_1+1)(a_1q^2+1).\]
+\Needspace{5\baselineskip}
+展开：
+\nopagebreak[4]
+\[a_1^2q^2+2a_1q+1=a_1^2q^2+a_1q^2+a_1+1.\]
+\Needspace{5\baselineskip}
+化简：
+\nopagebreak[4]
+\[2a_1q=a_1(q^2+1),\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[a_1(q^2-2q+1)=0,\]
+\nopagebreak[4]
+\[a_1(q-1)^2=0.\]
+\Needspace{5\baselineskip}
+因为 $\{a_n\}$ 是等比数列，首项 $a_1\neq0$，所以
+\nopagebreak[4]
+\[(q-1)^2=0,\qquad q=1,\]
+这与已知 $q\neq1$ 矛盾。因此数列 $\{a_n+1\}$ 不是等比数列。
+
+\gkanswer{答案（1）：$S_n=\begin{cases}na_1,&q=1,\\[4pt]\dfrac{a_1(1-q^n)}{1-q},&q\neq1.\end{cases}$ 由错位相减可得。}
+
+\gkanswer{答案（2）：数列 $\{a_n+1\}$ 不是等比数列，见证明。若它为等比数列，由 $b_2^2=b_1b_3$ 可推出 $q=1$，与 $q\neq1$ 矛盾。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+如图，四棱柱 $ABCD-A_1B_1C_1D_1$ 的底面 $ABCD$ 是正方形，$O$ 为底面中心，$A_1O\perp$ 平面 $ABCD$，$AB=AA_1=\sqrt2$。
+
+（1） 证明：$A_1C\perp$ 平面 $BB_1D_1D$；
+
+（2） 求平面 $OCB_1$ 与平面 $BB_1D_1D$ 的夹角 $\theta$ 的大小。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_shaanxi_science_q20_prism}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\textbf{（1）} 以 $O$ 为原点，$OA$，$OB$ 所在直线分别为 $x$ 轴、$y$ 轴，$OA_1$ 方向为 $z$ 轴，建立空间直角坐标系。
+
+\Needspace{5\baselineskip}
+正方形 $ABCD$ 的边长 $AB=\sqrt2$，故对角线
+\nopagebreak[4]
+\[AC=\sqrt2\cdot\sqrt2=2,\qquad OA=OB=1.\]
+\Needspace{5\baselineskip}
+又 $AA_1=\sqrt2$，$A_1O\perp$ 平面 $ABCD$，故 $A_1O\perp AO$。在直角三角形 $AOA_1$ 中，
+\nopagebreak[4]
+\[A_1O=\sqrt{AA_1^2-AO^2}=\sqrt{2-1}=1.\]
+\Needspace{5\baselineskip}
+于是可取
+\nopagebreak[4]
+\[A(1,0,0),\quad B(0,1,0),\quad C(-1,0,0),\quad D(0,-1,0),\quad A_1(0,0,1).\]
+\Needspace{5\baselineskip}
+侧棱向量
+\nopagebreak[4]
+\[\overrightarrow{AA_1}=(-1,0,1).\]
+\Needspace{5\baselineskip}
+由棱柱的性质，
+\nopagebreak[4]
+\[B_1=B+\overrightarrow{AA_1}=(-1,1,1),\quad
+C_1=(-2,0,1),\quad
+D_1=(-1,-1,1).\]
+
+\Needspace{5\baselineskip}
+计算
+\nopagebreak[4]
+\[\overrightarrow{A_1C}=(-1,0,-1),\qquad
+\overrightarrow{BD}=(0,-2,0),\qquad
+\overrightarrow{BB_1}=(-1,0,1).\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\overrightarrow{A_1C}\cdot\overrightarrow{BD}=0,\qquad
+\overrightarrow{A_1C}\cdot\overrightarrow{BB_1}=1-1=0.\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[A_1C\perp BD,\qquad A_1C\perp BB_1.\]
+\Needspace{5\baselineskip}
+$BD$ 与 $BB_1$ 相交于点 $B$，且都在平面 $BB_1D_1D$ 内，所以
+\nopagebreak[4]
+\[A_1C\perp\text{\text{平面} }BB_1D_1D.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 由（1），平面 $BB_1D_1D$ 的一个法向量可取
+\nopagebreak[4]
+\[\boldsymbol n_1=(1,0,1).\]
+\Needspace{5\baselineskip}
+平面 $OCB_1$ 中，
+\nopagebreak[4]
+\[\overrightarrow{OC}=(-1,0,0),\qquad
+\overrightarrow{OB_1}=(-1,1,1).\]
+\Needspace{5\baselineskip}
+设其法向量为 $\boldsymbol n_2=(x,y,z)$。由
+\nopagebreak[4]
+\[\boldsymbol n_2\cdot\overrightarrow{OC}=-x=0\]
+\Needspace{5\baselineskip}
+得 $x=0$；由
+\nopagebreak[4]
+\[\boldsymbol n_2\cdot\overrightarrow{OB_1}=-x+y+z=0\]
+\Needspace{5\baselineskip}
+得 $y+z=0$。取 $y=1$，$z=-1$，得
+\nopagebreak[4]
+\[\boldsymbol n_2=(0,1,-1).\]
+\Needspace{5\baselineskip}
+设两平面夹角为 $\theta$，则
+\nopagebreak[4]
+\[\cos\theta=\frac{|\boldsymbol n_1\cdot\boldsymbol n_2|}{|\boldsymbol n_1||\boldsymbol n_2|}
+=\frac{|0+0-1|}{\sqrt2\cdot\sqrt2}
+=\frac12.\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\theta=\frac\pi3.\]
+
+\gkanswer{答案（1）：$A_1C\perp$ 平面 $BB_1D_1D$，见证明。}
+
+\gkanswer{答案（2）：$\theta=\dfrac\pi3$。两平面的法向量可分别取 $(1,0,1)$ 与 $(0,1,-1)$，夹角的余弦为 $\dfrac12$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+在一场娱乐晚会上，有 $5$ 位民间歌手（$1$ 至 $5$ 号）登台演唱，由现场数百名观众投票选出最受欢迎歌手。各位观众须彼此独立地在选票上选 $3$ 名歌手，其中观众甲是 $1$ 号歌手的歌迷，他必选 $1$ 号，不选 $2$ 号，另在 $3$ 至 $5$ 号中随机选 $2$ 名。观众乙和丙对 $5$ 位歌手的演唱没有偏爱，因此在 $1$ 至 $5$ 号中随机选 $3$ 名歌手。
+
+（1） 求观众甲选中 $3$ 号歌手且观众乙未选中 $3$ 号歌手的概率；
+
+（2） $X$ 表示 $3$ 号歌手得到观众甲、乙、丙的票数之和，求 $X$ 的分布列和数学期望。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 观众甲必选 $1$ 号、不选 $2$ 号，再从 $3,4,5$ 号中选 $2$ 名，共有
+\nopagebreak[4]
+\[\mathrm C_3^2=3\]
+\Needspace{5\baselineskip}
+种等可能选法，其中包含 $3$ 号的有 $\mathrm C_2^1=2$ 种，故
+\nopagebreak[4]
+\[P(\text{\text{甲选中} }3\text{ \text{号}})=\frac23.\]
+\Needspace{5\baselineskip}
+观众乙从 $1$ 至 $5$ 号中随机选 $3$ 名，共有 $\mathrm C_5^3=10$ 种等可能选法，不选 $3$ 号相当于从其余 $4$ 人中选 $3$ 人，有 $\mathrm C_4^3=4$ 种，故
+\nopagebreak[4]
+\[P(\text{\text{乙未选中} }3\text{ \text{号}})=\frac{\mathrm C_4^3}{\mathrm C_5^3}=\frac4{10}=\frac25.\]
+\Needspace{5\baselineskip}
+甲、乙的选择相互独立，所以所求概率为
+\nopagebreak[4]
+\[\frac23\times\frac25=\frac4{15}.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 记 $X_1$，$X_2$，$X_3$ 分别为甲、乙、丙是否投给 $3$ 号歌手的指示变量，则
+\nopagebreak[4]
+\[X=X_1+X_2+X_3.\]
+\Needspace{5\baselineskip}
+其中
+\nopagebreak[4]
+\[P(X_1=1)=\frac23,\qquad P(X_2=1)=P(X_3=1)=\frac35,\]
+且三者相互独立。
+
+\Needspace{5\baselineskip}
+先求乙、丙两人投给 $3$ 号的票数之和 $Y=X_2+X_3$ 的分布：
+\nopagebreak[4]
+\[P(Y=0)=\left(\frac25\right)^2=\frac4{25},\]
+\nopagebreak[4]
+\[P(Y=1)=2\cdot\frac35\cdot\frac25=\frac{12}{25},\]
+\nopagebreak[4]
+\[P(Y=2)=\left(\frac35\right)^2=\frac9{25}.\]
+
+\Needspace{5\baselineskip}
+再与 $X_1$ 卷积：
+\nopagebreak[4]
+\[P(X=0)=P(X_1=0)P(Y=0)=\frac13\cdot\frac4{25}=\frac4{75},\]
+\nopagebreak[4]
+\[\begin{aligned}
+P(X=1)&=P(X_1=0)P(Y=1)+P(X_1=1)P(Y=0)\\
+&=\frac13\cdot\frac{12}{25}+\frac23\cdot\frac4{25}
+=\frac{12+8}{75}=\frac{20}{75}=\frac4{15},
+\end{aligned}\]
+\nopagebreak[4]
+\[\begin{aligned}
+P(X=2)&=P(X_1=0)P(Y=2)+P(X_1=1)P(Y=1)\\
+&=\frac13\cdot\frac9{25}+\frac23\cdot\frac{12}{25}
+=\frac{9+24}{75}=\frac{33}{75}=\frac{11}{25},
+\end{aligned}\]
+\nopagebreak[4]
+\[P(X=3)=P(X_1=1)P(Y=2)=\frac23\cdot\frac9{25}
+=\frac{18}{75}=\frac6{25}.\]
+\Needspace{5\baselineskip}
+所以 $X$ 的分布列为
+\nopagebreak[4]
+\[P(X=0)=\frac4{75},\quad
+P(X=1)=\frac4{15},\quad
+P(X=2)=\frac{11}{25},\quad
+P(X=3)=\frac6{25}.\]
+\Needspace{5\baselineskip}
+数学期望
+\nopagebreak[4]
+\[E(X)=E(X_1)+E(X_2)+E(X_3)
+=\frac23+\frac35+\frac35
+=\frac{10+9+9}{15}
+=\frac{28}{15}.\]
+
+\gkanswer{答案（1）：$\dfrac{4}{15}$。$P(\text{\text{甲选} }3)=\dfrac23$，$P(\text{\text{乙不选} }3)=\dfrac{\mathrm C_4^3}{\mathrm C_5^3}=\dfrac25$，故所求为 $\dfrac23\times\dfrac25=\dfrac4{15}$。}
+
+\gkanswer{答案（2）：$P(X=0)=\dfrac4{75}$，$P(X=1)=\dfrac4{15}$，$P(X=2)=\dfrac{11}{25}$，$P(X=3)=\dfrac6{25}$；$E(X)=\dfrac{28}{15}$。由 $X=X_{\text{\text{甲}}}+X_{\text{\text{乙}}}+X_{\text{\text{丙}}}$ 及独立性计算。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+已知动圆过定点 $A(4,0)$，且在 $y$ 轴上截得的弦 $MN$ 的长为 $8$。
+
+（1） 求动圆圆心的轨迹 $C$ 的方程；
+
+（2） 已知点 $B(-1,0)$，设不垂直于 $x$ 轴的直线 $l$ 与轨迹 $C$ 交于不同的两点 $P$，$Q$，若 $x$ 轴是 $\angle PBQ$ 的角平分线，证明直线 $l$ 过定点。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 设动圆的圆心为 $M(x,y)$，半径为 $r$。因为圆过定点 $A(4,0)$，所以
+\nopagebreak[4]
+\[r^2=(x-4)^2+y^2.\]
+\Needspace{5\baselineskip}
+圆在 $y$ 轴上截得的弦 $MN$ 的长为 $8$，弦心距为 $|x|$，故
+\nopagebreak[4]
+\[r^2-x^2=\left(\frac82\right)^2=16,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[r^2=x^2+16.\]
+\Needspace{5\baselineskip}
+两式消去 $r^2$：
+\nopagebreak[4]
+\[(x-4)^2+y^2=x^2+16.\]
+\Needspace{5\baselineskip}
+展开整理：
+\nopagebreak[4]
+\[x^2-8x+16+y^2=x^2+16,\]
+\nopagebreak[4]
+\[y^2=8x.\]
+\Needspace{5\baselineskip}
+故轨迹 $C$ 的方程为
+\nopagebreak[4]
+\[y^2=8x.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 设
+\nopagebreak[4]
+\[P(2u^2,4u),\qquad Q(2v^2,4v).\]
+因为 $l$ 不垂直于 $x$ 轴，所以 $u+v\neq0$（否则 $P$，$Q$ 的横坐标相同，$l$ 为竖直线）。
+
+\Needspace{5\baselineskip}
+$x$ 轴是 $\angle PBQ$ 的角平分线。由于 $B(-1,0)$ 在 $x$ 轴上，且 $P$，$Q$ 都在 $B$ 的右侧，故直线 $BP$ 与 $BQ$ 关于 $x$ 轴对称，斜率互为相反数：
+\nopagebreak[4]
+\[k_{BP}+k_{BQ}=0.\]
+\Needspace{5\baselineskip}
+而
+\nopagebreak[4]
+\[k_{BP}=\frac{4u}{2u^2+1},\qquad
+k_{BQ}=\frac{4v}{2v^2+1}.\]
+\Needspace{5\baselineskip}
+代入得
+\nopagebreak[4]
+\[\frac{u}{2u^2+1}+\frac{v}{2v^2+1}=0.\]
+\Needspace{5\baselineskip}
+去分母：
+\nopagebreak[4]
+\[u(2v^2+1)+v(2u^2+1)=0,\]
+\nopagebreak[4]
+\[2uv(u+v)+(u+v)=0,\]
+\nopagebreak[4]
+\[(u+v)(2uv+1)=0.\]
+\Needspace{5\baselineskip}
+因为 $u+v\neq0$，所以
+\nopagebreak[4]
+\[uv=-\frac12.\]
+
+\Needspace{5\baselineskip}
+过 $P$，$Q$ 的直线斜率为
+\nopagebreak[4]
+\[\frac{4v-4u}{2v^2-2u^2}
+=\frac{4(v-u)}{2(v-u)(v+u)}
+=\frac2{u+v},\]
+\Needspace{5\baselineskip}
+故直线方程为
+\nopagebreak[4]
+\[y-4u=\frac2{u+v}(x-2u^2).\]
+\Needspace{5\baselineskip}
+整理得
+\nopagebreak[4]
+\[(u+v)y=2x+4uv.\]
+\Needspace{5\baselineskip}
+将 $uv=-\dfrac12$ 代入：
+\nopagebreak[4]
+\[(u+v)y=2x-2,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[2x-(u+v)y-2=0.\]
+\Needspace{5\baselineskip}
+令 $x=1$，$y=0$，方程恒成立，故直线 $l$ 恒过定点
+\nopagebreak[4]
+\[(1,0).\]
+
+\gkanswer{答案（1）：$y^2=8x$。设圆心 $(x,y)$，半径 $r$，由 $r^2=(x-4)^2+y^2$ 与 $r^2=x^2+16$ 消去 $r$ 即得。}
+
+\gkanswer{答案（2）：直线 $l$ 过定点 $(1,0)$，见证明。设 $P(2u^2,4u)$，$Q(2v^2,4v)$，由角平分线条件得 $uv=-\dfrac12$，弦 $PQ$ 的方程恒过 $(1,0)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=\mathrm e^x$，$x\in\mathbf R$。
+
+（1） 若直线 $y=kx+1$ 与 $f(x)$ 的反函数的图象相切，求实数 $k$ 的值；
+
+（2） 设 $x>0$，讨论曲线 $y=f(x)$ 与曲线 $y=mx^2$（$m>0$）公共点的个数；
+
+（3） 设 $a<b$，比较 $\dfrac{f(a)+f(b)}2$ 与 $\dfrac{f(b)-f(a)}{b-a}$ 的大小，并说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} $f(x)=\mathrm e^x$ 的反函数为
+\nopagebreak[4]
+\[f^{-1}(x)=\ln x\qquad(x>0).\]
+\Needspace{5\baselineskip}
+设切点为 $(x_0,\ln x_0)$。由
+\nopagebreak[4]
+\[\left(\ln x\right)'=\frac1x,\]
+\Needspace{5\baselineskip}
+切线方程为
+\nopagebreak[4]
+\[y-\ln x_0=\frac1{x_0}(x-x_0),\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[y=\frac1{x_0}x+\ln x_0-1.\]
+\Needspace{5\baselineskip}
+该直线与 $y=kx+1$ 重合，比较斜率和截距：
+\nopagebreak[4]
+\[k=\frac1{x_0},\qquad \ln x_0-1=1.\]
+\Needspace{5\baselineskip}
+由 $\ln x_0=2$ 得
+\nopagebreak[4]
+\[x_0=\mathrm e^2,\qquad k=\frac1{\mathrm e^2}.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 当 $x>0$ 时，曲线 $y=\mathrm e^x$ 与 $y=mx^2$ 的公共点个数等于方程
+\nopagebreak[4]
+\[\frac{\mathrm e^x}{x^2}=m\]
+\Needspace{5\baselineskip}
+的正根个数。令
+\nopagebreak[4]
+\[g(x)=\frac{\mathrm e^x}{x^2}\qquad(x>0).\]
+\Needspace{5\baselineskip}
+求导：
+\nopagebreak[4]
+\[g'(x)=\frac{\mathrm e^x x^2-\mathrm e^x\cdot2x}{x^4}
+=\frac{\mathrm e^x(x-2)}{x^3}.\]
+\Needspace{5\baselineskip}
+当 $0<x<2$ 时 $g'(x)<0$，$g(x)$ 单调递减；当 $x>2$ 时 $g'(x)>0$，$g(x)$ 单调递增。故 $g(x)$ 在 $x=2$ 处取得最小值
+\nopagebreak[4]
+\[g(2)=\frac{\mathrm e^2}{4}.\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[\lim_{x\to0^+}g(x)=+\infty,\qquad
+\lim_{x\to+\infty}g(x)=+\infty.\]
+因此：
+
+\begin{itemize}
+\item 当 $0<m<\dfrac{\mathrm e^2}{4}$ 时，方程无正根，两曲线无公共点；
+\item 当 $m=\dfrac{\mathrm e^2}{4}$ 时，方程恰有一个正根 $x=2$，两曲线恰有 $1$ 个公共点；
+\item 当 $m>\dfrac{\mathrm e^2}{4}$ 时，方程有两个正根，两曲线恰有 $2$ 个公共点。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+\textbf{（3）} 令
+\nopagebreak[4]
+\[c=\frac{a+b}{2},\qquad t=\frac{b-a}{2}>0,\]
+\Needspace{5\baselineskip}
+则
+\nopagebreak[4]
+\[a=c-t,\qquad b=c+t.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\frac{f(a)+f(b)}2
+=\frac{\mathrm e^{c-t}+\mathrm e^{c+t}}2
+=\frac{\mathrm e^c(\mathrm e^{-t}+\mathrm e^t)}2,\]
+\nopagebreak[4]
+\[\frac{f(b)-f(a)}{b-a}
+=\frac{\mathrm e^{c+t}-\mathrm e^{c-t}}{2t}
+=\frac{\mathrm e^c(\mathrm e^t-\mathrm e^{-t})}{2t}.\]
+\Needspace{5\baselineskip}
+两式都含正因子 $\dfrac{\mathrm e^c}{2}$，故只需比较
+\nopagebreak[4]
+\[t(\mathrm e^t+\mathrm e^{-t})\quad\text{\text{与}}\quad \mathrm e^t-\mathrm e^{-t}.\]
+\Needspace{5\baselineskip}
+令
+\nopagebreak[4]
+\[H(t)=t(\mathrm e^t+\mathrm e^{-t})-(\mathrm e^t-\mathrm e^{-t})\qquad(t>0).\]
+\Needspace{5\baselineskip}
+求导：
+\nopagebreak[4]
+\[H'(t)=(\mathrm e^t+\mathrm e^{-t})+t(\mathrm e^t-\mathrm e^{-t})-(\mathrm e^t+\mathrm e^{-t})
+=t(\mathrm e^t-\mathrm e^{-t})>0.\]
+\Needspace{5\baselineskip}
+又 $H(0)=0$，故当 $t>0$ 时
+\nopagebreak[4]
+\[H(t)>0,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[t(\mathrm e^t+\mathrm e^{-t})>\mathrm e^t-\mathrm e^{-t}.\]
+\Needspace{5\baselineskip}
+因此
+\nopagebreak[4]
+\[\frac{f(a)+f(b)}2>\frac{f(b)-f(a)}{b-a}.\]
+
+\gkanswer{答案（1）：$k=\dfrac1{\mathrm e^2}$。反函数为 $y=\ln x$，设切点 $x_0$，由斜率与截距条件得 $\ln x_0=2$。}
+
+\gkanswer{答案（2）：当 $0<m<\dfrac{\mathrm e^2}{4}$ 时无公共点；当 $m=\dfrac{\mathrm e^2}{4}$ 时恰有 $1$ 个公共点；当 $m>\dfrac{\mathrm e^2}{4}$ 时恰有 $2$ 个公共点。考查 $\dfrac{\mathrm e^x}{x^2}$ 在 $x>0$ 上的最小值。}
+
+\gkanswer{答案（3）：$\dfrac{f(a)+f(b)}2>\dfrac{f(b)-f(a)}{b-a}$，见证明。令 $t=\dfrac{b-a}2>0$，用导数可证 $t(\mathrm e^t+\mathrm e^{-t})>\mathrm e^t-\mathrm e^{-t}$。}
+
+\end{answer}

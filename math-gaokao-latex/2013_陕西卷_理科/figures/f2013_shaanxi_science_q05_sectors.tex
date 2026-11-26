@@ -1,0 +1,29 @@
+% ============================================================
+% f2013_shaanxi_science_q05_sectors.tex
+% 2013 陕西卷（理工类）第 5 题 矩形内的两个扇形（TikZ 矢量重绘）
+% 矩形 ABCD 中 AD=1、AB=2；扇形 ADE 与 CBF 的半径均为 1
+% ============================================================
+\begin{tikzpicture}[
+  x=2.2cm, y=2.2cm, line width=0.5pt, font=\footnotesize, >=Stealth
+]
+
+  % ---------- 矩形与扇形弧 ----------
+  \draw (0,0) rectangle (2,1);
+  \draw (0,1) arc (90:0:1);      % 以 A 为圆心，D 到 E
+  \draw (1,1) arc (180:270:1);   % 以 C 为圆心，F 到 B
+
+  % ---------- 顶点 ----------
+  \node[below left]  at (0,0) {$A$};
+  \node[below right] at (2,0) {$B$};
+  \node[above right] at (2,1) {$C$};
+  \node[above left]  at (0,1) {$D$};
+  \node[above]       at (1,1) {$F$};
+  \node[above right] at (1,0) {$E$};
+
+  % ---------- 尺寸标注 ----------
+  \draw[|<->|] (-0.22,0) -- (-0.22,1) node[midway, left] {$1$};
+  \foreach \y in {0,1} \draw (-0.32,\y) -- (-0.12,\y);
+  \draw[|<->|] (0,-0.22) -- (2,-0.22) node[midway, below] {$2$};
+  \foreach \x in {0,2} \draw (\x,-0.32) -- (\x,-0.12);
+
+\end{tikzpicture}

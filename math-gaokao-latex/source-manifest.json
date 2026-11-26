@@ -4260,6 +4260,14 @@
         "gk-2013-hunan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b77",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-shaanxi-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4269,7 +4277,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "2e87427f-3c11-4a95-9d9c-b1230bd853d9",
+  "last_transaction_id": "7de5bac0-3bc1-4af1-b1c5-b96d43bdb68f",
   "papers": [
     {
       "blocked_from": null,
@@ -49474,9 +49482,86 @@
       "title": "2013 年·湖南卷·理科",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_理科/figures/f2013_shaanxi_science_q05_sectors.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_理科/figures/f2013_shaanxi_science_q09_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_理科/figures/f2013_shaanxi_science_q12_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_理科/figures/f2013_shaanxi_science_q16_geometry.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_理科/figures/f2013_shaanxi_science_q17_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_陕西卷_理科/figures/f2013_shaanxi_science_q20_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_shaanxi_science",
+        "id": "gk-2013-shaanxi-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 837、838（第 837 面为选择 1—10、填空 11—17、解答 18—19；第 838 面为解答 20—23）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。陕西卷题号：选择 1—10、填空 11—17（15、16、17 为选做，按原卷分别编号并全部收录）、解答 18—23，共 23 题。答案由本库独立推导（等级 D，非官方）。原页图：第 5 题矩形与扇形、第 9 题内接矩形、第 12 题三视图、第 16 题圆与平行线、第 17 题极坐标直线，均以 TikZ 重绘共 6 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            23
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "陕西理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-shaanxi-science",
+      "production_state": "complete",
+      "project_dir": "2013_陕西卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_陕西理_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_陕西理_含解析.md",
+        "questions": "2013/2013_数学真题_陕西理_试题.md",
+        "solution_body": "2013/2013_数学真题_陕西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-11f5f13d03a9b0133bb078b9f2b0ee08c8c2f8605abd1fa7dc99a1e7e016f747"
+      ],
+      "title": "2013 年·陕西卷·理科",
+      "track": "science",
+      "year": 2013
     }
   ],
-  "revision": 11909,
+  "revision": 11917,
   "schema_version": 1,
   "sources": [
     {
@@ -63585,8 +63670,8 @@
       "exam_type": "regular",
       "git_blob_oid": "edafe8024e1a8c9125445494aa9ee21f10e6eb18",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-shaanxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013陕西理.pdf",
       "regions": [],
       "source_id": "src-11f5f13d03a9b0133bb078b9f2b0ee08c8c2f8605abd1fa7dc99a1e7e016f747",

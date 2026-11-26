@@ -1,0 +1,42 @@
+% ============================================================
+% f2013_shaanxi_science_q16_geometry.tex
+% 2013 陕西卷（理工类）第 16 题 圆内相交弦与平行线（TikZ 矢量重绘）
+% 弦 AB、CD 交于 E；过 E 作 BC 的平行线与 AD 的延长线交于 P
+% PD=2DA=2，按此比例作图
+% ============================================================
+\begin{tikzpicture}[
+  x=1cm, y=1cm, line width=0.5pt, font=\footnotesize, >=Stealth
+]
+
+  % ---------- 圆 ----------
+  \coordinate (O) at (5.50,1.739);
+  \draw (O) circle (2.058);
+
+  % ---------- 点 ----------
+  \coordinate (P) at (0,0);
+  \coordinate (D) at (4.40,0);
+  \coordinate (A) at (6.60,0);
+  \coordinate (B) at (3.576,2.469);
+  \coordinate (C) at (6.984,3.165);
+  \coordinate (E) at (5.28,1.078);
+
+  % ---------- 线段 ----------
+  \draw (P) -- (A);
+  \draw (A) -- (B);
+  \draw (C) -- (D);
+  \draw (B) -- (C);
+  \draw (P) -- (E);
+
+  % ---------- 圆心 ----------
+  \fill (O) circle (0.7pt);
+
+  % ---------- 标注 ----------
+  \node[below left]  at (P) {$P$};
+  \node[below]       at (D) {$D$};
+  \node[below right] at (A) {$A$};
+  \node[left]        at (B) {$B$};
+  \node[right]       at (C) {$C$};
+  \node[below right] at (E) {$E$};
+  \node[above right] at (O) {$O$};
+
+\end{tikzpicture}

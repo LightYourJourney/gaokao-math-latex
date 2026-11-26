@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 陕西卷（理科）：phase7-b77 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2013-shaanxi-science`，**23 个题号**（选择 1—10、填空 11—17 含选做 15—17、解答 18—23）；固定来源 `src-11f5f13d03a9b0133bb078b9f2b0ee08c8c2f8605abd1fa7dc99a1e7e016f747`，2 页 A3，印面 837、838。
+- 答案（等级 D）：1 D；2 C；3 C；4 B；5 A（$1-\\frac\\pi2$）；6 D；7 B；8 A（$-20$）；9 C（$[10,30]$）；10 D；11 $9$；12 $\\frac\\pi3$；13 $-4$；14 $1^2-2^2+\\cdots+(-1)^{n+1}n^2=(-1)^{n+1}\\frac{n(n+1)}2$；15 $2$；16 $\\sqrt6$；17 $x=\\cos^2\\theta,\\ y=\\sin\\theta\\cos\\theta$；18 (1) $T=\\pi$、(2) 最大值 $1$、最小值 $-\\frac12$；19 (1) $S_n=na_1$（$q=1$）或 $\\frac{a_1(1-q^n)}{1-q}$、(2) 反证；20 (1) 证明、(2) $\\frac\\pi3$；21 (1) $\\frac4{15}$、(2) $E(X)=\\frac{28}{15}$；22 (1) $y^2=8x$、(2) 定点 $(1,0)$；23 (1) $k=\\frac1{\\mathrm e^2}$、(2) $m=\\frac{\\mathrm e^2}4$ 分界 0/1/2 个、(3) $\\frac{f(a)+f(b)}2>\\frac{f(b)-f(a)}{b-a}$。
+- **来源核对**：固定源第 838 面第 20—23 题与任务提示稿不同，子代理按 PDF 转录——第 20 题正方形底面四棱柱（$AB=AA_1=\\sqrt2$，$A_1O\\perp$ 底面）、第 21 题歌手投票、第 22 题动圆过 $A(4,0)$ 截弦 8、第 23 题 $\\mathrm e^x$ 三问。主代理已回原页 100 dpi 核对第 20—23 题题面。
+- 主代理复核：第 5 题 $S_{\\text{无}}=1-\\frac\\pi2$；第 9 题 $x(40-x)\\geqslant300$ 得 $[10,30]$；第 13 题 $2x-y\\geqslant2\\cdot(-1)-2=-4$；第 16 题 $PE^2=PA\\cdot PD=3\\times2=6$；第 21 题超几何 $P(X=2)=\\frac{11}{25}$、$E=\\frac{28}{15}$；第 22 题 $y^2=8x$、定点 $(1,0)$；第 23 题 $k=\\mathrm e^{-2}$、$g_{\\min}=\\frac{\\mathrm e^2}4$、$H(t)>0$。
+- 排版修复：第 21 题 $P(X=1)$、$P(X=2)$ 两处行间公式 Overfull（各 2.9pt），改 `aligned` 两行后归零（解析版 34 页不变）。
+- 图稿：6 张 TikZ（扇形覆盖、内接矩形、三视图、圆与平行线、极坐标直线、四棱柱）。
+- 验收：四版 5/34/7/24 页（共 70 页），四 log 全 0（Overfull、missing characters 均 0）；review 70 页 **pass 518 + not_applicable 42、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；6 条图稿引用全部命中。
+- 全库：manifest **668 卷 / 775 来源 / 514 批次**，complete 550、blocked 118，未绑定 **108**；revision 11917。
+
 ### 2013 湖南卷（理科）：phase7-b76 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2013-hunan-science`，**22 个题号**（选择 1—8、填空 9—16、解答 17—22）；固定来源 `src-e0ed0bc25cb7ae0432893e55d280f5b33b5962f0342efb0b8c2d0a61d20aa3ce`，2 页 A3，印面 811、812。
 - 答案（等级 D）：1 B；2 D；3 D（$\frac\pi3$）；4 C（$\frac53$）；5 B；6 A（$[\sqrt2-1,\sqrt2+1]$）；7 C；8 D（$\frac43$）；9 $3$；10 $12$；11 $\frac{\sqrt3}2$；12 $3$；13 $9$；14 $\sqrt3$；15 (1) $-\frac1{16}$、(2) $\frac{2^{-100}-1}3$；16 (1) $(0,1]$、(2) ①②③；17 (1) $\frac15$、(2) $\left\{x\mid 2k\pi\leqslant x\leqslant 2k\pi+\frac{2\pi}3\right\}$；18 (1) $\frac29$、(2) $P(Y=51)=\frac2{15},P(Y=48)=\frac4{15},P(Y=45)=\frac25,P(Y=42)=\frac15$、$E(Y)=46$；19 (1) 证明、(2) $\frac{\sqrt{21}}7$；20 (1) $|x-3|+|y-20|$、(2) $P(3,1)$；21 (1) 证明、(2) $x^2=16y$；22 (1) 分段 $g(a)$、(2) $0<a<\frac12$。
