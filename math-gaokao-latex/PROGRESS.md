@@ -14,6 +14,17 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2014 山东卷（理科）：phase8-b10 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2014-shandong-science`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-bc1c7985cc7d801a398bcba2372ed4b703c3a8b6d06482ef6bc89536776465bd`，2 页 A3，印面 907、908（907 面为 1—17，908 面为 18—21）。
+- 答案（等级 D）：1 D（$3+4\mathrm i$）；2 C（$[1,3)$）；3 C；4 A；5 D；6 D（$4$）；7 C（$12$）；8 B（$\left(\frac12,1\right)$）；9 B（$4$）；10 A（$x\pm\sqrt2y=0$）；11 $3$；12 $\frac16$；13 $\frac14$；14 $2$；15 $(2\sqrt{10},+\infty)$；16 (1) $m=\sqrt3,n=1$、(2) $\left[k\pi-\frac\pi2,k\pi\right]$；17 (1) 证明、(2) $\frac{\sqrt5}5$；18 (1) $\frac3{10}$、(2) $E\xi=\frac{91}{30}$；19 (1) $a_n=2n-1$、(2) $T_n=1+\frac{(-1)^{n-1}}{2n+1}$；20 (1) 减 $(0,2)$、增 $(2,+\infty)$、(2) $\left(\mathrm e,\frac{\mathrm e^2}2\right)$；21 (1) $y^2=4x$、(2) ① $(1,0)$、② $16$。
+- **主代理纠错**：子代理第 16(2) 把 $g$ 写成 $2\sin(2x+\frac\pi3)$（漏乘 $2\varphi$）。正确为 $g(x)=f(x+\varphi)=2\sin(2x+2\varphi+\frac\pi6)=2\sin(2x+\frac\pi2)=2\cos2x$，增区间 $\left[k\pi-\frac\pi2,k\pi\right]$；解析与答案要点已改，并用 `solution_sources extract-batch --write` 重新规范化两份源，`check-batch` 通过。
+- **来源核对**：第 7 题第五组区间原页为 $[16,17]$；第 5 题选项顺序为 $\frac1{x^2+1}$、$\ln(x^2+1)$、$\sin x$、$x^3$；第 10 题选项为 $x\pm\sqrt2y=0$ 等四项；第 16 题 $f(x)=\sqrt3\sin2x+\cos2x=2\sin(2x+\frac\pi6)$。
+- 主代理复核：第 8 题 $k\in(\frac12,1)$；第 9 题 $5(a^2+b^2)\geqslant20$；第 13 题 $S_{\triangle ABD}=\frac12S_{\triangle ABP}$、$h_E=\frac12h_C$ ⇒ $\frac14$；第 14 题 $r=3$、$ab=1$；第 15 题 $\sqrt{4-x^2}-3x$ 最大 $2\sqrt{10}$；第 18 题 $\frac5{30}+\frac4{30}=\frac3{10}$、$E=\frac{91}{30}$；第 19 题 $a_1=1$、$b_n=(-1)^{n-1}(\frac1{2n-1}+\frac1{2n+1})$；第 20 题 $f'=\frac{(x-2)(\mathrm e^x-kx)}{x^3}$；第 21 题 $S_{\triangle ABE}=2|t+\frac1t|^3\geqslant16$。
+- 图稿：4 张 TikZ（频率分布直方图、程序框图、四棱柱、乒乓球台分区图）；第 21 题原页无图，未补绘。
+- 版式回修：首轮解析版第 21 题答案框 Underfull 1454；压缩为「① 定点 $(1,0)$；② 存在，最小值 $16$。设 $A(t^2,2t)$，则 $S=2|t+\frac1t|^3\geqslant16$」后四版 0 警告。
+- 验收：四版 5/28/7/20 页（共 60 页），四 log 全 0；review 60 页 **pass 440 + not_applicable 40、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；4 条图稿引用全部命中。
+- 全库：manifest **698 卷 / 775 来源 / 544 批次**，complete 580、blocked 118，未绑定 **78**；revision 12122。
+
 ### 2014 山东卷（文科）：phase8-b09 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2014-shandong-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-a434e9c1c39a9d99f7da59686726a2c1d5e9d8a04659d9e5741c74ebcea55d8e`，2 页 A3，印面 909、910（909 面为 1—17，910 面为 18—21）。
 - 答案（等级 D）：1 A（$3-4\mathrm i$）；2 C（$[1,2)$）；3 C（$x>2$）；4 A；5 A；6 D；7 B（$m=\sqrt3$）；8 C（$12$）；9 D；10 B（$a^2+b^2\geqslant4$）；11 $3$；12 $\pi$；13 $12$；14 $(x-2)^2+(y-1)^2=4$；15 $y=\pm x$；16 (1) $A$ 1、$B$ 3、$C$ 2 件、(2) $\frac4{15}$；17 (1) $3\sqrt2$、(2) $\frac{3\sqrt2}2$；18 (1)(2) 证明；19 (1) $a_n=2n$、(2) $n$ 偶 $T_n=\frac{n(n+2)}2$、$n$ 奇 $T_n=-\frac{(n+1)^2}2$；20 (1) $y=\frac12x-\frac12$、(2) 分 $a\geqslant0$、$a\leqslant-\frac12$、$-\frac12<a<0$ 讨论；21 (1) $\frac{x^2}4+y^2=1$、(2) ① $\lambda=-\frac12$、② $\frac98$。

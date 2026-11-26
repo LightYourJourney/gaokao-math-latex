@@ -1,0 +1,53 @@
+% ============================================================
+% f2014_shandong_science_q17_prism.tex
+% 2014 山东卷（理科）第 17 题：四棱柱 ABCD-A1B1C1D1
+% 来源 PDF：普通高考/2014/2014山东理.pdf
+% 原页：第 1 页（A3 横排）右栏，印面 907，第 17 题题干下方
+% 结构：底面 ABCD 为等腰梯形，AB=2CD=2，∠DAB=60°，M 为 AB 中点。
+%       实线：AB、AA1、A1D1、D1C1、C1B1、BB1、A1B1；
+%       虚线（不可见棱）：AD、DC、CB、DD1、CC1；
+%       虚线（辅助线）：D1A、D1M、C1M。
+% 比例：AB:CD=2:1 按屏幕长 4.6:2.3 画出，侧棱方向取 (0.95,2.85)。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+  % 底面：AB=4.6（屏幕长），CD=2.3，梯形
+  \coordinate (A)  at (0.10,0.30);
+  \coordinate (B)  at (4.70,0.30);
+  \coordinate (M)  at (2.40,0.30);
+  \coordinate (D)  at (1.45,2.05);
+  \coordinate (C)  at (3.75,2.05);
+  % 侧棱平移向量 (0.95,2.85)
+  \coordinate (A1) at (1.05,3.15);
+  \coordinate (B1) at (5.65,3.15);
+  \coordinate (D1) at (2.40,4.90);
+  \coordinate (C1) at (4.70,4.90);
+  % 不可见棱
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (C) -- (B);
+  \draw[dashed] (D) -- (D1);
+  \draw[dashed] (C) -- (C1);
+  % 辅助线
+  \draw[dashed] (D1) -- (A);
+  \draw[dashed] (D1) -- (M);
+  \draw[dashed] (C1) -- (M);
+  % 可见棱
+  \draw (A) -- (B);
+  \draw (A) -- (A1);
+  \draw (A1) -- (D1);
+  \draw (D1) -- (C1);
+  \draw (C1) -- (B1);
+  \draw (B) -- (B1);
+  \draw (A1) -- (B1);
+  % 顶点与中点标注
+  \node[below left]  at (A)  {$A$};
+  \node[below right] at (B)  {$B$};
+  \node[below]       at (M)  {$M$};
+  \node at (1.10,1.94) {$D$};
+  \node at (3.98,1.84) {$C$};
+  \node[left]        at (A1) {$A_1$};
+  \node[right]       at (B1) {$B_1$};
+  \node[above left]  at (D1) {$D_1$};
+  \node[above right] at (C1) {$C_1$};
+\end{tikzpicture}

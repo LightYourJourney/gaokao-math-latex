@@ -1,0 +1,40 @@
+% ============================================================
+% f2014_shandong_science_q18_table.tex
+% 2014 山东卷（理科）第 18 题：乒乓球台面分区示意图
+% 来源 PDF：普通高考/2014/2014山东理.pdf
+% 原页：第 2 页（A3 横排）左栏，印面 908，第 18 题题干下方
+% 结构：球台台面以斜视角画成平行四边形，中间一条球网（带网带的窄条与
+%       露出台面的网顶）把台面分成两部分：左侧为乙区（含不相交的区域
+%       C、D，原图以浅灰底纹标示），右侧为甲区（含不相交的区域 A、B）。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+  % 台面四角：近边在下，远边在上，两端向右后方倾斜
+  \coordinate (NL) at (0.60,0.80);
+  \coordinate (NR) at (7.40,0.80);
+  \coordinate (FR) at (8.60,2.70);
+  \coordinate (FL) at (1.80,2.70);
+  % 球网两条网脚线与网顶
+  \coordinate (B1) at (3.90,0.80);   % 近边左网脚
+  \coordinate (B2) at (4.80,0.80);   % 近边右网脚
+  \coordinate (T1) at (5.10,2.70);   % 远边左网脚
+  \coordinate (T2) at (6.00,2.70);   % 远边右网脚
+  \coordinate (U1) at (5.10,3.30);   % 网顶左
+  \coordinate (U2) at (6.00,3.30);   % 网顶右
+  % 乙区（网左侧）浅灰底纹
+  \fill[black!12] (NL) -- (B1) -- (T1) -- (FL) -- cycle;
+  % 网带
+  \fill[black!30] (B1) -- (T1) -- (T2) -- (B2) -- cycle;
+  % 露出台面的网顶
+  \fill[black!30] (T1) -- (U1) -- (U2) -- (T2) -- cycle;
+  % 台面轮廓
+  \draw (NL) -- (NR) -- (FR) -- (FL) -- cycle;
+  % 球网
+  \draw (B1) -- (T1) -- (U1) -- (U2) -- (T2) -- (B2);
+  \draw (T1) -- (T2);
+  % 区域标注
+  \node at (1.45,1.20) {$C$};
+  \node at (3.05,1.95) {$D$};
+  \node at (7.05,2.25) {$A$};
+  \node at (5.55,1.30) {$B$};
+\end{tikzpicture}

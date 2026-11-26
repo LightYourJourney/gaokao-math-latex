@@ -4500,6 +4500,14 @@
         "gk-2014-shandong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b10",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-shandong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4509,7 +4517,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d216b41c-b5c3-4209-b195-8e141ddbe11a",
+  "last_transaction_id": "41a518fe-476e-4a16-833d-ad284d58d4a1",
   "papers": [
     {
       "blocked_from": null,
@@ -51895,9 +51903,78 @@
       "title": "2014 年·山东卷·文科",
       "track": "arts",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_山东卷_理科/figures/f2014_shandong_science_q07_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_山东卷_理科/figures/f2014_shandong_science_q11_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_山东卷_理科/figures/f2014_shandong_science_q17_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_山东卷_理科/figures/f2014_shandong_science_q18_table.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_shandong_science",
+        "id": "gk-2014-shandong-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 907、908（907 面为选择 1—10、填空 11—15、解答 16—17；908 面为 18—21）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。山东卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 7 题频率分布直方图、第 11 题程序框图、第 17 题四棱柱、第 18 题乒乓球台分区图；第 21 题原页无图。共 4 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "山东理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-shandong-science",
+      "production_state": "complete",
+      "project_dir": "2014_山东卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_山东理_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_山东理_含解析.md",
+        "questions": "2014/2014_数学真题_山东理_试题.md",
+        "solution_body": "2014/2014_数学真题_山东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-bc1c7985cc7d801a398bcba2372ed4b703c3a8b6d06482ef6bc89536776465bd"
+      ],
+      "title": "2014 年·山东卷·理科",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 12111,
+  "revision": 12122,
   "schema_version": 1,
   "sources": [
     {
@@ -66342,8 +66419,8 @@
       "exam_type": "regular",
       "git_blob_oid": "2c4ce3db3d6efb1b0fbe4c73f6fc927bf0e29f62",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-shandong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014山东理.pdf",
       "regions": [],
       "source_id": "src-bc1c7985cc7d801a398bcba2372ed4b703c3a8b6d06482ef6bc89536776465bd",
