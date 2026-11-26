@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2014 全国大纲卷（文科·广西）：phase7-b87 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2014-regular-national-outline-arts`，**22 个题号**（选择 1—12、填空 13—16、解答 17—22）；固定来源 `src-08eab1b0bd24fe9d1f10f7ec753629eb6c7014358c0b54068be32ca173317c7d`，2 页 A3，印面 **871、872**。
+- 答案（等级 D）：1 B（3 个）；2 D（$-\\frac45$）；3 C（$(0,1)$）；4 B（$\\frac{\\sqrt3}6$）；5 D（$y=(\\mathrm e^x-1)^3$）；6 B（$0$）；7 C（$75$）；8 C（$63$）；9 A（$\\frac{x^2}3+\\frac{y^2}2=1$）；10 A（$\\frac{81\\pi}4$）；11 C（$4$）；12 D（$1$）；13 $-160$；14 $\\frac32$；15 $5$；16 $\\frac43$；17 (1) 证明 $b_n=2n-1$ 等差、(2) $a_n=n^2-2n+2$；18 $B=\\frac{3\\pi}4$；19 (1) 证 $AC_1\\perp A_1B$、(2) $\\arccos\\frac14$；20 (1) $0.31$、(2) $k_{\\min}=3$；21 (1) 分段单调、(2) $\\left[-\\frac54,0\\right)\\cup(0,+\\infty)$；22 (1) $y^2=4x$、(2) $y=\\pm(x-1)$。
+- **来源核对**：印面为 871—872；第 7 题为 6 男 5 女选 2 男 1 女（75）；第 8 题为等比数列 $S_2=3,S_4=15$ 求 $S_6$；第 9 题离心率 $\\frac{\\sqrt3}3$；第 12 题奇函数 + $f(x+2)$ 偶函数、$f(1)=1$ 求 $f(8)+f(9)$；第 15 题 $z=x+4y$；第 16 题为圆的切线夹角；第 19 题为三棱柱 $AC_1\\perp A_1B$；第 20(2) 为 $P(X>k)<0.1$ 的最小 $k$。
+- 主代理复核：第 4 题正四面体坐标 $\\cos=\\frac{\\sqrt3}6$；第 5 题反函数定义域 $\\mathbf R$；第 8 题 $q^4=4,S_6=63$；第 9 题 $4a=4\\sqrt3$、$a=\\sqrt3,c=1,b^2=2$；第 10 题 $R=\\frac94$、$S=\\frac{81\\pi}4$；第 11 题 $b=\\sqrt3,e=2\\Rightarrow c=2a=2$、焦距 4；第 12 题周期 8；第 14 题 $y=\\frac32-2(\\sin x-\\frac12)^2$；第 15 题 $z_{\\max}=5$；第 16 题 $\\tan\\frac\\theta2=\\frac12$；第 17 题 $b_{n+1}-b_n=2$；第 18 题 $\\tan C=\\frac12$、$B=\\frac{3\\pi}4$；第 19 题 $t=1,h=\\sqrt3$、$\\cos\\theta=\\frac14$；第 20 题 $P(X\\geqslant3)=0.31$、$k=3$；第 21 题 $a\\geqslant-\\frac54$；第 22 题 $p=2$、$m=\\pm1$。
+- 排版修复：简答版第 21、22 题答案 Overfull（23.4pt、40.7pt），改用 $x_\\pm$ 记号并压缩 $l:y=\\pm(x-1)$ 后归零。
+- 图稿：1 张 TikZ（第 19 题三棱柱）；其余各题原页无图，未补绘。
+- 验收：四版 3/25/5/19 页（共 52 页），四 log 全 0（Overfull、missing characters 均 0）；review 52 页 **pass 370 + not_applicable 46、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；1 条图稿引用命中。
+- 全库：manifest **677 卷 / 775 来源 / 523 批次**，complete 559、blocked 118，未绑定 **99**；revision 11976。
+
 ### 2012 湖北卷（理科）：phase7-b86 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2012-hubei-science`，**22 个题号**（选择 1—10、填空 11—16、解答 17—22；第 17 题在第 737 面，18—22 在第 738 面）；固定来源 `src-b74d3c7f3b50b161a840c8c9d9ffd4d93388b80ab57e5587da0572c902d9784a`，2 页 A3，印面 737、738。
 - 答案（等级 D）：1 A；2 D；3 B（$\\frac43$）；4 B（$3\\pi$）；5 D（$12$）；6 C（$\\frac12$）；7 C（①③）；8 A（$1-\\frac2\\pi$）；9 C（$6$）；10 D（$\\sqrt[3]{\\frac{21V}{11}}$）；11 $\\frac{2\\pi}3$；12 $9$；13 (1) $90$、(2) $9\\times10^n$；14 (1) $\\frac{1+\\sqrt5}2$、(2) $\\frac{2+\\sqrt5}2$；15 $2$；16 $\\left(\\frac52,\\frac52\\right)$；17 (1) $\\frac{6\\pi}5$、(2) $[-1-\\sqrt2,2-\\sqrt2]$；18 (1) $a_n=5-3n$ 或 $3n-7$、(2) $S_1=4$，$n\\geqslant2$ 时 $S_n=\\frac{3n^2-11n+20}2$；19 (1) $BD=1$、$V_{\\max}=\\frac23$、(2) $DN=\\frac12=\\frac14DC$、线面角 $60^\\circ$；20 (1) $E(Y)=3,D(Y)=9.8$、(2) $\\frac67$；21 (1) $x^2+\\frac{y^2}{m^2}=1$、(2) $m=\\sqrt2$；22 (1) 最小值 0、(2)(3) 证明。

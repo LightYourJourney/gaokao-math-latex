@@ -4332,6 +4332,14 @@
         "gk-2012-hubei-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b87",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-regular-national-outline-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4341,7 +4349,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "518a56fe-719e-4e23-aede-c10a1d3c07a7",
+  "last_transaction_id": "3bab3bd7-dad3-490c-9346-8e6e33698410",
   "papers": [
     {
       "blocked_from": null,
@@ -50246,9 +50254,66 @@
       "title": "2012 年·湖北卷·理科",
       "track": "science",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_全国大纲卷_文科/figures/f2014_outline_arts_q19_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_national_outline_arts",
+        "id": "gk-2014-regular-national-outline-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 871、872。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。大纲卷题号：选择 1—12、填空 13—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页唯一图形在第 19 题三棱柱，以 TikZ 重绘；其余各题原页无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "全国大纲卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国大纲文科（广西）"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-regular-national-outline-arts",
+      "production_state": "complete",
+      "project_dir": "2014_全国大纲卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_大纲文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_大纲文_含解析.md",
+        "questions": "2014/2014_数学真题_大纲文_试题.md",
+        "solution_body": "2014/2014_数学真题_大纲文_解析正文.md"
+      },
+      "source_ids": [
+        "src-08eab1b0bd24fe9d1f10f7ec753629eb6c7014358c0b54068be32ca173317c7d"
+      ],
+      "title": "2014 年·全国大纲卷·文科（广西）",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 11966,
+  "revision": 11976,
   "schema_version": 1,
   "sources": [
     {
@@ -64525,8 +64590,8 @@
       "exam_type": "regular",
       "git_blob_oid": "06e85d9d6599c04c4b7a1fd75093115164e6696e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-regular-national-outline-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014大纲文(广西).pdf",
       "regions": [],
       "source_id": "src-08eab1b0bd24fe9d1f10f7ec753629eb6c7014358c0b54068be32ca173317c7d",
