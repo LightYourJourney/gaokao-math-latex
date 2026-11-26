@@ -1,0 +1,35 @@
+% ============================================================
+% f2014_chongqing_science_q21_ellipse.tex
+% 2014 重庆卷（理科）第 21 题：椭圆与焦点
+% 来源 PDF：普通高考/2014/2014重庆理.pdf
+% 原页：第 2 页（A3 横排）中栏，印面 866，第 21 题题干下方
+% 说明：椭圆焦点在 x 轴上，左、右焦点为 F1、F2；点 D 在椭圆上
+%       且在 F1 的正下方，DF1⊥F1F2；图中画出线段 DF2。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  % 坐标轴
+  \draw[->] (-5.4,0) -- (5.6,0) node[below, inner sep=3pt] {$x$};
+  \draw[->] (0,-3.2) -- (0,3.4) node[right, inner sep=2pt] {$y$};
+
+  % 椭圆
+  \draw (0,0) ellipse (4 and 2.4);
+
+  % 焦点与点 D
+  \coordinate (F1) at (-2,0);
+  \coordinate (F2) at (2,0);
+  \coordinate (D) at (-2,-2.0785);
+
+  \draw (F1) -- (D);
+  \draw (D) -- (F2);
+
+  \fill (F1) circle (1.4pt);
+  \fill (F2) circle (1.4pt);
+  \fill (D) circle (1.4pt);
+
+  \node[above left, inner sep=2pt] at (F1) {$F_1$};
+  \node[above right, inner sep=2pt] at (F2) {$F_2$};
+  \node[below left, inner sep=2pt] at (D) {$D$};
+  \node[below right, inner sep=2pt] at (0,0) {$O$};
+\end{tikzpicture}

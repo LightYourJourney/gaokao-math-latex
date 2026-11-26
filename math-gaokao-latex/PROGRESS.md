@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2014 重庆卷（理科）：phase8-b05 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2014-chongqing-science`，**22 个题号**（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-4579f6742aa10042fac59450774d94f17abc6eb8fc179f5d638638ec71bade2b`，2 页 A3，印面 865、866（865 面为 1—18，866 面为 19—22）。
+- 答案（等级 D）：1 A；2 D；3 A；4 C；5 C；6 D；7 B；8 B（$e=\frac53$）；9 B（$120$）；10 A；11 $\{7,9\}$；12 $-\frac14$；13 $4\pm\sqrt{15}$；14 $4$；15 $\sqrt5$；16 $\left[-1,\frac12\right]$；17 (1) $\omega=2,\varphi=-\frac\pi6$、(2) $\frac{\sqrt3+\sqrt{15}}8$；18 (1) $\frac5{84}$、(2) $P(X{=}1)=\frac{17}{42},P(X{=}2)=\frac{43}{84},P(X{=}3)=\frac1{12},E(X)=\frac{47}{28}$；19 (1) $\frac{\sqrt3}2$、(2) $\frac{\sqrt{10}}5$；20 (1) $a=b=1$、(2) 在 $\mathbf R$ 上递增、(3) $c>4$；21 (1) $\frac{x^2}2+y^2=1$、(2) $\frac{4\sqrt2}3$；22 (1) $a_2=2,a_3=1+\sqrt2,a_n=1+\sqrt{n-1}$、(2) 存在，$c=\frac14$。
+- **来源核对**：第 8 题为 $|PF_1|\cdot|PF_2|=\frac94ab$（非 $|PF_1|-|PF_2|$）；第 10 题选项为 $bc(b+c)>8$ 等四项；第 11 题求 $(\complement_UA)\cap B$；第 16 题右端 $a^2+\frac12a+2$；第 17 题对称轴 $x=\frac\pi3$；第 20 题 $f(x)=a\mathrm e^{2x}-b\mathrm e^{-2x}-cx$；第 22(2) 为「$a_{2n}<c<a_{2n+1}$」。第 5 题题干与框图均为「输出 $k$」，无文科卷那类矛盾。
+- 主代理复核：第 9 题枚举 $6\times(4+4+4+6+6)=120$；第 10 题由 $\sin A\sin B\sin C=\frac18$、$R^2\in[4,8]$ 得 $bc(b+c)=R^3\frac{b+c}{a}>8$，B 取 $A=\frac\pi2,B=C=\frac\pi4$ 反例 $4\sqrt5<16\sqrt2$；第 13 题 $a^2-8a+1=0$；第 15 题 $y=x+1$ 与 $y^2=4x$ 切于 $(1,2)$；第 16 题 $g_{\min}=\frac52$ 得 $(2a-1)(a+1)\leqslant0$；第 18 题分布 $34+43+7=84$、$E=\frac{141}{84}=\frac{47}{28}$；第 19 题 $M=\left(-\frac{\sqrt3}4,\frac34,0\right)$、$MP\cdot AP=0$ 得 $PO=\frac{\sqrt3}2$；第 21 题 $c=1,a=\sqrt2,b=1$、$r=\frac{4\sqrt2}3$；第 22 题 $b=-1$ 时 $g(t)=\sqrt{(t-1)^2+1}-1$ 递减，归纳得 $a_{2n}<\frac14<a_{2n+1}$。
+- 图稿：4 张 TikZ（第 5 题程序框图、第 7 题三视图、第 19 题四棱锥、第 21 题椭圆与焦点）。
+- 版式回修：首轮解析版 31 页、印刷版 23 页，最后一页只剩第 22 题答案框（孤页）；压缩第 22(2) 的归纳表述与答案措辞（三次重建，均重跑 `generate_projects`、provenance、`make_editions`、`build --formal`）后，解析版 30 页、印刷版 22 页，答案框回到正文页内，无孤立页。
+- 验收：四版 5/30/7/22 页（共 64 页），四 log 全 0（Overfull、missing characters 均 0）；review 64 页 **pass 469 + not_applicable 43、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；4 条图稿引用全部命中。
+- 全库：manifest **693 卷 / 775 来源 / 539 批次**，complete 575、blocked 118，未绑定 **83**；revision 12076。
+
 ### 2014 重庆卷（文科）：第 5 题题干与框图矛盾，判定 needs-review，未注册
 - 固定源 `2014重庆文.pdf`（SHA-256 `b17dd8f6e94f68e339ef35eb27541627066f569cd2aefcd2d7df082dfef8f5bf`，2 页 A3，印面 867、868），题号选择 1—10、填空 11—15、解答 16—21。
 - 第 5 题题干文字层为「则输出 $s$ 的值为」，同页框图末端平行四边形 300 dpi 放大为「输出 $k$」；实算输出 $s$ 得 $19$（选项 C），输出 $k$ 得 $17$（选项 B），两者均在选项中，源内无唯一判读依据。

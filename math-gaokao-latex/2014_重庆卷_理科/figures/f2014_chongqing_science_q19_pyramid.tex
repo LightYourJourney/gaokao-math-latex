@@ -1,0 +1,43 @@
+% ============================================================
+% f2014_chongqing_science_q19_pyramid.tex
+% 2014 重庆卷（理科）第 19 题：四棱锥 P-ABCD
+% 来源 PDF：普通高考/2014/2014重庆理.pdf
+% 原页：第 1 页（A3 横排）右栏上部，印面 865，第 19 题题干右侧
+% 说明：底面菱形 ABCD 画成平行四边形，O 为中心，顶点 P 在 O 的
+%       正上方；M 为棱 BC 上靠近 B 的四等分点。被底面遮挡的
+%       AD、DC 与对角线 AC、BD 以及 PD、PO 用虚线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  \coordinate (A) at (0,2.2);
+  \coordinate (B) at (2.6,0.4);
+  \coordinate (C) at (7.6,1.4);
+  \coordinate (D) at (5.0,3.2);
+  \coordinate (O) at (3.8,1.8);
+  \coordinate (P) at (3.7,5.8);
+  \coordinate (M) at (3.85,0.65);
+
+  % 被遮挡的棱
+  \draw[dashed] (A) -- (D) -- (C);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (B) -- (D);
+  \draw[dashed] (P) -- (D);
+  \draw[dashed] (P) -- (O);
+
+  % 可见的棱
+  \draw (A) -- (B) -- (C);
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (M);
+
+  \fill (O) circle (1.4pt);
+  \node[below right, inner sep=3pt] at (O) {$O$};
+  \node[left, inner sep=2pt] at (A) {$A$};
+  \node[below, inner sep=3pt] at (B) {$B$};
+  \node[right, inner sep=2pt] at (C) {$C$};
+  \node[above left, inner sep=2pt] at (D) {$D$};
+  \node[above, inner sep=3pt] at (P) {$P$};
+  \node[below, inner sep=4pt] at (M) {$M$};
+\end{tikzpicture}

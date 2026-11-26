@@ -1,0 +1,1078 @@
+% answers.tex —— 2014 年·重庆卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2014/2014_数学真题_重庆理_试题.md + 2014/2014_数学真题_重庆理_解析正文.md + 2014/2014_数学真题_重庆理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+在复平面内表示复数 $i(1-2i)$ 的点位于\mbox{（　　）}
+
+（A）第一象限；（B）第二象限；（C）第三象限；（D）第四象限。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 $i^2=-1$，
+\nopagebreak[4]
+\[i(1-2i)=i-2i^2=i+2=2+i .\]
+实部 $2>0$，虚部 $1>0$，对应点为 $(2,1)$，位于第一象限。
+
+选 A。
+
+\gkanswer{答案：A。$i(1-2i)=i-2i^2=2+i$，实部与虚部均为正，对应点在第一象限。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+对任意等比数列 $\{a_n\}$，下列说法一定正确的是\mbox{（　　）}
+
+（A）$a_1$，$a_3$，$a_9$ 成等比数列；（B）$a_2$，$a_3$，$a_6$ 成等比数列；（C）$a_2$，$a_4$，$a_8$ 成等比数列；（D）$a_3$，$a_6$，$a_9$ 成等比数列。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设等比数列的公比为 $q$，则 $a_n=a_1q^{n-1}$。三项成等比数列的充要条件是中间项的平方等于两端之积。
+
+（A）$a_1,a_3,a_9$：$a_3^2=a_1^2q^4$，$a_1a_9=a_1^2q^8$，两者相等需 $q^4=1$；
+
+（B）$a_2,a_3,a_6$：$a_3^2=a_1^2q^4$，$a_2a_6=a_1^2q^6$，需 $q^2=1$；
+
+（C）$a_2,a_4,a_8$：$a_4^2=a_1^2q^6$，$a_2a_8=a_1^2q^8$，需 $q^2=1$；
+
+（D）$a_3,a_6,a_9$：$a_6^2=a_1^2q^{10}$，$a_3a_9=a_1^2q^{10}$，恒成立。
+
+只有（D）对任意 $q$ 都成立。
+
+选 D。
+
+\gkanswer{答案：D。设公比为 $q$，则 $a_6^2=a_3a_9$ 恒成立（两边都是 $a_1^2q^{10}$），其余三组需 $q^2=1$ 等附加条件，不一定成立。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+已知变量 $x$ 与 $y$ 正相关，且由观测数据算得样本平均数 $\bar x=3$，$\bar y=3.5$，则由该观测数据算得的线性回归方程可能是\mbox{（　　）}
+
+（A）$\hat y=0.4x+2.3$；（B）$\hat y=2x-2.4$；（C）$\hat y=-2x+9.5$；（D）$\hat y=-0.3x+4.4$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+线性回归直线必过样本中心 $(\bar x,\bar y)=(3,3.5)$，且 $x$ 与 $y$ 正相关时回归系数 $\hat b>0$。逐项检验：
+
+（A）$\hat y=0.4\times3+2.3=3.5$，且斜率 $0.4>0$，符合；
+
+（B）$\hat y=2\times3-2.4=3.6\neq3.5$，不符合；
+
+（C）$\hat y=-2\times3+9.5=3.5$，但斜率 $-2<0$，与正相关矛盾；
+
+（D）$\hat y=-0.3\times3+4.4=3.5$，但斜率 $-0.3<0$，同样矛盾。
+
+故只可能是（A）。
+
+选 A。
+
+\gkanswer{答案：A。回归直线必过样本中心 $(3,3.5)$ 且正相关要求斜率大于 $0$，只有 $\hat y=0.4x+2.3$ 同时满足。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+已知向量 $\boldsymbol a=(k,3)$，$\boldsymbol b=(1,4)$，$\boldsymbol c=(2,1)$，且 $(2\boldsymbol a-3\boldsymbol b)\perp\boldsymbol c$，则实数 $k=$\mbox{（　　）}
+
+（A）$-\dfrac92$；（B）$0$；（C）$3$；（D）$\dfrac{15}2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+先算
+\nopagebreak[4]
+\[2\boldsymbol a-3\boldsymbol b=2(k,3)-3(1,4)=(2k-3,\,6-12)=(2k-3,-6).\]
+\Needspace{5\baselineskip}
+由垂直条件，
+\nopagebreak[4]
+\[(2\boldsymbol a-3\boldsymbol b)\cdot\boldsymbol c=(2k-3)\times2+(-6)\times1=4k-12=0,\]
+解得 $k=3$。
+
+选 C。
+
+\gkanswer{答案：C。$2\boldsymbol a-3\boldsymbol b=(2k-3,-6)$，与 $\boldsymbol c=(2,1)$ 垂直给出 $2(2k-3)-6=0$，即 $k=3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+执行如图所示的程序框图，若输出 $k$ 的值为 $6$，则判断框内可填入的条件是\mbox{（　　）}
+
+（A）$s>\dfrac12$；（B）$s>\dfrac35$；（C）$s>\dfrac7{10}$；（D）$s>\dfrac45$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_chongqing_science_q05_flowchart}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+框图先赋初值 $k=9$，$s=1$，随后按「判断—是则执行 $s=s\cdot\dfrac{k}{k+1}$ 与 $k=k-1$ 再返回判断」循环。列表追踪（设判断条件为 $s>s_0$）：
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+判断时的 $k$ & 判断时的 $s$ & 条件成立时执行后的 $s$ & 执行后的 $k$ \\
+\midrule
+$9$ & $1$ & $1\cdot\dfrac9{10}=\dfrac9{10}$ & $8$ \\
+$8$ & $\dfrac9{10}$ & $\dfrac9{10}\cdot\dfrac89=\dfrac8{10}$ & $7$ \\
+$7$ & $\dfrac8{10}$ & $\dfrac8{10}\cdot\dfrac78=\dfrac7{10}$ & $6$ \\
+$6$ & $\dfrac7{10}$ & 不执行，输出 $k=6$ & — \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{5\baselineskip}
+输出 $k=6$ 要求：$s=1,\dfrac9{10},\dfrac8{10}$ 时条件成立，而 $s=\dfrac7{10}$ 时条件不成立。四个选项中只有 $s>\dfrac7{10}$ 满足，因为
+\nopagebreak[4]
+\[\frac9{10}>\frac8{10}>\frac7{10},\qquad \frac7{10}\not>\frac7{10}.\]
+而 $s>\dfrac45$ 在 $s=\dfrac8{10}=\dfrac45$ 时已不成立，会提前输出 $k=7$；$s>\dfrac35$、$s>\dfrac12$ 更会提前退出。题干与框图均以「输出 $k$」为准，二者一致。
+
+选 C。
+
+\gkanswer{答案：C。初值 $k=9$，$s=1$，循环三次后 $s=\dfrac9{10}\cdot\dfrac89\cdot\dfrac78=\dfrac7{10}$、$k=6$，此时须退出循环，故条件为 $s>\dfrac7{10}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+已知命题 $p$：对任意 $x\in\mathbf R$，总有 $2^x>0$；$q$：“$x>1$”是“$x>2$”的充分不必要条件。则下列命题为真命题的是\mbox{（　　）}
+
+（A）$p\wedge q$；（B）$\neg p\wedge\neg q$；（C）$\neg p\wedge q$；（D）$p\wedge\neg q$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+命题 $p$：对任意 $x\in\mathbf R$，$2^x>0$ 恒成立，故 $p$ 是真命题。
+
+命题 $q$：若 $x>2$ 则必有 $x>1$，说明“$x>1$”是“$x>2$”的必要条件；但 $x=1.5$ 满足 $x>1$ 而不满足 $x>2$，说明它不是充分条件。故“$x>1$”是“$x>2$”的必要不充分条件，$q$ 是假命题。
+
+于是 $p$ 真、$\neg q$ 真，$p\wedge\neg q$ 为真；而 $p\wedge q$ 假，$\neg p\wedge\neg q$ 假，$\neg p\wedge q$ 假。
+
+选 D。
+
+\gkanswer{答案：D。$p$ 为真；由 $x>1$ 推不出 $x>2$，$q$ 为假，故 $p\wedge\neg q$ 为真。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+某几何体的三视图如图所示，则该几何体的表面积为\mbox{（　　）}
+
+（A）$54$；（B）$60$；（C）$66$；（D）$72$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_chongqing_science_q07_three_views}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由三视图还原：底面是两直角边为 $4$ 与 $3$ 的直角三角形（斜边 $5$）；几何体在底面的每条边处都立有竖直侧面，正视图给出左端高 $5$、右端高 $2$，左视图给出另一方向宽 $3$、高 $5$ 的矩形。于是该几何体是「以该直角三角形为底面、顶面为斜平面」的几何体，其五个面逐一计算：
+
+\Needspace{5\baselineskip}
+底面直角三角形：
+\nopagebreak[4]
+\[S_1=\frac12\times4\times3=6 .\]
+
+\Needspace{5\baselineskip}
+前面（正视图所示梯形，两底 $5$ 与 $2$、高 $4$）：
+\nopagebreak[4]
+\[S_2=\frac{5+2}2\times4=14 .\]
+
+\Needspace{5\baselineskip}
+左面（左视图所示矩形，$3\times5$）：
+\nopagebreak[4]
+\[S_3=3\times5=15 .\]
+
+\Needspace{5\baselineskip}
+顶面三角形：三个顶点可取 $D(0,0,5)$，$E(4,0,2)$，$F(0,3,5)$，其中
+\nopagebreak[4]
+\[DE=\sqrt{4^2+3^2}=5,\qquad DF=3,\qquad \overrightarrow{DE}\cdot\overrightarrow{DF}=4\times0+0\times3+(-3)\times0=0,\]
+\Needspace{5\baselineskip}
+故 $DE\perp DF$，
+\nopagebreak[4]
+\[S_4=\frac12\times5\times3=\frac{15}2 .\]
+
+\Needspace{5\baselineskip}
+后面是梯形：两底为竖直线段 $BE=2$ 与 $CF=5$，高为底面斜边长 $BC=5$，
+\nopagebreak[4]
+\[S_5=\frac{2+5}2\times5=\frac{35}2 .\]
+
+\Needspace{5\baselineskip}
+合计
+\nopagebreak[4]
+\[S=6+14+15+\frac{15}2+\frac{35}2=35+25=60 .\]
+
+选 B。
+
+\gkanswer{答案：B。该几何体为底面是直角边 $4$、$3$ 的直角三角形、高由 $5$ 斜降至 $2$ 的几何体，逐面计算得 $6+14+15+\dfrac{15}2+\dfrac{35}2=60$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+设 $F_1$，$F_2$ 分别为双曲线 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$（$a>0$，$b>0$）的左、右焦点，双曲线上存在一点 $P$ 使得 $|PF_1|+|PF_2|=3b$，$|PF_1|\cdot|PF_2|=\dfrac94 ab$，则该双曲线的离心率为\mbox{（　　）}
+
+（A）$\dfrac43$；（B）$\dfrac53$；（C）$\dfrac94$；（D）$3$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+记 $m=|PF_1|$，$n=|PF_2|$。由双曲线定义，
+\nopagebreak[4]
+\[|m-n|=2a,\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[(m+n)^2-4mn=(m-n)^2=4a^2 .\]
+\Needspace{5\baselineskip}
+代入 $m+n=3b$，$mn=\dfrac94ab$：
+\nopagebreak[4]
+\[9b^2-9ab=4a^2 .\]
+\Needspace{5\baselineskip}
+两边除以 $a^2$，并记 $t=\dfrac ba=\sqrt{e^2-1}>0$，得
+\nopagebreak[4]
+\[9t^2-9t-4=0\ \Longrightarrow\ t=\frac{9+\sqrt{81+144}}{18}=\frac{24}{18}=\frac43 .\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[e^2=1+t^2=1+\frac{16}9=\frac{25}9,\qquad e=\frac53 .\]
+
+选 B。
+
+\gkanswer{答案：B。由 $|PF_1|-|PF_2|=\pm2a$ 得 $9b^2-9ab=4a^2$，令 $t=\sqrt{e^2-1}$ 得 $9t^2-9t-4=0$，$t=\dfrac43$，故 $e=\dfrac53$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+某次联欢会要安排 $3$ 个歌舞类节目、$2$ 个小品类节目和 $1$ 个相声类节目的演出顺序，则同类节目不相邻的排法种数是\mbox{（　　）}
+
+（A）$72$；（B）$120$；（C）$144$；（D）$168$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+把 $6$ 个节目所占位置编号 $1,2,\dots,6$。先只考虑 $3$ 个歌舞类节目：同类不相邻要求它们两两不相邻，故所占位置组只能是
+\nopagebreak[4]
+\[\{1,3,5\},\ \{1,3,6\},\ \{1,4,6\},\ \{2,4,6\},\]
+共 $\mathrm C_4^3=4$ 组。对每个位置组，$3$ 个歌舞类节目有 $3!=6$ 种排法；剩下 $3$ 个位置放 $2$ 个小品类与 $1$ 个相声类。
+
+\begin{itemize}
+\item 位置组 $\{1,3,5\}$ 与 $\{2,4,6\}$：剩下的三个位置互不相邻，$3!=6$ 种排法全部合格；
+\item 位置组 $\{1,3,6\}$：剩下 $\{2,4,5\}$ 中 $4,5$ 相邻，两个小品占 $4,5$ 的 $2$ 种排法不合格，故 $6-2=4$ 种；
+\item 位置组 $\{1,4,6\}$：剩下 $\{2,3,5\}$ 中 $2,3$ 相邻，同理 $4$ 种。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+于是总数为
+\nopagebreak[4]
+\[6\times(6+4+4+6)=6\times20=120 .\]
+
+选 B。
+
+\gkanswer{答案：B。先排 $3$ 个歌舞类使两两不相邻有 $4$ 种位置组，再排其余 $3$ 个节目并剔除两个小品相邻的情形，合计 $6(6+4+4+6)=120$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知 $\triangle ABC$ 的内角 $A$，$B$，$C$ 满足 $\sin 2A+\sin(A-B+C)=\sin(C-A-B)+\dfrac12$，面积 $S$ 满足 $1\leqslant S\leqslant 2$，记 $a$，$b$，$c$ 分别为 $A$，$B$，$C$ 所对的边，则下列不等式一定成立的是\mbox{（　　）}
+
+（A）$bc(b+c)>8$；（B）$ab(a+b)>16\sqrt2$；（C）$6\leqslant abc\leqslant 12$；（D）$12\leqslant abc\leqslant 24$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 $A+B+C=\pi$ 化简条件。先有
+\nopagebreak[4]
+\[A-B+C=(A+C)-B=\pi-2B,\qquad C-A-B=C-(A+B)=2C-\pi .\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\sin(A-B+C)=\sin(\pi-2B)=\sin2B,\qquad \sin(C-A-B)=\sin(2C-\pi)=-\sin2C .\]
+\Needspace{5\baselineskip}
+原条件即
+\nopagebreak[4]
+\[\sin2A+\sin2B+\sin2C=\frac12 .\]
+\Needspace{5\baselineskip}
+而三角形中恒有
+\nopagebreak[4]
+\[\sin2A+\sin2B+\sin2C=4\sin A\sin B\sin C,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\sin A\sin B\sin C=\frac18 . \tag{1}\]
+
+\Needspace{5\baselineskip}
+设外接圆半径为 $R$，则 $a=2R\sin A$ 等，且
+\nopagebreak[4]
+\[S=2R^2\sin A\sin B\sin C=\frac{R^2}4 .\]
+\Needspace{5\baselineskip}
+由 $1\leqslant S\leqslant2$ 得 $R^2\in[4,8]$，即 $R\in[2,2\sqrt2]$，从而
+\nopagebreak[4]
+\[abc=4RS=R^3\in[8,16\sqrt2]. \tag{2}\]
+\Needspace{5\baselineskip}
+（2）中区间内每个值都可取到（固定形状、只改变 $R$ 即可），故
+\nopagebreak[4]
+\[abc=8<12,\qquad abc=16\sqrt2\approx22.6>12,\]
+（C）（D）都不一定成立。
+
+\Needspace{5\baselineskip}
+再证（A）。由（1），
+\nopagebreak[4]
+\[bc(b+c)=abc\cdot\frac{b+c}a=R^3\cdot\frac{b+c}a .\]
+\Needspace{5\baselineskip}
+由三角形两边之和大于第三边，$\dfrac{b+c}a>1$，又 $R^3\geqslant8$，故
+\nopagebreak[4]
+\[bc(b+c)>R^3\geqslant8 .\]
+（A）恒成立。
+
+\Needspace{5\baselineskip}
+最后说明（B）不恒成立。取 $C=\dfrac\pi2$，$A=\dfrac12\arcsin\dfrac14$，$B=\dfrac\pi2-A$，$R=2$（此时 $S=\dfrac{R^2}4=1$，符合 $1\leqslant S\leqslant2$）。由
+\nopagebreak[4]
+\[\sin A\sin B=\sin A\cos A=\frac12\sin2A=\frac18,\qquad \sin C=1\]
+\Needspace{5\baselineskip}
+知（1）成立。又 $\sin 2A=\dfrac14$ 给出
+\nopagebreak[4]
+\[(\sin A+\cos A)^2=1+\sin2A=\frac54\ \Longrightarrow\ \sin A+\cos A=\frac{\sqrt5}2 .\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[ab(a+b)=R^3\cdot\frac{a+b}c=8\cdot\frac{\sin A+\sin B}{\sin C}=8\cdot\frac{\sqrt5}2=4\sqrt5<16\sqrt2 .\]
+故（B）不恒成立。
+
+选 A。
+
+\gkanswer{答案：A。条件化为 $\sin A\sin B\sin C=\dfrac18$，故 $abc=R^3\in[8,16\sqrt2]$，（C）（D）不恒成立；又 $bc(b+c)=R^3\cdot\dfrac{b+c}{a}>R^3\geqslant 8$，而（B）可取反例 $4\sqrt5<16\sqrt2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+设全集 $U=\{n\in\mathbf N\mid 1\leqslant n\leqslant 10\}$，$A=\{1,2,3,5,8\}$，$B=\{1,3,5,7,9\}$，则 $(\complement_U A)\cap B=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$A=\{1,2,3,5,8\}$，$B=\{1,3,5,7,9\}$。先求 $A$ 在 $U$ 中的补集：
+\nopagebreak[4]
+\[\complement_U A=\{4,6,7,9,10\},\]
+\Needspace{5\baselineskip}
+再与 $B$ 取交集：
+\nopagebreak[4]
+\[(\complement_U A)\cap B=\{7,9\}.\]
+
+\gkanswer{答案：$\{7,9\}$。$\complement_U A=\{4,6,7,9,10\}$，与 $B=\{1,3,5,7,9\}$ 取交集得 $\{7,9\}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+函数 $f(x)=\log_2\sqrt x\cdot\log_{\sqrt2}(2x)$ 的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 $t=\log_2x$（$x>0$，$t\in\mathbf R$）。由换底公式与对数运算，
+\nopagebreak[4]
+\[\log_2\sqrt x=\frac12\log_2x=\frac t2,\qquad
+\log_{\sqrt2}(2x)=\frac{\log_2(2x)}{\log_2\sqrt2}=\frac{1+t}{1/2}=2(1+t).\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[f(x)=\frac t2\cdot2(1+t)=t^2+t=\left(t+\frac12\right)^2-\frac14 .\]
+当 $t=-\dfrac12$，即 $x=2^{-1/2}=\dfrac{\sqrt2}2$ 时取最小值 $-\dfrac14$。
+
+\gkanswer{答案：$-\dfrac14$。令 $t=\log_2x$，则 $f=\dfrac t2\cdot2(1+t)=t^2+t=\left(t+\dfrac12\right)^2-\dfrac14$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知直线 $ax+y-2=0$ 与圆心为 $C$ 的圆 $(x-1)^2+(y-a)^2=4$ 相交于 $A$，$B$ 两点，且 $\triangle ABC$ 为等边三角形，则实数 $a=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+圆 $(x-1)^2+(y-a)^2=4$ 的圆心为 $C(1,a)$，半径 $r=2$。
+
+\Needspace{5\baselineskip}
+$\triangle ABC$ 为等边三角形且 $A$，$B$ 在圆上，故 $|CA|=|CB|=r=2$，等边三角形边长 $|AB|=2$，圆心 $C$ 到弦 $AB$ 的距离为
+\nopagebreak[4]
+\[d=\sqrt{r^2-\left(\frac{|AB|}2\right)^2}=\sqrt{4-1}=\sqrt3 .\]
+\Needspace{5\baselineskip}
+又 $C$ 到直线 $ax+y-2=0$ 的距离为
+\nopagebreak[4]
+\[d=\frac{|a\cdot1+a-2|}{\sqrt{a^2+1}}=\frac{|2a-2|}{\sqrt{a^2+1}},\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\frac{|2a-2|}{\sqrt{a^2+1}}=\sqrt3
+\ \Longrightarrow\ 4(a-1)^2=3(a^2+1)
+\ \Longrightarrow\ a^2-8a+1=0,\]
+\Needspace{5\baselineskip}
+解得
+\nopagebreak[4]
+\[a=4\pm\sqrt{15}.\]
+
+\gkanswer{答案：$4\pm\sqrt{15}$。等边三角形边长等于半径 $2$，圆心到直线距离为 $\sqrt3$，即 $\dfrac{|2a-2|}{\sqrt{a^2+1}}=\sqrt3$，解得 $a^2-8a+1=0$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+过圆外一点 $P$ 作圆的切线 $PA$（$A$ 为切点），再作割线 $PBC$ 依次交圆于 $B$，$C$，若 $PA=6$，$AC=8$，$BC=9$，则 $AB=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由切割线定理，
+\nopagebreak[4]
+\[PA^2=PB\cdot PC .\]
+\Needspace{5\baselineskip}
+设 $PB=x$，则 $PC=x+BC=x+9$，代入 $PA=6$：
+\nopagebreak[4]
+\[36=x(x+9)\ \Longrightarrow\ x^2+9x-36=0\ \Longrightarrow\ x=3\ \text{\text{或}}\ x=-12,\]
+故 $PB=3$，$PC=12$。
+
+\Needspace{5\baselineskip}
+再连 $AB$。在 $\triangle PAB$ 与 $\triangle PCA$ 中，$\angle APB=\angle CPA$ 为公共角，且由弦切角定理 $\angle PAB=\angle PCA$，故
+\nopagebreak[4]
+\[\triangle PAB\sim\triangle PCA .\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\frac{AB}{CA}=\frac{PA}{PC}=\frac6{12}=\frac12,\qquad
+AB=\frac12\times8=4 .\]
+
+\gkanswer{答案：$4$。切割线定理 $PB\cdot PC=PA^2=36$ 且 $PC=PB+9$ 得 $PB=3$，$PC=12$；由 $\triangle PAB\sim\triangle PCA$ 得 $AB=\dfrac{PA\cdot AC}{PC}=4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+已知直线 $l$ 的参数方程为 $\begin{cases}x=2+t,\\y=3+t,\end{cases}$（$t$ 为参数），以坐标原点为极点，$x$ 轴的正半轴为极轴建立极坐标系，曲线 $C$ 的极坐标方程为 $\rho\sin^2\theta-4\cos\theta=0$（$\rho\geqslant 0$，$0\leqslant\theta<2\pi$），则直线 $l$ 与曲线 $C$ 的公共点的极径 $\rho=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+消去参数 $t$：由 $x=2+t$，$y=3+t$ 得
+\nopagebreak[4]
+\[y=x+1 .\]
+\Needspace{5\baselineskip}
+曲线 $C$ 的方程 $\rho\sin^2\theta-4\cos\theta=0$ 两边乘 $\rho$，利用 $\rho\sin\theta=y$，$\rho\cos\theta=x$，得
+\nopagebreak[4]
+\[y^2=4x .\]
+\Needspace{5\baselineskip}
+联立
+\nopagebreak[4]
+\[(x+1)^2=4x\ \Longrightarrow\ x^2-2x+1=0\ \Longrightarrow\ x=1,\ y=2 .\]
+\Needspace{5\baselineskip}
+直线与曲线只有一个公共点 $(1,2)$，其极径
+\nopagebreak[4]
+\[\rho=\sqrt{1^2+2^2}=\sqrt5 .\]
+
+\gkanswer{答案：$\sqrt5$。直线为 $y=x+1$，曲线为 $y^2=4x$，联立得唯一公共点 $(1,2)$，故 $\rho=\sqrt{1^2+2^2}=\sqrt5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+若不等式 $|2x-1|+|x+2|\geqslant a^2+\dfrac12 a+2$ 对任意实数 $x$ 恒成立，则实数 $a$ 的取值范围是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+记 $g(x)=|2x-1|+|x+2|$，分段讨论：
+
+\begin{itemize}
+\item $x\leqslant-2$：$g(x)=(1-2x)-(x+2)=-3x-1$，在 $(-\infty,-2]$ 上递减，最小值 $g(-2)=5$；
+\item $-2<x<\dfrac12$：$g(x)=(1-2x)+(x+2)=3-x$，在 $\left(-2,\dfrac12\right)$ 上递减；
+\item $x\geqslant\dfrac12$：$g(x)=(2x-1)+(x+2)=3x+1$，在 $\left[\dfrac12,+\infty\right)$ 上递增。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+故 $g$ 在 $x=\dfrac12$ 处取最小值
+\nopagebreak[4]
+\[g\left(\frac12\right)=0+\frac52=\frac52 .\]
+\Needspace{5\baselineskip}
+题设不等式对任意实数 $x$ 恒成立，等价于
+\nopagebreak[4]
+\[a^2+\frac12a+2\leqslant\frac52,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[2a^2+a-1\leqslant0\ \Longrightarrow\ (2a-1)(a+1)\leqslant0\ \Longrightarrow\ -1\leqslant a\leqslant\frac12 .\]
+
+\gkanswer{答案：$\left[-1,\dfrac12\right]$。$|2x-1|+|x+2|$ 的最小值为 $\dfrac52$，故 $a^2+\dfrac12a+2\leqslant\dfrac52$，即 $2a^2+a-1\leqslant0$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=\sqrt3\sin(\omega x+\varphi)$（$\omega>0$，$-\dfrac\pi2\leqslant\varphi<\dfrac\pi2$）的图象关于直线 $x=\dfrac\pi3$ 对称，且图象上相邻两个最高点的距离为 $\pi$。
+
+（1） 求 $\omega$ 和 $\varphi$ 的值；
+
+（2） 若 $f\left(\dfrac\alpha2\right)=\dfrac{\sqrt3}4$（$\dfrac\pi6<\alpha<\dfrac{2\pi}3$），求 $\cos\left(\alpha+\dfrac{3\pi}2\right)$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+图象上相邻两个最高点的距离等于一个周期，故
+\nopagebreak[4]
+\[T=\pi,\qquad \omega=\frac{2\pi}T=2 .\]
+\Needspace{5\baselineskip}
+图象关于直线 $x=\dfrac\pi3$ 对称，而正弦曲线在对称轴处取最值，故
+\nopagebreak[4]
+\[2\cdot\frac\pi3+\varphi=\frac\pi2+k\pi\ (k\in\mathbf Z),\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[\varphi=-\frac\pi6+k\pi .\]
+\Needspace{5\baselineskip}
+由 $-\dfrac\pi2\leqslant\varphi<\dfrac\pi2$，只能取 $k=0$，
+\nopagebreak[4]
+\[\varphi=-\frac\pi6 .\]
+于是 $f(x)=\sqrt3\sin\left(2x-\dfrac\pi6\right)$。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+由 $f\left(\dfrac\alpha2\right)=\dfrac{\sqrt3}4$，
+\nopagebreak[4]
+\[\sqrt3\sin\left(\alpha-\frac\pi6\right)=\frac{\sqrt3}4
+\ \Longrightarrow\ \sin\left(\alpha-\frac\pi6\right)=\frac14 .\]
+\Needspace{5\baselineskip}
+因为 $\dfrac\pi6<\alpha<\dfrac{2\pi}3$，所以
+\nopagebreak[4]
+\[0<\alpha-\frac\pi6<\frac\pi2,\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[\cos\left(\alpha-\frac\pi6\right)=\sqrt{1-\frac1{16}}=\frac{\sqrt{15}}4 .\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[\cos\left(\alpha+\frac{3\pi}2\right)=\cos\alpha\cos\frac{3\pi}2-\sin\alpha\sin\frac{3\pi}2=\sin\alpha,\]
+\Needspace{5\baselineskip}
+而
+\nopagebreak[4]
+\[\alpha=\left(\alpha-\frac\pi6\right)+\frac\pi6,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\begin{aligned}
+\sin\alpha
+&=\sin\left(\alpha-\frac\pi6\right)\cos\frac\pi6+\cos\left(\alpha-\frac\pi6\right)\sin\frac\pi6\\
+&=\frac14\cdot\frac{\sqrt3}2+\frac{\sqrt{15}}4\cdot\frac12
+=\frac{\sqrt3+\sqrt{15}}8 .
+\end{aligned}\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[\cos\left(\alpha+\frac{3\pi}2\right)=\frac{\sqrt3+\sqrt{15}}8 .\]
+
+\gkanswer{答案（1）：$\omega=2$，$\varphi=-\dfrac\pi6$。相邻最高点距离为周期 $\pi$ 得 $\omega=2$；对称轴过最高点给出 $\dfrac{2\pi}3+\varphi=\dfrac\pi2+2k\pi$，结合 $\varphi$ 的范围得 $\varphi=-\dfrac\pi6$。}
+
+\gkanswer{答案（2）：$\dfrac{\sqrt3+\sqrt{15}}8$。由 $\sin\left(\alpha-\dfrac\pi6\right)=\dfrac14$ 及 $\alpha-\dfrac\pi6\in\left(0,\dfrac\pi2\right)$ 得 $\cos\left(\alpha-\dfrac\pi6\right)=\dfrac{\sqrt{15}}4$，而 $\cos\left(\alpha+\dfrac{3\pi}2\right)=\sin\alpha$，按和角公式展开即得。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+一盒中装有 $9$ 张各写有一个数字的卡片，其中 $4$ 张卡片上的数字是 $1$，$3$ 张卡片上的数字是 $2$，$2$ 张卡片上的数字是 $3$，从盒中任取 $3$ 张卡片。
+
+（1） 求所取 $3$ 张卡片上的数字完全相同的概率；
+
+（2） $X$ 表示所取 $3$ 张卡片上的数字的中位数，求 $X$ 的分布列与数学期望。
+
+（注：若三个数 $a$，$b$，$c$ 满足 $a\leqslant b\leqslant c$，则称 $b$ 为这三个数的中位数）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+9 张卡片中任取 3 张，共有
+\nopagebreak[4]
+\[\mathrm C_9^3=\frac{9\times8\times7}{3\times2\times1}=84\]
+种等可能取法。
+
+\Needspace{5\baselineskip}
+三张数字完全相同，只能是三个 $1$ 或三个 $2$（数字 $3$ 只有两张）：三个 $1$ 有 $\mathrm C_4^3=4$ 种，三个 $2$ 有 $\mathrm C_3^3=1$ 种，共 $5$ 种。故所求概率为
+\nopagebreak[4]
+\[P=\frac5{84}.\]
+
+\gksubpart{（2）}
+
+按取出的三类卡片张数 $(n_1,n_2,n_3)$ 分类，取法数为 $\mathrm C_4^{n_1}\mathrm C_3^{n_2}\mathrm C_2^{n_3}$，中位数由张数不少于 $2$ 的那类数字（或三类各一张时的 $2$）决定：
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+$(n_1,n_2,n_3)$ & 取法数 & 中位数 $X$ \\
+\midrule
+$(3,0,0)$ & $4$ & $1$ \\
+$(2,1,0)$ & $18$ & $1$ \\
+$(2,0,1)$ & $12$ & $1$ \\
+$(0,3,0)$ & $1$ & $2$ \\
+$(1,2,0)$ & $12$ & $2$ \\
+$(0,2,1)$ & $6$ & $2$ \\
+$(1,1,1)$ & $24$ & $2$ \\
+$(1,0,2)$ & $4$ & $3$ \\
+$(0,1,2)$ & $3$ & $3$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{5\baselineskip}
+合计 $4+18+12+1+12+6+24+4+3=84$，与总数相符。故
+\nopagebreak[4]
+\[P(X=1)=\frac{4+18+12}{84}=\frac{34}{84}=\frac{17}{42},\]
+\nopagebreak[4]
+\[P(X=2)=\frac{1+12+6+24}{84}=\frac{43}{84},\]
+\nopagebreak[4]
+\[P(X=3)=\frac{4+3}{84}=\frac7{84}=\frac1{12}.\]
+分布列为
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+$X$ & $1$ & $2$ & $3$ \\
+\midrule
+$P$ & $\dfrac{17}{42}$ & $\dfrac{43}{84}$ & $\dfrac1{12}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{5\baselineskip}
+数学期望
+\nopagebreak[4]
+\[E(X)=1\times\frac{34}{84}+2\times\frac{43}{84}+3\times\frac7{84}
+=\frac{34+86+21}{84}=\frac{141}{84}=\frac{47}{28}.\]
+
+\gkanswer{答案（1）：$\dfrac5{84}$。三张全为 $1$ 有 $\mathrm C_4^3=4$ 种，全为 $2$ 有 $1$ 种，总取法 $\mathrm C_9^3=84$。}
+
+\gkanswer{答案（2）：分布列为 $P(X=1)=\dfrac{17}{42}$，$P(X=2)=\dfrac{43}{84}$，$P(X=3)=\dfrac1{12}$；$E(X)=\dfrac{47}{28}$。按三类数字的个数分类计数，$34+43+7=84$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+如图，四棱锥 $P-ABCD$ 中，底面是以 $O$ 为中心的菱形，$PO\perp$ 底面 $ABCD$，$AB=2$，$\angle BAD=\dfrac\pi3$，$M$ 为 $BC$ 上一点，且 $BM=\dfrac12$，$MP\perp AP$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_chongqing_science_q19_pyramid}\end{center}
+\nopagebreak[4]
+（1） 求 $PO$ 的长；
+
+（2） 求二面角 $A-PM-C$ 的正弦值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+底面菱形 $ABCD$ 中 $AB=2$，$\angle BAD=\dfrac\pi3$，故 $\triangle ABD$ 为正三角形，$BD=2$；对角线互相垂直平分，于是
+\nopagebreak[4]
+\[BO=1,\qquad AO=\sqrt{AB^2-BO^2}=\sqrt3 .\]
+
+\Needspace{5\baselineskip}
+以 $O$ 为原点，$\overrightarrow{OC}$ 为 $x$ 轴正方向，$\overrightarrow{OD}$ 为 $y$ 轴正方向，$\overrightarrow{OP}$ 为 $z$ 轴正方向建系，则
+\nopagebreak[4]
+\[A(-\sqrt3,0,0),\quad B(0,-1,0),\quad C(\sqrt3,0,0),\quad D(0,1,0),\quad P(0,0,h),\]
+其中 $h=PO>0$。
+
+\Needspace{5\baselineskip}
+由 $BM=\dfrac12$，$BC=2$ 得 $\overrightarrow{BM}=\dfrac14\overrightarrow{BC}$，故
+\nopagebreak[4]
+\[M=B+\frac14(C-B)=\left(\frac{\sqrt3}4,-\frac34,0\right).\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\overrightarrow{MP}=\left(-\frac{\sqrt3}4,\frac34,h\right),\qquad \overrightarrow{AP}=(\sqrt3,0,h).\]
+\Needspace{5\baselineskip}
+由 $MP\perp AP$，
+\nopagebreak[4]
+\[\overrightarrow{MP}\cdot\overrightarrow{AP}=-\frac{\sqrt3}4\cdot\sqrt3+0+h^2=-\frac34+h^2=0,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[h^2=\frac34,\qquad PO=h=\frac{\sqrt3}2 .\]
+
+\gksubpart{（2）}
+
+由（1），$P\left(0,0,\dfrac{\sqrt3}2\right)$，$M\left(\dfrac{\sqrt3}4,-\dfrac34,0\right)$。
+
+\Needspace{5\baselineskip}
+平面 $APM$ 中，
+\nopagebreak[4]
+\[\overrightarrow{AP}=\left(\sqrt3,0,\frac{\sqrt3}2\right),\qquad
+\overrightarrow{AM}=\left(\frac{5\sqrt3}4,-\frac34,0\right).\]
+\Needspace{5\baselineskip}
+取法向量
+\nopagebreak[4]
+\[\boldsymbol n_1=\overrightarrow{AP}\times\overrightarrow{AM}
+=\left(\frac{3\sqrt3}8,\frac{15}8,-\frac{3\sqrt3}4\right)\parallel(\sqrt3,5,-2\sqrt3).\]
+
+\Needspace{5\baselineskip}
+平面 $CPM$ 中，
+\nopagebreak[4]
+\[\overrightarrow{CP}=\left(-\sqrt3,0,\frac{\sqrt3}2\right),\qquad
+\overrightarrow{CM}=\left(-\frac{3\sqrt3}4,-\frac34,0\right).\]
+\Needspace{5\baselineskip}
+取法向量
+\nopagebreak[4]
+\[\boldsymbol n_2=\overrightarrow{CP}\times\overrightarrow{CM}
+=\left(\frac{3\sqrt3}8,-\frac98,\frac{3\sqrt3}4\right)\parallel(\sqrt3,-3,2\sqrt3).\]
+
+\Needspace{5\baselineskip}
+设二面角 $A-PM-C$ 的大小为 $\theta$，则
+\nopagebreak[4]
+\[\cos\theta=\frac{|\boldsymbol n_1\cdot\boldsymbol n_2|}{|\boldsymbol n_1||\boldsymbol n_2|}
+=\frac{|3-15-12|}{\sqrt{3+25+12}\cdot\sqrt{3+9+12}}
+=\frac{24}{2\sqrt{10}\cdot2\sqrt6}
+=\frac{24}{8\sqrt{15}}=\frac{3}{\sqrt{15}}=\frac{\sqrt{15}}5 .\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\sin\theta=\sqrt{1-\frac{15}{25}}=\sqrt{\frac{10}{25}}=\frac{\sqrt{10}}5 .\]
+
+\gkanswer{答案（1）：$\dfrac{\sqrt3}2$。以 $O$ 为原点、菱形对角线为坐标轴建系，由 $\overrightarrow{MP}\cdot\overrightarrow{AP}=0$ 得 $PO^2=\dfrac34$。}
+
+\gkanswer{答案（2）：$\dfrac{\sqrt{10}}5$。两半平面的法向量可取 $(\sqrt3,5,-2\sqrt3)$ 与 $(\sqrt3,-3,2\sqrt3)$，夹角余弦为 $\dfrac{\sqrt{15}}5$，故正弦值为 $\dfrac{\sqrt{10}}5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=ae^{2x}-be^{-2x}-cx$（$a$，$b$，$c\in\mathbf R$）的导函数 $f'(x)$ 为偶函数，且曲线 $y=f(x)$ 在点 $(0,f(0))$ 处的切线的斜率为 $4-c$。
+
+（1） 确定 $a$，$b$ 的值；
+
+（2） 若 $c=3$，判断 $f(x)$ 的单调性；
+
+（3） 若 $f(x)$ 有极值，求 $c$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+求导：
+\nopagebreak[4]
+\[f'(x)=2ae^{2x}+2be^{-2x}-c .\]
+\Needspace{5\baselineskip}
+$f'(x)$ 为偶函数，即对任意 $x$ 有 $f'(-x)=f'(x)$：
+\nopagebreak[4]
+\[2ae^{-2x}+2be^{2x}-c=2ae^{2x}+2be^{-2x}-c,\]
+\Needspace{5\baselineskip}
+移项得
+\nopagebreak[4]
+\[2(a-b)\left(e^{-2x}-e^{2x}\right)=0 .\]
+由于 $e^{2x}$ 不恒等于 $e^{-2x}$，故 $a=b$。
+
+\Needspace{5\baselineskip}
+又曲线在 $x=0$ 处切线斜率为
+\nopagebreak[4]
+\[f'(0)=2a+2b-c=4a-c,\]
+由题设 $f'(0)=4-c$ 得 $4a=4$，即 $a=1$，从而 $b=1$。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+$c=3$ 时
+\nopagebreak[4]
+\[f'(x)=2e^{2x}+2e^{-2x}-3 .\]
+\Needspace{5\baselineskip}
+令 $u=e^{2x}>0$，由均值不等式
+\nopagebreak[4]
+\[2u+\frac2u\geqslant2\sqrt{2u\cdot\frac2u}=4,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[f'(x)\geqslant4-3=1>0 .\]
+所以 $f(x)$ 在 $\mathbf R$ 上单调递增。
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+由（1），
+\nopagebreak[4]
+\[f'(x)=2e^{2x}+2e^{-2x}-c\geqslant4-c,\]
+等号当且仅当 $e^{2x}=1$，即 $x=0$ 时成立。
+
+\begin{itemize}
+\item 若 $c<4$，则 $f'(x)\geqslant4-c>0$，$f$ 严格递增，无极值；
+\item 若 $c=4$，则 $f'(x)\geqslant0$ 且仅 $f'(0)=0$，$f$ 仍严格递增，$x=0$ 不是极值点，无极值；
+\item 若 $c>4$，则 $f'(0)=4-c<0$，而当 $x\to\pm\infty$ 时 $2e^{2x}+2e^{-2x}\to+\infty$，故 $f'$ 在 $(-\infty,0)$ 与 $(0,+\infty)$ 内各有一个零点 $x_1<0<x_2$，且 $f'$ 在 $x_1$ 处由正变负、在 $x_2$ 处由负变正，$f$ 在 $x_1$ 取极大值、在 $x_2$ 取极小值。
+\end{itemize}
+
+故 $f(x)$ 有极值时 $c$ 的取值范围为 $(4,+\infty)$。
+
+\gkanswer{答案（1）：$a=b=1$。$f'(x)=2ae^{2x}+2be^{-2x}-c$ 为偶函数给出 $a=b$，再由 $f'(0)=4a-c=4-c$ 得 $a=1$。}
+
+\gkanswer{答案（2）：$f(x)$ 在 $\mathbf R$ 上单调递增。$c=3$ 时 $f'(x)=2e^{2x}+2e^{-2x}-3\geqslant4-3=1>0$。}
+
+\gkanswer{答案（3）：$c>4$。$f'(x)\geqslant4-c$，当且仅当 $c>4$ 时 $f'$ 有两个变号零点，$f$ 才既有极大值又有极小值；$c=4$ 时 $f$ 仍严格递增，无极值。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+设椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a>b>0$）的左、右焦点分别为 $F_1$，$F_2$，点 $D$ 在椭圆上，$DF_1\perp F_1F_2$，$\dfrac{|F_1F_2|}{|DF_1|}=2\sqrt2$，$\triangle DF_1F_2$ 的面积为 $\dfrac{\sqrt2}2$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_chongqing_science_q21_ellipse}\end{center}
+\nopagebreak[4]
+（1） 求该椭圆的标准方程；
+
+（2） 设圆心在 $y$ 轴上的圆与椭圆在 $x$ 轴的上方有两个交点，且圆在这两个交点处的两条切线相互垂直并分别过不同的焦点，求圆的半径。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+设焦距为 $2c$，则 $F_1(-c,0)$，$F_2(c,0)$，$|F_1F_2|=2c$。由 $DF_1\perp F_1F_2$ 知 $D$ 的横坐标为 $-c$，代入椭圆方程
+\nopagebreak[4]
+\[\frac{c^2}{a^2}+\frac{y^2}{b^2}=1
+\ \Longrightarrow\ y^2=b^2\left(1-\frac{c^2}{a^2}\right)=\frac{b^4}{a^2},\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[|DF_1|=\frac{b^2}a .\]
+\Needspace{5\baselineskip}
+条件 $\dfrac{|F_1F_2|}{|DF_1|}=2\sqrt2$ 即
+\nopagebreak[4]
+\[\frac{2c}{b^2/a}=2\sqrt2\ \Longrightarrow\ ac=\sqrt2\,b^2 . \tag{1}\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[S_{\triangle DF_1F_2}=\frac12\cdot2c\cdot\frac{b^2}a=\frac{cb^2}a=\frac{\sqrt2}2 . \tag{2}\]
+\Needspace{5\baselineskip}
+由（1）得 $b^2=\dfrac{ac}{\sqrt2}$，代入（2）：
+\nopagebreak[4]
+\[\frac{c}a\cdot\frac{ac}{\sqrt2}=\frac{c^2}{\sqrt2}=\frac{\sqrt2}2\ \Longrightarrow\ c^2=1,\qquad c=1 .\]
+\Needspace{5\baselineskip}
+于是 $b^2=\dfrac a{\sqrt2}$，再由 $a^2=b^2+c^2$：
+\nopagebreak[4]
+\[a^2=\frac a{\sqrt2}+1\ \Longrightarrow\ \sqrt2\,a^2-a-\sqrt2=0
+\ \Longrightarrow\ a=\frac{1+\sqrt{1+8}}{2\sqrt2}=\frac{4}{2\sqrt2}=\sqrt2 .\]
+\Needspace{5\baselineskip}
+故 $b^2=\dfrac{\sqrt2}{\sqrt2}=1$，$b=1$，椭圆的标准方程为
+\nopagebreak[4]
+\[\frac{x^2}2+y^2=1 .\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+设圆心 $Q(0,m)$，半径为 $r$。圆与椭圆都关于 $y$ 轴对称，而 $x$ 轴上方的交点恰有两个，故这两个交点关于 $y$ 轴对称，设为
+\nopagebreak[4]
+\[P_1(x_0,y_0),\qquad P_2(-x_0,y_0),\qquad x_0>0,\ y_0>0 .\]
+\Needspace{5\baselineskip}
+两交点都在圆上：
+\nopagebreak[4]
+\[x_0^2+(y_0-m)^2=r^2 . \tag{3}\]
+
+\Needspace{5\baselineskip}
+圆在 $P_1$ 处的切线垂直于 $QP_1=(x_0,y_0-m)$，其斜率为 $-\dfrac{x_0}{y_0-m}$；在 $P_2$ 处的切线斜率为 $\dfrac{x_0}{y_0-m}$。两切线互相垂直，故斜率之积为 $-1$：
+\nopagebreak[4]
+\[-\frac{x_0^2}{(y_0-m)^2}=-1\ \Longrightarrow\ x_0^2=(y_0-m)^2 . \tag{4}\]
+
+\Needspace{5\baselineskip}
+设 $P_1$ 处切线过焦点 $F_2(1,0)$（若过 $F_1$，由对称性同理），则
+\nopagebreak[4]
+\[\overrightarrow{F_2P_1}\cdot\overrightarrow{QP_1}=0,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[(x_0-1)x_0+(-y_0)(y_0-m)=0
+\ \Longrightarrow\ x_0^2-x_0+y_0^2-my_0=0 . \tag{5}\]
+
+由（4）分两种情形：
+
+\Needspace{5\baselineskip}
+情形一：$y_0-m=x_0$，即 $m=y_0-x_0$。代入（5）：
+\nopagebreak[4]
+\[x_0^2-x_0+y_0^2-(y_0-x_0)y_0=0
+\ \Longrightarrow\ x_0^2-x_0+x_0y_0=0
+\ \Longrightarrow\ x_0(x_0+y_0-1)=0 .\]
+\Needspace{5\baselineskip}
+由 $x_0>0$ 得 $x_0+y_0=1$，即 $x_0=1-y_0$。代入椭圆方程 $\dfrac{x_0^2}2+y_0^2=1$：
+\nopagebreak[4]
+\[\frac{(1-y_0)^2}2+y_0^2=1
+\ \Longrightarrow\ 3y_0^2-2y_0-1=0
+\ \Longrightarrow\ y_0=1\ \text{\text{或}}\ y_0=-\frac13 .\]
+$y_0=1$ 给出 $x_0=0$，与 $x_0>0$ 矛盾；$y_0=-\dfrac13<0$ 不在 $x$ 轴上方。此情形无解。
+
+\Needspace{5\baselineskip}
+情形二：$y_0-m=-x_0$，即 $m=y_0+x_0$。代入（5）：
+\nopagebreak[4]
+\[x_0^2-x_0+y_0^2-(y_0+x_0)y_0=0
+\ \Longrightarrow\ x_0^2-x_0-x_0y_0=0
+\ \Longrightarrow\ x_0(x_0-y_0-1)=0 .\]
+\Needspace{5\baselineskip}
+由 $x_0>0$ 得 $x_0=y_0+1$。代入椭圆方程：
+\nopagebreak[4]
+\[\frac{(y_0+1)^2}2+y_0^2=1
+\ \Longrightarrow\ 3y_0^2+2y_0-1=0
+\ \Longrightarrow\ y_0=\frac13\ \text{\text{或}}\ y_0=-1 .\]
+\Needspace{5\baselineskip}
+取 $y_0=\dfrac13>0$，得
+\nopagebreak[4]
+\[x_0=\frac43,\qquad \frac{x_0^2}2+y_0^2=\frac{8}{9}+\frac19=1,\]
+\Needspace{5\baselineskip}
+符合椭圆方程。此时
+\nopagebreak[4]
+\[m=y_0+x_0=\frac53,\]
+\Needspace{5\baselineskip}
+由（3）
+\nopagebreak[4]
+\[r^2=x_0^2+(y_0-m)^2=\frac{16}9+\left(\frac13-\frac53\right)^2=\frac{16}9+\frac{16}9=\frac{32}9,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[r=\frac{4\sqrt2}3 .\]
+
+验证：圆 $x^2+\left(y-\dfrac53\right)^2=\dfrac{32}9$ 与椭圆联立，得 $9y^2+30y-11=0$，即 $y=\dfrac13$ 或 $y=-\dfrac{11}3$；后者使 $x^2=2-2y^2<0$，无实点。故交点确为 $\left(\pm\dfrac43,\dfrac13\right)$ 两点，且均在 $x$ 轴上方，切线分别过 $F_2(1,0)$ 与 $F_1(-1,0)$，两切线斜率分别为 $1$ 与 $-1$，互相垂直。
+
+\gkanswer{答案（1）：$\dfrac{x^2}2+y^2=1$。由 $|DF_1|=\dfrac{b^2}a$ 及两条件得 $c=1$、$a=\sqrt2$、$b=1$。}
+
+\gkanswer{答案（2）：$\dfrac{4\sqrt2}3$。两交点关于 $y$ 轴对称，设为 $(\pm x_0,y_0)$；切线互相垂直给出 $x_0^2=(y_0-m)^2$，切线过焦点给出 $x_0-y_0=1$，联立椭圆方程得 $x_0=\dfrac43$，$y_0=\dfrac13$，$m=\dfrac53$，$r^2=\dfrac{32}9$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+设 $a_1=1$，$a_{n+1}=\sqrt{a_n^2-2a_n+2}+b$（$n\in\mathbf N^*$）。
+
+（1） 若 $b=1$，求 $a_2$，$a_3$ 及数列 $\{a_n\}$ 的通项公式；
+
+（2） 若 $b=-1$，问：是否存在实数 $c$，使得 $a_{2n}<c<a_{2n+1}$ 对所有 $n\in\mathbf N^*$ 成立？证明你的结论。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+$b=1$ 时
+\nopagebreak[4]
+\[a_{n+1}=\sqrt{a_n^2-2a_n+2}+1=\sqrt{(a_n-1)^2+1}+1 .\]
+\Needspace{5\baselineskip}
+由 $a_1=1$：
+\nopagebreak[4]
+\[a_2=\sqrt{0+1}+1=2,\qquad a_3=\sqrt{(2-1)^2+1}+1=\sqrt2+1 .\]
+
+\Needspace{5\baselineskip}
+猜测 $a_n=1+\sqrt{n-1}$，用数学归纳法证明。$n=1$ 时 $1+\sqrt0=1=a_1$ 成立。设 $a_n=1+\sqrt{n-1}$，则
+\nopagebreak[4]
+\[(a_n-1)^2+1=(n-1)+1=n,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[a_{n+1}=\sqrt n+1=1+\sqrt{(n+1)-1},\]
+\Needspace{5\baselineskip}
+归纳完成。所以
+\nopagebreak[4]
+\[a_n=1+\sqrt{n-1}\quad(n\in\mathbf N^*).\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+$b=-1$ 时
+\nopagebreak[4]
+\[a_{n+1}=\sqrt{(a_n-1)^2+1}-1 .\]
+\Needspace{5\baselineskip}
+记 $g(t)=\sqrt{(t-1)^2+1}-1$，则 $a_{n+1}=g(a_n)$。直接计算：
+\nopagebreak[4]
+\[g(1)=0,\qquad g(0)=\sqrt2-1,\qquad g\left(\frac14\right)=\sqrt{\frac9{16}+1}-1=\frac54-1=\frac14 .\]
+且 $g$ 在 $(-\infty,1]$ 上递减。
+
+\Needspace{5\baselineskip}
+由 $a_1=1$ 得
+\nopagebreak[4]
+\[a_2=g(1)=0,\qquad a_3=g(0)=\sqrt2-1 .\]
+
+\Needspace{5\baselineskip}
+用归纳法证明 $0\leqslant a_{2n}<\frac14<a_{2n+1}\leqslant\sqrt2-1$：$n=1$ 时 $a_2=0<\frac14<a_3=\sqrt2-1$；设 $0\leqslant a_{2n}<\frac14$，由 $g$ 在 $(-\infty,1]$ 上递减，
+\nopagebreak[4]
+\[a_{2n+1}=g(a_{2n})>g\left(\frac14\right)=\frac14,\qquad
+a_{2n+1}=g(a_{2n})\leqslant g(0)=\sqrt2-1 .\]
+\Needspace{5\baselineskip}
+又 $\frac14<a_{2n+1}<1$，再用 $g$ 的递减性，
+\nopagebreak[4]
+\[a_{2n+2}=g(a_{2n+1})<g\left(\frac14\right)=\frac14,\qquad
+a_{2n+2}=g(a_{2n+1})\geqslant g(1)=0 .\]
+故对一切 $n$ 有 $a_{2n}<\frac14<a_{2n+1}$，取 $c=\frac14$ 即满足要求。
+
+\gkanswer{答案（1）：$a_2=2$，$a_3=1+\sqrt2$，$a_n=1+\sqrt{n-1}$。令 $b_n=a_n-1$ 得 $b_{n+1}=\sqrt{b_n^2+1}$，$b_1=0$，故 $b_n=\sqrt{n-1}$。}
+
+\gkanswer{答案（2）：存在，$c=\dfrac14$。令 $g(t)=\sqrt{(t-1)^2+1}-1$，由 $g$ 在 $(-\infty,1]$ 上递减、$g\left(\dfrac14\right)=\dfrac14$，归纳得 $0\leqslant a_{2n}<\dfrac14<a_{2n+1}$。}
+
+\end{answer}

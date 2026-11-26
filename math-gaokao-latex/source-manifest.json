@@ -4460,6 +4460,14 @@
         "gk-2014-guangdong-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b05",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-chongqing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4469,7 +4477,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "9ba0142c-36d0-4855-8355-c1122ffb211f",
+  "last_transaction_id": "0aa5ce1d-906f-4611-90fe-380944d97b2a",
   "papers": [
     {
       "blocked_from": null,
@@ -51502,9 +51510,78 @@
       "title": "2014 年·广东卷·理科",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_重庆卷_理科/figures/f2014_chongqing_science_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_重庆卷_理科/figures/f2014_chongqing_science_q07_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_重庆卷_理科/figures/f2014_chongqing_science_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_重庆卷_理科/figures/f2014_chongqing_science_q21_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_chongqing_science",
+        "id": "gk-2014-chongqing-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 865、866（865 面为选择 1—10、填空 11—16、解答 17—18；866 面为 19—22）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。重庆卷题号：选择 1—10、填空 11—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 5 题程序框图、第 7 题三视图、第 19 题四棱锥、第 21 题椭圆与焦点图；共 4 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "重庆卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "重庆理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-chongqing-science",
+      "production_state": "complete",
+      "project_dir": "2014_重庆卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_重庆理_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_重庆理_含解析.md",
+        "questions": "2014/2014_数学真题_重庆理_试题.md",
+        "solution_body": "2014/2014_数学真题_重庆理_解析正文.md"
+      },
+      "source_ids": [
+        "src-4579f6742aa10042fac59450774d94f17abc6eb8fc179f5d638638ec71bade2b"
+      ],
+      "title": "2014 年·重庆卷·理科",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 12062,
+  "revision": 12076,
   "schema_version": 1,
   "sources": [
     {
@@ -66453,8 +66530,8 @@
       "exam_type": "regular",
       "git_blob_oid": "cb44f00fec1e59b4fe29f226832d5b062bffe3fb",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-chongqing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014重庆理.pdf",
       "regions": [],
       "source_id": "src-4579f6742aa10042fac59450774d94f17abc6eb8fc179f5d638638ec71bade2b",
