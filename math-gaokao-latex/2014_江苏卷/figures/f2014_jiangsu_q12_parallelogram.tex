@@ -1,0 +1,16 @@
+% 2014 年江苏卷填空题第 12 题：平行四边形 ABCD 中 P 在 DC 上，
+% CP=3PD，连 AP、BP。来源 PDF：普通高考/2014/2014江苏.pdf，印面 889。
+\begin{tikzpicture}[>=Stealth, semithick, font=\small, scale=0.95]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (6,0);
+  \coordinate (C) at (7.8,3.4);
+  \coordinate (D) at (1.8,3.4);
+  \coordinate (P) at ($(D)!0.25!(C)$);
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw (A) -- (P) -- (B);
+  \fill (A) circle (1.2pt) node[below left] {$A$};
+  \fill (B) circle (1.2pt) node[below right] {$B$};
+  \fill (C) circle (1.2pt) node[right] {$C$};
+  \fill (D) circle (1.2pt) node[left] {$D$};
+  \fill (P) circle (1.2pt) node[above] {$P$};
+\end{tikzpicture}

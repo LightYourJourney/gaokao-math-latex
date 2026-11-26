@@ -1,0 +1,28 @@
+% 2014 年江苏卷填空题第 6 题：60 株树木底部周长的频率分布直方图。
+% 来源 PDF：普通高考/2014/2014江苏.pdf，印面 889。组距 10 cm，五组高度依次为
+% 0.015、0.025、0.030、0.020、0.010。
+\begin{tikzpicture}[>=Stealth, semithick, font=\small, scale=0.85, transform shape]
+  % 纵轴按 180 cm / 单位高度绘制
+  \draw[->] (0,0) -- (0,6.5) node[above] {$\dfrac{\text{频率}}{\text{组距}}$};
+  \draw[->] (0,0) -- (10.2,0);
+  \node[below right, inner sep=4pt] at (10.0,-0.15) {底部周长/cm};
+  % 纵轴刻度与虚线
+  \foreach \h/\lab in {1.8/0.010, 2.7/0.015, 3.6/0.020, 4.5/0.025, 5.4/0.030}{
+    \draw[dashed] (0,\h) -- (9.6,\h);
+    \node[left, inner sep=3pt] at (0,\h) {\lab};
+  }
+  % 五根矩形：组距 10 cm 对应宽度 1.6 cm
+  \draw (1.6,0) rectangle (3.2,2.7);
+  \draw (3.2,0) rectangle (4.8,4.5);
+  \draw (4.8,0) rectangle (6.4,5.4);
+  \draw (6.4,0) rectangle (8.0,3.6);
+  \draw (8.0,0) rectangle (9.6,1.8);
+  % 横轴刻度
+  \node[below, inner sep=3pt] at (0.15,0) {$0$};
+  \foreach \x/\lab in {1.6/80, 3.2/90, 4.8/100, 6.4/110, 8.0/120, 9.6/130}{
+    \node[below, inner sep=3pt] at (\x,0) {\lab};
+  }
+  % 断裂符
+  \draw (0.55,0.28) -- (0.95,-0.28);
+  \draw (0.85,0.28) -- (1.25,-0.28);
+\end{tikzpicture}

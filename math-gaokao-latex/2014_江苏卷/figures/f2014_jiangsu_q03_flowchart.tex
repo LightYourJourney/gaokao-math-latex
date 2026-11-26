@@ -1,0 +1,24 @@
+% 2014 年江苏卷填空题第 3 题：算法流程图，输出 n 的值。
+% 来源 PDF：普通高考/2014/2014江苏.pdf，印面 889。
+\begin{tikzpicture}[>=Stealth, node distance=7mm, font=\small,
+  term/.style={draw, rounded corners=4pt, minimum width=20mm, minimum height=8mm},
+  proc/.style={draw, minimum width=27mm, minimum height=8mm},
+  dec/.style={draw, diamond, aspect=2.2, minimum width=32mm, minimum height=14mm,
+    inner sep=1pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=27mm, minimum height=8mm, inner sep=2pt}]
+  \node[term] (start) {开始};
+  \node[proc, below=of start] (init) {$n\leftarrow 0$};
+  \node[proc, below=of init] (inc) {$n\leftarrow n+1$};
+  \node[dec, below=of inc] (test) {$2^n>20$};
+  \node[io, below=of test] (out) {输出 $n$};
+  \node[term, below=of out] (stop) {结束};
+
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (inc);
+  \draw[->] (inc) -- (test);
+  \draw[->] (test) -- node[right, inner sep=1pt] {Y} (out);
+  \draw[->] (out) -- (stop);
+  \draw[->] (test.east) -- ++(13mm,0) |- node[pos=0.25, right, inner sep=1pt] {N}
+    (inc.north);
+\end{tikzpicture}

@@ -1,0 +1,21 @@
+% 2014 年江苏卷附加题 21A：AB 是圆 O 的直径，C、D 是圆 O 上位于 AB 异侧的两点。
+% 来源 PDF：普通高考/2014/2014江苏.pdf，印面 890。
+\begin{tikzpicture}[>=Stealth, semithick, font=\small, scale=1.0]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (140:2.1);
+  \coordinate (B) at (-40:2.1);
+  \coordinate (C) at (215:2.1);
+  \coordinate (D) at (75:2.1);
+  \draw[thick] (O) circle (2.1);
+  \draw (A) -- (B);
+  \draw (C) -- (D);
+  \draw (A) -- (C);
+  \draw (A) -- (D);
+  \draw (B) -- (C);
+  \draw (B) -- (D);
+  \fill (O) circle (1pt) node[above right, inner sep=1pt] {$O$};
+  \fill (A) circle (1.1pt) node[above left] {$A$};
+  \fill (B) circle (1.1pt) node[below right] {$B$};
+  \fill (C) circle (1.1pt) node[below left] {$C$};
+  \fill (D) circle (1.1pt) node[above] {$D$};
+\end{tikzpicture}

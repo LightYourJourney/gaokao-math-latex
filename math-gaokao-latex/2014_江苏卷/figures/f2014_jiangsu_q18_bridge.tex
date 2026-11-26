@@ -1,0 +1,34 @@
+% 2014 年江苏卷解答题第 18 题：古桥 OA、新桥 BC、圆形保护区（圆心 M 在 OA 上，
+% 与 BC 相切）。OA=60 m，OC=170 m，BC⊥AB。来源 PDF：普通高考/2014/2014江苏.pdf，印面 889。
+% 示意比例：1 单位≈30 m，故 OA=2，OC≈5.67，B=(2.67,4)。
+\begin{tikzpicture}[>=Stealth, semithick, font=\small, scale=1.0]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0,2);
+  \coordinate (M) at (0,1.45);
+  \coordinate (C) at (5.67,0);
+  \coordinate (B) at (2.67,4);
+  % 保护区（虚线圆）
+  \draw[dashed] (M) circle (3.66);
+  % 河岸与新桥
+  \draw (A) -- (B) -- (C);
+  \draw (O) -- (C);
+  \draw (O) -- (A);
+  % 直角标记
+  \draw ($(B)!0.55mm!(A)$) -- ($(B)!0.55mm!(A)!0.55mm!90:(B)$)
+    -- ($(B)!0.55mm!(C)$);
+  % 方向标
+  \draw[->] (0,0) -- (0,4.72) node[above] {北};
+  \draw[->] (0,0) -- (6.7,0) node[below] {东};
+  % 60 m 标注
+  \draw[<->] (-0.55,0) -- (-0.55,2);
+  \node[left] at (-0.62,1.0) {$60\,\mathrm m$};
+  % 170 m 标注
+  \draw[<->] (0,-0.55) -- (5.67,-0.55);
+  \node[below] at (2.84,-0.95) {$170\,\mathrm m$};
+  % 点标注
+  \fill (O) circle (1pt) node[below left, inner sep=2pt] {$O$};
+  \fill (A) circle (1pt) node[left, inner sep=2pt] {$A$};
+  \fill (M) circle (1.1pt) node[right, inner sep=2pt] {$M$};
+  \fill (B) circle (1pt) node[above right] {$B$};
+  \fill (C) circle (1pt) node[below right] {$C$};
+\end{tikzpicture}

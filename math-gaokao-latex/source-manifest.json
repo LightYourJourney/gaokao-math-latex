@@ -4412,6 +4412,14 @@
         "gk-2014-shaanxi-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b97",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-jiangsu"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4421,7 +4429,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "56b56d2b-8518-42ad-a297-8f1cba4d1d97",
+  "last_transaction_id": "e1fd24d2-5bcf-43a7-88cc-80d8e6845277",
   "papers": [
     {
       "blocked_from": null,
@@ -51000,9 +51008,90 @@
       "title": "2014 年·陕西卷·文科",
       "track": "arts",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_江苏卷/figures/f2014_jiangsu_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_江苏卷/figures/f2014_jiangsu_q06_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_江苏卷/figures/f2014_jiangsu_q12_parallelogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_江苏卷/figures/f2014_jiangsu_q16_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_江苏卷/figures/f2014_jiangsu_q17_ellipse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_江苏卷/figures/f2014_jiangsu_q18_bridge.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_江苏卷/figures/f2014_jiangsu_q21a_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_jiangsu",
+        "id": "gk-2014-jiangsu",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 889、890。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。江苏卷题号：填空 1—14、解答 15—20、附加题 21—23，共 23 题；第 21 题为四选二（A 几何证明、B 矩阵、C 极坐标、D 不等式），四小问全部收录。答案由本库独立推导（等级 D，非官方）。原页图：第 3 题程序框图、第 6 题频率分布直方图、第 12 题平行四边形、第 16 题三棱锥、第 17 题椭圆、第 18 题河桥、第 21A 题圆；共 7 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "附加题": [
+            21,
+            23
+          ]
+        },
+        "track": "理科",
+        "variant": "江苏"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-jiangsu",
+      "production_state": "complete",
+      "project_dir": "2014_江苏卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_江苏_含解析.md",
+        "questions": "2014/2014_数学真题_江苏_试题.md",
+        "solution_body": "2014/2014_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-40f6be645729c906b9ff31ccc9d09f051f42a7a69cc52eadfe3f34c7e9482da1"
+      ],
+      "title": "2014 年·江苏卷",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 12031,
+  "revision": 12036,
   "schema_version": 1,
   "sources": [
     {
@@ -65615,8 +65704,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d8262edc7bdc62f27661b00c9cda37f332659e60",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014江苏.pdf",
       "regions": [],
       "source_id": "src-40f6be645729c906b9ff31ccc9d09f051f42a7a69cc52eadfe3f34c7e9482da1",

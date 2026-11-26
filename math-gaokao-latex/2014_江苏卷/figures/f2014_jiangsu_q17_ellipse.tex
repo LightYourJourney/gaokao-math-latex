@@ -1,0 +1,28 @@
+% 2014 年江苏卷解答题第 17 题：椭圆 x^2/a^2+y^2/b^2=1，B(0,b)，BF2 延长交椭圆于 A，
+% 过 A 作 x 轴垂线交椭圆于 C，连 F1C。示意图取 a:b:c=2.8:2.2:1.73（非按离心率作答值定图）。
+% 来源 PDF：普通高考/2014/2014江苏.pdf，印面 889。
+\begin{tikzpicture}[>=Stealth, semithick, font=\small, scale=1.0]
+  % 坐标轴
+  \draw[->] (-3.6,0) -- (3.75,0) node[below, inner sep=2pt] {$x$};
+  \draw[->] (0,-2.75) -- (0,2.95);
+  % 椭圆
+  \draw[thick] (0,0) ellipse (2.8 and 2.2);
+  % 点：A、C 为过 A 的竖直线与椭圆的交点
+  \coordinate (O) at (0,0);
+  \coordinate (B) at (0,2.2);
+  \coordinate (F1) at (-1.73,0);
+  \coordinate (F2) at (1.73,0);
+  \coordinate (A) at (2.506,-0.982);
+  \coordinate (C) at (2.506,0.982);
+  % 连线
+  \draw (B) -- (A);
+  \draw (F1) -- (C);
+  \draw (A) -- (C);
+  % 标注
+  \fill (O) circle (1pt) node[below left, inner sep=2pt] {$O$};
+  \fill (B) circle (1pt) node[above] {$B$};
+  \fill (F1) circle (1pt) node[below, inner sep=3pt] {$F_1$};
+  \fill (F2) circle (1pt) node[below, inner sep=3pt] {$F_2$};
+  \fill (A) circle (1pt) node[below right, inner sep=2pt] {$A$};
+  \fill (C) circle (1pt) node[above right, inner sep=2pt] {$C$};
+\end{tikzpicture}
