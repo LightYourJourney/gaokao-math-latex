@@ -4340,6 +4340,14 @@
         "gk-2014-regular-national-outline-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b88",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-regular-national-outline-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4349,7 +4357,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "3bab3bd7-dad3-490c-9346-8e6e33698410",
+  "last_transaction_id": "d24a1163-cd6d-4c3f-b2fa-886fbc73ccba",
   "papers": [
     {
       "blocked_from": null,
@@ -50311,9 +50319,66 @@
       "title": "2014 年·全国大纲卷·文科（广西）",
       "track": "arts",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_全国大纲卷_理科/figures/f2014_outline_science_q19_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_national_outline_science",
+        "id": "gk-2014-regular-national-outline-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 869、870。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。大纲卷题号：选择 1—12、填空 13—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 19 题三棱柱，以 TikZ 重绘；其余各题原页无图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "全国大纲卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国大纲理科（广西）"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-regular-national-outline-science",
+      "production_state": "complete",
+      "project_dir": "2014_全国大纲卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_大纲理_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_大纲理_含解析.md",
+        "questions": "2014/2014_数学真题_大纲理_试题.md",
+        "solution_body": "2014/2014_数学真题_大纲理_解析正文.md"
+      },
+      "source_ids": [
+        "src-f7c9adc4e0bf415c811b59dc6ab6e048f1f5e4116ed9c24f389381e6bfb16a25"
+      ],
+      "title": "2014 年·全国大纲卷·理科（广西）",
+      "track": "science",
+      "year": 2014
     }
   ],
-  "revision": 11976,
+  "revision": 11981,
   "schema_version": 1,
   "sources": [
     {
@@ -64614,8 +64679,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ef6d3cbc373928844fca7799b951ec7886bdfaf1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-regular-national-outline-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014大纲理(广西).pdf",
       "regions": [],
       "source_id": "src-f7c9adc4e0bf415c811b59dc6ab6e048f1f5e4116ed9c24f389381e6bfb16a25",

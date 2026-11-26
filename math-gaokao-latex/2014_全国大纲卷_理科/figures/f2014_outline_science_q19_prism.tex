@@ -1,0 +1,40 @@
+% ============================================================
+% f2014_outline_science_q19_prism.tex
+% 2014 全国大纲卷（理科）第 19 题：三棱柱 ABC-A1B1C1
+% A1 在平面 ABC 内的射影 D 在 AC 上，∠ACB=90°。
+% 来源 PDF：普通高考/2014/2014大纲理(广西).pdf
+% 原页：第 1 页（A3 横排）第 3 栏，印面 869，第 19 题题干下方
+% 画法为平行投影示意，不按比例；虚线为不可见棱及辅助线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  line cap=round, line join=round]
+  % 底面 ABC：C 为直角顶点，CA=2、CB=1；D 为 AC 中点，
+  % A1 在 D 正上方（h=√3），三棱柱侧棱 AA1∥CC1∥BB1。
+  \coordinate (A)  at (0.00,0.00);
+  \coordinate (C)  at (1.80,1.15);
+  \coordinate (B)  at (3.90,1.00);
+  \coordinate (D)  at (0.90,0.58);
+  \coordinate (A1) at (0.95,3.38);
+  \coordinate (C1) at (2.75,4.53);
+  \coordinate (B1) at (4.85,4.38);
+
+  % 可见棱
+  \draw (A) -- (B) -- (B1) -- (C1) -- (A1) -- cycle;
+  \draw (A) -- (A1);
+  \draw (A1) -- (B1);
+  \draw (A1) -- (B);
+
+  % 不可见棱与辅助线
+  \draw[dashed] (A) -- (C) -- (B);
+  \draw[dashed] (C) -- (C1);
+  \draw[dashed] (A1) -- (D);
+  \draw[dashed] (A1) -- (C);
+
+  \fill (A) circle (1.1pt) node[below left] {$A$};
+  \fill (B) circle (1.1pt) node[right] {$B$};
+  \fill (C) circle (1.1pt) node[above left] {$C$};
+  \fill (D) circle (1.1pt) node[below=1pt] {$D$};
+  \fill (A1) circle (1.1pt) node[left] {$A_1$};
+  \fill (C1) circle (1.1pt) node[above] {$C_1$};
+  \fill (B1) circle (1.1pt) node[above right] {$B_1$};
+\end{tikzpicture}
