@@ -1,0 +1,21 @@
+% 2013 年春季上海卷第 26 题：直角三角形 ABC 与内接矩形 EBFP
+% 图中 AB=4、BC=5 仅为示意比例；矩形 E-B-F-P 的顶点 P 在斜边 AC 上。
+\begin{tikzpicture}[>=stealth, scale=1.0, font=\small]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (5.0,0);
+  \coordinate (A) at (0,4.0);
+  \coordinate (E) at (0,2.0);
+  \coordinate (F) at (2.5,0);
+  \coordinate (P) at (2.5,2.0);
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (E) -- (B) -- (F) -- (P) -- cycle;
+  % 直角标记
+  \draw (0,0.32) -- (0.32,0.32) -- (0.32,0);
+  % 顶点
+  \fill (A) circle (1pt) node[above] {$A$};
+  \fill (B) circle (1pt) node[below left] {$B$};
+  \fill (C) circle (1pt) node[below right] {$C$};
+  \fill (E) circle (1pt) node[left] {$E$};
+  \fill (F) circle (1pt) node[below] {$F$};
+  \fill (P) circle (1pt) node[right] {$P$};
+\end{tikzpicture}

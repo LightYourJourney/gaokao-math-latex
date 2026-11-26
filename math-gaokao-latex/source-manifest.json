@@ -4284,6 +4284,14 @@
         "gk-2013-fujian-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b80",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-spring-shanghai"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4293,7 +4301,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "fc992136-8f94-4182-bd92-3fa91aa27bcf",
+  "last_transaction_id": "3320eca0-8902-4484-90a5-ded28da40600",
   "papers": [
     {
       "blocked_from": null,
@@ -49733,9 +49741,85 @@
       "title": "2013 年·福建卷·理科",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_春季上海卷/figures/f2013_shanghai_spring_q09_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_春季上海卷/figures/f2013_shanghai_spring_q16_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_春季上海卷/figures/f2013_shanghai_spring_q25_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_春季上海卷/figures/f2013_shanghai_spring_q26_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_春季上海卷/figures/f2013_shanghai_spring_q30_axis.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_spring_shanghai",
+        "id": "gk-2013-spring-shanghai",
+        "note": "固定源为 11 页 A4：第 1—7 页为试卷（题面与作答空位），第 8—11 页为官方参考答案。填空题 1—12（每题 3 分）、选择题 13—24（每题 3 分）、解答题 25—31（7+7+8+13+12+13+18=78 分），共 31 题、满分 150 分。**固定源附官方参考答案与详细解答，答案证据等级 A**：最终答案逐字转录自第 8 页答案表，解答 25—31 按第 8—11 页官方解答整理并复算。第 16 题为四图象选项（$f(x)=x^{-1/2}$），四图可唯一判读（仅 (A) 定义域 $x>0$），按源重绘。原页图：第 9 题正方体、第 16 题四联图象、第 25 题正三棱柱、第 26 题直角三角形、第 30 题坐标系与点列，均以 TikZ 重绘共 5 幅，已登记。",
+        "pages_q": [
+          1,
+          7
+        ],
+        "pages_s": [
+          8,
+          11
+        ],
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            25,
+            31
+          ],
+          "选择题": [
+            13,
+            24
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季上海"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-spring-shanghai",
+      "production_state": "complete",
+      "project_dir": "2013_春季上海卷",
+      "question_count": 31,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_春季上海_含解析.md",
+        "questions": "2013/2013_数学真题_春季上海_试题.md",
+        "solution_body": "2013/2013_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-3c0adb436942658966dbd5d3b9d6397184b3c18c088bac86e0c6689a3efbf701"
+      ],
+      "title": "2013 年·春季上海卷",
+      "track": "none",
+      "year": 2013
     }
   ],
-  "revision": 11930,
+  "revision": 11935,
   "schema_version": 1,
   "sources": [
     {
@@ -50400,8 +50484,8 @@
       "exam_type": "spring",
       "git_blob_oid": "5a68071c3cc82c25076d140a8e9ca8cdb95ea2ac",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013春季上海.pdf",
       "regions": [],
       "source_id": "src-3c0adb436942658966dbd5d3b9d6397184b3c18c088bac86e0c6689a3efbf701",

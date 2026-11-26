@@ -1,0 +1,26 @@
+% 2013 年春季上海卷第 30 题：y 轴正半轴上的点 A 与 x 轴上的点列 P1,P2,P3,P4
+% 各射线自 A 引出；P4 之后以点列省略号表示继续。
+\begin{tikzpicture}[>=stealth, scale=1.0, font=\small]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0,3.4);
+  \coordinate (P1) at (1.05,0);
+  \coordinate (P2) at (1.80,0);
+  \coordinate (P3) at (2.75,0);
+  \coordinate (P4) at (4.40,0);
+  \draw[->] (0,0) -- (7.10,0) node[below] {$x$};
+  \draw[->] (0,0) -- (0,4.05) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \foreach \p in {P1,P2,P3,P4}{
+    \draw (A) -- (\p);
+    \fill (\p) circle (1.3pt);
+  }
+  % 点列省略号
+  \fill (5.55,0) circle (0.7pt);
+  \fill (5.85,0) circle (0.7pt);
+  \fill (6.15,0) circle (0.7pt);
+  \fill (A) circle (1.3pt) node[left] {$A$};
+  \node[below] at (P1) {$P_1$};
+  \node[below] at (P2) {$P_2$};
+  \node[below] at (P3) {$P_3$};
+  \node[below] at (P4) {$P_4$};
+\end{tikzpicture}
