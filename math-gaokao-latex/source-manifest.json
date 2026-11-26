@@ -4244,6 +4244,14 @@
         "gk-2013-shanghai-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b75",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-hubei-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4253,7 +4261,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d19b5e7a-d0d5-4ed7-b014-032bd7f07ebd",
+  "last_transaction_id": "1dbeded9-48db-4e01-880e-c47fbd84b40e",
   "papers": [
     {
       "blocked_from": null,
@@ -49300,9 +49308,90 @@
       "title": "2013 年·上海卷·理科",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_理科/figures/f2013_hubei_science_q08_threeviews.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_理科/figures/f2013_hubei_science_q09_cube125.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_理科/figures/f2013_hubei_science_q11_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_理科/figures/f2013_hubei_science_q12_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_理科/figures/f2013_hubei_science_q15_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_理科/figures/f2013_hubei_science_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖北卷_理科/figures/f2013_hubei_science_q21_ellipses.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_hubei_science",
+        "id": "gk-2013-hubei-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 807、808（第 807 面为选择 1—10、填空 11—16、解答 17—18；第 808 面为解答 19—22）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖北卷题号：选择 1—10、填空 11—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 8 题三视图、第 9 题正方体切割、第 12 题程序框图、第 15 题圆与射影、第 19 题圆锥、第 21 题椭圆与椭圆，均以 TikZ 重绘共 7 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖北卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "湖北理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-hubei-science",
+      "production_state": "complete",
+      "project_dir": "2013_湖北卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_湖北理_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_湖北理_含解析.md",
+        "questions": "2013/2013_数学真题_湖北理_试题.md",
+        "solution_body": "2013/2013_数学真题_湖北理_解析正文.md"
+      },
+      "source_ids": [
+        "src-8cd28eff2045e94dd631498faa7ddfa9d2ee7f6c0277e1bcca73e9ad3560516c"
+      ],
+      "title": "2013 年·湖北卷·理科",
+      "track": "science",
+      "year": 2013
     }
   ],
-  "revision": 11896,
+  "revision": 11901,
   "schema_version": 1,
   "sources": [
     {
@@ -63171,8 +63260,8 @@
       "exam_type": "regular",
       "git_blob_oid": "2ef6743f513d3bb837cfb0a2a4d113bcf0c18af1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-hubei-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013湖北理.pdf",
       "regions": [],
       "source_id": "src-8cd28eff2045e94dd631498faa7ddfa9d2ee7f6c0277e1bcca73e9ad3560516c",

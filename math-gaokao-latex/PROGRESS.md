@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 湖北卷（理科）：phase7-b75 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2013-hubei-science`，**22 个题号**（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-8cd28eff2045e94dd631498faa7ddfa9d2ee7f6c0277e1bcca73e9ad3560516c`，2 页 A3，印面 807、808。
+- 答案（等级 D）：1 D（$1-\mathrm i$）；2 C（$[0,2)\cup(4,+\infty)$）；3 A；4 B（$\frac\pi6$）；5 D；6 A（$\frac{3\sqrt2}2$）；7 C（$4+25\ln5$）；8 C（$V_2<V_1<V_3<V_4$）；9 B（$\frac65$）；10 D；11 (1) $0.0044$、(2) $70$；12 $5$；13 $\frac{3\sqrt{14}}7$；14 $1000$；15 $8$；16 $\frac{\sqrt6}3$；17 (1) $\frac\pi3$、(2) $\frac57$；18 (1) $a_n=5\cdot3^{n-2}$ 或 $5(-1)^n$、(2) 不存在；19 (1) $l\parallel$ 平面 $PAC$、(2) 证明；20 (1) $0.9772$、(2) A 型 5 辆、B 型 12 辆、36800 元；21 (1) $\lambda=1+\sqrt2$、(2) $\lambda>1+\sqrt2$ 时存在、$1<\lambda\leqslant1+\sqrt2$ 时不存在；22 (1) $0$、(2) 证明、(3) 211。
+- **来源核对**：子代理按 PDF 纠正任务提示——第 6 题 $A(-1,1)$；第 15 题问 $\frac{CE}{EO}$（答案 8）；第 22(3) 为 $\sqrt[3]{81}+\cdots+\sqrt[3]{125}$（三次根号）；第 11 题原页有直方图（补绘）。
+- 主代理复核：第 7 题 $t=4$、$4+25\ln5$；第 8 题 $V_1=\frac{7\pi}3,V_2=2\pi,V_3=8,V_4=\frac{28}3$；第 9 题涂漆面总数 $8+36+54=150$、$/125=\frac65$；第 13 题柯西取等 $(x,y,z)=\frac1{\sqrt{14}}(1,2,3)$；第 15 题 $CE=\frac{8R}9,EO=\frac R9$；第 16 题 $e=\frac{\sqrt6}3$；第 17 题 $bc=20$、$\sin B\sin C=\frac57$；第 20 题 $36A+60B\ge900$、$A+B\le21$、$B\le A+7$ 得 $(5,12)$、36800；第 21 题 $\lambda=1+\sqrt2$、存在性 $\lambda>1+\sqrt2$；第 22 题 $f_{\min}=0$、夹逼 $210.225<S<210.9$、$[S]=211$（数值复核 $S\approx210.563$）。
+- 图稿：7 张 TikZ（三视图、正方体切割、直方图、程序框图、圆与射影、圆锥、双椭圆）。
+- 验收：四版 7/32/9/25 页（共 73 页），四 log 全 0（Overfull、missing characters 均 0）；review 73 页 **pass 540 + not_applicable 44、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；7 条图稿引用全部命中。
+- 全库：manifest **666 卷 / 775 来源 / 512 批次**，complete 548、blocked 118，未绑定 **110**；revision 11901。
+
 ### 2013 上海卷（理科）：phase7-b74 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2013-shanghai-science`，**23 个题号**（填空 1—14、选择 15—18、解答 19—23）；固定来源 `src-a154b76fb2f503ca22798aa2f741aa59cca0ae20de495426a2923f7af3526e39`，2 页 A3，印面 841、842。
 - 答案（等级 D）：1 $\frac13$；2 $-2$；3 $0$；4 $\arccos\left(-\frac13\right)$；5 $-2$；6 $\log_3 4$；7 $\frac{1+\sqrt5}2$；8 $\frac{13}{18}$；9 $\frac{4\sqrt6}3$；10 $30d^2$；11 $\frac23$；12 $\left(-\infty,-\frac87\right]$；13 $2\pi^2+16\pi$；14 $2$；15 B；16 B；17 A（18 个）；18 D（$m<0,M<0$）；19 $\frac23$；20 (1) $[3,10]$、(2) $x=6$ 千克/小时、最大利润 $457500$ 元；21 (1) $\left(0,\frac34\right]$、(2) $\frac{43\pi}3$；22 (1) $x=-\sqrt3$、(2)(3) 证明；23 (1) $a_2=2,a_3=c+10$、(2) 证明、(3) $a_1\geqslant-c$ 或 $a_1=-c-8$。

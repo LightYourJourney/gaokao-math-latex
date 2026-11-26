@@ -1,0 +1,35 @@
+% 2013 湖北卷理科第 19 题：三棱锥 P-ABC，PC⊥平面 ABC，E、F 为 PA、PC 中点。
+% 底面圆 O 的直径为 AB，C 在圆上；图中 PC 为虚线（被锥体遮挡）。
+\begin{tikzpicture}[scale=0.95, line width=0.6pt, font=\small, >=Stealth]
+
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-3,0);
+  \coordinate (B) at (3,0);
+  \coordinate (C) at (1.03,0.94);
+  \coordinate (P) at (1.03,4.9);
+  \coordinate (E) at (-0.985,2.45);
+  \coordinate (F) at (1.03,2.92);
+
+  % 底面圆：前半实线，后半虚线
+  \draw (3,0) arc[start angle=0, end angle=-180, x radius=3, y radius=1];
+  \draw[dashed] (3,0) arc[start angle=0, end angle=180, x radius=3, y radius=1];
+  \draw (A) -- (B);
+
+  % 棱
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw[dashed] (P) -- (C);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (B) -- (C);
+
+  % 中点标记
+  \fill (E) circle (1.3pt) node[left] {$E$};
+  \fill (F) circle (1.3pt) node[right] {$F$};
+  \fill (O) circle (1.3pt) node[below] {$O$};
+
+  \fill (A) circle (1.3pt) node[left] {$A$};
+  \fill (B) circle (1.3pt) node[right] {$B$};
+  \fill (C) circle (1.3pt) node[right] {$C$};
+  \fill (P) circle (1.3pt) node[above] {$P$};
+
+\end{tikzpicture}

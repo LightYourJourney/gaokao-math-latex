@@ -1,0 +1,1094 @@
+% answers.tex —— 2013 年·湖北卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2013/2013_数学真题_湖北理_试题.md + 2013/2013_数学真题_湖北理_解析正文.md + 2013/2013_数学真题_湖北理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+在复平面内，复数 $z=\dfrac{2\mathrm i}{1+\mathrm i}$（$\mathrm i$ 为虚数单位）的共轭复数对应的点位于\mbox{（　　）}
+
+（A）第一象限；（B）第二象限；（C）第三象限；（D）第四象限。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+分子、分母同乘 $1-\mathrm i$：
+\nopagebreak[4]
+\[z=\frac{2\mathrm i}{1+\mathrm i}
+=\frac{2\mathrm i(1-\mathrm i)}{(1+\mathrm i)(1-\mathrm i)}
+=\frac{2\mathrm i+2}{2}=1+\mathrm i.\]
+故共轭复数 $\overline z=1-\mathrm i$，对应点为 $(1,-1)$，位于第四象限。选 D。
+
+\gkanswer{答案：D。$z=1+\mathrm i$，其共轭复数为 $1-\mathrm i$，对应点在第四象限。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+已知全集为 $\mathbf R$，集合 $A=\left\{x\left|\left(\dfrac12\right)^x\leqslant1\right.\right\}$，$B=\{x\mid x^2-6x+8\leqslant0\}$，则 $A\cap\complement_{\mathbf R}B=$\mbox{（　　）}
+
+（A）$\{x\mid x\leqslant0\}$；（B）$\{x\mid2\leqslant x\leqslant4\}$；（C）$\{x\mid0\leqslant x<2$ 或 $x>4\}$；（D）$\{x\mid0<x\leqslant2$ 或 $x\geqslant4\}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由 $\left(\dfrac12\right)^x\leqslant1=\left(\dfrac12\right)^0$，底数 $\dfrac12\in(0,1)$，不等号反向，得 $x\geqslant0$，即
+\nopagebreak[4]
+\[A=[0,+\infty).\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[x^2-6x+8\leqslant0\iff(x-2)(x-4)\leqslant0\iff2\leqslant x\leqslant4,\]
+\Needspace{5\baselineskip}
+即 $B=[2,4]$，从而
+\nopagebreak[4]
+\[\complement_{\mathbf R}B=(-\infty,2)\cup(4,+\infty).\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[A\cap\complement_{\mathbf R}B=[0,2)\cup(4,+\infty)
+=\{x\mid0\leqslant x<2\text{ \text{或} }x>4\}.\]
+选 C。
+
+\gkanswer{答案：C。$A=[0,+\infty)$，$\complement_{\mathbf R}B=(-\infty,2)\cup(4,+\infty)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+在一次跳伞训练中，甲、乙两位学员各跳一次。设命题 $p$ 是“甲降落在指定范围”，$q$ 是“乙降落在指定范围”，则命题“至少有一位学员没有降落在指定范围”可表示为\mbox{（　　）}
+
+（A）$(\neg p)\lor(\neg q)$；（B）$p\lor(\neg q)$；（C）$(\neg p)\land(\neg q)$；（D）$p\lor q$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+“至少有一位学员没有降落在指定范围”即“甲没有降落或乙没有降落”，也就是 $\neg p$ 与 $\neg q$ 至少一个成立：
+\nopagebreak[4]
+\[(\neg p)\lor(\neg q).\]
+选 A。
+
+\gkanswer{答案：A。“至少一位没有降落”即“甲未降落或乙未降落”，为 $(\neg p)\lor(\neg q)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+将函数 $y=\sqrt3\cos x+\sin x$（$x\in\mathbf R$）的图象向左平移 $m$（$m>0$）个单位长度后，所得到的图象关于 $y$ 轴对称，则 $m$ 的最小值是\mbox{（　　）}
+
+（A）$\dfrac{\pi}{12}$；（B）$\dfrac{\pi}{6}$；（C）$\dfrac{\pi}{3}$；（D）$\dfrac{5\pi}{6}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+先化简：
+\nopagebreak[4]
+\[y=\sqrt3\cos x+\sin x
+=2\left(\frac{\sqrt3}{2}\cos x+\frac12\sin x\right)
+=2\sin\left(x+\frac\pi3\right).\]
+\Needspace{5\baselineskip}
+向左平移 $m$ 个单位后，函数变为
+\nopagebreak[4]
+\[y=2\sin\left(x+m+\frac\pi3\right).\]
+\Needspace{5\baselineskip}
+其图象关于 $y$ 轴对称，当且仅当它是偶函数。而 $\sin(x+\varphi)$ 为偶函数当且仅当 $\varphi=\dfrac\pi2+k\pi$（$k\in\mathbf Z$），故
+\nopagebreak[4]
+\[m+\frac\pi3=\frac\pi2+k\pi\Longrightarrow m=\frac\pi6+k\pi.\]
+\Needspace{5\baselineskip}
+由 $m>0$ 取 $k=0,1,2,\cdots$，最小值为
+\nopagebreak[4]
+\[m=\frac\pi6.\]
+选 B。
+
+\gkanswer{答案：B。$y=2\sin\left(x+\dfrac\pi3\right)$，平移后需 $m+\dfrac\pi3=\dfrac\pi2+k\pi$，最小 $m=\dfrac\pi6$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+已知 $0<\theta<\dfrac{\pi}{4}$，则双曲线 $C_1:\dfrac{x^2}{\cos^2\theta}-\dfrac{y^2}{\sin^2\theta}=1$ 与 $C_2:\dfrac{y^2}{\sin^2\theta}-\dfrac{x^2}{\sin^2\theta\tan^2\theta}=1$ 的\mbox{（　　）}
+
+（A）实轴长相等；（B）虚轴长相等；（C）焦距相等；（D）离心率相等。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+对 $C_1$，实半轴 $a_1=\cos\theta$，虚半轴 $b_1=\sin\theta$，故
+\nopagebreak[4]
+\[c_1^2=a_1^2+b_1^2=\cos^2\theta+\sin^2\theta=1,\qquad e_1=\frac{c_1}{a_1}=\frac1{\cos\theta}.\]
+\Needspace{5\baselineskip}
+对 $C_2$，实半轴 $a_2=\sin\theta$，虚半轴 $b_2=\sin\theta\tan\theta$，故
+\nopagebreak[4]
+\[c_2^2=a_2^2+b_2^2=\sin^2\theta\left(1+\tan^2\theta\right)
+=\sin^2\theta\cdot\frac1{\cos^2\theta}=\tan^2\theta,\]
+\Needspace{5\baselineskip}
+即 $c_2=\tan\theta$，从而
+\nopagebreak[4]
+\[e_2=\frac{c_2}{a_2}=\frac{\tan\theta}{\sin\theta}=\frac1{\cos\theta}.\]
+所以 $e_1=e_2$，两双曲线的离心率相等。由于 $0<\theta<\dfrac\pi4$ 时 $\sin\theta\neq\cos\theta$，实轴长 $2\cos\theta$ 与 $2\sin\theta$ 不等，虚轴长 $2\sin\theta$ 与 $2\sin\theta\tan\theta$ 不等，焦距 $2$ 与 $2\tan\theta$ 不等。选 D。
+
+\gkanswer{答案：D。$C_1$ 的离心率为 $\dfrac1{\cos\theta}$，$C_2$ 的离心率也为 $\dfrac1{\cos\theta}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+已知点 $A(-1,1)$，$B(1,2)$，$C(-2,-1)$，$D(3,4)$，则向量 $\overrightarrow{AB}$ 在 $\overrightarrow{CD}$ 方向上的投影为\mbox{（　　）}
+
+（A）$\dfrac{3\sqrt2}{2}$；（B）$\dfrac{3\sqrt{15}}{2}$；（C）$-\dfrac{3\sqrt2}{2}$；（D）$-\dfrac{3\sqrt{15}}{2}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\nopagebreak[4]
+\[\overrightarrow{AB}=(1-(-1),\,2-1)=(2,1),\qquad
+\overrightarrow{CD}=(3-(-2),\,4-(-1))=(5,5).\]
+\Needspace{5\baselineskip}
+$\overrightarrow{AB}$ 在 $\overrightarrow{CD}$ 方向上的投影为
+\nopagebreak[4]
+\[\frac{\overrightarrow{AB}\cdot\overrightarrow{CD}}{\left|\overrightarrow{CD}\right|}
+=\frac{2\cdot5+1\cdot5}{\sqrt{5^2+5^2}}
+=\frac{15}{5\sqrt2}=\frac{3\sqrt2}{2}.\]
+选 A。
+
+\gkanswer{答案：A。$\overrightarrow{AB}=(2,1)$，$\overrightarrow{CD}=(5,5)$，投影为 $\dfrac{15}{5\sqrt2}=\dfrac{3\sqrt2}{2}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+一辆汽车在高速公路上行驶，由于遇到紧急情况而刹车，以速度 $v(t)=7-3t+\dfrac{25}{1+t}$（$t$ 的单位：$\mathrm s$，$v$ 的单位：$\mathrm{m/s}$）行驶至停止，在此期间汽车继续行驶的距离（单位：$\mathrm m$）是\mbox{（　　）}
+
+（A）$1+25\ln5$；（B）$8+25\ln\dfrac{11}{3}$；（C）$4+25\ln5$；（D）$4+50\ln2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+汽车停止时 $v(t)=0$，即
+\nopagebreak[4]
+\[7-3t+\frac{25}{1+t}=0.\]
+\Needspace{5\baselineskip}
+两边乘 $1+t>0$：
+\nopagebreak[4]
+\[(7-3t)(1+t)+25=0
+\Longrightarrow -3t^2+4t+32=0
+\Longrightarrow 3t^2-4t-32=0.\]
+因式分解得 $(3t+8)(t-4)=0$，故 $t=4$（$t=-\dfrac83$ 舍去）。
+
+\Needspace{5\baselineskip}
+行驶距离为
+\nopagebreak[4]
+\[\begin{aligned}
+s&=\int_0^4\left(7-3t+\frac{25}{1+t}\right)\mathrm dt\\
+&=\left[7t-\frac32t^2+25\ln(1+t)\right]_0^4\\
+&=28-24+25\ln5=4+25\ln5.
+\end{aligned}\]
+选 C。
+
+\gkanswer{答案：C。由 $v(t)=0$ 得 $t=4$，距离为 $\displaystyle\int_0^4v(t)\,\mathrm dt=4+25\ln5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+一个几何体的三视图如图所示，该几何体从上到下由四个简单几何体组成，其体积分别记为 $V_1$，$V_2$，$V_3$，$V_4$，上面两个简单几何体均为旋转体，下面两个简单几何体均为多面体，则有\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_hubei_science_q08_threeviews}\end{center}
+\nopagebreak[4]
+（A）$V_1<V_2<V_4<V_3$；（B）$V_1<V_3<V_2<V_4$；（C）$V_2<V_1<V_3<V_4$；（D）$V_2<V_3<V_1<V_4$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+由三视图读出四个几何体（自上而下）：
+
+\begin{itemize}
+\item $V_1$：圆台，上底半径 $2$、下底半径 $1$、高 $1$；
+\item $V_2$：圆柱，底面半径 $1$、高 $2$；
+\item $V_3$：正四棱柱，底面边长 $2$、高 $2$；
+\item $V_4$：正四棱台，上底边长 $2$、下底边长 $4$、高 $1$。
+\end{itemize}
+
+正视图给出各段高度 $1,2,2,1$ 与上下底宽 $4$、中间宽 $2$；俯视图外圈为边长 $4$ 的正方形与直径 $4$ 的圆，内圈虚线为边长 $2$ 的正方形与直径 $2$ 的圆，分别对应棱台、圆台与棱柱、圆柱的轮廓。
+
+\Needspace{5\baselineskip}
+逐一计算：
+\nopagebreak[4]
+\[V_1=\frac{\pi\cdot1}{3}\left(2^2+2\cdot1+1^2\right)=\frac{7\pi}{3}\approx7.33,\]
+\nopagebreak[4]
+\[V_2=\pi\cdot1^2\cdot2=2\pi\approx6.28,\]
+\nopagebreak[4]
+\[V_3=2\cdot2\cdot2=8,\]
+\nopagebreak[4]
+\[V_4=\frac13\left(2^2+4^2+2\cdot4\right)=\frac{28}{3}\approx9.33.\]
+\Needspace{5\baselineskip}
+比较得
+\nopagebreak[4]
+\[V_2<V_1<V_3<V_4.\]
+选 C。
+
+\gkanswer{答案：C。$V_1=\dfrac{7\pi}{3}$，$V_2=2\pi$，$V_3=8$，$V_4=\dfrac{28}{3}$，故 $V_2<V_1<V_3<V_4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+如图，将一个各面都涂了油漆的正方体，切割为 $125$ 个同样大小的小正方体，经过搅拌后，从中随机取一个小正方体，记它的涂漆面数为 $X$，则 $X$ 的均值 $E(X)=$\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_hubei_science_q09_cube125}\end{center}
+\nopagebreak[4]
+（A）$\dfrac{126}{125}$；（B）$\dfrac65$；（C）$\dfrac{168}{125}$；（D）$\dfrac75$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+$125=5^3$ 个小正方体中，按涂漆面数 $X$ 分类：
+
+\begin{itemize}
+\item 三个面涂漆：大正方体的 $8$ 个顶点处，共 $8$ 个；
+\item 两个面涂漆：每条棱上除两端外的 $3$ 个，共 $12\times3=36$ 个；
+\item 一个面涂漆：每个面上除边界的 $3\times3=9$ 个，共 $6\times9=54$ 个；
+\item 零个面涂漆：内部的 $3^3=27$ 个。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+校验总数 $8+36+54+27=125$。等可能地取一个小正方体，故
+\nopagebreak[4]
+\[E(X)=\frac{8\cdot3+36\cdot2+54\cdot1+27\cdot0}{125}
+=\frac{24+72+54}{125}
+=\frac{150}{125}=\frac65.\]
+选 B。
+
+\gkanswer{答案：B。$E(X)=\dfrac{8\cdot3+36\cdot2+54\cdot1}{125}=\dfrac65$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知 $a$ 为常数，函数 $f(x)=x(\ln x-ax)$ 有两个极值点 $x_1$，$x_2$（$x_1<x_2$），则\mbox{（　　）}
+
+（A）$f(x_1)>0$，$f(x_2)>-\dfrac12$；（B）$f(x_1)<0$，$f(x_2)<-\dfrac12$；（C）$f(x_1)>0$，$f(x_2)<-\dfrac12$；（D）$f(x_1)<0$，$f(x_2)>-\dfrac12$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\nopagebreak[4]
+\[f'(x)=\ln x+1-2ax.\]
+\Needspace{5\baselineskip}
+$f$ 有两个极值点，等价于方程
+\nopagebreak[4]
+\[\frac{\ln x+1}{x}=2a\]
+\Needspace{5\baselineskip}
+在 $(0,+\infty)$ 上有两个不同实根。令
+\nopagebreak[4]
+\[g(x)=\frac{\ln x+1}{x},\qquad
+g'(x)=\frac{\frac1x\cdot x-(\ln x+1)}{x^2}=-\frac{\ln x}{x^2}.\]
+\Needspace{5\baselineskip}
+故 $g$ 在 $(0,1)$ 上递增、在 $(1,+\infty)$ 上递减，最大值为 $g(1)=1$；又 $x\to0^+$ 时 $g(x)\to-\infty$，$x\to+\infty$ 时 $g(x)\to0^+$。因此有两根当且仅当
+\nopagebreak[4]
+\[0<2a<1\iff0<a<\frac12.\]
+此时 $0<x_1<1<x_2$。
+
+\Needspace{5\baselineskip}
+在极值点处 $2ax=\ln x+1$，即 $ax=\dfrac{\ln x+1}{2}$，于是
+\nopagebreak[4]
+\[f(x)=x\ln x-ax^2
+=x\ln x-\frac{x(\ln x+1)}{2}
+=\frac{x(\ln x-1)}{2}.\]
+\Needspace{5\baselineskip}
+因为 $0<x_1<1$，$\ln x_1<0$，所以
+\nopagebreak[4]
+\[f(x_1)=\frac{x_1(\ln x_1-1)}{2}<0.\]
+\Needspace{5\baselineskip}
+再令 $\varphi(x)=\dfrac{x(\ln x-1)}{2}$，则 $\varphi'(x)=\dfrac{\ln x}{2}>0$（$x>1$），故 $\varphi$ 在 $(1,+\infty)$ 上严格递增，而 $\varphi(1)=-\dfrac12$。由 $x_2>1$ 得
+\nopagebreak[4]
+\[f(x_2)>\varphi(1)=-\frac12.\]
+选 D。
+
+\gkanswer{答案：D。极值点满足 $2ax=\ln x+1$，$x_1<1<x_2$；$f(x_1)<0$，$f(x_2)>-\dfrac12$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+从某小区抽取 $100$ 户居民进行月用电量调查，发现其用电量都在 $50$ 至 $350$ 度之间，频率分布直方图如图所示。
+
+（1） 直方图中 $x$ 的值为\gkblank{}；
+
+（2） 在这些用户中，用电量落在区间 $[100,250)$ 内的户数为\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_hubei_science_q11_histogram}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 直方图各矩形面积之和为 $1$，组距为 $50$，故各矩形高之和为
+\nopagebreak[4]
+\[\frac1{50}=0.02.\]
+\Needspace{5\baselineskip}
+由图中读出六个矩形的高依次为
+\nopagebreak[4]
+\[0.0024,\ 0.0036,\ 0.0060,\ x,\ 0.0024,\ 0.0012.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[0.0024+0.0036+0.0060+x+0.0024+0.0012=0.02,\]
+\Needspace{5\baselineskip}
+即 $0.0156+x=0.02$，解得
+\nopagebreak[4]
+\[x=0.0044.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 区间 $[100,250)$ 覆盖第 $2$、$3$、$4$ 组，频率为
+\nopagebreak[4]
+\[50(0.0036+0.0060+0.0044)=50\times0.014=0.7.\]
+\Needspace{5\baselineskip}
+故所求户数为
+\nopagebreak[4]
+\[0.7\times100=70.\]
+
+\gkanswer{答案（1）：$0.0044$。由 $50(0.0024+0.0036+0.0060+x+0.0024+0.0012)=1$ 解得。}
+
+\gkanswer{答案（2）：$70$。$50(0.0036+0.0060+0.0044)\times100=70$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+阅读如图所示的程序框图，运行相应的程序，输出的结果 $i=$\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_hubei_science_q12_flowchart}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+按框图逐步执行，列表如下：
+
+\begin{center}
+\begin{tabular}{lllll}
+\toprule
+步 & $a$ & $i$ & 判断 $a=4$ & 下一步 \\
+\midrule
+初值 & $10$ & $1$ & 否 & $a$ 偶，$a=\dfrac{10}{2}=5$ \\
+1 & $5$ & $2$ & 否 & $a$ 奇，$a=3\times5+1=16$ \\
+2 & $16$ & $3$ & 否 & $a$ 偶，$a=8$ \\
+3 & $8$ & $4$ & 否 & $a$ 偶，$a=4$ \\
+4 & $4$ & $5$ & 是 & 输出 $i$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{5\baselineskip}
+注意 $i=i+1$ 在更新 $a$ 之后执行，因此 $a=4$ 时对应的 $i=5$。输出结果为
+\nopagebreak[4]
+\[i=5.\]
+
+\gkanswer{答案：$5$。$a$ 依次取 $10,5,16,8,4$，$i$ 依次为 $1,2,3,4,5$，$a=4$ 时输出 $i=5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+设 $x$，$y$，$z\in\mathbf R$，且满足：$x^2+y^2+z^2=1$，$x+2y+3z=\sqrt{14}$，则 $x+y+z=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由柯西不等式，
+\nopagebreak[4]
+\[(x+2y+3z)^2\leqslant\left(1^2+2^2+3^2\right)\left(x^2+y^2+z^2\right)=14\cdot1=14.\]
+\Needspace{5\baselineskip}
+题设 $x+2y+3z=\sqrt{14}$，上式取到等号，故等号条件成立：
+\nopagebreak[4]
+\[\frac x1=\frac y2=\frac z3=t.\]
+\Needspace{5\baselineskip}
+代入 $x+2y+3z=\sqrt{14}$：
+\nopagebreak[4]
+\[t+4t+9t=14t=\sqrt{14}\Longrightarrow t=\frac1{\sqrt{14}}.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[x+y+z=6t=\frac6{\sqrt{14}}=\frac{3\sqrt{14}}{7}.\]
+
+\gkanswer{答案：$\dfrac{3\sqrt{14}}{7}$。由柯西不等式取等得 $(x,y,z)=\dfrac1{\sqrt{14}}(1,2,3)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+古希腊毕达哥拉斯学派的数学家研究过各种多边形数，如三角形数 $1,3,6,10,\cdots$，第 $n$ 个三角形数为 $\dfrac{n(n+1)}{2}=\dfrac12n^2+\dfrac12n$。记第 $n$ 个 $k$ 边形数为 $N(n,k)$（$k\geqslant3$），以下列出了部分 $k$ 边形数中第 $n$ 个数的表达式：
+
+三角形数 $N(n,3)=\dfrac12n^2+\dfrac12n$，
+
+正方形数 $N(n,4)=n^2$，
+
+五边形数 $N(n,5)=\dfrac32n^2-\dfrac12n$，
+
+六边形数 $N(n,6)=2n^2-n$，
+
+$\cdots\cdots$
+
+可以推测 $N(n,k)$ 的表达式，由此计算 $N(10,24)=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+由所列表达式归纳：
+\nopagebreak[4]
+\[N(n,3)=\frac12n^2+\frac12n,\quad
+N(n,4)=n^2,\quad
+N(n,5)=\frac32n^2-\frac12n,\quad
+N(n,6)=2n^2-n.\]
+\Needspace{5\baselineskip}
+二次项系数 $\dfrac12,1,\dfrac32,2$ 构成首项 $\dfrac12$、公差 $\dfrac12$ 的等差数列，故 $n^2$ 的系数为 $\dfrac{k-2}{2}$；一次项系数 $\dfrac12,0,-\dfrac12,-1$ 构成首项 $\dfrac12$、公差 $-\dfrac12$ 的等差数列，故 $n$ 的系数为 $-\dfrac{k-4}{2}$。因此
+\nopagebreak[4]
+\[N(n,k)=\frac{k-2}{2}n^2-\frac{k-4}{2}n.\]
+\Needspace{5\baselineskip}
+取 $k=3,4,5,6$ 逐一验证均与题给四式一致。于是
+\nopagebreak[4]
+\[N(10,24)=\frac{22}{2}\cdot10^2-\frac{20}{2}\cdot10
+=1100-100=1000.\]
+
+\gkanswer{答案：$1000$。$N(n,k)=\dfrac{k-2}{2}n^2-\dfrac{k-4}{2}n$，故 $N(10,24)=10(22\cdot10-20)/2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+如图，圆 $O$ 上一点 $C$ 在直径 $AB$ 上的射影为 $D$，点 $D$ 在半径 $OC$ 上的射影为 $E$，若 $AB=3AD$，则 $\dfrac{CE}{EO}$ 的值为\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_hubei_science_q15_circle}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设圆 $O$ 的半径为 $R$，取 $O$ 为原点、$AB$ 所在直线为 $x$ 轴，则
+\nopagebreak[4]
+\[A(-R,0),\quad B(R,0).\]
+\Needspace{5\baselineskip}
+由 $AB=3AD$ 得 $AD=\dfrac{2R}{3}$，故
+\nopagebreak[4]
+\[D\left(-R+\frac{2R}{3},0\right)=\left(-\frac R3,0\right),\qquad OD=\frac R3.\]
+\Needspace{5\baselineskip}
+设 $C(x_0,y_0)$，因 $CD\perp AB$，所以 $x_0=-\dfrac R3$，再由 $C$ 在圆上得
+\nopagebreak[4]
+\[y_0^2=R^2-\frac{R^2}{9}=\frac{8R^2}{9}.\]
+\Needspace{5\baselineskip}
+$E$ 是 $D$ 在 $OC$ 上的射影，故 $OE$ 等于 $\overrightarrow{OD}$ 在 $\overrightarrow{OC}$ 方向上的投影长度：
+\nopagebreak[4]
+\[OE=\frac{\overrightarrow{OD}\cdot\overrightarrow{OC}}{|OC|}
+=\frac{\left(-\frac R3\right)\left(-\frac R3\right)+0\cdot y_0}{R}
+=\frac{R^2/9}{R}=\frac R9.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[CE=OC-OE=R-\frac R9=\frac{8R}{9},\qquad
+\frac{CE}{EO}=\frac{8R/9}{R/9}=8.\]
+
+\gkanswer{答案：$8$。设半径为 $R$，则 $OD=\dfrac R3$，$OE=\dfrac R9$，$CE=\dfrac{8R}{9}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+在直角坐标系 $xOy$ 中，椭圆 $C$ 的参数方程为 $\begin{cases}x=a\cos\varphi,\\y=b\sin\varphi,\end{cases}$（$\varphi$ 为参数，$a>b>0$），在极坐标系（与直角坐标系 $xOy$ 取相同的长度单位，且以原点 $O$ 为极点，以 $x$ 轴正半轴为极轴）中，直线 $l$ 与圆 $O$ 的极坐标方程分别为 $\rho\sin\left(\theta+\dfrac{\pi}{4}\right)=\dfrac{\sqrt2}{2}m$（$m$ 为非零常数）与 $\rho=b$，若直线 $l$ 经过椭圆 $C$ 的焦点，且与圆 $O$ 相切，则椭圆 $C$ 的离心率为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+将直线 $l$ 的极坐标方程化为直角坐标方程：
+\nopagebreak[4]
+\[\rho\sin\left(\theta+\frac\pi4\right)=\frac{\sqrt2}{2}m
+\Longrightarrow \frac{\rho\sin\theta+\rho\cos\theta}{\sqrt2}=\frac{\sqrt2}{2}m
+\Longrightarrow x+y=m.\]
+\Needspace{5\baselineskip}
+圆 $O:\rho=b$ 即 $x^2+y^2=b^2$。直线 $x+y=m$ 与它相切，故圆心到直线的距离等于半径：
+\nopagebreak[4]
+\[\frac{|m|}{\sqrt2}=b\Longrightarrow m^2=2b^2.\]
+\Needspace{5\baselineskip}
+椭圆的焦点为 $(\pm c,0)$，其中 $c^2=a^2-b^2$。直线经过焦点，代入 $x+y=m$ 得 $m=\pm c$，故
+\nopagebreak[4]
+\[c^2=m^2=2b^2.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[a^2=b^2+c^2=3b^2,\qquad
+e=\frac ca=\frac{\sqrt{2b^2}}{\sqrt{3b^2}}=\sqrt{\frac23}=\frac{\sqrt6}{3}.\]
+
+\gkanswer{答案：$\dfrac{\sqrt6}{3}$。直线 $x+y=m$ 与圆相切得 $m=\sqrt2b$，过焦点得 $c=m$，故 $e=\dfrac{c}{a}=\dfrac{\sqrt2b}{\sqrt3b}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，角 $A$，$B$，$C$ 对应的边分别是 $a$，$b$，$c$，已知 $\cos2A-3\cos(B+C)=1$。
+
+（1） 求角 $A$ 的大小；
+
+（2） 若 $\triangle ABC$ 的面积 $S=5\sqrt3$，$b=5$，求 $\sin B\sin C$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 因为 $B+C=\pi-A$，所以
+\nopagebreak[4]
+\[\cos(B+C)=\cos(\pi-A)=-\cos A.\]
+\Needspace{5\baselineskip}
+原条件化为
+\nopagebreak[4]
+\[\cos2A+3\cos A=1.\]
+\Needspace{5\baselineskip}
+由 $\cos2A=2\cos^2A-1$ 得
+\nopagebreak[4]
+\[2\cos^2A+3\cos A-2=0
+\Longrightarrow(2\cos A-1)(\cos A+2)=0.\]
+\Needspace{5\baselineskip}
+因 $|\cos A|\leqslant1$，故 $\cos A=-2$ 舍去，只有
+\nopagebreak[4]
+\[\cos A=\frac12\Longrightarrow A=\frac\pi3.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 由面积公式
+\nopagebreak[4]
+\[S=\frac12bc\sin A=\frac12\cdot b\cdot c\cdot\frac{\sqrt3}{2}
+=\frac{\sqrt3}{4}bc=5\sqrt3,\]
+\Needspace{5\baselineskip}
+得 $bc=20$。又 $b=5$，故 $c=4$。由余弦定理
+\nopagebreak[4]
+\[a^2=b^2+c^2-2bc\cos A=25+16-2\cdot20\cdot\frac12=21.\]
+\Needspace{5\baselineskip}
+再由正弦定理 $\dfrac{b}{\sin B}=\dfrac{c}{\sin C}=\dfrac{a}{\sin A}$，得
+\nopagebreak[4]
+\[\sin B\sin C=\frac{b\sin A}{a}\cdot\frac{c\sin A}{a}
+=\frac{bc\sin^2A}{a^2}
+=\frac{20\cdot\frac34}{21}=\frac{15}{21}=\frac57.\]
+
+\gkanswer{答案（1）：$A=\dfrac\pi3$。由 $\cos2A+3\cos A=1$ 得 $(2\cos A-1)(\cos A+2)=0$。}
+
+\gkanswer{答案（2）：$\dfrac57$。$bc=20$，$c=4$，$a^2=21$，$\sin B\sin C=\dfrac{bc\sin^2A}{a^2}=\dfrac57$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+已知等比数列 $\{a_n\}$ 满足：$|a_2-a_3|=10$，$a_1a_2a_3=125$。
+
+（1） 求数列 $\{a_n\}$ 的通项公式；
+
+（2） 是否存在正整数 $m$，使得 $\dfrac{1}{a_1}+\dfrac{1}{a_2}+\cdots+\dfrac{1}{a_m}\geqslant1$？若存在，求 $m$ 的最小值；若不存在，说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 设公比为 $q$。由等比数列性质
+\nopagebreak[4]
+\[a_1a_2a_3=a_2^3=125\Longrightarrow a_2=5.\]
+\Needspace{5\baselineskip}
+又 $a_3=a_2q=5q$，由 $|a_2-a_3|=10$ 得
+\nopagebreak[4]
+\[|5-5q|=10\Longrightarrow|1-q|=2,\]
+故 $q=3$ 或 $q=-1$。
+
+\Needspace{5\baselineskip}
+若 $q=3$，则 $a_1=\dfrac{a_2}{q}=\dfrac53$，
+\nopagebreak[4]
+\[a_n=\frac53\cdot3^{n-1}=5\cdot3^{n-2}.\]
+\Needspace{5\baselineskip}
+若 $q=-1$，则 $a_1=\dfrac{5}{-1}=-5$，
+\nopagebreak[4]
+\[a_n=-5\cdot(-1)^{n-1}=5\cdot(-1)^n.\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[a_n=5\cdot3^{n-2}\quad\text{\text{或}}\quad a_n=5\cdot(-1)^n.\]
+
+\textbf{（2）} 分两种情形讨论。
+
+\Needspace{5\baselineskip}
+若 $a_n=5\cdot3^{n-2}$，则
+\nopagebreak[4]
+\[\frac1{a_n}=\frac35\left(\frac13\right)^{n-1},\]
+\Needspace{5\baselineskip}
+前 $m$ 项和为
+\nopagebreak[4]
+\[\sum_{k=1}^m\frac1{a_k}
+=\frac35\cdot\frac{1-\left(\frac13\right)^m}{1-\frac13}
+=\frac9{10}\left(1-\frac1{3^m}\right)<\frac9{10}<1.\]
+
+若 $a_n=5\cdot(-1)^n$，则 $\dfrac1{a_n}=\dfrac15(-1)^n$，前 $m$ 项和当 $m$ 为偶数时为 $0$，当 $m$ 为奇数时为 $-\dfrac15$，均小于 $1$。
+
+综上，不存在正整数 $m$ 使不等式成立。
+
+\gkanswer{答案（1）：$a_n=5\cdot3^{n-2}$ 或 $a_n=5\cdot(-1)^n$。由 $a_2=5$ 及 $|1-q|=2$ 得 $q=3$ 或 $q=-1$。}
+
+\gkanswer{答案（2）：不存在。$q=3$ 时部分和 $<0.9$；$q=-1$ 时部分和仅为 $0$ 或 $-\dfrac15$，均小于 $1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+如图，$AB$ 是圆 $O$ 的直径，点 $C$ 是圆 $O$ 上异于 $A$，$B$ 的点，直线 $PC\perp$ 平面 $ABC$，$E$，$F$ 分别是 $PA$，$PC$ 的中点。
+
+（1） 记平面 $BEF$ 与平面 $ABC$ 的交线为 $l$，试判断直线 $l$ 与平面 $PAC$ 的位置关系，并加以证明；
+
+（2） 设（1）中的直线 $l$ 与圆 $O$ 的另一个交点为 $D$，且点 $Q$ 满足 $\overrightarrow{DQ}=\dfrac12\overrightarrow{CP}$，记直线 $PQ$ 与平面 $ABC$ 所成的角为 $\theta$，异面直线 $PQ$ 与 $EF$ 所成的角为 $\alpha$，二面角 $E-l-C$ 的大小为 $\beta$，求证：$\sin\theta=\sin\alpha\sin\beta$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_hubei_science_q19_pyramid}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 在 $\triangle PAC$ 中，$E$，$F$ 分别是 $PA$，$PC$ 的中点，故
+\nopagebreak[4]
+\[EF\parallel AC.\]
+\Needspace{5\baselineskip}
+因为 $AC\subset$ 平面 $ABC$，而 $EF\not\subset$ 平面 $ABC$（$E$ 不在平面 $ABC$ 内），所以
+\nopagebreak[4]
+\[EF\parallel\text{\text{平面} }ABC.\]
+\Needspace{5\baselineskip}
+又 $EF\subset$ 平面 $BEF$，且平面 $BEF\cap$ 平面 $ABC=l$，由线面平行的性质得
+\nopagebreak[4]
+\[EF\parallel l.\]
+\Needspace{5\baselineskip}
+于是 $l\parallel AC$。而 $AC\subset$ 平面 $PAC$，$l\not\subset$ 平面 $PAC$（否则 $B\in$ 平面 $PAC$，矛盾），故
+\nopagebreak[4]
+\[l\parallel\text{\text{平面} }PAC.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 以 $O$ 为原点，$AB$ 所在直线为 $x$ 轴，平面 $ABC$ 为 $xOy$ 平面建立空间直角坐标系。设圆 $O$ 半径为 $R$，令
+\nopagebreak[4]
+\[A(-R,0,0),\quad B(R,0,0),\quad C(x_0,y_0,0),\quad x_0^2+y_0^2=R^2.\]
+\Needspace{5\baselineskip}
+因 $PC\perp$ 平面 $ABC$，可设
+\nopagebreak[4]
+\[P(x_0,y_0,h)\quad(h>0).\]
+
+\Needspace{5\baselineskip}
+先求 $D$。直线 $l$ 过 $B$ 且平行于 $AC$，而
+\nopagebreak[4]
+\[\overrightarrow{AC}=(x_0+R,\,y_0,\,0),\qquad
+|\overrightarrow{AC}|^2=2R(R+x_0).\]
+\Needspace{5\baselineskip}
+设 $l$ 上的点为 $B+t\overrightarrow{AC}$，与圆 $x^2+y^2=R^2$ 联立：
+\nopagebreak[4]
+\[|B+t\overrightarrow{AC}|^2=R^2
+\Longrightarrow 2tR(x_0+R)+t^2|\overrightarrow{AC}|^2=0.\]
+\Needspace{5\baselineskip}
+$t=0$ 对应点 $B$，另一根
+\nopagebreak[4]
+\[t=-\frac{2R(x_0+R)}{2R(R+x_0)}=-1,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[D=B-\overrightarrow{AC}=B-C+A=(-x_0,-y_0,0)=-C.\]
+
+\Needspace{5\baselineskip}
+由 $\overrightarrow{DQ}=\dfrac12\overrightarrow{CP}$ 得
+\nopagebreak[4]
+\[Q=D+\frac12(P-C)
+=-C+\frac12(P-C)=\frac12P-\frac32C
+=\left(-x_0,-y_0,\frac h2\right).\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\overrightarrow{PQ}=Q-P=\left(-2x_0,-2y_0,-\frac h2\right),\]
+取其方向向量 $\vec u=(4x_0,4y_0,h)$（相差一个负常数倍，不影响夹角）。
+
+\Needspace{5\baselineskip}
+因为平面 $ABC$ 的法向量为 $(0,0,1)$，所以
+\nopagebreak[4]
+\[\sin\theta=\frac{h}{\sqrt{16x_0^2+16y_0^2+h^2}}
+=\frac{h}{\sqrt{16R^2+h^2}}.\]
+
+\Needspace{5\baselineskip}
+又 $EF\parallel AC$，故 $PQ$ 与 $EF$ 所成角等于 $\vec u$ 与 $\overrightarrow{AC}$ 所成角：
+\nopagebreak[4]
+\[\cos\alpha
+=\frac{\left|\vec u\cdot\overrightarrow{AC}\right|}{|\vec u|\cdot|\overrightarrow{AC}|}
+=\frac{4x_0(x_0+R)+4y_0^2}{\sqrt{16R^2+h^2}\cdot\sqrt{2R(R+x_0)}}.\]
+\Needspace{5\baselineskip}
+分子 $=4\left(x_0^2+y_0^2+Rx_0\right)=4R(R+x_0)$，于是
+\nopagebreak[4]
+\[\cos\alpha=\frac{4R(R+x_0)}{\sqrt{16R^2+h^2}\sqrt{2R(R+x_0)}}
+=\frac{2\sqrt2\sqrt{R(R+x_0)}}{\sqrt{16R^2+h^2}},\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[\sin^2\alpha=1-\frac{8R(R+x_0)}{16R^2+h^2}
+=\frac{8R(R-x_0)+h^2}{16R^2+h^2}.\]
+
+\Needspace{5\baselineskip}
+再求二面角 $E-l-C$。$l$ 的方向向量可取 $\vec e=(x_0+R,y_0,0)$，且
+\nopagebreak[4]
+\[E\left(\frac{x_0-R}{2},\frac{y_0}{2},\frac h2\right),\qquad
+\overrightarrow{BE}=\left(\frac{x_0-3R}{2},\frac{y_0}{2},\frac h2\right).\]
+\Needspace{5\baselineskip}
+平面 $ElC$ 的法向量
+\nopagebreak[4]
+\[\vec n=\vec e\times\overrightarrow{BE}
+=\left(\frac{y_0h}{2},-\frac{(x_0+R)h}{2},2Ry_0\right).\]
+\Needspace{5\baselineskip}
+平面 $ABC$ 的法向量为 $(0,0,1)$，故
+\nopagebreak[4]
+\[\cos\beta=\frac{2R|y_0|}{|\vec n|},\]
+\Needspace{5\baselineskip}
+其中
+\nopagebreak[4]
+\[|\vec n|^2=\frac{h^2\left[y_0^2+(x_0+R)^2\right]}{4}+4R^2y_0^2
+=\frac{2Rh^2(R+x_0)+16R^2y_0^2}{4}.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\sin^2\beta=1-\frac{16R^2y_0^2}{2Rh^2(R+x_0)+16R^2y_0^2}
+=\frac{2Rh^2(R+x_0)}{2Rh^2(R+x_0)+16R^2y_0^2},\]
+\nopagebreak[4]
+\[\sin\beta=\frac{h\sqrt{2R(R+x_0)}}{\sqrt{2R(R+x_0)\left[h^2+8R(R-x_0)\right]}}
+=\frac{h}{\sqrt{h^2+8R(R-x_0)}}.\]
+
+\Needspace{5\baselineskip}
+最后，
+\nopagebreak[4]
+\[\begin{aligned}
+\sin\alpha\sin\beta
+&=\sqrt{\frac{8R(R-x_0)+h^2}{16R^2+h^2}}\cdot
+\frac{h}{\sqrt{h^2+8R(R-x_0)}}\\
+&=\frac{h}{\sqrt{16R^2+h^2}}=\sin\theta.
+\end{aligned}\]
+故 $\sin\theta=\sin\alpha\sin\beta$。
+
+\gkanswer{答案（1）：$l\parallel$ 平面 $PAC$（证明见解析）。由 $EF\parallel AC$ 得 $EF\parallel$ 平面 $ABC$，从而 $EF\parallel l$。}
+
+\gkanswer{答案（2）：证明见解析。以 $O$ 为原点建系，算出 $\sin\theta$、$\sin\alpha$、$\sin\beta$ 后相乘即得。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+假设每天从甲地去乙地的旅客人数 $X$ 是服从正态分布 $N(800,50^2)$ 的随机变量，记一天中从甲地去乙地的旅客人数不超过 $900$ 的概率为 $P_0$。
+
+（1） 求 $P_0$ 的值；
+
+（参考数据：若 $X\sim N(\mu,\sigma^2)$，有 $P(\mu-\sigma<X\leqslant\mu+\sigma)=0.6826$，$P(\mu-2\sigma<X\leqslant\mu+2\sigma)=0.9544$，$P(\mu-3\sigma<X\leqslant\mu+3\sigma)=0.9974$）
+
+（2） 某客运公司用 $A$，$B$ 两种型号的车辆承担甲、乙两地间的长途客运业务，每车每天往返一次，$A$，$B$ 两种车辆的载客量分别为 $36$ 人和 $60$ 人，从甲地去乙地的营运成本分别为 $1600$ 元/辆和 $2400$ 元/辆。公司拟组建一个不超过 $21$ 辆车的客运车队，并要求 $B$ 型车不多于 $A$ 型车 $7$ 辆。若每天要以不小于 $P_0$ 的概率运完从甲地去乙地的旅客，且使公司从甲地去乙地的营运成本最小，那么应配备 $A$ 型车、$B$ 型车各多少辆？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 由 $X\sim N(800,50^2)$ 得 $\mu=800$，$\sigma=50$，而 $900=\mu+2\sigma$。正态分布关于 $\mu$ 对称，故
+\nopagebreak[4]
+\[\begin{aligned}
+P_0&=P(X\leqslant900)=P(X\leqslant\mu+2\sigma)\\
+&=0.5+\frac{P(\mu-2\sigma<X\leqslant\mu+2\sigma)}{2}\\
+&=0.5+\frac{0.9544}{2}=0.5+0.4772=0.9772.
+\end{aligned}\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 设配备 $A$ 型车 $x$ 辆、$B$ 型车 $y$ 辆，$x,y$ 为非负整数。车队总容量为 $36x+60y$，要“以不小于 $P_0$ 的概率运完”，需容量不少于 $900$ 人，即
+\nopagebreak[4]
+\[36x+60y\geqslant900\iff3x+5y\geqslant75.\]
+\Needspace{5\baselineskip}
+其余约束为
+\nopagebreak[4]
+\[x+y\leqslant21,\qquad y\leqslant x+7.\]
+\Needspace{5\baselineskip}
+目标函数为营运成本
+\nopagebreak[4]
+\[z=1600x+2400y=800(2x+3y).\]
+
+\Needspace{5\baselineskip}
+由 $3x+5y\geqslant75$ 与 $x+y\leqslant21$ 消去 $y$：
+\nopagebreak[4]
+\[3x+5(21-x)\geqslant75\Longrightarrow105-2x\geqslant75\Longrightarrow x\leqslant15.\]
+\Needspace{5\baselineskip}
+又由 $3x+5y\geqslant75$ 与 $y\leqslant x+7$ 消去 $y$：
+\nopagebreak[4]
+\[3x+5(x+7)\geqslant75\Longrightarrow8x\geqslant40\Longrightarrow x\geqslant5.\]
+\Needspace{5\baselineskip}
+故 $5\leqslant x\leqslant15$。由 $3x+5y\geqslant75$ 得 $5y\geqslant75-3x$，于是
+\nopagebreak[4]
+\[z=1600x+2400y\geqslant1600x+480(75-3x)=160x+36000\geqslant160\times5+36000=36800.\]
+\Needspace{5\baselineskip}
+等号成立需同时满足 $x=5$ 与 $5y=75-3x=60$，即 $y=12$。此时
+\nopagebreak[4]
+\[x+y=17\leqslant21,\qquad y=12=x+7,\]
+且 $36\times5+60\times12=900$，一切约束均满足。
+
+所以应配备 $A$ 型车 $5$ 辆、$B$ 型车 $12$ 辆，最小营运成本为 $36800$ 元。
+
+\gkanswer{答案（1）：$0.9772$。$P_0=P(X\leqslant\mu+2\sigma)=0.5+\dfrac{0.9544}{2}$。}
+
+\gkanswer{答案（2）：$A$ 型车 $5$ 辆、$B$ 型车 $12$ 辆，最小营运成本 $36800$ 元。由 $36x+60y\geqslant900$ 得 $5y\geqslant75-3x$，从而 $z\geqslant160x+36000\geqslant36800$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+如图，已知椭圆 $C_1$ 与 $C_2$ 的中心在坐标原点 $O$，长轴均为 $MN$ 且在 $x$ 轴上，短轴长分别为 $2m$，$2n$（$m>n$），过原点且不与 $x$ 轴重合的直线 $l$ 与 $C_1$，$C_2$ 的四个交点按纵坐标从大到小依次为 $A$，$B$，$C$，$D$，记 $\lambda=\dfrac mn$，$\triangle BDM$ 和 $\triangle ABN$ 的面积分别为 $S_1$ 和 $S_2$。
+
+（1） 当直线 $l$ 与 $y$ 轴重合时，若 $S_1=\lambda S_2$，求 $\lambda$ 的值；
+
+（2） 当 $\lambda$ 变化时，是否存在与坐标轴不重合的直线 $l$，使得 $S_1=\lambda S_2$？并说明理由。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_hubei_science_q21_ellipses}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+设两椭圆的半长轴为 $a$，则 $M(-a,0)$，$N(a,0)$，且
+\nopagebreak[4]
+\[C_1:\frac{x^2}{a^2}+\frac{y^2}{m^2}=1,\qquad
+C_2:\frac{x^2}{a^2}+\frac{y^2}{n^2}=1.\]
+\Needspace{5\baselineskip}
+直线 $l$ 过原点且不与 $x$ 轴重合，设其与 $x$ 轴正方向的夹角为 $\theta$，记 $s=\sin\theta>0$，$c=\cos\theta$，则 $l$ 上的点可写成 $(tc,ts)$。对半短轴为 $\mu$（$\mu=m$ 或 $n$）的椭圆，交点满足
+\nopagebreak[4]
+\[t^2\left(\frac{c^2}{a^2}+\frac{s^2}{\mu^2}\right)=1,\]
+\Needspace{5\baselineskip}
+故交点到原点的距离为
+\nopagebreak[4]
+\[r_\mu=\frac1{\sqrt{\dfrac{c^2}{a^2}+\dfrac{s^2}{\mu^2}}}.\]
+\Needspace{5\baselineskip}
+因 $m>n$，故 $r_m>r_n$，四个交点按纵坐标从大到小依次为
+\nopagebreak[4]
+\[A=(r_mc,r_ms),\quad B=(r_nc,r_ns),\quad C=(-r_nc,-r_ns),\quad D=(-r_mc,-r_ms).\]
+
+\Needspace{5\baselineskip}
+\textbf{（1）} 当 $l$ 与 $y$ 轴重合时，$c=0$，$s=1$，$r_m=m$，$r_n=n$，于是
+\nopagebreak[4]
+\[A(0,m),\quad B(0,n),\quad C(0,-n),\quad D(0,-m).\]
+\Needspace{5\baselineskip}
+此时 $BD=m+n$，$M$ 到 $y$ 轴的距离为 $a$，故
+\nopagebreak[4]
+\[S_1=S_{\triangle BDM}=\frac12(m+n)a.\]
+\Needspace{5\baselineskip}
+又 $AB=m-n$，$N$ 到 $y$ 轴的距离为 $a$，故
+\nopagebreak[4]
+\[S_2=S_{\triangle ABN}=\frac12(m-n)a.\]
+\Needspace{5\baselineskip}
+由 $S_1=\lambda S_2$ 及 $\lambda=\dfrac mn$ 得
+\nopagebreak[4]
+\[\frac12(m+n)a=\frac mn\cdot\frac12(m-n)a
+\Longrightarrow n(m+n)=m(m-n).\]
+\Needspace{5\baselineskip}
+整理得
+\nopagebreak[4]
+\[m^2-2mn-n^2=0.\]
+\Needspace{5\baselineskip}
+两边除以 $n^2$，令 $\lambda=\dfrac mn>1$：
+\nopagebreak[4]
+\[\lambda^2-2\lambda-1=0\Longrightarrow\lambda=1\pm\sqrt2.\]
+\Needspace{5\baselineskip}
+因 $\lambda>1$，故
+\nopagebreak[4]
+\[\lambda=1+\sqrt2.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 对一般的直线 $l$，由上面的坐标，
+\nopagebreak[4]
+\[B-D=(r_m+r_n)(c,s),\qquad M-B=(-a-r_nc,-r_ns).\]
+\Needspace{5\baselineskip}
+用三角形面积的行列式公式，
+\nopagebreak[4]
+\[\begin{aligned}
+S_1&=\frac12\left|(r_m+r_n)c\cdot(-r_ns)-(r_m+r_n)s\cdot(-a-r_nc)\right|\\
+&=\frac12(r_m+r_n)a|s|.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+同理，
+\nopagebreak[4]
+\[\begin{aligned}
+S_2&=\frac12\left|(r_n-r_m)c\cdot(-r_ms)-(r_n-r_m)s\cdot(a-r_mc)\right|\\
+&=\frac12(r_m-r_n)a|s|.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+因此
+\nopagebreak[4]
+\[\frac{S_1}{S_2}=\frac{r_m+r_n}{r_m-r_n}.\]
+\Needspace{5\baselineskip}
+令
+\nopagebreak[4]
+\[\rho=\frac{r_m}{r_n}>1,\]
+\Needspace{5\baselineskip}
+则 $S_1=\lambda S_2$ 等价于
+\nopagebreak[4]
+\[\frac{\rho+1}{\rho-1}=\lambda
+\Longrightarrow\rho=\frac{\lambda+1}{\lambda-1}.\]
+\Needspace{5\baselineskip}
+另一方面，由 $r_\mu$ 的表达式，
+\nopagebreak[4]
+\[\rho^2=\frac{r_m^2}{r_n^2}
+=\frac{\dfrac{c^2}{a^2}+\dfrac{s^2}{n^2}}{\dfrac{c^2}{a^2}+\dfrac{s^2}{m^2}}.\]
+\Needspace{5\baselineskip}
+当 $s^2$ 从 $0$ 增大到 $1$ 时，分子、分母都增大，但分子的增量系数 $\dfrac1{n^2}$ 大于分母的增量系数 $\dfrac1{m^2}$，故 $\rho^2$ 严格递增。于是
+\nopagebreak[4]
+\[\rho^2\in\left(1,\frac{m^2}{n^2}\right]=\left(1,\lambda^2\right],\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[\rho\in(1,\lambda].\]
+\Needspace{5\baselineskip}
+其中 $\rho=1$ 在 $s=0$（$l$ 与 $x$ 轴重合）时取到，$\rho=\lambda$ 在 $s=1$（$l$ 与 $y$ 轴重合）时取到。题目要求 $l$ 与坐标轴不重合，故 $0<s<1$，从而
+\nopagebreak[4]
+\[\rho\in(1,\lambda).\]
+\Needspace{5\baselineskip}
+因此存在这样的直线当且仅当
+\nopagebreak[4]
+\[1<\frac{\lambda+1}{\lambda-1}<\lambda.\]
+\Needspace{5\baselineskip}
+左半不等式显然成立；右半不等式等价于
+\nopagebreak[4]
+\[\lambda+1<\lambda(\lambda-1)=\lambda^2-\lambda
+\iff\lambda^2-2\lambda-1>0.\]
+\Needspace{5\baselineskip}
+因 $\lambda>1$，解得
+\nopagebreak[4]
+\[\lambda>1+\sqrt2.\]
+当 $\lambda>1+\sqrt2$ 时，由 $\rho$ 的连续性，存在 $\theta\in\left(0,\dfrac\pi2\right)$ 使 $\rho=\dfrac{\lambda+1}{\lambda-1}$，从而存在满足条件的直线 $l$；由对称性，它关于 $x$ 轴的对称直线也满足条件。当 $\lambda=1+\sqrt2$ 时，$\dfrac{\lambda+1}{\lambda-1}=\lambda$ 只能由 $l$ 与 $y$ 轴重合取得，不符合要求；当 $1<\lambda<1+\sqrt2$ 时，$\dfrac{\lambda+1}{\lambda-1}>\lambda$，无解。
+
+综上，当 $\lambda>1+\sqrt2$ 时存在；当 $1<\lambda\leqslant1+\sqrt2$ 时不存在。
+
+\gkanswer{答案（1）：$\lambda=1+\sqrt2$。由 $S_1=\dfrac12a(m+n)$、$S_2=\dfrac12a(m-n)$ 得 $m^2-2mn-n^2=0$。}
+
+\gkanswer{答案（2）：当 $\lambda>1+\sqrt2$ 时存在；当 $1<\lambda\leqslant1+\sqrt2$ 时不存在。由 $\dfrac{S_1}{S_2}=\dfrac{r_m+r_n}{r_m-r_n}$ 及 $\dfrac{r_m}{r_n}\in(1,\lambda)$ 判断。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+设 $n$ 为正整数，$r$ 为正有理数。
+
+（1） 求函数 $f(x)=(1+x)^{r+1}-(r+1)x-1$（$x>-1$）的最小值；
+
+（2） 证明：$\dfrac{n^{r+1}-(n-1)^{r+1}}{r+1}<n^r<\dfrac{(n+1)^{r+1}-n^{r+1}}{r+1}$；
+
+（3） 设 $x\in\mathbf R$，记 $[x]$ 为不小于 $x$ 的最小整数，例如 $[2]=2$，$[\pi]=4$，$\left[-\dfrac32\right]=-1$。令 $S=\sqrt[3]{81}+\sqrt[3]{82}+\sqrt[3]{83}+\cdots+\sqrt[3]{125}$，求 $[S]$ 的值。
+
+（参考数据：$80^{\frac43}\approx344.7$，$81^{\frac43}\approx350.5$，$124^{\frac43}\approx618.3$，$126^{\frac43}\approx631.7$）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\Needspace{5\baselineskip}
+\textbf{（1）} 求导：
+\nopagebreak[4]
+\[f'(x)=(r+1)(1+x)^r-(r+1)=(r+1)\left[(1+x)^r-1\right].\]
+因为 $r>0$，所以
+\begin{itemize}
+\item 当 $-1<x<0$ 时 $0<1+x<1$，$(1+x)^r<1$，$f'(x)<0$；
+\item 当 $x>0$ 时 $1+x>1$，$(1+x)^r>1$，$f'(x)>0$；
+\item 当 $x=0$ 时 $f'(0)=0$。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+故 $f$ 在 $(-1,0)$ 上递减、在 $(0,+\infty)$ 上递增，最小值在 $x=0$ 处取得：
+\nopagebreak[4]
+\[f_{\min}=f(0)=1^{r+1}-0-1=0.\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 由（1），对任意 $x>-1$ 且 $x\neq0$，有
+\nopagebreak[4]
+\[(1+x)^{r+1}-(r+1)x-1>0. \tag{$*$}\]
+
+\Needspace{5\baselineskip}
+在 $(*)$ 中取 $x=\dfrac1n>0$：
+\nopagebreak[4]
+\[\left(1+\frac1n\right)^{r+1}-(r+1)\frac1n-1>0.\]
+\Needspace{5\baselineskip}
+两边乘 $n^{r+1}>0$：
+\nopagebreak[4]
+\[(n+1)^{r+1}-(r+1)n^r-n^{r+1}>0,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[n^r<\frac{(n+1)^{r+1}-n^{r+1}}{r+1}. \tag{1}\]
+
+\Needspace{5\baselineskip}
+再在 $(*)$ 中取 $x=-\dfrac1n\in(-1,0)$：
+\nopagebreak[4]
+\[\left(1-\frac1n\right)^{r+1}+(r+1)\frac1n-1>0.\]
+\Needspace{5\baselineskip}
+两边乘 $n^{r+1}>0$：
+\nopagebreak[4]
+\[(n-1)^{r+1}+(r+1)n^r-n^{r+1}>0,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[\frac{n^{r+1}-(n-1)^{r+1}}{r+1}<n^r. \tag{2}\]
+\Needspace{5\baselineskip}
+综合 (1)(2) 得
+\nopagebreak[4]
+\[\frac{n^{r+1}-(n-1)^{r+1}}{r+1}<n^r<\frac{(n+1)^{r+1}-n^{r+1}}{r+1}.\]
+
+\Needspace{5\baselineskip}
+\textbf{（3）} 在（2）中取 $r=\dfrac13$，得
+\nopagebreak[4]
+\[\frac34\left[n^{4/3}-(n-1)^{4/3}\right]<n^{1/3}<\frac34\left[(n+1)^{4/3}-n^{4/3}\right].\]
+\Needspace{5\baselineskip}
+对 $n=81,82,\cdots,125$ 求和。左端为
+\nopagebreak[4]
+\[\frac34\sum_{n=81}^{125}\left[n^{4/3}-(n-1)^{4/3}\right]
+=\frac34\left(125^{4/3}-80^{4/3}\right),\]
+\Needspace{5\baselineskip}
+右端为
+\nopagebreak[4]
+\[\frac34\sum_{n=81}^{125}\left[(n+1)^{4/3}-n^{4/3}\right]
+=\frac34\left(126^{4/3}-81^{4/3}\right).\]
+\Needspace{5\baselineskip}
+又 $125^{4/3}=5^4=625$，代入参考数据：
+\nopagebreak[4]
+\[S>\frac34(625-344.7)=\frac34\times280.3=210.225,\]
+\nopagebreak[4]
+\[S<\frac34(631.7-350.5)=\frac34\times281.2=210.9.\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[210.225<S<210.9.\]
+\Needspace{5\baselineskip}
+按定义 $[S]$ 是不小于 $S$ 的最小整数，故
+\nopagebreak[4]
+\[[S]=211.\]
+
+\gkanswer{答案（1）：$0$。$f'(x)=(r+1)\left[(1+x)^r-1\right]$，在 $x=0$ 处取得最小值。}
+
+\gkanswer{答案（2）：证明见解析。在（1）中分别取 $x=\dfrac1n$ 与 $x=-\dfrac1n$。}
+
+\gkanswer{答案（3）：$211$。由（2）夹逼得 $210.225<S<210.9$。}
+
+\end{answer}

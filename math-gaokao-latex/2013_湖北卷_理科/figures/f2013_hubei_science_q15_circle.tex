@@ -1,0 +1,30 @@
+% 2013 湖北卷理科第 15 题：圆 O、直径 AB、射影 D 与 E（TikZ 矢量重绘）。
+% C 在圆上，D 为 C 在 AB 上的射影，E 为 D 在 OC 上的射影；图中取 AB=6、AD=2。
+\begin{tikzpicture}[scale=0.85, line width=0.6pt, font=\small, >=Stealth]
+
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-3,0);
+  \coordinate (B) at (3,0);
+  \coordinate (D) at (-1,0);
+  \coordinate (C) at (-1,2.828);
+  \coordinate (E) at (-0.111,0.314);
+
+  \draw (O) circle (3);
+  \draw (A) -- (B);
+  \draw (O) -- (C);
+  \draw (C) -- (D);
+  \draw (D) -- (E);
+
+  % 直角标记
+  \draw (D) ++(0,0.25) -- ++(0.25,0) -- ++(0,-0.25);
+
+  \fill (O) circle (1.3pt) (A) circle (1.3pt) (B) circle (1.3pt)
+        (C) circle (1.3pt) (D) circle (1.3pt) (E) circle (1.3pt);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[below] at (O) {$O$};
+  \node[below left] at (D) {$D$};
+  \node[above] at (C) {$C$};
+  \node[above right] at (E) {$E$};
+
+\end{tikzpicture}
