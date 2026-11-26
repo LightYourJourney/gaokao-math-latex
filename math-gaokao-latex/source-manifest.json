@@ -4252,6 +4252,14 @@
         "gk-2013-hubei-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b76",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-hunan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4261,7 +4269,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "1dbeded9-48db-4e01-880e-c47fbd84b40e",
+  "last_transaction_id": "2e87427f-3c11-4a95-9d9c-b1230bd853d9",
   "papers": [
     {
       "blocked_from": null,
@@ -49389,9 +49397,86 @@
       "title": "2013 年·湖北卷·理科",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖南卷_理科/figures/f2013_hunan_science_q08_reflection.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖南卷_理科/figures/f2013_hunan_science_q11_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖南卷_理科/figures/f2013_hunan_science_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖南卷_理科/figures/f2013_hunan_science_q18_grid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖南卷_理科/figures/f2013_hunan_science_q19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_湖南卷_理科/figures/f2013_hunan_science_q20_lpath.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_hunan_science",
+        "id": "gk-2013-hunan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 811、812（第 811 面为选择 1—8、填空 9—16、解答 17—18；第 812 面为解答 19—22）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖南卷题号：选择 1—8、填空 9—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 8 题反射三角形、第 11 题圆与弦、第 13 题程序框图、第 18 题三角网格、第 19 题直棱柱、第 20 题 L 路径示意，均以 TikZ 重绘共 6 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            9,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "湖南理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-hunan-science",
+      "production_state": "complete",
+      "project_dir": "2013_湖南卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_湖南理_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_湖南理_含解析.md",
+        "questions": "2013/2013_数学真题_湖南理_试题.md",
+        "solution_body": "2013/2013_数学真题_湖南理_解析正文.md"
+      },
+      "source_ids": [
+        "src-e0ed0bc25cb7ae0432893e55d280f5b33b5962f0342efb0b8c2d0a61d20aa3ce"
+      ],
+      "title": "2013 年·湖南卷·理科",
+      "track": "science",
+      "year": 2013
     }
   ],
-  "revision": 11901,
+  "revision": 11909,
   "schema_version": 1,
   "sources": [
     {
@@ -63308,8 +63393,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f86c05815bcb9844abd09aaea0440c91738e16f6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-hunan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013湖南理.pdf",
       "regions": [],
       "source_id": "src-e0ed0bc25cb7ae0432893e55d280f5b33b5962f0342efb0b8c2d0a61d20aa3ce",

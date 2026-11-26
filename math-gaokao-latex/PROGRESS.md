@@ -14,6 +14,16 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2013 湖南卷（理科）：phase7-b76 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2013-hunan-science`，**22 个题号**（选择 1—8、填空 9—16、解答 17—22）；固定来源 `src-e0ed0bc25cb7ae0432893e55d280f5b33b5962f0342efb0b8c2d0a61d20aa3ce`，2 页 A3，印面 811、812。
+- 答案（等级 D）：1 B；2 D；3 D（$\frac\pi3$）；4 C（$\frac53$）；5 B；6 A（$[\sqrt2-1,\sqrt2+1]$）；7 C；8 D（$\frac43$）；9 $3$；10 $12$；11 $\frac{\sqrt3}2$；12 $3$；13 $9$；14 $\sqrt3$；15 (1) $-\frac1{16}$、(2) $\frac{2^{-100}-1}3$；16 (1) $(0,1]$、(2) ①②③；17 (1) $\frac15$、(2) $\left\{x\mid 2k\pi\leqslant x\leqslant 2k\pi+\frac{2\pi}3\right\}$；18 (1) $\frac29$、(2) $P(Y=51)=\frac2{15},P(Y=48)=\frac4{15},P(Y=45)=\frac25,P(Y=42)=\frac15$、$E(Y)=46$；19 (1) 证明、(2) $\frac{\sqrt{21}}7$；20 (1) $|x-3|+|y-20|$、(2) $P(3,1)$；21 (1) 证明、(2) $x^2=16y$；22 (1) 分段 $g(a)$、(2) $0<a<\frac12$。
+- **来源核对**：子代理按 PDF 纠正任务提示——第 13 题判断框为 $a>8$（非 $a>b$），输出 9；第 21 题原页仅 $k_1+k_2=2$（无“互为相反数”）。
+- 主代理复核：第 5 题 $h(1)>0,h(2)<0,h(4)>0$ 两零点；第 11 题 $PC=4,CD=5,d=\frac{\sqrt3}2$；第 14 题 $c=\sqrt3 a$；第 15 题 $a_1=-\frac14,a_2=\frac14,a_3=-\frac1{16}$，偶数 $S_n=0$、$S_{2k-1}=-4^{-k}$，和 $\frac{2^{-100}-1}3$；第 18 题枚举 15 格点得 $X$ 分布 $2,4,6,3$、$E=46$；第 20 题 $P(3,1)$、最小 45；第 21 题 $x^2=16y$；第 22 题 $g(a)$ 分段与 $u v=3a$ 判垂直。
+- 排版修复：第 18 题分布列行间公式 Overfull（9.8pt），改为 `aligned` 两行后归零（印刷版 22→23 页）。
+- 图稿：6 张 TikZ（反射三角形、圆与弦、程序框图、三角网格、直棱柱、L 路径）。
+- 验收：四版 7/31/9/23 页（共 70 页），四 log 全 0（Overfull、missing characters 均 0）；review 70 页 **pass 516 + not_applicable 44、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；6 条图稿引用全部命中。
+- 全库：manifest **667 卷 / 775 来源 / 513 批次**，complete 549、blocked 118，未绑定 **109**；revision 11909。
+
 ### 2013 湖北卷（理科）：phase7-b75 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2013-hubei-science`，**22 个题号**（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-8cd28eff2045e94dd631498faa7ddfa9d2ee7f6c0277e1bcca73e9ad3560516c`，2 页 A3，印面 807、808。
 - 答案（等级 D）：1 D（$1-\mathrm i$）；2 C（$[0,2)\cup(4,+\infty)$）；3 A；4 B（$\frac\pi6$）；5 D；6 A（$\frac{3\sqrt2}2$）；7 C（$4+25\ln5$）；8 C（$V_2<V_1<V_3<V_4$）；9 B（$\frac65$）；10 D；11 (1) $0.0044$、(2) $70$；12 $5$；13 $\frac{3\sqrt{14}}7$；14 $1000$；15 $8$；16 $\frac{\sqrt6}3$；17 (1) $\frac\pi3$、(2) $\frac57$；18 (1) $a_n=5\cdot3^{n-2}$ 或 $5(-1)^n$、(2) 不存在；19 (1) $l\parallel$ 平面 $PAC$、(2) 证明；20 (1) $0.9772$、(2) A 型 5 辆、B 型 12 辆、36800 元；21 (1) $\lambda=1+\sqrt2$、(2) $\lambda>1+\sqrt2$ 时存在、$1<\lambda\leqslant1+\sqrt2$ 时不存在；22 (1) $0$、(2) 证明、(3) 211。

@@ -1,0 +1,23 @@
+% 2013 湖南卷理科第 20 题：L 路径示意图（TikZ 矢量重绘）。
+% 折线 M-M1-M2-M3-N-N1-M 中，MM1、M2M3、NN1 为横向，M1M2、M3N、N1M 为纵向。
+\begin{tikzpicture}[scale=0.85, font=\small, line width=0.6pt]
+  \draw[->] (-0.5,0) -- (6.6,0) node[right] {$x$};
+  \draw[->] (0,-0.5) -- (0,4.9) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  \coordinate (M)  at (1.5,4.0);
+  \coordinate (M1) at (5.5,4.0);
+  \coordinate (M2) at (5.5,2.6);
+  \coordinate (M3) at (3.6,2.6);
+  \coordinate (N)  at (3.6,1.0);
+  \coordinate (N1) at (1.5,1.0);
+
+  \draw (M) -- (M1) -- (M2) -- (M3) -- (N) -- (N1) -- cycle;
+
+  \node[left] at (M) {$M$};
+  \node[right] at (M1) {$M_1$};
+  \node[right] at (M2) {$M_2$};
+  \node[left] at (M3) {$M_3$};
+  \node[below] at (N) {$N$};
+  \node[left] at (N1) {$N_1$};
+\end{tikzpicture}

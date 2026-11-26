@@ -1,0 +1,23 @@
+% 2013 湖南卷理科第 13 题：程序框图（TikZ 矢量重绘）。
+% 输入 a=1, b=2；判断 a>8？是则输出 a，否则 a=a+b 后返回判断。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.5pt,
+  box/.style={draw, minimum height=1.9em, inner xsep=8pt},
+  term/.style={draw, rounded corners=6pt, minimum height=1.9em, inner xsep=10pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.9em, inner xsep=8pt},
+  dec/.style={draw, diamond, aspect=2.4, inner sep=1.5pt}]
+
+  \node[term] (start) at (0,0) {开始};
+  \node[io]   (in)    at (0,-1.5) {输入 $a$，$b$};
+  \node[dec]  (test)  at (0,-3.6) {$a>8$?};
+  \node[box]  (add)   at (0,-5.9) {$a=a+b$};
+  \node[io]   (out)   at (4.4,-3.6) {输出 $a$};
+  \node[term] (end)   at (4.4,-5.3) {结束};
+
+  \draw[->] (start) -- (in);
+  \draw[->] (in) -- (test);
+  \draw[->] (test) -- node[left] {否} (add);
+  \draw[->] (test) -- node[above] {是} (out);
+  \draw[->] (out) -- (end);
+  \draw[->] (add.west) -- (-2.2,-5.9) -- (-2.2,-2.6) -- (test.west);
+\end{tikzpicture}

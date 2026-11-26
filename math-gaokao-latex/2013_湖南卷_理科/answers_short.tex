@@ -1,0 +1,38 @@
+% answers_short.tex —— 2013 年·湖南卷·理科 · 简短答案速查
+% 由 tools/make_short_answers.py 自 answers.tex 的 \gksolhead/\gkanswer 提取，
+% 并与 2013/2013_数学真题_湖南理_答案要点.md 逐题比对后生成，勿手改（改源 MD 后重跑）。
+
+\begin{gknotice}
+\textbf{使用说明}：本节只给最终答案便于快速核对，完整推导见解析版。答案为编写者独立推导，\textbf{非官方标准答案}。
+\end{gknotice}
+
+\gkpart{选择题}
+\begin{center}\begin{tabular}{ccccccccc}
+\toprule
+题号 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+\midrule
+答案 & B & D & D & C & B & A & C & D \\
+\bottomrule
+\end{tabular}\end{center}
+
+\gkpart{填空题}
+\begin{itemize}[leftmargin=2.6em]
+  \item[\textbf{9.}] $3$。椭圆右顶点为 $(3,0)$，代入 $x=t$，$y=t-a$ 得 $t=3$，$3-a=0$。
+  \item[\textbf{10.}] $12$。由柯西不等式 $(1+1+1)(a^2+4b^2+9c^2)\geqslant(a+2b+3c)^2=36$。
+  \item[\textbf{11.}] $\dfrac{\sqrt3}{2}$。由相交弦定理 $PC\cdot PD=PA\cdot PB$ 得 $PC=4$，故 $CD=5$，圆心到 $CD$ 的距离为 $\sqrt{7-\left(\dfrac52\right)^2}$。
+  \item[\textbf{12.}] $3$。$\displaystyle\int_0^T x^2\,\mathrm dx=\dfrac{T^3}{3}=9$，故 $T^3=27$。
+  \item[\textbf{13.}] $9$。$a$ 依次取 $1,3,5,7,9$，当 $a=9$ 时满足 $a>8$，输出 $9$。
+  \item[\textbf{14.}] $\sqrt3$。由双曲线定义得 $|PF_1|$，$|PF_2|$ 为 $4a$，$2a$，最小角所对边为 $2a$，由余弦定理得 $(c-\sqrt3a)^2=0$。
+  \item[\textbf{15.}] (1) $-\dfrac1{16}$。由 $S_n-S_{n-1}=a_n$ 得 $n=4$ 时 $a_3=-\dfrac1{2^4}$；(2) $\dfrac{2^{-100}-1}{3}$。$S_{2k-1}=-\dfrac1{4^k}$，$S_{2k}=0$，故总和为 $-\displaystyle\sum_{k=1}^{50}\dfrac1{4^k}$
+  \item[\textbf{16.}] (1) $(0,1]$。$a=b$ 且不能构成三角形时 $c\geqslant2a$，由 $2a^x=c^x$ 得 $x=\log_{c/a}2\in(0,1]$；(2) ①②③。①由 $(a/c)^x+(b/c)^x>(a+b)/c>1$；②取 $x$ 充分大；③由 $f(1)>0$，$f(2)=a^2+b^2-c^2<0$ 及零点存在定理
+\end{itemize}
+
+\gkpart{解答题}
+\begin{itemize}[leftmargin=2.6em]
+  \item[\textbf{17.}] (1) $\dfrac15$。$f(x)=\sqrt3\sin x$，由 $f(\alpha)=\dfrac{3\sqrt3}{5}$ 得 $\sin\alpha=\dfrac35$，$\cos\alpha=\dfrac45$，故 $g(\alpha)=1-\cos\alpha=\dfrac15$；(2) $\left\{x\left|2k\pi\leqslant x\leqslant2k\pi+\dfrac{2\pi}{3},\ k\in\mathbf Z\right.\right\}$。不等式化为 $\sin\left(x+\dfrac\pi6\right)\geqslant\dfrac12$
+  \item[\textbf{18.}] (1) $\dfrac29$。内部格点 $3$ 个，边界格点 $12$ 个，恰“相近”的有序点对为 $8$ 对，概率为 $\dfrac8{3\times12}$；(2) $P(Y=51)=\dfrac2{15}$，$P(Y=48)=\dfrac4{15}$，$P(Y=45)=\dfrac25$，$P(Y=42)=\dfrac15$；$E(Y)=46$
+  \item[\textbf{19.}] (1) 证明见解析。建立空间直角坐标系，由 $\overrightarrow{AC}\cdot\overrightarrow{B_1D}=0$ 得证；(2) $\dfrac{\sqrt{21}}7$。平面 $ACD_1$ 的法向量为 $(3\sqrt3,-3,-3\sqrt3)$，与 $\overrightarrow{B_1C_1}=(1,0,0)$ 夹角的正弦值为 $\dfrac{\sqrt{21}}7$
+  \item[\textbf{20.}] (1) $|x-3|+|y-20|$；(2) $P(3,1)$。此时三条“$L$ 路径”长度之和为 $45$，且为最小值
+  \item[\textbf{21.}] (1) 证明见解析。$\overrightarrow{FM}\cdot\overrightarrow{FN}=p^2k_1k_2(1+k_1k_2)$，由 $0<k_1k_2<1$ 得证；(2) $x^2=16y$。公共弦所在直线为 $x+2y=0$，点 $M$ 到它的距离最小值为 $\dfrac{7p}{8\sqrt5}$，令其等于 $\dfrac{7\sqrt5}{5}$ 得 $p=8$
+  \item[\textbf{22.}] (1) $g(a)=\begin{cases}\dfrac{4-a}{4+2a},&0<a\leqslant1,\\[2mm]\dfrac12,&a>1.\end{cases}$；(2) 存在，$0<a<\dfrac12$。两支上切点横坐标记为 $x_1$，$x_2$，垂直条件等价于 $(x_1+2a)(x_2+2a)=3a$
+\end{itemize}

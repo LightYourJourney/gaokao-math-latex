@@ -1,0 +1,28 @@
+% 2013 湖南卷理科第 8 题：等腰直角三角形中的光线反射（TikZ 矢量重绘）。
+% A(0,0), B(4,0), C(0,4)，P(4/3,0)，Q(20/9,16/9) 在 BC 上，R(0,2/3) 在 CA 上；
+% 光线 P->Q->R->P，QR 经过重心 G(4/3,4/3)。
+\begin{tikzpicture}[scale=1.05, font=\small, >=Stealth, line width=0.6pt]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4,0);
+  \coordinate (C) at (0,4);
+  \coordinate (P) at (1.3333,0);
+  \coordinate (Q) at (2.2222,1.7778);
+  \coordinate (R) at (0,0.6667);
+  \coordinate (G) at (1.3333,1.3333);
+
+  \draw (A) -- (B) -- (C) -- cycle;
+
+  \draw[->] (P) -- (Q);
+  \draw[->] (Q) -- (R);
+  \draw[->] (R) -- (P);
+
+  \fill (G) circle (1.4pt);
+  \node[above right] at (G) {$G$};
+
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above left] at (C) {$C$};
+  \node[below] at (P) {$P$};
+  \node[right] at (Q) {$Q$};
+  \node[left] at (R) {$R$};
+\end{tikzpicture}
