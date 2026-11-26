@@ -1,0 +1,45 @@
+% ============================================================
+% f2012_liaoning_science_q22_circles.tex
+% 2012 辽宁卷（理科）第 22 题：两圆相交与切线
+% 来源 PDF：普通高考/2012/2012辽宁理.pdf
+% 原页：第 2 页（A3），印面 752，第 22 题题干下方
+% 圆 O 与圆 O' 交于 A、B；过 A 的两条切线分别交两圆于 C、D；
+% DB 延长交圆 O 于 E。
+% 取 O(-1.2,0)、O'(1.3,0)，A(0,1.5)、B(0,-1.5)，
+% 两圆半径分别为 sqrt(3.69)、sqrt(3.94)。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.1cm, y=1.1cm,
+  every node/.style={inner sep=1.5pt}]
+  \coordinate (O)  at (-1.2,0);
+  \coordinate (Op) at (1.3,0);
+  \coordinate (A)  at (0,1.5);
+  \coordinate (B)  at (0,-1.5);
+  \coordinate (C)  at (-2.856,-0.975);
+  \coordinate (D)  at (3.049,-0.939);
+  \coordinate (E)  at (-1.788,-1.829);
+
+  % 两圆
+  \draw (O) circle ({sqrt(3.69)});
+  \draw (Op) circle ({sqrt(3.94)});
+
+  % 切线、弦与割线
+  \draw (A) -- (C);
+  \draw (A) -- (D);
+  \draw (A) -- (B);
+  \draw (D) -- (B);
+  \draw (B) -- (E);
+  \draw (A) -- (E);
+  \draw (B) -- (C);
+
+  % 圆心
+  \fill (O) circle (1.0pt) node[below right] {$O$};
+  \fill (Op) circle (1.0pt) node[below left] {$O'$};
+
+  % 点与标签
+  \fill (A) circle (1.1pt) node[above] {$A$};
+  \fill (B) circle (1.1pt) node[below] {$B$};
+  \fill (C) circle (1.1pt) node[below left] {$C$};
+  \fill (D) circle (1.1pt) node[below right] {$D$};
+  \fill (E) circle (1.1pt) node[left] {$E$};
+\end{tikzpicture}

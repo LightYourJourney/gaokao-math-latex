@@ -1,0 +1,44 @@
+% ============================================================
+% f2012_liaoning_science_q19_histogram.tex
+% 2012 辽宁卷（理科）第 19 题：频率分布直方图
+% 来源 PDF：普通高考/2012/2012辽宁理.pdf
+% 原页：第 2 页（A3），印面 752，第 19 题题干下方
+% 各组频率/组距依次为 0.010、0.018、0.020、0.025、0.022、0.005，
+% 组距为 10 分钟，共 6 组。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.2cm, y=1cm,
+  every node/.style={inner sep=1.5pt}]
+
+  % 坐标轴
+  \draw[->] (-0.25,0) -- (7.75,0) node[right] {分钟};
+  \draw[->] (0,-0.25) -- (0,3.75) node[above] {$\dfrac{\text{频率}}{\text{组距}}$};
+
+  % 各矩形
+  \draw (0,0) rectangle (1.2,1.30);   % 0.010
+  \draw (1.2,0) rectangle (2.4,2.34); % 0.018
+  \draw (2.4,0) rectangle (3.6,2.60); % 0.020
+  \draw (3.6,0) rectangle (4.8,3.25); % 0.025
+  \draw (4.8,0) rectangle (6.0,2.86); % 0.022
+  \draw (6.0,0) rectangle (7.2,0.65); % 0.005
+
+  % 高度虚线
+  \draw[dashed] (0,1.30) -- (1.2,1.30);
+  \draw[dashed] (0,2.34) -- (2.4,2.34);
+  \draw[dashed] (0,2.60) -- (3.6,2.60);
+  \draw[dashed] (0,3.25) -- (4.8,3.25);
+  \draw[dashed] (0,2.86) -- (6.0,2.86);
+  \draw[dashed] (0,0.65) -- (7.2,0.65);
+
+  % 纵轴刻度值
+  \node[left,font=\scriptsize] at (0,0.65) {$0.005$};
+  \node[left,font=\scriptsize] at (0,1.30) {$0.010$};
+  \node[left,font=\scriptsize] at (0,2.34) {$0.018$};
+  \node[left,font=\scriptsize] at (0,2.60) {$0.020$};
+  \node[left,font=\scriptsize] at (0,2.86) {$0.022$};
+  \node[left,font=\scriptsize] at (0,3.25) {$0.025$};
+
+  % 横轴刻度值
+  \foreach \i/\t in {0/0,1/10,2/20,3/30,4/40,5/50,6/60}
+    \node[below,font=\scriptsize] at (\i*1.2,0) {$\t$};
+\end{tikzpicture}

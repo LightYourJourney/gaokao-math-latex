@@ -1,0 +1,36 @@
+% ============================================================
+% f2012_liaoning_science_q20_ellipse.tex
+% 2012 辽宁卷（理科）第 20 题：椭圆与动圆
+% 来源 PDF：普通高考/2012/2012辽宁理.pdf
+% 原页：第 2 页（A3），印面 752，第 20 题题干下方
+% 椭圆 C0: x^2/a^2+y^2/b^2=1，动圆 C1: x^2+y^2=t^2。
+% 图中取 a=3、b=2、t=2.3 作示意，交点记为 A、B、C、D。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.1cm, y=1.1cm,
+  every node/.style={inner sep=1.5pt}]
+
+  % 坐标轴
+  \draw[->] (-3.8,0) -- (3.9,0) node[right] {$x$};
+  \draw[->] (0,-2.7) -- (0,2.8) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 椭圆与动圆
+  \draw (0,0) ellipse (3 and 2);
+  \draw (0,0) circle (2.3);
+
+  % 四个交点（a=3,b=2,t=2.3 时 x≈1.524,y≈1.722）
+  \coordinate (A) at (-1.524,1.722);
+  \coordinate (B) at (-1.524,-1.722);
+  \coordinate (C) at (1.524,-1.722);
+  \coordinate (D) at (1.524,1.722);
+
+  \fill (A) circle (1.1pt) node[above left] {$A$};
+  \fill (B) circle (1.1pt) node[below left] {$B$};
+  \fill (C) circle (1.1pt) node[below right] {$C$};
+  \fill (D) circle (1.1pt) node[above right] {$D$};
+
+  % 左右顶点
+  \fill (-3,0) circle (1.1pt) node[below left] {$A_1$};
+  \fill (3,0) circle (1.1pt) node[below right] {$A_2$};
+\end{tikzpicture}

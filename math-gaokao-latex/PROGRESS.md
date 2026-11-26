@@ -14,6 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2012 辽宁卷（理科）：phase8-b01 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2012-liaoning-science`，**24 个题号**（选择 1—12、填空 13—16、解答 17—21、选做 22—24 三选一）；固定来源 `src-d58ff1d45a71b87c73ecacdd2a019e48d81d7f71c8d15f0bf6e5098df52cb1c2`，2 页 A3，印面 751、752。
+- 答案（等级 D）：1 B；2 A；3 B；4 C；5 C；6 B；7 A；8 D；9 D（$S=4$）；10 C（$\\frac23$）；11 B（6 个零点）；12 C；13 $38$；14 $a_n=2^n$；15 $-4$；16 $\\frac{\\sqrt3}3$；17 (1) $\\frac12$、(2) $\\frac34$；18 (1) 证明、(2) $\\lambda=\\sqrt2$；19 (1) 列联表与 $\\chi^2\\approx4.822$、(2) $X\\sim B(3,\\frac{27}{100})$、$E=\\frac{81}{100}$、$D=\\frac{5913}{10000}$；20 (1) 轨迹、(2) $t_1^2+t_2^2=a^2+b^2$；21 (1) $a=0,b=-1$、(2) 证明；22 (1)(2) 证明；23 (1) $\\rho=2$ 与 $\\rho=4\\cos\\theta$、(2) 参数方程；24 (1) $a=2$、(2) $k\\geqslant1$。
+- **来源核对**：第 2 题 $\\frac{2-\\mathrm i}{2+\\mathrm i}$；第 4 题为全称命题否定；第 11 题为抽象函数与 $g(x)=|x\\cos\\pi x|$ 零点；第 14 题增列 $a_5^2=a_{10}$；第 15 题抛物线切线交点；第 18 题 $AB=AC=\\lambda AA'$、求 $\\lambda$；第 19(2) 为二项分布；第 21 题切线 $y=\\frac32x$。
+- 主代理复核：第 9 题 $S=4$；第 10 题 $\\frac23$；第 11 题 6 零点；第 13 题表面积 38；第 18 题 $\\lambda=\\sqrt2$；第 19 题 $\\chi^2\\approx4.822$、$E=0.81$、$D=0.5913$；第 20 题 $t_1^2+t_2^2=a^2+b^2$；第 21 题 $a=0,b=-1$；第 23 题交点 $(2,\\pm\\frac\\pi3)$；第 24 题 $a=2,k\\geqslant1$。
+- 图稿：6 张 TikZ（程序框图、三视图、直三棱柱、直方图、椭圆与动圆、两圆与切线）。
+- 验收：四版 6/38/9/32 页（共 85 页），四 log 全 0（Overfull、missing characters 均 0）；review 85 页 **pass 627 + not_applicable 53、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；6 条图稿引用全部命中。
+- 全库：manifest **690 卷 / 775 来源 / 536 批次**，complete 572、blocked 118，未绑定 **86**；revision 12052。
+
 ### 2014 辽宁卷（理科）：phase7-b99 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2014-liaoning-science`，**24 个题号**（选择 1—12、填空 13—16、解答 17—21、选做 22—24 三选一）；固定来源 `src-dd69a68bb81cc89682e712ebdc39ba62f50a53e1f005ed75c60c113bf85faa5f`，2 页 A3，印面 895、896。
 - 答案（等级 D）：1 D；2 A；3 C；4 B；5 A；6 D（24 种）；7 B（$8-\\pi$）；8 D；9 B；10 D；11 C；12 B；13 $\\frac{29}9$；14 $\\frac13$；15 $12$；16 $-2$；17 (1) $a=3,c=2$、(2) $\\frac{23}{27}$；18 (1) $0.108$、(2) $E(X)=1.8,D(X)=0.72$；19 (1) 证明、(2) $\\frac{2\\sqrt5}5$；20 (1) $x^2-\\frac{y^2}2=1$、(2) 两条直线；21 (1)(2) 证明；22 (1)(2) 证明；23 (1) $x=\\cos\\theta,y=2\\sin\\theta$、(2) $\\rho=\\frac3{4\\sin\\theta-2\\cos\\theta}$；24 (1) $[0,\\frac43]$、(2) 证明。

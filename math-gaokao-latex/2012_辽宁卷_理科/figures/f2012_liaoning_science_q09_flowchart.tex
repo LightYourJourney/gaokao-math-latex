@@ -1,0 +1,37 @@
+% ============================================================
+% f2012_liaoning_science_q09_flowchart.tex
+% 2012 辽宁卷（理科）第 9 题：程序框图
+% 来源 PDF：普通高考/2012/2012辽宁理.pdf
+% 原页：第 1 页（A3），印面 751，第 9 题题干下方
+% 初始 S=4、i=1；判断 i<9，是则 S=2/(2-S)、i=i+1 后循环，
+% 否则输出 S 并结束。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  every node/.style={inner sep=2pt},
+  term/.style={draw, rounded corners=3pt, minimum width=2.0cm,
+    minimum height=0.58cm, align=center},
+  proc/.style={draw, minimum width=2.6cm, minimum height=0.58cm, align=center},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.4cm, minimum height=0.58cm, align=center},
+  dec/.style={draw, diamond, aspect=2, minimum width=2.4cm,
+    minimum height=0.9cm, align=center}]
+  \node[term] (start) at (0,0) {开始};
+  \node[proc] (initS) at (0,-0.92) {$S=4$};
+  \node[proc] (initI) at (0,-1.84) {$i=1$};
+  \node[dec] (test) at (0,-3.02) {$i<9$};
+  \node[proc] (bodyS) at (0,-4.46) {$S=\dfrac{2}{2-S}$};
+  \node[proc] (bodyI) at (0,-5.52) {$i=i+1$};
+  \node[io] (out) at (3.35,-3.02) {输出 $S$};
+  \node[term] (end) at (3.35,-4.22) {结束};
+
+  \draw[->] (start) -- (initS);
+  \draw[->] (initS) -- (initI);
+  \draw[->] (initI) -- (test);
+  \draw[->] (test.south) -- node[right] {是} (bodyS.north);
+  \draw[->] (bodyS) -- (bodyI);
+  % 循环体回到判断框左侧
+  \draw[->] (bodyI.west) -- ++(-2.45,0) |- (test.west);
+  % “否”分支输出
+  \draw[->] (test.east) -- node[above] {否} (out.west);
+  \draw[->] (out) -- (end);
+\end{tikzpicture}
