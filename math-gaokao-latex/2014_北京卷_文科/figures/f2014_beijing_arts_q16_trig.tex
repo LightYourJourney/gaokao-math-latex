@@ -1,0 +1,24 @@
+% ============================================================
+% f2014_beijing_arts_q16_trig.tex
+% 2014 北京卷（文科）第 16 题：f(x)=3sin(2x+pi/6) 的部分图象
+% 来源 PDF：普通高考/2014/2014北京文.pdf
+% 原页：第 1 页（A3），印面 863，右栏第 16 题题干下方
+% 图中标出第二个最大值点的横坐标 x0 与纵坐标 y0。
+% 横、纵同尺度：1 单位 = 1cm。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.8pt, font=\small]
+  % 坐标轴
+  \draw[->] (-0.95,0) -- (7.25,0) node[above right=-2pt] {$x$};
+  \draw[->] (0,-3.75) -- (0,4.05) node[left] {$y$};
+  \node[below right] at (0.02,-0.05) {$O$};
+
+  % 图象
+  \draw[domain=-0.5:6.6, samples=240, smooth]
+    plot (\x,{3*sin(deg(2*\x+pi/6))});
+
+  % x0、y0 的参考虚线
+  \draw[dashed, line width=0.45pt] (0,3) -- (3.665,3);
+  \draw[dashed, line width=0.45pt] (3.665,0) -- (3.665,3);
+  \node[left] at (-0.05,3) {$y_0$};
+  \node[below] at (3.665,0) {$x_0$};
+\end{tikzpicture}

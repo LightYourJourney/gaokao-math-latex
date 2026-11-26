@@ -1,0 +1,784 @@
+% answers.tex —— 2014 年·北京卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2014/2014_数学真题_北京文_试题.md + 2014/2014_数学真题_北京文_解析正文.md + 2014/2014_数学真题_北京文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+若集合 $A=\{0,1,2,4\}$，$B=\{1,2,3\}$，则 $A\cap B=$\mbox{（　　）}
+
+（A）$\{0,1,2,3,4\}$；（B）$\{0,4\}$；（C）$\{1,2\}$；（D）$\{3\}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$A\cap B$ 由同时属于 $A$ 与 $B$ 的元素组成。逐个检验：$0\in A$ 但 $0\notin B$；$1$，$2$ 同时属于 $A$，$B$；$4\in A$ 但 $4\notin B$；$3\in B$ 但 $3\notin A$。故
+\nopagebreak[4]
+\[A\cap B=\{1,2\},\]
+选 C。
+
+\gkanswer{答案：C。$A$，$B$ 的公共元素为 $1$，$2$，故 $A\cap B=\{1,2\}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+下列函数中，定义域是 $\mathbf R$ 且为增函数的是\mbox{（　　）}
+
+（A）$y=\mathrm e^{-x}$；（B）$y=x^3$；（C）$y=\ln x$；（D）$y=|x|$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+逐项检查定义域与单调性：
+
+\begin{itemize}
+\item $y=\mathrm e^{-x}$ 的定义域为 $\mathbf R$，但它是减函数；
+\item $y=x^3$ 的定义域为 $\mathbf R$，且对任意 $x_1<x_2$ 有 $x_1^3<x_2^3$，是增函数；
+\item $y=\ln x$ 的定义域为 $(0,+\infty)$，不是 $\mathbf R$；
+\item $y=|x|$ 的定义域为 $\mathbf R$，但在 $(-\infty,0)$ 上递减，不是 $\mathbf R$ 上的增函数。
+\end{itemize}
+
+故选 B。
+
+\gkanswer{答案：B。$y=x^3$ 定义域为 $\mathbf R$ 且严格递增；其余三项或为减函数，或定义域不是 $\mathbf R$，或不单调。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+已知向量 $\boldsymbol a=(2,4)$，$\boldsymbol b=(-1,1)$，则 $2\boldsymbol a-\boldsymbol b=$\mbox{（　　）}
+
+（A）$(5,7)$；（B）$(5,9)$；（C）$(3,7)$；（D）$(3,9)$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由数乘与减法的坐标运算，
+\nopagebreak[4]
+\[2\boldsymbol a-\boldsymbol b=2(2,4)-(-1,1)=(4,8)-(-1,1)=(5,7),\]
+选 A。
+
+\gkanswer{答案：A。$2\boldsymbol a-\boldsymbol b=(4,8)-(-1,1)=(5,7)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+执行如图所示的程序框图，则输出的 $S$ 值为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_beijing_arts_q04_flowchart}\end{center}
+\nopagebreak[4]
+（A）$1$；（B）$3$；（C）$7$；（D）$15$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+初始 $k=0$，$S=0$。循环条件是 $k<3$，每轮先累加 $2^k$ 再让 $k$ 增加 $1$：
+
+\begin{itemize}
+\item $k=0<3$：$S=0+2^0=1$，$k=1$；
+\item $k=1<3$：$S=1+2^1=3$，$k=2$；
+\item $k=2<3$：$S=3+2^2=7$，$k=3$；
+\item $k=3<3$ 不成立，输出 $S=7$。
+\end{itemize}
+
+即 $S=2^0+2^1+2^2=7$，选 C。
+
+\gkanswer{答案：C。$S=2^0+2^1+2^2=7$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+设 $a$，$b$ 是实数，则“$a>b$”是“$a^2>b^2$”的\mbox{（　　）}
+
+（A）充分且不必要条件；（B）必要且不充分条件；（C）充分必要条件；（D）既不充分也不必要条件。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+取 $a=1$，$b=-2$，则 $a>b$ 成立，但 $a^2=1<4=b^2$，故“$a>b$”推不出“$a^2>b^2$”，不是充分条件。
+
+取 $a=-2$，$b=1$，则 $a<b$，但 $a^2=4>1=b^2$，故“$a^2>b^2$”也推不出“$a>b$”，不是必要条件。
+
+因此是既不充分也不必要条件，选 D。
+
+\gkanswer{答案：D。$a=1$，$b=-2$ 反证不充分；$a=-2$，$b=1$ 反证不必要。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=\dfrac6x-\log_2x$，在下列区间中，包含 $f(x)$ 零点的区间是\mbox{（　　）}
+
+（A）$(0,1)$；（B）$(1,2)$；（C）$(2,4)$；（D）$(4,+\infty)$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$f(x)$ 的定义域为 $(0,+\infty)$。其中 $\dfrac6x$ 与 $-\log_2x$ 都在 $(0,+\infty)$ 上单调递减，故 $f(x)$ 在 $(0,+\infty)$ 上单调递减，零点至多一个。计算端点值：
+\nopagebreak[4]
+\[f(2)=\frac62-\log_22=3-1=2>0,\qquad
+f(4)=\frac64-\log_24=\frac32-2=-\frac12<0 .\]
+由零点存在定理，零点在区间 $(2,4)$ 内，选 C。（又 $f(1)=6>0$，故 $(0,1)$，$(1,2)$ 内均无零点。）
+
+\gkanswer{答案：C。$f(2)=2>0$，$f(4)=-\dfrac12<0$，且 $f$ 在 $(0,+\infty)$ 上递减。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+已知圆 $C:(x-3)^2+(y-4)^2=1$ 和两点 $A(-m,0)$，$B(m,0)$（$m>0$），若圆 $C$ 上存在点 $P$，使得 $\angle APB=90^\circ$，则 $m$ 的最大值为\mbox{（　　）}
+
+（A）$7$；（B）$6$；（C）$5$；（D）$4$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$\angle APB=90^\circ$ 等价于 $P$ 在以 $AB$ 为直径的圆上，即
+\nopagebreak[4]
+\[x^2+y^2=m^2 .\]
+\Needspace{5\baselineskip}
+于是问题化为该圆与圆 $C:(x-3)^2+(y-4)^2=1$ 有公共点。两圆圆心分别为 $(0,0)$，$(3,4)$，圆心距
+\nopagebreak[4]
+\[d=\sqrt{3^2+4^2}=5,\]
+\Needspace{5\baselineskip}
+半径分别为 $m$ 与 $1$，有公共点的充要条件是
+\nopagebreak[4]
+\[|m-1|\leqslant 5\leqslant m+1,\]
+即 $m\leqslant 6$ 且 $m\geqslant 4$。所以 $4\leqslant m\leqslant 6$，$m$ 的最大值为 $6$，选 B。
+
+\gkanswer{答案：B。$P$ 在以 $AB$ 为直径的圆 $x^2+y^2=m^2$ 上，两圆有公共点给出 $4\leqslant m\leqslant 6$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+加工爆米花时，爆开且不糊的粒数的百分比称为“可食用率”。在特定条件下，可食用率 $p$ 与加工时间 $t$（单位：分钟）满足函数关系 $p=at^2+bt+c$（$a$，$b$，$c$ 是常数），下图记录了三次实验的数据。根据上述函数模型和实验数据，可以得到最佳加工时间为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_beijing_arts_q08_popcorn}\end{center}
+\nopagebreak[4]
+（A）$3.50$ 分钟；（B）$3.75$ 分钟；（C）$4.00$ 分钟；（D）$4.25$ 分钟。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+把三个数据点 $(3,0.7)$，$(4,0.8)$，$(5,0.5)$ 代入 $p=at^2+bt+c$：
+\nopagebreak[4]
+\[\begin{cases}
+9a+3b+c=0.7,\\
+16a+4b+c=0.8,\\
+25a+5b+c=0.5 .
+\end{cases}\]
+\Needspace{5\baselineskip}
+第二式减第一式得 $7a+b=0.1$，第三式减第二式得 $9a+b=-0.3$，两式相减得
+\nopagebreak[4]
+\[2a=-0.4,\quad a=-0.2,\quad b=0.1-7a=1.5,\]
+\Needspace{5\baselineskip}
+再由第一式 $c=0.7-9a-3b=0.7+1.8-4.5=-2$。故
+\nopagebreak[4]
+\[p=-0.2t^2+1.5t-2=-0.2\left(t-\frac{15}{4}\right)^2+\frac{13}{16},\]
+当 $t=\dfrac{15}{4}=3.75$ 时可食用率最大，最佳加工时间为 $3.75$ 分钟，选 B。
+
+\gkanswer{答案：B。由三点解得 $p=-0.2t^2+1.5t-2$，顶点 $t=3.75$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+若 $(x+\mathrm i)\mathrm i=-1+2\mathrm i$（$x\in\mathbf R$），则 $x=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+展开左边，注意 $\mathrm i^2=-1$：
+\nopagebreak[4]
+\[(x+\mathrm i)\mathrm i=x\mathrm i+\mathrm i^2=-1+x\mathrm i .\]
+与 $-1+2\mathrm i$ 比较实部、虚部，得 $x=2$。
+
+\gkanswer{答案：$2$。$(x+\mathrm i)\mathrm i=-1+x\mathrm i=-1+2\mathrm i$，比较虚部得 $x=2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+设双曲线 $C$ 的两个焦点为 $(-\sqrt2,0)$，$(\sqrt2,0)$，一个顶点是 $(1,0)$，则 $C$ 的方程为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+两焦点在 $x$ 轴上且关于原点对称，故双曲线是标准形 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$，且 $c=\sqrt2$。
+
+\Needspace{5\baselineskip}
+顶点 $(1,0)$ 在 $x$ 轴上，故 $a=1$，从而
+\nopagebreak[4]
+\[b^2=c^2-a^2=2-1=1 .\]
+所求方程为 $x^2-y^2=1$。
+
+\gkanswer{答案：$x^2-y^2=1$。$c=\sqrt2$，$a=1$，故 $b^2=c^2-a^2=1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+某三棱锥的三视图如图所示，则该三棱锥的最长棱的棱长为\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_beijing_arts_q11_threeviews}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由俯视图，底面三角形的一边长为 $2$，第三个顶点在该边中点的正前方；由侧视图，该顶点到底边的距离为 $1$；由正视图，底面边长 $2$、高为 $2$。取坐标
+\nopagebreak[4]
+\[A(0,0,0),\quad B(2,0,0),\quad C(1,1,0),\quad P(0,0,2),\]
+则它在三个坐标面上的投影恰为题给三视图（正视图中的斜线是棱 $PC$ 的投影，$C$ 的投影落在 $AB$ 上）。
+
+\Needspace{5\baselineskip}
+各棱长：
+\nopagebreak[4]
+\[\begin{aligned}
+&PA=2,\quad AB=2,\quad PB=\sqrt{2^2+2^2}=2\sqrt2,\\
+&AC=BC=\sqrt2,\quad PC=\sqrt{1+1+4}=\sqrt6 .
+\end{aligned}\]
+最长棱为 $PB$，棱长 $2\sqrt2$。
+
+\gkanswer{答案：$2\sqrt2$。还原得 $AB=2$、$BC$ 方向深 $1$、高 $2$，最长棱 $\sqrt{2^2+2^2}=2\sqrt2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，$a=1$，$b=2$，$\cos C=\dfrac14$，则 $c=$\gkblank{}；$\sin A=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由余弦定理，
+\nopagebreak[4]
+\[c^2=a^2+b^2-2ab\cos C=1+4-2\cdot1\cdot2\cdot\frac14=4,\]
+故 $c=2$。
+
+\Needspace{5\baselineskip}
+再由余弦定理求 $\cos A$：
+\nopagebreak[4]
+\[\cos A=\frac{b^2+c^2-a^2}{2bc}=\frac{4+4-1}{2\cdot2\cdot2}=\frac78,\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\sin A=\sqrt{1-\cos^2A}=\sqrt{1-\frac{49}{64}}=\frac{\sqrt{15}}8 .\]
+（也可由 $\sin C=\sqrt{1-\frac1{16}}=\frac{\sqrt{15}}4$ 与 $\dfrac{a}{\sin A}=\dfrac{c}{\sin C}$ 得 $\sin A=\dfrac{a\sin C}{c}=\dfrac{\sqrt{15}}8$，两法一致。）
+
+\gkanswer{答案：$c=2$；$\sin A=\dfrac{\sqrt{15}}8$。$c^2=1+4-2\cdot1\cdot2\cdot\dfrac14=4$，$\cos A=\dfrac78$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+若 $x$，$y$ 满足
+\nopagebreak[4]
+\[\begin{cases}
+y\leqslant 1,\\
+x-y-1\leqslant 0,\\
+x+y-1\geqslant 0,
+\end{cases}\]
+则 $z=\sqrt3x+y$ 的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+约束条件即 $y\leqslant 1$，$y\geqslant x-1$，$y\geqslant 1-x$，可行域是三角形，顶点为三条边界两两的交点：
+\nopagebreak[4]
+\[(0,1),\qquad (2,1),\qquad (1,0).\]
+\Needspace{5\baselineskip}
+线性目标函数在可行域上必在顶点处取到最值，逐点计算：
+\nopagebreak[4]
+\[z(0,1)=1,\qquad z(2,1)=2\sqrt3+1,\qquad z(1,0)=\sqrt3 .\]
+最小值为 $1$（在 $(0,1)$ 处取得）。
+
+\gkanswer{答案：$1$。可行域顶点为 $(0,1)$，$(2,1)$，$(1,0)$，$z$ 值分别为 $1$，$2\sqrt3+1$，$\sqrt3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+顾客请一位工艺师把 $A$，$B$ 两件玉石原料各制成一件工艺品，工艺师带一位徒弟完成这项任务，每件原料先由徒弟完成粗加工，再由工艺师进行精加工完成制作，两件工艺品都完成后交付顾客，两件原料每道工序所需时间（单位：工作日）如下：
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+工序 & 粗加工 & 精加工 \\
+\midrule
+原料 $A$ & $9$ & $15$ \\
+原料 $B$ & $6$ & $21$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+则最短交货期为\gkblank{}个工作日。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+徒弟粗加工两件共需 $9+6=15$ 个工作日，工艺师精加工两件共需 $15+21=36$ 个工作日，且每件必须先粗加工后精加工，故工艺师最早只能在第 $\min\{9,6\}=6$ 个工作日开工。于是交货期
+\nopagebreak[4]
+\[T\geqslant 6+36=42\ \text{（\text{个工作日}）}.\]
+该下界可以达到：徒弟第 $0$—$6$ 天粗加工 $B$，第 $6$—$15$ 天粗加工 $A$；工艺师第 $6$—$27$ 天精加工 $B$，第 $27$—$42$ 天精加工 $A$。两件都在第 $42$ 天完成，故最短交货期为 $42$ 个工作日。
+
+（若先粗加工 $A$，则工艺师最早第 $9$ 天开工，交货期不早于 $45$ 天，更差。）
+
+\gkanswer{答案：$42$。工艺师精加工共 $36$ 个工作日，最早第 $6$ 天开工，且该下界可由「先粗加工 $B$ 再粗加工 $A$」达到。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+已知 $\{a_n\}$ 是等差数列，满足 $a_1=3$，$a_4=12$，数列 $\{b_n\}$ 满足 $b_1=4$，$b_4=20$，且 $\{b_n-a_n\}$ 是等比数列。
+
+（1） 求数列 $\{a_n\}$ 和 $\{b_n\}$ 的通项公式；
+
+（2） 求数列 $\{b_n\}$ 的前 $n$ 项和。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+设 $\{a_n\}$ 的公差为 $d$，则 $a_4=a_1+3d$，即 $12=3+3d$，$d=3$，故
+\nopagebreak[4]
+\[a_n=3+3(n-1)=3n .\]
+
+\Needspace{5\baselineskip}
+设 $c_n=b_n-a_n$，则 $\{c_n\}$ 是等比数列，且
+\nopagebreak[4]
+\[c_1=b_1-a_1=4-3=1,\qquad c_4=b_4-a_4=20-12=8 .\]
+\Needspace{5\baselineskip}
+设公比为 $q$，则 $q^3=\dfrac{c_4}{c_1}=8$，$q=2$，故 $c_n=2^{n-1}$，从而
+\nopagebreak[4]
+\[b_n=a_n+c_n=3n+2^{n-1} .\]
+检验：$b_1=3+1=4$，$b_4=12+8=20$，与题设相符。
+
+\gksubpart{（2）}
+
+\nopagebreak[4]
+\[\begin{aligned}
+S_n&=\sum_{k=1}^{n}b_k=\sum_{k=1}^{n}\left(3k+2^{k-1}\right)\\
+&=3\cdot\frac{n(n+1)}2+\frac{2^n-1}{2-1}\\
+&=\frac{3n(n+1)}2+2^n-1 .
+\end{aligned}\]
+检验 $n=4$：$\dfrac{3\cdot4\cdot5}2+2^4-1=30+15=45$，而 $b_1+b_2+b_3+b_4=4+8+13+20=45$，一致。
+
+\gkanswer{答案（1）：$a_n=3n$，$b_n=3n+2^{n-1}$。公差 $d=3$，等比数列 $\{b_n-a_n\}$ 首项 $1$、公比 $2$。}
+
+\gkanswer{答案（2）：$S_n=\dfrac{3n(n+1)}2+2^n-1$。分组求和：等差数列部分与等比数列部分分别求和。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+函数 $f(x)=3\sin\left(2x+\dfrac\pi6\right)$ 的部分图象如图所示。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_beijing_arts_q16_trig}\end{center}
+\nopagebreak[4]
+（1） 写出 $f(x)$ 的最小正周期及图中 $x_0$，$y_0$ 的值；
+
+（2） 求 $f(x)$ 在区间 $\left[-\dfrac\pi2,-\dfrac\pi{12}\right]$ 上的最大值和最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+最小正周期
+\nopagebreak[4]
+\[T=\frac{2\pi}{2}=\pi .\]
+\Needspace{5\baselineskip}
+$f(x)$ 取最大值 $3$ 当且仅当
+\nopagebreak[4]
+\[2x+\frac\pi6=\frac\pi2+2k\pi,\quad\text{\text{即}}\quad x=\frac\pi6+k\pi\ (k\in\mathbf Z).\]
+\Needspace{5\baselineskip}
+图象中 $x_0$ 是 $y$ 轴右侧第二个最大值点的横坐标，取 $k=1$ 得
+\nopagebreak[4]
+\[x_0=\frac\pi6+\pi=\frac{7\pi}6,\qquad y_0=3 .\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+令 $u=2x+\dfrac\pi6$。当 $x\in\left[-\dfrac\pi2,-\dfrac\pi{12}\right]$ 时，
+\nopagebreak[4]
+\[u\in\left[-\frac{5\pi}6,\,0\right].\]
+\Needspace{5\baselineskip}
+$\sin u$ 在 $\left[-\dfrac{5\pi}6,-\dfrac\pi2\right]$ 上递减、在 $\left[-\dfrac\pi2,0\right]$ 上递增，故最小值在 $u=-\dfrac\pi2$ 处：
+\nopagebreak[4]
+\[\sin\left(-\frac\pi2\right)=-1,\qquad f_{\min}=-3,\]
+此时 $x=\dfrac12\left(-\dfrac\pi2-\dfrac\pi6\right)=-\dfrac\pi3\in\left[-\dfrac\pi2,-\dfrac\pi{12}\right]$。
+
+\Needspace{5\baselineskip}
+最大值在端点处取得，比较
+\nopagebreak[4]
+\[\sin\left(-\frac{5\pi}6\right)=-\frac12,\qquad \sin 0=0,\]
+故最大值为 $3\sin0=0$，在 $x=-\dfrac\pi{12}$ 处取得。
+
+所以最大值为 $0$，最小值为 $-3$。
+
+\gkanswer{答案（1）：$T=\pi$，$x_0=\dfrac{7\pi}6$，$y_0=3$。最大值点 $x=\dfrac\pi6+k\pi$，图中 $x_0$ 为第二个最大值点。}
+
+\gkanswer{答案（2）：最大值为 $0$，最小值为 $-3$。$2x+\dfrac\pi6\in\left[-\dfrac{5\pi}6,0\right]$，$\sin$ 在 $u=-\dfrac\pi2$ 处取 $-1$，端点处最大为 $\sin0=0$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+如图，在三棱柱 $ABC\text{-}A_1B_1C_1$ 中，侧棱垂直于底面，$AB\perp BC$，$AA_1=AC=2$，$BC=1$，$E$，$F$ 分别为 $A_1C_1$，$BC$ 的中点。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_beijing_arts_q17_prism}\end{center}
+\nopagebreak[4]
+（1） 求证：平面 $ABE\perp$ 平面 $B_1BCC_1$；
+
+（2） 求证：$C_1F\parallel$ 平面 $ABE$；
+
+（3） 求三棱锥 $E\text{-}ABC$ 的体积。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+侧棱垂直于底面，故 $BB_1\perp$ 平面 $ABC$，而 $AB\subset$ 平面 $ABC$，所以
+\nopagebreak[4]
+\[BB_1\perp AB .\]
+\Needspace{5\baselineskip}
+又已知 $AB\perp BC$，且 $BB_1\cap BC=B$，$BB_1$，$BC\subset$ 平面 $B_1BCC_1$，由线面垂直判定定理得
+\nopagebreak[4]
+\[AB\perp \text{\text{平面} }B_1BCC_1 .\]
+而 $AB\subset$ 平面 $ABE$，由面面垂直判定定理，平面 $ABE\perp$ 平面 $B_1BCC_1$。
+
+\gksubpart{（2）}
+
+取 $AB$ 的中点 $G$，连接 $EG$，$FG$。
+
+\Needspace{5\baselineskip}
+在 $\triangle ABC$ 中，$F$，$G$ 分别为 $BC$，$AB$ 的中点，故
+\nopagebreak[4]
+\[FG\parallel AC,\qquad FG=\frac12AC=1 .\]
+\Needspace{5\baselineskip}
+在三棱柱中 $A_1C_1\parallel AC$ 且 $A_1C_1=AC=2$；$E$ 为 $A_1C_1$ 的中点，故
+\nopagebreak[4]
+\[EC_1\parallel AC,\qquad EC_1=\frac12A_1C_1=1 .\]
+\Needspace{5\baselineskip}
+于是 $FG\parallel EC_1$ 且 $FG=EC_1$，四边形 $FGEC_1$ 是平行四边形，从而
+\nopagebreak[4]
+\[C_1F\parallel EG .\]
+又 $EG\subset$ 平面 $ABE$，$C_1F\not\subset$ 平面 $ABE$，由线面平行判定定理得 $C_1F\parallel$ 平面 $ABE$。
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+底面 $\triangle ABC$ 中 $AB\perp BC$，$AC=2$，$BC=1$，故
+\nopagebreak[4]
+\[AB=\sqrt{AC^2-BC^2}=\sqrt3,\qquad
+S_{\triangle ABC}=\frac12\cdot AB\cdot BC=\frac{\sqrt3}2 .\]
+\Needspace{5\baselineskip}
+$E$ 在上底面 $A_1B_1C_1$ 上，而上下底面平行、侧棱垂直于底面，故 $E$ 到平面 $ABC$ 的距离等于侧棱长
+\nopagebreak[4]
+\[h=AA_1=2 .\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[V_{E\text{-}ABC}=\frac13S_{\triangle ABC}\cdot h=\frac13\cdot\frac{\sqrt3}2\cdot2=\frac{\sqrt3}3 .\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：见解析版}
+
+\gkanswer{答案（3）：$\dfrac{\sqrt3}3$。$AB=\sqrt3$，$S_{\triangle ABC}=\dfrac{\sqrt3}2$，高为 $AA_1=2$，$V=\dfrac13\cdot\dfrac{\sqrt3}2\cdot2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+从某校随机抽取 $100$ 名学生，获得了他们一周课外阅读时间（单位：小时）的数据，整理得到数据分组及频数分布表和频率分布直方图：
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+组号 & 分组 & 频数 \\
+\midrule
+$1$ & $[0,2)$ & $6$ \\
+$2$ & $[2,4)$ & $8$ \\
+$3$ & $[4,6)$ & $17$ \\
+$4$ & $[6,8)$ & $22$ \\
+$5$ & $[8,10)$ & $25$ \\
+$6$ & $[10,12)$ & $12$ \\
+$7$ & $[12,14)$ & $6$ \\
+$8$ & $[14,16)$ & $2$ \\
+$9$ & $[16,18)$ & $2$ \\
+合计 &  & $100$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_beijing_arts_q18_histogram}\end{center}
+\nopagebreak[4]
+（1） 从该校随机选取一名学生，试估计这名学生该周课外阅读时间少于 $12$ 小时的概率；
+
+（2） 求频率分布直方图中的 $a$，$b$ 的值；
+
+（3） 假设同一组中的每个数据可用该组区间的中点值代替，试估计样本中的 $100$ 名学生该周课外阅读时间的平均数在第几组。（只需写出结论）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+阅读时间少于 $12$ 小时即落在前 $6$ 组，频数为
+\nopagebreak[4]
+\[6+8+17+22+25+12=90,\]
+\Needspace{5\baselineskip}
+故概率的估计值为
+\nopagebreak[4]
+\[\frac{90}{100}=0.9 .\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+组距为 $2$，直方图中矩形的高为 $\dfrac{\text{\text{频数}}}{100\times2}=\dfrac{\text{\text{频数}}}{200}$。第 $3$ 组频数 $17$，第 $5$ 组频数 $25$，故
+\nopagebreak[4]
+\[a=\frac{17}{200}=0.085,\qquad b=\frac{25}{200}=0.125 .\]
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+用各组中点值代表该组数据，中点依次为 $1,3,5,7,9,11,13,15,17$，平均数
+\nopagebreak[4]
+\[\begin{aligned}
+\bar x&=\frac{1}{100}\bigl(1\times6+3\times8+5\times17+7\times22+9\times25\\
+&\qquad\qquad +11\times12+13\times6+15\times2+17\times2\bigr)\\
+&=\frac{6+24+85+154+225+132+78+30+34}{100}=\frac{768}{100}=7.68 .
+\end{aligned}\]
+$7.68\in[6,8)$，故平均数在第 $4$ 组。
+
+\gkanswer{答案（1）：$0.9$。少于 $12$ 小时的频数为 $90$，$\dfrac{90}{100}=0.9$。}
+
+\gkanswer{答案（2）：$a=0.085$，$b=0.125$。矩形高为 $\dfrac{\text{\text{频数}}}{200}$，第 $3$ 组 $17$、第 $5$ 组 $25$。}
+
+\gkanswer{答案（3）：第 $4$ 组。中点值加权平均得 $\bar x=7.68\in[6,8)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知椭圆 $C:x^2+2y^2=4$。
+
+（1） 求椭圆 $C$ 的离心率；
+
+（2） 设 $O$ 为原点，若点 $A$ 在直线 $y=2$ 上，点 $B$ 在椭圆 $C$ 上，且 $OA\perp OB$，求线段 $AB$ 长度的最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+把方程写成标准形
+\nopagebreak[4]
+\[\frac{x^2}4+\frac{y^2}2=1,\]
+\Needspace{5\baselineskip}
+故 $a^2=4$，$b^2=2$，$c^2=a^2-b^2=2$，于是
+\nopagebreak[4]
+\[e=\frac ca=\frac{\sqrt2}{2} .\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+设 $A(s,2)$，$B(x,y)$，其中 $x^2+2y^2=4$。由 $OA\perp OB$ 得
+\nopagebreak[4]
+\[\overrightarrow{OA}\cdot\overrightarrow{OB}=sx+2y=0 .\]
+因为 $B$ 在椭圆上，$|x|\leqslant2$，而 $A$ 在 $y=2$ 上，故 $y\neq2$，$B\neq A$；当 $x\neq0$ 时 $s=-\dfrac{2y}{x}$，当 $x=0$ 时 $y=\pm\sqrt2$，由 $sx+2y=0$ 得 $y=0$，矛盾，故只需考虑 $x\neq0$。
+
+\Needspace{5\baselineskip}
+由于 $\angle AOB=90^\circ$，
+\nopagebreak[4]
+\[|AB|^2=|OA|^2+|OB|^2 .\]
+\Needspace{5\baselineskip}
+由 $x^2=4-2y^2$ 得
+\nopagebreak[4]
+\[|OA|^2=s^2+4=\frac{4y^2}{x^2}+4=\frac{4y^2}{4-2y^2}+4
+=\frac{2y^2}{2-y^2}+4=\frac{2(4-y^2)}{2-y^2},\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[|OB|^2=x^2+y^2=4-y^2 .\]
+\Needspace{5\baselineskip}
+令 $u=2-y^2$，由 $y^2\in[0,2)$ 知 $u\in(0,2]$，且 $4-y^2=u+2$，于是
+\nopagebreak[4]
+\[|AB|^2=\frac{2(u+2)}{u}+(u+2)=\frac{(u+2)^2}{u}=u+4+\frac4u\geqslant 4+2\sqrt{u\cdot\frac4u}=8,\]
+等号当且仅当 $u=2$，即 $y=0$，$x=\pm2$，此时 $s=0$，$A(0,2)$，$B(\pm2,0)$，确实满足 $OA\perp OB$。
+
+所以 $|AB|$ 的最小值为 $\sqrt8=2\sqrt2$。
+
+\gkanswer{答案（1）：$\dfrac{\sqrt2}2$。$a=2$，$b=\sqrt2$，$c=\sqrt2$。}
+
+\gkanswer{答案（2）：$2\sqrt2$。$|AB|^2=|OA|^2+|OB|^2=\dfrac{(u+2)^2}{u}\geqslant 8$，其中 $u=2-y^2\in(0,2]$，$u=2$ 时取等号。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=2x^3-3x$。
+
+（1） 求 $f(x)$ 在区间 $[-2,1]$ 上的最大值；
+
+（2） 若过点 $P(1,t)$ 存在 $3$ 条直线与曲线 $y=f(x)$ 相切，求 $t$ 的取值范围；
+
+（3） 问过点 $A(-1,2)$，$B(2,10)$，$C(0,2)$ 分别存在几条直线与曲线 $y=f(x)$ 相切？（只需写出结论）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\nopagebreak[4]
+\[f'(x)=6x^2-3=3\left(2x^2-1\right),\]
+零点为 $x=\pm\dfrac{\sqrt2}2$。在 $[-2,1]$ 上列表：
+
+\begin{center}
+\begingroup\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llllllll}
+\toprule
+$x$ & $-2$ & $\left(-2,-\frac{\sqrt2}2\right)$ & $-\frac{\sqrt2}2$ & $\left(-\frac{\sqrt2}2,\frac{\sqrt2}2\right)$ & $\frac{\sqrt2}2$ & $\left(\frac{\sqrt2}2,1\right)$ & $1$ \\
+\midrule
+$f'(x)$ &  & $+$ & $0$ & $-$ & $0$ & $+$ &  \\
+$f(x)$ & $-10$ & 增 & $\sqrt2$ & 减 & $-\sqrt2$ & 增 & $-1$ \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{center}
+
+\Needspace{5\baselineskip}
+其中
+\nopagebreak[4]
+\[f(-2)=-16+6=-10,\quad f\left(-\frac{\sqrt2}2\right)=\frac{\sqrt2}2+\frac{3\sqrt2}2=\sqrt2,\quad f\left(\frac{\sqrt2}2\right)=-\sqrt2,\quad f(1)=-1 .\]
+比较得 $f(x)$ 在 $[-2,1]$ 上的最大值为 $\sqrt2$。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+设切点为 $\left(x_0,\,2x_0^3-3x_0\right)$，则切线斜率为 $6x_0^2-3$，切线方程为
+\nopagebreak[4]
+\[y-\left(2x_0^3-3x_0\right)=\left(6x_0^2-3\right)(x-x_0).\]
+\Needspace{5\baselineskip}
+代入 $P(1,t)$：
+\nopagebreak[4]
+\[\begin{aligned}
+t&=\left(6x_0^2-3\right)(1-x_0)+2x_0^3-3x_0\\
+&=6x_0^2-3-6x_0^3+3x_0+2x_0^3-3x_0\\
+&=-4x_0^3+6x_0^2-3 .
+\end{aligned}\]
+\Needspace{5\baselineskip}
+故过 $P$ 的切线条数等于方程 $g(x)=-4x^3+6x^2-3=t$ 的不同实根个数，其中
+\nopagebreak[4]
+\[g'(x)=-12x^2+12x=12x(1-x).\]
+\Needspace{5\baselineskip}
+$g$ 在 $(-\infty,0)$ 上递减，在 $(0,1)$ 上递增，在 $(1,+\infty)$ 上递减，故
+\nopagebreak[4]
+\[g(0)=-3\ \text{\text{为极小值}},\qquad g(1)=-4+6-3=-1\ \text{\text{为极大值}},\]
+\Needspace{5\baselineskip}
+且 $x\to-\infty$ 时 $g\to+\infty$，$x\to+\infty$ 时 $g\to-\infty$。于是水平线 $y=t$ 与曲线 $y=g(x)$ 有三个不同交点当且仅当
+\nopagebreak[4]
+\[-3<t<-1 .\]
+即 $t$ 的取值范围为 $(-3,-1)$。
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+设过点 $(a,b)$ 的切线的切点横坐标为 $x_0$，同（2）的推导得
+\nopagebreak[4]
+\[b=-4x_0^3+6ax_0^2-3a,\quad\text{\text{即}}\quad 4x_0^3-6ax_0^2+3a+b=0 .\]
+切线条数等于该三次方程不同实根的个数。
+
+\begin{itemize}
+\item $A(-1,2)$：$a=-1$，$b=2$，方程化为
+\end{itemize}
+\nopagebreak[4]
+\[4x^3+6x^2-1=0 .\]
+记 $h(x)=4x^3+6x^2-1$，$h'(x)=12x(x+1)$，$h$ 在 $x=-1$ 取极大值 $h(-1)=1>0$，在 $x=0$ 取极小值 $h(0)=-1<0$，且 $h(-\infty)=-\infty$，$h(+\infty)=+\infty$，故有三个不同实根（分别在 $(-\infty,-1)$，$(-1,0)$，$(0,+\infty)$ 内），过 $A$ 有 $3$ 条切线。
+
+\begin{itemize}
+\item $B(2,10)$：$a=2$，$b=10$，方程化为
+\end{itemize}
+\nopagebreak[4]
+\[4x^3-12x^2+16=0\iff x^3-3x^2+4=0\iff(x+1)(x-2)^2=0,\]
+有两个不同实根 $x=-1$（单根）与 $x=2$（二重根），故过 $B$ 有 $2$ 条切线（其中一条的切点就是 $B$ 本身）。
+
+\begin{itemize}
+\item $C(0,2)$：$a=0$，$b=2$，方程化为
+\end{itemize}
+\nopagebreak[4]
+\[4x^3+2=0\iff x^3=-\frac12,\]
+在实数范围内只有一个根，故过 $C$ 有 $1$ 条切线。
+
+结论：过 $A$，$B$，$C$ 分别有 $3$ 条、$2$ 条、$1$ 条直线与曲线 $y=f(x)$ 相切。
+
+\gkanswer{答案（1）：$\sqrt2$。$f'(x)=3(2x^2-1)$，极大值 $f\left(-\dfrac{\sqrt2}2\right)=\sqrt2$ 大于端点值 $f(-2)=-10$、$f(1)=-1$。}
+
+\gkanswer{答案（2）：$(-3,-1)$。切点横坐标满足 $-4x^3+6x^2-3=t$，该函数极小值 $-3$、极大值 $-1$，三根当且仅当 $-3<t<-1$。}
+
+\gkanswer{答案（3）：过 $A$ 有 $3$ 条，过 $B$ 有 $2$ 条，过 $C$ 有 $1$ 条。对应方程 $4x^3+6x^2-1=0$（三个实根）、$(x+1)(x-2)^2=0$、$4x^3+2=0$（一个实根）。}
+
+\end{answer}

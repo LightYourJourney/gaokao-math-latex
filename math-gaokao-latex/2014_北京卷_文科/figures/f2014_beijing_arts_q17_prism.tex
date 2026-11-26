@@ -1,0 +1,45 @@
+% ============================================================
+% f2014_beijing_arts_q17_prism.tex
+% 2014 北京卷（文科）第 17 题：直三棱柱 ABC-A1B1C1
+% 来源 PDF：普通高考/2014/2014北京文.pdf
+% 原页：第 1 页（A3），印面 863，右栏第 17 题题干下方
+% AB 垂直 BC，AA1=AC=2，BC=1；E 为 A1C1 中点，F 为 BC 中点。
+% 图中另画出 A1B、EB、B1C（虚线）与 C1F（实线）。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.65pt, font=\small,
+  line cap=round, line join=round]
+  % 顶点
+  \coordinate (A1) at (0,4.50);
+  \coordinate (B1) at (1.75,3.65);
+  \coordinate (C1) at (3.40,4.15);
+  \coordinate (A)  at (0,1.00);
+  \coordinate (B)  at (1.75,0.15);
+  \coordinate (C)  at (3.40,0.65);
+  \coordinate (E)  at (1.70,4.325); % A1C1 中点
+  \coordinate (F)  at (2.575,0.40); % BC 中点
+
+  % 被遮挡的棱与辅助线
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (A1) -- (B);
+  \draw[dashed] (B1) -- (C);
+  \draw[dashed] (E) -- (B);
+
+  % 可见的棱
+  \draw (A1) -- (B1) -- (C1);
+  \draw (A1) -- (C1);
+  \draw (A1) -- (A);
+  \draw (B1) -- (B);
+  \draw (C1) -- (C);
+  \draw (A) -- (B) -- (C);
+  \draw (C1) -- (F);
+
+  % 顶点标注
+  \node[above left=-1pt] at (A1) {$A_1$};
+  \node[above] at (E) {$E$};
+  \node[above right=-1pt] at (C1) {$C_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[below left=-1pt] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below right=-1pt] at (F) {$F$};
+\end{tikzpicture}

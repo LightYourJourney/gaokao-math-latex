@@ -4380,6 +4380,14 @@
         "gk-2014-shanghai-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b93",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-beijing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4389,7 +4397,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "78e5ca16-6bab-448b-8839-ff2264054b3a",
+  "last_transaction_id": "81518210-080f-499e-8dcd-1c3b19143345",
   "papers": [
     {
       "blocked_from": null,
@@ -50684,9 +50692,86 @@
       "title": "2014 年·上海卷·理科",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_北京卷_文科/figures/f2014_beijing_arts_q04_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_北京卷_文科/figures/f2014_beijing_arts_q08_popcorn.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_北京卷_文科/figures/f2014_beijing_arts_q11_threeviews.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_北京卷_文科/figures/f2014_beijing_arts_q16_trig.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_北京卷_文科/figures/f2014_beijing_arts_q17_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_北京卷_文科/figures/f2014_beijing_arts_q18_histogram.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_beijing_arts",
+        "id": "gk-2014-beijing-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 863、864。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。北京卷题号：选择 1—8、填空 9—14、解答 15—20，共 20 题。答案由本库独立推导（等级 D，非官方）。原页图：第 4 题程序框图、第 8 题二次函数模型、第 11 题三视图、第 16 题三角函数图象、第 17 题三棱柱、第 18 题频率分布直方图；共 6 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-beijing-arts",
+      "production_state": "complete",
+      "project_dir": "2014_北京卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_北京文_含解析.md",
+        "questions": "2014/2014_数学真题_北京文_试题.md",
+        "solution_body": "2014/2014_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-e184b601ced01421c0af239ae238a9264e47e875cd81cc626fad08bf180f8a05"
+      ],
+      "title": "2014 年·北京卷·文科",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 12008,
+  "revision": 12016,
   "schema_version": 1,
   "sources": [
     {
@@ -64867,8 +64952,8 @@
       "exam_type": "regular",
       "git_blob_oid": "8fbadb6379f9ca4dfdc409bc9b0b16ef42cc4970",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014北京文.pdf",
       "regions": [],
       "source_id": "src-e184b601ced01421c0af239ae238a9264e47e875cd81cc626fad08bf180f8a05",

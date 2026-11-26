@@ -1,0 +1,37 @@
+% ============================================================
+% f2014_beijing_arts_q08_popcorn.tex
+% 2014 北京卷（文科）第 8 题：可食用率 p 与加工时间 t 的三次实验数据
+% 来源 PDF：普通高考/2014/2014北京文.pdf
+% 原页：第 1 页（A3），印面 863，第 8 题题干上方偏右
+% 三个数据点：(3, 0.7)、(4, 0.8)、(5, 0.5)
+% 横轴 t 每 1 分钟 1.5cm；纵轴 p 每 0.1 为 1cm。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+  % 坐标轴
+  \draw[->] (0,0) -- (0,8.55) node[above] {$p$};
+  \draw[->] (0,0) -- (8.8,0) node[below left=-1pt] {$t$};
+  \node[below left] at (0,0) {$O$};
+
+  % 纵轴刻度值
+  \node[left] at (0,5) {$0.5$};
+  \node[left] at (0,7) {$0.7$};
+  \node[left] at (0,8) {$0.8$};
+
+  % 横轴刻度值
+  \node[below] at (4.5,0) {$3$};
+  \node[below] at (6.0,0) {$4$};
+  \node[below] at (7.5,0) {$5$};
+
+  % 参考虚线
+  \draw[dashed, line width=0.45pt] (0,7.0) -- (4.5,7.0);
+  \draw[dashed, line width=0.45pt] (0,8.0) -- (6.0,8.0);
+  \draw[dashed, line width=0.45pt] (0,5.0) -- (7.5,5.0);
+  \draw[dashed, line width=0.45pt] (4.5,0) -- (4.5,7.0);
+  \draw[dashed, line width=0.45pt] (6.0,0) -- (6.0,8.0);
+  \draw[dashed, line width=0.45pt] (7.5,0) -- (7.5,5.0);
+
+  % 三个数据点
+  \fill (4.5,7.0) circle (1.5pt);
+  \fill (6.0,8.0) circle (1.5pt);
+  \fill (7.5,5.0) circle (1.5pt);
+\end{tikzpicture}
