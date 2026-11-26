@@ -1,0 +1,1766 @@
+% answers.tex —— 2014 年·辽宁卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2014/2014_数学真题_辽宁理_试题.md + 2014/2014_数学真题_辽宁理_解析正文.md + 2014/2014_数学真题_辽宁理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知全集 $U=\mathbf R$，$A=\{x\mid x\leqslant 0\}$，$B=\{x\mid x\geqslant 1\}$，则集合 $\complement_U(A\cup B)=$\mbox{（　　）}
+
+（A）$\{x\mid x\geqslant 0\}$；（B）$\{x\mid x\leqslant 1\}$；（C）$\{x\mid 0\leqslant x\leqslant 1\}$；（D）$\{x\mid 0<x<1\}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+先写出两个集合：
+\nopagebreak[4]
+\[A=(-\infty,0],\qquad B=[1,+\infty).\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[A\cup B=(-\infty,0]\cup[1,+\infty).\]
+\Needspace{5\baselineskip}
+在数轴上取补集，剩下的恰是 $0$ 与 $1$ 之间的部分，且两个端点都不属于 $A\cup B$，故
+\nopagebreak[4]
+\[\complement_U(A\cup B)=(0,1).\]
+
+选 D。
+
+\gkanswer{答案：D。$A\cup B=(-\infty,0]\cup[1,+\infty)$，其补集为 $(0,1)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+设复数 $z$ 满足 $(z-2\mathrm i)(2-\mathrm i)=5$，则 $z=$\mbox{（　　）}
+
+（A）$2+3\mathrm i$；（B）$2-3\mathrm i$；（C）$3+2\mathrm i$；（D）$3-2\mathrm i$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 $(z-2\mathrm i)(2-\mathrm i)=5$ 得
+\nopagebreak[4]
+\[z-2\mathrm i=\frac5{2-\mathrm i}.\]
+\Needspace{5\baselineskip}
+分子分母同乘 $2+\mathrm i$：
+\nopagebreak[4]
+\[\frac5{2-\mathrm i}=\frac{5(2+\mathrm i)}{(2-\mathrm i)(2+\mathrm i)}
+=\frac{5(2+\mathrm i)}{4+1}=2+\mathrm i.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[z=2+\mathrm i+2\mathrm i=2+3\mathrm i.\]
+
+选 A。
+
+\gkanswer{答案：A。$z-2\mathrm i=\dfrac5{2-\mathrm i}=2+\mathrm i$，故 $z=2+3\mathrm i$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+已知 $a=2^{-\frac13}$，$b=\log_2\dfrac13$，$c=\log_{\frac12}\dfrac13$，则\mbox{（　　）}
+
+（A）$a>b>c$；（B）$a>c>b$；（C）$c>a>b$；（D）$c>b>a$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+三个数分别与 $0$、$1$ 比较。
+
+\Needspace{5\baselineskip}
+因为 $2^{\frac13}>2^0=1$，所以
+\nopagebreak[4]
+\[0<a=2^{-\frac13}<1.\]
+\Needspace{5\baselineskip}
+由对数性质
+\nopagebreak[4]
+\[b=\log_2\frac13=-\log_23<0,\]
+\Needspace{5\baselineskip}
+而
+\nopagebreak[4]
+\[c=\log_{\frac12}\frac13=\frac{\ln\frac13}{\ln\frac12}
+=\frac{-\ln3}{-\ln2}=\log_23>1.\]
+\Needspace{5\baselineskip}
+因此
+\nopagebreak[4]
+\[c>1>a>0>b,\]
+即 $c>a>b$。
+
+选 C。
+
+\gkanswer{答案：C。$0<a=2^{-\frac13}<1$，$b=\log_2\dfrac13<0$，$c=\log_{\frac12}\dfrac13=\log_23>1$，故 $c>a>b$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+已知 $m$，$n$ 表示两条不同直线，$\alpha$ 表示平面，下列说法正确的是\mbox{（　　）}
+
+（A）若 $m\parallel\alpha$，$n\parallel\alpha$，则 $m\parallel n$；（B）若 $m\perp\alpha$，$n\subset\alpha$，则 $m\perp n$；（C）若 $m\perp\alpha$，$m\perp n$，则 $n\parallel\alpha$；（D）若 $m\parallel\alpha$，$m\perp n$，则 $n\perp\alpha$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+逐项判断。
+
+（A）$m\parallel\alpha$ 且 $n\parallel\alpha$ 时，$m$ 与 $n$ 可能相交，也可能异面，不一定平行，故（A）错。
+
+（B）若 $m\perp\alpha$，则 $m$ 垂直于平面 $\alpha$ 内的每一条直线；由 $n\subset\alpha$ 得 $m\perp n$，故（B）正确。
+
+（C）若 $m\perp\alpha$，$m\perp n$，则 $n$ 可能平行于 $\alpha$，也可能在 $\alpha$ 内，故（C）错。
+
+（D）取 $\alpha$ 为 $xOy$ 坐标平面，$m$ 为 $x$ 轴所在直线，$n$ 为 $y$ 轴所在直线，则 $m\parallel\alpha$，$m\perp n$，但 $n\subset\alpha$，$n$ 不垂直于 $\alpha$，故（D）错。
+
+选 B。
+
+\gkanswer{答案：B。线面垂直则垂直于面内任一直线；其余三项均可由反例否定。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+设 $\boldsymbol a$，$\boldsymbol b$，$\boldsymbol c$ 是非零向量，已知命题 $p$：若 $\boldsymbol a\cdot\boldsymbol b=0$，$\boldsymbol b\cdot\boldsymbol c=0$，则 $\boldsymbol a\cdot\boldsymbol c=0$；命题 $q$：若 $\boldsymbol a\parallel\boldsymbol b$，$\boldsymbol b\parallel\boldsymbol c$，则 $\boldsymbol a\parallel\boldsymbol c$，则下列命题中的真命题是\mbox{（　　）}
+
+（A）$p\vee q$；（B）$p\wedge q$；（C）$(\neg p)\wedge(\neg q)$；（D）$p\vee(\neg q)$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+先判断 $p$、$q$ 的真假。
+
+\Needspace{5\baselineskip}
+对 $p$，取
+\nopagebreak[4]
+\[\boldsymbol a=(1,0,0),\qquad \boldsymbol b=(0,1,0),\qquad \boldsymbol c=(1,0,1),\]
+\Needspace{5\baselineskip}
+则
+\nopagebreak[4]
+\[\boldsymbol a\cdot\boldsymbol b=0,\qquad \boldsymbol b\cdot\boldsymbol c=0,\]
+\Needspace{5\baselineskip}
+但
+\nopagebreak[4]
+\[\boldsymbol a\cdot\boldsymbol c=1\neq0.\]
+所以 $p$ 是假命题。
+
+\Needspace{5\baselineskip}
+对 $q$，因为 $\boldsymbol b\neq\boldsymbol 0$，由 $\boldsymbol a\parallel\boldsymbol b$ 可设 $\boldsymbol a=\lambda\boldsymbol b$，由 $\boldsymbol b\parallel\boldsymbol c$ 可设 $\boldsymbol c=\mu\boldsymbol b$，其中 $\lambda,\mu\neq0$。于是
+\nopagebreak[4]
+\[\boldsymbol a=\frac{\lambda}{\mu}\boldsymbol c,\]
+故 $\boldsymbol a\parallel\boldsymbol c$，$q$ 是真命题。
+
+于是 $p\vee q$ 真，$p\wedge q$ 假，$(\neg p)\wedge(\neg q)$ 假，$p\vee(\neg q)$ 假。
+
+选 A。
+
+\gkanswer{答案：A。取 $\boldsymbol a=(1,0,0)$，$\boldsymbol b=(0,1,0)$，$\boldsymbol c=(1,0,1)$ 知 $p$ 假；$q$ 真，故 $p\vee q$ 真。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+6 把椅子摆成一排，3 人随机就座，任何两人不相邻的坐法种数为\mbox{（　　）}
+
+（A）$144$；（B）$120$；（C）$72$；（D）$24$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+先从 6 个座位中选出 3 个两两不相邻的座位。
+
+\Needspace{5\baselineskip}
+把选中的座位记为 $x_1<x_2<x_3$。两两不相邻等价于
+\nopagebreak[4]
+\[x_2\geqslant x_1+2,\qquad x_3\geqslant x_2+2.\]
+\Needspace{5\baselineskip}
+令
+\nopagebreak[4]
+\[y_1=x_1,\qquad y_2=x_2-1,\qquad y_3=x_3-2,\]
+\Needspace{5\baselineskip}
+则 $1\leqslant y_1<y_2<y_3\leqslant 4$，即从 $1,2,3,4$ 中选 3 个，共有
+\nopagebreak[4]
+\[\mathrm C_4^3=4\]
+种选法（等价于插空法：先排 3 个空位，形成 4 个空，选 3 个放人）。
+
+\Needspace{5\baselineskip}
+选定座位后，3 个人在 3 个座位上的排列有
+\nopagebreak[4]
+\[3!=6\]
+\Needspace{5\baselineskip}
+种。故所求坐法种数为
+\nopagebreak[4]
+\[4\times6=24.\]
+
+选 D。
+
+\gkanswer{答案：D。先从 6 个座位中选 3 个两两不相邻的座位，有 $\mathrm C_4^3=4$ 种，再排 3 人，有 $3!=6$ 种，共 $4\times6=24$ 种。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+某几何体三视图如图所示，则该几何体的体积为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_liaoning_science_q07_three_views}\end{center}
+\nopagebreak[4]
+（A）$8-2\pi$；（B）$8-\pi$；（C）$8-\dfrac\pi2$；（D）$8-\dfrac\pi4$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由三视图还原几何体。
+
+主视图、左视图都是边长 $2$ 的矩形，说明几何体是高为 $2$ 的柱体，底面就是俯视图所画的图形。
+
+\Needspace{5\baselineskip}
+俯视图是一个边长为 $2$ 的正方形，在左上、右下两个角上各去掉一个半径为 $1$ 的四分之一圆。其面积为
+\nopagebreak[4]
+\[S=2\times2-2\times\frac14\pi\cdot1^2=4-\frac\pi2.\]
+\Needspace{5\baselineskip}
+柱体高 $h=2$，故体积
+\nopagebreak[4]
+\[V=Sh=\left(4-\frac\pi2\right)\times2=8-\pi.\]
+
+选 B。
+
+\gkanswer{答案：B。俯视图面积 $4-\dfrac\pi2$，柱高 $2$，故 $V=2\left(4-\dfrac\pi2\right)=8-\pi$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+设等差数列 $\{a_n\}$ 的公差为 $d$，若数列 $\{2^{a_1a_n}\}$ 为递减数列，则\mbox{（　　）}
+
+（A）$d<0$；（B）$d>0$；（C）$a_1d>0$；（D）$a_1d<0$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+记 $b_n=2^{a_1a_n}$，则
+\nopagebreak[4]
+\[\frac{b_{n+1}}{b_n}
+=2^{a_1a_{n+1}-a_1a_n}
+=2^{a_1(a_{n+1}-a_n)}
+=2^{a_1d}.\]
+\Needspace{5\baselineskip}
+数列 $\{b_n\}$ 递减等价于对一切 $n$ 有
+\nopagebreak[4]
+\[\frac{b_{n+1}}{b_n}<1,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[2^{a_1d}<1=2^0.\]
+\Needspace{5\baselineskip}
+由指数函数单调递增得
+\nopagebreak[4]
+\[a_1d<0.\]
+
+选 D。
+
+\gkanswer{答案：D。相邻项之比 $2^{a_1d}<1$，故 $a_1d<0$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+将函数 $y=3\sin\left(2x+\dfrac\pi3\right)$ 的图象向右平移 $\dfrac\pi2$ 个单位长度，所得图象对应的函数\mbox{（　　）}
+
+（A）在区间 $\left[\dfrac\pi{12},\dfrac{7\pi}{12}\right]$ 上单调递减；（B）在区间 $\left[\dfrac\pi{12},\dfrac{7\pi}{12}\right]$ 上单调递增；（C）在区间 $\left[-\dfrac\pi6,\dfrac\pi3\right]$ 上单调递减；（D）在区间 $\left[-\dfrac\pi6,\dfrac\pi3\right]$ 上单调递增。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设平移后所得函数为 $h(x)$，则
+\nopagebreak[4]
+\[\begin{aligned}
+h(x)&=3\sin\left[2\left(x-\frac\pi2\right)+\frac\pi3\right]\\
+&=3\sin\left(2x-\pi+\frac\pi3\right)\\
+&=3\sin\left(2x-\frac{2\pi}3\right).
+\end{aligned}\]
+\Needspace{5\baselineskip}
+令
+\nopagebreak[4]
+\[-\frac\pi2+2k\pi\leqslant 2x-\frac{2\pi}3\leqslant\frac\pi2+2k\pi,\]
+\Needspace{5\baselineskip}
+解得
+\nopagebreak[4]
+\[\frac\pi{12}+k\pi\leqslant x\leqslant\frac{7\pi}{12}+k\pi,\quad k\in\mathbf Z.\]
+\Needspace{5\baselineskip}
+取 $k=0$，得 $h(x)$ 的一个单调递增区间为
+\nopagebreak[4]
+\[\left[\frac\pi{12},\frac{7\pi}{12}\right].\]
+故（B）正确，（A）错误。
+
+\Needspace{5\baselineskip}
+当 $x\in\left[-\dfrac\pi6,\dfrac\pi3\right]$ 时，
+\nopagebreak[4]
+\[2x-\frac{2\pi}3\in\left[-\pi,0\right].\]
+函数 $y=3\sin u$ 在 $\left[-\pi,-\dfrac\pi2\right]$ 上递减、在 $\left[-\dfrac\pi2,0\right]$ 上递增，故 $h(x)$ 在该区间上不单调，（C）（D）均错误。
+
+选 B。
+
+\gkanswer{答案：B。平移后 $y=3\sin\left(2x-\dfrac{2\pi}3\right)$，在 $\left[\dfrac\pi{12},\dfrac{7\pi}{12}\right]$ 上单调递增。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知点 $A(-2,3)$ 在抛物线 $C:y^2=2px$ 的准线上，过点 $A$ 的直线与 $C$ 在第一象限相切于点 $B$，记 $C$ 的焦点为 $F$，则直线 $BF$ 的斜率为\mbox{（　　）}
+
+（A）$\dfrac12$；（B）$\dfrac23$；（C）$\dfrac34$；（D）$\dfrac43$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+抛物线 $y^2=2px$ 的准线为
+\nopagebreak[4]
+\[x=-\frac p2.\]
+\Needspace{5\baselineskip}
+点 $A(-2,3)$ 在准线上，故
+\nopagebreak[4]
+\[-\frac p2=-2,\qquad p=4.\]
+\Needspace{5\baselineskip}
+抛物线为
+\nopagebreak[4]
+\[C:y^2=8x,\qquad F(2,0).\]
+
+\Needspace{5\baselineskip}
+设切点为 $B(x_0,y_0)$，$y_0>0$。对 $y^2=8x$ 两边求导得
+\nopagebreak[4]
+\[2y\,y'=8,\qquad y'=\frac4y,\]
+\Needspace{5\baselineskip}
+故切线斜率为 $\dfrac4{y_0}$，切线方程为
+\nopagebreak[4]
+\[y-y_0=\frac4{y_0}(x-x_0).\]
+\Needspace{5\baselineskip}
+它过 $A(-2,3)$，代入得
+\nopagebreak[4]
+\[3-y_0=\frac4{y_0}(-2-x_0).\]
+\Needspace{5\baselineskip}
+又 $y_0^2=8x_0$，即 $x_0=\dfrac{y_0^2}{8}$。代入整理：
+\nopagebreak[4]
+\[\begin{aligned}
+3-y_0&=\frac4{y_0}\left(-2-\frac{y_0^2}{8}\right)
+=-\frac8{y_0}-\frac{y_0}{2},\\
+6y_0-2y_0^2&=-16-y_0^2,\\
+y_0^2-6y_0-16&=0.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+解得 $y_0=8$ 或 $y_0=-2$。因为 $B$ 在第一象限，取 $y_0=8$，于是
+\nopagebreak[4]
+\[x_0=\frac{64}{8}=8,\qquad B(8,8).\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[k_{BF}=\frac{8-0}{8-2}=\frac43.\]
+
+选 D。
+
+\gkanswer{答案：D。准线 $x=-\dfrac p2=-2$ 得 $p=4$，切点 $B(8,8)$，$F(2,0)$，故 $k_{BF}=\dfrac{8}{6}=\dfrac43$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+当 $x\in[-2,1]$ 时，不等式 $ax^3-x^2+4x+3\geqslant 0$ 恒成立，则实数 $a$ 的取值范围是\mbox{（　　）}
+
+（A）$[-5,-3]$；（B）$\left[-6,-\dfrac98\right]$；（C）$[-6,-2]$；（D）$[-4,-3]$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+当 $x=0$ 时，不等式为 $3\geqslant0$，恒成立。
+
+\Needspace{5\baselineskip}
+当 $x\in(0,1]$ 时，$x^3>0$，原不等式等价于
+\nopagebreak[4]
+\[a\geqslant\frac{x^2-4x-3}{x^3}.\]
+\Needspace{5\baselineskip}
+记
+\nopagebreak[4]
+\[g(x)=\frac{x^2-4x-3}{x^3}=\frac1x-\frac4{x^2}-\frac3{x^3},\]
+\Needspace{5\baselineskip}
+则
+\nopagebreak[4]
+\[g'(x)=-\frac1{x^2}+\frac8{x^3}+\frac9{x^4}
+=\frac{9+8x-x^2}{x^4}>0\quad(0<x\leqslant1),\]
+\Needspace{5\baselineskip}
+故 $g$ 在 $(0,1]$ 上单调递增，
+\nopagebreak[4]
+\[g(x)\leqslant g(1)=-6,\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[a\geqslant-6.\]
+
+\Needspace{5\baselineskip}
+当 $x\in[-2,0)$ 时，$x^3<0$，原不等式等价于
+\nopagebreak[4]
+\[a\leqslant\frac{x^2-4x-3}{x^3}=g(x).\]
+\Needspace{5\baselineskip}
+此时
+\nopagebreak[4]
+\[g'(x)=\frac{9+8x-x^2}{x^4}=-\frac{(x-9)(x+1)}{x^4}.\]
+\Needspace{5\baselineskip}
+在 $[-2,-1)$ 上 $(x-9)<0$，$(x+1)<0$，故 $g'(x)<0$，$g$ 递减；在 $(-1,0)$ 上 $g'(x)>0$，$g$ 递增。所以 $g$ 在 $[-2,0)$ 上的最小值为
+\nopagebreak[4]
+\[g(-1)=\frac{1+4-3}{-1}=-2,\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[a\leqslant-2.\]
+
+\Needspace{5\baselineskip}
+综上
+\nopagebreak[4]
+\[-6\leqslant a\leqslant-2.\]
+
+选 C。
+
+\gkanswer{答案：C。分离参数得 $a\geqslant-6$（$x>0$）且 $a\leqslant-2$（$x<0$），故 $a\in[-6,-2]$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+已知定义在 $[0,1]$ 上的函数 $f(x)$ 满足：① $f(0)=f(1)=0$；② 对所有 $x$，$y\in[0,1]$，且 $x\neq y$，有 $|f(x)-f(y)|<\dfrac12|x-y|$。若对所有 $x$，$y\in[0,1]$，$|f(x)-f(y)|<k$ 恒成立，则 $k$ 的最小值为\mbox{（　　）}
+
+（A）$\dfrac12$；（B）$\dfrac14$；（C）$\dfrac1{2\pi}$；（D）$\dfrac18$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+对任意 $x\in[0,1]$，由 $f(0)=0$ 及条件②，
+\nopagebreak[4]
+\[|f(x)|=|f(x)-f(0)|<\frac12|x-0|=\frac x2.\]
+\Needspace{5\baselineskip}
+由 $f(1)=0$ 同理，
+\nopagebreak[4]
+\[|f(x)|=|f(x)-f(1)|<\frac12|1-x|=\frac{1-x}2.\]
+\Needspace{5\baselineskip}
+因此
+\nopagebreak[4]
+\[|f(x)|<\frac12\min\{x,1-x\}\leqslant\frac14.\]
+
+\Needspace{5\baselineskip}
+再估计两点之差。设 $0\leqslant x<y\leqslant1$。一方面，
+\nopagebreak[4]
+\[|f(y)-f(x)|<\frac12(y-x).\]
+\Needspace{5\baselineskip}
+另一方面，由 $f(0)=f(1)=0$，
+\nopagebreak[4]
+\[\begin{aligned}
+f(y)-f(x)
+&=\bigl(f(y)-f(1)\bigr)-\bigl(f(x)-f(0)\bigr)\\
+&<\frac12(1-y)+\frac12x
+=\frac12(1-y+x).
+\end{aligned}\]
+\Needspace{5\baselineskip}
+由于
+\nopagebreak[4]
+\[(y-x)+(1-y+x)=1,\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[\min\{y-x,\ 1-y+x\}\leqslant\frac12,\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[|f(x)-f(y)|<\frac12\cdot\frac12=\frac14.\]
+故 $k=\dfrac14$ 一定满足要求。
+
+\Needspace{5\baselineskip}
+再说明不能更小。取
+\nopagebreak[4]
+\[f_\varepsilon(x)=\left(\frac12-\varepsilon\right)\min\{x,1-x\},\qquad 0<\varepsilon<\frac12.\]
+\Needspace{5\baselineskip}
+它满足 $f_\varepsilon(0)=f_\varepsilon(1)=0$，且斜率绝对值不超过 $\dfrac12-\varepsilon<\dfrac12$，故满足条件②。但
+\nopagebreak[4]
+\[\left|f_\varepsilon\left(\frac12\right)-f_\varepsilon(0)\right|
+=\frac12\left(\frac12-\varepsilon\right)
+=\frac14-\frac\varepsilon2.\]
+当 $\varepsilon\to0^+$ 时该值趋于 $\dfrac14$，所以任何 $k<\dfrac14$ 都不能使 $|f(x)-f(y)|<k$ 恒成立。
+
+因此 $k$ 的最小值为 $\dfrac14$。
+
+选 B。
+
+\gkanswer{答案：B。由 $f(0)=f(1)=0$ 及斜率小于 $\dfrac12$ 得 $|f(x)|<\dfrac12\min\{x,1-x\}\leqslant\dfrac14$，且上界可逼近，故 $k_{\min}=\dfrac14$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+执行如图的程序框图，若输入 $x=9$，则输出 $y=$\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_liaoning_science_q13_flowchart}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+按框图逐步执行。
+
+\Needspace{5\baselineskip}
+第一次：输入 $x=9$，
+\nopagebreak[4]
+\[y=\frac93+2=5,\qquad |y-x|=|5-9|=4\geqslant1,\]
+不满足判断条件，令 $x=y=5$。
+
+\Needspace{5\baselineskip}
+第二次：
+\nopagebreak[4]
+\[y=\frac53+2=\frac{11}3,\qquad
+\left|y-x\right|=\left|\frac{11}3-5\right|=\frac43\geqslant1,\]
+仍不满足，令 $x=\dfrac{11}3$。
+
+\Needspace{5\baselineskip}
+第三次：
+\nopagebreak[4]
+\[y=\frac13\cdot\frac{11}3+2=\frac{11}9+2=\frac{29}9,\]
+\Needspace{5\baselineskip}
+此时
+\nopagebreak[4]
+\[\left|y-x\right|
+=\left|\frac{29}9-\frac{11}3\right|
+=\left|\frac{29-33}{9}\right|
+=\frac49<1.\]
+\Needspace{5\baselineskip}
+满足判断条件，输出
+\nopagebreak[4]
+\[y=\frac{29}9.\]
+
+\gkanswer{答案：$\dfrac{29}9$。依次取 $x=9,5,\dfrac{11}3$，第三次得 $y=\dfrac{29}9$，此时 $|y-x|=\dfrac49<1$，输出 $\dfrac{29}9$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+正方形的四个顶点 $A(-1,-1)$，$B(1,-1)$，$C(1,1)$，$D(-1,1)$ 分别在抛物线 $y=-x^2$ 和 $y=x^2$ 上，如图所示，若将一个质点随机投入正方形 $ABCD$ 中，则质点落在阴影区域的概率是\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_liaoning_science_q14_parabola_region}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+正方形边长为 $2$，面积为
+\nopagebreak[4]
+\[S_{ABCD}=2^2=4.\]
+
+\Needspace{5\baselineskip}
+阴影区域是两条抛物线之间的部分，即对每个 $x\in[-1,1]$，有
+\nopagebreak[4]
+\[-x^2\leqslant y\leqslant x^2.\]
+\Needspace{5\baselineskip}
+其面积为
+\nopagebreak[4]
+\[\begin{aligned}
+S_{\text{\text{阴影}}}
+&=\int_{-1}^{1}\bigl[x^2-(-x^2)\bigr]\,\mathrm dx\\
+&=\int_{-1}^{1}2x^2\,\mathrm dx
+=\left.\frac{2x^3}{3}\right|_{-1}^{1}
+=\frac23-\left(-\frac23\right)
+=\frac43.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+这是几何概型，所求概率为
+\nopagebreak[4]
+\[P=\frac{S_{\text{\text{阴影}}}}{S_{ABCD}}
+=\frac{4/3}{4}=\frac13.\]
+
+\gkanswer{答案：$\dfrac13$。阴影面积 $\displaystyle\int_{-1}^{1}2x^2\,\mathrm dx=\dfrac43$，正方形面积 $4$，概率为 $\dfrac13$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+已知椭圆 $C:\dfrac{x^2}9+\dfrac{y^2}4=1$，点 $M$ 与 $C$ 的焦点不重合，若 $M$ 关于 $C$ 的焦点的对称点分别为 $A$，$B$，线段 $MN$ 的中点在 $C$ 上，则 $|AN|+|BN|=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+椭圆中 $a=3$，$b=2$，
+\nopagebreak[4]
+\[c=\sqrt{a^2-b^2}=\sqrt{9-4}=\sqrt5,\]
+\Needspace{5\baselineskip}
+焦点为
+\nopagebreak[4]
+\[F_1(-\sqrt5,0),\qquad F_2(\sqrt5,0).\]
+
+\Needspace{5\baselineskip}
+因为 $A$ 是 $M$ 关于 $F_1$ 的对称点，所以 $F_1$ 是 $MA$ 的中点：
+\nopagebreak[4]
+\[A=2F_1-M.\]
+\Needspace{5\baselineskip}
+同理
+\nopagebreak[4]
+\[B=2F_2-M.\]
+\Needspace{5\baselineskip}
+设 $Q$ 为线段 $MN$ 的中点，则
+\nopagebreak[4]
+\[M+N=2Q.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\begin{aligned}
+|AN|
+&=|N-A|
+=|N-(2F_1-M)|\\
+&=|M+N-2F_1|
+=|2Q-2F_1|
+=2|QF_1|.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+同理
+\nopagebreak[4]
+\[|BN|=2|QF_2|.\]
+\Needspace{5\baselineskip}
+因为 $Q$ 在椭圆上，由椭圆定义
+\nopagebreak[4]
+\[|QF_1|+|QF_2|=2a=6,\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[|AN|+|BN|
+=2\bigl(|QF_1|+|QF_2|\bigr)
+=2\times6=12.\]
+
+\gkanswer{答案：$12$。设 $Q$ 为 $MN$ 中点，则 $|AN|=2|F_1Q|$，$|BN|=2|F_2Q|$，故和为 $2\times2a=12$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+对于 $c>0$，当非零实数 $a$，$b$ 满足 $4a^2-2ab+4b^2-c=0$ 且使 $|2a+b|$ 最大时，$\dfrac3a-\dfrac4b+\dfrac5c$ 的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+记 $u=2a+b$。对条件左端配方：
+\nopagebreak[4]
+\[\begin{aligned}
+4a^2-2ab+4b^2
+&=\frac58(2a+b)^2+\frac38(3b-2a)^2.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+验证：右边展开为
+\nopagebreak[4]
+\[\frac58(4a^2+4ab+b^2)+\frac38(9b^2-12ab+4a^2)
+=4a^2-2ab+4b^2.\]
+\Needspace{5\baselineskip}
+因为 $\dfrac38(3b-2a)^2\geqslant0$，所以
+\nopagebreak[4]
+\[c\geqslant\frac58(2a+b)^2,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[|2a+b|\leqslant\sqrt{\frac{8c}{5}}.\]
+\Needspace{5\baselineskip}
+等号成立当且仅当
+\nopagebreak[4]
+\[3b=2a,\qquad\text{\text{即}}\quad b=\frac23a.\]
+\Needspace{5\baselineskip}
+故 $|2a+b|$ 最大时 $b=\dfrac23a$，此时
+\nopagebreak[4]
+\[c=4a^2-2a\cdot\frac23a+4\cdot\frac49a^2
+=\frac{40}9a^2,\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[a^2=\frac{9c}{40}.\]
+
+\Needspace{5\baselineskip}
+代入所求式子：
+\nopagebreak[4]
+\[\begin{aligned}
+\frac3a-\frac4b+\frac5c
+&=\frac3a-\frac4{2a/3}+\frac5c\\
+&=\frac3a-\frac6a+\frac5c
+=-\frac3a+\frac5c.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+由 $a^2=\dfrac{9c}{40}$ 得
+\nopagebreak[4]
+\[\frac3a=\pm\frac{3}{\sqrt{9c/40}}
+=\pm\frac{2\sqrt{10}}{\sqrt c}.\]
+\Needspace{5\baselineskip}
+为使原式最小，取 $a>0$，即
+\nopagebreak[4]
+\[\frac3a=\frac{2\sqrt{10}}{\sqrt c}.\]
+\Needspace{5\baselineskip}
+令 $s=\dfrac1{\sqrt c}>0$，则
+\nopagebreak[4]
+\[\begin{aligned}
+\frac3a-\frac4b+\frac5c
+&=-2\sqrt{10}\,s+5s^2\\
+&=5\left(s-\frac{\sqrt{10}}5\right)^2-2
+\geqslant-2.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+等号在
+\nopagebreak[4]
+\[s=\frac{\sqrt{10}}5,\qquad c=\frac52\]
+\Needspace{5\baselineskip}
+时成立，此时
+\nopagebreak[4]
+\[a=\frac34,\qquad b=\frac12,\]
+\Needspace{5\baselineskip}
+且
+\nopagebreak[4]
+\[4a^2-2ab+4b^2=\frac94-\frac34+1=\frac52=c,\]
+\nopagebreak[4]
+\[|2a+b|=2=\sqrt{\frac{8c}{5}},\]
+确为最大值情形。
+
+故最小值为 $-2$。
+
+\gkanswer{答案：$-2$。由 $4a^2-2ab+4b^2\geqslant\dfrac58(2a+b)^2$ 知取最大值时 $b=\dfrac23a$、$c=\dfrac{40}9a^2$，原式化为 $\dfrac5c-\dfrac{2\sqrt{10}}{\sqrt c}$，当 $c=\dfrac52$ 时取最小值 $-2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，内角 $A$，$B$，$C$ 的对边分别为 $a$，$b$，$c$，且 $a>c$，已知 $\overrightarrow{BA}\cdot\overrightarrow{BC}=2$，$\cos B=\dfrac13$，$b=3$，求：
+
+（1） $a$ 和 $c$ 的值；
+
+（2） $\cos(B-C)$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+由数量积定义
+\nopagebreak[4]
+\[\overrightarrow{BA}\cdot\overrightarrow{BC}
+=|\overrightarrow{BA}|\cdot|\overrightarrow{BC}|\cos B
+=ca\cdot\frac13=2,\]
+\Needspace{5\baselineskip}
+得
+\nopagebreak[4]
+\[ac=6.\]
+\Needspace{5\baselineskip}
+由余弦定理
+\nopagebreak[4]
+\[b^2=a^2+c^2-2ac\cos B,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[9=a^2+c^2-2\times6\times\frac13=a^2+c^2-4,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[a^2+c^2=13.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[(a+c)^2=a^2+c^2+2ac=13+12=25,\]
+\Needspace{5\baselineskip}
+结合 $a+c>0$ 得
+\nopagebreak[4]
+\[a+c=5.\]
+\Needspace{5\baselineskip}
+所以 $a$，$c$ 是方程
+\nopagebreak[4]
+\[t^2-5t+6=0\]
+\Needspace{5\baselineskip}
+的两根，即 $t=2$ 或 $t=3$。又 $a>c$，故
+\nopagebreak[4]
+\[a=3,\qquad c=2.\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+由余弦定理
+\nopagebreak[4]
+\[\cos C=\frac{a^2+b^2-c^2}{2ab}
+=\frac{9+9-4}{2\times3\times3}
+=\frac{14}{18}=\frac79.\]
+\Needspace{5\baselineskip}
+因为 $C\in(0,\pi)$，所以
+\nopagebreak[4]
+\[\sin C=\sqrt{1-\cos^2C}
+=\sqrt{1-\frac{49}{81}}
+=\frac{\sqrt{32}}9=\frac{4\sqrt2}9.\]
+\Needspace{5\baselineskip}
+又 $B\in(0,\pi)$，$\cos B=\dfrac13$，故
+\nopagebreak[4]
+\[\sin B=\sqrt{1-\frac19}=\frac{2\sqrt2}3.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\begin{aligned}
+\cos(B-C)
+&=\cos B\cos C+\sin B\sin C\\
+&=\frac13\cdot\frac79+\frac{2\sqrt2}3\cdot\frac{4\sqrt2}9\\
+&=\frac7{27}+\frac{16}{27}=\frac{23}{27}.
+\end{aligned}\]
+
+\gkanswer{答案（1）：$a=3$，$c=2$。由 $ac\cos B=2$ 得 $ac=6$，再由余弦定理得 $a^2+c^2=13$，结合 $a>c$ 解出。}
+
+\gkanswer{答案（2）：$\dfrac{23}{27}$。$\cos C=\dfrac79$，$\sin C=\dfrac{4\sqrt2}9$，$\sin B=\dfrac{2\sqrt2}3$，代入两角差余弦公式。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+一家面包房根据以往某种面包的销售记录，绘制了日销售量的频率分布直方图，如图所示。将日销售量落入各组的频率视为概率，并假设每天的销售量相互独立。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_liaoning_science_q18_histogram}\end{center}
+\nopagebreak[4]
+（1） 求在未来连续 3 天里，有连续 2 天的日销售量都不低于 100 个且另 1 天的日销售量低于 50 个的概率；
+
+（2） 用 $X$ 表示在未来 3 天里日销售量不低于 100 个的天数，求随机变量 $X$ 的分布列，期望 $E(X)$ 及方差 $D(X)$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由频率分布直方图，组距为 $50$，各组的“频率/组距”依次为
+\nopagebreak[4]
+\[0.003,\quad0.005,\quad0.006,\quad0.004,\quad0.002.\]
+\Needspace{5\baselineskip}
+故各组的频率依次为
+\nopagebreak[4]
+\[\begin{aligned}
+&0.003\times50=0.15,\\
+&0.005\times50=0.25,\\
+&0.006\times50=0.30,\\
+&0.004\times50=0.20,\\
+&0.002\times50=0.10.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+即日销售量不低于 $100$ 个的概率为
+\nopagebreak[4]
+\[p=0.30+0.20+0.10=0.6,\]
+\Needspace{5\baselineskip}
+低于 $50$ 个的概率为
+\nopagebreak[4]
+\[q=0.15.\]
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+设一天日销售量不低于 $100$ 个为事件 $A$，低于 $50$ 个为事件 $B$，则
+\nopagebreak[4]
+\[P(A)=0.6,\qquad P(B)=0.15.\]
+
+\Needspace{5\baselineskip}
+连续 $3$ 天中，“有连续 $2$ 天 $A$ 发生且另 $1$ 天 $B$ 发生”的情形只有
+\nopagebreak[4]
+\[AAB,\qquad BAA\]
+两种（$ABA$ 中的两个 $A$ 不相邻，不符合题意）。
+
+\Needspace{5\baselineskip}
+每种情形发生的概率为
+\nopagebreak[4]
+\[0.6\times0.6\times0.15=0.054.\]
+\Needspace{5\baselineskip}
+故所求概率为
+\nopagebreak[4]
+\[2\times0.054=0.108.\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+每天日销售量不低于 $100$ 个的概率为 $0.6$，且各天相互独立，故
+\nopagebreak[4]
+\[X\sim B(3,0.6).\]
+\Needspace{5\baselineskip}
+分布列为
+\nopagebreak[4]
+\[\begin{aligned}
+P(X=0)&=\mathrm C_3^0(0.6)^0(0.4)^3=0.064,\\
+P(X=1)&=\mathrm C_3^1(0.6)^1(0.4)^2=0.288,\\
+P(X=2)&=\mathrm C_3^2(0.6)^2(0.4)^1=0.432,\\
+P(X=3)&=\mathrm C_3^3(0.6)^3(0.4)^0=0.216.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[E(X)=np=3\times0.6=1.8,\]
+\nopagebreak[4]
+\[D(X)=np(1-p)=3\times0.6\times0.4=0.72.\]
+
+\gkanswer{答案（1）：$0.108$。日销售量不低于 $100$ 的概率为 $0.6$，低于 $50$ 的概率为 $0.15$，所求为 $2\times0.6^2\times0.15=0.108$。}
+
+\gkanswer{答案（2）：$P(X=0)=0.064$，$P(X=1)=0.288$，$P(X=2)=0.432$，$P(X=3)=0.216$；$E(X)=1.8$，$D(X)=0.72$。$X\sim B(3,0.6)$，直接代入二项分布公式。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+如图，$\triangle ABC$ 和 $\triangle BCD$ 所在平面互相垂直，且 $AB=BC=BD=2$，$\angle ABC=\angle DBC=120^\circ$，$E$，$F$ 分别为 $AC$，$DC$ 的中点。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_liaoning_science_q19_tetrahedron}\end{center}
+\nopagebreak[4]
+（1） 求证：$EF\perp BC$；
+
+（2） 求二面角 $E-BF-C$ 的正弦值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+建立空间直角坐标系。以 $B$ 为原点，$BC$ 所在直线为 $x$ 轴。因为平面 $ABC\perp$ 平面 $BCD$，可取平面 $ABC$ 为 $xOy$ 平面，平面 $BCD$ 为 $xOz$ 平面。
+
+\Needspace{5\baselineskip}
+由 $BC=2$ 得
+\nopagebreak[4]
+\[C(2,0,0).\]
+\Needspace{5\baselineskip}
+由 $AB=2$，$\angle ABC=120^\circ$，得
+\nopagebreak[4]
+\[A(2\cos120^\circ,2\sin120^\circ,0)=(-1,\sqrt3,0).\]
+\Needspace{5\baselineskip}
+由 $BD=2$，$\angle DBC=120^\circ$，且 $D$ 在 $xOz$ 平面内，得
+\nopagebreak[4]
+\[D(2\cos120^\circ,0,2\sin120^\circ)=(-1,0,\sqrt3).\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[E\left(\frac12,\frac{\sqrt3}2,0\right),\qquad
+F\left(\frac12,0,\frac{\sqrt3}2\right).\]
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+计算
+\nopagebreak[4]
+\[\overrightarrow{EF}
+=F-E=\left(0,-\frac{\sqrt3}2,\frac{\sqrt3}2\right),\]
+\nopagebreak[4]
+\[\overrightarrow{BC}=C-B=(2,0,0).\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[\overrightarrow{EF}\cdot\overrightarrow{BC}
+=0\cdot2+\left(-\frac{\sqrt3}2\right)\cdot0+\frac{\sqrt3}2\cdot0=0,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[EF\perp BC.\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+平面 $BEF$ 过原点 $B$，其法向量可取
+\nopagebreak[4]
+\[\boldsymbol n_1=\overrightarrow{BE}\times\overrightarrow{BF}.\]
+\Needspace{5\baselineskip}
+而
+\nopagebreak[4]
+\[\overrightarrow{BE}=\left(\frac12,\frac{\sqrt3}2,0\right),\qquad
+\overrightarrow{BF}=\left(\frac12,0,\frac{\sqrt3}2\right).\]
+\Needspace{5\baselineskip}
+计算
+\nopagebreak[4]
+\[\begin{aligned}
+\boldsymbol n_1
+&=\begin{vmatrix}
+\boldsymbol i&\boldsymbol j&\boldsymbol k\\
+\frac12&\frac{\sqrt3}2&0\\
+\frac12&0&\frac{\sqrt3}2
+\end{vmatrix}\\
+&=\left(\frac34,-\frac{\sqrt3}4,-\frac{\sqrt3}4\right)
+\parallel(3,-\sqrt3,-\sqrt3).
+\end{aligned}\]
+
+\Needspace{5\baselineskip}
+平面 $BCF$ 过原点 $B$，其法向量可取
+\nopagebreak[4]
+\[\boldsymbol n_2=\overrightarrow{BC}\times\overrightarrow{BF}.\]
+\Needspace{5\baselineskip}
+计算
+\nopagebreak[4]
+\[\begin{aligned}
+\boldsymbol n_2
+&=(2,0,0)\times\left(\frac12,0,\frac{\sqrt3}2\right)\\
+&=(0,-\sqrt3,0)\parallel(0,1,0).
+\end{aligned}\]
+
+\Needspace{5\baselineskip}
+设二面角 $E-BF-C$ 的大小为 $\theta$，则
+\nopagebreak[4]
+\[\begin{aligned}
+|\cos\theta|
+&=\frac{|\boldsymbol n_1\cdot\boldsymbol n_2|}
+{|\boldsymbol n_1||\boldsymbol n_2|}\\
+&=\frac{\sqrt3}{\sqrt{9+3+3}\cdot1}
+=\frac{\sqrt3}{\sqrt{15}}
+=\frac1{\sqrt5}.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[\sin\theta=\sqrt{1-\cos^2\theta}
+=\sqrt{1-\frac15}
+=\frac2{\sqrt5}
+=\frac{2\sqrt5}5.\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\dfrac{2\sqrt5}5$。平面 $BEF$ 与平面 $BCF$ 的法向量分别为 $(3,-\sqrt3,-\sqrt3)$ 与 $(0,1,0)$，二面角余弦的绝对值为 $\dfrac1{\sqrt5}$，故正弦为 $\dfrac{2\sqrt5}5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+圆 $x^2+y^2=4$ 的切线与 $x$ 轴正半轴，$y$ 轴正半轴围成一个三角形，当该三角形面积最小时，切点为 $P$（如图）。双曲线 $C_1:\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$ 过点 $P$ 且离心率为 $\sqrt3$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_liaoning_science_q20_circle_tangent}\end{center}
+\nopagebreak[4]
+（1） 求 $C_1$ 的方程；
+
+（2） 椭圆 $C_2$ 过点 $P$ 且与 $C_1$ 有相同的焦点，直线 $l$ 过 $C_2$ 的右焦点且与 $C_2$ 交于 $A$，$B$ 两点，若以线段 $AB$ 为直径的圆过点 $P$，求 $l$ 的方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+设切点为 $P(x_0,y_0)$，$x_0>0$，$y_0>0$。圆 $x^2+y^2=4$ 在 $P$ 处的切线为
+\nopagebreak[4]
+\[x_0x+y_0y=4,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[\frac{x}{4/x_0}+\frac{y}{4/y_0}=1.\]
+\Needspace{5\baselineskip}
+它与两坐标轴正半轴围成的三角形面积为
+\nopagebreak[4]
+\[S=\frac12\cdot\frac4{x_0}\cdot\frac4{y_0}
+=\frac8{x_0y_0}.\]
+\Needspace{5\baselineskip}
+由
+\nopagebreak[4]
+\[x_0^2+y_0^2=4\geqslant2x_0y_0\]
+\Needspace{5\baselineskip}
+得
+\nopagebreak[4]
+\[x_0y_0\leqslant2,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[S\geqslant\frac82=4,\]
+\Needspace{5\baselineskip}
+等号当且仅当
+\nopagebreak[4]
+\[x_0=y_0=\sqrt2.\]
+\Needspace{5\baselineskip}
+所以面积最小时
+\nopagebreak[4]
+\[P(\sqrt2,\sqrt2).\]
+
+\Needspace{5\baselineskip}
+双曲线 $C_1$ 的离心率 $e=\sqrt3$，故
+\nopagebreak[4]
+\[e^2=\frac{c^2}{a^2}=1+\frac{b^2}{a^2}=3,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[b^2=2a^2.\]
+\Needspace{5\baselineskip}
+又 $P(\sqrt2,\sqrt2)$ 在 $C_1$ 上，
+\nopagebreak[4]
+\[\frac2{a^2}-\frac2{b^2}=1.\]
+\Needspace{5\baselineskip}
+代入 $b^2=2a^2$：
+\nopagebreak[4]
+\[\frac2{a^2}-\frac1{a^2}=1,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[a^2=1,\qquad b^2=2.\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[C_1:x^2-\frac{y^2}2=1.\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+$C_1$ 的半焦距为
+\nopagebreak[4]
+\[c_1=\sqrt{a^2+b^2}=\sqrt3,\]
+\Needspace{5\baselineskip}
+故 $C_1$ 的焦点为 $(\pm\sqrt3,0)$。设椭圆
+\nopagebreak[4]
+\[C_2:\frac{x^2}{m}+\frac{y^2}{n}=1\quad(m>n>0).\]
+\Needspace{5\baselineskip}
+它与 $C_1$ 有相同焦点，故
+\nopagebreak[4]
+\[m-n=3.\]
+\Needspace{5\baselineskip}
+又 $P(\sqrt2,\sqrt2)$ 在 $C_2$ 上，
+\nopagebreak[4]
+\[\frac2m+\frac2n=1.\]
+\Needspace{5\baselineskip}
+由 $m=n+3$ 得
+\nopagebreak[4]
+\[\frac2{n+3}+\frac2n=1
+\;\Longrightarrow\;
+2n+2(n+3)=n(n+3),\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[n^2-n-6=0,\]
+\Needspace{5\baselineskip}
+解得 $n=3$ 或 $n=-2$。取 $n=3$，则 $m=6$。所以
+\nopagebreak[4]
+\[C_2:\frac{x^2}6+\frac{y^2}3=1,\]
+右焦点为 $F(\sqrt3,0)$。
+
+\Needspace{5\baselineskip}
+设 $l:y=k(x-\sqrt3)$。代入 $x^2+2y^2=6$：
+\nopagebreak[4]
+\[(1+2k^2)x^2-4\sqrt3k^2x+6k^2-6=0.\]
+\Needspace{5\baselineskip}
+设 $A(x_1,y_1)$，$B(x_2,y_2)$，则
+\nopagebreak[4]
+\[x_1+x_2=\frac{4\sqrt3k^2}{1+2k^2},\qquad
+x_1x_2=\frac{6k^2-6}{1+2k^2}.\]
+\Needspace{5\baselineskip}
+令
+\nopagebreak[4]
+\[u_i=x_i-\sqrt3,\]
+\Needspace{5\baselineskip}
+则
+\nopagebreak[4]
+\[u_1+u_2=x_1+x_2-2\sqrt3
+=-\frac{2\sqrt3}{1+2k^2},\]
+\nopagebreak[4]
+\[u_1u_2=x_1x_2-\sqrt3(x_1+x_2)+3
+=-\frac3{1+2k^2}.\]
+
+\Needspace{5\baselineskip}
+以 $AB$ 为直径的圆过 $P$，等价于
+\nopagebreak[4]
+\[\overrightarrow{PA}\cdot\overrightarrow{PB}=0.\]
+\Needspace{5\baselineskip}
+而
+\nopagebreak[4]
+\[\overrightarrow{PA}=(x_1-\sqrt2,y_1-\sqrt2),\qquad
+\overrightarrow{PB}=(x_2-\sqrt2,y_2-\sqrt2),\]
+\Needspace{5\baselineskip}
+且 $y_i-\sqrt2=ku_i-\sqrt2$，$x_i-\sqrt2=u_i+(\sqrt3-\sqrt2)$。于是
+\nopagebreak[4]
+\[\begin{aligned}
+\overrightarrow{PA}\cdot\overrightarrow{PB}
+&=(1+k^2)u_1u_2
++\bigl(\sqrt3-\sqrt2-\sqrt2k\bigr)(u_1+u_2)\\
+&\qquad+(\sqrt3-\sqrt2)^2+2.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+代入 $u_1+u_2$、$u_1u_2$，两边乘以 $1+2k^2$：
+\nopagebreak[4]
+\[\begin{aligned}
+&-3(1+k^2)-2\sqrt3\bigl(\sqrt3-\sqrt2-\sqrt2k\bigr)\\
+&\qquad+(7-2\sqrt6)(1+2k^2)=0.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+整理得
+\nopagebreak[4]
+\[(11-4\sqrt6)k^2+2\sqrt6k-2=0.\]
+\Needspace{5\baselineskip}
+其判别式
+\nopagebreak[4]
+\[\begin{aligned}
+\Delta
+&=(2\sqrt6)^2+8(11-4\sqrt6)\\
+&=24+88-32\sqrt6\\
+&=112-32\sqrt6\\
+&=16(7-2\sqrt6)=16(\sqrt6-1)^2.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\begin{aligned}
+k&=\frac{-2\sqrt6\pm4(\sqrt6-1)}{2(11-4\sqrt6)}\\
+&=\frac{3\sqrt6+2}{25}\quad\text{\text{或}}\quad
+k=-(2+\sqrt6).
+\end{aligned}\]
+
+\Needspace{5\baselineskip}
+再检查竖直线 $x=\sqrt3$。此时 $A$、$B$ 的纵坐标为 $\pm\sqrt{\dfrac32}$，于是
+\nopagebreak[4]
+\[\overrightarrow{PA}\cdot\overrightarrow{PB}
+=(\sqrt3-\sqrt2)^2+\frac12
+=\frac{11}2-2\sqrt6\neq0,\]
+故竖直线不是解。
+
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[l:y=\frac{3\sqrt6+2}{25}(x-\sqrt3)\]
+\Needspace{5\baselineskip}
+或
+\nopagebreak[4]
+\[l:y=-(2+\sqrt6)(x-\sqrt3).\]
+
+\gkanswer{答案（1）：$x^2-\dfrac{y^2}2=1$。由 $e=\sqrt3$ 得 $b^2=2a^2$，代入 $P(\sqrt2,\sqrt2)$ 得 $a^2=1$。}
+
+\gkanswer{答案（2）：$y=\dfrac{3\sqrt6+2}{25}(x-\sqrt3)$ 或 $y=-(2+\sqrt6)(x-\sqrt3)$。设 $l:y=k(x-\sqrt3)$，由 $\overrightarrow{PA}\cdot\overrightarrow{PB}=0$ 得 $(11-4\sqrt6)k^2+2\sqrt6k-2=0$，解出 $k$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=(\cos x-x)(\pi+2x)-\dfrac83(\sin x+1)$，$g(x)=3(x-\pi)\cos x-4(1+\sin x)\ln\left(3-\dfrac{2x}{\pi}\right)$。
+
+（1） 证明：存在唯一 $x_0\in\left(0,\dfrac\pi2\right)$，使 $f(x_0)=0$；
+
+（2） 证明：存在唯一 $x_1\in\left(\dfrac\pi2,\pi\right)$，使 $g(x_1)=0$，且对（1）中的 $x_0$，有 $x_0+x_1<\pi$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+求导：
+\nopagebreak[4]
+\[\begin{aligned}
+f'(x)
+&=(-\sin x-1)(\pi+2x)+2(\cos x-x)-\frac83\cos x\\
+&=-(1+\sin x)(\pi+2x)-2x-\frac23\cos x.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+当 $0<x<\dfrac\pi2$ 时，
+\nopagebreak[4]
+\[1+\sin x>0,\qquad \pi+2x>0,\qquad x>0,\qquad \cos x>0,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[f'(x)<0.\]
+所以 $f$ 在 $\left(0,\dfrac\pi2\right)$ 上严格单调递减。
+
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[f(0)=\pi-\frac83>0,\]
+\nopagebreak[4]
+\[f\left(\frac\pi2\right)
+=\left(0-\frac\pi2\right)(2\pi)-\frac83(1+1)
+=-\pi^2-\frac{16}3<0.\]
+由零点存在定理，存在 $x_0\in\left(0,\dfrac\pi2\right)$ 使 $f(x_0)=0$；由严格单调性，这样的 $x_0$ 唯一。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+先证存在性。计算
+\nopagebreak[4]
+\[g\left(\frac\pi2\right)
+=3\left(-\frac\pi2\right)\cdot0-4(2)\ln2
+=-8\ln2<0.\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[g(\pi)=3\cdot0\cdot(-1)-4\cdot1\cdot\ln1=0,\]
+\Needspace{5\baselineskip}
+且
+\nopagebreak[4]
+\[\begin{aligned}
+g'(\pi)
+&=3\cos\pi-3(\pi-\pi)\sin\pi-4\cos\pi\ln1
++\frac{8(1+\sin\pi)}{\pi(3-2)}\\
+&=-3+\frac8\pi<0.
+\end{aligned}\]
+因为 $g(\pi)=0$ 且 $g'(\pi)<0$，所以在 $\pi$ 左侧充分近处有 $g(x)>0$。结合 $g\left(\dfrac\pi2\right)<0$，由零点存在定理，$g$ 在 $\left(\dfrac\pi2,\pi\right)$ 内有零点。
+
+\Needspace{5\baselineskip}
+再证唯一性。令
+\nopagebreak[4]
+\[u=\pi-x,\qquad x\in\left(\frac\pi2,\pi\right)
+\;\Longleftrightarrow\;
+u\in\left(0,\frac\pi2\right),\]
+\Needspace{5\baselineskip}
+并令
+\nopagebreak[4]
+\[G(u)=g(\pi-u)
+=3u\cos u-4(1+\sin u)\ln\left(1+\frac{2u}{\pi}\right).\]
+则 $g$ 在 $\left(\dfrac\pi2,\pi\right)$ 内的零点与 $G$ 在 $\left(0,\dfrac\pi2\right)$ 内的零点一一对应。
+
+\Needspace{5\baselineskip}
+求导：
+\nopagebreak[4]
+\[\begin{aligned}
+G'(u)
+&=3\cos u-3u\sin u-4\cos u\ln\left(1+\frac{2u}{\pi}\right)\\
+&\qquad-\frac{8(1+\sin u)}{\pi+2u},\\
+G''(u)
+&=-\sin u\left[6-4\ln\left(1+\frac{2u}{\pi}\right)\right]-3u\cos u\\
+&\qquad-\frac{16\cos u}{\pi+2u}
++\frac{16(1+\sin u)}{(\pi+2u)^2}.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+由于
+\nopagebreak[4]
+\[\ln\left(1+\frac{2u}{\pi}\right)\leqslant\ln2,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[6-4\ln\left(1+\frac{2u}{\pi}\right)\geqslant6-4\ln2>3.\]
+\Needspace{5\baselineskip}
+对 $0<u\leqslant\dfrac12$，利用 $\cos u\geqslant\cos\dfrac12$、$\pi+2u\leqslant\pi+1$；对 $\dfrac12<u\leqslant1$，利用 $\sin u\geqslant\sin\dfrac12$、$\cos u\geqslant\cos1$；对 $1<u<\dfrac\pi2$，利用 $\sin u\geqslant\sin1$、$\pi+2u\geqslant\pi+2$。再注意 $1+\sin u\leqslant2$，分段放缩均得
+\nopagebreak[4]
+\[G''(u)<0.\]
+\Needspace{5\baselineskip}
+（具体地，
+\nopagebreak[4]
+\[\begin{aligned}
+0<u\leqslant\tfrac12:\quad
+-G''(u)&\geqslant\frac{16\cos\frac12}{\pi+1}-\frac{32}{\pi^2}>0,\\
+\tfrac12<u\leqslant1:\quad
+-G''(u)&\geqslant3\sin\frac12+\frac{16\cos1}{\pi+2}-\frac{32}{(\pi+1)^2}>0,\\
+1<u<\tfrac\pi2:\quad
+-G''(u)&\geqslant3\sin1-\frac{32}{(\pi+2)^2}>0.
+\end{aligned}\]
+）
+所以 $G$ 在 $\left(0,\dfrac\pi2\right)$ 上严格上凸。
+
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[G(0)=0,\qquad
+G\left(\frac\pi2\right)=-8\ln2<0,\]
+\nopagebreak[4]
+\[G'(0)=3-\frac8\pi>0.\]
+上凸函数 $G$ 从 $G(0)=0$ 出发先增后减，且 $G\left(\dfrac\pi2\right)<0$，故它在 $\left(0,\dfrac\pi2\right)$ 内恰有一个零点。于是 $g$ 在 $\left(\dfrac\pi2,\pi\right)$ 内恰有一个零点，记为 $x_1$。
+
+最后证明 $x_0+x_1<\pi$。
+
+\Needspace{5\baselineskip}
+令
+\nopagebreak[4]
+\[t=x_0,\qquad s=\frac{2t}{\pi}\in(0,1),\qquad L=\ln(1+s).\]
+\Needspace{5\baselineskip}
+由 $f(t)=0$ 得
+\nopagebreak[4]
+\[(\cos t-t)(\pi+2t)=\frac83(1+\sin t).\tag{1}\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\begin{aligned}
+g(\pi-t)
+&=3t\cos t-4(1+\sin t)L\\
+&=3t\cos t-\frac32(\cos t-t)(\pi+2t)L\\
+&=3\left[t\cos t-\frac12(\cos t-t)(\pi+2t)L\right].
+\end{aligned}\]
+\Needspace{5\baselineskip}
+因此 $g(\pi-t)>0$ 等价于
+\nopagebreak[4]
+\[2t\cos t>(\cos t-t)(\pi+2t)L.\]
+\Needspace{5\baselineskip}
+两边除以 $\pi$，并利用 $t=\dfrac{\pi s}{2}$、$\pi+2t=\pi(1+s)$，得
+\nopagebreak[4]
+\[s\cos t>(1+s)L\left(\cos t-\frac{\pi s}{2}\right),\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[(1+s)Lt>\cos t\bigl[(1+s)L-s\bigr].\tag{2}\]
+
+\Needspace{5\baselineskip}
+考察函数
+\nopagebreak[4]
+\[\varphi(s)=(1+s)\ln(1+s)-s-\frac{s^2}{2}.\]
+\Needspace{5\baselineskip}
+则 $\varphi(0)=0$，且
+\nopagebreak[4]
+\[\varphi'(s)=\ln(1+s)-s<0\quad(s>0),\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[0<(1+s)L-s<\frac{s^2}{2}.\]
+\Needspace{5\baselineskip}
+又由
+\nopagebreak[4]
+\[\psi(s)=(1+s)\ln(1+s)-s,\qquad
+\psi(0)=0,\qquad \psi'(s)=\ln(1+s)>0,\]
+\Needspace{5\baselineskip}
+得
+\nopagebreak[4]
+\[(1+s)L>s.\]
+\Needspace{5\baselineskip}
+于是（2）式右端
+\nopagebreak[4]
+\[\cos t\bigl[(1+s)L-s\bigr]<\frac{s^2}{2},\]
+\Needspace{5\baselineskip}
+而左端
+\nopagebreak[4]
+\[(1+s)Lt>st=\frac{\pi s^2}{2}>\frac{s^2}{2}.\]
+\Needspace{5\baselineskip}
+故（2）式成立，从而
+\nopagebreak[4]
+\[g(\pi-x_0)>0.\]
+
+\Needspace{5\baselineskip}
+因为 $g$ 在 $\left(\dfrac\pi2,\pi\right)$ 内只有一个零点 $x_1$，且 $g\left(\dfrac\pi2\right)<0$、$g(\pi-x_0)>0$，所以
+\nopagebreak[4]
+\[\pi-x_0>x_1,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[x_0+x_1<\pi.\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+【A】如图，$EP$ 交圆于 $E$，$C$ 两点，$PD$ 切圆于 $D$，$G$ 为 $CE$ 上一点且 $PG=PD$，连接 $DG$ 并延长交圆于点 $A$，作弦 $AB$ 垂直 $EP$，垂足为 $F$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_liaoning_science_q22_circle}\end{center}
+\nopagebreak[4]
+（1） 求证：$AB$ 为圆的直径；
+
+（2） 若 $AC=BD$，求证：$AB=ED$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+因为 $PD$ 与圆相切于 $D$，由弦切角定理，切线 $DP$ 与弦 $DA$ 所成的、包含圆心的那个角等于 $\angle DCA$；而 $\angle PDA$ 与它互补，故
+\nopagebreak[4]
+\[\angle PDA+\angle DCA=180^\circ.\]
+\Needspace{5\baselineskip}
+又 $PD=PG$，故
+\nopagebreak[4]
+\[\angle PDG=\angle PGD.\]
+\Needspace{5\baselineskip}
+由于 $G$ 在 $DA$ 上，$\angle PDG=\angle PDA$，所以
+\nopagebreak[4]
+\[\angle PGD+\angle DCA=180^\circ.\]
+\Needspace{5\baselineskip}
+而 $P$，$G$，$C$ 共线，$D$，$G$，$A$ 共线且 $G$ 在 $D$ 与 $A$ 之间，故
+\nopagebreak[4]
+\[\angle PGD+\angle AGC=180^\circ.\]
+\Needspace{5\baselineskip}
+因此
+\nopagebreak[4]
+\[\angle AGC=\angle DCA.\]
+
+\Needspace{5\baselineskip}
+在 $\triangle GCD$ 中，$\angle AGC$ 是顶点 $G$ 处的外角，故
+\nopagebreak[4]
+\[\angle AGC=\angle GCD+\angle GDC.\]
+\Needspace{5\baselineskip}
+又 $CG$ 在 $\angle DCA$ 内部，
+\nopagebreak[4]
+\[\angle DCA=\angle GCD+\angle GCA.\]
+\Needspace{5\baselineskip}
+比较两式得
+\nopagebreak[4]
+\[\angle GCA=\angle GDC.\]
+\Needspace{5\baselineskip}
+因为 $G$，$D$，$A$ 共线，
+\nopagebreak[4]
+\[\angle GDC=\angle ADC.\]
+\Needspace{5\baselineskip}
+因为 $A$，$E$，$C$，$D$ 四点共圆，
+\nopagebreak[4]
+\[\angle ADC=\angle AEC.\]
+\Needspace{5\baselineskip}
+因为 $G$，$C$，$E$ 共线，
+\nopagebreak[4]
+\[\angle GCA=\angle ACE.\]
+\Needspace{5\baselineskip}
+所以
+\nopagebreak[4]
+\[\angle ACE=\angle AEC,\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[AE=AC.\]
+
+\Needspace{5\baselineskip}
+在等腰三角形 $AEC$ 中，$AF\perp EC$，故 $AF$ 也是底边 $EC$ 的中线，即
+\nopagebreak[4]
+\[FE=FC.\]
+于是 $AB$ 垂直平分弦 $EC$。弦的垂直平分线过圆心，故 $AB$ 过圆心；又 $A$，$B$ 在圆上，所以 $AB$ 为圆的直径。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+由（1）知 $AB$ 为直径，故
+\nopagebreak[4]
+\[\angle ACB=90^\circ,\qquad \angle ADB=90^\circ.\]
+\Needspace{5\baselineskip}
+在 $\mathrm{Rt}\triangle ACB$ 与 $\mathrm{Rt}\triangle BDA$ 中，
+\nopagebreak[4]
+\[AB=BA,\qquad AC=BD,\]
+\Needspace{5\baselineskip}
+由斜边、直角边对应相等得
+\nopagebreak[4]
+\[\mathrm{Rt}\triangle ACB\cong\mathrm{Rt}\triangle BDA.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\angle ABC=\angle BAD.\]
+
+\Needspace{5\baselineskip}
+又由（1）知 $AB$ 垂直平分 $EC$，故 $AE=AC$，且 $AB$ 平分 $\angle EAC$，即
+\nopagebreak[4]
+\[\angle EAB=\angle BAC.\]
+\Needspace{5\baselineskip}
+因为 $AB$ 在 $\angle EAD$ 内部，
+\nopagebreak[4]
+\[\begin{aligned}
+\angle EAD
+&=\angle EAB+\angle BAD\\
+&=\angle BAC+\angle ABC\\
+&=180^\circ-\angle ACB\\
+&=90^\circ.
+\end{aligned}\]
+\Needspace{5\baselineskip}
+所以 $\angle EAD=90^\circ$，由圆周角定理的逆定理，$ED$ 为圆的直径。于是
+\nopagebreak[4]
+\[ED=AB.\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+【B】将圆 $x^2+y^2=1$ 上每一点的横坐标保持不变，纵坐标变为原来的 $2$ 倍，得曲线 $C$。
+
+（1） 写出 $C$ 的参数方程；
+
+（2） 设直线 $l:2x+y-2=0$ 与 $C$ 的交点为 $P_1$，$P_2$，以坐标原点为极点，$x$ 轴正半轴为极轴建立极坐标系，求过线段 $P_1P_2$ 的中点且与 $l$ 垂直的直线的极坐标方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+圆 $x^2+y^2=1$ 上点的坐标可写为
+\nopagebreak[4]
+\[x=\cos\theta,\qquad y=\sin\theta\quad(\theta\in\mathbf R).\]
+\Needspace{5\baselineskip}
+纵坐标变为原来的 $2$ 倍、横坐标不变，得
+\nopagebreak[4]
+\[\begin{cases}
+x=\cos\theta,\\
+y=2\sin\theta,
+\end{cases}\qquad\theta\in\mathbf R.\]
+\Needspace{5\baselineskip}
+消去 $\theta$ 得普通方程
+\nopagebreak[4]
+\[x^2+\frac{y^2}4=1.\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+将 $y=2-2x$ 代入 $x^2+\dfrac{y^2}4=1$：
+\nopagebreak[4]
+\[x^2+\frac{(2-2x)^2}{4}=1,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[x^2+(1-x)^2=1,\]
+\Needspace{5\baselineskip}
+化简得
+\nopagebreak[4]
+\[2x^2-2x=0,\]
+\Needspace{5\baselineskip}
+故 $x=0$ 或 $x=1$。于是两个交点为
+\nopagebreak[4]
+\[P_1(1,0),\qquad P_2(0,2).\]
+\Needspace{5\baselineskip}
+线段 $P_1P_2$ 的中点为
+\nopagebreak[4]
+\[M\left(\frac12,1\right).\]
+
+\Needspace{5\baselineskip}
+直线 $l:2x+y-2=0$ 的斜率为 $-2$，故与 $l$ 垂直的直线斜率为 $\dfrac12$，其方程为
+\nopagebreak[4]
+\[y-1=\frac12\left(x-\frac12\right),\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[2x-4y+3=0.\]
+\Needspace{5\baselineskip}
+代入极坐标变换
+\nopagebreak[4]
+\[x=\rho\cos\theta,\qquad y=\rho\sin\theta,\]
+\Needspace{5\baselineskip}
+得
+\nopagebreak[4]
+\[2\rho\cos\theta-4\rho\sin\theta+3=0,\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[\rho=\frac3{4\sin\theta-2\cos\theta}.\]
+
+\gkanswer{答案（1）：$\begin{cases}x=\cos\theta,\\y=2\sin\theta\end{cases}$（$\theta$ 为参数）。由 $x^2+\dfrac{y^2}4=1$ 直接写出。}
+
+\gkanswer{答案（2）：$\rho=\dfrac3{4\sin\theta-2\cos\theta}$。中点 $M\left(\dfrac12,1\right)$，所求直线 $2x-4y+3=0$，代入 $x=\rho\cos\theta$，$y=\rho\sin\theta$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{24}{}
+
+\textbf{题目}：
+
+【C】设函数 $f(x)=2|x-1|+x-1$，$g(x)=16x^2-8x+1$，记 $f(x)\leqslant 1$ 的解集为 $M$，$g(x)\leqslant 4$ 的解集为 $N$。
+
+（1） 求 $M$；
+
+（2） 当 $x\in M\cap N$ 时，证明：$x^2f(x)+x[f(x)]^2\leqslant\dfrac14$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+当 $x\geqslant1$ 时，
+\nopagebreak[4]
+\[f(x)=2(x-1)+x-1=3x-3.\]
+\Needspace{5\baselineskip}
+由 $f(x)\leqslant1$ 得
+\nopagebreak[4]
+\[3x-3\leqslant1,\qquad x\leqslant\frac43.\]
+\Needspace{5\baselineskip}
+结合 $x\geqslant1$，得
+\nopagebreak[4]
+\[1\leqslant x\leqslant\frac43.\]
+
+\Needspace{5\baselineskip}
+当 $x<1$ 时，
+\nopagebreak[4]
+\[f(x)=2(1-x)+x-1=1-x.\]
+\Needspace{5\baselineskip}
+由 $f(x)\leqslant1$ 得
+\nopagebreak[4]
+\[1-x\leqslant1,\qquad x\geqslant0.\]
+\Needspace{5\baselineskip}
+结合 $x<1$，得
+\nopagebreak[4]
+\[0\leqslant x<1.\]
+
+\Needspace{5\baselineskip}
+综上
+\nopagebreak[4]
+\[M=\left[0,\frac43\right].\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+由
+\nopagebreak[4]
+\[g(x)=16x^2-8x+1=(4x-1)^2\leqslant4,\]
+\Needspace{5\baselineskip}
+得
+\nopagebreak[4]
+\[|4x-1|\leqslant2,\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[-2\leqslant4x-1\leqslant2,\]
+\Needspace{5\baselineskip}
+解得
+\nopagebreak[4]
+\[-\frac14\leqslant x\leqslant\frac34.\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[N=\left[-\frac14,\frac34\right],\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[M\cap N=\left[0,\frac34\right].\]
+
+\Needspace{5\baselineskip}
+当 $x\in M\cap N$ 时，$0\leqslant x\leqslant\dfrac34<1$，故
+\nopagebreak[4]
+\[f(x)=1-x.\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[\begin{aligned}
+x^2f(x)+x[f(x)]^2
+&=x^2(1-x)+x(1-x)^2\\
+&=x(1-x)\bigl[x+(1-x)\bigr]\\
+&=x(1-x).
+\end{aligned}\]
+\Needspace{5\baselineskip}
+由均值不等式，
+\nopagebreak[4]
+\[x(1-x)\leqslant\left(\frac{x+(1-x)}2\right)^2=\frac14,\]
+\Needspace{5\baselineskip}
+等号在 $x=\dfrac12$ 时成立。故
+\nopagebreak[4]
+\[x^2f(x)+x[f(x)]^2\leqslant\frac14.\]
+
+\gkanswer{答案（1）：$M=\left[0,\dfrac43\right]$。分 $x\geqslant1$ 与 $x<1$ 去绝对值求解。}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}

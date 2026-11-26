@@ -1,0 +1,35 @@
+% ============================================================
+% f2014_liaoning_science_q19_tetrahedron.tex
+% 2014 辽宁卷（理科）第 19 题：两个平面垂直的四面体
+% 来源 PDF：普通高考/2014/2014辽宁理.pdf
+% 原页：第 2 页（A3），印面 896，第 19 题题干下方
+% 图中 E、F 分别为 AC、DC 的中点；AB、BC、BD、BE 为被遮住的棱，
+% 画虚线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small, x=1cm, y=1cm,
+  every node/.style={inner sep=1.5pt}]
+  \coordinate (A) at (2.00,4.00);
+  \coordinate (C) at (4.90,2.20);
+  \coordinate (D) at (1.35,0.35);
+  \coordinate (B) at (2.75,1.95);
+  \coordinate (E) at (3.45,3.10);
+  \coordinate (F) at (3.125,1.275);
+
+  % 可见棱与截面线
+  \draw (A) -- (C) -- (D) -- cycle;
+  \draw (E) -- (F);
+
+  % 被遮住的棱
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (B) -- (C);
+  \draw[dashed] (B) -- (D);
+  \draw[dashed] (B) -- (E);
+
+  % 顶点与中点
+  \fill (A) circle (1.1pt) node[above] {$A$};
+  \fill (C) circle (1.1pt) node[right] {$C$};
+  \fill (D) circle (1.1pt) node[below left] {$D$};
+  \fill (B) circle (1.1pt) node[below right] {$B$};
+  \fill (E) circle (1.1pt) node[above right] {$E$};
+  \fill (F) circle (1.1pt) node[below right] {$F$};
+\end{tikzpicture}

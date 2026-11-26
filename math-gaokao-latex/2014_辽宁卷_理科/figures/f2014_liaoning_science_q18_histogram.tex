@@ -1,0 +1,36 @@
+% ============================================================
+% f2014_liaoning_science_q18_histogram.tex
+% 2014 辽宁卷（理科）第 18 题：频率分布直方图
+% 来源 PDF：普通高考/2014/2014辽宁理.pdf
+% 原页：第 1 页（A3），印面 895，第 18 题题干右侧
+% 组距 50，各组频率/组距依次为 0.003、0.005、0.006、0.004、0.002。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.25cm, y=1cm, every node/.style={inner sep=1.5pt}]
+  % 参考虚线（先画，随后被较高的矩形遮住，与原图一致）
+  \foreach \h/\xend in {6/3, 5/2, 4/4, 2/5} {
+    \draw[dashed, line width=0.35pt] (0,\h) -- (\xend,\h);
+  }
+
+  % 五个矩形
+  \foreach \i/\h in {0/3, 1/5, 2/6, 3/4, 4/2} {
+    \fill[white] (\i,0) rectangle (\i+1,\h);
+    \draw (\i,\h) rectangle (\i+1,0);
+  }
+
+  % 坐标轴
+  \draw[->] (-0.40,0) -- (6.55,0) node[right] {日销售量/个};
+  \draw[->] (0,-0.25) -- (0,7.05);
+  \node[align=center] at (-0.52,6.65) {频率\\[-2pt]组距};
+
+  % 横轴刻度
+  \foreach \i/\v in {0/0, 1/50, 2/100, 3/150, 4/200, 5/250} {
+    \draw (\i,0.09) -- (\i,-0.09) node[below, font=\scriptsize] {\v};
+  }
+
+  % 纵轴刻度
+  \foreach \h/\v in {2/0.002, 3/0.003, 4/0.004, 5/0.005, 6/0.006} {
+    \draw (-0.09,\h) -- (0.09,\h);
+    \node[left, font=\scriptsize] at (-0.11,\h) {\v};
+  }
+\end{tikzpicture}

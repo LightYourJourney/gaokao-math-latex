@@ -1,0 +1,44 @@
+% ============================================================
+% f2014_liaoning_science_q22_circle.tex
+% 2014 辽宁卷（理科）第 22 题：圆的切线与割线
+% 来源 PDF：普通高考/2014/2014辽宁理.pdf
+% 原页：第 2 页（A3），印面 896，第 22 题题干下方
+% EP 交圆于 E、C，PD 切圆于 D，G 在 CE 上且 PG=PD，
+% DG 延长交圆于 A，AB 垂直 EP 于 F。
+% 取单位圆：E(-0.866,-0.5)、C(0.866,-0.5)、A(0,-1)、B(0,1)、
+% D(0.574,0.819)、P(2.456,-0.5)，此时 PD 与圆相切、PG=PD。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.5cm, y=1.5cm, every node/.style={inner sep=1.5pt}]
+  \coordinate (E) at (-0.866,-0.5);
+  \coordinate (C) at (0.866,-0.5);
+  \coordinate (A) at (0,-1);
+  \coordinate (B) at (0,1);
+  \coordinate (F) at (0,-0.5);
+  \coordinate (G) at (0.158,-0.5);
+  \coordinate (D) at (0.574,0.819);
+  \coordinate (P) at (2.456,-0.5);
+
+  % 圆
+  \draw (0,0) circle (1);
+
+  % 割线 EP、直径 AB、弦 BD、切线 PD、弦 ED、直线 DGA、弦 AC
+  \draw (E) -- (P);
+  \draw (A) -- (B);
+  \draw (B) -- (D);
+  \draw (D) -- (P);
+  \draw (E) -- (D);
+  \draw (D) -- (A);
+  \draw (A) -- (C);
+
+  % 点与标签
+  \fill (E) circle (1.1pt) node[left] {$E$};
+  \fill (C) circle (1.1pt) node[below] {$C$};
+  \fill (A) circle (1.1pt) node[below] {$A$};
+  \fill (B) circle (1.1pt) node[above] {$B$};
+  \fill (F) circle (1.0pt) node[above left, xshift=-2pt] {$F$};
+  \fill (G) circle (1.0pt);
+  \node at (0.23,-0.66) {$G$};
+  \fill (D) circle (1.1pt) node[above right] {$D$};
+  \fill (P) circle (1.1pt) node[right] {$P$};
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+% ============================================================
+% f2014_liaoning_science_q13_flowchart.tex
+% 2014 辽宁卷（理科）第 13 题：程序框图
+% 来源 PDF：普通高考/2014/2014辽宁理.pdf
+% 原页：第 1 页（A3），印面 895，第 13 题题干下方
+% 按原图重绘：输入 x；计算 y=x/3+2；判断 |y-x|<1，
+% 成立则输出 y，不成立则令 x=y 后返回重新计算 y。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  every node/.style={inner sep=2pt},
+  term/.style={draw, rounded corners=3pt, minimum width=2.1cm,
+    minimum height=0.6cm, align=center},
+  proc/.style={draw, minimum width=2.5cm, minimum height=0.7cm, align=center},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=2.5cm, minimum height=0.6cm, align=center},
+  dec/.style={draw, diamond, aspect=1.8, minimum width=2.7cm,
+    minimum height=1.0cm, align=center}]
+  \node[term] (start) at (0,0) {开始};
+  \node[io] (input) at (0,-0.95) {输入 $x$};
+  \node[proc] (calc) at (0,-1.95) {$y=\dfrac{x}{3}+2$};
+  \node[dec] (test) at (0,-3.25) {$|y-x|<1$};
+  \node[io] (out) at (0,-4.55) {输出 $y$};
+  \node[term] (end) at (0,-5.5) {结束};
+  \node[proc] (assign) at (3.2,-1.95) {$x=y$};
+
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (calc);
+  \draw[->] (calc) -- (test);
+  \draw[->] (test.south) -- node[left] {是} (out.north);
+  \draw[->] (out) -- (end);
+  \draw[->] (test.east) -| node[pos=0.25, above] {否} (assign.south);
+  \draw[->] (assign.north) |- (0,-1.45);
+\end{tikzpicture}

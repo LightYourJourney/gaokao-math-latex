@@ -1,0 +1,42 @@
+% ============================================================
+% f2014_liaoning_science_q14_parabola_region.tex
+% 2014 辽宁卷（理科）第 14 题：正方形与两条抛物线
+% 来源 PDF：普通高考/2014/2014辽宁理.pdf
+% 原页：第 1 页（A3），印面 895，第 14 题题干下方
+% 正方形 ABCD 的四个顶点分别在 y=x^2 与 y=-x^2 上，
+% 阴影区域为两抛物线之间的部分。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.9cm, y=1.9cm, every node/.style={inner sep=1.5pt}]
+  % 阴影区域：-x^2 <= y <= x^2
+  \fill[gray!25] (-1,1) parabola bend (0,0) (1,1)
+    -- (1,-1) parabola bend (0,0) (-1,-1) -- cycle;
+  % 正方形
+  \draw (-1,-1) rectangle (1,1);
+  % 坐标轴
+  \draw[->] (-1.30,0) -- (1.45,0) node[right] {$x$};
+  \draw[->] (0,-1.30) -- (0,1.45) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  % 抛物线
+  \draw[line width=0.8pt, domain=-1.18:1.18, samples=80]
+    plot (\x,{\x*\x});
+  \draw[line width=0.8pt, domain=-1.18:1.18, samples=80]
+    plot (\x,{-\x*\x});
+  % 刻度
+  \draw (1,0.03) -- (1,-0.03) node[below] {$1$};
+  \draw (-1,0.03) -- (-1,-0.03) node[below left] {$-1$};
+  \draw (0.03,1) -- (-0.03,1) node[left] {$1$};
+  \draw (0.03,-1) -- (-0.03,-1) node[left] {$-1$};
+  % 顶点
+  \fill (-1,1) circle (1.1pt);
+  \node[left] at (-1.10,1.06) {$D$};
+  \fill (1,1) circle (1.1pt);
+  \node[right] at (1.10,1.06) {$C$};
+  \fill (-1,-1) circle (1.1pt);
+  \node[left] at (-1.10,-1.06) {$A$};
+  \fill (1,-1) circle (1.1pt);
+  \node[right] at (1.10,-1.06) {$B$};
+  % 抛物线标签
+  \node[right] at (1.40,1.30) {$y=x^2$};
+  \node[right] at (1.40,-1.30) {$y=-x^2$};
+\end{tikzpicture}
