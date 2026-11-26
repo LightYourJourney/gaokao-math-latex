@@ -1,0 +1,29 @@
+% ============================================================
+% f2014_hunan_arts_q20_conics.tex
+% 2014 湖南卷（文科）第 20 题：双曲线 C1 与椭圆 C2
+% 来源 PDF：普通高考/2014/2014湖南文.pdf
+% 原页：第 2 页（A3 横排）中栏，印面 888，第 20 题题干下方
+% 结构：C1: x^2-y^2/3=1（左右两支）；C2: y^2/3+x^2/2=1（竖长椭圆）；
+%       以 C1 两顶点 (±1,0) 与 C2 两焦点 (0,±1) 为顶点的正方形（菱形摆放）；
+%       P(2√3/3,1) 为两曲线在第一象限的交点。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small,
+  x=1.35cm, y=1.35cm, line cap=round, line join=round]
+  % 坐标轴
+  \draw[->] (-2.55,0) -- (2.75,0) node[right] {$x$};
+  \draw[->] (0,-2.45) -- (0,2.65) node[above] {$y$};
+  % 椭圆 C2
+  \draw[domain=0:360, samples=240, smooth, variable=\t]
+    plot ({1.41421*cos(\t)}, {1.73205*sin(\t)});
+  % 双曲线 C1 的左右两支
+  \draw[domain=-2.55:2.55, samples=120, smooth, variable=\y]
+    plot ({sqrt(1+\y*\y/3)}, {\y});
+  \draw[domain=-2.55:2.55, samples=120, smooth, variable=\y]
+    plot ({-sqrt(1+\y*\y/3)}, {\y});
+  % 正方形（顶点为 (±1,0)、(0,±1)）
+  \draw (1,0) -- (0,1) -- (-1,0) -- (0,-1) -- cycle;
+  % 原点与点 P
+  \node[below left] at (-0.06,-0.04) {$O$};
+  \fill (1.15470,1) circle (1.2pt);
+  \node[right] at (1.24,1.10) {$P$};
+\end{tikzpicture}

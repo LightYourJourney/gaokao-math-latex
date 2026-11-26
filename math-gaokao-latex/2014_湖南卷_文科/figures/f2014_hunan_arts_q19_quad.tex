@@ -1,0 +1,29 @@
+% ============================================================
+% f2014_hunan_arts_q19_quad.tex
+% 2014 湖南卷（文科）第 19 题：平面四边形 ABCD
+% 来源 PDF：普通高考/2014/2014湖南文.pdf
+% 原页：第 2 页（A3 横排）左栏，印面 888，第 19 题题干下方
+% 结构：DA⊥AB，E 在 DA 上，DE=1，EA=2；按题设精确作图（比例 0.55 cm/单位）：
+%       A(0,0)，B(6√3,0)，E(0,2)，D(0,3)，C(√3,4)。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5.71,0);
+  \coordinate (E) at (0,1.10);
+  \coordinate (D) at (0,1.65);
+  \coordinate (C) at (0.95,2.20);
+  % 四边形边界与对角线
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  \draw (D) -- (A);
+  \draw (E) -- (C);
+  \draw (E) -- (B);
+  % 顶点标注
+  \node[below left]  at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[left]        at (E) {$E$};
+  \node[left]        at (D) {$D$};
+  \node[above]       at (C) {$C$};
+\end{tikzpicture}

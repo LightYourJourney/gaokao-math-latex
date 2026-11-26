@@ -4508,6 +4508,14 @@
         "gk-2014-shandong-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b11",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-hunan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4517,7 +4525,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "41a518fe-476e-4a16-833d-ad284d58d4a1",
+  "last_transaction_id": "e3f9537f-4594-4737-81a7-3725d48d7ae7",
   "papers": [
     {
       "blocked_from": null,
@@ -51972,9 +51980,82 @@
       "title": "2014 年·山东卷·理科",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_文科/figures/f2014_hunan_arts_q07_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_文科/figures/f2014_hunan_arts_q08_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_文科/figures/f2014_hunan_arts_q18_dihedral.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_文科/figures/f2014_hunan_arts_q19_quad.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_湖南卷_文科/figures/f2014_hunan_arts_q20_conics.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_hunan_arts",
+        "id": "gk-2014-hunan-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 887、888（887 面为选择 1—10、填空 11—15、解答 16—18；888 面为 19—21）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。湖南卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 7 题程序框图、第 8 题三视图、第 18 题二面角与菱形、第 19 题平面四边形、第 20 题双曲线与椭圆；第 21 题原页无图。共 5 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖南文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-hunan-arts",
+      "production_state": "complete",
+      "project_dir": "2014_湖南卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_湖南文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_湖南文_含解析.md",
+        "questions": "2014/2014_数学真题_湖南文_试题.md",
+        "solution_body": "2014/2014_数学真题_湖南文_解析正文.md"
+      },
+      "source_ids": [
+        "src-67f77e93b98ab1d6f8464c54e34569b77f4060587790d0456d73561b6b7260b7"
+      ],
+      "title": "2014 年·湖南卷·文科",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 12122,
+  "revision": 12127,
   "schema_version": 1,
   "sources": [
     {
@@ -66755,8 +66836,8 @@
       "exam_type": "regular",
       "git_blob_oid": "35f6c9bde7dc76cfe11e83392f4bfc085a000cb8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-hunan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014湖南文.pdf",
       "regions": [],
       "source_id": "src-67f77e93b98ab1d6f8464c54e34569b77f4060587790d0456d73561b6b7260b7",
