@@ -1,0 +1,44 @@
+% ============================================================
+% f2014_anhui_arts_q12_perpendiculars.tex
+% 2014 安徽卷（文科）第 12 题：逐次作垂线
+% 来源 PDF：普通高考/2014/2014安徽文.pdf
+% 原页：第 1 页（A3 横排）中栏下部，印面 859，第 12 题题干下方
+% 说明：等腰直角三角形 ABC，斜边 BC=2√2，A 为直角顶点。
+%       A1 为 A 到 BC 的垂足；A2 为 A1 到 AC 的垂足；
+%       A3 为 A2 到 A1C 的垂足；A4 为 A3 到 A2C 的垂足；
+%       A5 为 A4 到 A3C 的垂足；A6 为 A5 到 A4C 的垂足。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  \coordinate (B) at (-4.243,0);
+  \coordinate (C) at (4.243,0);
+  \coordinate (A) at (0,4.243);
+  \coordinate (A1) at (0,0);
+  \coordinate (A2) at (2.121,2.121);
+  \coordinate (A3) at (2.121,0);
+  \coordinate (A4) at (3.182,1.061);
+  \coordinate (A5) at (3.182,0);
+  \coordinate (A6) at (3.712,0.530);
+
+  % 三角形与逐次垂线
+  \draw (B) -- (C) -- (A) -- cycle;
+  \draw (A) -- (A1);
+  \draw (A1) -- (A2);
+  \draw (A2) -- (A3);
+  \draw (A3) -- (A4);
+  \draw (A4) -- (A5);
+  \draw (A5) -- (A6);
+
+  % 顶点标注
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[below] at (A1) {$A_1$};
+  \node[right] at (A2) {$A_2$};
+  \node[below] at (A3) {$A_3$};
+  \node[right] at (A4) {$A_4$};
+  \node[below] at (A5) {$A_5$};
+  \node[right] at (A6) {$A_6$};
+
+\end{tikzpicture}

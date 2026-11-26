@@ -14,6 +14,17 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
+### 2014 安徽卷（文科）：phase8-b07 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2014-anhui-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-fedc64ab83855bfe946b0a81c00cb732e0b052affe9bf0a45910a953917a4882`，2 页 A3，印面 859、860（859 面为 1—17，860 面为 18—21）。
+- 答案（等级 D）：1 D；2 C；3 A（$y=-1$）；4 B（$55$）；5 B；6 D；7 C（$\frac{3\pi}8$）；8 A（$\frac{23}3$）；9 D（$-4$ 或 $8$）；10 B（$\frac\pi3$）；11 $\frac{27}8$；12 $\frac14$；13 $4$；14 $\frac5{16}$；15 ①③；16 $\cos A=\frac13,a=2\sqrt2$ 或 $\cos A=-\frac13,a=2\sqrt3$；17 (1) $90$、(2) $0.75$、(3) $K^2=\frac{100}{21}\approx4.762>3.841$；18 (1) 证明、(2) $S_n=\frac{(2n-1)3^{n+1}+3}4$；19 (1) 证明、(2) $18$；20 (1) 单调区间、(2) 最值点；21 (1) $5$、(2) $\frac{\sqrt2}2$。
+- **来源核对**：第 11 题为 $\log_3\frac54+\log_3\frac45$；第 6 题选项开闭按原页；第 10 题 $|\boldsymbol b|=2|\boldsymbol a|$；第 19 题「$\perp$」「$\parallel$」按原页补全；第 17 题六组频率/组距 $0.025,0.100,0.150,0.125,0.075,0.025$（和为 1）；第 8 题按三视图还原为正方体截去两个三棱锥，$V=\frac{23}3$（与选项自洽）。
+- **第 16 题两组解**：$\sin A=\frac{2\sqrt2}3$ 给 $\cos A=\pm\frac13$，对应 $a=2\sqrt2$ 与 $a=2\sqrt3$，两组均满足三角形不等式，简答/解析并列，未擅自取舍。
+- 主代理复核：第 4 题输出 55；第 5 题 $c<a<b$；第 7 题 $\varphi_{\min}=\frac{3\pi}8$；第 9 题逐支检验仅 $a=-4,8$；第 10 题三类取值最小 $8c|a|^2=4|a|^2$ 得 $\cos\theta=\frac12$；第 12 题公比 $\frac{\sqrt2}2$、$a_7=\frac14$；第 14 题 $f(\frac{29}4)+f(\frac{41}6)=\frac3{16}+\frac12=\frac5{16}$；第 18 题 $a_n=n^2$、错位相减；第 19 题高 6、$EF=8$、$GH=4$、高 3、面积 18；第 21 题 $e=\frac{\sqrt2}2$。
+- 图稿：5 张 TikZ（程序框图、三视图、逐次作垂线、频率分布直方图、四棱锥）；第 21 题原页无图，未补绘。
+- 版式回修：首轮第 20(1) 答案的三段长区间公式造成简答版/印刷版 Underfull（badness 1331/10000）；改写为「记 $x_1,x_2$，减区间 $(-\infty,x_1)$、$(x_2,+\infty)$，增区间 $(x_1,x_2)$」并两次重建后，四版 0 Overfull、0 Underfull。
+- 验收：四版 5/30/7/23 页（共 65 页），四 log 全 0；review 65 页 **pass 485 + not_applicable 35、0 fail、0 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；5 条图稿引用全部命中。
+- 全库：manifest **695 卷 / 775 来源 / 541 批次**，complete 577、blocked 118，未绑定 **81**；revision 12092。
+
 ### 2014 四川卷（文科）：phase8-b06 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2014-sichuan-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-79391adf720f07833398cc7c2899ed0e2a4b6e7d60f1806a8ac07d18ec4e05e7`，2 页 A3，印面 921、922（921 面为 1—17，922 面为 18—21）。
 - 答案（等级 D）：1 D；2 A；3 A；4 D（$V=1$）；5 D；6 C；7 B；8 C；9 B；10 B；11 $\frac{\sqrt5}2$；12 $-2\mathrm i$；13 $1$；14 $2$；15 ①③④；16 (1) $\frac19$、(2) $\frac89$；17 (1) $\left[-\frac\pi4+\frac{2k\pi}3,\frac\pi{12}+\frac{2k\pi}3\right]$、(2) $-\sqrt2$ 或 $-\frac{\sqrt5}2$；18 (1) 证明、(2) 存在，$M$ 为 $AB$ 中点；19 (1) 证明、(2) $S_n=\frac{(3n-1)4^{n+1}+4}9$；20 (1) $\frac{x^2}6+\frac{y^2}2=1$、(2) $2\sqrt3$；21 (1) 分段最小值、(2) 证明 $\mathrm e-2<a<1$。

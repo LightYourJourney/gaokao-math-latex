@@ -1,0 +1,42 @@
+% ============================================================
+% f2014_anhui_arts_q17_histogram.tex
+% 2014 安徽卷（文科）第 17 题：频率分布直方图
+% 来源 PDF：普通高考/2014/2014安徽文.pdf
+% 原页：第 1 页（A3 横排）右栏，印面 859，第 17 题题干下方
+% 说明：组距 2，六组 [0,2]，(2,4]，(4,6]，(6,8]，(8,10]，(10,12]，
+%       频率/组距依次为 0.025，0.100，0.150，0.125，0.075，0.025，
+%       各组频率之和为 0.05+0.20+0.30+0.25+0.15+0.05=1。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1.05cm, y=1cm, line cap=round, line join=round]
+
+  % 纵坐标：数值放大 30 倍（0.150 -> 4.5cm）
+  % 坐标轴
+  \draw[->] (0,0) -- (7.20,0);
+  \node[right, inner sep=2pt] at (6.42,0.30) {时间（小时）};
+  \draw[->] (0,0) -- (0,5.45);
+  \node[right, inner sep=1pt, align=center] at (0.10,4.95)
+    {$\dfrac{\text{频率}}{\text{组距}}$};
+
+  % 六个矩形
+  \draw (0,0) rectangle (1.05,0.75);
+  \draw (1.05,0) rectangle (2.10,3.00);
+  \draw (2.10,0) rectangle (3.15,4.50);
+  \draw (3.15,0) rectangle (4.20,3.75);
+  \draw (4.20,0) rectangle (5.25,2.25);
+  \draw (5.25,0) rectangle (6.30,0.75);
+
+  % 虚线与纵轴刻度
+  \foreach \yy/\lab in {0.75/0.025, 2.25/0.075, 3.00/0.100, 3.75/0.125, 4.50/0.150}{
+    \draw[dashed, line width=0.4pt] (0,\yy) -- (6.90,\yy);
+    \node[left, inner sep=3pt] at (0,\yy) {$\lab$};
+  }
+  \node[below, inner sep=5pt] at (0,0) {$0$};
+
+  % 横轴刻度
+  \foreach \xx/\lab in {1.05/2, 2.10/4, 3.15/6, 4.20/8, 5.25/10, 6.30/12}{
+    \draw (\xx,0) -- (\xx,-0.10);
+    \node[below, inner sep=5pt] at (\xx,0) {$\lab$};
+  }
+
+\end{tikzpicture}

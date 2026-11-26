@@ -4476,6 +4476,14 @@
         "gk-2014-sichuan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b07",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-anhui-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4485,7 +4493,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "65bb52eb-cc7a-428e-b5a1-0d7abf706a14",
+  "last_transaction_id": "ce1fb381-60c7-44e3-82d0-c6c19e82432d",
   "papers": [
     {
       "blocked_from": null,
@@ -51656,9 +51664,82 @@
       "title": "2014 年·四川卷·文科",
       "track": "arts",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_安徽卷_文科/figures/f2014_anhui_arts_q04_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_安徽卷_文科/figures/f2014_anhui_arts_q08_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_安徽卷_文科/figures/f2014_anhui_arts_q12_perpendiculars.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_安徽卷_文科/figures/f2014_anhui_arts_q17_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_安徽卷_文科/figures/f2014_anhui_arts_q19_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_anhui_arts",
+        "id": "gk-2014-anhui-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 859、860（859 面为选择 1—10、填空 11—15、解答 16—17；860 面为 18—21）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。安徽卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 4 题程序框图、第 8 题三视图、第 12 题逐次作垂线、第 17 题频率分布直方图、第 19 题四棱锥；第 21 题原页无图。共 5 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "安徽文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-anhui-arts",
+      "production_state": "complete",
+      "project_dir": "2014_安徽卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_安徽文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_安徽文_含解析.md",
+        "questions": "2014/2014_数学真题_安徽文_试题.md",
+        "solution_body": "2014/2014_数学真题_安徽文_解析正文.md"
+      },
+      "source_ids": [
+        "src-fedc64ab83855bfe946b0a81c00cb732e0b052affe9bf0a45910a953917a4882"
+      ],
+      "title": "2014 年·安徽卷·文科",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 12081,
+  "revision": 12092,
   "schema_version": 1,
   "sources": [
     {
@@ -66031,8 +66112,8 @@
       "exam_type": "regular",
       "git_blob_oid": "feaf30d8f452e94d5335105d05702857e74c170e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-anhui-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014安徽文.pdf",
       "regions": [],
       "source_id": "src-fedc64ab83855bfe946b0a81c00cb732e0b052affe9bf0a45910a953917a4882",

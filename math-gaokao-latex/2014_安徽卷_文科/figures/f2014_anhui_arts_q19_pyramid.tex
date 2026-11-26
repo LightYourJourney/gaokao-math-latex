@@ -1,0 +1,59 @@
+% ============================================================
+% f2014_anhui_arts_q19_pyramid.tex
+% 2014 安徽卷（文科）第 19 题：四棱锥 P-ABCD
+% 来源 PDF：普通高考/2014/2014安徽文.pdf
+% 原页：第 2 页（A3 横排）左栏下部，印面 860，第 19 题题干下方
+% 说明：底面为边长 8 的正方形 ABCD，四条侧棱长 2√17，
+%       顶点 P 在底面中心正上方，高为 6。
+%       G，E，F，H 分别在 PB，AB，CD，PC 上，且 E 满足 EB=2，
+%       平面 GEFH 垂直于底面，故其为过 EF（EF∥BC）的竖直平面。
+%       被底面遮住的三条棱 PD、AD、DC 用虚线。
+%       截面四边形 GEFH 中 GE、GH、HF 可见，EF 位于底面内被遮挡。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  % 底面斜二测画法：A(0,0), B(5.2,0), C(7.4,2.6), D(2.2,2.6)
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5.2,0);
+  \coordinate (C) at (7.4,2.6);
+  \coordinate (D) at (2.2,2.6);
+  \coordinate (P) at (3.7,6.2);
+  % E：AB 上 EB=2，AE=6
+  \coordinate (E) at (3.9,0);
+  % F：CD 上 CF=2
+  \coordinate (F) at (6.1,2.6);
+  % G，H 分别为 PB，PC 中点（平面为竖直平面 EF）
+  \coordinate (G) at (4.45,3.1);
+  \coordinate (H) at (5.55,4.4);
+
+  % 不可见棱
+  \draw[dashed] (P) -- (D);
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (E) -- (F);
+
+  % 可见棱
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+
+  % 截面四边形 GEFH（EF 已用虚线画出）
+  \draw (G) -- (E);
+  \draw (G) -- (H);
+  \draw (H) -- (F);
+
+  % 顶点标注
+  \node[above] at (P) {$P$};
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left, inner sep=2pt] at (D) {$D$};
+  \node[below] at (E) {$E$};
+  \node at (6.18,2.18) {$F$};
+  \node at (4.02,3.10) {$G$};
+  \node at (5.86,4.62) {$H$};
+
+\end{tikzpicture}
