@@ -4468,6 +4468,14 @@
         "gk-2014-chongqing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b06",
+      "issues": [],
+      "paper_ids": [
+        "gk-2014-sichuan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4477,7 +4485,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0aa5ce1d-906f-4611-90fe-380944d97b2a",
+  "last_transaction_id": "65bb52eb-cc7a-428e-b5a1-0d7abf706a14",
   "papers": [
     {
       "blocked_from": null,
@@ -51579,9 +51587,78 @@
       "title": "2014 年·重庆卷·理科",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2014_四川卷_文科/figures/f2014_sichuan_arts_q04_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_四川卷_文科/figures/f2014_sichuan_arts_q06_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_四川卷_文科/figures/f2014_sichuan_arts_q08_river_width.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2014_四川卷_文科/figures/f2014_sichuan_arts_q18_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2014_gaokao_sichuan_arts",
+        "id": "gk-2014-sichuan-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 921、922（921 面为选择 1—10、填空 11—15、解答 16—17；922 面为 18—21）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。四川卷题号：选择 1—10、填空 11—15、解答 16—21，共 21 题。答案由本库独立推导（等级 D，非官方）。原页图：第 4 题三视图、第 6 题程序框图、第 8 题气球测河宽、第 18 题多面体；第 20 题原页无图。共 4 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "四川文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2014-sichuan-arts",
+      "production_state": "complete",
+      "project_dir": "2014_四川卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2014/2014_数学真题_四川文_答案要点.md",
+        "combined_rendered": "2014/2014_数学真题_四川文_含解析.md",
+        "questions": "2014/2014_数学真题_四川文_试题.md",
+        "solution_body": "2014/2014_数学真题_四川文_解析正文.md"
+      },
+      "source_ids": [
+        "src-79391adf720f07833398cc7c2899ed0e2a4b6e7d60f1806a8ac07d18ec4e05e7"
+      ],
+      "title": "2014 年·四川卷·文科",
+      "track": "arts",
+      "year": 2014
     }
   ],
-  "revision": 12076,
+  "revision": 12081,
   "schema_version": 1,
   "sources": [
     {
@@ -65810,8 +65887,8 @@
       "exam_type": "regular",
       "git_blob_oid": "37496f1828dfed18defb25b733de9463b0baab64",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2014-sichuan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2014四川文.pdf",
       "regions": [],
       "source_id": "src-79391adf720f07833398cc7c2899ed0e2a4b6e7d60f1806a8ac07d18ec4e05e7",

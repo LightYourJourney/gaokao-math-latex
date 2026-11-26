@@ -1,0 +1,308 @@
+{
+  "attempt_id": "85e2e890-bc69-4423-ae0c-abe1463baffd",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/answers.tex",
+        "sha256": "14869a30ab53d874b5649b3ad3fd06b9d0d543fcdac7c7be0206033395432d8a"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/answers_short.tex",
+        "sha256": "180891bd5d0a7c0edee0f5ab37290b6a51ba6a8d5d9f3d90feb8ef4ce0081e99"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/figures/f2014_sichuan_arts_q04_three_views.tex",
+        "sha256": "aaa62c1c6be2e6b675ec742fc387a5cd5fea6d4963556448f7fcb1238ea5e2aa"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/figures/f2014_sichuan_arts_q06_flowchart.tex",
+        "sha256": "bf30bf7f0a35bf8808bab077c5f86c991730b4ea39de2a964701795cfa6d20ee"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/figures/f2014_sichuan_arts_q08_river_width.tex",
+        "sha256": "5117b20011d55951aaeba693c7ac16ed07c03d9a349ec90a746b64c665cae1fa"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/figures/f2014_sichuan_arts_q18_prism.tex",
+        "sha256": "4d7e37a6e0484a5b51953dcbc60813ef9d86043e56f3e937e3ac26e352376b1c"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/questions.tex",
+        "sha256": "8f30496ba1d01490886d9953b4d64ba62bceb2eb59fb14d91e1922dc22d33159"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/印刷版.tex",
+        "sha256": "2306b1f4a7be3838cee6cbada8cbdf2ff0d34f663a3774f7a1c911f9ba6f2785"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/简答版.tex",
+        "sha256": "0ce5a2d9e23e3425ce9324d1c33f21b559e9a753d3baf5b64858e9bec04ce716"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/解析版.tex",
+        "sha256": "37b55498efdf26dab6b6b5cf7886e61dd2fbcdc53a771b17d1ab568a83d979c0"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/试题版.tex",
+        "sha256": "c5092110a1ad47d125f91d1ccedbe8e370a0f677cf3b7c1bda7d7f00cbb512f1"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "2ce18e5e899293f35dd69df8862c94acc88a2485f6920a20a12652830c55deb3"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 4,
+        "path": "math-gaokao-latex/2014_四川卷_文科/build/试题版.pdf",
+        "sha256": "97e8d347a5a416fb2a77f926a7e3253fbad5853d35adfd73813284e1e4fb26e3",
+        "size_bytes": 126604
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2014_四川卷_文科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "460--461",
+            "text": "Underfull \\hbox (badness 1043) in paragraph at lines 460--461",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 26,
+        "path": "math-gaokao-latex/2014_四川卷_文科/build/解析版.pdf",
+        "sha256": "6367a1005ee85b5b90489962caa327a9f2d8eb69424aff2a76cb5cb3751ee279",
+        "size_bytes": 261976
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2014_四川卷_文科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/2014_四川卷_文科/build/简答版.pdf",
+        "sha256": "7fb1de8c4b1e42b7fcb58d8e9033735f0aca0c1322b8e398ed59585e5ea3acb9",
+        "size_bytes": 152752
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2014_四川卷_文科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 21,
+        "path": "math-gaokao-latex/2014_四川卷_文科/build/印刷版.pdf",
+        "sha256": "b016acab85fd21715e9db31e32dd8ed4dbd421a5d72b14ab63f93d4c79e8a1ae",
+        "size_bytes": 259864
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2014_四川卷_文科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-11-27T05:12:36+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "2014/2014_数学真题_四川文_答案要点.md",
+        "sha256": "d1c7b436aed1aaccfb60c4dc8fb18c8a720cc062ac1e9428fdde62ed209807a3"
+      },
+      {
+        "path": "2014/2014_数学真题_四川文_解析正文.md",
+        "sha256": "16c9080daec466ac0a15aaeff1b3118db1fb0ebaa570715661bfc8c1dea67cbe"
+      },
+      {
+        "path": "2014/2014_数学真题_四川文_试题.md",
+        "sha256": "2d0516c7c75551acec892cc3b4e225c429aac5cceb7b59745dd278e0debe26c0"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "4bac47eee530cc0557545ccdebe664e860a813565a81858f95226ba71d4a4039"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/figures/f2014_sichuan_arts_q04_three_views.tex",
+        "sha256": "aaa62c1c6be2e6b675ec742fc387a5cd5fea6d4963556448f7fcb1238ea5e2aa"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/figures/f2014_sichuan_arts_q06_flowchart.tex",
+        "sha256": "bf30bf7f0a35bf8808bab077c5f86c991730b4ea39de2a964701795cfa6d20ee"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/figures/f2014_sichuan_arts_q08_river_width.tex",
+        "sha256": "5117b20011d55951aaeba693c7ac16ed07c03d9a349ec90a746b64c665cae1fa"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/figures/f2014_sichuan_arts_q18_prism.tex",
+        "sha256": "4d7e37a6e0484a5b51953dcbc60813ef9d86043e56f3e937e3ac26e352376b1c"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/印刷版.tex",
+        "sha256": "2306b1f4a7be3838cee6cbada8cbdf2ff0d34f663a3774f7a1c911f9ba6f2785"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/简答版.tex",
+        "sha256": "0ce5a2d9e23e3425ce9324d1c33f21b559e9a753d3baf5b64858e9bec04ce716"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/解析版.tex",
+        "sha256": "37b55498efdf26dab6b6b5cf7886e61dd2fbcdc53a771b17d1ab568a83d979c0"
+      },
+      {
+        "path": "math-gaokao-latex/2014_四川卷_文科/试题版.tex",
+        "sha256": "c5092110a1ad47d125f91d1ccedbe8e370a0f677cf3b7c1bda7d7f00cbb512f1"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "c5f042f89e64f8a85a323f3f0df3b03eaec01ea90735d4e250ff00e829fbce66"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "1c0a0efa1c5f0a2f77ec998c01399e67eed4503721d62b1969d46b5e2bd1316f"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "81be8554645d4683225872674c733b55c4a4733a78cbd32da4bf88cb6cc41fab"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "9e4150b07128689ee3e8e39f18311cc34e58060f10f8acac70e2f72372bde5d7"
+      }
+    ],
+    "tree_sha256": "dfa1672218abbc310be6ce7a0638f253ff408d288106ef2fccbc8a7a63977133"
+  },
+  "input_projection": "e12674d0f1666afd542f57fd1ed1f7b2fa2f1ffbeb113359a0d7c1073b7a8cc0",
+  "manifest_revision": 12079,
+  "paper_id": "gk-2014-sichuan-arts",
+  "previous_attempt_id": null,
+  "project_dir": "2014_四川卷_文科",
+  "schema_version": 1,
+  "started_at": "2026-11-27T05:12:24+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+      }
+    ]
+  }
+}

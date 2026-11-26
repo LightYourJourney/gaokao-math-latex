@@ -14,11 +14,15 @@
 - 汇总：118 卷中，`transcription-ambiguous` 112、`compile-error` 111、`answer-conflict` 63、`answer-missing` 53、`answer-convention-ambiguous` 52、`layout-warning` 40、`figure-missing` 8、`source-mismatch` 6、`source-unavailable` 4、`identity-ambiguous` 4（同一卷可挂多条）。
 - 复核结论：仅 11 卷的问题集落在「可重建 + 可独立推导」范围内，但逐卷 resume_action 均要求「更清晰源/勘误/权威答案」才能定题面（如 2005 全国理 Q4 选项 C、2015 全国Ⅰ卷勘误、2006 安徽理椭圆方程右端），**均不具备当场解除条件**；2 卷缺源不可解除。按台账口径继续维持 blocked，不以其新增完成数。
 
-### 2014 四川卷（文科）：第 17(2) 原题可得两个合法答案，判定 needs-review，未注册
-- 固定源 `2014四川文.pdf`（SHA-256 `1f766d6c5e0ab0e991be1c5f8af90f9eea7c49b9a4e16e31336de89355745e94`，2 页 A3，印面 921、922），题号选择 1—10、填空 11—15、解答 16—21。
-- 第 17(2) 原页为 $f(\alpha/3)=\frac45\cos(\alpha+\frac\pi4)\cos2\alpha$。令 $u=\cos\alpha-\sin\alpha$、$v=\cos\alpha+\sin\alpha$，题设化为 $v=\frac45u^2v$：$v=0$ 得 $\alpha=\frac{3\pi}4$、$u=-\sqrt2$；$u^2=\frac54$ 得 $u=-\frac{\sqrt5}2$（$\alpha\approx97.2^\circ$ 或 $172.8^\circ$，均为第二象限角），回代原式成立。原题未排除任一支，源内无官方答案页。
-- 按「不猜、存疑标 needs-review」处理：四份 MD 与 4 幅图稿已移至 `math-gaokao-latex/.work/phase8-b06/rejected/`，并附 `REASON.md`；未写入 manifest，不计入卷数。
-- 待权威答案页或勘误版确认唯一答案后再按 phase8-b06 全流程重做；若权威答案为 $-\sqrt2$，解析须补注另一支被排除的理由。
+### 2014 四川卷（文科）：phase8-b06 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
+- 对象：`gk-2014-sichuan-arts`，**21 个题号**（选择 1—10、填空 11—15、解答 16—21）；固定来源 `src-79391adf720f07833398cc7c2899ed0e2a4b6e7d60f1806a8ac07d18ec4e05e7`，2 页 A3，印面 921、922（921 面为 1—17，922 面为 18—21）。
+- 答案（等级 D）：1 D；2 A；3 A；4 D（$V=1$）；5 D；6 C；7 B；8 C；9 B；10 B；11 $\frac{\sqrt5}2$；12 $-2\mathrm i$；13 $1$；14 $2$；15 ①③④；16 (1) $\frac19$、(2) $\frac89$；17 (1) $\left[-\frac\pi4+\frac{2k\pi}3,\frac\pi{12}+\frac{2k\pi}3\right]$、(2) $-\sqrt2$ 或 $-\frac{\sqrt5}2$；18 (1) 证明、(2) 存在，$M$ 为 $AB$ 中点；19 (1) 证明、(2) $S_n=\frac{(3n-1)4^{n+1}+4}9$；20 (1) $\frac{x^2}6+\frac{y^2}2=1$、(2) $2\sqrt3$；21 (1) 分段最小值、(2) 证明 $\mathrm e-2<a<1$。
+- **来源核对**：第 8 题 B 处 75°、C 处 30°（与索引相反）；第 15 题 $A$ 为值域 $\mathbf R$ 的函数集、$B$ 为值域有界函数集、④ 为 $a\ln(x+2)+\frac{x}{x^2+1}$；第 9 题求 $|PA|+|PB|$；第 4 题底面为正三角形；第 6 题判断框为六边形；第 20 题原页无图。
+- **第 17(2) 的裁决**：原页 $f(\alpha/3)=\frac45\cos(\alpha+\frac\pi4)\cos2\alpha$。令 $u=\cos\alpha-\sin\alpha$、$v=\cos\alpha+\sin\alpha$，条件化为 $v=\frac45u^2v$：$v=0$ 得 $\alpha=\frac{3\pi}4$、$u=-\sqrt2$；$u^2=\frac54$ 得 $u=-\frac{\sqrt5}2$（$\alpha\approx97.2^\circ$ 或 $172.8^\circ$），两支均为第二象限且回代成立。子代理原解析误称 $\frac54>2$ 而排除第二支，主代理复算后改为**两支并列**，解析与答案要点均写明「原题未排除任一支」；这也是本卷唯一按「完整解集」收录的题。
+- 主代理复核：第 16 题两组 $(a,\cos A)$ 均满足三角形不等式，故并列；第 8 题 $BC=CD-BD=120(\sqrt3-1)$；第 15 题 ③ 用 $f=(f+g)-g$、④ 仅 $a=0$ 有最值；第 18 题 $\overrightarrow{DE}=-\lambda\overrightarrow{AM}+\frac12\overrightarrow{AC}$ 系数比较得 $M$ 为 $AB$ 中点；第 19 题 $a_n=n,b_n=2^n$、$S_n$ 错位相减；第 20 题 $P+Q=O+T$ 得 $m^2=1$、面积 $2\sqrt3$；第 21 题 $g'(x)=\mathrm e^x-2a$ 分三种情形，罗尔定理与凸性得 $\mathrm e-2<a<1$。
+- 图稿：4 张 TikZ（三视图、程序框图、气球测河宽、多面体）；第 20 题原页无图，未补绘。
+- 验收：四版 4/26/6/21 页（共 57 页），Overfull 0、missing characters 0；解析版 1 条 Underfull（第 15 题 ③ 段落，badness 1043）已写入 `warning_exemptions` 并记明 `source_file`/`pdf_page`/视觉复核 `pass`。review 57 页 **pass 419 + not_applicable 37、0 fail、1 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；4 条图稿引用全部命中。
+- 全库：manifest **694 卷 / 775 来源 / 540 批次**，complete 576、blocked 118，未绑定 **82**；revision 12081。
 
 ### 2014 重庆卷（理科）：phase8-b05 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2014-chongqing-science`，**22 个题号**（选择 1—10、填空 11—16、解答 17—22）；固定来源 `src-4579f6742aa10042fac59450774d94f17abc6eb8fc179f5d638638ec71bade2b`，2 页 A3，印面 865、866（865 面为 1—18，866 面为 19—22）。

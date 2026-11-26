@@ -1,0 +1,34 @@
+% ============================================================
+% f2014_sichuan_arts_q04_three_views.tex
+% 2014 四川卷（文科）第 4 题：三棱锥的侧视图与俯视图
+% 来源 PDF：普通高考/2014/2014四川文.pdf
+% 原页：第 1 页（A3 横排）左栏，印面 921，第 4 题题干下方
+% 说明：侧视图为底边 2（左、右各 1）、两腰均为 2 的等腰三角形，
+%       高线画虚线；俯视图为左边竖直、右侧为顶点的等腰三角形，
+%       底边 2（上、下各 1）、两斜边均为 2，并画出底边中点与
+%       右顶点的连线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round,
+  ext/.style={inner sep=2pt}]
+
+  % ---------- 侧视图 ----------
+  \draw (0,0) -- (2,0) -- (1,1.732) -- cycle;
+  \draw[dashed] (1,0) -- (1,1.732);
+  \node[ext,left] at (0.40,0.95) {$2$};
+  \node[ext,right] at (1.60,0.95) {$2$};
+  \node[ext,below] at (0.5,-0.06) {$1$};
+  \node[ext,below] at (1.5,-0.06) {$1$};
+  \node at (1,-0.95) {侧视图};
+
+  % ---------- 俯视图 ----------
+  \begin{scope}[xshift=4.2cm, yshift=-0.13cm]
+    \draw (0,0) -- (0,2) -- (1.732,1) -- cycle;
+    \draw (0,1) -- (1.732,1);
+    \node[ext,left] at (-0.10,1.55) {$1$};
+    \node[ext,left] at (-0.10,0.45) {$1$};
+    \node[ext,above left] at (0.90,1.62) {$2$};
+    \node[ext,below left] at (0.90,0.38) {$2$};
+    \node at (0.87,-0.82) {俯视图};
+  \end{scope}
+\end{tikzpicture}

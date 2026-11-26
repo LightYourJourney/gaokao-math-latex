@@ -1,0 +1,42 @@
+% ============================================================
+% f2014_sichuan_arts_q18_prism.tex
+% 2014 四川卷（文科）第 18 题：多面体（三棱柱 ABC-A1B1C1）
+% 来源 PDF：普通高考/2014/2014四川文.pdf
+% 原页：第 2 页（A3 横排）左栏，印面 922，第 18 题题干右侧
+% 说明：四边形 ABB1A1 与 ACC1A1 均为矩形，故 AA1、BB1、CC1
+%       两两平行且都垂直于底面；AC 为被遮挡的棱，画虚线。
+%       D 为 BC 中点，E 为 CC1 中点，DE 为辅助线。
+% ============================================================
+\begin{tikzpicture}[>=Stealth, line width=0.7pt, font=\small,
+  x=1cm, y=1cm, line cap=round, line join=round]
+
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (2.74,-1.65);
+  \coordinate (C)  at (4.30,0);
+  \coordinate (A1) at (0,3.24);
+  \coordinate (B1) at (2.74,1.59);
+  \coordinate (C1) at (4.30,3.24);
+  \coordinate (D)  at (3.52,-0.825);
+  \coordinate (E)  at (4.30,1.62);
+
+  % 被遮挡的棱
+  \draw[dashed] (A) -- (C);
+
+  % 可见的棱
+  \draw (A) -- (B) -- (C) -- (C1) -- (A1) -- cycle;
+  \draw (A1) -- (B1) -- (C1);
+  \draw (B1) -- (B);
+
+  % 辅助线 DE
+  \draw (D) -- (E);
+
+  % 顶点标注
+  \node[left] at (A1) {$A_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[left] at (A) {$A$};
+  \node[right] at (C) {$C$};
+  \node[below right] at (B1) {$B_1$};
+  \node[right] at (E) {$E$};
+  \node[below right] at (D) {$D$};
+  \node[below] at (B) {$B$};
+\end{tikzpicture}
