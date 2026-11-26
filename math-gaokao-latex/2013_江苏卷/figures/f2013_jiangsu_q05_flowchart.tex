@@ -1,0 +1,37 @@
+% ============================================================
+% f2013_jiangsu_q05_flowchart.tex
+% 2013 江苏卷 第 5 题 算法流程图（TikZ 矢量重绘）
+% n←1，a←2；a<20 时 a←3a+2、n←n+1，否则输出 n
+% ============================================================
+\begin{tikzpicture}[
+  >=Stealth, line width=0.6pt, font=\small,
+  box/.style={draw, rounded corners=3pt, minimum width=2.7cm,
+    minimum height=0.85cm, align=center},
+  proc/.style={draw, minimum width=2.7cm, minimum height=0.85cm, align=center},
+  dec/.style={draw, diamond, aspect=1.9, minimum width=3.4cm,
+    minimum height=1.35cm, inner sep=1pt, align=center},
+  io/.style={draw, trapezium, trapezium left angle=70,
+    trapezium right angle=110, minimum width=2.9cm,
+    minimum height=0.85cm, align=center}
+]
+
+  \node[box]  (start) {开始};
+  \node[proc, below=7mm of start] (none) {$n\leftarrow 1$};
+  \node[proc, below=6mm of none]  (atwo) {$a\leftarrow 2$};
+  \node[dec,  below=8mm of atwo]  (test) {$a<20$?};
+  \node[proc, right=17mm of test] (athree) {$a\leftarrow 3a+2$};
+  \node[proc, above=10mm of athree] (inc) {$n\leftarrow n+1$};
+  \node[io,   below=8mm of test]  (out) {输出 $n$};
+  \node[box,  below=7mm of out]   (end) {结束};
+
+  \draw[->] (start) -- (none);
+  \draw[->] (none) -- (atwo);
+  \draw[->] (atwo) -- (test);
+  \coordinate (join) at ($(atwo.south)!0.55!(test.north)$);
+  \draw[->] (test.east) -- node[above] {$Y$} (athree.west);
+  \draw[->] (athree.north) -- (inc.south);
+  \draw (inc.west) -- ++(-0.25,0) |- (join);
+  \draw[->] (test.south) -- node[right] {$N$} (out.north);
+  \draw[->] (out.south) -- (end.north);
+
+\end{tikzpicture}

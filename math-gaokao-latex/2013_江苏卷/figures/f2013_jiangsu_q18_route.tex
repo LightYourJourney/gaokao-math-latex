@@ -1,0 +1,21 @@
+% ============================================================
+% f2013_jiangsu_q18_route.tex
+% 2013 江苏卷 第 18 题 A-B-C 两条路径示意
+% A 沿 AC 步行；A 乘缆车到 B，再步行到 C
+% ============================================================
+\begin{tikzpicture}[
+  line width=0.6pt, font=\small
+]
+
+  \coordinate (A) at (6.6,4.2);
+  \coordinate (B) at (3.4,3.1);
+  \coordinate (C) at (0.4,0.3);
+
+  \draw (A) -- (B) -- (C);
+  \draw (A) -- (C);
+
+  \node[right] at (A) {$A$};
+  \node[above] at (B) {$B$};
+  \node[below left] at (C) {$C$};
+
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+% ============================================================
+% f2013_jiangsu_q16_tetrahedron.tex
+% 2013 江苏卷 第 16 题 三棱锥 S-ABC
+% E、G 为 SA、SC 中点，F 为 SB 上一点（AF⊥SB）
+% ============================================================
+\begin{tikzpicture}[
+  line width=0.6pt, font=\small, >=Stealth
+]
+
+  \coordinate (S) at (1.8,4.3);
+  \coordinate (A) at (0,1.4);
+  \coordinate (B) at (2.0,-0.3);
+  \coordinate (C) at (4.9,1.0);
+  \coordinate (E) at ($(S)!0.5!(A)$);
+  \coordinate (G) at ($(S)!0.5!(C)$);
+  \coordinate (F) at ($(S)!0.5!(B)$);
+
+  % 棱
+  \draw (S) -- (A) -- (B) -- (C) -- (S);
+  \draw (S) -- (B);
+  \draw[dashed] (A) -- (C);
+
+  % AF 与截面 EFG
+  \draw (A) -- (F);
+  \draw (E) -- (F) -- (G);
+  \draw[dashed] (E) -- (G);
+
+  % 标注
+  \node[above]      at (S) {$S$};
+  \node[left]       at (A) {$A$};
+  \node[below]      at (B) {$B$};
+  \node[right]      at (C) {$C$};
+  \node[left]       at (E) {$E$};
+  \node[right]      at (G) {$G$};
+  \node[below right] at (F) {$F$};
+
+\end{tikzpicture}

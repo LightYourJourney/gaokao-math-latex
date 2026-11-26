@@ -1,0 +1,47 @@
+% ============================================================
+% f2013_jiangsu_q08_prism.tex
+% 2013 江苏卷 第 8 题 三棱柱 A1B1C1-ABC 与截面 F-ADE
+% D、E、F 分别为 AB、AC、AA1 的中点
+% ============================================================
+\begin{tikzpicture}[
+  line width=0.6pt, font=\small, >=Stealth
+]
+
+  \coordinate (A)  at (0.2,0);
+  \coordinate (B)  at (4.4,0.35);
+  \coordinate (C)  at (2.0,1.95);
+  \coordinate (A1) at (0.2,3.55);
+  \coordinate (B1) at (4.4,3.90);
+  \coordinate (C1) at (2.0,5.50);
+  \coordinate (D)  at ($(A)!0.5!(B)$);
+  \coordinate (E)  at ($(A)!0.5!(C)$);
+  \coordinate (F)  at ($(A)!0.5!(A1)$);
+
+  % 底面（AB、BC 可见，AC 为被遮住的边）
+  \draw (A) -- (B) -- (C);
+  \draw[dashed] (A) -- (C);
+
+  % 侧棱
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw[dashed] (C) -- (C1);
+
+  % 顶面
+  \draw (A1) -- (B1) -- (C1) -- cycle;
+
+  % 截面 F-ADE
+  \draw (F) -- (D) -- (E);
+  \draw[dashed] (E) -- (F);
+
+  % 标注
+  \node[below left]  at (A)  {$A$};
+  \node[below right] at (B)  {$B$};
+  \node[right]       at (C)  {$C$};
+  \node[left]        at (A1) {$A_1$};
+  \node[right]       at (B1) {$B_1$};
+  \node[above]       at (C1) {$C_1$};
+  \node[below]       at (D)  {$D$};
+  \node[right]       at (E)  {$E$};
+  \node[left]        at (F)  {$F$};
+
+\end{tikzpicture}

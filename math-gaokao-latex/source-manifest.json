@@ -4268,6 +4268,14 @@
         "gk-2013-shaanxi-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase7-b78",
+      "issues": [],
+      "paper_ids": [
+        "gk-2013-jiangsu"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4277,7 +4285,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7de5bac0-3bc1-4af1-b1c5-b96d43bdb68f",
+  "last_transaction_id": "80f32b3a-eb65-4826-8d9e-213c793ac59d",
   "papers": [
     {
       "blocked_from": null,
@@ -49559,9 +49567,90 @@
       "title": "2013 年·陕西卷·理科",
       "track": "science",
       "year": 2013
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2013_江苏卷/figures/f2013_jiangsu_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_江苏卷/figures/f2013_jiangsu_q08_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_江苏卷/figures/f2013_jiangsu_q16_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_江苏卷/figures/f2013_jiangsu_q17_line.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_江苏卷/figures/f2013_jiangsu_q18_route.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_江苏卷/figures/f2013_jiangsu_q21a_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2013_江苏卷/figures/f2013_jiangsu_q22_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2013_gaokao_jiangsu",
+        "id": "gk-2013-jiangsu",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 815、816。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。江苏卷题号：填空 1—14、解答 15—20、附加题 21—23，共 23 题；第 21 题为四选二（A 几何证明、B 矩阵、C 参数方程、D 不等式），四小问全部收录。答案由本库独立推导（等级 D，非官方）。原页图：第 5 题程序框图、第 8 题三棱柱、第 16 题三棱锥、第 17 题坐标系与直线、第 18 题路线示意、第 21A 题圆与切线、第 22 题三棱柱，均以 TikZ 重绘共 7 幅，已登记。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "附加题": [
+            21,
+            23
+          ]
+        },
+        "track": "理科",
+        "variant": "江苏"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2013-jiangsu",
+      "production_state": "complete",
+      "project_dir": "2013_江苏卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2013/2013_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2013/2013_数学真题_江苏_含解析.md",
+        "questions": "2013/2013_数学真题_江苏_试题.md",
+        "solution_body": "2013/2013_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-4a723f1c84f694033db6917e15046f5844127b2b3c22dc1f19adff761dd610b9"
+      ],
+      "title": "2013 年·江苏卷",
+      "track": "science",
+      "year": 2013
     }
   ],
-  "revision": 11917,
+  "revision": 11922,
   "schema_version": 1,
   "sources": [
     {
@@ -63286,8 +63375,8 @@
       "exam_type": "regular",
       "git_blob_oid": "209ff3c1367d46c04f2f5e144cb8eb3617e7a485",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2013-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2013江苏.pdf",
       "regions": [],
       "source_id": "src-4a723f1c84f694033db6917e15046f5844127b2b3c22dc1f19adff761dd610b9",
