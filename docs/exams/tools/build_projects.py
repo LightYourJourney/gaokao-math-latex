@@ -1430,10 +1430,12 @@ def run_formal(
     """两阶段正式构建：running 事务 → 串行构建 → 结果事务。"""
     manifest_path = Path(manifest_path).resolve()
     root = cli_common.repository_root(manifest_path.parent)
-    if _relative_to(root, manifest_path) != MANIFEST_TARGET:
+    manifest_alias = MANIFEST_TARGET.replace("math-gaokao-latex/", "docs/exams/", 1)
+    if _relative_to(root, manifest_path) not in (MANIFEST_TARGET, manifest_alias):
         raise BuildError(f"--manifest 必须是 {MANIFEST_TARGET}")
     issues_path = Path(issues_path).resolve()
-    if _relative_to(root, issues_path) != ISSUES_TARGET:
+    issues_alias = ISSUES_TARGET.replace("math-gaokao-latex/", "docs/exams/", 1)
+    if _relative_to(root, issues_path) not in (ISSUES_TARGET, issues_alias):
         raise BuildError(f"--issues 必须是 {ISSUES_TARGET}")
     loader = facts_loader or default_facts_loader
     build_one = builder or build_paper_result

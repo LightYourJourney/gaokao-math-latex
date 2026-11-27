@@ -143,9 +143,11 @@ def _relative_to(root: Path, path: Path) -> str:
 
 def _require_canonical(root: Path, path: Path, target: str, flag: str) -> Path:
     resolved = Path(path).resolve()
-    if _relative_to(root, resolved) != target:
+    actual = _relative_to(root, resolved)
+    alias = target.replace("math-gaokao-latex/", "docs/exams/", 1)
+    if actual not in (target, alias):
         raise UsageError(f"{flag} 必须是 {target}")
-    return resolved
+    return Path(root) / target
 
 
 def _paper(manifest: Mapping[str, Any], paper_id: str) -> Mapping[str, Any]:
