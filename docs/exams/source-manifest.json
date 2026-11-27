@@ -4556,6 +4556,14 @@
         "gk-2020-regular-national-3-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b17",
+      "issues": [],
+      "paper_ids": [
+        "gk-2020-regular-national-3-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4565,7 +4573,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7215c9fa-e4c6-4903-b86f-8532a2ef2e27",
+  "last_transaction_id": "5c831625-5492-4829-93ed-ea1081ed616d",
   "papers": [
     {
       "blocked_from": null,
@@ -52446,9 +52454,74 @@
       "title": "2020 年·全国Ⅲ卷·文科",
       "track": "arts",
       "year": 2020
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅲ卷_理科/figures/f2020_national3_science_q08_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅲ卷_理科/figures/f2020_national3_science_q19_box.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2020_gaokao_national_3_science",
+        "id": "gk-2020-regular-national-3-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 1125、1126（1125 面为选择 1—12、填空 13—16、解答 17—18；1126 面为 19—23）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。全国Ⅲ卷题号：选择 1—12、填空 13—16、解答 17—21、选做 22—23（二选一，全部收录），共 23 题。答案由本库独立推导（等级 D，非官方）。原页图：第 8 题三视图、第 19 题长方体；第 20 题椭圆原页无图。共 2 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "全国Ⅲ卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国Ⅲ卷理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2020-regular-national-3-science",
+      "production_state": "complete",
+      "project_dir": "2020_全国Ⅲ卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2020/2020_数学真题_全国3理_答案要点.md",
+        "combined_rendered": "2020/2020_数学真题_全国3理_含解析.md",
+        "questions": "2020/2020_数学真题_全国3理_试题.md",
+        "solution_body": "2020/2020_数学真题_全国3理_解析正文.md"
+      },
+      "source_ids": [
+        "src-45ca271862c22db9e310f68a9db4afbb25f9fd999dc86f7790dea9f466db5d72"
+      ],
+      "title": "2020 年·全国Ⅲ卷·理科",
+      "track": "science",
+      "year": 2020
     }
   ],
-  "revision": 12169,
+  "revision": 12177,
   "schema_version": 1,
   "sources": [
     {
@@ -69797,8 +69870,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0cdde875f1a679bf80452c76f6d63f6cf14a9ded",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2020-regular-national-3-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2020全国3理(云南,广西,贵州,西藏,四川).pdf",
       "regions": [],
       "source_id": "src-45ca271862c22db9e310f68a9db4afbb25f9fd999dc86f7790dea9f466db5d72",
