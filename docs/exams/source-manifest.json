@@ -4620,6 +4620,14 @@
         "gk-2012-regular-sichuan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b25",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-regular-sichuan-sci"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4629,7 +4637,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "52673e3b-2e35-48e6-91d6-f43f597c0947",
+  "last_transaction_id": "737621ea-a965-4fab-a97d-f73d8aeef60b",
   "papers": [
     {
       "blocked_from": null,
@@ -53094,9 +53102,90 @@
       "title": "2012 年·四川卷·文科",
       "track": "arts",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_四川卷_理科/figures/f2012_sichuan_sci_q04_square.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_四川卷_理科/figures/f2012_sichuan_sci_q05_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_四川卷_理科/figures/f2012_sichuan_sci_q10_hemisphere.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_四川卷_理科/figures/f2012_sichuan_sci_q14_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_四川卷_理科/figures/f2012_sichuan_sci_q18_wave.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_四川卷_理科/figures/f2012_sichuan_sci_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_四川卷_理科/figures/f2012_sichuan_sci_q21_locus.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_sichuan_sci",
+        "id": "gk-2012-regular-sichuan-sci",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 771、772（771 面为选择 1—12、填空 13—16；772 面为解答 17—22）。PDF 无答案页。四川卷题号：选择 1—12、填空 13—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 4 题正方形、第 5 题四个选项图象、第 10 题半球截面、第 14 题正方体、第 18 题函数图象与正三角形、第 19 题三棱锥、第 21 题轨迹示意，共 7 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "四川理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-regular-sichuan-sci",
+      "production_state": "complete",
+      "project_dir": "2012_四川卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_四川理_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_四川理_含解析.md",
+        "questions": "2012/2012_数学真题_四川理_试题.md",
+        "solution_body": "2012/2012_数学真题_四川理_解析正文.md"
+      },
+      "source_ids": [
+        "src-51553917d5aa18fbe3fc5056117df563dbf8b7a1b908ca78fece3731296db16f"
+      ],
+      "title": "2012 年·四川卷·理科",
+      "track": "science",
+      "year": 2012
     }
   ],
-  "revision": 12254,
+  "revision": 12266,
   "schema_version": 1,
   "sources": [
     {
@@ -65621,8 +65710,8 @@
       "exam_type": "regular",
       "git_blob_oid": "7d2110e9e1d5e7e1b386b9d0dc603ff1d9933189",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-regular-sichuan-sci",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012四川理.pdf",
       "regions": [],
       "source_id": "src-51553917d5aa18fbe3fc5056117df563dbf8b7a1b908ca78fece3731296db16f",
