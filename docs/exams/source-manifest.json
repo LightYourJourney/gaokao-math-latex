@@ -4540,6 +4540,14 @@
         "gk-2020-regular-national-2-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b15",
+      "issues": [],
+      "paper_ids": [
+        "gk-2020-regular-national-2-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4549,7 +4557,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ac205c89-0549-47cb-96df-02291fb9b6a1",
+  "last_transaction_id": "661d7758-fa08-49c3-84cf-31635783f1f4",
   "papers": [
     {
       "blocked_from": null,
@@ -52292,9 +52300,78 @@
       "title": "2020 年·全国Ⅱ卷·理科",
       "track": "science",
       "year": 2020
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅱ卷_文科/figures/f2020_national2_arts_q03_piano.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅱ卷_文科/figures/f2020_national2_arts_q07_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅱ卷_文科/figures/f2020_national2_arts_q20_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2020_gaokao_national_2_arts",
+        "id": "gk-2020-regular-national-2-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 1123、1124（1123 面为选择 1—12、填空 13—16、解答 17—18；1124 面为 19—23）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。全国Ⅱ卷题号：选择 1—12、填空 13—16、解答 17—21、选做 22—23（二选一，全部收录），共 23 题。答案由本库独立推导（等级 D，非官方）。原页图：第 3 题钢琴 12 键示意图、第 7 题程序框图、第 20 题三棱柱；共 3 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "全国Ⅱ卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国Ⅱ卷文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2020-regular-national-2-arts",
+      "production_state": "complete",
+      "project_dir": "2020_全国Ⅱ卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2020/2020_数学真题_全国2文_答案要点.md",
+        "combined_rendered": "2020/2020_数学真题_全国2文_含解析.md",
+        "questions": "2020/2020_数学真题_全国2文_试题.md",
+        "solution_body": "2020/2020_数学真题_全国2文_解析正文.md"
+      },
+      "source_ids": [
+        "src-1c86bb8f0beadd008a4893cbc9f5b0dafbd2b371b47edefe4273e8b0eb838ab7"
+      ],
+      "title": "2020 年·全国Ⅱ卷·文科",
+      "track": "arts",
+      "year": 2020
     }
   ],
-  "revision": 12145,
+  "revision": 12151,
   "schema_version": 1,
   "sources": [
     {
@@ -69571,8 +69648,8 @@
       "exam_type": "regular",
       "git_blob_oid": "612ab93a872a89276fe87f27e5cc50af52d01030",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2020-regular-national-2-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2020全国2文(甘肃,青海,内蒙古,黑龙江,吉林,辽宁.宁夏,新疆,陕西,重庆).pdf",
       "regions": [],
       "source_id": "src-1c86bb8f0beadd008a4893cbc9f5b0dafbd2b371b47edefe4273e8b0eb838ab7",

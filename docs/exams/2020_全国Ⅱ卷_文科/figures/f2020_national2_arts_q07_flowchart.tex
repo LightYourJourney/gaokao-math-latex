@@ -1,0 +1,47 @@
+% 2020 全国Ⅱ卷 文7：程序框图
+% 来源 PDF：普通高考/2020/2020全国2文(…).pdf 第 1 页（A3 横排），印面 1123，第 7 题左侧
+% 结构：开始 → 输入 k, a → [ a = 2a+1 → k = k+1 → 判断 a>10 ]，判断为「否」回到 a = 2a+1，
+%       判断为「是」经输出 k 到结束；循环分支从判断框左顶点引出，向上折回处理框 a = 2a+1 上方。
+% 形状约定：终端框为圆角矩形，输入/输出框为平行四边形，处理框为矩形，判断框为菱形。
+\begin{tikzpicture}[line width=0.7pt, font=\small, >=Stealth,
+  line cap=round, line join=round]
+
+  % 终端框：开始 / 结束
+  \node[draw, rounded corners=4pt, minimum width=1.5cm, minimum height=0.78cm,
+        inner sep=2pt] (sta) at (0,0) {开始};
+  \node[draw, rounded corners=4pt, minimum width=1.5cm, minimum height=0.78cm,
+        inner sep=2pt] (fin) at (0,-11.0) {结束};
+
+  % 输入框（平行四边形，上边相对下边右移）
+  \draw (-1.40,-1.45) -- (2.40,-1.45) -- (1.40,-2.25) -- (-2.40,-2.25) -- cycle;
+  \node at (0,-1.85) {输入 $k$，$a$};
+
+  % 输出框（同形）
+  \draw (-1.40,-8.95) -- (2.40,-8.95) -- (1.40,-9.75) -- (-2.40,-9.75) -- cycle;
+  \node at (0,-9.35) {输出 $k$};
+
+  % 处理框
+  \node[draw, minimum width=3.4cm, minimum height=0.78cm, inner sep=2pt]
+        (p1) at (0,-3.70) {$a=2a+1$};
+  \node[draw, minimum width=3.1cm, minimum height=0.78cm, inner sep=2pt]
+        (p2) at (0,-5.45) {$k=k+1$};
+
+  % 判断框
+  \node[draw, diamond, aspect=4.2, minimum width=4.8cm, inner sep=1pt]
+        (jud) at (0,-7.40) {$a>10$};
+
+  % 主干流程
+  \draw[->] (sta.south) -- (0,-1.45);
+  \draw[->] (0,-2.25) -- (p1.north);
+  \draw[->] (p1.south) -- (p2.north);
+  \draw[->] (p2.south) -- (jud.north);
+  \draw[->] (jud.south) -- (0,-8.95);
+  \draw[->] (0,-9.75) -- (fin.north);
+
+  % 循环分支：判断框左顶点 → 左 → 上 → 折回处理框上方，箭头指向主干
+  \draw[->] (jud.west) -- (-3.45,-7.40) -- (-3.45,-3.00) -- (-0.05,-3.00);
+
+  % 分支标注
+  \node at (-2.80,-7.02) {否};
+  \node at (0.45,-8.30) {是};
+\end{tikzpicture}

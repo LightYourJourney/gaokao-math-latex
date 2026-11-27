@@ -1654,7 +1654,8 @@ def state_source_result(
     issues_path = Path(issues_path)
     manifest_relative = _relative_to_repo(root, manifest_path)
     issues_relative = _relative_to_repo(root, issues_path)
-    if manifest_relative != MANIFEST_TARGET:
+    _alias_target = MANIFEST_TARGET.replace("math-gaokao-latex/", "docs/exams/", 1)
+    if manifest_relative not in (MANIFEST_TARGET, _alias_target):
         raise ValueError(
             f"state manifest 必须是 {MANIFEST_TARGET}，实际 {manifest_relative}"
         )
@@ -2094,7 +2095,9 @@ def sync_figure_registry(
     """
     root = _repository_root(Path(repo))
     manifest_path = Path(manifest_path)
-    if _relative_to_repo(root, manifest_path) != MANIFEST_TARGET:
+    _actual_manifest = _relative_to_repo(root, manifest_path)
+    _alias_manifest = MANIFEST_TARGET.replace("math-gaokao-latex/", "docs/exams/", 1)
+    if _actual_manifest not in (MANIFEST_TARGET, _alias_manifest):
         raise ValueError(f"manifest 必须是 {MANIFEST_TARGET}")
     if not isinstance(paper_id, str) or not paper_id.strip():
         raise ValueError("paper_id 必须是非空字符串")
@@ -2180,7 +2183,8 @@ def state_figure_occurrences(repo: Path, manifest_path: Path) -> Optional[str]:
     root = _repository_root(Path(repo))
     manifest_path = Path(manifest_path)
     manifest_relative = _relative_to_repo(root, manifest_path)
-    if manifest_relative != MANIFEST_TARGET:
+    _alias_target = MANIFEST_TARGET.replace("math-gaokao-latex/", "docs/exams/", 1)
+    if manifest_relative not in (MANIFEST_TARGET, _alias_target):
         raise ValueError(
             f"state manifest 必须是 {MANIFEST_TARGET}，实际 {manifest_relative}"
         )
@@ -2598,7 +2602,9 @@ def register_papers(
     """
     root = _repository_root(Path(repo))
     manifest_path = Path(manifest_path)
-    if _relative_to_repo(root, manifest_path) != MANIFEST_TARGET:
+    _actual_manifest = _relative_to_repo(root, manifest_path)
+    _alias_manifest = MANIFEST_TARGET.replace("math-gaokao-latex/", "docs/exams/", 1)
+    if _actual_manifest not in (MANIFEST_TARGET, _alias_manifest):
         raise ValueError(f"manifest 必须是 {MANIFEST_TARGET}")
     if not isinstance(spec, Mapping):
         raise ValueError("注册规格必须是对象")
