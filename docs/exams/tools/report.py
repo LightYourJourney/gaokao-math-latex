@@ -17,18 +17,18 @@ import review_receipts
 from status import StatusError, derive_git_state
 from transaction import Transaction
 
-BASE = Path("math-gaokao-latex")
+BASE = Path("docs/exams")
 MANIFEST_TARGET = BASE / "source-manifest.json"
 ISSUES_TARGET = BASE / "missing-issues.md"
 OUTPUT_TARGETS = (
     "docs/source-inventory.md",
     "report.md",
     "README_数学.md",
-    "math-gaokao-latex/README.md",
+    "docs/exams/README.md",
     "math-gaokao-2017-2026/README.md",
-    "math-gaokao-latex/reports/baseline.md",
+    "docs/exams/reports/baseline.md",
 )
-REPORT_SOURCE = "math-gaokao-latex/tools/report.py"
+REPORT_SOURCE = "docs/exams/tools/report.py"
 REPORT_DEPENDENCIES = (
     "build_projects.py",
     "cli_common.py",
@@ -225,11 +225,11 @@ def render_outputs(facts: Mapping[str, Any]) -> Dict[str, str]:
     """只在内存中从同一全量事实快照渲染固定六目标。"""
     summary, batches = _summary(facts), _batch_table(facts)
     bodies = {
-        OUTPUT_TARGETS[0]: "# 高考数学来源清单\n\n" + summary + "\n来源逐项信息见 `../math-gaokao-latex/manifest.csv`。\n",
+        OUTPUT_TARGETS[0]: "# 高考数学来源清单\n\n" + summary + "\n来源逐项信息见 `../docs/exams/manifest.csv`。\n",
         OUTPUT_TARGETS[1]: "# 高考数学真题 LaTeX 项目报告\n\n" + summary + "\n## 批次明细\n\n" + batches,
-        OUTPUT_TARGETS[2]: "# 高考数学资料说明\n\n" + summary + "\n完整构建、复核和缺失事项见 `report.md` 与 `math-gaokao-latex/missing-issues.md`。\n",
-        OUTPUT_TARGETS[3]: "# 高考数学 LaTeX 项目\n\n## 全量状态\n\n" + summary + "\n## 交付物与校验\n\n来源清单：`manifest.csv` 是 `source-manifest.json` 的来源级清单投影，每个上游 PDF 一行。\n\n```bash\npython3 math-gaokao-latex/tools/manifest_csv.py --manifest math-gaokao-latex/source-manifest.json --output math-gaokao-latex/manifest.csv --write\npython3 math-gaokao-latex/tools/report.py render --all --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md\npython3 math-gaokao-latex/tools/report.py check --all --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md\n```\n\n### 题目级 IR 导出（增量能力）\n\n可从已登记的规范 Markdown 题面与逐题 `provenance.json` 生成确定性 JSON，不重新 OCR 或重录题面：\n\n```bash\npython3 math-gaokao-latex/tools/export_question_ir.py gk-2017-regular-national-1-science --output /tmp/2017-national-1-science.ir.json\n```\n\n导出前会核对 `paper_id`、唯一 canonical 来源绑定、manifest 与逐题 provenance 中登记的来源 PDF SHA-256、题数、逐题 ID、source ID 和题面哈希；它不重新打开/哈希 PDF 原件。任一记录不一致即失败。题面以 `body_markdown` 保留解析题块，当前没有结构化证据的 `options`、`equations`、`tables` 与 `source_bbox` 保持 null；图像 Markdown 引用独立列出。项目答案材料只作为 `answer_evidence`，`official_answer` 固定为 null。该工具目前只覆盖已登记规范 Markdown 的导出，不代表 OCR→IR 自动接入或整卷验收。\n\nOCR 整页结果使用独立候选格式，不能自动分配给题号；例如把已登记 JSONL 第 2 条 MinerU 结果绑定到 manifest 来源：\n\n```bash\npython3 math-gaokao-latex/tools/ocr_candidate_ir.py math-gaokao-latex/benchmarks/ocr-runs.jsonl --line 2 --output /tmp/2008-page05-ocr-candidate.json\n```\n\n只有在 source ID、PDF SHA、页码与引擎字段匹配时才导出；结果始终 `recognized_unverified` / `needs-review`，并保留页级原文、区域坐标（如有）及已有耗时/缓存/资源记录。`question_id` 为空；人工按原图切分、核对并确认前，不得导入规范题面。\n",
-        OUTPUT_TARGETS[4]: "# 高考数学 2017—2026\n\n## 题库工程状态\n\n" + summary + "本目录保存 2017—2026 年转录与来源材料；统一 LaTeX 项目目录及完整批次清单位于相邻的 `math-gaokao-latex/`。\n",
+        OUTPUT_TARGETS[2]: "# 高考数学资料说明\n\n" + summary + "\n完整构建、复核和缺失事项见 `report.md` 与 `docs/exams/missing-issues.md`。\n",
+        OUTPUT_TARGETS[3]: "# 高考数学 LaTeX 项目\n\n## 全量状态\n\n" + summary + "\n## 交付物与校验\n\n来源清单：`manifest.csv` 是 `source-manifest.json` 的来源级清单投影，每个上游 PDF 一行。\n\n```bash\npython3 docs/exams/tools/manifest_csv.py --manifest docs/exams/source-manifest.json --output docs/exams/manifest.csv --write\npython3 docs/exams/tools/report.py render --all --manifest docs/exams/source-manifest.json --issues docs/exams/missing-issues.md\npython3 docs/exams/tools/report.py check --all --manifest docs/exams/source-manifest.json --issues docs/exams/missing-issues.md\n```\n\n### 题目级 IR 导出（增量能力）\n\n可从已登记的规范 Markdown 题面与逐题 `provenance.json` 生成确定性 JSON，不重新 OCR 或重录题面：\n\n```bash\npython3 docs/exams/tools/export_question_ir.py gk-2017-regular-national-1-science --output /tmp/2017-national-1-science.ir.json\n```\n\n导出前会核对 `paper_id`、唯一 canonical 来源绑定、manifest 与逐题 provenance 中登记的来源 PDF SHA-256、题数、逐题 ID、source ID 和题面哈希；它不重新打开/哈希 PDF 原件。任一记录不一致即失败。题面以 `body_markdown` 保留解析题块，当前没有结构化证据的 `options`、`equations`、`tables` 与 `source_bbox` 保持 null；图像 Markdown 引用独立列出。项目答案材料只作为 `answer_evidence`，`official_answer` 固定为 null。该工具目前只覆盖已登记规范 Markdown 的导出，不代表 OCR→IR 自动接入或整卷验收。\n\nOCR 整页结果使用独立候选格式，不能自动分配给题号；例如把已登记 JSONL 第 2 条 MinerU 结果绑定到 manifest 来源：\n\n```bash\npython3 docs/exams/tools/ocr_candidate_ir.py docs/exams/benchmarks/ocr-runs.jsonl --line 2 --output /tmp/2008-page05-ocr-candidate.json\n```\n\n只有在 source ID、PDF SHA、页码与引擎字段匹配时才导出；结果始终 `recognized_unverified` / `needs-review`，并保留页级原文、区域坐标（如有）及已有耗时/缓存/资源记录。`question_id` 为空；人工按原图切分、核对并确认前，不得导入规范题面。\n",
+        OUTPUT_TARGETS[4]: "# 高考数学 2017—2026\n\n## 题库工程状态\n\n" + summary + "本目录保存 2017—2026 年转录与来源材料；统一 LaTeX 项目目录及完整批次清单位于相邻的 `docs/exams/`。\n",
         OUTPUT_TARGETS[5]: "# 高考数学 LaTeX 全量状态快照\n\n" + summary + "## 批次明细\n\n" + batches,
     }
     bodies[OUTPUT_TARGETS[3]] += (
@@ -237,8 +237,8 @@ def render_outputs(facts: Mapping[str, Any]) -> Dict[str, str]:
         "部署、模型下载、路由、交叉核对、人工校对和阶段提交统一遵循 "
         "[OCR_WORKFLOW.md](docs/OCR_WORKFLOW.md)。首选 Xiaomi-OCR-0，"
         "复杂文档与公式用 PaddleOCR-VL-1.6 交叉验证，批量 PDF 使用 MinerU。"
-        "统一入口为 `python3 math-gaokao-latex/tools/local_ocr.py --help`；"
-        "模型与依赖固定记录在 `math-gaokao-latex/tools/ocr-local-models.json`，运行资产放在忽略目录 `math-gaokao-latex/.work/ocr-local/`。\n"
+        "统一入口为 `python3 docs/exams/tools/local_ocr.py --help`；"
+        "模型与依赖固定记录在 `docs/exams/tools/ocr-local-models.json`，运行资产放在忽略目录 `docs/exams/.work/ocr-local/`。\n"
     )
     return {path: text if text.endswith("\n") else text + "\n" for path, text in bodies.items()}
 

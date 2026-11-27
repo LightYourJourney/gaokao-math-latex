@@ -54,7 +54,7 @@ def build_question_ir(repo_root: Path, paper_id: str) -> Dict[str, Any]:
     answers. Exact parsed Markdown and explicit review/source fields are retained.
     """
     repo_root = Path(repo_root).resolve()
-    project_root = repo_root / "math-gaokao-latex"
+    project_root = repo_root / "docs/exams"
     manifest = _read_json(project_root / "source-manifest.json")
     paper = _unique(manifest.get("papers", []), "paper_id", paper_id, "试卷记录")
     if len(paper.get("source_ids", [])) != 1:

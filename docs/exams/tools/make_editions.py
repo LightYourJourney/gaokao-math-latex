@@ -39,7 +39,7 @@ from transaction import RepoLock
 HERE = Path(__file__).resolve().parent
 PROJECT_ROOT = HERE.parent                       # math-gaokao-latex
 
-PROJECT_RELATIVE = "math-gaokao-latex"
+PROJECT_RELATIVE = "docs/exams"
 MANIFEST_TARGET = PROJECT_RELATIVE + "/source-manifest.json"
 TOOL_SOURCE_TARGET = PROJECT_RELATIVE + "/tools/make_editions.py"
 TEMPLATE_RELATIVE = PROJECT_RELATIVE + "/templates"

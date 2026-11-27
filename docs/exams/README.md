@@ -1,10 +1,17 @@
 # 试卷目录说明与索引
 
-本仓库的高考数学试卷按「年份_卷别」独立成目录，命名规则与任务书一致；目录根为
-`math-gaokao-latex/`，例如 `math-gaokao-latex/2020_全国Ⅰ卷_理科/`。任务书示例写作
-`docs/exams/<年份>_<卷别>/`；本工程在阶段 0 已把首批目录固定在 `math-gaokao-latex/`
-下，后续 500 余卷沿同一约定增量登记。整体搬迁会使全部 build/review 回执中的仓库相对
-路径失效，故保留现根目录，并用本页与 `math-gaokao-latex/index.json` 提供等价索引。
+本仓库的高考数学试卷按「年份_卷别」独立成目录，**目录根为 `docs/exams/`**，例如
+`docs/exams/2020_全国Ⅰ卷_理科/`。这与任务书示例 `docs/exams/<年份>_<卷别>/` 一致。
+
+为保住 2017—2026 各卷已产生的 2800+ 份构建/复核回执（其中含人工逐页视觉审查记录），
+仓库根保留了一个兼容符号链接：
+
+```
+math-gaokao-latex -> docs/exams
+```
+
+因此旧回执里的 `math-gaokao-latex/<卷>/...` 路径仍可解析；**项目实体只在
+`docs/exams/` 下**，符号链接仅为历史证据与旧命令的兼容别名，不复制任何内容。
 
 ## 单卷目录内容
 
@@ -29,26 +36,26 @@
 
 ## 全量索引
 
-- `math-gaokao-latex/index.json`：逐卷静态身份（paper_id、目录、题数、结构、图稿）。
-- `math-gaokao-latex/manifest.csv`：来源级清单，每个上游 PDF 一行，含绑定卷、状态与问题号。
-- `report.md`、`README_数学.md`、`math-gaokao-latex/reports/baseline.md`：当前总量、批次与门禁统计。
-- `math-gaokao-latex/missing-issues.md`：缺源、源缺陷、答案冲突与待核事项总账。
+- `docs/exams/index.json`：逐卷静态身份（paper_id、目录、题数、结构、图稿）。
+- `docs/exams/manifest.csv`：来源级清单，每个上游 PDF 一行，含绑定卷、状态与问题号。
+- `report.md`、`README_数学.md`、`docs/exams/reports/baseline.md`：当前总量、批次与门禁统计。
+- `docs/exams/missing-issues.md`：缺源、源缺陷、答案冲突与待核事项总账。
 
 ## 构建与校验
 
 ```bash
 # 单卷四版正式构建（以 2009 重庆卷文科为例）
-python3 math-gaokao-latex/tools/build_projects.py build \
-  --manifest math-gaokao-latex/source-manifest.json \
-  --issues math-gaokao-latex/missing-issues.md \
+python3 docs/exams/tools/build_projects.py build \
+  --manifest docs/exams/source-manifest.json \
+  --issues docs/exams/missing-issues.md \
   --paper gk-2009-chongqing-arts --formal
 
 # 全量回执与报告一致性
-python3 math-gaokao-latex/tools/build_projects.py validate-receipts \
-  --manifest math-gaokao-latex/source-manifest.json --all --require-final
-python3 math-gaokao-latex/tools/report.py check --all \
-  --manifest math-gaokao-latex/source-manifest.json \
-  --issues math-gaokao-latex/missing-issues.md
+python3 docs/exams/tools/build_projects.py validate-receipts \
+  --manifest docs/exams/source-manifest.json --all --require-final
+python3 docs/exams/tools/report.py check --all \
+  --manifest docs/exams/source-manifest.json \
+  --issues docs/exams/missing-issues.md
 ```
 
 未完成或存疑的卷不会伪装为完成：`blocked` 卷在 manifest 中带 `issue_ids` 与

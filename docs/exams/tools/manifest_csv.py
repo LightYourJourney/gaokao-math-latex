@@ -20,7 +20,7 @@ from manifest import file_sha256, load_manifest
 from transaction import RepoLock, Transaction
 
 
-PROJECT_RELATIVE = "math-gaokao-latex"
+PROJECT_RELATIVE = "docs/exams"
 MANIFEST_TARGET = PROJECT_RELATIVE + "/source-manifest.json"
 CSV_TARGET = PROJECT_RELATIVE + "/manifest.csv"
 DEFAULT_MANIFEST = Path(PROJECT_RELATIVE) / "source-manifest.json"

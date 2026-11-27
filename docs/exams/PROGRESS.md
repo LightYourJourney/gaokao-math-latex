@@ -1,3 +1,9 @@
+## 目录迁移记录（2026-11-27）
+
+- 项目实体已从 `math-gaokao-latex/` 迁移到 `docs/exams/`（与任务书目录一致）；仓库根的 `math-gaokao-latex` 现为指向 `docs/exams` 的符号链接，仅用于兼容历史回执中的旧路径。
+- 同批修正：`generate_projects`/`make_short_answers` 的 `md2tex` 导入路径、`report.py` 的 `BASE`、`status.py` 与 `transaction.py` 的根路径常量改为 `docs/exams`；1040 份 Markdown 的图稿链接由 `../math-gaokao-latex/` 改为 `../docs/exams/`。
+- 校验：`generate_projects --check`（phase8-b13、phase7-b99）、`solution_sources check-batch`、`validate-receipts --paper gk-2014-sichuan-science --require-final` 均通过；未重建任何卷，历史回执与人工审查记录保持不变。
+
 ## 卷级转录进度登记规则（持续适用）
 
 - 每完成一套卷的题面转录，必须在本文件立即新增独立卷级回执；记录卷名/年份、固定来源与文件指纹、转录范围（题数及变体）、完成状态、修改文件、针对性验证、已知成本数据（不可见则写未知）、尚未完成的复核门禁及下一步。

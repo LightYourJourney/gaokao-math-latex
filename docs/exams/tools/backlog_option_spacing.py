@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 ROOT = Path("/Users/leo/leocode/gaokao-math-latex")
-BASE = ROOT / "math-gaokao-latex"
+BASE = ROOT / "docs/exams"
 manifest = json.loads((BASE / "source-manifest.json").read_text(encoding="utf-8"))
 audit = json.loads((BASE / "reports" / "option-spacing-audit.json").read_text(encoding="utf-8"))
 by_q = {p["source_files"]["questions"]: p for p in manifest["papers"] if p.get("source_files")}

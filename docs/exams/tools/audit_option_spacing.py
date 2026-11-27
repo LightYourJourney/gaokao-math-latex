@@ -69,8 +69,8 @@ def audit_file(path: Path) -> dict:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", default=".", help="仓库根目录")
-    parser.add_argument("--report", default="math-gaokao-latex/reports/option-spacing-audit.md")
-    parser.add_argument("--json", default="math-gaokao-latex/reports/option-spacing-audit.json")
+    parser.add_argument("--report", default="docs/exams/reports/option-spacing-audit.md")
+    parser.add_argument("--json", default="docs/exams/reports/option-spacing-audit.json")
     parser.add_argument("--write", action="store_true", help="写入报告文件（默认只打印摘要）")
     args = parser.parse_args(argv)
 
