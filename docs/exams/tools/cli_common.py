@@ -24,6 +24,8 @@ Task 1 `content` 事务提交，`--check` 只读比对。这套骨架原本是�
 """
 from __future__ import annotations
 
+import os
+
 import argparse
 import subprocess
 from pathlib import Path

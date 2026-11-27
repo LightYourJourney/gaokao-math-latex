@@ -194,8 +194,10 @@ def report_target(batch_id: str) -> str:
 
 def _require_report_path(root: Path, path: Path, batch_id: str) -> str:
     expected = report_target(batch_id)
-    relative = _relative_to(root, Path(path))
-    if relative != expected:
+    resolved = Path(path).resolve()
+    relative = _relative_to(root, resolved)
+    alias = expected.replace("math-gaokao-latex/", "docs/exams/", 1)
+    if relative not in (expected, alias):
         raise UsageError(f"--output-report 必须是 {expected}，实际 {relative}")
     return expected
 

@@ -1405,6 +1405,8 @@ def _commit_state(
         targets[relative] = receipts[relative]
     for relative in sorted(extra):
         targets[relative] = extra[relative]
+    # manifest 必须是最后一个目标；若上游已把同一键放进 extra，先移除再追加。
+    targets.pop(MANIFEST_TARGET, None)
     targets[MANIFEST_TARGET] = canonical_json(document).encode("utf-8")
     transaction.prepare(
         "state", targets, {}, expected_revision=int(manifest["revision"])

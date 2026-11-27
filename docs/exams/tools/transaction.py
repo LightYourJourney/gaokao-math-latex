@@ -15,7 +15,7 @@ from typing import Any, Callable, Dict, List, Mapping, Optional, Tuple, Type
 
 from manifest import canonical_json, durable_fsync
 
-MANIFEST_TARGET = "docs/exams/source-manifest.json"
+MANIFEST_TARGET = "math-gaokao-latex/source-manifest.json"
 TRANSACTIONS_RELATIVE = Path("docs/exams/.work/transactions")
 SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
 UUID_PATTERN = re.compile(

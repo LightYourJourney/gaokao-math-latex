@@ -797,7 +797,7 @@ def run(
     event_hook: Any = None,
 ) -> Dict[str, Any]:
     """生成一批试卷；`write=False` 只比对不落盘，`write=True` 先全过再一次性提交。"""
-    manifest_path = Path(manifest_path).resolve()
+    manifest_path = Path(manifest_path)
     root = cli_common.repository_root(manifest_path.parent)
     with RepoLock(root):
         manifest = load_manifest(manifest_path)
