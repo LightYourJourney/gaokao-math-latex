@@ -4604,6 +4604,14 @@
         "gk-2012-regular-shandong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b23",
+      "issues": [],
+      "paper_ids": [
+        "gk-2012-regular-shandong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4613,7 +4621,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "84b930b0-d216-4ab6-ade1-ea1dadd1c078",
+  "last_transaction_id": "7b664cf4-dcf2-4ebc-a239-67a565536bc1",
   "papers": [
     {
       "blocked_from": null,
@@ -52928,9 +52936,82 @@
       "title": "2012 年·山东卷·文科",
       "track": "arts",
       "year": 2012
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2012_山东卷_理科/figures/f2012_shandong_sci_q06_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_山东卷_理科/figures/f2012_shandong_sci_q09_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_山东卷_理科/figures/f2012_shandong_sci_q14_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_山东卷_理科/figures/f2012_shandong_sci_q16_rolling.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2012_山东卷_理科/figures/f2012_shandong_sci_q18_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2012_gaokao_shandong_science",
+        "id": "gk-2012-regular-shandong-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 759、760（759 面为选择 1—12、填空 13—16、解答 17；760 面为解答 18—22）。PDF 无答案页。山东卷题号：选择 1—12、填空 13—16、解答 17—22，共 22 题。答案由本库独立推导（等级 D，非官方）。原页图：第 6 题程序框图、第 9 题四个选项图象、第 14 题正方体、第 16 题单位圆滚动、第 18 题几何体，共 5 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "山东理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2012-regular-shandong-science",
+      "production_state": "complete",
+      "project_dir": "2012_山东卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2012/2012_数学真题_山东理_答案要点.md",
+        "combined_rendered": "2012/2012_数学真题_山东理_含解析.md",
+        "questions": "2012/2012_数学真题_山东理_试题.md",
+        "solution_body": "2012/2012_数学真题_山东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-e44397c971e0ec7f80ddb325a77b3f3080de40f2d5ba6dcd42c8f5e31075baaf"
+      ],
+      "title": "2012 年·山东卷·理科",
+      "track": "science",
+      "year": 2012
     }
   ],
-  "revision": 12227,
+  "revision": 12241,
   "schema_version": 1,
   "sources": [
     {
@@ -65647,8 +65728,8 @@
       "exam_type": "regular",
       "git_blob_oid": "485155f7ba23d0c27721e383a26df2e1e17bfff5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2012-regular-shandong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2012山东理.pdf",
       "regions": [],
       "source_id": "src-e44397c971e0ec7f80ddb325a77b3f3080de40f2d5ba6dcd42c8f5e31075baaf",
