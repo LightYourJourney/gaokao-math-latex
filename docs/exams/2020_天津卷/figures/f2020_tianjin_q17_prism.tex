@@ -1,0 +1,41 @@
+% 2020 天津卷 第 17 题：三棱柱 ABC-A1B1C1，D 在 AA1、E 在 CC1、M 为 A1B1 中点
+% 来源 PDF：普通高考/2020/2020天津.pdf 第 1 页（A3 横排），印面 1131，第 17 题题干右侧
+% 几何按原页矢量数据（单位 pt，y 向下）换算为图面坐标：A(1023.5,666.2)、B(1130.9,638.1)、
+%   C(1051.6,638.1)、A1(1023.5,547.1)、B1(1130.9,519.1)、C1(1051.6,519.1)；
+%   即顶面 A1B1C1 由底面 ABC 竖直平移得到（侧棱 AA1、BB1、CC1 在图面上等长），
+%   与 CC1 ⊥ 平面 ABC 的直棱柱一致。D 在 AA1 上且 AD:DA1 = 1:2，E 在 CC1 上且 CE:EC1 = 2:1，
+%   M 为 A1B1 中点。
+% 原页线型：实线 AB、AA1、BB1、A1B1、A1C1、C1B1、C1M、B1D；
+%   虚线 AC、BC、CC1（被前面 ABB1A1 遮挡）、B1E、DE。
+\begin{tikzpicture}[font=\small, line width=0.7pt,
+  x=1.75cm, y=1.75cm, line cap=round, line join=round]
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (2.68,0.70);
+  \coordinate (C)  at (0.70,0.70);
+  \coordinate (A1) at (0,2.98);
+  \coordinate (B1) at (2.68,3.68);
+  \coordinate (C1) at (0.70,3.68);
+  \coordinate (D)  at (0,0.99);
+  \coordinate (E)  at (0.70,2.69);
+  \coordinate (M)  at ($(A1)!0.5!(B1)$);
+  % 可见棱与辅助线
+  \draw (A)--(B)--(B1)--(A1)--cycle;
+  \draw (A1)--(C1)--(B1);
+  \draw (B1)--(D);
+  \draw (C1)--(M);
+  % 被遮挡的棱与体内线段
+  \draw[dashed] (A)--(C)--(B);
+  \draw[dashed] (C)--(C1);
+  \draw[dashed] (B1)--(E);
+  \draw[dashed] (D)--(E);
+  % 顶点标注
+  \node[below left,inner sep=3pt] at (A) {$A$};
+  \node[below right,inner sep=3pt] at (B) {$B$};
+  \node[above right,inner sep=3pt] at (C) {$C$};
+  \node[left,inner sep=3pt] at (A1) {$A_1$};
+  \node[right,inner sep=3pt] at (B1) {$B_1$};
+  \node[above,inner sep=2pt] at (C1) {$C_1$};
+  \node[left,inner sep=3pt] at (D) {$D$};
+  \node[left,inner sep=3pt] at (E) {$E$};
+  \node[below,inner sep=2pt] at (M) {$M$};
+\end{tikzpicture}

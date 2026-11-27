@@ -1,0 +1,64 @@
+% 2020 天津卷 第 3 题：函数 y = 4x/(x^2+1) 的四个图象选项（2×2 四联图）
+% 来源 PDF：普通高考/2020/2020天津.pdf 第 1 页（A3 横排），印面 1131，第 3 题题干下方
+% 逐格核对原页矢量曲线（600 dpi 渲染并读 SVG 路径，单位 pt）后确认四幅互不相同：
+%   (A) 奇函数；x 轴刻度 1 处取最大值 2（曲线最高点横坐标与刻度 1 重合），
+%       x=-1 处取最小值 -2，两端趋于 0 —— 即 y=4x/(x^2+1)；
+%   (B) 与 (A) 关于 x 轴对称，最大值在 x=-1，最小值在 x=1 —— 即 y=-4x/(x^2+1)；
+%   (C) 偶函数；x=±1 处各取最大值 2，原点处为尖点且函数值为 0 —— 即 y=4|x|/(x^2+1)；
+%   (D) 与 (C) 关于 x 轴对称，x=±1 处各取最小值 -2 —— 即 y=-4|x|/(x^2+1)。
+% 原页每幅图均画：x 轴（右端箭头、标 x）、y 轴（上端箭头、标 y）、原点 O、
+%   x 轴刻度 1、y 轴刻度 2；坐标轴在 x 方向总长约 13.6 个单位，曲线自 -6.5 画到 6.5。
+\begin{tikzpicture}[font=\small,>=Stealth,line cap=round,line join=round]
+  % (A) 左上：y = 4x/(x^2+1)
+  \begin{scope}[shift={(0,3.05)},x=0.32cm,y=0.42cm]
+    \draw[->] (-6.9,0)--(7.0,0) node[below,inner sep=2pt] {$x$};
+    \draw[->] (0,-2.5)--(0,3.05) node[left,inner sep=2pt] {$y$};
+    \node[below left,inner sep=1pt] at (0,0) {$O$};
+    \draw (1,0.12)--(1,-0.12) node[below,inner sep=6pt] {$1$};
+    \draw (0.24,2)--(-0.30,2);
+    \node[above left,inner sep=2pt] at (-0.32,2) {$2$};
+    \draw[line width=0.9pt,domain=-6.5:6.5,samples=300,smooth]
+      plot (\x,{4*\x/(\x*\x+1)});
+    \node at (-5.6,-3.35) {(A)};
+  \end{scope}
+  % (B) 右上：y = -4x/(x^2+1)
+  \begin{scope}[shift={(4.65,3.05)},x=0.32cm,y=0.42cm]
+    \draw[->] (-6.9,0)--(7.0,0) node[below,inner sep=2pt] {$x$};
+    \draw[->] (0,-2.5)--(0,3.05) node[left,inner sep=2pt] {$y$};
+    \node[below left,inner sep=1pt] at (0,0) {$O$};
+    \draw (1,0.12)--(1,-0.12) node[below,inner sep=6pt] {$1$};
+    \draw (0.24,2)--(-0.30,2);
+    \node[above left,inner sep=2pt] at (-0.32,2) {$2$};
+    \draw[line width=0.9pt,domain=-6.5:6.5,samples=300,smooth]
+      plot (\x,{-4*\x/(\x*\x+1)});
+    \node at (-5.6,-3.35) {(B)};
+  \end{scope}
+  % (C) 左下：y = 4|x|/(x^2+1)
+  \begin{scope}[shift={(0,0.30)},x=0.32cm,y=0.42cm]
+    \draw[->] (-6.9,0)--(7.0,0) node[below,inner sep=2pt] {$x$};
+    \draw[->] (0,-2.5)--(0,3.05) node[left,inner sep=2pt] {$y$};
+    \node[below left,inner sep=1pt] at (0,0) {$O$};
+    \draw (1,0.12)--(1,-0.12) node[below,inner sep=6pt] {$1$};
+    \draw (0.24,2)--(-0.30,2);
+    \node[above left,inner sep=2pt] at (-0.32,2) {$2$};
+    \draw[line width=0.9pt,domain=-6.5:0,samples=160,smooth]
+      plot (\x,{4*abs(\x)/(\x*\x+1)});
+    \draw[line width=0.9pt,domain=0:6.5,samples=160,smooth]
+      plot (\x,{4*abs(\x)/(\x*\x+1)});
+    \node at (-5.6,-3.35) {(C)};
+  \end{scope}
+  % (D) 右下：y = -4|x|/(x^2+1)
+  \begin{scope}[shift={(4.65,0.30)},x=0.32cm,y=0.42cm]
+    \draw[->] (-6.9,0)--(7.0,0) node[below,inner sep=2pt] {$x$};
+    \draw[->] (0,-2.5)--(0,3.05) node[left,inner sep=2pt] {$y$};
+    \node[below left,inner sep=1pt] at (0,0) {$O$};
+    \draw (1,0.12)--(1,-0.12) node[below,inner sep=6pt] {$1$};
+    \draw (0.24,2)--(-0.30,2);
+    \node[above left,inner sep=2pt] at (-0.32,2) {$2$};
+    \draw[line width=0.9pt,domain=-6.5:0,samples=160,smooth]
+      plot (\x,{-4*abs(\x)/(\x*\x+1)});
+    \draw[line width=0.9pt,domain=0:6.5,samples=160,smooth]
+      plot (\x,{-4*abs(\x)/(\x*\x+1)});
+    \node at (-5.6,-3.35) {(D)};
+  \end{scope}
+\end{tikzpicture}
