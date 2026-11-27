@@ -1,0 +1,23 @@
+% 2020 新高考Ⅰ卷（山东）10：函数 y=sin(ωx+φ) 的部分图象
+% 绘制依据：固定源 PDF 原页（300—600 dpi 逐像素核对）。读图锚点：
+% 相邻零点 π/6（下降）与 2π/3（上升）间距 π/2 = T/2，故 T=π、ω=2；
+% 由下降零点 2·(π/6)+φ=π 得 φ=2π/3，即 y=sin(2x+2π/3)。
+% 最大值在 x=−π/12（y 轴稍左，恰与刻度 1 齐平）；y 轴上取值为 sin(2π/3)=√3/2；
+% 最小值在 x=5π/12；x=11π/12 处再现波峰后下降。
+% 取域 x∈[−π/6, 13π/12]：左端 y=sin(π/3)=√3/2，右端 y=sin(17π/6)=1/2，
+% 与原页「左端在半高处起笔、右端过波峰后下降到半高附近收笔」一致。
+% y 轴只标刻度 1；x 轴只标 π/6 与 2π/3，分置零点左下 / 右下以避让曲线；O 标原点左下。
+\begin{tikzpicture}[xscale=1.9, yscale=1.75, font=\small]
+  % ---------- 坐标轴 ----------
+  \draw[->] (-0.80,0) -- (3.80,0) node[right] {$x$};
+  \draw[->] (0,-1.50) -- (0,1.70) node[above] {$y$};
+  % ---------- 曲线 ----------
+  \draw[thick, domain=-0.5236:3.4034, samples=240]
+    plot (\x, {sin(deg(2*\x+2*pi/3))});
+  % ---------- 刻度与标注 ----------
+  \draw (-0.05,1) -- (0.05,1);
+  \node[above left, inner sep=1pt] at (0,1) {$1$};
+  \node[below, inner sep=1pt, xshift=-3pt, yshift=-2pt] at ({pi/6},0) {$\frac{\pi}{6}$};
+  \node[below, inner sep=1pt, xshift=4pt, yshift=-2pt] at ({2*pi/3},0) {$\frac{2\pi}{3}$};
+  \node[below left, inner sep=2pt] at (0,0) {$O$};
+\end{tikzpicture}
