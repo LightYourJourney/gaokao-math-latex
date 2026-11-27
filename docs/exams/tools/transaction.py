@@ -175,6 +175,14 @@ def _open_directory_chain(
     error_type: ErrorType,
     event_hook: EventHook = None,
 ) -> Optional[int]:
+    # 兼容迁移：仓库根的 math-gaokao-latex 是指向 docs/exams 的符号链接。
+    # 事务层禁止路径含符号链接，这里把该兼容链接显式改写为其仓库内目标。
+    if relative.parts and relative.parts[0] == "math-gaokao-latex":
+        compat = Path(root) / "math-gaokao-latex"
+        if compat.is_symlink():
+            target = os.readlink(compat)
+            if not os.path.isabs(target) and ".." not in Path(target).parts:
+                relative = Path(target, *relative.parts[1:])
     current_fd = _open_root(root, error_type)
     current_path = root
     try:

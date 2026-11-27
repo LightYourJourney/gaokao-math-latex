@@ -1,300 +1,300 @@
 {
-  "attempt_id": "620b70a8-b16c-4deb-9524-a91eab550300",
-  "dependency_tree": {
-    "files": [
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/answers.tex",
-        "sha256": "83350c631891ebf59766bb729cc418136318ea1c9b0e2d0f830b9cc33da098e6"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/answers_short.tex",
-        "sha256": "37ff2c1ad33c183c2a1bf514563d06251f9fd00fac3633fce6d1b4cd6da102b8"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/figures/f2024_t11_curve.tex",
-        "sha256": "7676e7345d91b98a1381a24b5933b0b4b4b686758b1c3b36bc43d2ef189a35ea"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/figures/f2024_t17_pyramid.tex",
-        "sha256": "42b193a318328e66b26512a1f8586321d46e30a1a4da92dcdd9e023833ef8a3e"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/questions.tex",
-        "sha256": "45ac7af9139335267bd9252a64eb7f014f29516fd2c2bb9a2583474476785af2"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/印刷版.tex",
-        "sha256": "0d38c3cd4c5b92a879021d60a83ae7a601bf7a69d39b078d4e2022a158799bff"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/简答版.tex",
-        "sha256": "77632663538aa54b7fb06255cb1a53a4fdde132d938743837cfac811455cb951"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/解析版.tex",
-        "sha256": "af8bae7a1cc57b794205b60d48ff3bfdb38cf3eda6cb81d227f8d18de7e85c02"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/试题版.tex",
-        "sha256": "0c87c8386329265a1ce4008d9b3b477bcc19b5bd94c0b81b3f455a2f033521ce"
-      },
-      {
-        "path": "math-gaokao-latex/common/macros.tex",
-        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
-      },
-      {
-        "path": "math-gaokao-latex/common/preamble.tex",
-        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
-      },
-      {
-        "path": "math-gaokao-latex/common/questions_env.tex",
-        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
-      }
-    ],
-    "tree_sha256": "e007dfcd8da7fbe2a587c04b05c92392dbdc8a6610d8355e5528635174d4d7c3"
-  },
-  "editions": [
-    {
-      "edition": "试题版",
-      "log": {
-        "errors": [],
-        "missing_characters": [],
-        "overfull": [],
-        "undefined_references": []
-      },
-      "passes": [
-        {
-          "exit_code": 0,
-          "pass": 1
-        }
-      ],
-      "pdf": {
-        "page_count": 4,
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/build/试题版.pdf",
-        "sha256": "4751f3c71320b98db32e331c43cf54a60dbdaa5f19f017c5f25e4b84651c92db",
-        "size_bytes": 127949
-      },
-      "problems": [],
-      "result": "succeeded",
-      "source": "math-gaokao-latex/2024_新高考Ⅰ卷/试题版.tex"
-    },
-    {
-      "edition": "解析版",
-      "log": {
-        "errors": [],
-        "missing_characters": [],
-        "overfull": [
-          {
-            "box": "hbox",
-            "kind": "Underfull",
-            "lines": "854--855",
-            "text": "Underfull \\hbox (badness 1028) in paragraph at lines 854--855",
-            "width_pt": null
-          }
-        ],
-        "undefined_references": []
-      },
-      "passes": [
-        {
-          "exit_code": 0,
-          "pass": 1
-        }
-      ],
-      "pdf": {
-        "page_count": 37,
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/build/解析版.pdf",
-        "sha256": "0fbc0df922782ece6ef618e04e218f62b03ef1c60a53423b35607d369a36f183",
-        "size_bytes": 400504
-      },
-      "problems": [],
-      "result": "succeeded",
-      "source": "math-gaokao-latex/2024_新高考Ⅰ卷/解析版.tex"
-    },
-    {
-      "edition": "简答版",
-      "log": {
-        "errors": [],
-        "missing_characters": [],
-        "overfull": [],
-        "undefined_references": []
-      },
-      "passes": [
-        {
-          "exit_code": 0,
-          "pass": 1
-        }
-      ],
-      "pdf": {
-        "page_count": 6,
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/build/简答版.pdf",
-        "sha256": "ac424a6de8dc23d68d964f054e4e07bc2504480324def947695e454dc6b809ae",
-        "size_bytes": 138260
-      },
-      "problems": [],
-      "result": "succeeded",
-      "source": "math-gaokao-latex/2024_新高考Ⅰ卷/简答版.tex"
-    },
-    {
-      "edition": "印刷版",
-      "log": {
-        "errors": [],
-        "missing_characters": [],
-        "overfull": [
-          {
-            "box": "hbox",
-            "kind": "Underfull",
-            "lines": "517--518",
-            "text": "Underfull \\hbox (badness 1342) in paragraph at lines 517--518",
-            "width_pt": null
-          }
-        ],
-        "undefined_references": []
-      },
-      "passes": [
-        {
-          "exit_code": 0,
-          "pass": 1
-        }
-      ],
-      "pdf": {
-        "page_count": 27,
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/build/印刷版.pdf",
-        "sha256": "63be44340b73157526d2b50ea527cff3de8426507e57504ec383b47615c45c10",
-        "size_bytes": 397661
-      },
-      "problems": [],
-      "result": "succeeded",
-      "source": "math-gaokao-latex/2024_新高考Ⅰ卷/印刷版.tex"
-    }
+ "attempt_id": "620b70a8-b16c-4deb-9524-a91eab550300",
+ "dependency_tree": {
+  "files": [
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/answers.tex",
+    "sha256": "83350c631891ebf59766bb729cc418136318ea1c9b0e2d0f830b9cc33da098e6"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/answers_short.tex",
+    "sha256": "37ff2c1ad33c183c2a1bf514563d06251f9fd00fac3633fce6d1b4cd6da102b8"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/figures/f2024_t11_curve.tex",
+    "sha256": "7676e7345d91b98a1381a24b5933b0b4b4b686758b1c3b36bc43d2ef189a35ea"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/figures/f2024_t17_pyramid.tex",
+    "sha256": "42b193a318328e66b26512a1f8586321d46e30a1a4da92dcdd9e023833ef8a3e"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/questions.tex",
+    "sha256": "45ac7af9139335267bd9252a64eb7f014f29516fd2c2bb9a2583474476785af2"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/印刷版.tex",
+    "sha256": "0d38c3cd4c5b92a879021d60a83ae7a601bf7a69d39b078d4e2022a158799bff"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/简答版.tex",
+    "sha256": "77632663538aa54b7fb06255cb1a53a4fdde132d938743837cfac811455cb951"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/解析版.tex",
+    "sha256": "af8bae7a1cc57b794205b60d48ff3bfdb38cf3eda6cb81d227f8d18de7e85c02"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/试题版.tex",
+    "sha256": "0c87c8386329265a1ce4008d9b3b477bcc19b5bd94c0b81b3f455a2f033521ce"
+   },
+   {
+    "path": "math-gaokao-latex/common/macros.tex",
+    "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+   },
+   {
+    "path": "math-gaokao-latex/common/preamble.tex",
+    "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+   },
+   {
+    "path": "math-gaokao-latex/common/questions_env.tex",
+    "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+   }
   ],
-  "finished_at": "2026-11-17T01:39:32+08:00",
-  "generation_input_tree": {
-    "files": [
-      {
-        "path": "2024/2024_数学真题_答案要点.md",
-        "sha256": "6ede7470591ca0ea461b063db6398e232c0864f2aadb0ce84b6c734cf52f8c06"
-      },
-      {
-        "path": "2024/2024_数学真题_解析正文.md",
-        "sha256": "57f5de217ec98abbe7e13d67315da18d4a36a2ef06d854a3f6ff5a7e42d96c47"
-      },
-      {
-        "path": "2024/2024_数学真题_试题.md",
-        "sha256": "6ee20ca01a49fe2992c52db2b00bdd82fdfbd7b9ff3397fa1b4759d8ad24728f"
-      },
-      {
-        "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "4bac47eee530cc0557545ccdebe664e860a813565a81858f95226ba71d4a4039"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/figures/f2024_t11_curve.tex",
-        "sha256": "7676e7345d91b98a1381a24b5933b0b4b4b686758b1c3b36bc43d2ef189a35ea"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/figures/f2024_t17_pyramid.tex",
-        "sha256": "42b193a318328e66b26512a1f8586321d46e30a1a4da92dcdd9e023833ef8a3e"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/印刷版.tex",
-        "sha256": "0d38c3cd4c5b92a879021d60a83ae7a601bf7a69d39b078d4e2022a158799bff"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/简答版.tex",
-        "sha256": "77632663538aa54b7fb06255cb1a53a4fdde132d938743837cfac811455cb951"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/解析版.tex",
-        "sha256": "af8bae7a1cc57b794205b60d48ff3bfdb38cf3eda6cb81d227f8d18de7e85c02"
-      },
-      {
-        "path": "math-gaokao-latex/2024_新高考Ⅰ卷/试题版.tex",
-        "sha256": "0c87c8386329265a1ce4008d9b3b477bcc19b5bd94c0b81b3f455a2f033521ce"
-      },
-      {
-        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
-        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
-      },
-      {
-        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
-        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
-      },
-      {
-        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
-        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
-      },
-      {
-        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
-        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
-      },
-      {
-        "path": "math-gaokao-latex/tools/cli_common.py",
-        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
-      },
-      {
-        "path": "math-gaokao-latex/tools/generate_projects.py",
-        "sha256": "c5f042f89e64f8a85a323f3f0df3b03eaec01ea90735d4e250ff00e829fbce66"
-      },
-      {
-        "path": "math-gaokao-latex/tools/make_editions.py",
-        "sha256": "fc91c02278b04a8d78618714f4fcda7aee7917ecf02e400c5ff1cd68dd5f9735"
-      },
-      {
-        "path": "math-gaokao-latex/tools/make_short_answers.py",
-        "sha256": "81be8554645d4683225872674c733b55c4a4733a78cbd32da4bf88cb6cc41fab"
-      },
-      {
-        "path": "math-gaokao-latex/tools/solution_sources.py",
-        "sha256": "9e4150b07128689ee3e8e39f18311cc34e58060f10f8acac70e2f72372bde5d7"
-      }
-    ],
-    "tree_sha256": "d38ae657d8cc80ff78a14223691ea5b5698ec79f0c017e9d725ca1b1e675e412"
+  "tree_sha256": "e007dfcd8da7fbe2a587c04b05c92392dbdc8a6610d8355e5528635174d4d7c3"
+ },
+ "editions": [
+  {
+   "edition": "试题版",
+   "log": {
+    "errors": [],
+    "missing_characters": [],
+    "overfull": [],
+    "undefined_references": []
+   },
+   "passes": [
+    {
+     "exit_code": 0,
+     "pass": 1
+    }
+   ],
+   "pdf": {
+    "page_count": 4,
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/build/试题版.pdf",
+    "sha256": "4751f3c71320b98db32e331c43cf54a60dbdaa5f19f017c5f25e4b84651c92db",
+    "size_bytes": 127949
+   },
+   "problems": [],
+   "result": "succeeded",
+   "source": "math-gaokao-latex/2024_新高考Ⅰ卷/试题版.tex"
   },
-  "input_projection": "fd5e61511caacc3041d754263f6ab16db489cc85ff398df2fbdfcc530fc32241",
-  "manifest_revision": 8693,
-  "paper_id": "gk-2024-regular-new-gaokao-1",
-  "previous_attempt_id": "62383349-5fc8-4ac1-98ae-f1aa4c638786",
-  "project_dir": "2024_新高考Ⅰ卷",
-  "schema_version": 1,
-  "started_at": "2026-11-17T01:39:21+08:00",
-  "status": "succeeded",
-  "toolchain_fingerprint": {
-    "texlive_revision": "TeX Live 2026",
-    "tools": [
-      {
-        "name": "pdfinfo",
-        "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
-        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
-        "version": "pdfinfo version 26.11.0"
-      },
-      {
-        "name": "pdftoppm",
-        "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
-        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
-        "version": "pdftoppm version 26.11.0"
-      },
-      {
-        "name": "pdftotext",
-        "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
-        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
-        "version": "pdftotext version 26.11.0"
-      },
-      {
-        "name": "xelatex",
-        "path": "/Library/TeX/texbin/xelatex",
-        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
-        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
-        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
-      },
-      {
-        "name": "latexmk",
-        "path": "/Library/TeX/texbin/latexmk",
-        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
-        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
-        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
-      }
-    ]
+  {
+   "edition": "解析版",
+   "log": {
+    "errors": [],
+    "missing_characters": [],
+    "overfull": [
+     {
+      "box": "hbox",
+      "kind": "Underfull",
+      "lines": "854--855",
+      "text": "Underfull \\hbox (badness 1028) in paragraph at lines 854--855",
+      "width_pt": null
+     }
+    ],
+    "undefined_references": []
+   },
+   "passes": [
+    {
+     "exit_code": 0,
+     "pass": 1
+    }
+   ],
+   "pdf": {
+    "page_count": 37,
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/build/解析版.pdf",
+    "sha256": "0fbc0df922782ece6ef618e04e218f62b03ef1c60a53423b35607d369a36f183",
+    "size_bytes": 400504
+   },
+   "problems": [],
+   "result": "succeeded",
+   "source": "math-gaokao-latex/2024_新高考Ⅰ卷/解析版.tex"
+  },
+  {
+   "edition": "简答版",
+   "log": {
+    "errors": [],
+    "missing_characters": [],
+    "overfull": [],
+    "undefined_references": []
+   },
+   "passes": [
+    {
+     "exit_code": 0,
+     "pass": 1
+    }
+   ],
+   "pdf": {
+    "page_count": 6,
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/build/简答版.pdf",
+    "sha256": "ac424a6de8dc23d68d964f054e4e07bc2504480324def947695e454dc6b809ae",
+    "size_bytes": 138260
+   },
+   "problems": [],
+   "result": "succeeded",
+   "source": "math-gaokao-latex/2024_新高考Ⅰ卷/简答版.tex"
+  },
+  {
+   "edition": "印刷版",
+   "log": {
+    "errors": [],
+    "missing_characters": [],
+    "overfull": [
+     {
+      "box": "hbox",
+      "kind": "Underfull",
+      "lines": "517--518",
+      "text": "Underfull \\hbox (badness 1342) in paragraph at lines 517--518",
+      "width_pt": null
+     }
+    ],
+    "undefined_references": []
+   },
+   "passes": [
+    {
+     "exit_code": 0,
+     "pass": 1
+    }
+   ],
+   "pdf": {
+    "page_count": 27,
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/build/印刷版.pdf",
+    "sha256": "63be44340b73157526d2b50ea527cff3de8426507e57504ec383b47615c45c10",
+    "size_bytes": 397661
+   },
+   "problems": [],
+   "result": "succeeded",
+   "source": "math-gaokao-latex/2024_新高考Ⅰ卷/印刷版.tex"
   }
+ ],
+ "finished_at": "2026-11-17T01:39:32+08:00",
+ "generation_input_tree": {
+  "files": [
+   {
+    "path": "2024/2024_数学真题_答案要点.md",
+    "sha256": "6ede7470591ca0ea461b063db6398e232c0864f2aadb0ce84b6c734cf52f8c06"
+   },
+   {
+    "path": "2024/2024_数学真题_解析正文.md",
+    "sha256": "57f5de217ec98abbe7e13d67315da18d4a36a2ef06d854a3f6ff5a7e42d96c47"
+   },
+   {
+    "path": "2024/2024_数学真题_试题.md",
+    "sha256": "6ee20ca01a49fe2992c52db2b00bdd82fdfbd7b9ff3397fa1b4759d8ad24728f"
+   },
+   {
+    "path": "math-gaokao-2017-2026/tools/md2tex.py",
+    "sha256": "4bac47eee530cc0557545ccdebe664e860a813565a81858f95226ba71d4a4039"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/figures/f2024_t11_curve.tex",
+    "sha256": "7676e7345d91b98a1381a24b5933b0b4b4b686758b1c3b36bc43d2ef189a35ea"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/figures/f2024_t17_pyramid.tex",
+    "sha256": "42b193a318328e66b26512a1f8586321d46e30a1a4da92dcdd9e023833ef8a3e"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/印刷版.tex",
+    "sha256": "0d38c3cd4c5b92a879021d60a83ae7a601bf7a69d39b078d4e2022a158799bff"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/简答版.tex",
+    "sha256": "77632663538aa54b7fb06255cb1a53a4fdde132d938743837cfac811455cb951"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/解析版.tex",
+    "sha256": "af8bae7a1cc57b794205b60d48ff3bfdb38cf3eda6cb81d227f8d18de7e85c02"
+   },
+   {
+    "path": "math-gaokao-latex/2024_新高考Ⅰ卷/试题版.tex",
+    "sha256": "0c87c8386329265a1ce4008d9b3b477bcc19b5bd94c0b81b3f455a2f033521ce"
+   },
+   {
+    "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+    "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+   },
+   {
+    "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+    "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+   },
+   {
+    "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+    "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+   },
+   {
+    "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+    "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+   },
+   {
+    "path": "math-gaokao-latex/tools/cli_common.py",
+    "sha256": "9e2d75fdb07d86fe861c4e338567280e1457a70180f2cffbcdf8a3cd24f4059b"
+   },
+   {
+    "path": "math-gaokao-latex/tools/generate_projects.py",
+    "sha256": "c5f042f89e64f8a85a323f3f0df3b03eaec01ea90735d4e250ff00e829fbce66"
+   },
+   {
+    "path": "math-gaokao-latex/tools/make_editions.py",
+    "sha256": "fc91c02278b04a8d78618714f4fcda7aee7917ecf02e400c5ff1cd68dd5f9735"
+   },
+   {
+    "path": "math-gaokao-latex/tools/make_short_answers.py",
+    "sha256": "81be8554645d4683225872674c733b55c4a4733a78cbd32da4bf88cb6cc41fab"
+   },
+   {
+    "path": "math-gaokao-latex/tools/solution_sources.py",
+    "sha256": "9e4150b07128689ee3e8e39f18311cc34e58060f10f8acac70e2f72372bde5d7"
+   }
+  ],
+  "tree_sha256": "271da9b33737eafc899978eec9cca47f2048ce4e3883c0700482fe18d5f7eee9"
+ },
+ "input_projection": "fd5e61511caacc3041d754263f6ab16db489cc85ff398df2fbdfcc530fc32241",
+ "manifest_revision": 8693,
+ "paper_id": "gk-2024-regular-new-gaokao-1",
+ "previous_attempt_id": "62383349-5fc8-4ac1-98ae-f1aa4c638786",
+ "project_dir": "2024_新高考Ⅰ卷",
+ "schema_version": 1,
+ "started_at": "2026-11-17T01:39:21+08:00",
+ "status": "succeeded",
+ "toolchain_fingerprint": {
+  "texlive_revision": "TeX Live 2026",
+  "tools": [
+   {
+    "name": "pdfinfo",
+    "path": "/opt/homebrew/bin/pdfinfo",
+    "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+    "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+    "version": "pdfinfo version 26.11.0"
+   },
+   {
+    "name": "pdftoppm",
+    "path": "/opt/homebrew/bin/pdftoppm",
+    "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+    "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+    "version": "pdftoppm version 26.11.0"
+   },
+   {
+    "name": "pdftotext",
+    "path": "/opt/homebrew/bin/pdftotext",
+    "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+    "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+    "version": "pdftotext version 26.11.0"
+   },
+   {
+    "name": "xelatex",
+    "path": "/Library/TeX/texbin/xelatex",
+    "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+    "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+    "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+   },
+   {
+    "name": "latexmk",
+    "path": "/Library/TeX/texbin/latexmk",
+    "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+    "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+    "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+   }
+  ]
+ }
 }

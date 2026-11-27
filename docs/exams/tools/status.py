@@ -26,7 +26,7 @@ from typing import Any, Dict, Iterable, List, Mapping, Sequence, Tuple
 
 from issues import blocks_completion
 
-PROJECT_RELATIVE = "docs/exams"
+PROJECT_RELATIVE = "math-gaokao-latex"
 MANIFEST_TARGET = PROJECT_RELATIVE + "/source-manifest.json"
 ISSUES_TARGET = PROJECT_RELATIVE + "/missing-issues.md"
 BUILD_RECEIPT_NAME = "receipts/build.json"

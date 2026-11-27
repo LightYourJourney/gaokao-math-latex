@@ -42,10 +42,10 @@ from transaction import RepoLock
 
 HERE = Path(__file__).resolve().parent
 PROJECT_ROOT = HERE.parent                       # math-gaokao-latex
-sys.path.insert(0, str(PROJECT_ROOT.parent.parent / "math-gaokao-2017-2026" / "tools"))
+sys.path.insert(0, str(PROJECT_ROOT.parent / "math-gaokao-2017-2026" / "tools"))
 import md2tex  # noqa: E402  行内 MD→LaTeX 转换，与 answers.tex 走同一套规则
 
-PROJECT_RELATIVE = "docs/exams"
+PROJECT_RELATIVE = "math-gaokao-latex"
 MANIFEST_TARGET = PROJECT_RELATIVE + "/source-manifest.json"
 TOOL_SOURCE_TARGET = PROJECT_RELATIVE + "/tools/make_short_answers.py"
 RENDERER_SOURCE_TARGET = PROJECT_RELATIVE + "/tools/solution_sources.py"

@@ -47,8 +47,17 @@ def repository_root(path: Path) -> Path:
 
 
 def relative_to_repo(root: Path, path: Path, error_type: ErrorType) -> str:
+    # 兼容迁移：项目实体在 docs/exams/，仓库根的 math-gaokao-latex 是符号链接。
+    # 相对路径按字面保留，避免 resolve() 把兼容链接展开成 docs/exams 后与
+    # 回执里记录的历史路径前缀不一致。
+    candidate = Path(path)
+    if not candidate.is_absolute():
+        normalized = os.path.normpath(os.fspath(candidate))
+        if normalized == ".." or normalized.startswith(".." + os.sep):
+            raise error_type(f"路径不在仓库内：{path}")
+        return Path(normalized).as_posix()
     try:
-        return Path(path).resolve().relative_to(root).as_posix()
+        return candidate.resolve().relative_to(Path(root).resolve()).as_posix()
     except ValueError as error:
         raise error_type(f"路径不在仓库内：{path}") from error
 

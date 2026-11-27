@@ -1,308 +1,308 @@
 {
-  "attempt_id": "6d16a038-c6f8-4e8c-84b1-f4ae3aaee24e",
-  "dependency_tree": {
-    "files": [
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/answers.tex",
-        "sha256": "f3285dfaa044bf120706f0744080ae0d70bff1e8d2e2088ec52ee4d675cdb2a4"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/answers_short.tex",
-        "sha256": "10d247afbc70adbfb659a1b454d7b11768d66ab7210828219c6c68c2aea7b7ac"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q18_cube.tex",
-        "sha256": "eadcd52e42d33fa6fdd31a6ffa1b6f7729e7728b4f683de4b8e55cda48992455"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q19_triangle.tex",
-        "sha256": "492a0366bdfdc8d7fa03f2fbd08259395cfc70e05456f4780ab3569a0136488a"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q20_hyperbola.tex",
-        "sha256": "55d9c84586761ef5c4697f98173ff1f6717ef41acaf55f716ac9b0f07e6bf6d8"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q22_tangent.tex",
-        "sha256": "453ad541d72ac2c84c5e0ff65e7fba43f9ed856c2ff215893a7cb26a0899bd95"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/questions.tex",
-        "sha256": "978f3739ab8dbd62122645cbfdd3bb245b53a1debd8d6c284bcdd1f87ee28c35"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/印刷版.tex",
-        "sha256": "b530606acb6456fd5f821034816f5ec4ee84f92bb89297e9d1678ddccd7b772e"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/简答版.tex",
-        "sha256": "ed3704e9ddf63acbade8ee9b89a6d784d3a4f1a25bc63d152af21bd1b78c7f5e"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/解析版.tex",
-        "sha256": "8ab6aa7feee321f129722f8f6028fa4d078980bd8840d6f4796c952117d002cf"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/试题版.tex",
-        "sha256": "90b4812f435c09d534c12d2c67038caa0d84ac1fd256b45ce0d0ab73458a7b95"
-      },
-      {
-        "path": "math-gaokao-latex/common/macros.tex",
-        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
-      },
-      {
-        "path": "math-gaokao-latex/common/preamble.tex",
-        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
-      },
-      {
-        "path": "math-gaokao-latex/common/questions_env.tex",
-        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
-      }
-    ],
-    "tree_sha256": "9b50753e7fae3960b2f6f361b120b7130c4b16b1a79cf9264bf13c1715728137"
-  },
-  "editions": [
-    {
-      "edition": "试题版",
-      "log": {
-        "errors": [],
-        "missing_characters": [],
-        "overfull": [],
-        "undefined_references": []
-      },
-      "passes": [
-        {
-          "exit_code": 0,
-          "pass": 1
-        }
-      ],
-      "pdf": {
-        "page_count": 4,
-        "path": "math-gaokao-latex/2004_湖北卷_文科/build/试题版.pdf",
-        "sha256": "2d69925ef8edc2c355424c16996b1d7a063b01132741b198709c2bd0862596f1",
-        "size_bytes": 119203
-      },
-      "problems": [],
-      "result": "succeeded",
-      "source": "math-gaokao-latex/2004_湖北卷_文科/试题版.tex"
-    },
-    {
-      "edition": "解析版",
-      "log": {
-        "errors": [],
-        "missing_characters": [
-          {
-            "text": "Missing character: There is no ． (U+FF0E) in font [lmroman12-regular]:mapping=t"
-          }
-        ],
-        "overfull": [],
-        "undefined_references": []
-      },
-      "passes": [
-        {
-          "exit_code": 0,
-          "pass": 1
-        }
-      ],
-      "pdf": {
-        "page_count": 30,
-        "path": "math-gaokao-latex/2004_湖北卷_文科/build/解析版.pdf",
-        "sha256": "f140f321c1ebc1d4d0db7a0d5424eda0ba763bac2a9bc702832da9bfb70266fa",
-        "size_bytes": 255509
-      },
-      "problems": [],
-      "result": "succeeded",
-      "source": "math-gaokao-latex/2004_湖北卷_文科/解析版.tex"
-    },
-    {
-      "edition": "简答版",
-      "log": {
-        "errors": [],
-        "missing_characters": [],
-        "overfull": [],
-        "undefined_references": []
-      },
-      "passes": [
-        {
-          "exit_code": 0,
-          "pass": 1
-        }
-      ],
-      "pdf": {
-        "page_count": 6,
-        "path": "math-gaokao-latex/2004_湖北卷_文科/build/简答版.pdf",
-        "sha256": "c43322286f8ba17b0d14da09617c4ff2c1282d0fcec517def188c86e0d9adfc9",
-        "size_bytes": 129541
-      },
-      "problems": [],
-      "result": "succeeded",
-      "source": "math-gaokao-latex/2004_湖北卷_文科/简答版.tex"
-    },
-    {
-      "edition": "印刷版",
-      "log": {
-        "errors": [],
-        "missing_characters": [
-          {
-            "text": "Missing character: There is no ． (U+FF0E) in font [lmroman10-regular]:mapping=t"
-          }
-        ],
-        "overfull": [],
-        "undefined_references": []
-      },
-      "passes": [
-        {
-          "exit_code": 0,
-          "pass": 1
-        }
-      ],
-      "pdf": {
-        "page_count": 23,
-        "path": "math-gaokao-latex/2004_湖北卷_文科/build/印刷版.pdf",
-        "sha256": "07d78701e754c7f6228a24d7e50ae2d1a3dda181470e4526d0b8ca0c4318ae59",
-        "size_bytes": 251278
-      },
-      "problems": [],
-      "result": "succeeded",
-      "source": "math-gaokao-latex/2004_湖北卷_文科/印刷版.tex"
-    }
+ "attempt_id": "6d16a038-c6f8-4e8c-84b1-f4ae3aaee24e",
+ "dependency_tree": {
+  "files": [
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/answers.tex",
+    "sha256": "f3285dfaa044bf120706f0744080ae0d70bff1e8d2e2088ec52ee4d675cdb2a4"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/answers_short.tex",
+    "sha256": "10d247afbc70adbfb659a1b454d7b11768d66ab7210828219c6c68c2aea7b7ac"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q18_cube.tex",
+    "sha256": "eadcd52e42d33fa6fdd31a6ffa1b6f7729e7728b4f683de4b8e55cda48992455"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q19_triangle.tex",
+    "sha256": "492a0366bdfdc8d7fa03f2fbd08259395cfc70e05456f4780ab3569a0136488a"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q20_hyperbola.tex",
+    "sha256": "55d9c84586761ef5c4697f98173ff1f6717ef41acaf55f716ac9b0f07e6bf6d8"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q22_tangent.tex",
+    "sha256": "453ad541d72ac2c84c5e0ff65e7fba43f9ed856c2ff215893a7cb26a0899bd95"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/questions.tex",
+    "sha256": "978f3739ab8dbd62122645cbfdd3bb245b53a1debd8d6c284bcdd1f87ee28c35"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/印刷版.tex",
+    "sha256": "b530606acb6456fd5f821034816f5ec4ee84f92bb89297e9d1678ddccd7b772e"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/简答版.tex",
+    "sha256": "ed3704e9ddf63acbade8ee9b89a6d784d3a4f1a25bc63d152af21bd1b78c7f5e"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/解析版.tex",
+    "sha256": "8ab6aa7feee321f129722f8f6028fa4d078980bd8840d6f4796c952117d002cf"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/试题版.tex",
+    "sha256": "90b4812f435c09d534c12d2c67038caa0d84ac1fd256b45ce0d0ab73458a7b95"
+   },
+   {
+    "path": "math-gaokao-latex/common/macros.tex",
+    "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+   },
+   {
+    "path": "math-gaokao-latex/common/preamble.tex",
+    "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+   },
+   {
+    "path": "math-gaokao-latex/common/questions_env.tex",
+    "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+   }
   ],
-  "finished_at": "2026-11-17T03:11:51+08:00",
-  "generation_input_tree": {
-    "files": [
-      {
-        "path": "2004/2004_数学真题_湖北文科_答案要点.md",
-        "sha256": "ff8399615cc467633ced3e1ad8ea53146c79283c9c651212a6d06b644e440d17"
-      },
-      {
-        "path": "2004/2004_数学真题_湖北文科_解析正文.md",
-        "sha256": "b7552387506276bca7a518ddf035d46e242c8cdb961b470453c54fe84c2fefdc"
-      },
-      {
-        "path": "2004/2004_数学真题_湖北文科_试题.md",
-        "sha256": "7c4eeb9642a7755bdde9c4e0eb0136c462a631f67ea3fe859062b6b0ccbdf32f"
-      },
-      {
-        "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "4bac47eee530cc0557545ccdebe664e860a813565a81858f95226ba71d4a4039"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q18_cube.tex",
-        "sha256": "eadcd52e42d33fa6fdd31a6ffa1b6f7729e7728b4f683de4b8e55cda48992455"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q19_triangle.tex",
-        "sha256": "492a0366bdfdc8d7fa03f2fbd08259395cfc70e05456f4780ab3569a0136488a"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q20_hyperbola.tex",
-        "sha256": "55d9c84586761ef5c4697f98173ff1f6717ef41acaf55f716ac9b0f07e6bf6d8"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q22_tangent.tex",
-        "sha256": "453ad541d72ac2c84c5e0ff65e7fba43f9ed856c2ff215893a7cb26a0899bd95"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/印刷版.tex",
-        "sha256": "b530606acb6456fd5f821034816f5ec4ee84f92bb89297e9d1678ddccd7b772e"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/简答版.tex",
-        "sha256": "ed3704e9ddf63acbade8ee9b89a6d784d3a4f1a25bc63d152af21bd1b78c7f5e"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/解析版.tex",
-        "sha256": "8ab6aa7feee321f129722f8f6028fa4d078980bd8840d6f4796c952117d002cf"
-      },
-      {
-        "path": "math-gaokao-latex/2004_湖北卷_文科/试题版.tex",
-        "sha256": "90b4812f435c09d534c12d2c67038caa0d84ac1fd256b45ce0d0ab73458a7b95"
-      },
-      {
-        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
-        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
-      },
-      {
-        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
-        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
-      },
-      {
-        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
-        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
-      },
-      {
-        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
-        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
-      },
-      {
-        "path": "math-gaokao-latex/tools/cli_common.py",
-        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
-      },
-      {
-        "path": "math-gaokao-latex/tools/generate_projects.py",
-        "sha256": "c5f042f89e64f8a85a323f3f0df3b03eaec01ea90735d4e250ff00e829fbce66"
-      },
-      {
-        "path": "math-gaokao-latex/tools/make_editions.py",
-        "sha256": "fc91c02278b04a8d78618714f4fcda7aee7917ecf02e400c5ff1cd68dd5f9735"
-      },
-      {
-        "path": "math-gaokao-latex/tools/make_short_answers.py",
-        "sha256": "81be8554645d4683225872674c733b55c4a4733a78cbd32da4bf88cb6cc41fab"
-      },
-      {
-        "path": "math-gaokao-latex/tools/solution_sources.py",
-        "sha256": "9e4150b07128689ee3e8e39f18311cc34e58060f10f8acac70e2f72372bde5d7"
-      }
-    ],
-    "tree_sha256": "9d4eb8aadaca6e12c0aed184034937fce1f94a110e2d47b3d07b1b4659c549d3"
+  "tree_sha256": "9b50753e7fae3960b2f6f361b120b7130c4b16b1a79cf9264bf13c1715728137"
+ },
+ "editions": [
+  {
+   "edition": "试题版",
+   "log": {
+    "errors": [],
+    "missing_characters": [],
+    "overfull": [],
+    "undefined_references": []
+   },
+   "passes": [
+    {
+     "exit_code": 0,
+     "pass": 1
+    }
+   ],
+   "pdf": {
+    "page_count": 4,
+    "path": "math-gaokao-latex/2004_湖北卷_文科/build/试题版.pdf",
+    "sha256": "2d69925ef8edc2c355424c16996b1d7a063b01132741b198709c2bd0862596f1",
+    "size_bytes": 119203
+   },
+   "problems": [],
+   "result": "succeeded",
+   "source": "math-gaokao-latex/2004_湖北卷_文科/试题版.tex"
   },
-  "input_projection": "ad9884b33dce58af3554841ad046debf933e7e7b16b2d063a7bd070ad8cb5aec",
-  "manifest_revision": 9539,
-  "paper_id": "gk-2004-regular-hubei-arts",
-  "previous_attempt_id": "744304cb-bd37-4b0f-a6c9-7a8fcbdfcbc3",
-  "project_dir": "2004_湖北卷_文科",
-  "schema_version": 1,
-  "started_at": "2026-11-17T03:11:38+08:00",
-  "status": "succeeded",
-  "toolchain_fingerprint": {
-    "texlive_revision": "TeX Live 2026",
-    "tools": [
-      {
-        "name": "pdfinfo",
-        "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
-        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
-        "version": "pdfinfo version 26.11.0"
-      },
-      {
-        "name": "pdftoppm",
-        "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
-        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
-        "version": "pdftoppm version 26.11.0"
-      },
-      {
-        "name": "pdftotext",
-        "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
-        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
-        "version": "pdftotext version 26.11.0"
-      },
-      {
-        "name": "xelatex",
-        "path": "/Library/TeX/texbin/xelatex",
-        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
-        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
-        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
-      },
-      {
-        "name": "latexmk",
-        "path": "/Library/TeX/texbin/latexmk",
-        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
-        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
-        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
-      }
-    ]
+  {
+   "edition": "解析版",
+   "log": {
+    "errors": [],
+    "missing_characters": [
+     {
+      "text": "Missing character: There is no ． (U+FF0E) in font [lmroman12-regular]:mapping=t"
+     }
+    ],
+    "overfull": [],
+    "undefined_references": []
+   },
+   "passes": [
+    {
+     "exit_code": 0,
+     "pass": 1
+    }
+   ],
+   "pdf": {
+    "page_count": 30,
+    "path": "math-gaokao-latex/2004_湖北卷_文科/build/解析版.pdf",
+    "sha256": "f140f321c1ebc1d4d0db7a0d5424eda0ba763bac2a9bc702832da9bfb70266fa",
+    "size_bytes": 255509
+   },
+   "problems": [],
+   "result": "succeeded",
+   "source": "math-gaokao-latex/2004_湖北卷_文科/解析版.tex"
+  },
+  {
+   "edition": "简答版",
+   "log": {
+    "errors": [],
+    "missing_characters": [],
+    "overfull": [],
+    "undefined_references": []
+   },
+   "passes": [
+    {
+     "exit_code": 0,
+     "pass": 1
+    }
+   ],
+   "pdf": {
+    "page_count": 6,
+    "path": "math-gaokao-latex/2004_湖北卷_文科/build/简答版.pdf",
+    "sha256": "c43322286f8ba17b0d14da09617c4ff2c1282d0fcec517def188c86e0d9adfc9",
+    "size_bytes": 129541
+   },
+   "problems": [],
+   "result": "succeeded",
+   "source": "math-gaokao-latex/2004_湖北卷_文科/简答版.tex"
+  },
+  {
+   "edition": "印刷版",
+   "log": {
+    "errors": [],
+    "missing_characters": [
+     {
+      "text": "Missing character: There is no ． (U+FF0E) in font [lmroman10-regular]:mapping=t"
+     }
+    ],
+    "overfull": [],
+    "undefined_references": []
+   },
+   "passes": [
+    {
+     "exit_code": 0,
+     "pass": 1
+    }
+   ],
+   "pdf": {
+    "page_count": 23,
+    "path": "math-gaokao-latex/2004_湖北卷_文科/build/印刷版.pdf",
+    "sha256": "07d78701e754c7f6228a24d7e50ae2d1a3dda181470e4526d0b8ca0c4318ae59",
+    "size_bytes": 251278
+   },
+   "problems": [],
+   "result": "succeeded",
+   "source": "math-gaokao-latex/2004_湖北卷_文科/印刷版.tex"
   }
+ ],
+ "finished_at": "2026-11-17T03:11:51+08:00",
+ "generation_input_tree": {
+  "files": [
+   {
+    "path": "2004/2004_数学真题_湖北文科_答案要点.md",
+    "sha256": "ff8399615cc467633ced3e1ad8ea53146c79283c9c651212a6d06b644e440d17"
+   },
+   {
+    "path": "2004/2004_数学真题_湖北文科_解析正文.md",
+    "sha256": "b7552387506276bca7a518ddf035d46e242c8cdb961b470453c54fe84c2fefdc"
+   },
+   {
+    "path": "2004/2004_数学真题_湖北文科_试题.md",
+    "sha256": "7c4eeb9642a7755bdde9c4e0eb0136c462a631f67ea3fe859062b6b0ccbdf32f"
+   },
+   {
+    "path": "math-gaokao-2017-2026/tools/md2tex.py",
+    "sha256": "4bac47eee530cc0557545ccdebe664e860a813565a81858f95226ba71d4a4039"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q18_cube.tex",
+    "sha256": "eadcd52e42d33fa6fdd31a6ffa1b6f7729e7728b4f683de4b8e55cda48992455"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q19_triangle.tex",
+    "sha256": "492a0366bdfdc8d7fa03f2fbd08259395cfc70e05456f4780ab3569a0136488a"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q20_hyperbola.tex",
+    "sha256": "55d9c84586761ef5c4697f98173ff1f6717ef41acaf55f716ac9b0f07e6bf6d8"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/figures/f2004_hubei_arts_q22_tangent.tex",
+    "sha256": "453ad541d72ac2c84c5e0ff65e7fba43f9ed856c2ff215893a7cb26a0899bd95"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/印刷版.tex",
+    "sha256": "b530606acb6456fd5f821034816f5ec4ee84f92bb89297e9d1678ddccd7b772e"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/简答版.tex",
+    "sha256": "ed3704e9ddf63acbade8ee9b89a6d784d3a4f1a25bc63d152af21bd1b78c7f5e"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/解析版.tex",
+    "sha256": "8ab6aa7feee321f129722f8f6028fa4d078980bd8840d6f4796c952117d002cf"
+   },
+   {
+    "path": "math-gaokao-latex/2004_湖北卷_文科/试题版.tex",
+    "sha256": "90b4812f435c09d534c12d2c67038caa0d84ac1fd256b45ce0d0ab73458a7b95"
+   },
+   {
+    "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+    "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+   },
+   {
+    "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+    "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+   },
+   {
+    "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+    "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+   },
+   {
+    "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+    "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+   },
+   {
+    "path": "math-gaokao-latex/tools/cli_common.py",
+    "sha256": "9e2d75fdb07d86fe861c4e338567280e1457a70180f2cffbcdf8a3cd24f4059b"
+   },
+   {
+    "path": "math-gaokao-latex/tools/generate_projects.py",
+    "sha256": "c5f042f89e64f8a85a323f3f0df3b03eaec01ea90735d4e250ff00e829fbce66"
+   },
+   {
+    "path": "math-gaokao-latex/tools/make_editions.py",
+    "sha256": "fc91c02278b04a8d78618714f4fcda7aee7917ecf02e400c5ff1cd68dd5f9735"
+   },
+   {
+    "path": "math-gaokao-latex/tools/make_short_answers.py",
+    "sha256": "81be8554645d4683225872674c733b55c4a4733a78cbd32da4bf88cb6cc41fab"
+   },
+   {
+    "path": "math-gaokao-latex/tools/solution_sources.py",
+    "sha256": "9e4150b07128689ee3e8e39f18311cc34e58060f10f8acac70e2f72372bde5d7"
+   }
+  ],
+  "tree_sha256": "8bed6736179c40530801673f4c433b3b80dfc28f2d6fb13cb4d8a4ea0cc3aa44"
+ },
+ "input_projection": "ad9884b33dce58af3554841ad046debf933e7e7b16b2d063a7bd070ad8cb5aec",
+ "manifest_revision": 9539,
+ "paper_id": "gk-2004-regular-hubei-arts",
+ "previous_attempt_id": "744304cb-bd37-4b0f-a6c9-7a8fcbdfcbc3",
+ "project_dir": "2004_湖北卷_文科",
+ "schema_version": 1,
+ "started_at": "2026-11-17T03:11:38+08:00",
+ "status": "succeeded",
+ "toolchain_fingerprint": {
+  "texlive_revision": "TeX Live 2026",
+  "tools": [
+   {
+    "name": "pdfinfo",
+    "path": "/opt/homebrew/bin/pdfinfo",
+    "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+    "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+    "version": "pdfinfo version 26.11.0"
+   },
+   {
+    "name": "pdftoppm",
+    "path": "/opt/homebrew/bin/pdftoppm",
+    "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+    "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+    "version": "pdftoppm version 26.11.0"
+   },
+   {
+    "name": "pdftotext",
+    "path": "/opt/homebrew/bin/pdftotext",
+    "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+    "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+    "version": "pdftotext version 26.11.0"
+   },
+   {
+    "name": "xelatex",
+    "path": "/Library/TeX/texbin/xelatex",
+    "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+    "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+    "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+   },
+   {
+    "name": "latexmk",
+    "path": "/Library/TeX/texbin/latexmk",
+    "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+    "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+    "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+   }
+  ]
+ }
 }

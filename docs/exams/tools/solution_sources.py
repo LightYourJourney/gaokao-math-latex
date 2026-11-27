@@ -64,9 +64,9 @@ from manifest import atomic_write_json, canonical_json, file_sha256, load_manife
 from transaction import RepoLock, Transaction
 
 # 本工具源码自身进入事务只读输入：工具变了，派生物就该重算。
-TOOL_SOURCE_TARGET = "docs/exams/tools/solution_sources.py"
+TOOL_SOURCE_TARGET = "math-gaokao-latex/tools/solution_sources.py"
 # 阶段 0 唯一的共享迁移报告路径，`report --output` 与 `--include-report` 都钉死在这里。
-REPORT_TARGET = "docs/exams/reports/solution-source-migration.json"
+REPORT_TARGET = "math-gaokao-latex/reports/solution-source-migration.json"
 REPORT_VERSION = 1
 
 QUESTION_MARKER = "**题目**"

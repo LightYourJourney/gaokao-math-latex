@@ -148,17 +148,33 @@ def _batch_of(manifest: Mapping[str, Any], paper_id: str) -> Optional[str]:
 
 
 def _relative_to(root: Path, path: Path) -> str:
+    # 兼容迁移：相对路径按字面保留（math-gaokao-latex 为兼容符号链接）。
+    candidate = Path(path)
+    if not candidate.is_absolute():
+        normalized = os.path.normpath(os.fspath(candidate))
+        if normalized == ".." or normalized.startswith(".." + os.sep):
+            raise ProvenanceError(f"路径不在仓库内：{path}")
+        return Path(normalized).as_posix()
     try:
-        return Path(path).resolve().relative_to(Path(root).resolve()).as_posix()
+        return candidate.resolve().relative_to(Path(root).resolve()).as_posix()
     except ValueError as error:
         raise ProvenanceError(f"路径不在仓库内：{path}") from error
 
 
 def _require_canonical(root: Path, path: Path, expected: str, option: str) -> Path:
-    resolved = Path(path).resolve()
-    if _relative_to(root, resolved) != expected:
+    candidate = Path(path)
+    if not candidate.is_absolute():
+        normalized = os.path.normpath(os.fspath(candidate))
+        if normalized != expected:
+            raise ProvenanceError(f"{option} 必须是 {expected}")
+        return Path(root) / normalized
+    resolved = candidate.resolve()
+    actual = _relative_to(root, resolved)
+    alias = expected.replace("math-gaokao-latex/", "docs/exams/", 1)
+    if actual != expected and actual != alias:
         raise ProvenanceError(f"{option} 必须是 {expected}")
-    return resolved
+    # 统一回到历史根（兼容符号链接），保证后续读写的相对路径与回执一致。
+    return Path(root) / expected
 
 
 def _read_text(root: Path, relative: str) -> str:
