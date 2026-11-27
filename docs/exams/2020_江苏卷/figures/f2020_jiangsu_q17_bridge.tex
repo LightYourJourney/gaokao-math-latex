@@ -1,0 +1,57 @@
+% 2020 江苏卷 17：桥梁竖直截面（谷底 O 在水平线 MN 上，桥 AB∥MN，OO' 为铅垂线）
+% 绘制依据：固定源 PDF 第 1115 面原图与题给关系式 h1=a^2/40、h2=-b^3/800+6b（B 到 OO' 为 40 米）。
+% 坐标换算：横向 1 米 = 0.0475 单位，纵向 1 米 = 0.0225 单位；
+% 左侧 a 自 O' 向左量（a=80 时 h1=160，即 A 点），右侧 b 自 O' 向右量（b=40 时 h2=160，即 B 点）。
+% 图中标出 C、D、E、F、D1、O、F1 与 a、b、h1、h2；桥墩 CD、EF 为实线，各条量距线为虚线。
+\begin{tikzpicture}[scale=1.0, font=\small]
+  \def\ox{4.6}      % O' 的横坐标
+  \def\ky{0.0225}   % 纵向比例（米 -> 单位）
+  \def\kx{0.0475}   % 横向比例（米 -> 单位）
+  \def\H{3.6}       % 桥面高 160 米
+
+  % 水平线 MN
+  \draw (-0.55,0) -- (8.3,0);
+  \node[below] at (-0.45,0) {$M$};
+  \node[below] at (8.2,0) {$N$};
+
+  % 左曲线 h1=a^2/40（a 自 O' 向左量），绘到 A 点上方
+  \draw[thick] plot[domain=0:92, samples=140]
+    ({\ox-\kx*\x}, {\ky*\x*\x/40});
+  % 右曲线 h2=-b^3/800+6b（b 自 O' 向右量），绘过 B 点后再下垂
+  \draw[thick] plot[domain=0:46, samples=160]
+    ({\ox+\kx*\x}, {\ky*(-0.00125*\x*\x*\x+6*\x)});
+
+  % 桥面 AB（水平，与 MN 平行）
+  \draw (0.80,\H) -- (6.50,\H);
+
+  % 铅垂线 OO'
+  \draw[dashed] (\ox,0) -- (\ox,\H);
+
+  % 桥墩 CD：C 在桥面上，D 在左曲线（a=60 米）
+  \draw (1.75,\H) -- (1.75,2.025);
+  % 桥墩 EF：E 在桥面上，F 在右曲线（b=20 米）
+  \draw (5.55,\H) -- (5.55,2.475);
+
+  % D、F 到 MN 的虚线（h1、h2）
+  \draw[dashed] (1.75,2.025) -- (1.75,0);
+  \draw[dashed] (5.55,2.475) -- (5.55,0);
+  % 量距 a、b 的虚线
+  \draw[dashed] (1.75,2.025) -- (\ox,2.025);
+  \draw[dashed] (5.55,2.475) -- (\ox,2.475);
+
+  % 标注
+  \node at (0.40,3.72) {$A$};
+  \node[above] at (1.75,\H) {$C$};
+  \node[above] at (\ox,\H) {$O'$};
+  \node[above] at (5.55,\H) {$E$};
+  \node at (6.62,3.80) {$B$};
+  \node[left] at (1.72,2.03) {$D$};
+  \node[right] at (5.58,2.44) {$F$};
+  \node[below] at (1.75,0) {$D_1$};
+  \node[below] at (\ox,0) {$O$};
+  \node[below] at (5.55,0) {$F_1$};
+  \node at (3.20,1.88) {$a$};
+  \node at (5.02,2.70) {$b$};
+  \node at (1.42,1.02) {$h_1$};
+  \node at (5.92,1.42) {$h_2$};
+\end{tikzpicture}

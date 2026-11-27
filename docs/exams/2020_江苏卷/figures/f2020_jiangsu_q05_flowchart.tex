@@ -1,0 +1,25 @@
+% 2020 江苏卷 5：算法流程图（开始→输入 x→判断 x>0→是 y←2^x / 否 y←x+1→输出 y→结束）
+% 绘制依据：固定源 PDF 第 1115 面原图。原图自上而下的主干与左「Y」右「N」的分支走向照录。
+\begin{tikzpicture}[scale=0.92, font=\small, >=Stealth,
+    box/.style={draw, minimum width=2.0cm, minimum height=0.72cm, align=center},
+    io/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+      minimum width=2.2cm, minimum height=0.72cm, align=center},
+    dec/.style={draw, diamond, aspect=2.1, inner sep=1pt, align=center}]
+  \node[draw, rounded corners=6pt, minimum width=1.7cm, minimum height=0.72cm] (begin) at (0,0) {开始};
+  \node[io] (in) at (0,-1.35) {输入 $x$};
+  \node[dec] (judge) at (0,-2.85) {$x>0$?};
+  \node[box] (yes) at (-2.5,-4.4) {$y\leftarrow 2^{x}$};
+  \node[box] (no) at (2.5,-4.4) {$y\leftarrow x+1$};
+  \node[io] (out) at (0,-5.85) {输出 $y$};
+  \node[draw, rounded corners=6pt, minimum width=1.7cm, minimum height=0.72cm] (end) at (0,-7.15) {结束};
+
+  \draw[->] (begin) -- (in);
+  \draw[->] (in) -- (judge);
+  \draw[->] (judge.west) -| (yes.north);
+  \node at (-1.85,-2.55) {$Y$};
+  \draw[->] (judge.east) -| (no.north);
+  \node at (1.85,-2.55) {$N$};
+  \draw[->] (yes.south) |- (out.west);
+  \draw[->] (no.south) |- (out.east);
+  \draw[->] (out) -- (end);
+\end{tikzpicture}

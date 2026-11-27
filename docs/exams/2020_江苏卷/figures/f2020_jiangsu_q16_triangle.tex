@@ -1,0 +1,15 @@
+% 2020 江苏卷 16：△ABC 中 D 在边 BC 上
+% 绘制依据：固定源 PDF 第 1115 面原图。A 在上方偏右，B 左下、C 右下，D 在 BC 上靠近 C，
+% 连 AD。只标 A、B、C、D 四点。
+\begin{tikzpicture}[scale=1.05, font=\small]
+  \coordinate (A) at (2.55,1.85);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (5.0,0);
+  \coordinate (D) at (3.75,0);
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (D);
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[below=5pt, inner sep=3pt] at (D) {$D$};
+\end{tikzpicture}

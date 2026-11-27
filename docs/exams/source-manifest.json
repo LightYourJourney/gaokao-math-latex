@@ -4588,6 +4588,14 @@
         "gk-2020-new-gaokao-1"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase8-b21",
+      "issues": [],
+      "paper_ids": [
+        "gk-2020-jiangsu"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -4597,7 +4605,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "94482100-3a58-4fe6-a8dd-b8e9ba9388fa",
+  "last_transaction_id": "b5e46249-5bc8-48d3-87b8-e5cb93077008",
   "papers": [
     {
       "blocked_from": null,
@@ -52746,9 +52754,94 @@
       "title": "2020 年·新高考Ⅰ卷（山东）",
       "track": "science",
       "year": 2020
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2020_江苏卷/figures/f2020_jiangsu_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_江苏卷/figures/f2020_jiangsu_q09_nut.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_江苏卷/figures/f2020_jiangsu_q13_quad.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_江苏卷/figures/f2020_jiangsu_q15_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_江苏卷/figures/f2020_jiangsu_q16_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_江苏卷/figures/f2020_jiangsu_q17_bridge.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_江苏卷/figures/f2020_jiangsu_q22_tetra.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2020_gaokao_jiangsu",
+        "id": "gk-2020-jiangsu",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 1115、1116（1115 面为填空 1—14、解答 15—18；1116 面为 19—23）。PDF 无答案页，原页未印分值，全部记「原页未标」，不补。江苏卷题号：填空 1—14、解答 15—20、选做 21（【A】【B】【C】三选二，全部收录）、22、23，共 23 题。答案由本库独立推导（等级 D，非官方）。原页图：第 5 题算法流程图、第 9 题六角螺帽毛坯、第 13 题四边形 ABPC、第 15 题三棱柱、第 16 题三角形 ABC、第 17 题桥梁竖直截面、第 22 题三棱锥 A-BCD，共 7 幅，均以 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "解答题2": [
+            22,
+            23
+          ],
+          "选做题": [
+            21,
+            21
+          ]
+        },
+        "track": "不分文理",
+        "variant": "江苏卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2020-jiangsu",
+      "production_state": "complete",
+      "project_dir": "2020_江苏卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2020/2020_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2020/2020_数学真题_江苏_含解析.md",
+        "questions": "2020/2020_数学真题_江苏_试题.md",
+        "solution_body": "2020/2020_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-8b14fa0341791f602da62f00e386598a586db114026a3bcb9402e7a4d3276c92"
+      ],
+      "title": "2020 年·江苏卷",
+      "track": "science",
+      "year": 2020
     }
   ],
-  "revision": 12204,
+  "revision": 12209,
   "schema_version": 1,
   "sources": [
     {
@@ -70217,8 +70310,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e304f117d07009a78d6bacb634c32645fdab3df7",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2020-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2020江苏.pdf",
       "regions": [],
       "source_id": "src-8b14fa0341791f602da62f00e386598a586db114026a3bcb9402e7a4d3276c92",
