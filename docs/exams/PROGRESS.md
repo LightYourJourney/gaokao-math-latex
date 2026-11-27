@@ -9,6 +9,13 @@
 - 验收：四版 6/31/9/21 页（共 67 页），Overfull 0、missing characters 0；解析版 2 条 Underfull（第 4 题 Logistic 题干与选项接排）已逐条豁免并记明 `source_file`/`pdf_page`/100 dpi 视觉复核 `pass`。review 67 页 **pass 481 + not_applicable 55、0 fail、2 豁免**；`FINALIZED`；`validate-receipts --require-final` = `OK：1 卷`；2 条图稿引用全部命中。
 - 全库：manifest **705 卷 / 775 来源 / 551 批次**，complete 587、blocked 118，未绑定 **71**；revision 12177。
 
+### 清理 LaTeX 中间产物与栅格缓存（2026-11-27）
+- 范围：全仓库（`.git`、`gaokaomath-src` 除外）删除 `.aux/.log/.out/.toc/.fls/.xdv/.fdb_latexmk/.synctex.gz/.bbl/.blg/.nav/.snm/.vrb/.lof/.lot/.bcf/.idx/.ilg/.ind/.dvi/.run.xml`，共 **2063** 个；删除 `docs/exams` 下 `.png/.jpg/.jpeg` 栅格缓存（`*.png`、`pages/`、`review-pages/`、`render/`、`.work/` 逐页渲染）共 **17767** 个；另删 2 个 `.DS_Store` 与 137 个空缓存目录。合计释放约 **4.0 GB**（仓库 6.4 GB → 2.6 GB）。
+- 保留：全部 **3055** 份 `build/*.pdf`（回执按 sha256 引用，`succeeded` 版本缺 PDF 会当场判 stale）；`2018_上海春季卷/assets/f2018_shanghai_spring_q19_photo.png` 是唯一被 `dependency_tree` 引用的栅格构建输入（该卷题面为实景照片，非线稿），未删。
+- 未用仓库自带 `clean-build-intermediates` / `cleanup-legacy`：项目路径经 `math-gaokao-latex -> docs/exams` 符号链接访问时，`_guard_removable` 的 `git check-ignore` 报「位于符号链接之后」并整体零删除；且 `cleanup-legacy` 会因个别卷 `生成物状态 stale` 一票中止。改为按同一份固定后缀清单手工枚举，删前逐一确认无 `tracked`、无回执引用。
+- 可复现性验证：清空后重编 `gk-2020-regular-national-3-science`，四版 6/31/9/21 页、Overfull 0，题号 1—23 齐全，$K^2=5.82$ 在位；PDF 字节随构建时间戳变化，回执随之降级为 `compiled`/`compiled_pending_review`，已重跑 `prepare-batch` + `fill_review.py` + `finalize-batch` 恢复 `FINALIZED`，并再清 24 个中间文件。
+- 校验：`validate-receipts --all --require-final` = `OK：705 卷`（清理前后一致）。
+
 ### 2020 全国Ⅲ卷（文科）：phase8-b16 转录（子代理起草、主代理复核）与四版封账（2026-11-27；`closed`）
 - 对象：`gk-2020-regular-national-3-arts`，**23 个题号**（选择 1—12、填空 13—16、解答 17—21、选做 22—23 全收）；固定来源 `src-2d27828bb5bb940ecd6adaa140ec51fca34dea4327606e39e361db21cf7822d2`，2 页 A3，印面 1127、1128（1127 面为 1—18，1128 面为 19—23）。
 - 答案（等级 D）：1 B（3 个）；2 D（$z=\mathrm i$）；3 C（$1$）；4 C（$66$）；5 B（$\frac{\sqrt3}3$）；6 A（圆）；7 B（$\left(\frac12,0\right)$）；8 B（$\sqrt2$）；9 C（$6+2\sqrt3$）；10 A（$a<c<b$）；11 C（$4\sqrt5$）；12 D（关于 $x=\frac\pi2$ 对称）；13 $7$；14 $\sqrt3$；15 $1$；16 $\frac{\sqrt2}3\pi$；17 (1) $a_n=3^{n-1}$、(2) $m=6$；18 (1) $0.43,0.27,0.21,0.09$、(2) $350$、(3) $K^2\approx14.88>3.841$；19 (1)(2) 证明；20 (1) 单调性、(2) $0<k<\frac4{27}$；21 (1) $\frac{x^2}{25}+\frac{16y^2}{25}=1$、(2) $\frac52$；22 (1) $4\sqrt{10}$、(2) $3\rho\cos\theta-\rho\sin\theta+12=0$；23 (1)(2) 证明。
